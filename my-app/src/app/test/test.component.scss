@@ -1,0 +1,208 @@
+.selected {
+  // color: purple;
+  // fill: yellow;
+  // stroke: orange;
+
+  filter: invert(13%) sepia(99%) saturate(3566%) hue-rotate(185deg)
+    brightness(96%) contrast(101%);
+
+  // filter: invert(45%) sepia(16%) saturate(444%) hue-rotate(165deg)
+  //   brightness(95%) contrast(85%);
+}
+.cust-outlined {
+  color: #667683;
+}
+.flex-20 {
+  flex: 1 1 100% !important;
+  max-width: 20% !important;
+  box-sizing: border-box;
+}
+.flex-40 {
+  max-width: 40% !important;
+  box-sizing: border-box;
+
+  flex: 1 1 100% !important;
+}
+.b2 {
+  border: 2px solid;
+}
+
+.star path {
+  fill: transparent;
+  stroke-width: 1;
+  stroke: #667683;
+
+  stroke-dasharray: 68;
+  stroke-dashoffset: 68;
+  animation: staranim 2s forwards;
+}
+@keyframes staranim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+//smooth show div using height start
+.display-on-check {
+  transition:
+    opacity 1s ease-out,
+    height 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+:checked + .display-on-check {
+  opacity: 1;
+  height: auto;
+}
+
+.child {
+  transition:
+    opacity 1s ease-out,
+    height 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.child.active {
+  opacity: 1;
+  height: auto;
+}
+//smooth show div using height end
+
+//check mark start
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #005c87;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+
+  box-shadow: inset 0px 0px 0px #005c87;
+  animation:
+    fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #005c87;
+  }
+}
+//check mark end
+
+//material svg icon check anim start
+.check {
+  fill: transparent;
+  stroke-width: 1;
+  stroke: #005c87;
+  stroke-dasharray: 68;
+  stroke-dashoffset: 68;
+  animation: staranim 2s forwards;
+}
+@keyframes staranim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+//material svg icon check anim end
+
+//only tick svg anim start
+.tick-mark {
+  width: 50px;
+  height: 50px;
+}
+
+.tick {
+  stroke-dasharray: 100px, 100px; /* Length of the line, gap between segments */
+  stroke-dashoffset: 100px; /* Hides the line initially */
+  animation: tick 1s ease-in-out forwards;
+}
+
+@keyframes tick {
+  from {
+    stroke-dashoffset: 100px;
+  }
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+//only tick svg anim start
+
+//counter clockwise rotation start
+// .animate-counterclockwise {
+//   animation: spin-counterclockwise 1s linear infinite;
+// }
+// @keyframes spin-counterclockwise {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(-360deg);
+//   }
+// }
+//counter clockwise rotation end
+
+//input test start
+.input-container {
+  // display: flex;
+  align-items: center; /* Vertically align the input and button */
+  width: 250px; /* Example width for demonstration */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input {
+  flex-grow: 1; /* Expand the input to fill available space */
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  width: 100%; /* Ensure full width within container */
+  overflow: hidden; /* Prevent text from extending beyond container */
+  text-overflow: ellipsis; /* Show ellipsis for truncated text */
+}
+
+.input-container button {
+  background-color: #667683;
+  color: white;
+  padding: 5px 10px;
+  border-color: green;
+  outline: none;
+  margin-left: 10px; /* Add spacing between input and button */
+}
+input:focus ~ .input-container {
+  border-color: #007bff; /* Change border color on focus */
+}
+//input test end
