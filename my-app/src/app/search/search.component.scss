@@ -13,8 +13,11 @@
 }
 
 .selected {
-  filter: invert(17%) sepia(76%) saturate(2836%) hue-rotate(181deg)
-    brightness(99%) contrast(101%);
+  // filter: invert(17%) sepia(76%) saturate(2836%) hue-rotate(181deg)
+  //   brightness(99%) contrast(101%);
+
+  filter: brightness(0) saturate(100%) invert(22%) sepia(42%) saturate(3196%)
+    hue-rotate(175deg) brightness(100%) contrast(103%);
   // color: purple; /* Text color */
   // fill: yellow; /* Primary color */
   // stroke: orange; /* Secondary color */
