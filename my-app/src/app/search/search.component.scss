@@ -1,0 +1,212 @@
+.border-b-1 {
+  border-bottom: 1px solid lightgray;
+}
+
+// .list:hover .checkbox-div input {
+//   display: block;
+// }
+.checkbox-cust {
+  width: 9.3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.selected {
+  // filter: invert(17%) sepia(76%) saturate(2836%) hue-rotate(181deg)
+  //   brightness(99%) contrast(101%);
+
+  filter: brightness(0) saturate(100%) invert(22%) sepia(42%) saturate(3196%)
+    hue-rotate(175deg) brightness(100%) contrast(103%);
+  // color: purple; /* Text color */
+  // fill: yellow; /* Primary color */
+  // stroke: orange; /* Secondary color */
+}
+
+tr:hover td:first-child {
+  //background-color: white !important;
+}
+
+tr:hover td:first-child {
+  //border: none !important;
+}
+
+tr:hover {
+  //border: 1px solid green !important;
+}
+
+//table bottom spacing start
+// table {
+//   border-collapse: separate;
+//   border-spacing: 0 15px;
+// }
+// th {
+//   background-color: #4287f5;
+//   color: white;
+// }
+// th,
+// td {
+//   border: 1px solid black;
+//   border: 1px solid black;
+//   padding: 5px;
+// }
+//table bottom spacing end
+
+.press:active {
+  transform: translateY(2px);
+}
+.press .material-symbols-outlined {
+  font-size: 13px !important;
+  line-height: 9px !important;
+}
+
+$primary-700: #005c87;
+
+button[aria-selected="true"] {
+  color: $primary-700;
+  border-bottom: 2px solid $primary-700;
+}
+
+//plancard start
+
+.plan-card-wrapper {
+  .plan-card {
+    .header .desc {
+      @apply text-plan_comman-desc;
+    }
+
+    .content .price {
+      @apply text-plan_comman-price;
+    }
+
+    .content .price-wrap .sup,
+    .content .price-wrap .sub {
+      @apply text-plan_comman-unit;
+    }
+
+    .footer .plan-features {
+      @apply border-t;
+
+      li .list {
+        @apply text-plan_comman-content;
+      }
+    }
+  }
+
+  .plan-card.personal {
+    @apply rounded-bl-lg rounded-tl-lg border border-gray-200;
+
+    .header {
+      @apply rounded-tl-lg bg-personal-header_bg;
+    }
+
+    .header h3 {
+      @apply text-personal-title;
+    }
+
+    .content .btn-getItNow {
+      @apply bg-personal-btn;
+    }
+
+    .content .btn-getItNow:hover {
+      @apply bg-personal-btn;
+    }
+
+    .footer .plan-features .material-icons {
+      @apply text-personal-feat_icon;
+    }
+  }
+
+  .plan-card.professional {
+    @apply rounded-none border-b border-t border-gray-200;
+
+    .header {
+      @apply bg-professional-header_bg text-secondary-700;
+    }
+
+    .header h3 {
+      @apply text-professional-title;
+    }
+
+    .content .btn-getItNow {
+      @apply bg-professional-btn;
+    }
+
+    .content .btn-getItNow:hover {
+      @apply bg-professional-btn;
+    }
+
+    .footer .plan-features .material-icons {
+      @apply text-professional-feat_icon;
+    }
+  }
+
+  .plan-card.premium {
+    @apply rounded-br-lg rounded-tr-lg border border-gray-200;
+
+    .header {
+      @apply rounded-tr-lg bg-premium-header_bg;
+    }
+
+    .header h3 {
+      @apply text-premium-title;
+    }
+
+    .content .btn-getItNow {
+      @apply bg-premium-btn;
+    }
+
+    .content .btn-getItNow:hover {
+      @apply bg-premium-btn;
+    }
+
+    .footer .plan-features .material-icons {
+      @apply text-premium-feat_icon;
+    }
+  }
+}
+
+//plancard end
+
+//toast msg start
+
+.toast-check {
+  position: absolute;
+  right: 0rem;
+  top: -0.5rem;
+  font-size: 1rem;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  //right: -100%;
+  // animation:
+  //   slideInFromRight 0.7s forwards,
+  //   slideOutToRight 0.7s forwards 4s;
+  // animation:
+  //   slideInFromRight 2s forwards ease-in,
+  //   slideOutToRight 2s forwards ease-out 3s;
+}
+.toast2 {
+  position: fixed;
+  top: 166px;
+}
+// @keyframes slideInFromRight {
+//   0% {
+//     right: -100%;
+//   }
+//   100% {
+//     right: 20px; /* Adjust as needed */
+//   }
+// }
+
+// @keyframes slideOutToRight {
+//   0% {
+//     right: 20px; /* Adjust as needed */
+//   }
+//   100% {
+//     right: -100%;
+//   }
+// }
+//toast msg end

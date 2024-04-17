@@ -1,0 +1,48 @@
+.wh {
+  /* height: 200px;
+    width: 100%; */
+  width: 100%;
+  height: 600px;
+}
+
+.echarts-tooltip {
+  white-space: pre-wrap !important;
+  max-width: 200px;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.wh > div {
+  width: 100% !important;
+  width: auto !important ;
+  display: flex !important;
+  align-items: stretch !important;
+  flex-grow: 1 !important;
+  border: 2px solid black !important;
+
+  /* flex-grow: 2; */
+}
+.wh > div > canvas {
+  width: 100% !important;
+  width: auto !important;
+  display: flex !important;
+  align-items: stretch !important;
+  flex-grow: 1 !important;
+  border: 2px solid red !important;
+
+  /* flex-grow: 2; */
+}
+
+// .first-col,
+// .second-col {
+//   overflow-y: hidden;
+// }
+// .first-col:hover,
+// .first-col:active,
+// .first-col:focus {
+//   overflow-y: scroll;
+// }
+.first-col::-webkit-scrollbar,
+.second-col::-webkit-scrollbar {
+  display: none;
+}

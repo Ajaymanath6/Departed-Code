@@ -1,0 +1,151 @@
+//plancard start
+.abc {
+  display: block;
+}
+.plan-card-wrapper {
+  .plan-card {
+    .header .desc {
+      @apply text-plan_comman-desc;
+    }
+
+    .content .price {
+      @apply text-plan_comman-price;
+    }
+
+    .content .price-wrap .sup,
+    .content .price-wrap .sub {
+      @apply text-plan_comman-unit;
+    }
+
+    .footer .plan-features {
+      @apply border-t;
+
+      li .list {
+        @apply text-plan_comman-content;
+      }
+    }
+  }
+
+  .plan-card.personal {
+    @apply rounded-md border border-gray-200;
+
+    .header {
+      @apply rounded-md bg-personal-header_bg;
+    }
+
+    .header h3 {
+      @apply text-personal-title;
+    }
+
+    .content .btn-getItNow {
+      @apply bg-personal-btn;
+    }
+
+    .content .btn-getItNow:hover {
+      @apply bg-personal-btn;
+    }
+
+    .footer .plan-features .material-icons {
+      @apply text-personal-feat_icon;
+    }
+  }
+
+  .plan-card.professional {
+    @apply rounded-md border border-gray-200;
+
+    .header {
+      @apply rounded-md bg-professional-header_bg text-secondary-700;
+    }
+
+    .header h3 {
+      @apply text-professional-title;
+    }
+
+    .content .btn-getItNow {
+      @apply bg-professional-btn;
+    }
+
+    .content .btn-getItNow:hover {
+      @apply bg-professional-btn;
+    }
+
+    .footer .plan-features .material-icons {
+      @apply text-professional-feat_icon;
+    }
+  }
+
+  .plan-card.premium {
+    @apply rounded-md border border-gray-200;
+
+    .header {
+      @apply rounded-md bg-premium-header_bg;
+    }
+
+    .header h3 {
+      @apply text-premium-title;
+    }
+
+    .content .btn-getItNow {
+      @apply bg-premium-btn;
+    }
+
+    .content .btn-getItNow:hover {
+      @apply bg-premium-btn;
+    }
+
+    .footer .plan-features .material-icons {
+      @apply text-premium-feat_icon;
+    }
+  }
+}
+
+//plancard end
+$dark-blue-700: #001a31;
+
+a[aria-selected="true"] {
+  color: $dark-blue-700;
+  //border-bottom: 2px solid $primary-700;
+}
+
+//toast msg start
+
+.toast-check {
+  position: absolute;
+  right: 0rem;
+  top: -0.5rem;
+  font-size: 1rem;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: -100%;
+  animation:
+    slideInFromRight 0.7s forwards,
+    slideOutToRight 0.7s forwards 4s;
+  animation:
+    slideInFromRight 2s forwards ease-in,
+    slideOutToRight 2s forwards ease-out 3s;
+}
+.toast2 {
+  position: fixed;
+  top: 166px;
+}
+@keyframes slideInFromRight {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 20px; /* Adjust as needed */
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    right: 20px; /* Adjust as needed */
+  }
+  100% {
+    right: -100%;
+  }
+}
+//toast msg end

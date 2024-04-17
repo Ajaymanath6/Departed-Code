@@ -1,0 +1,1883 @@
+<div class="demo-container">
+  <div class="progress-bar">
+    <div class="progress-bar-value"></div>
+  </div>
+</div>
+
+<div
+  class="md:grid-cols-2- content-center- d-none- grid h-full w-full grid-cols-2 gap-4"
+>
+  <div class="flex- items-center- left grid content-center">
+    <div class="d-none- mx-auto w-[404px]">
+      <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+        <img
+          class="text-center"
+          src="../assets/jpg/Logo.png"
+          width="90"
+          height="90"
+        />
+      </div>
+      <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+        Hello, Welcome back!
+      </h3>
+      <p class="xs:text-xs text-center text-base font-normal text-gray-900">
+        Fill the credentials below to sign in and get started
+      </p>
+      <div class="mb-7 mt-7 flex flex-col text-center">
+        <div>
+          <button
+            type="button"
+            class="border-shades-shade03 cust-trans mb-2 me-2 inline-flex w-full items-center rounded-lg border bg-white px-5 py-2.5 text-center text-base font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"
+          >
+            <img src="../assets/jpg/Google .png" width="20" height="20" />
+            <div class="w-full">Sign in with Google</div>
+          </button>
+        </div>
+        <div>
+          <button
+            type="button"
+            class="cust-trans mb-2 me-2 inline-flex w-full items-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-center text-base font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"
+          >
+            <img src="../assets/jpg/microsoft.png" width="20" height="20" />
+            <div class="w-full">Sign in with Microsoft</div>
+          </button>
+        </div>
+      </div>
+      <!-- <div class="divider mb-7">
+        <div
+          _ngcontent-fbo-c38=""
+          class="text-over-divider text-sm font-semibold"
+        >
+          Or Sign in with Email
+        </div>
+      </div> -->
+      <div class="mb-4 mt-4 flex items-center">
+        <div class="w-full- h-[1px] grow bg-gray-200"></div>
+        <div class="ml-2 mr-2 text-center text-sm font-semibold text-gray-900">
+          Or Sign in with Email
+        </div>
+        <div class="w-full- h-[1px] grow bg-gray-200"></div>
+      </div>
+      <div class="mb-6">
+        <div>
+          <div>
+            <div class="mb-6">
+              <label
+                for="default-input"
+                class="mb-2 block text-base font-semibold text-gray-900"
+                >Email</label
+              >
+              <input
+                type="text"
+                id="default-input"
+                placeholder="john@domain"
+                class="cust-trans block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+              />
+            </div>
+          </div>
+          <div></div>
+          <div class="mb-5">
+            <label
+              for="password"
+              class="mb-2 block text-base font-semibold text-gray-900"
+              >Your password</label
+            >
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••••"
+              class="cust-trans block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+              required
+            />
+          </div>
+          <div class="text-center text-sm font-semibold text-primary-700">
+            Forgot password?
+          </div>
+          <button
+            type="button"
+            class="cust-trans mb-2 mb-7 me-2 mt-7 w-full rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+          >
+            Sign In
+          </button>
+          <p class="text-center">
+            <a class="text-base font-normal text-gray-900"
+              >Not registered yet?
+              <span
+                class="cursor-pointer font-semibold text-primary-700 hover:underline"
+                >Create an account</span
+              ></a
+            >
+          </p>
+          <ul
+            class="footerlink mb-2 mt-5 cursor-pointer list-none text-center text-sm font-normal text-gray-500 underline"
+          >
+            <li>General Disclaimer</li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+            <li>Public Records Policy</li>
+            <li>Cancellation and Refund Policy</li>
+          </ul>
+          <p class="text-center text-sm font-normal text-gray-900">
+            © 2023 UniCourt Inc.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="Forgot-Password d-none- mx-auto w-[404px]">
+      <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+        <img
+          class="text-center"
+          src="../assets/jpg/Logo.png"
+          width="90"
+          height="90"
+        />
+      </div>
+      <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+        Forgot Password
+      </h3>
+      <p class="mb-4 text-center text-base font-normal text-gray-900">
+        Enter your registered email address to receive password reset link
+      </p>
+
+      <div class="mb-6 mt-7">
+        <div>
+          <div>
+            <div class="mb-6">
+              <label
+                for="default-input"
+                class="mb-2 block text-base font-semibold text-gray-900"
+                >Email Address</label
+              >
+              <input
+                type="text"
+                id="default-input"
+                placeholder="john@domain"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+              />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="mb-2 mb-7 me-2 w-full rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+          >
+            Send it!
+          </button>
+
+          <ul
+            class="footerlink mb-2 mt-5 list-none text-center text-sm font-normal text-gray-500 underline"
+          >
+            <li>General Disclaimer</li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+            <li>Public Records Policy</li>
+            <li>Cancellation and Refund Policy</li>
+          </ul>
+          <p class="text-center text-sm font-normal">© 2023 UniCourt Inc.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-login right grid content-center bg-gray-900">
+    <div class="bg-login mx-auto grid w-[502px] justify-items-center">
+      <img
+        src="../assets/jpg/Frame.png"
+        width="500"
+        height="500"
+        class="text-center"
+      />
+      <h3
+        class="mb-6 px-10 text-center text-thirtytwo font-semibold text-white"
+      >
+        Search queries based on specific filters
+      </h3>
+      <p class="px-10 text-center text-base font-normal text-white">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--pick an account start header midcontent footer start-->
+<div class="pickAccount d-none- flex h-screen flex-col">
+  <div class="container mx-auto">
+    <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+      <img
+        class="text-center"
+        src="../assets/jpg/Logo.png"
+        width="90"
+        height="40"
+      />
+    </div>
+
+    <!-- Middle Content -->
+    <div
+      class="flex-grow- mx-auto flex w-[500px] flex-col items-center justify-center"
+    >
+      <!-- Middle Content Goes Here -->
+      <div class="sm:max-w-sm- md:max-w-md- w-full rounded-lg bg-white shadow">
+        <!--progress bar start-->
+        <div
+          class="relative mb-4 h-[0.3rem] overflow-hidden rounded bg-gray-200"
+        >
+          <div
+            class="animate-progress absolute left-0 top-0 h-full bg-green-500"
+          ></div>
+        </div>
+        <div class="demo-container">
+          <div class="progress-bar">
+            <div class="progress-bar-value"></div>
+          </div>
+        </div>
+
+        <!--progress bar end-->
+        <div class="space-y-4 p-6 sm:p-8 md:space-y-6 lg:space-y-8">
+          <h3
+            class="mb-6 text-center text-thirtytwo font-semibold text-gray-900"
+          >
+            Pick an account
+          </h3>
+          <p class="mb-4 text-center text-base font-normal text-gray-900">
+            Integer posuere erat a ante venenatis dapibus posuere velit
+            aliquet.k
+          </p>
+          <ul class="py-2 text-sm text-gray-700" aria-labelledby="avatarButton">
+            <li class="mb-2 border">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                <div class="flex items-center gap-4">
+                  <img
+                    class="h-10 w-10 rounded-full"
+                    src="../../assets/jpg/accnt.jpg"
+                    alt=""
+                  />
+                  <div class="text-base font-medium">
+                    <div class="text-gray-900">Account Name 1</div>
+                    <div class="text-sm font-normal text-gray-500">
+                      ID-45474435
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="mb-2 border">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                <div class="flex items-center gap-4">
+                  <img
+                    class="h-10 w-10 rounded-full"
+                    src="../../assets/jpg/accnt.jpg"
+                    alt=""
+                  />
+                  <div class="text-base font-medium">
+                    <div class="text-gray-900">Account Name 2</div>
+                    <div class="text-sm font-normal text-gray-500">
+                      ID-45474435
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="mb-2 border">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                <div class="flex items-center gap-4">
+                  <img
+                    class="h-10 w-10 rounded-full"
+                    src="../../assets/jpg/accnt.jpg"
+                    alt=""
+                  />
+                  <div class="text-base font-medium">
+                    <div class="text-gray-900">Account Name 3</div>
+                    <div class="text-sm font-normal text-gray-500">
+                      ID-45474435
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="mb-4 mt-4 flex items-center">
+            <div class="w-full- h-[1px] grow bg-gray-200"></div>
+            <div
+              class="ml-2 mr-2 text-center text-sm font-semibold text-gray-900"
+            >
+              Or Enter Support Mode
+            </div>
+            <div class="w-full- h-[1px] grow bg-gray-200"></div>
+          </div>
+          <div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="">
+                <input
+                  type="text"
+                  id="first_name"
+                  class="block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-base font-normal text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                  placeholder="Enter account id or name"
+                  required
+                />
+              </div>
+              <button
+                type="button"
+                class="flex w-full justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+              >
+                Enter Support Mode
+              </button>
+            </div>
+            <p class="mt-4 text-sm text-gray-500">
+              Enter the account ID to access it in support mode.
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="p-4">
+        <div class="container">
+          <ul
+            class="footerlink mb-2 mt-5 list-none text-center text-sm font-normal text-gray-500 underline"
+          >
+            <li>General Disclaimer</li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+            <li>Public Records Policy</li>
+            <li>Cancellation and Refund Policy</li>
+          </ul>
+          <p class="text-center text-sm font-normal">© 2023 UniCourt Inc.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!--start oneclick signup start-->
+    <div
+      class="flex-grow- mx-auto flex w-[500px] flex-col items-center justify-center"
+    >
+      <!-- Middle Content Goes Here -->
+      <div
+        class="md:max-w-[500px]- w-full rounded-lg bg-white sm:max-w-sm md:mt-0 md:max-w-md xl:p-0"
+      >
+        <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+          <img
+            class="text-center"
+            src="../assets/jpg/Logo.png"
+            width="90"
+            height="90"
+          />
+        </div>
+        <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+          Start today with One-Click Sign Up!
+        </h3>
+        <p class="text-center text-base font-normal text-gray-900">
+          Fill the credentials below to sign in and get started
+        </p>
+        <div class="mb-7 mt-7 flex flex-col text-center">
+          <div>
+            <button
+              type="button"
+              class="border-shades-shade03 mb-2 me-2 inline-flex w-full items-center rounded-lg border bg-white px-5 py-2.5 text-center text-base font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"
+            >
+              <img src="../assets/jpg/Google .png" width="20" height="20" />
+              <div class="w-full">Sign in with Google</div>
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="mb-2 me-2 inline-flex w-full items-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-center text-base font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"
+            >
+              <img src="../assets/jpg/microsoft.png" width="20" height="20" />
+              <div class="w-full text-gray-900">Sign in with Microsoft</div>
+            </button>
+          </div>
+        </div>
+        <div class="mb-4 mt-4 flex items-center">
+          <div class="w-full- h-[1px] grow bg-gray-200"></div>
+          <div class="text-gray-900- ml-2 mr-2 text-center text-sm">
+            Or Sign in with Email
+          </div>
+          <div class="w-full- h-[1px] grow bg-gray-200"></div>
+        </div>
+        <div class="mb-6">
+          <div>
+            <div>
+              <div class="mb-6">
+                <label
+                  for="default-input"
+                  class="mb-2 block text-base font-semibold text-gray-900"
+                  >Email</label
+                >
+                <input
+                  type="text"
+                  id="default-input"
+                  placeholder="john@domain"
+                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                />
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="mb-2 mb-7 me-2 mt-7 flex w-full items-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+            >
+              <div class="grow">Continue With Email</div>
+
+              <span class="material-symbols-outlined"> arrow_right_alt </span>
+            </button>
+            <p class="text-center">
+              <a class="text-base font-normal text-gray-900"
+                >By continuing, I agree with UniCourt’s</a
+              >
+            </p>
+            <!-- <ul
+              class="text-sm font-normal text-gray-500 list-none footerlink text-center mt-5 mb-2 underline"
+            >
+              <li>General Disclaimer</li>
+              <li>Terms of Service</li>
+              <li>Privacy Policy</li>
+              <li>Public Records Policy</li>
+              <li>Cancellation and Refund Policy</li>
+            </ul>
+            <p class="text-center text-sm font-normal">© 2023 UniCourt Inc.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!--Great! now let’s get to know each other start-->
+      <div
+        class="md:max-w-[500px]- w-full rounded-lg bg-white sm:max-w-sm md:mt-0 md:max-w-md xl:p-0"
+      >
+        <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+          <img
+            class="text-center"
+            src="../assets/jpg/Logo.png"
+            width="90"
+            height="90"
+          />
+        </div>
+        <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+          Great! now let’s get to know each other
+        </h3>
+
+        <div class="mb-6">
+          <div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="">
+                <label
+                  for="first_name"
+                  class="mb-2 block text-base font-semibold text-gray-900"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  id="first_name"
+                  class="block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-base font-normal text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                  placeholder="John"
+                  required
+                />
+              </div>
+              <div class="">
+                <label
+                  for="last_name"
+                  class="mb-2 block text-base font-semibold text-gray-900"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  id="last_name"
+                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-base font-normal text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                  placeholder="Doe"
+                  required
+                />
+              </div>
+            </div>
+            <button
+              type="button"
+              class="mb-2 mb-7 me-2 mt-7 flex w-full items-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+            >
+              <div class="grow">Next</div>
+
+              <span class="material-symbols-outlined"> arrow_right_alt </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Great! now let’s get to know each other end-->
+
+      <!--Nice to meet you John! What’s your phone number start-->
+      <div
+        class="md:max-w-[500px]- w-full rounded-lg bg-white sm:max-w-sm md:mt-0 md:max-w-md xl:p-0"
+      >
+        <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+          <img
+            class="text-center"
+            src="../assets/jpg/Logo.png"
+            width="90"
+            height="90"
+          />
+        </div>
+        <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+          Nice to meet you <span class="text-secondary-700">John!</span> What’s
+          your phone number
+        </h3>
+        <p class="mb-8 text-center text-base font-normal text-gray-900">
+          We promise to never share this with anyone.
+        </p>
+        <div class="mb-6">
+          <div>
+            <div>
+              <form class="">
+                <div class="flex items-center">
+                  <button
+                    id="dropdown-phone-button"
+                    data-dropdown-toggle="dropdown-phone"
+                    class="z-10 mr-4 inline-flex flex-shrink-0 items-center rounded-md border border-gray-300 px-4 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"
+                    type="button"
+                  >
+                    <svg
+                      fill="none"
+                      aria-hidden="true"
+                      class="me-2 h-4 w-4"
+                      viewBox="0 0 20 15"
+                    >
+                      <rect
+                        width="19.6"
+                        height="14"
+                        y=".5"
+                        fill="#fff"
+                        rx="2"
+                      />
+                      <mask
+                        id="a"
+                        style="mask-type: luminance"
+                        width="20"
+                        height="15"
+                        x="0"
+                        y="0"
+                        maskUnits="userSpaceOnUse"
+                      >
+                        <rect
+                          width="19.6"
+                          height="14"
+                          y=".5"
+                          fill="#fff"
+                          rx="2"
+                        />
+                      </mask>
+                      <g mask="url(#a)">
+                        <path
+                          fill="#D02F44"
+                          fill-rule="evenodd"
+                          d="M19.6.5H0v.933h19.6V.5zm0 1.867H0V3.3h19.6v-.933zM0 4.233h19.6v.934H0v-.934zM19.6 6.1H0v.933h19.6V6.1zM0 7.967h19.6V8.9H0v-.933zm19.6 1.866H0v.934h19.6v-.934zM0 11.7h19.6v.933H0V11.7zm19.6 1.867H0v.933h19.6v-.933z"
+                          clip-rule="evenodd"
+                        />
+                        <path fill="#46467F" d="M0 .5h8.4v6.533H0z" />
+                        <g filter="url(#filter0_d_343_121520)">
+                          <path
+                            fill="url(#paint0_linear_343_121520)"
+                            fill-rule="evenodd"
+                            d="M1.867 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.866 0a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM7.467 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zM2.333 3.3a.467.467 0 100-.933.467.467 0 000 .933zm2.334-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.4.467a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm-2.334.466a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.466a.467.467 0 11-.933 0 .467.467 0 01.933 0zM1.4 4.233a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM6.533 4.7a.467.467 0 11-.933 0 .467.467 0 01.933 0zM7 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zM3.267 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0z"
+                            clip-rule="evenodd"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_343_121520"
+                          x1=".933"
+                          x2=".933"
+                          y1="1.433"
+                          y2="6.1"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#fff" />
+                          <stop offset="1" stop-color="#F0F0F0" />
+                        </linearGradient>
+                        <filter
+                          id="filter0_d_343_121520"
+                          width="6.533"
+                          height="5.667"
+                          x=".933"
+                          y="1.433"
+                          color-interpolation-filters="sRGB"
+                          filterUnits="userSpaceOnUse"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            result="hardAlpha"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          />
+                          <feOffset dy="1" />
+                          <feColorMatrix
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                          />
+                          <feBlend
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_343_121520"
+                          />
+                          <feBlend
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_343_121520"
+                            result="shape"
+                          />
+                        </filter>
+                      </defs>
+                    </svg>
+                    +1
+                    <svg
+                      class="ms-2.5 h-2.5 w-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="dropdown-phone"
+                    class="z-10 hidden w-52 divide-y divide-gray-100 rounded-lg bg-white shadow"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700"
+                      aria-labelledby="dropdown-phone-button"
+                    >
+                      <li>
+                        <button
+                          type="button"
+                          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          <div class="inline-flex items-center">
+                            <svg
+                              fill="none"
+                              aria-hidden="true"
+                              class="me-2 h-4 w-4"
+                              viewBox="0 0 20 15"
+                            >
+                              <rect
+                                width="19.6"
+                                height="14"
+                                y=".5"
+                                fill="#fff"
+                                rx="2"
+                              />
+                              <mask
+                                id="a"
+                                style="mask-type: luminance"
+                                width="20"
+                                height="15"
+                                x="0"
+                                y="0"
+                                maskUnits="userSpaceOnUse"
+                              >
+                                <rect
+                                  width="19.6"
+                                  height="14"
+                                  y=".5"
+                                  fill="#fff"
+                                  rx="2"
+                                />
+                              </mask>
+                              <g mask="url(#a)">
+                                <path
+                                  fill="#D02F44"
+                                  fill-rule="evenodd"
+                                  d="M19.6.5H0v.933h19.6V.5zm0 1.867H0V3.3h19.6v-.933zM0 4.233h19.6v.934H0v-.934zM19.6 6.1H0v.933h19.6V6.1zM0 7.967h19.6V8.9H0v-.933zm19.6 1.866H0v.934h19.6v-.934zM0 11.7h19.6v.933H0V11.7zm19.6 1.867H0v.933h19.6v-.933z"
+                                  clip-rule="evenodd"
+                                />
+                                <path fill="#46467F" d="M0 .5h8.4v6.533H0z" />
+                                <g filter="url(#filter0_d_343_121520)">
+                                  <path
+                                    fill="url(#paint0_linear_343_121520)"
+                                    fill-rule="evenodd"
+                                    d="M1.867 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.866 0a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM7.467 1.9a.467.467 0 11-.934 0 .467.467 0 01.934 0zM2.333 3.3a.467.467 0 100-.933.467.467 0 000 .933zm2.334-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm1.4.467a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.934 0 .467.467 0 01.934 0zm-2.334.466a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.466a.467.467 0 11-.933 0 .467.467 0 01.933 0zM1.4 4.233a.467.467 0 100-.933.467.467 0 000 .933zm1.4.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zm1.4.467a.467.467 0 100-.934.467.467 0 000 .934zM6.533 4.7a.467.467 0 11-.933 0 .467.467 0 01.933 0zM7 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.933 0 .467.467 0 01.933 0zM3.267 6.1a.467.467 0 100-.933.467.467 0 000 .933zm-1.4-.467a.467.467 0 11-.934 0 .467.467 0 01.934 0z"
+                                    clip-rule="evenodd"
+                                  />
+                                </g>
+                              </g>
+                              <defs>
+                                <linearGradient
+                                  id="paint0_linear_343_121520"
+                                  x1=".933"
+                                  x2=".933"
+                                  y1="1.433"
+                                  y2="6.1"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#fff" />
+                                  <stop offset="1" stop-color="#F0F0F0" />
+                                </linearGradient>
+                                <filter
+                                  id="filter0_d_343_121520"
+                                  width="6.533"
+                                  height="5.667"
+                                  x=".933"
+                                  y="1.433"
+                                  color-interpolation-filters="sRGB"
+                                  filterUnits="userSpaceOnUse"
+                                >
+                                  <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                  />
+                                  <feColorMatrix
+                                    in="SourceAlpha"
+                                    result="hardAlpha"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                  />
+                                  <feOffset dy="1" />
+                                  <feColorMatrix
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                                  />
+                                  <feBlend
+                                    in2="BackgroundImageFix"
+                                    result="effect1_dropShadow_343_121520"
+                                  />
+                                  <feBlend
+                                    in="SourceGraphic"
+                                    in2="effect1_dropShadow_343_121520"
+                                    result="shape"
+                                  />
+                                </filter>
+                              </defs>
+                            </svg>
+                            United States (+1)
+                          </div>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          <div class="inline-flex items-center">
+                            <svg
+                              class="me-2 h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 20 15"
+                            >
+                              <rect
+                                width="19.6"
+                                height="14"
+                                y=".5"
+                                fill="#fff"
+                                rx="2"
+                              />
+                              <mask
+                                id="a"
+                                style="mask-type: luminance"
+                                width="20"
+                                height="15"
+                                x="0"
+                                y="0"
+                                maskUnits="userSpaceOnUse"
+                              >
+                                <rect
+                                  width="19.6"
+                                  height="14"
+                                  y=".5"
+                                  fill="#fff"
+                                  rx="2"
+                                />
+                              </mask>
+                              <g mask="url(#a)">
+                                <path fill="#0A17A7" d="M0 .5h19.6v14H0z" />
+                                <path
+                                  fill="#fff"
+                                  fill-rule="evenodd"
+                                  d="M-.898-.842L7.467 4.8V-.433h4.667V4.8l8.364-5.642L21.542.706l-6.614 4.46H19.6v4.667h-4.672l6.614 4.46-1.044 1.549-8.365-5.642v5.233H7.467V10.2l-8.365 5.642-1.043-1.548 6.613-4.46H0V5.166h4.672L-1.941.706-.898-.842z"
+                                  clip-rule="evenodd"
+                                />
+                                <path
+                                  stroke="#DB1F35"
+                                  stroke-linecap="round"
+                                  stroke-width=".667"
+                                  d="M13.067 4.933L21.933-.9M14.009 10.088l7.947 5.357M5.604 4.917L-2.686-.67M6.503 10.024l-9.189 6.093"
+                                />
+                                <path
+                                  fill="#E6273E"
+                                  fill-rule="evenodd"
+                                  d="M0 8.9h8.4v5.6h2.8V8.9h8.4V6.1h-8.4V.5H8.4v5.6H0v2.8z"
+                                  clip-rule="evenodd"
+                                />
+                              </g>
+                            </svg>
+                            United Kingdom (+44)
+                          </div>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          <div class="inline-flex items-center">
+                            <svg
+                              class="me-2 h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 20 15"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <rect
+                                width="19.6"
+                                height="14"
+                                y=".5"
+                                fill="#fff"
+                                rx="2"
+                              />
+                              <mask
+                                id="a"
+                                style="mask-type: luminance"
+                                width="20"
+                                height="15"
+                                x="0"
+                                y="0"
+                                maskUnits="userSpaceOnUse"
+                              >
+                                <rect
+                                  width="19.6"
+                                  height="14"
+                                  y=".5"
+                                  fill="#fff"
+                                  rx="2"
+                                />
+                              </mask>
+                              <g mask="url(#a)">
+                                <path fill="#0A17A7" d="M0 .5h19.6v14H0z" />
+                                <path
+                                  fill="#fff"
+                                  stroke="#fff"
+                                  stroke-width=".667"
+                                  d="M0 .167h-.901l.684.586 3.15 2.7v.609L-.194 6.295l-.14.1v1.24l.51-.319L3.83 5.033h.73L7.7 7.276a.488.488 0 00.601-.767L5.467 4.08v-.608l2.987-2.134a.667.667 0 00.28-.543V-.1l-.51.318L4.57 2.5h-.73L.66.229.572.167H0z"
+                                />
+                                <path
+                                  fill="url(#paint0_linear_374_135177)"
+                                  fill-rule="evenodd"
+                                  d="M0 2.833V4.7h3.267v2.133c0 .369.298.667.666.667h.534a.667.667 0 00.666-.667V4.7H8.2a.667.667 0 00.667-.667V3.5a.667.667 0 00-.667-.667H5.133V.5H3.267v2.333H0z"
+                                  clip-rule="evenodd"
+                                />
+                                <path
+                                  fill="url(#paint1_linear_374_135177)"
+                                  fill-rule="evenodd"
+                                  d="M0 3.3h3.733V.5h.934v2.8H8.4v.933H4.667v2.8h-.934v-2.8H0V3.3z"
+                                  clip-rule="evenodd"
+                                />
+                                <path
+                                  fill="#fff"
+                                  fill-rule="evenodd"
+                                  d="M4.2 11.933l-.823.433.157-.916-.666-.65.92-.133.412-.834.411.834.92.134-.665.649.157.916-.823-.433zm9.8.7l-.66.194.194-.66-.194-.66.66.193.66-.193-.193.66.193.66-.66-.194zm0-8.866l-.66.193.194-.66-.194-.66.66.193.66-.193-.193.66.193.66-.66-.193zm2.8 2.8l-.66.193.193-.66-.193-.66.66.193.66-.193-.193.66.193.66-.66-.193zm-5.6.933l-.66.193.193-.66-.193-.66.66.194.66-.194-.193.66.193.66-.66-.193zm4.2 1.167l-.33.096.096-.33-.096-.33.33.097.33-.097-.097.33.097.33-.33-.096z"
+                                  clip-rule="evenodd"
+                                />
+                              </g>
+                              <defs>
+                                <linearGradient
+                                  id="paint0_linear_374_135177"
+                                  x1="0"
+                                  x2="0"
+                                  y1=".5"
+                                  y2="7.5"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#fff" />
+                                  <stop offset="1" stop-color="#F0F0F0" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="paint1_linear_374_135177"
+                                  x1="0"
+                                  x2="0"
+                                  y1=".5"
+                                  y2="7.033"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#FF2E3B" />
+                                  <stop offset="1" stop-color="#FC0D1B" />
+                                </linearGradient>
+                              </defs>
+                            </svg>
+                            Australia (+61)
+                          </div>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          <div class="inline-flex items-center">
+                            <svg
+                              class="me-2 h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 20 15"
+                            >
+                              <rect
+                                width="19.6"
+                                height="14"
+                                y=".5"
+                                fill="#fff"
+                                rx="2"
+                              />
+                              <mask
+                                id="a"
+                                style="mask-type: luminance"
+                                width="20"
+                                height="15"
+                                x="0"
+                                y="0"
+                                maskUnits="userSpaceOnUse"
+                              >
+                                <rect
+                                  width="19.6"
+                                  height="14"
+                                  y=".5"
+                                  fill="#fff"
+                                  rx="2"
+                                />
+                              </mask>
+                              <g mask="url(#a)">
+                                <path
+                                  fill="#262626"
+                                  fill-rule="evenodd"
+                                  d="M0 5.167h19.6V.5H0v4.667z"
+                                  clip-rule="evenodd"
+                                />
+                                <g filter="url(#filter0_d_374_135180)">
+                                  <path
+                                    fill="#F01515"
+                                    fill-rule="evenodd"
+                                    d="M0 9.833h19.6V5.167H0v4.666z"
+                                    clip-rule="evenodd"
+                                  />
+                                </g>
+                                <g filter="url(#filter1_d_374_135180)">
+                                  <path
+                                    fill="#FFD521"
+                                    fill-rule="evenodd"
+                                    d="M0 14.5h19.6V9.833H0V14.5z"
+                                    clip-rule="evenodd"
+                                  />
+                                </g>
+                              </g>
+                              <defs>
+                                <filter
+                                  id="filter0_d_374_135180"
+                                  width="19.6"
+                                  height="4.667"
+                                  x="0"
+                                  y="5.167"
+                                  color-interpolation-filters="sRGB"
+                                  filterUnits="userSpaceOnUse"
+                                >
+                                  <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                  />
+                                  <feColorMatrix
+                                    in="SourceAlpha"
+                                    result="hardAlpha"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                  />
+                                  <feOffset />
+                                  <feColorMatrix
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                                  />
+                                  <feBlend
+                                    in2="BackgroundImageFix"
+                                    result="effect1_dropShadow_374_135180"
+                                  />
+                                  <feBlend
+                                    in="SourceGraphic"
+                                    in2="effect1_dropShadow_374_135180"
+                                    result="shape"
+                                  />
+                                </filter>
+                                <filter
+                                  id="filter1_d_374_135180"
+                                  width="19.6"
+                                  height="4.667"
+                                  x="0"
+                                  y="9.833"
+                                  color-interpolation-filters="sRGB"
+                                  filterUnits="userSpaceOnUse"
+                                >
+                                  <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                  />
+                                  <feColorMatrix
+                                    in="SourceAlpha"
+                                    result="hardAlpha"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                  />
+                                  <feOffset />
+                                  <feColorMatrix
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                                  />
+                                  <feBlend
+                                    in2="BackgroundImageFix"
+                                    result="effect1_dropShadow_374_135180"
+                                  />
+                                  <feBlend
+                                    in="SourceGraphic"
+                                    in2="effect1_dropShadow_374_135180"
+                                    result="shape"
+                                  />
+                                </filter>
+                              </defs>
+                            </svg>
+                            Germany (+49)
+                          </div>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          <div class="inline-flex items-center">
+                            <svg
+                              class="me-2 h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 20 15"
+                            >
+                              <rect
+                                width="19.1"
+                                height="13.5"
+                                x=".25"
+                                y=".75"
+                                fill="#fff"
+                                stroke="#F5F5F5"
+                                stroke-width=".5"
+                                rx="1.75"
+                              />
+                              <mask
+                                id="a"
+                                style="mask-type: luminance"
+                                width="20"
+                                height="15"
+                                x="0"
+                                y="0"
+                                maskUnits="userSpaceOnUse"
+                              >
+                                <rect
+                                  width="19.1"
+                                  height="13.5"
+                                  x=".25"
+                                  y=".75"
+                                  fill="#fff"
+                                  stroke="#fff"
+                                  stroke-width=".5"
+                                  rx="1.75"
+                                />
+                              </mask>
+                              <g mask="url(#a)">
+                                <path
+                                  fill="#F44653"
+                                  d="M13.067.5H19.6v14h-6.533z"
+                                />
+                                <path
+                                  fill="#1035BB"
+                                  fill-rule="evenodd"
+                                  d="M0 14.5h6.533V.5H0v14z"
+                                  clip-rule="evenodd"
+                                />
+                              </g>
+                            </svg>
+                            France (+33)
+                          </div>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          role="menuitem"
+                        >
+                          <div class="inline-flex items-center">
+                            <svg
+                              class="me-2 h-4 w-4"
+                              fill="none"
+                              viewBox="0 0 20 15"
+                            >
+                              <rect
+                                width="19.6"
+                                height="14"
+                                y=".5"
+                                fill="#fff"
+                                rx="2"
+                              />
+                              <mask
+                                id="a"
+                                style="mask-type: luminance"
+                                width="20"
+                                height="15"
+                                x="0"
+                                y="0"
+                                maskUnits="userSpaceOnUse"
+                              >
+                                <rect
+                                  width="19.6"
+                                  height="14"
+                                  y=".5"
+                                  fill="#fff"
+                                  rx="2"
+                                />
+                              </mask>
+                              <g mask="url(#a)">
+                                <path
+                                  fill="#262626"
+                                  fill-rule="evenodd"
+                                  d="M0 5.167h19.6V.5H0v4.667z"
+                                  clip-rule="evenodd"
+                                />
+                                <g filter="url(#filter0_d_374_135180)">
+                                  <path
+                                    fill="#F01515"
+                                    fill-rule="evenodd"
+                                    d="M0 9.833h19.6V5.167H0v4.666z"
+                                    clip-rule="evenodd"
+                                  />
+                                </g>
+                                <g filter="url(#filter1_d_374_135180)">
+                                  <path
+                                    fill="#FFD521"
+                                    fill-rule="evenodd"
+                                    d="M0 14.5h19.6V9.833H0V14.5z"
+                                    clip-rule="evenodd"
+                                  />
+                                </g>
+                              </g>
+                              <defs>
+                                <filter
+                                  id="filter0_d_374_135180"
+                                  width="19.6"
+                                  height="4.667"
+                                  x="0"
+                                  y="5.167"
+                                  color-interpolation-filters="sRGB"
+                                  filterUnits="userSpaceOnUse"
+                                >
+                                  <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                  />
+                                  <feColorMatrix
+                                    in="SourceAlpha"
+                                    result="hardAlpha"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                  />
+                                  <feOffset />
+                                  <feColorMatrix
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                                  />
+                                  <feBlend
+                                    in2="BackgroundImageFix"
+                                    result="effect1_dropShadow_374_135180"
+                                  />
+                                  <feBlend
+                                    in="SourceGraphic"
+                                    in2="effect1_dropShadow_374_135180"
+                                    result="shape"
+                                  />
+                                </filter>
+                                <filter
+                                  id="filter1_d_374_135180"
+                                  width="19.6"
+                                  height="4.667"
+                                  x="0"
+                                  y="9.833"
+                                  color-interpolation-filters="sRGB"
+                                  filterUnits="userSpaceOnUse"
+                                >
+                                  <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                  />
+                                  <feColorMatrix
+                                    in="SourceAlpha"
+                                    result="hardAlpha"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                  />
+                                  <feOffset />
+                                  <feColorMatrix
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                                  />
+                                  <feBlend
+                                    in2="BackgroundImageFix"
+                                    result="effect1_dropShadow_374_135180"
+                                  />
+                                  <feBlend
+                                    in="SourceGraphic"
+                                    in2="effect1_dropShadow_374_135180"
+                                    result="shape"
+                                  />
+                                </filter>
+                              </defs>
+                            </svg>
+                            Germany (+49)
+                          </div>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <label
+                    for="phone-input"
+                    class="sr-only mb-2 text-sm font-medium text-gray-900"
+                    >Phone number:</label
+                  >
+                  <div class="relative w-full">
+                    <input
+                      type="text"
+                      id="phone-input"
+                      class="z-20 block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                      placeholder="123-456-7890"
+                      required
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+            <button
+              type="button"
+              class="mb-2 mb-7 me-2 mt-7 flex w-full items-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+            >
+              <div class="grow">Next</div>
+
+              <span class="material-symbols-outlined"> arrow_right_alt </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Nice to meet you John! What’s your phone number end-->
+
+      <!--Great! Why are you searching court documents? start-->
+      <div
+        class="md:max-w-[500px]- w-full rounded-lg bg-white sm:max-w-sm md:mt-0 md:max-w-md xl:p-0"
+      >
+        <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+          <img
+            class="text-center"
+            src="../assets/jpg/Logo.png"
+            width="90"
+            height="90"
+          />
+        </div>
+        <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+          Great! Why are you searching court documents ?
+        </h3>
+        <p class="mb-8 text-center text-base font-normal text-gray-900">
+          This will help us find data relevant to your needs.
+        </p>
+        <div class="mb-6">
+          <ul class="bg-white text-sm font-medium text-gray-900">
+            <li
+              class="checked relative mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <span class="material-icons planCheck-personal checkMark"
+                >check_circle</span
+              >
+              <span class="material-symbols-outlined mr-2 text-gray-500">
+                business_center
+              </span>
+              <p class="text-base font-semibold">Business</p>
+            </li>
+            <li
+              class="mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <span class="material-symbols-outlined mr-2 text-gray-500">
+                account_circle
+              </span>
+              <p class="text-base font-semibold">Personal</p>
+            </li>
+            <li
+              class="mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <span class="material-symbols-outlined mr-2 text-gray-500">
+                account_balance
+              </span>
+              <p class="text-base font-semibold">Government</p>
+            </li>
+            <li
+              class="mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <span class="material-symbols-outlined mr-2 text-gray-500">
+                import_contacts
+              </span>
+              <p class="text-base font-semibold">Academic</p>
+            </li>
+            <li
+              class="flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <span class="material-symbols-outlined mr-2 text-gray-500">
+                favorite
+              </span>
+              <p class="text-base font-semibold">Non-Profit</p>
+            </li>
+          </ul>
+          <div>
+            <button
+              type="button"
+              class="mb-2 mb-7 me-2 mt-7 flex w-full items-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+            >
+              <div class="grow">Next</div>
+
+              <span class="material-symbols-outlined"> arrow_right_alt </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Great! Why are you searching court documents? end-->
+
+      <!--progressbar start-->
+      <div class="progressbar mb-4 h-1.5 w-full rounded-full bg-gray-200">
+        <div
+          class="active h-1.5 rounded-full bg-primary-600"
+          style="width: 20%"
+        ></div>
+      </div>
+      <!--progressbar end-->
+
+      <!--What feature are you most interested in start-->
+      <div
+        class="md:max-w-[500px]- w-full rounded-lg bg-white sm:max-w-sm md:mt-0 md:max-w-md xl:p-0"
+      >
+        <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+          <img
+            class="text-center"
+            src="../assets/jpg/Logo.png"
+            width="90"
+            height="90"
+          />
+        </div>
+        <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+          What feature are you most interested in?
+        </h3>
+        <p class="mb-8 text-center text-base font-normal text-gray-900">
+          This will help us find data relevant to your needs.
+        </p>
+        <div class="mb-6">
+          <ul class="bg-white text-sm font-medium text-gray-900">
+            <li
+              class="checked relative mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <span class="material-icons planCheck-personal checkMark"
+                >check_circle</span
+              >
+
+              <p class="text-base font-semibold">
+                Case Research, Tracking & Document Downloads
+              </p>
+            </li>
+            <li
+              class="mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <p class="text-base font-semibold">
+                Legal Analytics & Litigation Trends
+              </p>
+            </li>
+            <li
+              class="mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <p class="text-base font-semibold">
+                Business Intelligence & Development
+              </p>
+            </li>
+            <li
+              class="mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <p class="text-base font-semibold">
+                Investigations, Due Diligence & Background Checks
+              </p>
+            </li>
+          </ul>
+          <div>
+            <button
+              type="button"
+              class="mb-2 mb-7 me-2 mt-7 flex w-full items-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+            >
+              <div class="grow">Next</div>
+
+              <span class="material-symbols-outlined"> arrow_right_alt </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--What feature are you most interested in end-->
+
+      <!--Last but not least, do you have a PACER account start-->
+      <div
+        class="md:max-w-[500px]- w-full rounded-lg bg-white sm:max-w-sm md:mt-0 md:max-w-md xl:p-0"
+      >
+        <div class="logo mb-14 mt-7 grid justify-items-center text-center">
+          <img
+            class="text-center"
+            src="../assets/jpg/Logo.png"
+            width="90"
+            height="90"
+          />
+        </div>
+        <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+          Last but not least, do you have a PACER account?
+        </h3>
+        <p class="mb-8 text-center text-base font-normal text-gray-900">
+          Federal Courts use the Public Access to Court Electronic Records
+          (PACER) system to make court records available to the public for a
+          fee. To access PACER records not in our CrowdSourced Library™ , you
+          can add your PACER account or use UniCourt’s.
+        </p>
+        <div class="mb-6">
+          <ul class="flex bg-white text-sm font-medium text-gray-900">
+            <li
+              class="checked relative mb-4 mr-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <span class="material-icons planCheck-personal checkMark"
+                >check_circle</span
+              >
+
+              <p class="text-base font-semibold">Yes</p>
+            </li>
+            <li
+              class="mb-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <p class="text-base font-semibold">No</p>
+            </li>
+          </ul>
+        </div>
+        <h4 class="text-center text-lg font-semibold text-gray-900">
+          Please enter your PACER credentials
+        </h4>
+        <p class="mb-8 text-center text-base font-normal text-gray-900">
+          All PACER fees will be passed onto your PACER account.
+        </p>
+        <div class="mb-6">
+          <div>
+            <div class="grid grid-cols-1 gap-4">
+              <div class="">
+                <label
+                  for="first_name"
+                  class="mb-2 block text-base font-semibold text-gray-900"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  id="first_name"
+                  class="block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-base font-normal text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                  placeholder="John"
+                  required
+                />
+              </div>
+              <div class="relative mb-6">
+                <label
+                  for="first_name"
+                  class="mb-2 block text-base font-semibold text-gray-900"
+                  >Password</label
+                >
+                <div class="relative">
+                  <input
+                    type="Password"
+                    id="input-group-1"
+                    class="block w-full rounded-lg border border-red-700 bg-gray-50 p-2.5 text-base font-normal text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                    placeholder="Password"
+                  />
+                  <div
+                    class="absolute inset-y-0 end-2 flex items-center ps-3.5 hover:cursor-pointer"
+                  >
+                    <button class="press">
+                      <span class="material-icons text-gray-700">
+                        visibility
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+                <p class="mt-2 text-sm text-red-700">Error text</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="mb-2 mb-7 me-2 mt-7 flex w-full items-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+            >
+              <div class="grow">Validate</div>
+
+              <span class="material-symbols-outlined"> arrow_right_alt </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Last but not least, do you have a PACER account end-->
+    </div>
+    <!--start oneclick signup end-->
+
+    <!--payment method start-->
+    <div class="w-[480px]- mx-auto flex items-center justify-center space-x-14">
+      <div class="w-[480px]">
+        <h3 class="mb-6 text-center text-thirtytwo font-semibold text-gray-900">
+          Let’s add a payment method
+        </h3>
+        <div class="mb-6">
+          <ul
+            class="grid grid-cols-2 gap-4 bg-white text-sm font-medium text-gray-900"
+          >
+            <li
+              class="items-left checked relative mb-4 mr-4 flex w-full flex-col rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <span class="material-icons planCheck-personal checkMark"
+                >check_circle</span
+              >
+
+              <p class="text-base font-semibold text-gray-900">Monthly</p>
+              <p class="text-sm font-normal text-gray-500">
+                $49 charged Monthly
+              </p>
+            </li>
+            <li
+              class="items-left mb-4 flex w-full flex-col rounded-md border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+            >
+              <div class="flex items-center">
+                <p class="mr-2 text-base font-semibold text-gray-900">Yearly</p>
+                <span
+                  type="button"
+                  class="inline-flex items-center rounded-md bg-gray-200 px-3 py-1 text-center text-xs font-medium text-primary-500"
+                >
+                  Save $98
+                </span>
+              </div>
+
+              <p class="text-sm font-normal text-gray-500">
+                $49 charged Monthly
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <div>
+            <div class="grid grid-cols-1 gap-4">
+              <div class="">
+                <label
+                  for="first_name"
+                  class="mb-2 block text-base font-semibold text-gray-900"
+                  >Card Details</label
+                >
+                <input
+                  type="text"
+                  id="first_name"
+                  class="block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-base font-normal text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                  placeholder="Card Number..."
+                  required
+                />
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="">
+                  <input
+                    type="text"
+                    id="first_name"
+                    class="block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-base font-normal text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                    placeholder="MM/YY"
+                    required
+                  />
+                </div>
+                <div class="">
+                  <input
+                    type="text"
+                    id="last_name"
+                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-base font-normal text-gray-900 focus:border-primary-500 focus:ring-primary-500"
+                    placeholder="CVV"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="mb-4 mt-8 flex items-start">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:ring-2 focus:ring-primary-500"
+              />
+              <label
+                for="default-checkbox"
+                class="ms-2 text-sm font-medium text-gray-900"
+                >Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                Donec ullamcorper nulla non metus auctor fringilla. Praesent
+                commodo cursus magna, vel scelerisque nisl consectetur et.
+              </label>
+            </div>
+            <div class="flex items-start">
+              <input
+                checked
+                id="checked-checkbox"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:ring-2 focus:ring-primary-500"
+              />
+              <label
+                for="checked-checkbox"
+                class="ms-2 text-sm font-medium text-gray-900"
+                >Duis mollis, est non commodo luctus, nisi erat porttitor
+                ligula, eget lacinia odio sem nec elit.
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[300px]">
+        <div
+          class="max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow"
+        >
+          <a href="#">
+            <h6 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
+              Summary
+            </h6>
+          </a>
+          <div class="flex flex-col">
+            <p class="flex justify-between">
+              <span class="text-base font-semibold text-gray-500">Plan</span>
+              <span class="text-base font-normal text-primary-700"
+                >Personal Plan</span
+              >
+            </p>
+            <p class="flex justify-between">
+              <span class="text-base font-semibold text-gray-500">Price</span>
+              <span class="text-base font-normal text-gray-900">$49</span>
+            </p>
+            <div class="w-full- mb-4 mt-4 h-[1px] grow bg-gray-200"></div>
+            <p class="flex justify-between">
+              <span class="text-lg font-semibold text-gray-900">Total</span>
+              <span class="text-lg font-normal text-gray-900">USD $49</span>
+            </p>
+            <p class="flex justify-end">
+              <span class="text-base font-normal text-gray-500">Monthly</span>
+            </p>
+            <p class="bg-utilities-summery mt-4 rounded-md p-4 text-gray-900">
+              All prices are in U.S. dollars. Your final price may vary based on
+              exchange rates if you are using a foreign credit card.
+            </p>
+            <button
+              type="button"
+              class="mb-2 mb-7 me-2 mt-7 flex w-full items-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-semibold text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+            >
+              <div class="grow">Start Subscription!</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--payment method end-->
+  </div>
+</div>
+
+<!--tree start-->
+<div id="accordion-nested-parent" data-accordion="collapse" class="d-none-">
+  <h2 id="accordion-collapse-heading-1">
+    <button
+      type="button"
+      class="flex w-full items-center justify-between gap-3 border-gray-200 p-2 font-medium text-gray-500 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rtl:text-right"
+      data-accordion-target="#accordion-collapse-body-1"
+      aria-expanded="false"
+      aria-controls="accordion-collapse-body-1"
+    >
+      <span>Flowbite</span>
+      <svg
+        data-accordion-icon
+        class="h-3 w-3 shrink-0 rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 10 6"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5 5 1 1 5"
+        />
+      </svg>
+    </button>
+  </h2>
+  <div
+    id="accordion-collapse-body-1"
+    class="hidden"
+    aria-labelledby="accordion-collapse-heading-1"
+  >
+    <div class="border border-b-0 border-gray-200 p-5 pr-0">
+      <!-- Nested accordion -->
+      <div id="accordion-nested-collapse" data-accordion="collapse">
+        <h2 id="accordion-nested-collapse-heading-1">
+          <button
+            type="button"
+            class="rounded-t-xl- flex w-full items-center justify-between gap-3 border-gray-200 p-2 font-medium text-gray-500 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rtl:text-right"
+            data-accordion-target="#accordion-nested-collapse-body-1"
+            aria-expanded="false"
+            aria-controls="accordion-nested-collapse-body-1"
+          >
+            <span>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <input
+                    id="default-checkbox1"
+                    type="checkbox"
+                    value=""
+                    class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  />
+                </div>
+                <span
+                  for="default-checkbox1"
+                  class="ms-2 truncate text-ellipsis text-sm font-normal"
+                  >New York, State Courts overflow overflow
+                </span>
+              </div>
+            </span>
+            <svg
+              data-accordion-icon
+              class="h-3 w-3 shrink-0 rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5 5 1 1 5"
+              />
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-nested-collapse-body-1"
+          class="hidden"
+          data-accordion="collapse"
+        >
+          <div class="border border-b-0 border-gray-200 p-5 pr-0">
+            <h2 id="accordion-collapse-heading-2">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-3 border-gray-200 p-2 font-medium text-gray-500 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rtl:text-right"
+                data-accordion-target="#accordion-collapse-body-2"
+                aria-expanded="false"
+                aria-controls="accordion-collapse-body-2"
+              >
+                <span>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                      <input
+                        id="default-checkbox1"
+                        type="checkbox"
+                        value=""
+                        class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                      />
+                    </div>
+                    <span
+                      for="default-checkbox1"
+                      class="ms-2 truncate text-ellipsis text-sm font-normal"
+                      >New York, State Courts overflow overflow
+                    </span>
+                  </div>
+                </span>
+                <svg
+                  data-accordion-icon
+                  class="h-3 w-3 shrink-0 rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-collapse-body-2"
+              class="hidden"
+              data-accordion="collapse"
+              aria-labelledby="accordion-collapse-heading-2"
+            >
+              <div class="border border-gray-200 p-5 pr-0">
+                <!---->
+                <h2 id="accordion-nested-collapse-heading-2">
+                  <button
+                    type="button"
+                    class="flex w-full items-center justify-between gap-3 border-gray-200 p-2 font-medium text-gray-500 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rtl:text-right"
+                    data-accordion-target="#accordion-nested-collapse-body-2"
+                    aria-expanded="false"
+                    aria-controls="accordion-nested-collapse-body-2"
+                  >
+                    <span>
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                          <input
+                            id="default-checkbox1"
+                            type="checkbox"
+                            value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                          />
+                        </div>
+                        <span
+                          for="default-checkbox1"
+                          class="ms-2 truncate text-ellipsis text-sm font-normal"
+                          >New York, State Courts overflow overflow
+                        </span>
+                      </div>
+                    </span>
+                    <svg
+                      data-accordion-icon
+                      class="h-3 w-3 shrink-0 rotate-180"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5 5 1 1 5"
+                      />
+                    </svg>
+                  </button>
+                </h2>
+                <div
+                  id="accordion-nested-collapse-body-2"
+                  class="hidden"
+                  aria-labelledby="accordion-nested-collapse-heading-2"
+                >
+                  <div class="border border-b-0 border-gray-200 p-5">
+                    <p class="text-gray-500">
+                      Another difference is that Flowbite relies on smaller and
+                      standalone components, whereas Tailwind UI offers sections
+                      of pages.
+                    </p>
+                  </div>
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Nested accordion -->
+    </div>
+  </div>
+</div>
+<!--tree end-->

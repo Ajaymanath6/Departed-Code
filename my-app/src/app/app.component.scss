@@ -1,0 +1,40 @@
+.checked {
+  border-color: rgb(28 100 242 / var(--tw-border-opacity));
+}
+.checked .tick-img {
+  display: block;
+}
+.tick-img {
+  display: none;
+}
+.container-login {
+  max-width: 404px;
+}
+.text-over-divider {
+  overflow: hidden;
+  text-align: center;
+}
+.text-over-divider:before,
+.text-over-divider:after {
+  background-color: #d9dbe9;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.text-over-divider:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.text-over-divider {
+  overflow: hidden;
+  text-align: center;
+}
+.text-over-divider:after {
+  left: 0.5em;
+  margin-right: -50%;
+}

@@ -1,0 +1,108 @@
+{
+  "color": ["#3fb1e3", "#6be6c1", "#626c91", "#a0a7e6", "#c4ebad", "#96dee8"],
+  "textStyle": {},
+  "title": {
+    "textStyle": {
+      "color": "#666666"
+    },
+    "subtextStyle": {
+      "color": "#999999"
+    }
+  },
+  "line": {
+    "itemStyle": {
+      "borderWidth": "2"
+    },
+    "lineStyle": {
+      "width": "3"
+    },
+    "symbolSize": "15",
+    "symbol": "circle",
+    "smooth": false
+  },
+  "bar": {
+    "itemStyle": {
+      "barBorderWidth": 0,
+      "barBorderColor": "#ccc"
+    },
+    "toolbox": {
+      "iconStyle": {
+        "color": "#3fb1e3"
+      }
+    }
+  },
+  "categoryAxis": {
+    "axisLine": {
+      "show": false,
+      "lineStyle": {
+        "color": "#FFBF00"
+      }
+    },
+    "axisTick": {
+      "show": false,
+      "lineStyle": {
+        "color": "#333"
+      }
+    },
+    "axisLabel": {
+      "show": true,
+      "color": "#A1A2BC",
+      "interval": "0",
+      "overflow": "breakAll",
+
+      "rotate": "50",
+      "width": "80",
+      "height": "auto"
+    },
+    "splitLine": {
+      "show": false,
+      "lineStyle": {
+        "color": ["#eeeeee"]
+      }
+    }
+  },
+  "valueAxis": {
+    "axisLine": {
+      "show": false,
+      "lineStyle": {
+        "color": "#cccccc"
+      }
+    },
+    "axisLabel": {
+      "show": false,
+      "color": "#999999"
+    },
+    "splitLine": {
+      "show": false,
+      "lineStyle": {
+        "color": ["#eeeeee"]
+      }
+    }
+  },
+  "toolbox": {
+    "iconStyle": {
+      "color": "#3fb1e3"
+    }
+  },
+  "tooltip": {
+    "axisPointer": {
+      "lineStyle": {
+        "color": "#cccccc",
+        "width": 1
+      },
+      "crossStyle": {
+        "color": "#cccccc",
+        "width": 1
+      }
+    },
+    "title": {
+      "textStyle": {
+        "width": "20%"
+      }
+    },
+    "className": "echarts-tooltip"
+  },
+  "visualMap": {
+    "color": ["#2a99c9", "#afe8ff"]
+  }
+}

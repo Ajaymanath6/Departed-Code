@@ -1,0 +1,1426 @@
+<div class="toast fixed top-[4%] right-0 m-8 d-none">
+  <div id="toast-notification" class="w-full max-w-[25rem] p-4 text-gray-900 bg-white rounded-lg shadow " role="alert">
+
+    <div class="flex items-center-">
+
+      <div
+        class="relative inline-flex items-center justify-center min-w-[2.5rem] w-10 h-10 overflow-hidden bg-gray-100 rounded-full">
+
+        <span class="material-icons relative">
+          receipt_long
+          <span class="material-icons toast-check text-red-700">
+            error
+          </span>
+        </span>
+        <!-- <span class="material-icons relative">
+              markunread
+               <span class="material-icons toast-check">
+              check_circle
+            </span>
+            </span> -->
+      </div>
+      <div class="ms-3 text-base text-gray-900 font-normal">
+        <div class="">
+          <span class="font-semibold">You</span> just sent an member invitation to <span
+            class="font-semibold">“john@gmail.com”.</span>
+          <p class="text-gray-500 text-sm">From My Team • Jan 08, 2024</p>
+        </div>
+      </div>
+      <div class="flex items-start mb-3">
+        <button type="button"
+          class="ms-auto -mx-1.5 -my-1.5 bg-white justify-center items-center flex-shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8  "
+          data-dismiss-target="#toast-notification" aria-label="Close">
+          <span class="sr-only">Close</span>
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast2 fixed top-[10%] right-0 m-8 error d-none">
+  <div id="toast-notification" class="w-full max-w-[25rem] p-4 text-red-900 bg-red-50 rounded-lg shadow " role="alert">
+
+    <div class="flex items-center-">
+
+      <div
+        class="relative inline-flex items-center justify-center min-w-[2.5rem] w-10 h-10 overflow-hidden bg-red-100 rounded-full">
+
+
+        <span class="material-icons text-red-700">
+          warning
+        </span>
+      </div>
+      <div class="ms-3 text-base text-gray-900 font-normal">
+        <div class="">
+          <span class="font-semibold">We</span> Could’nt sent member invitation to <span
+            class="font-semibold">“john@gmail.com”.</span>
+          <p class="text-gray-500 text-sm">We're working on it! Please try again soon.</p>
+        </div>
+      </div>
+      <div class="flex items-start mb-3">
+        <button type="button"
+          class="ms-auto -mx-1.5 -my-1.5  justify-center items-center flex-shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8  "
+          data-dismiss-target="#toast-notification" aria-label="Close">
+          <span class="sr-only">Close</span>
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="border border-b">
+  <div class="container d-none">
+    <h3 class="text-thirtytwo text-gray-900 font-semibold mb-2 mt-6">
+      Notification Settings
+    </h3>
+    <p class="text-lg text-gray-900 font-normal mb-4">
+      Manage how you want to see your notifications.
+    </p>
+  </div>
+  <div class="container d-none">
+    <h3 class="text-thirtytwo text-gray-900 font-semibold mb-2 mt-6">My Account</h3>
+    <div class="flex justify-between">
+      <p class="text-lg text-gray-900 font-normal mb-4">
+        Manage your account and profile information.
+      </p>
+      <button type="button"
+        class="flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md text-sm px-2 py-1 me-2 mb-2 font-semibold text-primary-700">
+        <span class="material-symbols-outlined"> edit </span>
+        Edit Profile
+      </button>
+    </div>
+  </div>
+  <div class="container d-none">
+    <h3 class="text-thirtytwo text-gray-900 font-semibold mb-2 mt-6">My Team</h3>
+    <div class="flex justify-between">
+      <p class="text-lg text-gray-900 font-normal mb-4">
+        Manage your team and invite new members.
+      </p>
+      <button type="button"
+        class="flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md text-sm px-2 py-1 me-2 mb-2 font-semibold text-primary-700">
+        <span class="material-symbols-outlined"> edit </span>
+        Edit Profile
+      </button>
+    </div>
+  </div>
+</section>
+<div class="container mt-10">
+  <div class="flex">
+    <ul class="flex-column w-[200px]- w-[15%] space-y space-y-1 text-base font-semibold text-gray-500 mb-4"
+      id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+      <li>
+        <a class="inline-flex items-center px-4 py-3 rounded-md active w-full cursor-pointer" aria-current="page"
+          id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+          aria-selected="false">
+          <span class="material-symbols-outlined mr-2"> account_circle </span>
+          My Account
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex items-center px-4 py-3 rounded-md hover:text-gray-900 hover:bg-gray-100 w-full cursor-pointer"
+          id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard"
+          aria-selected="false">
+          <span class="material-symbols-outlined mr-2"> note_stack </span>
+          Plans
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex items-center px-4 py-3 rounded-md hover:text-gray-900 hover:bg-gray-100 w-full cursor-pointer"
+          id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
+          aria-selected="false">
+          <span class="material-symbols-outlined mr-2"> group </span>
+          My Team
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex items-center px-4 py-3 rounded-md hover:text-gray-900 hover:bg-gray-100 w-full cursor-pointer"
+          id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
+          aria-selected="false">
+          <span class="material-symbols-outlined mr-2"> manage_accounts </span>
+          User Roles
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex items-center px-4 py-3 hover:text-gray-900 hover:bg-gray-100 rounded-md w-full cursor-pointer"
+          id="Notifications-tab" data-tabs-target="#Notifications" type="button" role="tab"
+          aria-controls="Notifications" aria-selected="false">
+          <span class="material-symbols-outlined mr-2"> notifications </span>
+          Notifications</a>
+      </li>
+    </ul>
+    <div id="default-tab-content" class="mt-4 w-[85%]- pt-0 p-6 flex-1- w-full">
+      <!--my-account start-->
+      <div class="text-medium text-gray-500 rounded-md max-w-[448px] my-account hidden" id="profile" role="tabpanel"
+        aria-labelledby="profile-tab">
+        <div class="flex items-center flex-col gap-2 mb-2 text-center border-b pb-4">
+          <div
+            class="relative inline-flex items-center justify-center w-20 h-20 rounded overflow-hidden bg-red-700 rounded-full mr-1">
+            <span class="text-thirtytwo font-semibold text-white bg-primary-main03">RS</span>
+          </div>
+          <div class="font-medium-">
+            <h5 class="text-xl text-gray-900 font-semibold">John Smith</h5>
+            <span class="text-base text-gray-500 font-normal">Paralegal</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6">
+          <div>
+            <p class="text-base text-gray-500 font-semibold">Email</p>
+            <p class="text-base text-gray-900 font-normal">John@domain.com</p>
+          </div>
+          <div class="flex justify-between">
+            <div>
+              <p class="text-base text-gray-500 font-semibold">Password</p>
+              <p class="text-base text-gray-900 font-normal">••••••••••</p>
+            </div>
+            <div>
+              <button type="button"
+                class="flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md text-sm px-2 py-1 me-2 mb-2 font-semibold text-primary-700">
+                Change Password
+              </button>
+            </div>
+          </div>
+          <div>
+            <p class="text-base text-gray-500 font-semibold">Time Zone</p>
+            <p class="text-base text-gray-900 font-normal">(GMT-5:00) Eastern Time (US & Canada)</p>
+          </div>
+        </div>
+        <div class="w-full">
+          <div class="flex items-center flex-col gap-2 mb-2 text-center border-b pb-4">
+            <div
+              class="relative inline-flex items-center justify-center w-20 h-20 rounded overflow-hidden bg-red-700 rounded-full mr-1">
+              <span class="text-thirtytwo font-semibold text-white bg-primary-main03">RS</span>
+            </div>
+            <div class="font-medium-">
+              <h5 class="text-xl text-gray-900 font-semibold">John Smith </h5>
+              <span class="text-base font-normal">Paralegal</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-4 mt-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="">
+                <label for="first_name" class="font-semibold text-base block mb-2 text-gray-900">First Name</label>
+                <input type="text" id="first_name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-base font-normal rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                  placeholder="John" required />
+              </div>
+              <div class="">
+                <label for="Last Name" class="font-semibold text-base block mb-2 text-gray-900">Last Name</label>
+                <input type="text" id="last_name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-base font-normal rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                  placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="">
+              <label for="first_name" class="font-semibold text-base block mb-2 text-gray-900">Email</label>
+              <input type="text" id="Email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-base font-normal rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                placeholder="John@domain.com" required />
+            </div>
+            <div class="">
+              <label for="first_name" class="font-semibold text-base block mb-2 text-gray-900">Title</label>
+              <input type="text" id="Email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-base font-normal rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                placeholder="Paralegal" required />
+            </div>
+            <div>
+              <label for="first_name" class="font-semibold text-base block mb-2 text-gray-900">Time Zone</label>
+
+              <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown_timezone" class="text-gray w-full  relative border focus:ring-4
+focus:outline-none focus:ring-primary-300 font-medium rounded-lg
+text-sm p-2.5 text-center inline-flex items-center " type="button">
+                (GMT-5:00) Eastern Time (US & Canada)
+                <svg class="absolute w-2.5 h-2.5  end-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+
+              <!-- Dropdown menu -->
+              <div id="dropdown_timezone"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-[448px] ">
+                <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownDefaultButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Earnings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Sign
+                      out</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="flex justify-between ">
+              <a data-modal-hide="default-modal"
+                class="text-primary-700 bg-white rounded-md text-base font-semibold py-2.5 hover:text-gray-900 hover:cursor-pointer">
+                Cancel
+              </a>
+              <button data-modal-hide="default-modal" type="button"
+                class="text-white bg-primary-700 text-base font-semibold hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-md px-5 py-2.5 text-center">
+                Save it
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--my-account end-->
+      <!--plans tab-start-->
+      <div class="text-medium text-gray-500 rounded-md max-w-[802px] planstab hidden" id="dashboard" role="tabpanel"
+        aria-labelledby="dashboard-tab">
+        <div>
+          <div class="flex items-center mt-4 mb-4">
+            <div class="mr-2  text-center  text-sm font-semibold uppercase"> Your Current Plan </div>
+            <div class="w-full- grow h-[1px] bg-gray-200 "></div>
+          </div>
+          <div class="plan-card-wrapper grid gap-0 mb-8">
+            <!-- Pricing Card -->
+            <div class="plan-card personal flex flex-col ">
+              <div class="header p-6 ">
+                <div class="flex justify-between  items-center">
+                  <div>
+                    <h4 class="mb-2 text-2xl font-semibold">Personal</h4>
+                    <p class="desc text-gray-900 text-base font-normal">Ideal for personal use</p>
+                  </div>
+                  <div class="flex space-x-6 items-center">
+                    <div>
+                      <h3 class="mb-1 text-base font-semibold">Date Started</h3>
+                      <p class="desc text-gray-900 text-base font-normal">Nov 3, 2023</p>
+                    </div>
+                    <div>
+                      <h3 class="mb-1 text-base font-semibold">Renewal Date</h3>
+                      <p class="desc text-gray-900 text-base font-normal">Feb 03, 2024</p>
+                    </div>
+                    <div>
+                      <h4 class="flex text-2xl font-semibold my-8 price-wrap">
+                        <span class=" text-2xl font-semibold relative sup">$</span>
+                        <span class="mr-1 text-gray-900  price">49</span>
+                        <span class="sub">Month</span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer">
+                <!-- List -->
+                <ul role="list" class="plan-features mb-8 p-6 space-y-4 text-left ">
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">50 Searches</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Download Court Documents</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Get the Latest Case Information</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Track up to 3 cases</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="content p-6">
+                <div class="flex  justify-end space-x-4">
+                  <button type="button"
+                    class="text-primary-700 bg-gray-200 focus:ring-4 focus:ring-primary-300 font-semibold rounded-md text-base px-5 py-2.5 focus:outline-none">
+                    Get 2 months free </button>
+                  <button type="button"
+                    class="btn-getItNow text-white focus:ring-4 focus:ring-primary-300 font-semibold rounded-md text-base px-5 py-2.5 focus:outline-none">
+                    Switch to Annual</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center mt-4 mb-4">
+            <div class="mr-2  text-center text-sm font-semibold uppercase">Other Plans for you to consider </div>
+            <div class="w-full- grow h-[1px] bg-gray-200 "></div>
+          </div>
+          <div class="mt-6">
+            <ul class="text-sm flex justify-center font-medium text-gray-900 bg-white">
+              <li
+                class="w-[256px] flex items-center checked relative px-4 mb-4 mr-4 py-3 border rounded-md border-gray-200 hover:bg-gray-100 hover:cursor-pointer">
+                <span class="material-icons planCheck-personal checkMark">check_circle</span>
+
+                <p class="text-base font-semibold">Monthly</p>
+              </li>
+              <li
+                class="w-[256px] flex items-center px-4 mb-4 py-3 border rounded-md border-gray-200 hover:bg-gray-100 hover:cursor-pointer">
+                <p class="text-base font-semibold mr-2">Yearly</p>
+                <span type="button"
+                  class="px-3 py-1 text-xs font-medium text-center inline-flex items-center text-primary-500 bg-gray-200 rounded-md">
+                  Get 2 months free
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="plan-card-wrapper grid gap-0 mb-8 sm:grid-cols-2 gap-2">
+
+            <!-- Pricing Card -->
+            <div class="plan-card professional flex flex-col text-center border rounded-md ">
+              <div class="header  py-4 ">
+                <h4 class="mb-4 text-2xl font-semibold">Professional</h4>
+                <p class="desc text-gray-500 text-base font-normal">Ideal for Small Law Firms and Businesses</p>
+              </div>
+
+              <div class="content">
+                <h1 class="flex justify-center items-baseline my-8 price-wrap">
+                  <span class="mr-2 text-lg font-semibold relative -top-4 sup">$</span>
+                  <span class="mr-2 text-6xl font-semibold decimal price">149</span>
+                  <span class=" text-sm font-semibold sub">Month</span>
+                </h1>
+                <div class="flex justify-center">
+                  <button type="button"
+                    class="btn-getItNow text-white  focus:ring-4 focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5  mb-2  focus:outline-none">
+                    Upgrade</button>
+                </div>
+              </div>
+
+
+              <div class="footer">
+                <!-- List -->
+                <ul role="list" class="plan-features mb-8 p-6 space-y-4 text-left mt-6">
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">200 Searches</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Download Court Documents</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Get the Latest Case Information</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Track up to 15 cases</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Get 3 Users</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">1 Automated Searches</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- Pricing Card -->
+            <div class="plan-card premium flex flex-col text-center border rounded-md">
+
+              <div class="header  py-4">
+                <h4 class="mb-4 text-2xl font-semibold">Premium</h4>
+                <p class="desc text-gray-700 text-base font-normal">Ideal for Large Law Firms and Businesses</p>
+              </div>
+              <div class="content">
+                <h1 class="flex justify-center items-baseline my-8 price-wrap">
+                  <span class="mr-2 text-lg font-semibold relative -top-4 sup">$</span>
+                  <span class="mr-2 text-6xl font-semibold decimal price">299</span>
+                  <span class="text-sm font-semibold sub">Month</span>
+                </h1>
+                <div class="flex justify-center">
+                  <button type="button"
+                    class="btn-getItNow text-white  focus:ring-4 focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 mb-2  focus:outline-none">
+                    Upgrade</button>
+
+                </div>
+              </div>
+
+
+              <div class="footer">
+                <!-- List -->
+                <ul role="list" class="plan-features mb-8 p-6 abc space-y-4 abc text-left mt-6">
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Unlimited Searches</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Download Court Documents</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Get the Latest Case Information</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Track up to 50 cases</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Get 7 Users</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">3 Automated Searches</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Legal Analytics</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <!-- Icon -->
+                    <span class="material-icons ">check_circle</span>
+                    <span class="text-base font-normal list">Export 1,000 Cases</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--plans tab-end-->
+      <!--myteam start-->
+      <div class="w-full- max-w-[802px] max-w-[80%]- flex- space-x-14 my-team hidden" id="settings" role="tabpanel"
+        aria-labelledby="settings-tab">
+        <div class="flex flex-col">
+          <h5 class="text-xl text-gray-900 mb-4 font-semibold">Account Owner</h5>
+          <div class="flex items-center gap-2 mb-2 pb-4">
+            <div
+              class="relative inline-flex items-center justify-center w-[48px] h-[48px] rounded overflow-hidden bg-red-700 rounded-full mr-1">
+              <span class="text-base font-semibold text-white bg-primary-main03">RS</span>
+            </div>
+            <div class="font-medium-">
+              <div class="text-xl text-gray-900 font-semibold">Essie Howard</div>
+            </div>
+          </div>
+          <h5 class="text-xl text-gray-900 font-semibold">Members</h5>
+          <p class="text-base text-gray-500 font-normal">Other people on your team</p>
+
+          <div>
+            <button type="button"
+              class="flex items-center w-auto py-2 px-2 me-2 mt-8 mb-8 text-sm font-semibold text-primary-700 focus:outline-none bg-white rounded-md border hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 ">
+              <span class="material-symbols-outlined">
+                add
+              </span>
+              <span>Invite new people</span>
+            </button>
+          </div>
+
+
+          <div class="w-full bg-gray-100 p-3 rounded-md">
+            <div class="flex gap-2">
+              <div class="flex flex-col grow w-60-">
+                <p class="text-base font-semibold">Email</p>
+                <form class="relative">
+                  <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
+                  <div class="relative flex">
+                    <!-- <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div> -->
+                    <input type="search" id="search"
+                      class=" block w-full- flex-1 p-1 mr-1 ps-4 py-3 pe-28 text-base font-normal text-gray-900 border-2 border-gray-300 placeholder:text-gray-700 rounded-md bg-gray-50 focus:ring-primary-500 focus:border-primary-500 "
+                      placeholder="Enter the email..." required>
+                    <button type="submit"
+                      class=" text-white d-none absolute- end-2 bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-4 py-2 ">Send
+                      it
+                    </button>
+                    <button type="submit"
+                      class=" d-none- min-w-[7rem] flex items-center justify-center text-white absolute- end-2 bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-4 py-2 ">
+                      <!-- <span class="material-symbols-outlined animate-counterclockwise mr-2 animate-spin">
+                        sync
+                      </span> -->
+                      <span class="material-symbols-outlined animate-spin mr-2">
+                        autorenew
+                      </span>
+                      <span>Invite</span>
+                    </button>
+                    <button type="submit"
+                      class=" d-none flex items-center text-white absolute- end-2 justify-center bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-4 py-2 ">
+                      <span class="material-symbols-outlined mr-2 animate-pulse">
+                        check_circle
+                      </span>
+                      <span>Confirm</span>
+                    </button>
+                    <button type="submit"
+                      class="d-none flex items-center text-white absolute- end-2 justify-center bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-8 py-2 ">
+                      <span class="material-symbols-outlined mr-2 animate-bounce">
+                        error
+                      </span>
+                      <span>Error</span>
+                    </button>
+                  </div>
+                  <p class="text-yellow-700">User with this email is already invited.</p>
+                </form>
+              </div>
+              <div class="flex flex-col">
+                <p class="text-base font-semibold text-end">Role</p>
+                <div>
+                  <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown_user_role"
+                    class="bg-white text-gray-900 border flex  justify-between w-32 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-5 py-3 text-center inline-flex items-center "
+                    type="button">
+                    User
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                    </svg>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div id="dropdown_user_role"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-44 ">
+                    <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownDefaultButton">
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Settings</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Earnings</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Sign
+                          out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col items-center">
+                <p class="invisible">hidden</p>
+                <button type="button"
+                  class="text-gray-900 flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-md text-sm px-3 py-2 ">
+                  <span class="material-symbols-outlined">
+                    close
+                  </span>
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="relative overflow-x-auto- overflow-hidden- mt-8">
+            <div class="flex justify-between mb-4">
+              <div class="mt-1 w-[40%]">
+                <div class="relative ">
+                  <input type="text" id="table-search"
+                    class="block py-2.5 pe-10 text-sm text-gray-900 border placeholder:text-gray-500 border-gray-300 rounded-lg w-80- w-full bg-gray-50 focus:ring-primary-500 focus:border-primary-500 "
+                    placeholder="Search Accounts">
+                  <div class="absolute inset-y-0 rtl:inset-r-0 end-2 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+
+              <div>
+                <div class="flex items-center">
+                  <span class="text-sm font-semibold text-gray-500 mr-2">Showing</span>
+                  <span class="text-sm font-semibold text-gray-500 flex items-center">
+
+
+                    <a class="block px-2 py-2 hover:bg-gray-100- flex items-center justify-between">
+                      <span class="text-sm font-semibold">All</span>
+                      <div>
+                        <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal"
+                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4- focus:outline-none-  focus:ring-gray-50- "
+                          type="button">
+                          <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdownDotsHorizontal"
+                          class="z-10 hidden bg-white  rounded-lg shadow w-[216px] pt-2 pb-2 text-gray-500">
+
+                          <form class="px-4 py-2">
+
+                          </form>
+                          <ul class="py-2 text-sm text-gray-500  border-b "
+                            aria-labelledby="dropdownMenuIconHorizontalButton">
+                            <div class="text-sm font-semibold text-center px-4">Role</div>
+                            <li>
+
+                              <label
+                                class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-gray-900  flex justify-between cursor-pointer">
+                                <span class="">Enabled</span>
+                                <input id="default-radio-1" type="radio" value="" name="default-radio"
+                                  class="w-5 h-5 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500   focus:ring-2 cust-trans">
+                              </label>
+
+                            </li>
+                            <li>
+                              <label
+                                class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-gray-900  flex justify-between cursor-pointer">
+                                <span class="">Disabled</span>
+                                <input id="default-radio-1" type="radio" value="" name="default-radio"
+                                  class="w-5 h-5 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500   focus:ring-2 cust-trans">
+                              </label>
+                            </li>
+                            <li>
+                              <label
+                                class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-gray-900  flex justify-between cursor-pointer">
+                                <span class="">Initated</span>
+                                <input id="default-radio-1" type="radio" value="" name="default-radio"
+                                  class="w-5 h-5 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500   focus:ring-2 cust-trans">
+                              </label>
+                            </li>
+                          </ul>
+
+                        </div>
+                      </div>
+                    </a>
+
+                    <span>Status</span>
+                  </span>
+
+                </div>
+              </div>
+
+            </div>
+              <div class="relative- overflow-x-auto">
+                <table class="w-full  text-sm text-left text-gray-500">
+                  <thead class="text-sm font-semibold text-gray-500  border-b bg-gray-100">
+                    <tr>
+                      <th scope="col" class="px-4 py-4 font-semibold">
+                        Name
+                      </th>
+                      <th scope="col" class="px-4 py-4 font-semibold">
+                        Email
+                      </th>
+                      <th scope="col" class="px-4 py-4 font-semibold">
+                        Role
+                      </th>
+                      <th scope="col" class="px-4 py-4 font-semibold">
+                        Status
+                      </th>
+                      <th scope="col" class="px-4 py-4 font-semibold">
+                        Action
+                      </th>
+
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-100">
+                    <tr class="bg-white">
+
+                      <td class="px-4 py-4 ">
+                        <div class="flex items-center gap-2">
+                          <div
+                            class="relative inline-flex items-center justify-center w-[48px] h-[48px] rounded overflow-hidden bg-red-700 rounded-full mr-1">
+                            <span class="text-base font-semibold text-white bg-primary-main03">RS</span>
+                          </div>
+                          <div class="font-medium-">
+                            <div class="text-base text-gray-900 font-semibold">John Smith (Me)</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-4 py-4">
+                        <span
+                          class="text-primary-700 text-primary-700 text-base font-semibold">e.howard@domain.com</span>
+                      </td>
+                      <td class="px-4 py-4">
+                        <span class=" text-base font-semibold">Admin</span>
+                      </td>
+                      <td class="px-4 py-4">
+
+                        <span
+                          class="text-sm text-green-700 font-semibold me-2 px-2.5 py-0.5 rounded-full bg-green-50">Enabled</span>
+
+                      </td>
+                      <td class="px-4 py-4">
+
+                        <!-- <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown_user"
+                      class="text-gray-900 border flex justify-between w-32 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2 text-center inline-flex items-center "
+                      type="button">
+                      User
+                      <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 4 4 4-4" />
+                      </svg>
+                    </button>
+
+
+                    <div id="dropdown_user"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-44 ">
+                      <ul class="py-2 text-sm text-gray-900 " aria-labelledby="dropdownDefaultButton">
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Settings</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Earnings</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Sign
+                            out</a>
+                        </li>
+                      </ul>
+                    </div> -->
+
+                      </td>
+                    </tr>
+                    <tr class="bg-white">
+
+                      <td class="px-4 py-4">
+                        <div class="flex items-center gap-2">
+                          <div
+                            class="relative inline-flex items-center justify-center w-12 h-12 rounded overflow-hidden bg-red-700 rounded-full mr-1">
+                            <span class="text-base font-semibold text-white bg-primary-main03">RS</span>
+                          </div>
+                          <div class="font-medium-">
+                            <div class="text-base text-gray-900 font-semibold">John Smith (Me)</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-4 py-4">
+                        <span
+                          class="text-primary-700 text-primary-700 text-base font-semibold">e.howard@domain.com</span>
+                      </td>
+                      <td class="px-4 py-4">
+                        <span class=" text-base font-semibold">Admin</span>
+                      </td>
+                      <td class="px-4 py-4">
+                        <span
+                          class="text-sm text-red-700 font-semibold me-2 px-2.5 py-0.5 rounded-full bg-red-50">Disabled</span>
+
+                      </td>
+                      <td class="px-4 py-4 ">
+                        <div class="flex items-center">
+
+
+                          <!-- <button id="dropdownRadioButton" data-dropdown-toggle="dropdown_user2"
+                        class="text-gray-900 border flex justify-between w-32 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2 text-center inline-flex items-center "
+                        type="button">
+                        User <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                          fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                        </svg>
+                      </button>
+
+                      <div id="dropdown_user2"
+                        class="z-10 hidden w-[216px] bg-white divide-y divide-gray-100 rounded-md shadow  ">
+                        <p class="text-sm font-semibold text-center p-4">Role</p>
+                        <ul class="p-3 space-y-3 text-sm text-gray-900 " aria-labelledby="dropdownRadioButton">
+                          <li class="p-2 hover:bg-gray-100">
+                            <label for="default-radio-1"
+                              class="ms-2 text-sm font-normal text-gray-900 flex justify-between w-full hover:cursor-pointer">
+                              <span>User</span>
+                              <input id="default-radio-1" type="radio" value="" name="default-radio"
+                                class="w-4 h-4 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500  focus:ring-2 ">
+
+                            </label>
+                          </li>
+                          <li class="p-2 hover:bg-gray-100">
+                            <label for="default-radio-2 "
+                              class="ms-2 text-sm font-normal text-gray-900 flex justify-between w-full hover:cursor-pointer">
+                              <span>Billing Admin</span>
+                              <input id="default-radio-2" type="radio" value="" name="default-radio"
+                                class="w-4 h-4 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500  focus:ring-2 ">
+                            </label>
+                          </li>
+                          <li class="p-2 hover:bg-gray-100">
+                            <label for="default-radio-3"
+                              class="ms-2 text-sm font-normal text-gray-900 flex justify-between w-full hover:cursor-pointer">
+                              <span>Admin</span>
+                              <input id="default-radio-3" type="radio" value="" name="default-radio"
+                                class="w-4 h-4 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500  focus:ring-2 ">
+                            </label>
+                          </li>
+                        </ul>
+                      </div> -->
+
+                          <!--3 dot drop start-->
+                          <button id="dropdownRadioButton" data-dropdown-toggle="dropdown_setowner" class="text-gray-900 border flex justify-between items-center focus:ring-4 focus:outline-none focus:ring-primary-300
+                    font-medium rounded-md text-sm px-3 py-2 ml-2 text-center inline-flex" type="button">
+                            ...
+                          </button>
+                          <!-- Dropdown menu -->
+                          <div id="dropdown_setowner"
+                            class="z-10 hidden min-w-[216px] bg-white divide-y divide-gray-100 rounded-md shadow  ">
+                            <ul class="p-3- py-2 space-y-3- text-sm text-gray-700 "
+                              aria-labelledby="dropdownRadioButton">
+                              <li class="pt-2 hover:bg-gray-100">
+                                <a
+                                  class=" text-sm font-normal text-gray-900 flex items-center w-full hover:cursor-pointer px-4 py-2 hover:bg-gray-100">
+                                  <span class="material-icons-outlined">
+                                    account_circle
+                                  </span>
+                                  <span class="ml-2">Set as account owner</span>
+                                </a>
+                              </li>
+                              <li class="pt-2">
+                                <a
+                                  class=" text-sm font-normal text-gray-900 flex items-center w-full hover:cursor-pointer px-4 py-2 hover:bg-gray-100">
+                                  <span class="material-symbols-outlined">
+                                    send
+                                  </span>
+                                  <span class="ml-2">Resend</span>
+                                </a>
+                              </li>
+                              <li class="pt-2">
+                                <a
+                                  class=" text-sm font-normal text-red-700 flex items-center w-full hover:cursor-pointer px-4 py-2 hover:bg-gray-100">
+                                  <span class="material-icons-outlined text-red-700">
+                                    delete
+                                  </span>
+                                  <span class="ml-2">Remove from team</span>
+                                </a>
+                              </li>
+
+                            </ul>
+                          </div>
+                          <!--3 dot drop end-->
+                        </div>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+          </div>
+
+
+
+
+
+          <div class="mt-8">
+            <h5 class="text-xl text-gray-900 font-semibold">Invited</h5>
+            <p class="text-base text-gray-500 font-normal">We will update the members list once the invited members
+              create their
+              accounts
+              or accept the invitation.</p>
+          </div>
+
+          <div class="flex items-center justify-between border-t mt-8 pt-4">
+            <div>
+              <span class="text-primary-700 text-base font-semibold">e.howard@domain.com</span>
+            </div>
+            <div class="space-x-2">
+              <span class="text-gray-500">Invitation sent</span>
+              <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                class="text-gray-900 border flex justify-between w-32 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2 text-center inline-flex items-center "
+                type="button">
+                User
+                <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-44 ">
+                <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownDefaultButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Earnings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Sign
+                      out</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6  text-gray-900 rounded-md shadow mt-6 bg-utilities-summary">
+
+            <h6 class="mb-2 text-base font-semibold text-gray-900 flex items-center"><span
+                class="material-symbols-outlined mr-1">
+                error
+              </span>Users limit reached</h6>
+
+            <p class="mb-3 text-sm font-normal text-gray-700">You’ve used 3 out of 3 seats available on your
+              Professional
+              plan. If you wish to invite more people feel free to hit the button below.</p>
+            <button href="#"
+              class="inline-flex mt-4 items-center px-3 py-2 text-base font-semibold text-center bg-white rounded-md hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 ">
+              Upgrade your plan
+            </button>
+          </div>
+
+          <!--myteam popup start-->
+          <div class="container d-none-">
+            <!-- Modal toggle -->
+            <button data-modal-target="default-modal2" data-modal-toggle="default-modal2"
+              class="block text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 text-center"
+              type="button">
+              myteam transfer account ownership
+            </button>
+
+            <!-- Main modal -->
+            <div id="default-modal2" tabindex="-1" aria-hidden="true"
+              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+              <div class="relative p-4 w-full- max-w-2xl- w-[684px] max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-md shadow p-[40px]">
+                  <!-- Modal header -->
+                  <div class="flex flex-col items-center text-gray-900 p-4 md:p-5 rounded-t">
+
+                    <h5 class="text-xl text-center font-semibold ">
+                      Are you sure you want to transfer account ownership?
+                    </h5>
+                    <p class="text-base font-normal mt-6">The following member will be the new account owner if you
+                      accept:
+                    </p>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-4 md:p-5 space-y-6">
+
+                    <div class="space-y-1-">
+                      <ul class="mt-4 divide-y divide-gray-300">
+                        <li class="flex justify-between pb-2 items-center">
+                          <div>
+                            <div class="flex items-center rounded">
+                              <div>
+                                <div
+                                  class="relative inline-flex items-center justify-center w-[48px] h-[48px] overflow-hidden bg-primary-600 rounded-full mr-1">
+                                  <span class="font-semibold text-base text-white bg-primary-main03">JM</span>
+                                </div>
+                              </div>
+                              <div class="w-full py-2 ms-2 text-base font-normal text-gray-900 rounded">John Moran</div>
+                            </div>
+                          </div>
+                          <div>
+                            <span class="text-primary-700 text-base font-normal">John@gmail.com</span>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="flex justify-between p-4 md:p-5 border-gray-200 rounded-b">
+                    <a data-modal-hide="default-modal"
+                      class="text-primary-700 bg-white rounded-md text-base font-semibold py-2.5 hover:text-gray-900 hover:cursor-pointer">
+                      No, never mind
+                    </a>
+                    <button data-modal-hide="default-modal" type="button"
+                      class="text-white bg-primary-700 text-base font-semibold hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-md px-5 py-2.5 text-center">
+                      Yes, do it
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--myteam popup end-->
+        </div>
+
+      </div>
+      <!--myteam end-->
+      <!--user-role-start-->
+      <div class=" text-medium text-gray-500 rounded-md max-w-[684px] user-role hidden" id="contacts" role="tabpanel"
+        aria-labelledby="contacts-tab">
+        <div class="mb-4">
+          <h5 class="text-xl font-semibold text-gray-900">System Roles</h5>
+          <p class="text-base font-normal text-gray-500">Some default, built-in roles from Unicourt.</p>
+        </div>
+        <div class="grid grid-cols-3 justify-between p-5">
+          <div>
+            Name
+          </div>
+          <div>
+            Number of Permissions
+          </div>
+          <div>
+          </div>
+        </div>
+        <div id="accordion-collapse" data-accordion="collapse">
+          <h2 id="accordion-collapse-heading-1">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium cust-trans text-gray-500 border-t border-b border-gray-200
+     hover:bg-gray-100  gap-3 " data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+              aria-controls="accordion-collapse-body-1">
+              <span class="w-[18%] text-left">Admin</span>
+              <span>9</span>
+              <span> <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 5 5 1 1 5" />
+                </svg></span>
+
+            </button>
+          </h2>
+          <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+            <div class="p-5  border-b border-gray-200 grid grid-cols-3 ">
+              <div>
+                <ul role="list" class="plan-features- space-y-4 text-left">
+                  <li class="flex items-center space-x-3"><span
+                      class="material-icons text-primary-700">check_circle</span><span
+                      class="text-base font-normal list">Permission Name</span></li>
+                  <li class="flex items-center space-x-3"><span
+                      class="material-icons text-primary-700">check_circle</span><span
+                      class="text-base font-normal list">Permission Name</span></li>
+                  <li class="flex items-center space-x-3"><span
+                      class="material-icons text-primary-700">check_circle</span><span
+                      class="text-base font-normal list">Permission Name</span></li>
+                  <li class="flex items-center space-x-3"><span
+                      class="material-icons text-primary-700">check_circle</span><span
+                      class="text-base font-normal list">Permission Name</span></li>
+                </ul>
+              </div>
+              <div>
+                <ul role="list" class="plan-features- space-y-4 text-left">
+                  <li class="flex items-center space-x-3"><span
+                      class="material-icons text-primary-700">check_circle</span><span
+                      class="text-base font-normal list">Permission Name</span></li>
+                  <li class="flex items-center space-x-3"><span
+                      class="material-icons text-primary-700">check_circle</span><span
+                      class="text-base font-normal list">Permission Name</span></li>
+                  <li class="flex items-center space-x-3"><span
+                      class="material-icons text-primary-700">check_circle</span><span
+                      class="text-base font-normal list">Permission Name</span></li>
+                  <li class="flex items-center space-x-3"><span
+                      class="material-icons text-primary-700">check_circle</span><span
+                      class="text-base font-normal list">Permission Name</span></li>
+                </ul>
+              </div>
+              <div>
+
+              </div>
+
+
+            </div>
+          </div>
+          <h2 id="accordion-collapse-heading-2">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium cust-trans  text-gray-500 border-b border-gray-200
+       hover:bg-gray-100  gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+              aria-controls="accordion-collapse-body-2">
+              <span class="w-[18%] text-left">Billing Admin</span>
+              <span>3</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+            <div class="p-5  border-b border-gray-200 ">
+              <p class="mb-2 text-gray-500 ">Flowbite is first conceptualized and designed using the Figma software so
+                everything you see in the library has a design equivalent in our Figma file.</p>
+            </div>
+          </div>
+          <h2 id="accordion-collapse-heading-3">
+            <button type="button"
+              class="flex items-center justify-between w-full p-5 font-medium  cust-trans text-gray-500 border-b border-gray-200   hover:bg-gray-100  gap-3"
+              data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+              aria-controls="accordion-collapse-body-3">
+              <span class="w-[18%] text-left">User</span>
+              <span>8</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+            <div class="p-5  border-b border-gray-200 ">
+              <p class="mb-2 text-gray-500 ">Learn more about these technologies:</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--user-role-end-->
+      <!--notifications start-->
+      <div class=" text-medium text-gray-500 rounded-md max-w-[684px] notifications hidden" id="Notifications"
+        role="tabpanel" aria-labelledby="Notifications-tab">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Do you want to receive notifications?
+          </h3>
+          <div class="mt-6">
+            <ul class="text-sm flex font-medium text-gray-900 bg-white">
+              <li
+                class="w-full flex items-center checked relative px-4 mb-4 mr-4 py-6 border rounded-md border-gray-200 hover:bg-gray-100 hover:cursor-pointer">
+                <span class="material-icons planCheck-personal checkMark">check_circle</span>
+
+                <p class="text-base font-semibold">Yes</p>
+              </li>
+              <li
+                class="w-full flex items-center px-4 mb-4 py-6 border rounded-md border-gray-200 hover:bg-gray-100 hover:cursor-pointer">
+                <p class="text-base font-semibold">No</p>
+              </li>
+            </ul>
+          </div>
+          <h5 class="text-xl font-semibold text-gray-900 mb-2 border-b pb-2">
+            Documents
+          </h5>
+
+          <ul class="divide-y divide-gray-200">
+            <li class="pb-3 pt-3">
+              <div class="flex space-x-4 justify-between">
+                <div class="font-base text-gray-900 font-semibold">
+                  Available to download
+                  <p class="font-base text-gray-500 font-normal">
+                    Notify me when the requested documents are available to
+                    download.
+                  </p>
+                </div>
+                <div class="flex items-center">
+                  <label class="relative inline-flex  cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer" checked />
+                    <div
+                      class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-primary-300 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600">
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="pb-3 pt-3">
+              <div class="flex space-x-4 justify-between">
+                <div class="font-base text-gray-900 font-semibold">
+                  Orders
+                  <p class="font-base text-gray-500 font-normal">
+                    Notify me when my order status is updated.
+                  </p>
+                </div>
+                <div class="flex items-center">
+                  <label class="relative inline-flex cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer" checked />
+                    <div
+                      class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-primary-300 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600">
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--notifications end-->
+    </div>
+  </div>
+
+  <!--change psd popup start-->
+  <!-- Modal toggle -->
+  <button data-modal-target="default-modal" data-modal-toggle="default-modal"
+    class="block text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 text-center "
+    type="button">
+    Change Password
+  </button>
+  <!-- Main modal -->
+  <div id="default-modal" tabindex="-1" aria-hidden="true"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full- max-w-2xl- w-[448px] max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-md shadow p-[40px]">
+        <!-- Modal header -->
+        <div class="flex flex-col items-center p-4 md:p-5 rounded-t text-gray-900">
+          <h5 class="text-2xl font-semibold ">
+            Change your password
+          </h5>
+          <p class="text-base font-normal text-center mt-4">Use a password at least 15 letters long, or at least 8
+            characters long with both letters and numbers.</p>
+
+        </div>
+        <!-- Modal body -->
+        <div class="p-4 md:p-5 space-y-6">
+          <div class="grid grid-cols-1 gap-4">
+            <div class="">
+              <label for="first_name" class="font-semibold text-base block mb-2 text-gray-900">Create a new
+                password</label>
+              <input type="text" id="first_name"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-base font-normal rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                placeholder="John" required />
+            </div>
+            <div class="relative mb-6">
+              <label for="first_name" class="font-semibold text-base block mb-2 text-gray-900">Confirm your new
+                password</label>
+              <div class="relative">
+                <input type="Password" id="input-group-1"
+                  class="bg-gray-50 border border-red-700 text-gray-900 text-base font-normal rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                  placeholder="Password" />
+                <div class="absolute inset-y-0 end-2 flex items-center ps-3.5 hover:cursor-pointer">
+                  <button class="press">
+                    <span class="material-icons text-gray-700">
+                      visibility
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+
+              <p class="mt-2 text-sm text-red-700">Error text</p>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="flex justify-between p-4 md:p-5 border-gray-200 rounded-b">
+          <a data-modal-hide="default-modal"
+            class="text-primary-700 bg-white rounded-md text-base font-semibold py-2.5 hover:text-gray-900 hover:cursor-pointer">
+            Cancel
+          </a>
+          <button data-modal-hide="default-modal" type="button"
+            class="text-white bg-primary-700 text-base font-semibold hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-md px-5 py-2.5 text-center">
+            Change it
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--change psd popup end-->
+
+
+  <!--setting plan popup start-->
+
+
+  <!-- Modal toggle -->
+  <button data-modal-target="setting_plan_popup" data-modal-toggle="setting_plan_popup" class="block text-white mt-8 bg-primary-700 hover:bg-primary-800 focus:ring-4
+focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 text-center " type="button">
+    setting_plan_popup
+  </button>
+
+  <!-- Main modal -->
+  <div id="setting_plan_popup" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0
+left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-2 w-[920px] max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-md shadow  ">
+        <div class=" grid grid-cols-2">
+          <div class=" p-[40px]">
+            <!-- Modal header -->
+            <div class="header py-4">
+              <h5 class="text-xl font-semibold mb-3 text-gray-900">Upgrade to</h5>
+              <div class="bg-gray-100 mb-4 p-4 rounded-md d-none">
+                <h4 class="mb-2 text-2xl font-semibold text-secondary-700">Professional</h4>
+                <p class="desc text-gray-500 text-base font-normal">Ideal for Small Law Firms and
+                  Businesses</p>
+              </div>
+              <div class="mt-6 d-none-">
+                <ul class="text-sm grid grid-cols-2 gap-3 mb-4 justify-center font-medium text-gray-900 bg-white">
+                  <li
+                    class=" flex items-center checked relative px-4 py-3 border rounded-md border-gray-200 hover:bg-gray-100 hover:cursor-pointer">
+                    <span class="material-icons planCheck-personal checkMark">check_circle</span>
+
+                    <p class="text-base font-semibold">Monthly</p>
+                  </li>
+                  <li
+                    class=" flex items-center px-4  py-3 border rounded-md border-gray-200 hover:bg-gray-100 hover:cursor-pointer">
+                    <p class="text-base font-semibold mr-2">Yearly</p>
+                    <span type="button"
+                      class="px-1 py-1 text-xs font-medium text-center inline-flex items-center text-primary-500 bg-gray-200 rounded-md">
+                      2 months free
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-yellow-100 mb-4 p-4 rounded-md d-none-">
+                <h3 class="mb-2 text-2xl font-semibold text-premium-title">Premium</h3>
+                <p class="desc text-gray-900 text-base font-normal mb-2">Ideal for Large Law Firms and Businesses</p>
+                <span class="text-base text-gray-900 font-semibold">$249 Month</span>
+              </div>
+            </div>
+
+            <!-- Modal body -->
+            <div class="flex text-gray-900">
+              <div class="flex-1">
+                <p class="mb-2 text-base text-gray-500 font-semibold">Payment Details</p>
+                <p class="flex items-center text-base font-normal"><img width="40" height="40"
+                    src="../../assets/svg/visa.svg" /><span>•••• 4567</span> </p>
+              </div>
+              <div class="flex-1">
+                <p class="mb-2 text-base text-gray-500 font-semibold">Billed To</p>
+                <p class="mb-2 text-base font-normal">2118 Thornridge Cir. Syracuse, Connecticut 35624</p>
+              </div>
+            </div>
+            <!-- Modal footer -->
+            <div>
+
+            </div>
+          </div>
+          <div class=" bg-gray-100 p-[40px]">
+            <!-- Modal header -->
+            <div class="header text-gray-900 py-4">
+              <h5 class="text-xl font-semibold text-center mb-3">Order Summary</h5>
+
+              <p class="desc  text-base font-normal text-center">Ideal for Small Law Firms and
+                Businesses</p>
+            </div>
+
+            <!-- Modal body -->
+            <div class="border-t text-gray-500 border-b py-4">
+              <p class="mb-2 text-base font-semibold text-right">Sub-Total: <span class="text-gray-900">$149.00</span>
+              </p>
+              <p class="mb-2 text-base font-semibold text-right">Credit from unfinished month: <span
+                  class="text-gray-900">-$24.00</span></p>
+              <p class="mb-2 text-base font-semibold text-right">Total to pay on next billing cycle:
+                <span class="text-gray-900">$125.00</span>
+              </p>
+            </div>
+            <!-- Modal footer -->
+            <div>
+              <div class="flex flex-col items-center border-gray-200 rounded-b ">
+                <button data-modal-hide="default-modal" type="button" class="w-full mb-4 text-white bg-primary-700 hover:bg-primary-800 focus:ring-4
+                focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-5 py-2.5 text-center
+              ">
+                  Confirm and upgrade</button>
+                <button data-modal-hide="default-modal" type="button" class=" text-gray-900 w-full hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300
+                 rounded-md  font-semibold text-base px-5 py-2.5 hover:text-gray-900 focus:z-10
+                 ">Cancel</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--setting plan popup end-->
