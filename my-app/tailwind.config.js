@@ -144,9 +144,13 @@ module.exports = {
       },
 
       maxWidth: {
-        seventeen: "17% !important", // custom class="max-w-twenty"
-        thirtyfive: "35% !important",
-        sixty: "60% !important",
+        // seventeen: "17% !important", // custom class="max-w-twenty"
+        // thirtyfive: "35% !important",
+        // sixty: "60% !important",
+
+        twenty: "20% !important",
+        fiftyseven: "57% !important",
+        thirtytwo: "32% !important",
       },
       fontSize: {
         thirtytwo: [

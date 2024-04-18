@@ -1,0 +1,41 @@
+<div
+  #containerRef
+  (keydown)="move($event)"
+  (click)="setFocusOnInput($event)"
+  class="container relative mb-1 w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pr-[9rem] text-sm text-gray-900 focus-within:shadow-[0_2px_rgb(67,160,71)]"
+>
+  <app-chip
+    class="inline-flex"
+    *ngFor="let chip of chips; let idx = index"
+    #chipRefs
+    [editable]="true"
+    [closeable]="true"
+    (chipOutSelect)="selectChipAtIndex(idx)"
+    (chipOutEdit)="setChipEditingStatus($event)"
+    (chipOutDelete)="deleteChip(idx)"
+    >{{ chip }}</app-chip
+  >
+
+  <input
+    name="inputValue"
+    [(ngModel)]="inputValue"
+    #inputRef
+    tabindex="0"
+    (keydown.backspace)="selectChipAtIndex(chips.length - 1)"
+    (keyup.enter)="insertChip()"
+    (blur)="insertChip()"
+    class="bg-transparent px-2 py-1 outline-none"
+    placeholder="Search a case"
+    required
+  />
+  <div class="absolute right-[1rem] top-[1rem]">
+    <span class="mr-2 text-base font-semibold text-primary-700">Clear</span>
+    <button
+      type="submit"
+      class="rounded-lg bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600"
+    >
+      <span class="material-icons"> search </span>
+      Search
+    </button>
+  </div>
+</div>

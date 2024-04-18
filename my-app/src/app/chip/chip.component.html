@@ -1,0 +1,39 @@
+<span
+  #chipRef
+  tabindex="0"
+  class="mb-1 mr-2 inline-flex select-none items-center rounded-full bg-gray-100 px-2 py-1 align-top text-base font-semibold text-gray-700 focus:outline-none"
+  [ngClass]="{
+    'focus:bg-green-200': this.editable
+  }"
+  [id]="'chip-' + value"
+>
+  <ng-content></ng-content>
+  <div *ngIf="closeable">
+    <button
+      [id]="'button-dismiss-' + value"
+      #buttonRef
+      tabindex="-1"
+      type="button"
+      [attr.data-dismiss-target]="'#chip-' + value"
+      (click)="removeChip()"
+      aria-label="Remove"
+      class="ms-2 inline-flex items-center rounded-full bg-gray-400 p-1 text-sm text-white hover:bg-primary-300 hover:text-primary-900"
+    >
+      <svg
+        class="h-2 w-2"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+        />
+      </svg>
+    </button>
+  </div>
+</span>

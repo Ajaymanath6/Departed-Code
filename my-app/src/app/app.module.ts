@@ -11,6 +11,10 @@ import { SettingsComponent } from './settings/settings.component';
 import { TestComponent } from './test/test.component';
 import { SemanticsearchComponent } from './semanticsearch/semanticsearch.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchBarComponent } from './searchbar/searchbar.component';
+import { ChipComponent } from './chip/chip.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,8 +26,16 @@ import { HttpClientModule } from '@angular/common/http';
     SettingsComponent,
     TestComponent,
     SemanticsearchComponent,
+    SearchBarComponent,
+    ChipComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
