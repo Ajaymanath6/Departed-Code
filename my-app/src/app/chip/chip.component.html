@@ -8,7 +8,7 @@
   [id]="'chip-' + value"
 >
   <ng-content></ng-content>
-  <div *ngIf="closeable">
+  <div *ngIf="closeable" class="flex">
     <button
       [id]="'button-dismiss-' + value"
       #buttonRef

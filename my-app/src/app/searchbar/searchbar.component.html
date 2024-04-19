@@ -2,7 +2,7 @@
   #containerRef
   (keydown)="move($event)"
   (click)="setFocusOnInput($event)"
-  class="container relative mb-1 w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pr-[9rem] text-sm text-gray-900 focus-within:shadow-[0_2px_rgb(67,160,71)]"
+  class="cust-trans container relative mb-1 w-full rounded border border-gray-300 bg-gray-50 p-4 pr-[10rem] text-sm text-gray-900 focus-within:shadow-[0_2px_rgb(0,158,189)]"
 >
   <app-chip
     class="inline-flex"
@@ -24,18 +24,20 @@
     (keydown.backspace)="selectChipAtIndex(chips.length - 1)"
     (keyup.enter)="insertChip()"
     (blur)="insertChip()"
-    class="bg-transparent px-2 py-1 outline-none"
+    class="bg-transparent px-2 py-1 outline-none placeholder:text-gray-700"
     placeholder="Search a case"
     required
   />
-  <div class="absolute right-[1rem] top-[1rem]">
-    <span class="mr-2 text-base font-semibold text-primary-700">Clear</span>
+  <div class="absolute right-[1rem] top-[1rem] flex items-center">
+    <span class="mr-2 cursor-pointer text-base font-semibold text-primary-700"
+      >Clear</span
+    >
     <button
       type="submit"
-      class="rounded-lg bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600"
+      class="flex items-center rounded-md bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600"
     >
       <span class="material-icons"> search </span>
-      Search
+      <span>Search</span>
     </button>
   </div>
 </div>
