@@ -36,14 +36,14 @@ html {
 }
 
 .m-h-btn {
-  min-height: 2.3rem;
+  min-height: 2.1rem;
 }
 .mlCust-0 {
   margin-left: 0 !important;
 }
 //tab name style start
 $primary-700: #005c87;
-
+$gray-500: #667683;
 button[aria-selected="true"] {
   color: $primary-700;
   border-bottom: 2px solid $primary-700;
@@ -64,7 +64,9 @@ button[aria-selected="true"] {
 .case-list:hover {
   overflow-y: scroll !important;
 }
-
+.case-list::-webkit-scrollbar {
+  display: none;
+}
 //scroll bar appear disappear end
 
 //thin scroll bar start
@@ -84,10 +86,12 @@ button[aria-selected="true"] {
 .material-symbols-outlined,
 .material-icons,
 .material-icons-outlined {
-  //line-height: 20px;
-  font-size: 24px;
+  font-size: 20px;
+  //color: $gray-500;
 }
-
+.cust-icon-size {
+  //font-size: 20px;
+}
 .d-none {
   display: none;
 }

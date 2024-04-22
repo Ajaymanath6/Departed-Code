@@ -942,7 +942,7 @@
                             <label for="first_name" class="block mb-2 text-base font-semibold text-gray-900 ">Docket
                               Date Between</label>
                             <div class="relative max-w-sm-">
-                              <input datepicker type="text"
+                              <input datepicker- type="text"
                                 class=" border border-gray-300 text-gray-900 text-base font-normal rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pe-10 p-2.5 "
                                 placeholder="Pick a date range">
                               <div class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
@@ -986,7 +986,7 @@
                             <label for="first_name" class="block mb-2 text-base font-semibold text-gray-900 ">Docket
                               Date Between</label>
                             <div class="relative max-w-sm-">
-                              <input datepicker type="text"
+                              <input datepicker- type="text"
                                 class=" border border-gray-300 text-gray-900 text-base font-normal rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pe-10 p-2.5 "
                                 placeholder="Pick a date range">
                               <div class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
@@ -1001,7 +1001,7 @@
                           <div class="flex items-end">
 
                             <div class="relative  w-full">
-                              <input datepicker type="text"
+                              <input datepicker- type="text"
                                 class=" border border-gray-300 text-gray-900 text-base font-normal rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pe-10 p-2.5 "
                                 placeholder="Pick a date range">
                               <div class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
@@ -1224,11 +1224,11 @@
                       class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-100 rounded-full  mr-1">
                       <span class="text-sm font-semibold text-gray-600 ">23</span>
                     </div> -->
-                    <input  id="checked-checkbox4" type="checkbox" value=""
+                    <input id="checked-checkbox4" type="checkbox" value=""
                       class="w-4 h-4 cursor-pointer text-primary-700 bg-white border-2 border-gray-300 rounded focus:ring-primary-500  focus:ring-2 cust-trans">
                   </div>
                   <label for="checked-checkbox4" class="checkbox-cust ms-2 text-sm font-normal text-gray-900 ">
-                   State <span class="text-gray-500 font-semibold">(118)</span>
+                    State <span class="text-gray-500 font-semibold">(118)</span>
                   </label>
 
                 </div>
@@ -1286,7 +1286,7 @@
                 relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
             </div>
           </div>
-          <h2 id="accordion-collapse-heading-4" >
+          <h2 id="accordion-collapse-heading-4">
             <button type="button"
               class="flex items-center justify-between w-full p-2 text-sm font-semibold  rtl:text-right text-gray-900 border-b  hover:bg-gray-100  gap-3 cust-trans"
               data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
@@ -1366,8 +1366,12 @@
               <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdown_alltags"
                 class="flex items-center text-sm pe-1 font-semibold text-gray-900 hover:text-primary-700  md:me-0 focus:ring-4 focus:ring-gray-100  cust-trans"
                 type="button">
-                <span class="ml-4 text-gray-900">
-                  All tags</span>
+                <span class="ml-4 text-gray-900 flex">
+                  <span class="material-icons text-gray-500 mr-2 ">
+                    local_offer
+                  </span>
+                  <span>All tags</span>
+                </span>
                 <svg class="w-2.5 h-2.5 ms-3 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1451,6 +1455,9 @@
 
             <div class="flex items-center">
               <span class="text-sm font-semibold text-gray-500 mr-2">Sort by</span>
+              <span class="material-icons text-gray-500">
+                calendar_month
+              </span>
               <span class="text-sm font-semibold "> Filling Date- Asc</span>
               <svg class="w-2.5 h-2.5 ms-1 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 fill="none" viewBox="0 0 10 6">
@@ -1626,24 +1633,24 @@
                       <div class="mt-2 mb-2 text-sm font-semibold">
                         <span class="text-sm font-semibold bg-gray-100 rounded-full px-2.5 py-0.5">10/30/2023</span>
                         <span class=" ml-2">Party Name:</span>
-                        <span class=" font-normal text-gray-900">Sammie</span>
+                        <span class=" font-normal text-gray-900"> Sammie</span>
                         <span class=" font-semibold ml-1 mr-1 text-gray-900 bg-utilities-highlight">Smith</span>
                       </div>
                       <div class="flex space-x-2 text-sm font-normal flex-wrap">
                         <div class=" flex items-center">
-                          <span class="material-symbols-outlined">home</span>
+                          <span class="material-symbols-outlined mr-1">home</span>
                           <span>Florida</span>
                         </div>
                         <div class=" flex items-center">
-                          <span class="material-symbols-outlined">calendar_month</span>
+                          <span class="material-symbols-outlined mr-1">calendar_month</span>
                           <span>01/06/2024</span>
                         </div>
                         <div class=" flex items-center">
-                          <span class="material-symbols-outlined">article</span>
+                          <span class="material-symbols-outlined mr-1">article</span>
                           <span>24000361TR</span>
                         </div>
                         <div class=" flex items-center">
-                          <span class="material-symbols-outlined">calendar_month</span>
+                          <span class="material-symbols-outlined mr-1">calendar_month</span>
                           <span>Property - Residential Eviction</span>
                         </div>
                       </div>
@@ -1701,19 +1708,19 @@
                       </div>
                       <div class="flex space-x-2 text-sm font-normal flex-wrap">
                         <div class=" flex items-center">
-                          <span class="material-symbols-outlined">home</span>
+                          <span class="material-symbols-outlined mr-1">home</span>
                           <span>Florida</span>
                         </div>
                         <div class=" flex items-center">
-                          <span class="material-symbols-outlined">calendar_month</span>
+                          <span class="material-symbols-outlined mr-1">calendar_month</span>
                           <span>12/14/2023</span>
                         </div>
                         <div class=" flex items-center">
-                          <span class="material-symbols-outlined">article</span>
+                          <span class="material-symbols-outlined mr-1">article</span>
                           <span>2023TR058182</span>
                         </div>
                         <div class=" flex items-center">
-                          <span class="material-symbols-outlined">calendar_month</span>
+                          <span class="material-symbols-outlined mr-1">calendar_month</span>
                           <span>Criminal</span>
                         </div>
                       </div>
@@ -1743,6 +1750,54 @@
 
           </div>
 
+        </div>
+        <div class="pagination mt-6">
+          <nav aria-label="Page navigation" class="flex justify-center items-center">
+            <ul class="flex items-center -space-x-px h-8 text-sm">
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 ">
+                  <span class="sr-only">Previous</span>
+                  <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 1 1 5l4 4" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">1</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">2</a>
+              </li>
+              <li>
+                <a href="#" aria-current="page"
+                  class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-primary-600 border border-primary-300 bg-primary-50 hover:bg-primary-100 hover:text-primary-700 ">3</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">4</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">5</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 ">
+                  <span class="sr-only">Next</span>
+                  <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 9 4-4-4-4" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -2293,7 +2348,7 @@
                         d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                     </svg>
                   </div>
-                  <input datepicker type="text"
+                  <input datepicker- type="text"
                     class=" border-0 text-gray-900 text-sm placeholder:text-gray-500  focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.9 "
                     placeholder="Pick a date range...">
                   <span class="absolute  flex items-center end-[0px] bottom-[7px] material-icons-outlined">
