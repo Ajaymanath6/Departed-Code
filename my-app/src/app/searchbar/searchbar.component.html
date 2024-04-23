@@ -2,7 +2,7 @@
   #containerRef
   (keydown)="move($event)"
   (click)="setFocusOnInput($event)"
-  class="cust-trans container relative mb-1 w-full rounded border border-gray-300 bg-gray-50 p-4 pr-[10rem] text-sm text-gray-900 focus-within:shadow-[0_2px_rgb(0,158,189)]"
+  class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- container relative mb-1 w-full rounded border-2 border-gray-300 bg-gray-50 p-4 pr-[10rem] text-sm text-gray-900 focus-within:border-primary-500"
 >
   <app-chip
     class="inline-flex"
@@ -24,11 +24,13 @@
     (keydown.backspace)="selectChipAtIndex(chips.length - 1)"
     (keyup.enter)="insertChip()"
     (blur)="insertChip()"
-    class="bg-transparent px-2 py-1 outline-none placeholder:text-gray-700"
+    class="bg-transparent px-2 py-1 text-base font-normal outline-none placeholder:text-gray-500"
     placeholder="Search a case"
     required
   />
-  <div class="absolute right-[1rem] top-[1rem] flex items-center">
+  <div
+    class="top-[1rem]- absolute bottom-[0] right-[1rem] top-[0] flex items-center"
+  >
     <span class="mr-2 cursor-pointer text-base font-semibold text-primary-700"
       >Clear</span
     >

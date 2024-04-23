@@ -210,3 +210,12 @@ button[aria-selected="true"] {
 //   }
 // }
 //toast msg end
+
+button[aria-expanded="true"] [data-accordion-icon] {
+  // transition: all 0.2s ease-out;
+  // transform: rotate(180deg);
+}
+button[aria-expanded="false"] [data-accordion-icon] {
+  // transition: all 0.2s ease-out;
+  // transform: rotate(90deg);
+}
