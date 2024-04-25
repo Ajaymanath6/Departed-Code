@@ -231,7 +231,8 @@
                 <!-- <span class="material-symbols-outlined">home</span> -->
                 <!-- <img class="selected" src="../../assets/svg/home_black.svg"> -->
 
-                <span class="material-icons selected mr-1">
+
+                <span class="material-icons-outlined selected mr-1">
                   cottage
                 </span>
                 <!-- <span class="material-icons-outlined mr-1">
@@ -244,8 +245,8 @@
               <a href="#" class=" flex items-center  px-3 text-base font-semibold  hover:text-primary-500 cust-trans"
                 aria-current="page">
                 <!-- <span class="material-symbols-outlined mr-1"> star </span> -->
-                <span class="material-icons">
-                  star
+                <span class="material-icons-outlined mr-1">
+                  star_outline
                 </span>
                 <span>Trending</span></a>
             </li>
@@ -256,7 +257,7 @@
                 <!-- <span class="material-icons mr-1">
                   schedule
                 </span> -->
-                <span class="material-icons">
+                <span class="material-icons-outlined mr-1">
                   watch_later
                 </span>
                 <span>Tracking</span></a>
@@ -265,7 +266,7 @@
               <a href="#" class=" flex items-center  px-3 text-base font-semibold  hover:text-primary-500 cust-trans"
                 aria-current="page">
                 <!-- <span class="material-symbols-outlined mr-1"> list_alt </span> -->
-                <span class="material-icons">
+                <span class="material-icons-outlined mr-1">
                   list_alt
                 </span>
                 <span>Orders</span></a>
@@ -365,12 +366,14 @@
             <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
               class="relative inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:ring-4 focus:ring-primary-300  border-md "
               type="button">
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              <!-- <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                 viewBox="0 0 14 20">
                 <path
                   d="M12.133 10.632v-1.8A5.406 5.406 0 0 0 7.979 3.57.946.946 0 0 0 8 3.464V1.1a1 1 0 0 0-2 0v2.364a.946.946 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C1.867 13.018 0 13.614 0 14.807 0 15.4 0 16 .538 16h12.924C14 16 14 15.4 14 14.807c0-1.193-1.867-1.789-1.867-4.175ZM3.823 17a3.453 3.453 0 0 0 6.354 0H3.823Z" />
-              </svg>
-
+              </svg> -->
+              <span class="material-icons-outlined">
+                notifications
+              </span>
               <div class="absolute block w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-0.5 start-2.5 ">
               </div>
             </button>
@@ -1267,7 +1270,7 @@
               </div>
             </div>
           </div>
-           <h2 id="accordion-collapse-heading-3" class="">
+          <h2 id="accordion-collapse-heading-3" class="">
             <button type="button"
               class="flex items-center justify-between w-full p-2 text-sm font-semibold  rtl:text-right text-gray-900 border-b   hover:bg-gray-100  gap-3 cust-trans"
               data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
@@ -1456,7 +1459,7 @@
 
       </div>
 
-      <div class="w-[50rem]- max-w-[40%]- max-w-fiftyseven md:max-w-forty- w-full pt-4 overflow-hidden d-none">
+      <div class="w-[50rem]- max-w-[40%]- max-w-fiftyseven md:max-w-forty- w-full pt-4 overflow-hidden d-none-">
         <div class="text-sm flex justify-between">
           <div class="text-sm font-semibold text-gray-500">
             <span class="">Showing</span>
@@ -1497,17 +1500,16 @@
 
           <div class="flex items-center justify-between p-4 border-b-1">
             <div class="text-sm font-semibold flex  text-gray-500">Showing cases with
-
               <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdown_alltags"
-                class="flex items-center text-sm pe-1 font-semibold text-gray-900 hover:text-primary-700  md:me-0 focus:ring-4 focus:ring-gray-100  cust-trans"
+                class="flex ml-4 items-center text-sm pe-1 font-semibold text-gray-900 hover:text-primary-700 focus:ring-4 focus:ring-gray-100  cust-trans"
                 type="button">
-                <span class="ml-4 text-gray-900 flex">
-                  <span class="material-icons text-gray-500 mr-2 ">
+                <span class=" text-gray-900 flex">
+                  <span class="material-icons-outlined text-gray-500 mr-1">
                     local_offer
                   </span>
                   <span>All tags</span>
                 </span>
-                <svg class="w-2.5 h-2.5 ms-3 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                <svg class="w-2.5 h-2.5 ms-2 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="m1 1 4 4 4-4" />
@@ -1590,7 +1592,8 @@
 
             <div class="flex items-center">
               <span class="text-sm font-semibold text-gray-500 mr-2">Sort by</span>
-              <span class="material-icons text-gray-500">
+
+              <span class="material-icons-outlined text-gray-500">
                 calendar_month
               </span>
               <span class="text-sm font-semibold "> Filling Date- Asc</span>
@@ -1936,7 +1939,7 @@
         </div>
       </div>
 
-      <div class="w-[30rem]- max-w-[40%]- max-w-thirtytwo w-full overflow-hidden- relative mlCust-0 d-none">
+      <div class="w-[30rem]- max-w-[40%]- max-w-thirtytwo w-full overflow-hidden- relative mlCust-0 d-none-">
         <div class=" bg-white border border-gray-200  shadow ">
           <div class="text-lg font-semibold  text-center mt-2 mb-2 pb-2 border-b text-gray-900">State of Florida vs
             Roberta Smith
