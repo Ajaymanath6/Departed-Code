@@ -100,10 +100,10 @@
 }
 
 //plancard end
-$dark-blue-700: #001a31;
+$gray-900: #001a31;
 
 a[aria-selected="true"] {
-  color: $dark-blue-700;
+  color: $gray-900;
   //border-bottom: 2px solid $primary-700;
 }
 
@@ -149,3 +149,7 @@ a[aria-selected="true"] {
   }
 }
 //toast msg end
+
+button[aria-selected="true"] {
+  @apply text-gray-900;
+}
