@@ -22,7 +22,8 @@ import {
   styleUrls: ['./searchbar.component.scss'],
 })
 export class SearchBarComponent {
-  chips = ['John'];
+  //chips = ['John'];
+  chips = [' Biffco '];
   inputValue = '';
   isEditingChip = false;
 
