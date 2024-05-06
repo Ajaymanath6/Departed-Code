@@ -69,6 +69,11 @@ button[aria-selected="true"] {
 }
 //scroll bar appear disappear end
 
+.selected {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(42%) saturate(3196%)
+    hue-rotate(175deg) brightness(100%) contrast(103%);
+}
+
 //thin scroll bar start
 ::-webkit-scrollbar {
   width: 7px;
