@@ -1,8 +1,9 @@
-<div
+<!--main search start-->
+<!-- <div
   #containerRef
   (keydown)="move($event)"
   (click)="setFocusOnInput($event)"
-  class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- container relative mb-1 min-h-[16px] w-full rounded border-2 border-gray-300 bg-gray-50 p-4 pr-[10rem] text-sm text-gray-900 focus-within:border-primary-500"
+  class="cust-trans d-none focus-within:shadow-[0_2px_rgb(0,158,189)]- container relative mb-1 min-h-[16px] w-full rounded border-2 border-gray-300 bg-gray-50 p-4 pr-[10rem] text-sm text-gray-900 focus-within:border-primary-500"
 >
   <app-chip
     class="inline-flex"
@@ -42,4 +43,173 @@
       <span>Search</span>
     </button>
   </div>
+</div> -->
+<!--main search end-->
+
+<!--semantic start-->
+<div
+  #containerRef
+  (keydown)="move($event)"
+  (click)="setFocusOnInput($event)"
+  class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- container relative mb-1 min-h-[16px] w-full rounded border-2 border-gray-300 bg-gray-50 p-4 pr-[10rem] text-sm text-gray-900 focus-within:border-primary-500"
+>
+  <app-chip
+    class="inline-flex"
+    *ngFor="let chip of chips; let idx = index"
+    #chipRefs
+    [editable]="true"
+    [closeable]="true"
+    [chip]="chip"
+    (chipOutSelect)="selectChipAtIndex(idx)"
+    (chipOutEdit)="setChipEditingStatus($event)"
+    (chipOutDelete)="deleteChip(idx)"
+  ></app-chip>
+
+  <input
+    name="inputValue"
+    [(ngModel)]="inputValue"
+    #inputRef
+    tabindex="0"
+    (keydown.backspace)="selectChipAtIndex(chips.length - 1)"
+    (keyup.enter)="insertChip()"
+    (blur)="insertChip()"
+    class="bg-transparent px-2 py-1 text-base font-normal outline-none placeholder:text-gray-500"
+    placeholder=""
+    required
+  />
+  <div
+    class="top-[1rem]- absolute bottom-[0] right-[0.5rem] top-[0] flex items-center"
+  >
+    <span class="mr-2 cursor-pointer text-base font-semibold text-primary-700"
+      >Clear</span
+    >
+    <button
+      type="submit"
+      class="flex items-center rounded-md bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+    >
+      <span class="material-icons-outlined mr-1"> search </span>
+      <span>Search</span>
+    </button>
+  </div>
 </div>
+<div class="container- mb-4 mt-4">
+  <ul
+    class="space-x-2- pl-20- pr-20- mb-8- inline-flex flex-wrap space-y-2 text-base font-semibold text-gray-700"
+  >
+    <li class="mr-[0.5rem] mt-[0.5rem]">
+      <button
+        type="button"
+        (click)="insertFilterChip('caseName')"
+        class="inline-flex w-full justify-between rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100"
+      >
+        <div class="mr-2 flex items-center">
+          <span class="material-icons-outlined mr-2"> source </span>
+          <span> Case Name</span>
+        </div>
+        <div class="flex">
+          <span
+            class="material-icons-outlined rounded-md bg-white text-primary-700"
+          >
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+    <li class="mr-[0.5rem]">
+      <button
+        type="button"
+        (click)="insertFilterChip('judge')"
+        class="inline-flex w-full justify-between rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100"
+      >
+        <div class="mr-2 flex items-center">
+          <span class="material-icons-outlined mr-2"> gavel </span>
+          <span> Judge</span>
+        </div>
+        <div class="flex">
+          <span
+            class="material-icons-outlined rounded-md bg-white text-primary-700"
+          >
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+    <li class="mr-[0.5rem]">
+      <button
+        type="button"
+        (click)="insertFilterChip('lawFirm')"
+        class="inline-flex w-full justify-between rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100"
+      >
+        <div class="mr-2 flex items-center">
+          <span class="material-icons-outlined mr-2"> domain </span>
+          <span> Law-Firm</span>
+        </div>
+        <div class="flex">
+          <span
+            class="material-icons-outlined rounded-md bg-white text-primary-700"
+          >
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+    <li class="mr-[0.5rem]">
+      <button
+        type="button"
+        (click)="insertFilterChip('attorney')"
+        class="inline-flex w-full justify-between rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100"
+      >
+        <div class="mr-2 flex items-center">
+          <span class="material-icons-outlined mr-2"> business_center </span>
+          <span> Attorney</span>
+        </div>
+        <div class="flex">
+          <span
+            class="material-icons-outlined rounded-md bg-white text-primary-700"
+          >
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+    <li class="mr-[0.5rem]">
+      <button
+        type="button"
+        (click)="insertFilterChip('court')"
+        class="inline-flex w-full justify-between rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100"
+      >
+        <div class="mr-2 flex items-center">
+          <span class="material-icons-outlined mr-2"> list_alt </span>
+          <span> Court</span>
+        </div>
+        <div class="flex">
+          <span
+            class="material-icons-outlined rounded-md bg-white text-primary-700"
+          >
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+    <li class="mr-[0.5rem]">
+      <button
+        type="button"
+        (click)="insertFilterChip('caseType')"
+        class="inline-flex w-full justify-between rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100"
+      >
+        <div class="mr-2 flex items-center">
+          <span class="material-icons-outlined mr-2"> list_alt </span>
+          <span> Case Type</span>
+        </div>
+        <div class="flex">
+          <span
+            class="material-icons-outlined rounded-md bg-white text-primary-700"
+          >
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+  </ul>
+</div>
+<!--semantic end-->

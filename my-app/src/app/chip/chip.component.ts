@@ -30,6 +30,7 @@ export class ChipComponent implements AfterViewInit {
   // Inputs
   @Input() editable = false;
   @Input() closeable = false;
+  @Input() chip!: any;
 
   // Outputs from the component
   @Output() chipOutSelect = new EventEmitter<boolean>();
@@ -94,7 +95,7 @@ export class ChipComponent implements AfterViewInit {
     this.renderer.setAttribute(event.target, 'contentEditable', 'true');
     event.target instanceof HTMLElement && this.placeCaretAtEnd(event.target);
 
-    this.buttonRef.nativeElement.style.display = 'none';
+    // this.buttonRef.nativeElement.style.display = 'none';
   }
 
   /**
@@ -116,7 +117,7 @@ export class ChipComponent implements AfterViewInit {
     if ((event?.target as HTMLElement)?.innerText.length === 0) {
       this.buttonRef.nativeElement.click();
     } else {
-      this.buttonRef.nativeElement.style.display = 'inline-flex';
+      // this.buttonRef.nativeElement.style.display = 'block';
     }
   }
 
@@ -177,5 +178,24 @@ export class ChipComponent implements AfterViewInit {
     const sel = window.getSelection();
     sel?.removeAllRanges();
     sel?.addRange(range);
+  }
+
+  getIconByType(type: string) {
+    switch (type) {
+      case 'attorney':
+        return { icon: 'business_center', title: 'Attorney' };
+      case 'caseName':
+        return { icon: 'source', title: 'Case Name' };
+      case 'judge':
+        return { icon: 'gavel', title: 'Judge' };
+      case 'lawFirm':
+        return { icon: 'domain', title: 'Law-Firm' };
+      case 'court':
+        return { icon: 'list_alt', title: 'Court' };
+      case 'caseType':
+        return { icon: 'list_alt', title: 'Case Type' };
+      default:
+        return { icon: 'business_center', title: 'Attorney' };
+    }
   }
 }

@@ -23,7 +23,7 @@ import {
 })
 export class SearchBarComponent {
   //chips = ['John'];
-  chips = [' Biffco '];
+  chips: any = [];
   inputValue = '';
   isEditingChip = false;
 
@@ -56,9 +56,18 @@ export class SearchBarComponent {
       return;
     }
 
-    this.chips.push(this.inputValue);
+    // this.chips.push(this.inputValue);
     this.clearSearchbarValue();
   }
+
+  /**
+   * insert filter chip start
+   */
+  insertFilterChip(type: string) {
+    this.chips.push({ type, value: 'Biffco' });
+    this.clearSearchbarValue();
+  }
+  /**insert filter chip end**/
 
   /**
    * Clear search bar value
