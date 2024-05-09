@@ -20,7 +20,7 @@ module.exports = {
           500: "#009EBD", //eg: input focus
           600: "#005C87",
           700: "#005C87", //eg: primary main btn color
-          800: "#004463", //eg: filled btn hover
+          800: "#004B6E", //eg: filled btn hover
           900: "#005C87",
         },
         secondary: {
@@ -88,11 +88,11 @@ module.exports = {
         },
         gray: {
           50: "#FFFFFF", //hover bg for dropdown, accordian label,
-          100: "#EAEEF2", //eg: bg gray tag//focus for stroked btn
+          100: "#F6F9FC", //eg: bg gray tag//focus for stroked btn
           200: "#C9D7E6", //eg: accordian border
           300: "#D6DEE6", //eg: input border
           400: "#667683", //inputfield placeholder from below(gray-500)
-          500: "#667683", //eg: accordian label text & accordian icons (& other icons)
+          500: "#667683", //eg: accordian label text & accordian icons (& other icons) ()
           600: "#667683",
           700: "#001A31",
           800: "#667683", //eg: badge btn text same as hexacode used of '500'
@@ -163,7 +163,10 @@ module.exports = {
       fontFamily: {
         sans: ["Open Sans", "sans-serif"],
       },
-
+      ringWidth: {
+        4: "1px", // Adjust the value here to control the width (e.g., '6px', '8px')
+        2: "1px",
+      },
       screens: {
         //takes min-width
         sm: "700px", //both works, applied in intuitive tab, in welcome page 4 video
