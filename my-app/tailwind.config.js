@@ -26,7 +26,7 @@ module.exports = {
         secondary: {
           //royalblue-
           50: "#C0E7EF",
-          100: "#D8E6EC",
+          100: "#ABBDD1", //on hover outline border color used
           200: "#005C87",
           300: "#90B7CA",
           400: "#6CA0B8",
@@ -166,6 +166,12 @@ module.exports = {
       ringWidth: {
         4: "1px", // Adjust the value here to control the width (e.g., '6px', '8px')
         2: "1px",
+      },
+      boxShadow: {
+        md: "0px 0px 7px rgba(171, 189, 209, 0.41)", //dropdown (shadow-md)
+      },
+      borderRadius: {
+        md: "0.5rem", //dropdown (rounded-md)
       },
       screens: {
         //takes min-width
