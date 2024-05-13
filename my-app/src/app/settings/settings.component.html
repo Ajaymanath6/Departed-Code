@@ -98,7 +98,10 @@
       </button>
     </div>
   </div>
-  <div class="container d-none">
+<div class="myteam-left-back">
+sfsfsf
+</div>
+  <div class="container d-none-">
     <h3 class="text-thirtytwo text-gray-900 font-semibold mb-2 mt-6">My Team</h3>
     <div class="flex justify-between">
       <p class="text-lg text-gray-900 font-normal mb-4">
@@ -111,6 +114,7 @@
       </button>
     </div>
   </div>
+
 </section>
 <div class="container mt-10">
   <div class="flex">
@@ -523,25 +527,32 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
           <h5 class="text-xl text-gray-900 mb-4 font-semibold">Account Owner</h5>
           <div class="flex items-center gap-2 mb-2 pb-4">
             <div
-              class="relative inline-flex items-center justify-center w-10 h-10 rounded overflow-hidden bg-red-700 rounded-full mr-1">
+              class="relative inline-flex items-center justify-center w-12 h-12 rounded overflow-hidden bg-red-700 rounded-full mr-1">
               <span class="text-base font-semibold text-white bg-primary-main03">RS</span>
             </div>
             <div class="font-medium-">
               <div class="text-xl text-gray-900 font-semibold">Essie Howard</div>
             </div>
           </div>
-          <h5 class="text-xl text-gray-900 font-semibold">Members</h5>
-          <p class="text-base text-gray-500 font-normal">Other people on your team</p>
 
-          <div>
-            <button type="button"
-              class="flex items-center w-auto py-2 px-2 me-2 mt-8 mb-8 text-sm font-semibold text-primary-700 focus:outline-none bg-white rounded-md border border-gray-300 hover:bg-gray-100 hover:border-secondary-100 hover:text-primary-700 focus:z-10 focus:ring-4- focus:ring-gray-500- focus:border-secondary-100  ">
-              <span class="material-symbols-outlined">
-                add
-              </span>
-              <span>Invite new people</span>
-            </button>
+          <div class="flex justify-between">
+            <div>
+              <h5 class="text-xl text-gray-900 font-semibold">Members</h5>
+              <p class="text-base text-gray-500 font-normal">Other people on your team</p>
+
+            </div>
+            <div>
+              <button type="button"
+                class="flex items-center w-auto py-2- px-2- p-2 mt-6 mb-6 text-sm font-semibold text-primary-700 focus:outline-none bg-white rounded-md border border-gray-300 hover:bg-gray-100 hover:border-secondary-100 hover:text-primary-700 focus:z-10 focus:ring-4- focus:ring-gray-500- focus:border-secondary-100  ">
+                <span class="material-symbols-outlined">
+                  add
+                </span>
+                <span>Invite new people</span>
+              </button>
+            </div>
           </div>
+
+
 
 
           <div class="w-full bg-gray-100 p-3 rounded-md border border-gray-200">
@@ -595,7 +606,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                 <p class="text-base font-semibold text-end">Role</p>
                 <div>
                   <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown_user_role"
-                    class="bg-white text-gray-900 border border-gray-300 hover:border-secondary-100 flex  justify-between w-32 focus:ring-4 focus:outline-none focus:ring-gray-500 hover:bg-gray-100 font-semibold rounded-md text-base px-5 py-3 text-center inline-flex items-center "
+                    class="bg-white min-h-[3.125rem] text-gray-900 border border-gray-300 hover:border-secondary-100 flex  justify-between w-32 focus:ring-4 focus:outline-none focus:ring-gray-500 hover:bg-gray-100 font-semibold rounded-md text-base px-5- py-3- p-2 text-center inline-flex items-center "
                     type="button">
                     User
                     <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -607,7 +618,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
 
                   <!-- Dropdown menu -->
                   <div id="dropdown_user_role"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow- shadow-md w-44 ">
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow- shadow-md w-44 cust-drop">
                     <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownDefaultButton">
                       <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
@@ -630,13 +641,12 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                 <p class="invisible">hidden</p>
                 <button type="button"
                   class="text-gray-900 flex items-center bg-white border border-gray-300 hover:border-secondary-100 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-500 font-medium rounded-md text-sm px-2 py-2 ">
-                  <span class="material-symbols-outlined">
+                  <span class="material-symbols-outlined icon-sixteen">
                     close
                   </span>
                 </button>
 
               </div>
-
             </div>
           </div>
 
@@ -681,7 +691,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                           <form class="px-4 py-2">
 
                           </form>
-                          <ul class="py-2 text-sm text-gray-500  border-b "
+                          <ul class="py-2 text-sm text-gray-500"
                             aria-labelledby="dropdownMenuIconHorizontalButton">
                             <div class="text-sm font-semibold text-center px-4">Role</div>
                             <li>
@@ -751,7 +761,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                     <td class="px-4 py-4 ">
                       <div class="flex items-center gap-2">
                         <div
-                          class="relative inline-flex items-center justify-center min-w-[2.5rem] w-12- h-12 rounded overflow-hidden bg-red-700 rounded-full mr-1">
+                          class="relative inline-flex items-center justify-center min-w-[2.5rem] min-h-[2.5rem] w-12- h-12- rounded overflow-hidden bg-red-700 rounded-full mr-1">
                           <span class="text-base font-semibold text-white bg-primary-main03">RS</span>
                         </div>
                         <div class="font-medium-">
@@ -879,7 +889,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                         <!--3 dot drop start-->
                         <button id="dropdownRadioButton" data-dropdown-toggle="dropdown_setowner" class="text-gray-900 border flex justify-between items-center focus:ring-4 focus:outline-none focus:ring-primary-300
                     font-medium rounded-md text-sm px-2 py-2 ml-2 text-center inline-flex" type="button">
-                          <span class="material-icons-outlined">
+                          <span class="material-icons-outlined icon-sixteen">
                             more_horiz
                           </span>
                         </button>

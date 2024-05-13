@@ -189,3 +189,22 @@ $blue-500: #009ebd;
 input::-webkit-search-cancel-button {
   display: none; /* Hide the clear button */
 }
+
+/**radio button size start**/
+input[type="radio"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  font-size: 1.7rem;
+}
+/**radio button size end**/
+.cust-drop {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 7px rgba(171, 189, 209, 0.41);
+}
+.header-shadow {
+  box-shadow: 0px 4px 4px rgba(0, 26, 49, 0.03);
+  border-bottom: 1px solid #eaeef2;
+}
+.icon-sixteen {
+  font-size: 1rem;
+}

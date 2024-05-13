@@ -168,10 +168,10 @@ module.exports = {
         2: "1px",
       },
       boxShadow: {
-        md: "0px 0px 7px rgba(171, 189, 209, 0.41)", //dropdown (shadow-md)
+        //md: "0px 0px 7px rgba(171, 189, 209, 0.41)", //dropdown (shadow-md)
       },
       borderRadius: {
-        md: "0.5rem", //dropdown (rounded-md)
+        //md: "0.5rem", //dropdown (rounded-md)
       },
       screens: {
         //takes min-width
