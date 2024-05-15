@@ -2,7 +2,7 @@
 <!-- <span
   #chipRef
   tabindex="0"
-  class="rounded-full- d-none mb-1 mr-2 inline-flex select-none items-center rounded-md bg-gray-100 px-2 py-1 align-top text-base font-semibold text-gray-700 focus:outline-none"
+  class="rounded-full- d-none mb-1 mr-2 inline-flex select-none items-center rounded-md bg-gray-100 px-2 py-1 align-top text-base font-semibold text-Mdblue-700 focus:outline-none"
   [ngClass]="{
     'focus:bg-green-200': this.editable
   }"
@@ -50,7 +50,7 @@
     'focus:bg-green-200': this.editable
   }"
   [id]="'chip-' + value"
-  class="rounded-full- mb-1 mr-2 inline-flex select-none items-center rounded-md bg-gray-100 px-2 py-1 align-top text-base font-semibold text-gray-700 focus:outline-none"
+  class="rounded-full- mb-1 mr-2 inline-flex select-none items-center rounded-md bg-gray-200 px-2 py-1 align-top text-base font-semibold text-Mdblue-700 focus:outline-none"
 >
   <span class="material-icons-outlined mr-2">
     {{ getIconByType(chip.type).icon }}
@@ -72,7 +72,7 @@
       [attr.data-dismiss-target]="'#chip-' + value"
       (click)="removeChip()"
       aria-label="Remove"
-      class="ms-2 inline-flex items-center rounded-full bg-gray-400 p-1 text-sm text-white hover:bg-primary-300 hover:text-primary-900"
+      class="ms-2 inline-flex items-center rounded-full bg-Mdblue-600 p-1 text-sm text-white hover:bg-primary-300 hover:text-primary-900"
     >
       <svg
         class="h-2 w-2"

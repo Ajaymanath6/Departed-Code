@@ -69,7 +69,7 @@ module.exports = {
           300: "#A9B3BC",
           400: "#909DA8",
           500: "#788694",
-          600: "#607080",
+          600: "#667683", //shade-05
           700: "#001A31", //dark text color (eg:Document order has failed ).. this color pallete is in hold
           800: "#001121",
           900: "#000910",
@@ -86,17 +86,29 @@ module.exports = {
           800: "#C9D7E6",
           900: "#667683",
         },
+        // gray: {
+        //   50: "#FFFFFF", //hover bg for dropdown, accordian label,
+        //   100: "#F6F9FC", //eg: bg gray tag//focus for stroked btn
+        //   200: "#C9D7E6", //eg: accordian border
+        //   300: "#D6DEE6", //eg: input border
+        //   400: "#667683", //inputfield placeholder from below(gray-500)
+        //   500: "#667683", //eg: accordian label text & accordian icons (& other icons) ()
+        //   600: "#ABBDD1",
+        //   700: "#001A31",
+        //   800: "#667683", //eg: badge btn text same as hexacode used of '500'
+        //   900: "#001A31", //dark texts(eg:input label, inputfield text, plain btn text big text)
+        // },
         gray: {
-          50: "#FFFFFF", //hover bg for dropdown, accordian label,
-          100: "#F6F9FC", //eg: bg gray tag//focus for stroked btn
-          200: "#C9D7E6", //eg: accordian border
-          300: "#D6DEE6", //eg: input border
-          400: "#667683", //inputfield placeholder from below(gray-500)
-          500: "#667683", //eg: accordian label text & accordian icons (& other icons) ()
-          600: "#667683",
-          700: "#001A31",
-          800: "#667683", //eg: badge btn text same as hexacode used of '500'
-          900: "#001A31", //dark texts(eg:input label, inputfield text, plain btn text big text)
+          50: "#FFFFFF",
+          100: "#F6F9FC", //shade-01
+          200: "#EAEEF2", //shade-02
+          300: "#D6DEE6", //shade-03
+          400: "#C9D7E6", //shade-04
+          500: "",
+          600: "#ABBDD1", //shade-01
+          700: "#D0CFCD", //smokey gray
+          800: "",
+          900: "#667683", //popup overlay color default
         },
         tag_unrep: "#CCECF2",
         tag_property: "#E9D6F8",
