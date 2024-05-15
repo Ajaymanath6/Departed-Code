@@ -40,7 +40,7 @@ module.exports = {
           50: "#FFE7E7",
           100: "#EDCFD9",
           200: "#FBD5D5",
-          300: "#C9D7E6",
+          300: "#C81E1E",
           400: "#C9D7E6",
           500: "#667683",
           600: "#C9D7E6",
@@ -69,7 +69,7 @@ module.exports = {
           300: "#A9B3BC",
           400: "#909DA8",
           500: "#788694",
-          600: "#667683", //shade-05
+          600: "#667683", //shade-06
           700: "#001A31", //dark text color (eg:Document order has failed ).. this color pallete is in hold
           800: "#001121",
           900: "#000910",
@@ -105,7 +105,7 @@ module.exports = {
           300: "#D6DEE6", //shade-03
           400: "#C9D7E6", //shade-04
           500: "",
-          600: "#ABBDD1", //shade-01
+          600: "#ABBDD1", //shade-05
           700: "#D0CFCD", //smokey gray
           800: "",
           900: "#667683", //popup overlay color default
@@ -148,6 +148,7 @@ module.exports = {
           btnhover: "#DD8332", //getitnow
           feat_icon: "#DD8332", //feature icons
         },
+        //customShadow: "rgba(0, 26, 49, 0.20)",
 
         utilities: {
           summary: "#FFF5EC",
