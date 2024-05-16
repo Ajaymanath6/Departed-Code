@@ -48,6 +48,7 @@ html {
 }
 .btn-focus:focus {
   box-shadow: 2px 1px 4px 0px rgba(0, 26, 49, 0.2) inset;
+  //-webkit-box-shadow: 2px 1px 4px 0px rgba(0, 26, 49, 0.2) inset !important;
 }
 //tab name style start
 $primary-700: #005c87;
@@ -223,7 +224,7 @@ input[type="checkbox"] {
 }
 /**radio & checkbox button size end**/
 .cust-drop {
-  border-radius: 0.5rem;
+  //border-radius: 0.5rem;
   box-shadow: 0px 0px 7px rgba(171, 189, 209, 0.41);
 }
 .header-shadow {

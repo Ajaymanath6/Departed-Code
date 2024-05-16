@@ -543,14 +543,16 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
             </div>
             <div>
               <button type="button"
-                class="flex items-center w-auto py-2- px-2- p-2 mt-6 mb-6 text-sm font-semibold text-primary-700 focus:outline-none bg-white rounded-md border border-gray-300
+                class="flex items-center w-auto p-2 mt-6 mb-6 text-sm font-semibold text-primary-700 focus:outline-none bg-white
+                rounded border border-gray-300
                  hover:bg-gray-100 hover:border-gray-600 hover:text-primary-700 focus:z-10
-                 focus:ring-4- focus:ring-gray-500- focus:border-gray-600 btn-focus">
+                  focus:border-gray-600 btn-focus focus:bg-gray-100">
                 <span class="material-symbols-outlined">
                   add
                 </span>
                 <span>Invite new people</span>
               </button>
+
             </div>
           </div>
 
@@ -570,14 +572,14 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
             </svg>
         </div> -->
                     <input type="search" id="search"
-                      class=" block w-full- flex-1 p-1 mr-1 ps-4 py-3 pe-28 text-base font-normal text-Mdblue-700 border border-gray-300 placeholder:text-Mdblue-700 rounded-md bg-gray-50 focus:ring-gray-500 focus:border-Mdblue-600   "
+                      class=" block w-full- flex-1 p-1 mr-1 ps-4 py-3 pe-28 text-base font-normal text-Mdblue-700 border border-gray-300 placeholder:text-Mdblue-700 rounded bg-gray-50 focus:ring-0 focus:border-Mdblue-600   "
                       placeholder="Enter the email..." required>
                     <button type="submit"
-                      class=" text-white d-none absolute- end-2 bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-4 py-2 ">Send
+                      class=" text-white d-none absolute- end-2 bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:outline-none font-semibold rounded-md text-base px-4 py-2 btn-focus">Send
                       it
                     </button>
                     <button type="submit"
-                      class=" d-none- min-w-[7rem] flex items-center justify-center text-white absolute- end-2 bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-4 py-2 ">
+                      class=" d-none- min-w-[7rem] flex items-center justify-center text-white absolute- end-2 bottom-1.5 bg-primary-700 hover:bg-primary-800 font-semibold rounded text-base px-4 py-2 btn-focus">
                       <!-- <span class="material-symbols-outlined animate-counterclockwise mr-2 animate-spin">
                         sync
                       </span> -->
@@ -587,14 +589,14 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                       <span>Invite</span>
                     </button>
                     <button type="submit"
-                      class=" d-none flex items-center text-white absolute- end-2 justify-center bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-4 py-2 ">
+                      class=" d-none flex items-center text-white absolute- end-2 justify-center bottom-1.5 bg-primary-700 hover:bg-primary-800  focus:outline-none  font-semibold rounded text-base px-4 py-2 ">
                       <span class="material-symbols-outlined mr-2 animate-pulse">
                         check_circle
                       </span>
                       <span>Confirm</span>
                     </button>
                     <button type="submit"
-                      class="d-none flex items-center text-white absolute- end-2 justify-center bottom-1.5 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-md text-base px-8 py-2 ">
+                      class="d-none flex items-center text-white absolute- end-2 justify-center bottom-1.5 bg-primary-700 hover:bg-primary-800  focus:outline-none  font-semibold rounded text-base px-8 py-2 ">
                       <span class="material-symbols-outlined mr-2 animate-bounce">
                         error
                       </span>
@@ -608,7 +610,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                 <p class="text-base font-semibold text-end">Role</p>
                 <div>
                   <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown_user_role"
-                    class="bg-white min-h-[3.125rem] text-Mdblue-700 border border-gray-300 hover:border-secondary-100 flex  justify-between w-32 focus:ring-4- focus:outline-none focus:ring-gray-500- focus:border-gray-500 hover:bg-gray-100 font-semibold rounded-md text-base px-5- py-3- p-2 text-center inline-flex items-center "
+                    class="bg-white min-h-[3.125rem] text-Mdblue-700 border border-gray-300 hover:border-Mdblue-600 flex  justify-between w-32 focus:ring-4- focus:outline-none focus:ring-gray-500- focus:border-Mdblue-600 hover:bg-gray-100 font-semibold rounded text-base px-5- py-3- p-2 text-center inline-flex items-center "
                     type="button">
                     User
                     <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -620,7 +622,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
 
                   <!-- Dropdown menu -->
                   <div id="dropdown_user_role"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow- shadow-md w-44 cust-drop">
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow- shadow-md w-44 cust-drop">
                     <ul class="py-2 text-sm text-Mdblue-700 " aria-labelledby="dropdownDefaultButton">
                       <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
@@ -642,7 +644,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
               <div class="flex flex-col items-center">
                 <p class="invisible">hidden</p>
                 <button type="button"
-                  class="text-Mdblue-700 flex items-center bg-white border border-gray-300 hover:border-secondary-100 focus:outline-none hover:bg-gray-100 focus:ring-4- focus:ring-gray-500 focus:border-gray-500 font-medium rounded-md text-sm px-2 py-2 ">
+                  class="text-Mdblue-700 flex items-center bg-white border border-gray-300 hover:border-secondary-100 focus:outline-none hover:bg-gray-100 focus:border-gray-600 focus:bg-gray-100 btn-focus font-medium rounded-md text-sm px-2 py-2 ">
                   <span class="material-symbols-outlined icon-sixteen">
                     close
                   </span>
@@ -658,7 +660,8 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
               <div class="mt-1 w-[40%]">
                 <div class="relative ">
                   <input type="text" id="table-search"
-                    class="block py-2.5 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-600 border-gray-300 rounded-lg w-80- w-full bg-gray-50 focus:ring-primary-500 focus:border-primary-500 "
+                    class="block py-2.5 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80-
+                    w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600 "
                     placeholder="Search Accounts">
                   <div class="absolute inset-y-0 rtl:inset-r-0 end-2 flex items-center ps-3 pointer-events-none">
                     <svg class="w-4 h-4 text-Mdblue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -702,7 +705,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                                 class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-Mdblue-700  flex justify-between cursor-pointer">
                                 <span class="">Enabled</span>
                                 <input id="default-radio-1" type="radio" value="" name="default-radio"
-                                  class="w-5 h-5 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500  focus:outline-none focus:ring-2 cust-trans">
+                                  class="w-5 h-5 text-secondary-700 bg-gray-100 border-gray-300 focus:ring-primary-500  focus:outline-none focus:ring-2 cust-trans">
                               </label>
 
                             </li>
@@ -711,7 +714,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                                 class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-Mdblue-700  flex justify-between cursor-pointer">
                                 <span class="">Disabled</span>
                                 <input id="default-radio-1" type="radio" value="" name="default-radio"
-                                  class="w-5 h-5 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500   focus:ring-2 cust-trans">
+                                  class="w-5 h-5 text-secondary-700 bg-gray-100 border-gray-300 focus:ring-primary-500   focus:ring-2 cust-trans">
                               </label>
                             </li>
                             <li>
@@ -719,7 +722,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                                 class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-Mdblue-700  flex justify-between cursor-pointer">
                                 <span class="">Initated</span>
                                 <input id="default-radio-1" type="radio" value="" name="default-radio"
-                                  class="w-5 h-5 text-primary-700 bg-gray-100 border-gray-300 focus:ring-primary-500   focus:ring-2 cust-trans">
+                                  class="w-5 h-5 text-secondary-700 bg-gray-100 border-gray-300 focus:ring-primary-500   focus:ring-2 cust-trans">
                               </label>
                             </li>
                           </ul>
