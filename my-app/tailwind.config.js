@@ -69,7 +69,7 @@ module.exports = {
           300: "#A9B3BC",
           400: "#909DA8",
           500: "#788694",
-          600: "#667683", //shade-06
+          600: "#667683", //shade-06 (dropdown select outline)
           700: "#001A31", //dark text color (eg:Document order has failed ).. this color pallete is in hold
           800: "#001121",
           900: "#000910",
@@ -105,10 +105,11 @@ module.exports = {
           300: "#D6DEE6", //shade-03
           400: "#C9D7E6", //shade-04
           500: "",
-          600: "#ABBDD1", //shade-05
+          600: "#ABBDD1", //shade-05 (outline btn select)
           700: "#D0CFCD", //smokey gray
           800: "",
           900: "#667683", //popup overlay color default
+          //shade-06 is in "Mdblue"
         },
         tag_unrep: "#CCECF2",
         tag_property: "#E9D6F8",
@@ -184,7 +185,7 @@ module.exports = {
         //md: "0px 0px 7px rgba(171, 189, 209, 0.41)", //dropdown (shadow-md)
       },
       borderRadius: {
-        md: "0.25rem", //dropdown (rounded-md)
+        //md: "0.25rem", //dropdown (rounded-md)
       },
       screens: {
         //takes min-width

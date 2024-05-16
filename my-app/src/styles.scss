@@ -41,9 +41,13 @@ html {
 
 .m-h-btn {
   min-height: 2.1rem;
+  height: 2.4rem;
 }
 .mlCust-0 {
   margin-left: 0 !important;
+}
+.btn-focus:focus {
+  box-shadow: 2px 1px 4px 0px rgba(0, 26, 49, 0.2) inset;
 }
 //tab name style start
 $primary-700: #005c87;
@@ -206,13 +210,18 @@ input::-webkit-search-cancel-button {
   display: none; /* Hide the clear button */
 }
 
-/**radio button size start**/
+/**radio & checkbox button size start**/
 input[type="radio"] {
   width: 1.125rem;
   height: 1.125rem;
   font-size: 1.7rem;
 }
-/**radio button size end**/
+input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  font-size: 1.1rem;
+}
+/**radio & checkbox button size end**/
 .cust-drop {
   border-radius: 0.5rem;
   box-shadow: 0px 0px 7px rgba(171, 189, 209, 0.41);
