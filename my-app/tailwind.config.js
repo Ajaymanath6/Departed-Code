@@ -69,7 +69,7 @@ module.exports = {
           300: "#A9B3BC",
           400: "#909DA8",
           500: "#788694",
-          600: "#667683", //shade-06 (dropdown select outline)
+          600: "#667683", //shade-06 (dropdown select outline), most text color,
           700: "#001A31", //dark text color (eg:Document order has failed ).. this color pallete is in hold
           800: "#001121",
           900: "#000910",
