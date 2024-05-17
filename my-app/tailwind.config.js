@@ -181,12 +181,7 @@ module.exports = {
         4: "1px", // Adjust the value here to control the width (e.g., '6px', '8px')
         2: "1px",
       },
-      boxShadow: {
-        //md: "0px 0px 7px rgba(171, 189, 209, 0.41)", //dropdown (shadow-md)
-      },
-      borderRadius: {
-        //md: "0.25rem", //dropdown (rounded-md)
-      },
+
       screens: {
         //takes min-width
         sm: "700px", //both works, applied in intuitive tab, in welcome page 4 video
