@@ -82,13 +82,7 @@ button[aria-selected="true"] {
   filter: brightness(0) saturate(100%) invert(22%) sepia(42%) saturate(3196%)
     hue-rotate(175deg) brightness(100%) contrast(103%);
 }
-.material-symbols-outlined selected {
-  font-variation-settings:
-    "FILL" 1,
-    "wght" 400,
-    "GRAD" 0,
-    "opsz" 24;
-}
+
 //thin scroll bar start
 ::-webkit-scrollbar {
   width: 7px;
@@ -222,11 +216,14 @@ input[type="radio"] {
   width: 1.125rem;
   height: 1.125rem;
   font-size: 1.7rem;
+  border-width: 1.5px;
+  background-size: 2em 1em !important;
 }
 input[type="checkbox"] {
   width: 1.125rem;
   height: 1.125rem;
   font-size: 1.1rem;
+  border-width: 1.5px;
 }
 /**radio & checkbox button size end**/
 .cust-drop {
