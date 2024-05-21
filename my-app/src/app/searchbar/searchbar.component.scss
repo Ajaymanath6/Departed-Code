@@ -1,0 +1,15 @@
+.gradient {
+  content: "";
+  position: absolute;
+  right: 0;
+  inset: 0px right 0px 0px; /* Positions the element to cover the right side */
+  width: 20%; /* Adjust the width as needed for the fading area */
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-box-shadow: inset -144px -11px 120px -113px rgba(255, 255, 255, 1);
+  -moz-box-shadow: inset -144px -11px 120px -113px rgba(255, 255, 255, 1);
+  box-shadow: inset -144px -11px 120px -113px rgba(255, 255, 255, 1);
+}
