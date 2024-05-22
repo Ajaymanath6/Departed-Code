@@ -51,7 +51,7 @@
   #containerRef
   (keydown)="move($event)"
   (click)="setFocusOnInput($event)"
-  class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- pr-[10rem]- container relative mb-1 flex min-h-[16px] w-full items-center justify-between rounded border-2 border-gray-300 bg-gray-50 p-2 text-sm text-Mdblue-700 focus-within:border-Mdblue-600"
+  class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- pr-[10rem]- container relative mb-1 flex min-h-[16px] w-full items-center justify-between rounded border-[1.5px] border-gray-300 bg-gray-50 p-2 text-sm text-Mdblue-700 focus-within:border-Mdblue-600"
 >
   <div
     class="flex-1- flex-shrink-0- flex-nowrap- overflow-hidden- flex flex-wrap"
@@ -83,12 +83,14 @@
   <div
     class="top-[1rem]- absolute- bottom-[0]- right-[0.5rem]- top-[0]- flex items-center"
   >
-    <span class="mr-2 cursor-pointer text-base font-semibold text-primary-700"
-      >Clear</span
+    <button
+      class="mr-2 cursor-pointer text-base font-semibold text-primary-700"
     >
+      Clear
+    </button>
     <button
       type="submit"
-      class="flex items-center rounded bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+      class="btn-focus flex items-center rounded bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none"
     >
       <span class="material-symbols-outlined mr-1"> search </span>
       <span>Search</span>
@@ -232,7 +234,9 @@
         class="inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100"
       >
         <div class="mr-2 flex items-center">
-          <span class="material-symbols-outlined mr-2"> business_center </span>
+          <span class="material-symbols-outlined gray-fill mr-2">
+            business_center
+          </span>
           <span> Attorney</span>
         </div>
         <div class="flex">
