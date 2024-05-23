@@ -48,7 +48,7 @@ html {
 }
 .btn-focus:focus {
   box-shadow: 2px 1px 4px 0px rgba(0, 26, 49, 0.2) inset;
-  //-webkit-box-shadow: 2px 1px 4px 0px rgba(0, 26, 49, 0.2) inset !important;
+  -webkit-box-shadow: 2px 1px 4px 0px rgba(0, 26, 49, 0.2) inset !important;
 }
 //tab name style start
 $primary-700: #005c87;
@@ -100,8 +100,8 @@ button[aria-selected="true"] {
 .material-symbols-outlined,
 .material-icons,
 .material-icons-outlined {
-  //font-size: 24px;
-  //color: $gray-500;
+  //color: #667683;
+  //@apply text-Mdblue-600;
 }
 .icon-12 {
   font-size: 0.75rem;
@@ -239,7 +239,8 @@ input[type="checkbox"] {
 }
 
 .gray-fill {
-  filter: hue-rotate(200deg) brightness(1.2);
+  color: #001a31;
+  //filter: hue-rotate(200deg) brightness(1.2) !important;
   font-variation-settings:
     "FILL" 1,
     "wght" 400,
