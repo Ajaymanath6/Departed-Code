@@ -46,3 +46,7 @@
 .second-col::-webkit-scrollbar {
   display: none;
 }
+
+.parent-card:hover .card-btn {
+  @apply bg-white;
+}
