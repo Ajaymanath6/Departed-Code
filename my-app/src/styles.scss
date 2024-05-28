@@ -238,8 +238,19 @@ input[type="checkbox"] {
   font-size: 1rem;
 }
 
-.gray-fill {
-  color: #001a31;
+.Mdblue-fill-600 {
+  //color: #001a31;
+  @apply text-Mdblue-600;
+  //filter: hue-rotate(200deg) brightness(1.2) !important;
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+.Mdblue-fill-700 {
+  //color: #001a31;
+  @apply text-Mdblue-700;
   //filter: hue-rotate(200deg) brightness(1.2) !important;
   font-variation-settings:
     "FILL" 1,
