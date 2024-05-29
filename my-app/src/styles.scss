@@ -239,7 +239,7 @@ input[type="checkbox"] {
 }
 
 .Mdblue-fill-600 {
-  //color: #001a31;
+
   @apply text-Mdblue-600;
   //filter: hue-rotate(200deg) brightness(1.2) !important;
   font-variation-settings:
@@ -249,7 +249,7 @@ input[type="checkbox"] {
     "opsz" 24;
 }
 .Mdblue-fill-700 {
-  //color: #001a31;
+
   @apply text-Mdblue-700;
   //filter: hue-rotate(200deg) brightness(1.2) !important;
   font-variation-settings:

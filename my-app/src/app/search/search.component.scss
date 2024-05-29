@@ -219,3 +219,8 @@ button[aria-expanded="false"] [data-accordion-icon] {
   // transition: all 0.2s ease-out;
   // transform: rotate(90deg);
 }
+
+.search-shadow{
+  box-shadow: 0px 2px 4px 0px rgba(0, 26, 49, 0.12);
+  position:relative;
+}
