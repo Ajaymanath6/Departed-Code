@@ -119,6 +119,8 @@ module.exports = {
         profile: "#E4833E",
         dark_gray: "#001A31", //text color
 
+        section_gray:"#F8F9FB",//for semantic section bg
+
         plan_comman: {
           desc: "#001A31", //ideal for personal
           unit: "#667683", //$,month
