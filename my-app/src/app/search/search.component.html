@@ -282,6 +282,12 @@
         </div>
         <div class="flex align-middle ">
           <div class="relative flex items-center">
+            <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button" class="ms-3 mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tooltip right</button>
+
+<div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+    Tooltip on right
+    <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
             <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
               class="min-h-[2.2rem]- leading-[1.225rem]- p-[0.5rem] border border-gray-300 rounded flex items-center text-sm font-semibold  text-Mdblue-700 hover:text-primary-700- focus:bg-gray-100 hover:bg-gray-100 "
               type="button">
@@ -1929,7 +1935,7 @@
                     </svg>
                   </div>
                   <input name="start" type="text"
-                    class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5  "
+                    class="bg-gray-50 border placeholder:text-Mdblue-600 border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5  "
                     placeholder="From...">
                 </div>
                 <div class="relative">
@@ -1941,7 +1947,7 @@
                     </svg>
                   </div>
                   <input name="end" type="text"
-                    class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5  "
+                    class="bg-gray-50 border placeholder:text-Mdblue-600 border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5  "
                     placeholder="To...">
                 </div>
               </div>
@@ -1952,7 +1958,7 @@
               </div>
               <div class="space-y-2">
                 <input type="text" id="first_name"
-                  class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                  class="bg-gray-50 border placeholder:text-Mdblue-600 border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
                   placeholder="Last Days..." required />
                 <button type="button"
                   class="text-primary-700 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-md text-sm px-2  m-h-btn py-1 me-2 mb-2 ">Apply</button>
@@ -2114,7 +2120,7 @@
                     </svg>
                   </div>
                   <input name="start" type="text"
-                    class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5  "
+                    class="bg-gray-50 border placeholder:text-Mdblue-600 border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5  "
                     placeholder="From...">
                 </div>
                 <div class="relative">
@@ -2126,7 +2132,7 @@
                     </svg>
                   </div>
                   <input name="end" type="text"
-                    class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5  "
+                    class="bg-gray-50 border placeholder:text-Mdblue-600 border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5  "
                     placeholder="To...">
                 </div>
               </div>
@@ -2137,7 +2143,7 @@
               </div>
               <div class="space-y-2">
                 <input type="text" id="first_name"
-                  class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                  class="bg-gray-50 border placeholder:text-Mdblue-600 border-gray-300 text-Mdblue-700 text-sm rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
                   placeholder="Last Days..." required />
                 <button type="button"
                   class="text-primary-700 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-md text-sm px-2  m-h-btn py-1 me-2 mb-2 ">Apply</button>
@@ -2772,8 +2778,8 @@
                   </div>
                   <div
                     class="flex items-center bg-gray-100 text-primary-700 text-xs font-medium  px-2.5 py-0.5 rounded  ">
-                    <span class="material-symbols-outlined">
-                      download_2
+                    <span class="material-symbols-outlined icon-16">
+                      cloud_download
                     </span>
                   </div>
                 </div>
@@ -2828,8 +2834,8 @@
                     <div class="text-sm font-normal text-Mdblue-700">Attorney Represented</div>
                   </div>
                   <div
-                    class=" items-center bg-gray-100 text-gray-800 text-sm font-semibold me-2 px-2.5 py-0.5 rounded-md  ">
-                    Plaintiff
+                    class=" items-center">
+                    <span class="bg-gray-200 text-Mdblue-600 text-sm font-semibold px-2.5 py-0.5 rounded-full">Plaintiff </span>
                   </div>
                 </div>
                 <div class="flex flex-wrap">
@@ -2921,7 +2927,7 @@
               <div class="block  p-4 bg-white border border-gray-200 rounded shadow  ">
                 <div class="flex justify-between">
                   <div class="flex items-center overflow-hidden">
-                    <span class="material-symbols-outlined mr-2  text-Mdblue-600">article</span>
+                    <span class="material-symbols-outlined mr-2 mt-1- text-Mdblue-600 icon-24">topic</span>
                     <div class="text-lg font-semibold text-six text-primary-700 mb-1 w-full- truncate text-ellipsis">
                       State of
                       Florida vs Allen Smith Florida vs Allen Smith
@@ -2934,19 +2940,19 @@
 
                 <div class="grid grid-cols-2 gap-2">
                   <div class="text-sm font-normal flex items-center">
-                    <span class="material-symbols-outlined">home</span>
+                    <span class="material-symbols-outlined icon-16 mr-1 Mdblue-fill-600"> account_balance </span>
                     <span class="truncate text-ellipsis">California - California Courts of Appeal</span>
                   </div>
                   <div class="text-sm font-normal flex items-center">
-                    <span class="material-symbols-outlined">calendar_month</span>
+                    <span class="material-symbols-outlined icon-16 mr-1 Mdblue-fill-600">calendar_month</span>
                     <span>11/27/2023</span>
                   </div>
                   <div class="text-sm font-normal flex items-center">
-                    <span class="material-symbols-outlined">article</span>
+                    <span class="material-symbols-outlined icon-16 mr-1">tag</span>
                     <span>B333388</span>
                   </div>
                   <div class="text-sm font-normal flex items-center">
-                    <span class="material-symbols-outlined">calendar_month</span>
+                    <span class="material-symbols-outlined icon-16 mr-1">list_alt</span>
                     <span>Other</span>
                   </div>
                 </div>

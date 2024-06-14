@@ -1049,6 +1049,38 @@
       </div>
       <div class="w-full- h-[1px] grow bg-gray-200"></div>
     </div>
+
+    <div class="mb-4 mt-4 flex items-center">
+      <div class="ml-2 flex mr-2 text-center items-center font-semibold text-Mdblue-600">
+        <h5 class="text-lg font-semibold text-Mdblue-700">Attorneys</h5>
+        <div
+          class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-200 rounded-full ml-1">
+          <span class="font-medium text-Mdblue-600">5</span>
+        </div>
+        <span class="text-sm font-semibold bg-gray-200 rounded-full px-2.5 py-0.5">9621</span>
+      </div>
+      <div class="w-full- h-[1px] grow bg-gray-200 ml-2 mr-2"></div>
+      <div class="flex items-center">
+      <div class="text-sm font-semibold text-Mdblue-600">
+        <span>Showing</span>
+        <div
+          class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-200 rounded-full ml-1 mr-1">
+          <span class="font-medium text-Mdblue-600">6</span>
+        </div> of
+        <div
+          class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-200 rounded-full ml-1 mr-1">
+          <span class="font-medium text-Mdblue-600">12</span>
+        </div>
+        <span>results</span>
+      </div>
+      <button type="button"
+    class="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4
+    focus:ring-gray-200 rounded-md px-2 py-1 text-base font-semibold text-primary-700">View
+    All</button>
+     </div>
+    </div>
+
+
     <div class="flex justify-center mb-4">
       <p class="text-sm flex font-semibold text-Mdblue-600">
         <span class="text-Mdblue-600">Showing attorneys from</span>
@@ -1061,8 +1093,8 @@
       </p>
     </div>
     <div class="grid grid-cols-4 gap-6">
-      <a href="#" class="parent-card block p-6 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-100">
-        <div class="flex items-center">
+      <a href="#" class="parent-card block p-4 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-100 ">
+        <div class="flex items-center mt-[-0.8rem]-">
           <div class="flex-shrink-0 mr-2">
             <img class="w-12 h-12 rounded-full" src="../../assets/jpg/biffcon.png" alt="Neil image">
           </div>
@@ -1084,6 +1116,79 @@
           </div>
         </div>
       </a>
+      <div class="parent-card block p-2 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-100 " >
+        <div class="flex justify-between items-center">
+          <div>
+            <button type="button"
+              class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1">
+              <span class="material-symbols-outlined icon-24">
+                add
+              </span>
+            </button>
+          </div>
+          <div>
+            <button type="button" id="dropdownButton" data-dropdown-toggle="attorney-dropdown"
+              class="text-primary-700- text-Mdblue-600 card-btn flex bg-gray-100- border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1">
+              <span class="material-symbols-outlined icon-24">
+                more_horiz
+              </span>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="attorney-dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-md cust-drop w-44 ">
+              <ul class="py-2 text-sm text-Mdblue-700" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm  hover:bg-gray-100">Edit</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm  hover:bg-gray-100 ">Export Data</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm  hover:bg-gray-100 ">Delete</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center flex-col mt-[-0.8rem]">
+          <div class="flex-shrink-0 mb-2">
+            <img class="w-12 h-12 rounded-full" src="../../assets/jpg/biffcon.png" alt="Neil image">
+          </div>
+          <div class="text-center">
+            <h5 class="text-lg font-semibold text-primary-700">
+              John Smith
+            </h5>
+            <div class="flex items-center justify-center mt-1 mb-1">
+              <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                star
+              </span>
+              <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                star
+              </span>
+              <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-700 icon-16">
+                star_half
+              </span>
+              <span class="material-symbols-outlined text-secondary-700 icon-16">
+                star
+              </span>
+            </div>
+            <p class="text-sm text-Mdblue-600 font-semibold">
+              Bond & Associates
+            </p>
+          </div>
+          <!-- <div>
+            <button type="button"
+              class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1">
+              <span class="material-symbols-outlined">
+                add
+              </span>
+            </button>
+          </div> -->
+        </div>
+      </div>
     </div>
   </div>
 </div>

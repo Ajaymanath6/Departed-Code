@@ -119,7 +119,7 @@ module.exports = {
         profile: "#E4833E",
         dark_gray: "#001A31", //text color
 
-        section_gray:"#F8F9FB",//for semantic section bg
+        section_gray: "#F8F9FB", //for semantic section bg
 
         plan_comman: {
           desc: "#001A31", //ideal for personal
@@ -194,7 +194,8 @@ module.exports = {
         padding: "1rem",
         screens: {
           //md: "1080px", works
-          lg: "1440px",
+          //lg: "1440px",
+          lg: "1517px",
         },
       },
     },
