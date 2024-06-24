@@ -10,15 +10,15 @@ declare var echarts: any;
   styleUrls: ['./semanticsearch.component.scss'],
 })
 export class SemanticsearchComponent implements AfterViewInit {
-  //col hide start
-  firstcol: boolean = true;
-  secondcol: boolean = true;
+  // //col hide start
+  // firstcol: boolean = true;
+  // secondcol: boolean = true;
 
-  hidefirstcol() {
-    // this.firstcol= false;
-  }
+  // hidefirstcol() {
+  //   // this.firstcol= false;
+  // }
 
-  //col hide end
+  // //col hide end
 
   constructor(private elementRef: ElementRef) {}
   title = 'echarts-angular';

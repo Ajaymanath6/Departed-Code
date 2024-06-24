@@ -1,0 +1,95 @@
+<!--main search chip start-->
+<!-- <span
+  #chipRef
+  tabindex="0"
+  class="rounded-full- d-none mb-1 mr-2 inline-flex select-none items-center rounded-md bg-gray-100 px-2 py-1 align-top text-base font-semibold text-Mdblue-700 focus:outline-none"
+  [ngClass]="{
+    'focus:bg-green-200': this.editable
+  }"
+  [id]="'chip-' + value"
+>
+  <span class="material-icons-outlined mr-2"> business_center </span>
+  <span class="font-base font-normal focus:outline-none">Attorney: &nbsp;</span>
+  <ng-content></ng-content>
+  <div *ngIf="closeable" class="flex">
+    <button
+      [id]="'button-dismiss-' + value"
+      #buttonRef
+      tabindex="-1"
+      type="button"
+      [attr.data-dismiss-target]="'#chip-' + value"
+      (click)="removeChip()"
+      aria-label="Remove"
+      class="ms-2 inline-flex items-center rounded-full bg-gray-400 p-1 text-sm text-white hover:bg-primary-300 hover:text-primary-900"
+    >
+      <svg
+        class="h-2 w-2"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+        />
+      </svg>
+    </button>
+  </div>
+</span> -->
+<!--main search chip end-->
+
+<!--static semantic chip start-->
+<span
+  #chipRef
+  tabindex="0"
+  [ngClass]="{
+    'focus:bg-green-200- border focus:border-gray-600': this.editable
+  }"
+  [id]="'chip-' + value"
+  class="text-Mdblue-700- mb-1- mr-2- inline-flex select-none items-center rounded-lg border-Mdblue-600 bg-gray-200 p-2 align-top text-base font-semibold text-Mdblue-600 focus:outline-none"
+>
+  <span class="material-symbols-outlined Mdblue-fill-600 mr-2">
+    {{ getIconByType(chip.type).icon }}
+  </span>
+  <span class="font-base font-semibold focus:outline-none"
+    >{{ getIconByType(chip.type).title }} &nbsp;</span
+  >
+  <span
+    class="font-base font-semibold text-Mdblue-700 focus:outline-none"
+    [contentEditable]="this.editable"
+    >{{ chip.value }}</span
+  >
+  <div *ngIf="closeable" class="flex">
+    <button
+      [id]="'button-dismiss-' + value"
+      #buttonRef
+      tabindex="-1"
+      type="button"
+      [attr.data-dismiss-target]="'#chip-' + value"
+      (click)="removeChip()"
+      aria-label="Remove"
+      class="ms-2 inline-flex items-center rounded-full bg-Mdblue-600 p-1 text-sm text-white hover:bg-primary-300 hover:text-primary-900"
+    >
+      <svg
+        class="h-2 w-2"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+        />
+      </svg>
+    </button>
+  </div>
+</span>
+<!--static semantic chip end-->

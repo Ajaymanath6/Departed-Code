@@ -20,13 +20,13 @@ module.exports = {
           500: "#009EBD", //eg: input focus
           600: "#005C87",
           700: "#005C87", //eg: primary main btn color
-          800: "#004463", //eg: filled btn hover
+          800: "#004B6E", //eg: filled btn hover
           900: "#005C87",
         },
         secondary: {
           //royalblue-
           50: "#C0E7EF",
-          100: "#D8E6EC",
+          100: "#ABBDD1", //on hover outline border color used
           200: "#005C87",
           300: "#90B7CA",
           400: "#6CA0B8",
@@ -40,7 +40,7 @@ module.exports = {
           50: "#FFE7E7",
           100: "#EDCFD9",
           200: "#FBD5D5",
-          300: "#C9D7E6",
+          300: "#C81E1E",
           400: "#C9D7E6",
           500: "#667683",
           600: "#C9D7E6",
@@ -69,7 +69,7 @@ module.exports = {
           300: "#A9B3BC",
           400: "#909DA8",
           500: "#788694",
-          600: "#607080",
+          600: "#667683", //shade-06 (dropdown select outline), most text color(gray-500 to this Mdblue-600),
           700: "#001A31", //dark text color (eg:Document order has failed ).. this color pallete is in hold
           800: "#001121",
           900: "#000910",
@@ -86,17 +86,30 @@ module.exports = {
           800: "#C9D7E6",
           900: "#667683",
         },
+        // gray: {
+        //   50: "#FFFFFF", //hover bg for dropdown, accordian label,
+        //   100: "#F6F9FC", //eg: bg gray tag//focus for stroked btn
+        //   200: "#C9D7E6", //eg: accordian border
+        //   300: "#D6DEE6", //eg: input border
+        //   400: "#667683", //inputfield placeholder from below(gray-500)
+        //   500: "#667683", //eg: accordian label text & accordian icons (& other icons) ()
+        //   600: "#ABBDD1",
+        //   700: "#001A31",
+        //   800: "#667683", //eg: badge btn text same as hexacode used of '500'
+        //   900: "#001A31", //dark texts(eg:input label, inputfield text, plain btn text big text)
+        // },
         gray: {
-          50: "#FFFFFF", //hover bg for dropdown, accordian label,
-          100: "#EAEEF2", //eg: bg gray tag//focus for stroked btn
-          200: "#C9D7E6", //eg: accordian border
-          300: "#D6DEE6", //eg: input border
-          400: "#667683", //inputfield placeholder from below(gray-500)
-          500: "#667683", //eg: accordian label text & accordian icons (& other icons)
-          600: "#667683",
-          700: "#001A31",
-          800: "#667683", //eg: badge btn text same as hexacode used of '500'
-          900: "#001A31", //dark texts(eg:input label, inputfield text, plain btn text big text)
+          50: "#FFFFFF",
+          100: "#F6F9FC", //shade-01
+          200: "#EAEEF2", //shade-02
+          300: "#D6DEE6", //shade-03
+          400: "#C9D7E6", //shade-04
+          500: "",
+          600: "#ABBDD1", //shade-05 (outline btn select)
+          700: "#D0CFCD", //smokey gray
+          800: "#DEE5EB", // search tag hover
+          900: "#667683", //popup overlay color default
+          //shade-06 is in "Mdblue"
         },
         tag_unrep: "#CCECF2",
         tag_property: "#E9D6F8",
@@ -105,6 +118,8 @@ module.exports = {
 
         profile: "#E4833E",
         dark_gray: "#001A31", //text color
+
+        section_gray: "#F8F9FB", //for semantic section bg
 
         plan_comman: {
           desc: "#001A31", //ideal for personal
@@ -136,6 +151,7 @@ module.exports = {
           btnhover: "#DD8332", //getitnow
           feat_icon: "#DD8332", //feature icons
         },
+        //customShadow: "rgba(0, 26, 49, 0.20)",
 
         utilities: {
           summary: "#FFF5EC",
@@ -144,9 +160,13 @@ module.exports = {
       },
 
       maxWidth: {
-        seventeen: "17% !important", // custom class="max-w-twenty"
-        thirtyfive: "35% !important",
-        sixty: "60% !important",
+        // seventeen: "17% !important", // custom class="max-w-twenty"
+        // thirtyfive: "35% !important",
+        // sixty: "60% !important",
+
+        twenty: "20% !important",
+        fiftyseven: "57% !important",
+        thirtytwo: "32% !important",
       },
       fontSize: {
         thirtytwo: [
@@ -159,6 +179,10 @@ module.exports = {
       fontFamily: {
         sans: ["Open Sans", "sans-serif"],
       },
+      ringWidth: {
+        4: "1px", // Adjust the value here to control the width (e.g., '6px', '8px')
+        2: "1px",
+      },
 
       screens: {
         //takes min-width
@@ -170,7 +194,8 @@ module.exports = {
         padding: "1rem",
         screens: {
           //md: "1080px", works
-          lg: "1440px",
+          //lg: "1440px",
+          lg: "1517px",
         },
       },
     },

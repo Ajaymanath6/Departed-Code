@@ -206,3 +206,21 @@ input:focus ~ .input-container {
   border-color: #007bff; /* Change border color on focus */
 }
 //input test end
+
+
+
+//grid text ellipse check start
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns, each 1 fraction of width */
+  gap: 4px; /* Optional spacing between columns */
+}
+.grid  p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Additional styles for better responsiveness */
+  flex: 1; /* Makes text element grow to fill available space */
+  margin: 0; /* Removes default margin for better control */
+}
+//grid text ellipse check end
