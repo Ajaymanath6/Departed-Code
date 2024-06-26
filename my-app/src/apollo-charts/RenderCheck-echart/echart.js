@@ -95,9 +95,10 @@ option = {
       axisLine: {
         lineStyle: {
           width: 10, //thikness of circle
-          color: [[1, "#CCECF2"]],
+          color: [[1, "#CCECF2"]],//bg path color
         },
       },
+
       splitLine: {
         show: false,
         distance: 0,
@@ -339,14 +340,18 @@ option = {
       progress: {
         show: true,
         width: 10, //ring foreground thickness
+        roundCap: true, //ring foreground path round
       },
+
       pointer: {
         show: false,
       },
       axisLine: {
         lineStyle: {
           width: 10, //ring bg thickness
+          color: [[1, "#CCECF2"]], ////ring bg path color
         },
+        roundCap: true,
       },
       axisTick: {
         distance: -45,
