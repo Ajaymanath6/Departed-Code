@@ -305,7 +305,7 @@
 
             <!-- Dropdown menu -->
             <div id="dropdownAvatarName"
-              class="z-10 hidden text-sm font-semibold bg-white divide-y divide-gray-100 rounded-lg shadow w-56 ">
+              class="z-10 hidden cust-drop text-sm font-semibold bg-white divide-y divide-gray-100 rounded-lg shadow w-56 ">
               <div class="px-4 py-3 text-sm text-Mdblue-700 ">
                 <div class="font-medium text-center mb-3">Showing cases with</div>
                 <div class="">
@@ -368,6 +368,52 @@
                   </a>
                 </li>
               </ul>
+
+              <div class="attorney-state-filter">
+                <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700 ">
+                <div class="font-medium text-center mb-3">Showing</div>
+                <div class="">
+                  <input type="text" id="input-group-search"
+                    class="block py-2.5 pe-10 text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600"
+                    placeholder="Search states..." />
+                </div>
+              </div>
+              <ul class="py-2 text-sm text-Mdblue-600 "
+                aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
+                <p class="text-center">Or, only show...</p>
+                <li>
+                  <button class="flex w-full items-center justify-between px-4 py-2 text-sm font-normal text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100">
+                    <span class=""> New York,  </span>
+                    <span class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5 ng-star-inserted">9621</span>
+                  </button>
+                </li>
+                <li>
+                 <button class="flex w-full items-center justify-between px-4 py-2 text-sm font-normal text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100">
+                    <span class=""> New York,  </span>
+                    <span class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5 ng-star-inserted">9621</span>
+                  </button>
+                </li>
+                <li>
+                  <a href="#" class="block px-2  hover:bg-gray-100 ">
+                    <label
+                      class="flex items-center justify-between text-sm font-medium text-Mdblue-700  hover:bg-gray-100 rounded-md px-1.5 py-1 w-full">
+                      <span>Tag3</span>
+                      <div>
+                        <div
+                          class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-100 rounded-full  mr-1">
+                          <span class="text-sm font-semibold text-gray-600 ">1</span>
+                        </div>
+                        <input type="checkbox" value=""
+                          class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-700 focus:ring-primary-500  focus:ring-2  cust-trans" />
+                      </div>
+
+
+                    </label>
+                  </a>
+                </li>
+              </ul>
+              </div>
+
             </div>
           </div>
           <!--notification start-->
