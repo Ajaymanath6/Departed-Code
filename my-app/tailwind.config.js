@@ -33,7 +33,7 @@ module.exports = {
           500: "#72C3D4", //eg: hover for Document Requested btn
           600: "#005C87",
           700: "#009EBD", //eg: secondary main
-          800: "#004463",
+          800: "#CCECF2", //case detail tag color
           900: "#005C87",
         },
         red: {
