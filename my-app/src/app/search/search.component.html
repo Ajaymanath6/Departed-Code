@@ -3339,7 +3339,7 @@
                 <!-- <label for="table-search" class="sr-only">Search</label> -->
                 <div class="relative mt-1 w-[40%]">
                   <input type="text" id="table-search"
-                    class="block pt-2 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-600 border-gray-300 rounded-lg w-80- w-full bg-gray-50 focus:ring-primary-500 focus:border-primary-500 "
+                    class="block  py-2.5 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600 "
                     placeholder="Search for items">
 
                   <div class="absolute inset-y-0 rtl:inset-r-0 end-2 flex items-center ps-3 pointer-events-none">
@@ -3363,9 +3363,10 @@
                     <input datepicker- type="text"
                       class=" border-0 text-Mdblue-700 text-sm placeholder:text-Mdblue-600  focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.9 "
                       placeholder="Pick a date range...">
-                    <span class="absolute  flex items-center end-[0px] bottom-[7px] material-symbols-outlined">
+                    <!-- <span class="absolute  flex items-center end-[0px] bottom-[7px] material-symbols-outlined">
                       expand_more
-                    </span>
+                    </span> -->
+                      <span class="material-symbols-outlined icon-16  absolute flex items-center end-[0px] bottom-[10px]"> keyboard_arrow_down </span>
                   </div>
                   <!-- <span class="text-sm font-semibold text-gray-400 flex items-center ">
                   <span class="material-symbols-outlined">calendar_month</span>
@@ -3492,11 +3493,13 @@
                 </tbody>
               </table>
               <nav aria-label=" Page navigation example pagination" class="flex justify-center mt-10">
-                <ul class="inline-flex -space-x-px text-sm">
+                <ul class="inline-flex -space-x-px text-sm items-center">
                   <li>
-                    <a href="#"
-                      class="flex items-center text-sm font-semibold justify-center px-1 h-8 ms-0 leading-tight text-Mdblue-600 bg-white  border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-Mdblue-700   ">Previous</a>
-                  </li>
+                    <!-- <a href="#"
+                      class="flex items-center text-sm font-semibold justify-center px-1 h-8 ms-0 leading-tight text-Mdblue-600
+                       bg-white  border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-Mdblue-700   ">Previous</a> -->
+                    <span class="material-symbols-outlined icon-12 font-extrabold	 text-Mdblue-600">arrow_back_ios</span>
+                    </li>
                   <li>
                     <a href="#"
                       class="flex items-center text-base font-semibold stify-center px-1 h-8 leading-tight text-primary-700 bg-white  border-gray-300    ">
@@ -3531,8 +3534,10 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#"
-                      class="flex items-center text-sm font-semibold justify-center px-2 h-8 leading-tight text-Mdblue-600 bg-white  border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-Mdblue-700   ">Next</a>
+                    <!-- <a href="#"
+                      class="flex items-center text-sm font-semibold justify-center px-2 h-8 leading-tight text-Mdblue-600 bg-white
+                       border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-Mdblue-700   ">Next</a> -->
+                         <span class="material-symbols-outlined icon-12 font-extrabold	 text-Mdblue-600">arrow_forward_ios</span>
                   </li>
                 </ul>
               </nav>

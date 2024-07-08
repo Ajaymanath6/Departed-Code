@@ -35,6 +35,14 @@ export class SemanticsearchComponent implements AfterViewInit {
     window.addEventListener('resize', function () {
       myChart.resize();
     });
+
+    //echart angular responsive start
+    // suggested by godn..latest and good above is javascript resize code
+    // new ResizeObserver(() => this.chartInstance?.resize()).observe(
+    //   this.chartElement.nativeElement,
+    // );
+    //echart angular responsive end
+
     var app = {};
 
     var option;

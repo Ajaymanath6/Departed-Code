@@ -589,9 +589,6 @@
             <p class="mb-2 pb-3 text-sm font-semibold text-Mdblue-700 border-b">
               Total Cases
             </p>
-
-
-
             <div class="relative overflow-x-auto">
               <table class="w-full text-sm text-left  text-Mdblue-600 ">
                 <thead class="text-sm text-Mdblue-600 font-semibold bg-gray-50  ">
@@ -622,15 +619,21 @@
                 <tbody class="text-base font-semibold">
                   <tr class="bg-white border-b- ">
                     <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
-                      <span class="bg-primary-100   px-2 py-0.5 rounded ">
-                        Personal Injury
-                      </span>
+                      <div class="bg-gray-100 px-2 py-0.5 rounded flex items-center">
+                        <span class="material-symbols-outlined icon-8 bg-red-700 rounded-full mr-2">
+                          fiber_manual_record
+                        </span>
+                        <span class=" ">
+                          Personal Injury
+                        </span>
+                      </div>
+
                     </td>
 
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       104
                     </td>
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       43.33%
                     </td>
 
@@ -643,10 +646,10 @@
                       </span>
                     </td>
 
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       62
                     </td>
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       25.83%
                     </td>
                   </tr>
@@ -658,10 +661,10 @@
                       </span>
                     </td>
 
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       54
                     </td>
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       22.5%
                     </td>
                   </tr>
@@ -683,7 +686,6 @@
                 </tbody>
               </table>
             </div>
-
           </div>
           <div class="rounded-lg border- border-gray-200- bg-white p-6 text-center shadow-">
             <!-- <div class="flex justify-end">
@@ -769,9 +771,9 @@
             data-tabs-inactive-classes=" text-Mdblue-600 hover:text-gray-600  border-gray-100 hover:border-gray-300  "
             role="tablist">
             <li class="me-2" role="presentation">
-              <button class="inline-block p-4 border-b-2 rounded-t-lg text-Mdblue-600 hover:!text-Mdblue-700" id="profile-styled-tab"
-                data-tabs-target="#styled-profile1" type="button" role="tab" aria-controls="profile"
-                aria-selected="false">Law Firms</button>
+              <button class="inline-block p-4 border-b-2 rounded-t-lg text-Mdblue-600 hover:!text-Mdblue-700"
+                id="profile-styled-tab" data-tabs-target="#styled-profile1" type="button" role="tab"
+                aria-controls="profile" aria-selected="false">Law Firms</button>
             </li>
             <li class="me-2" role="presentation">
               <button class="inline-block p-4 border-b-2 rounded-t-lg text-Mdblue-600 hover:!text-Mdblue-700 "
@@ -822,7 +824,7 @@
                           Law-Firm Name
                         </th>
                         <th scope="col" class="px-6 py-3 ">
-                          <div class="flex   justify-end">
+                          <div class="flex justify-end">
                             <span class="text-Mdblue-700">Wins</span>
                             <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
                                   class="material-symbols-outlined font-semibold">expand_less</span></button><button
@@ -843,43 +845,44 @@
                     </thead>
                     <tbody class="text-base font-semibold">
                       <tr class="bg-white border-b- ">
-                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
                           <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
                             Amicus Law Chambers
                           </span> -->
-<div
-  class="parent-card block p-4 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
-  <div class="flex items-center mt-[-0.8rem]-">
-    <div class="flex-shrink-0 mr-2">
-      <img src="../../assets/jpg/biffcon.png"
-        alt="Neil image" class="w-12 h-12 rounded-full">
-    </div>
-    <div class="flex-1">
-      <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
-      <div class="mb-1 mt-1 flex ">
-  <span class="material-symbols-outlined secondary-fill-700 icon-16">
-    star
-    </span>
-    <span class="material-symbols-outlined secondary-fill-700 icon-16">
-    star </span>
-    <span class="material-symbols-outlined secondary-fill-700 icon-16">
-    star </span>
-    <span class="material-symbols-outlined icon-16 text-secondary-700">
-    star_half </span>
-    <span class="material-symbols-outlined icon-16 text-secondary-700">
-    star
-  </span>
-</div>
-      <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
-    </div>
-    <div>
-      <button type="button"
-        class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
-           class="material-symbols-outlined"> add </span>
-          </button>
-    </div>
-  </div>
-</div>
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
                         </td>
 
                         <td class="px-6 py-4 text-right">
@@ -1048,7 +1051,6 @@
           </div>
         </div>
         <div>
-
           <span class="text-Mdblue-700 text-base font-semibold">Part of your Law-firm panel</span>
         </div>
       </div>
@@ -1305,7 +1307,8 @@
   </div>
 </div>
 
-<div class="d-none chart container">
+<!--echart responsive resize start-->
+<div class="d-none- chart container">
   <div class="grid grid-cols-1 md:grid-cols-4">
     <div>
       <div class="mx-auto">
@@ -1333,6 +1336,7 @@
     </div>
   </div>
 </div>
+<!--echart responsive resize end-->
 
 <div class="d-none">
   <div>
@@ -1896,7 +1900,9 @@
             </div>
 
             <p class="absolute bottom-0 right-2">
-              <span class="material-symbols-outlined text-sm  font-semibold text-white hover:!text-Mdblue-600 cursor-pointer"> code </span>
+              <span
+                class="material-symbols-outlined text-sm  font-semibold text-white hover:!text-Mdblue-600 cursor-pointer">
+                code </span>
               <span class="material-symbols-outlined icon-20 text-Mdblue-600">
                 info
               </span>
@@ -1914,7 +1920,7 @@
                 <span class="text-2xl">$</span>
                 <span>42 days</span>
                 <span class="text-2xl">%</span>
-               </p>
+              </p>
               <p class="mb-2 text-sm font-semibold text-Mdblue-700"> Average Case Duration </p>
               <p class="mb-3-  items-center justify-center text-sm font-semibold text-secondary-700"> 5 days less than
                 the average </p>
@@ -1947,12 +1953,13 @@
           <div class="bg-white block- border-2 border-gray-200  p-2  rounded-xl relative">
             <div class="flex justify-center">
               <div class="text-sm text-Mdblue-600 font-semibold flex items-center flex-col">
-                <div class="text-secondary-700 text-lg size-28 flex justify-center text-center">Add half gauge here</div>
+                <div class="text-secondary-700 text-lg size-28 flex justify-center text-center">Add half gauge here
+                </div>
                 <span class="mt-1 text-secondary-700">Low</span>
               </div>
             </div>
             <div class="text-center pl-2 pr-2">
-                <p class="text-Mdblue-700 mb-2 text-lg font-semibold">Litigation Risk Score</p>
+              <p class="text-Mdblue-700 mb-2 text-lg font-semibold">Litigation Risk Score</p>
             </div>
             <p class="absolute  bottom-0 right-2">
               <span class="material-symbols-outlined icon-20 text-Mdblue-600">
