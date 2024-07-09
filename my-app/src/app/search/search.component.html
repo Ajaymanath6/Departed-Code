@@ -3249,8 +3249,9 @@
                 <div class="flex flex-col ">
                   <div class="bg-white block- border-2 border-gray-200 p-2 pb-4- rounded-xl relative">
 
-                   <p class="text-Mdblue-700">$102,000</p>
-                   <p class="items-center justify-center text-sm font-semibold text-Mdblue-600">Average Damages Awarded</p>
+                    <p class="text-Mdblue-700">$102,000</p>
+                    <p class="items-center justify-center text-sm font-semibold text-Mdblue-600">Average Damages Awarded
+                    </p>
                   </div>
                   <div class="bg-white block- border-2 border-gray-200 p-2 pb-4- rounded-xl relative">
                     240
@@ -3366,7 +3367,8 @@
                     <!-- <span class="absolute  flex items-center end-[0px] bottom-[7px] material-symbols-outlined">
                       expand_more
                     </span> -->
-                      <span class="material-symbols-outlined icon-16  absolute flex items-center end-[0px] bottom-[10px]"> keyboard_arrow_down </span>
+                    <span class="material-symbols-outlined icon-16  absolute flex items-center end-[0px] bottom-[10px]">
+                      keyboard_arrow_down </span>
                   </div>
                   <!-- <span class="text-sm font-semibold text-gray-400 flex items-center ">
                   <span class="material-symbols-outlined">calendar_month</span>
@@ -3498,8 +3500,9 @@
                     <!-- <a href="#"
                       class="flex items-center text-sm font-semibold justify-center px-1 h-8 ms-0 leading-tight text-Mdblue-600
                        bg-white  border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-Mdblue-700   ">Previous</a> -->
-                    <span class="material-symbols-outlined icon-12 font-extrabold	 text-Mdblue-600">arrow_back_ios</span>
-                    </li>
+                    <span
+                      class="material-symbols-outlined icon-12 font-extrabold	 text-Mdblue-600">arrow_back_ios</span>
+                  </li>
                   <li>
                     <a href="#"
                       class="flex items-center text-base font-semibold stify-center px-1 h-8 leading-tight text-primary-700 bg-white  border-gray-300    ">
@@ -3537,22 +3540,22 @@
                     <!-- <a href="#"
                       class="flex items-center text-sm font-semibold justify-center px-2 h-8 leading-tight text-Mdblue-600 bg-white
                        border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-Mdblue-700   ">Next</a> -->
-                         <span class="material-symbols-outlined icon-12 font-extrabold	 text-Mdblue-600">arrow_forward_ios</span>
+                    <span
+                      class="material-symbols-outlined icon-12 font-extrabold	 text-Mdblue-600">arrow_forward_ios</span>
                   </li>
                 </ul>
               </nav>
 
             </div>
           </div>
-          <div class="hidden p-4 rounded-lg  " id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
+          <div class="hidden p-4 rounded-lg  documents" id="settings2" role="tabpanel" aria-labelledby="settings-tab2">
             <div class="relative overflow-x-auto-  sm:rounded-lg-">
               <div class="flex justify-between pb-4 bg-white ">
                 <!-- <label for="table-search" class="sr-only">Search</label> -->
                 <div class="relative mt-1 w-[40%]">
                   <input type="text" id="table-search"
-                    class="block pt-2 pe-10 text-sm text-Mdblue-700 border border-gray-300 rounded-lg w-80- w-full bg-gray-50 focus:ring-primary-500 focus:border-primary-500 "
+                    class="block py-2.5 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600"
                     placeholder="Search documents...">
-
                   <div class="absolute inset-y-0 rtl:inset-r-0 end-2 flex items-center ps-3 pointer-events-none">
                     <svg class="w-4 h-4 text-Mdblue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                       fill="none" viewBox="0 0 20 20">
@@ -3564,8 +3567,18 @@
                 <div class="flex items-center">
                   <span class="text-sm font-semibold text-Mdblue-600 mr-2">Showing</span>
                   <span class="text-sm font-semibold text-Mdblue-600 flex items-center ">
-                    <span class="text-sm font-semibold">All</span>
-                    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                    <!-- <span class="text-sm font-semibold">All</span>
+                    <span class="material-symbols-outlined">keyboard_arrow_down</span> -->
+                    <button type="button"
+                      class="inline-flex items-center p-2 text-sm font-medium text-center text-Mdblue-700 border border-transparent focus:border-Mdblue-600 focus:bg-gray-200 rounded-lg hover:bg-gray-200"
+                      id="dropdown-attorney-state-filter-attorneys-trigger"><span
+                        class="text-sm font-semibold">All</span><svg aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+                        class="w-2.5 h-2.5 ms-3 text-Mdblue-600">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 4 4 4-4"></path>
+                      </svg>
+                    </button>
                     <span>docs</span>
                   </span>
                 </div>
@@ -3593,10 +3606,8 @@
                           </button>
                         </div>
                       </div>
-
                     </th>
                     <th scope="col" class="px-4 py-3">
-
                       <div class="flex items-center">
                         <span>Date</span>
                         <div class=" ml-2">
@@ -3627,7 +3638,6 @@
                       </div>
                     </th>
                     <th scope="col" class="px-4 py-3">
-
                       <div class="flex items-center">
                         <span>Preview</span>
                         <div class=" ml-2">
@@ -3681,11 +3691,9 @@
                     </td>
                     <td class="px-4 py-4">
                       <button type="button"
-                        class="text-primary-700 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5 py-1.5 ">
-                        <span class="material-symbols-outlined flex items-center ">visibility</span>
+                        class="text-primary-700 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-2 ">
+                        <span class="material-symbols-outlined flex items-center icon-16">visibility</span>
                       </button>
-
-
                     </td>
                     <td class="px-4 py-4 font-medium text-Mdblue-700 ">
                       <div class="flex justify-end">
@@ -3694,8 +3702,6 @@
                           $2.00
                         </button>
                       </div>
-
-
                     </td>
                   </tr>
                   <tr class="bg-white border border-primary-500 rounded-md  hover:bg-gray-50">
@@ -3730,28 +3736,26 @@
                     </td>
                     <td class="px-4 py-4">
                       <button type="button"
-                        class="text-primary-700  bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5 py-1.5      ">
-                        <span class="material-symbols-outlined flex items-center">visibility</span>
+                        class="text-primary-700  bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5-  p-2    ">
+                        <span class="material-symbols-outlined flex items-center icon-16">visibility</span>
                       </button>
-
-
                     </td>
                     <td class="px-4 py-4 font-medium text-Mdblue-700  ">
                       <div class="flex flex-col justify-end">
                         <div class="flex items-center justify-end">
                           <button type="button"
-                            class="text-primary-700 bg-white border mr-2 flex items-center border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5 py-1.5      ">
-                            <span class="material-symbols-outlined">hourglass_top</span>
+                            class="text-primary-700 bg-white border mr-2 flex items-center border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5-  p-2    ">
+                            <span class="material-symbols-outlined icon-16">hourglass_top</span>
                           </button>
                           <button type="button" disabled
-                            class="cursor-not-allowed  px-4 py-2 text-sm  font-medium text-center text-white bg-secondary-500 rounded-md  focus:ring-4 focus:outline-none focus:ring-primary-300 ">
+                            class="cursor-not-allowed  px-6- py-2- p-2 text-sm  font-medium text-center text-white bg-secondary-500 rounded-md  focus:ring-4 focus:outline-none focus:ring-primary-300 ">
                             <div class="flex items-center">
-                              <span class="material-symbols-outlined">done</span>$1.50
+                              <span class="material-symbols-outlined icon-20">done</span>$1.50
                             </div>
                           </button>
 
                         </div>
-                        <p class="text-right text-Mdblue-700">Document Requested</p>
+                        <p class="text-right text-Mdblue-700 text-sm">Document Requested</p>
                       </div>
                     </td>
                   </tr>
@@ -3787,11 +3791,14 @@
                       3
                     </td>
                     <td class="px-4 py-4">
-                      <button type="button"
+                      <!-- <button type="button"
                         class="text-primary-700 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5 py-1.5      ">
-                        <span class="material-symbols-outlined flex items-center">visibility</span>
-                      </button>
-
+                        <span class="material-symbols-outlined flex items-center icon-16">visibility</span>
+                      </button> -->
+                      <div class="text-base font-normal text-right">
+                        <span class="mr-2">$4.50</span>
+                        <span class="text-Mdblue-700">$0.00</span>
+                      </div>
 
                     </td>
                     <td class="px-4 py-4 font-medium text-Mdblue-700 ">
@@ -3805,7 +3812,7 @@
                           </button>
                           <button type="button"
                             class="text-primary-700 flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5 py-1.5       ">
-                            <span class="material-symbols-outlined">cloud_download</span>
+                            <span class="material-symbols-outlined icon-16">cloud_download</span>
                           </button>
                         </div>
                         <p class="text-right text-Mdblue-700">Last download 12/07/23</p>
@@ -4049,10 +4056,10 @@
             </div>
 
             <!--judges tab start-->
-            <div class="grid grid-cols-3 gap-4 judges-tab d-none">
+            <div class="grid grid-cols-3 gap-4 judges-tab d-none-">
               <div class="flex items-center gap-4 mb-2">
                 <div
-                  class="relative inline-flex items-center justify-center w-20 h-20 rounded- overflow-hidden bg-primary-400 rounded-full  mr-1">
+                  class="relative inline-flex items-center justify-center w-20- h-20- size-20 rounded- overflow-hidden bg-primary-400 rounded-full  mr-1">
                   <span class="text-thirtytwo font-semibold text-white  bg-primary-main03">HM</span>
                 </div>
                 <div class=" ">
@@ -4061,7 +4068,7 @@
               </div>
               <div class="flex items-center gap-4 mb-2">
                 <div
-                  class="relative inline-flex items-center justify-center w-20 h-20 rounded- overflow-hidden bg-primary-700 rounded-full  mr-1">
+                  class="relative inline-flex items-center justify-center w-20- h-20- size-20 rounded- overflow-hidden bg-primary-700 rounded-full  mr-1">
                   <span class="text-thirtytwo font-semibold text-white  bg-primary-main03">EH</span>
                 </div>
                 <div class=" ">
@@ -4070,7 +4077,7 @@
               </div>
               <div class="flex items-center gap-4 mb-2">
                 <div
-                  class="relative inline-flex items-center justify-center w-20 h-20 rounded- overflow-hidden bg-primary-400 rounded-full  mr-1">
+                  class="relative inline-flex items-center justify-center w-20- h-20- size-20 rounded- overflow-hidden bg-primary-400 rounded-full  mr-1">
                   <span class="text-thirtytwo font-semibold text-white  bg-primary-main03">AG</span>
                 </div>
                 <div class="">
@@ -4079,7 +4086,7 @@
               </div>
               <div class="flex items-center gap-4 mb-2">
                 <div
-                  class="relative inline-flex items-center justify-center w-20 h-20 rounded- overflow-hidden bg-primary-400 rounded-full  mr-1">
+                  class="relative inline-flex items-center justify-center w-20- h-20- size-20 rounded- overflow-hidden bg-primary-400 rounded-full  mr-1">
                   <span class="text-thirtytwo font-semibold text-white  bg-primary-main03">JM</span>
                 </div>
                 <div class=" ">
@@ -4528,7 +4535,7 @@
                   <div class="flex flex-col justify-end">
                     <div class="flex items-center justify-end">
                       <button type="button"
-                        class="text-Mdblue-700 flex items-center  mr-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5 py-1.5      ">
+                        class="text-Mdblue-700 flex items-center  mr-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-2">
                         <span class="material-symbols-outlined">hourglass_top</span>
                       </button>
                       <button type="button" disabled
