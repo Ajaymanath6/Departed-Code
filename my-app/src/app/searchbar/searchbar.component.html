@@ -47,8 +47,29 @@
 <!--main search end-->
 
 <!--semantic start-->
-<div #containerRef (keydown)="move($event)" (click)="setFocusOnInput($event)"
-  class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- pr-[10rem]- container relative mb-1 flex min-h-[16px] w-full items-center justify-between rounded border-[1.5px] border-gray-300 bg-gray-50 p-2 text-sm text-Mdblue-700 focus-within:border-Mdblue-600">
+
+<div class="search-tab inline-flex flex-wrap items-center text-Mdblue-600 space-x-2 mb-3">
+   <div class="uppercase text-sm font-semibold mr-4">Search for</div>
+   <button type="button" class="px-4 py-2 text-sm font-medium bg-gray-200 text-Mdblue-700 rounded-full border">
+    Cases
+  </button>
+  <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+    Attorneys
+  </button>
+  <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+    Law firms
+  </button>
+    <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+    Parties
+  </button>
+    <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+    Judges
+  </button>
+</div>
+<div #containerRef (keydown)="move($event)" (click)="setFocusOnInput($event)" class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- pr-[10rem]- container relative mb-1 flex
+  min-h-[16px] w-full items-center justify-between rounded border-[1.5px] border-gray-300 bg-gray-50 p-2 text-sm text-Mdblue-700
+   focus-within:border-Mdblue-600">
+
   <div class="flex-1- flex-shrink-0- flex-nowrap- overflow-hidden- flex flex-wrap gap-2">
     <app-chip class="inline-flex- flex" *ngFor="let chip of chips; let idx = index" #chipRefs [editable]="true"
       [closeable]="true" [chip]="chip" (chipOutSelect)="selectChipAtIndex(idx)"
