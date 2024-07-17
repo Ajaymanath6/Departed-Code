@@ -1,5 +1,192 @@
-<div class="flex flex-col h-100- h-full main-div ">
+<!--version2 search chip start-->
+<div class="inline-flex- flex d-none">
+  <span class="text-Mdblue-700- mb-1- mr-2- inline-flex items-center rounded-lg border-Mdblue-600 bg-gray-200 p-2- align-top-
+    text-base font-semibold text-Mdblue-600 focus:outline-none border focus:border-gray-600" contenteditable="false">
+    <div class="p-2 flex items-center border-r border-gray-600">
+      <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> source </span>
+      <span class="font-base font-semibold focus:outline-none text-Mdblue-700" contenteditable="true">Case
+        &nbsp;
+      </span>
+    </div>
+    <div class="p-2 flex items-center gap-2">
+      <div>
+        <span class="font-base font-semibold focus:outline-none" contenteditable="true">Name
+          &nbsp;
+        </span>
+        <span class="font-base font-semibold text-Mdblue-700 focus:outline-none" contenteditable="true">
+          Google v apple
+        </span>
+      </div>
+      <div class="flex">
+        <button type="button" aria-label="Remove"
+          class="ms-2 inline-flex items-center rounded-full bg-Mdblue-600 p-1 text-sm text-white hover:bg-primary-300 hover:text-primary-900"><svg
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" class="h-2 w-2">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </span>
+</div>
+<!--version2 search chip end-->
 
+<!--version2 search drop down start-->
+<div class="cust-drop rounded-lg attorney-state-filter bg-white z-10 block w-80">
+  <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+    <div class="font-medium text-center mb-3">Add Case Filters</div>
+  </div>
+  <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+  <ul class="py-2 px-2 text-sm text-Mdblue-600 h-40 overflow-y-scroll space-y-4">
+    <li>
+      <div class="text-sm font-semibold text-Mdblue-700">Case Name</div>
+      <div class="flex gap-2">
+        <div class="grow">
+          <div>
+            <input type="text" placeholder="Google v apple" class="block w-full py-2.5 pe-10 text-sm text-Mdblue-700 border
+placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focus:border-Mdblue-600">
+          </div>
+        </div>
+        <div class="flex items-center ">
+          <input id="default-checkbox" type="checkbox" value=""
+            class="hidden- cursor-pointer w-4 h-4 text-secondary-700 border border-gray-600 rounded focus:ring-primary-500- focus:ring-offset-0 focus:ring-0">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="text-sm font-semibold text-Mdblue-700">Case Number</div>
+      <div class="flex gap-2">
+        <div class="grow">
+          <div>
+            <input type="text" placeholder="Case Number..." class="block w-full py-2.5 pe-10 text-sm text-Mdblue-700 border
+placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focus:border-Mdblue-600">
+          </div>
+        </div>
+        <div class="flex items-center ">
+          <input id="default-checkbox" type="checkbox" value=""
+            class="hidden- cursor-pointer w-4 h-4 text-secondary-700 border border-gray-600 rounded focus:ring-primary-500- focus:ring-offset-0 focus:ring-0">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="text-sm font-semibold text-Mdblue-700">Filling Date Between</div>
+      <div class="flex gap-2">
+        <div class="grow">
+          <div id="date-range-picker" date-rangepicker class=" items-center">
+            <div class="relative">
+                <input datepicker-=""
+                  type="text" placeholder="Pick a date range"
+                  class="block w-full text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focus:border-Mdblue-600  pe-10 p-2.5">
+                <div class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 20 20" class="w-4 h-4 text-Mdblue-600">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z">
+                    </path>
+                  </svg></div>
+            </div>
+            <!-- <span class="mx-4 text-gray-500">to</span> -->
+          </div>
+        </div>
+        <div class="flex items-center">
+          <input id="default-checkbox" type="checkbox" value=""
+            class="hidden- cursor-pointer w-4 h-4 text-secondary-700 border border-gray-600 rounded focus:ring-primary-500- focus:ring-offset-0 focus:ring-0">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="text-sm font-semibold text-Mdblue-700">Filling Date Between</div>
+      <div class="flex gap-2">
+        <div class="grow">
+          <div id="date-range-picker" date-rangepicker class="items-center">
+            <div class="relative">
+                <input datepicker-=""
+                  type="text" placeholder="Pick a date range"
+                  class="block w-full text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focus:border-Mdblue-600  pe-10 p-2.5">
+                <div class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 20 20" class="w-4 h-4 text-Mdblue-600">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z">
+                    </path>
+                  </svg></div>
+            </div>
+            <!-- <span class="mx-4 text-gray-500">to</span> -->
+          </div>
+        </div>
+        <div class="flex items-center ">
+          <input id="default-checkbox" type="checkbox" value=""
+            class="hidden- cursor-pointer w-4 h-4 text-secondary-700 border border-gray-600 rounded focus:ring-primary-500- focus:ring-offset-0 focus:ring-0">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="text-sm font-semibold text-Mdblue-700">Status</div>
+      <div class="flex gap-2">
+        <div class="grow">
+          <div>
+
+            <form class=" relative">
+              <select id="countries"
+                class="block w-full py-2.5 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focus:border-Mdblue-600">
+                <option selected>Choose a country</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+              </select>
+              <div class="absolute inset-y-0 end-2 flex items-center ps-3">
+                <span class="material-symbols-outlined icon-16"> keyboard_arrow_down </span>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <div class="flex items-center">
+          <input id="default-checkbox" type="checkbox" value=""
+            class="hidden- cursor-pointer w-4 h-4 text-secondary-700 border border-gray-600 rounded focus:ring-primary-500- focus:ring-offset-0 focus:ring-0">
+        </div>
+      </div>
+    </li>
+    <li>
+  <div class="flex items-center mb-4 mt-4 justify-between hover:cursor-pointer hover:bg-gray-100">
+        <label for="checked-checkbox3"
+      class="checkbox-cust  text-sm font-normal text-Mdblue-700"> Court Name 1
+      </label>
+    <div class="flex items-center"><input id="checked-checkbox3"
+        type="checkbox" value=""
+        class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0">
+    </div>
+
+  </div>
+    </li>
+    <li>
+  <div class="flex items-center mb-4 mt-4 justify-between hover:cursor-pointer hover:bg-gray-100">
+        <label for="checked-checkbox3"
+      class="checkbox-cust  text-sm font-normal text-Mdblue-700"> Court Name 2
+      </label>
+    <div class="flex items-center"><input id="checked-checkbox3"
+        type="checkbox" value=""
+        class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0">
+    </div>
+
+  </div>
+    </li>
+  </ul>
+  <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+  <div class="grid grid-cols-2 gap-2 px-4 py-3 text-sm text-Mdblue-700 ">
+    <button type="button" class="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4
+     focus:ring-gray-200 rounded-md px-2 py-2 text-sm font-semibold text-primary-700"> Clear All </button>
+    <button type="submit"
+      class=" btn-focus flex items-center justify-center rounded bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none border border-transparent">
+      <span>Done</span>
+    </button>
+  </div>
+</div>
+<!--version2 search drop down end-->
+
+
+<div class="flex flex-col h-100- h-full main-div ">
   <!--search with chip start-->
   <!-- <app-searchbar></app-searchbar> -->
   <!--search with chip end-->
@@ -3354,85 +3541,85 @@
             </div>
             <!--Similar Cases Statistics end-->
 
-<div>
-            <div class="flex items-center mt-4 mb-4">
-              <div class="mr-2 text-center text-Mdblue-600 uppercase text-sm font-semibold">Recent Dockets</div>
-              <div class=" grow h-[1px] bg-gray-200 "></div>
-              <div class="ml-2 text-center text-Mdblue-600">
+            <div>
+              <div class="flex items-center mt-4 mb-4">
+                <div class="mr-2 text-center text-Mdblue-600 uppercase text-sm font-semibold">Recent Dockets</div>
+                <div class=" grow h-[1px] bg-gray-200 "></div>
+                <div class="ml-2 text-center text-Mdblue-600">
+                  <button type="button"
+                    class=" bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md  px-2 py-1 me-2 mb-2  text-base font-semibold text-primary-700">
+                    View All
+                  </button>
+                </div>
+              </div>
+
+              <div class="mb-4 mt-4 flex items-center">
+                <div class="w-full- h-[1px] grow bg-gray-200"></div>
+                <div class="ml-2 flex mr-2 text-center items-center font-semibold text-Mdblue-600"><span
+                    class="material-symbols-outlined mr-1 Mdblue-fill-600 icon-28"> view_timeline </span>
+                  <h3 class="text-2xl font-semibold text-Mdblue-700">Docket Entries</h3>
+                </div>
+                <div class="w-full- h-[1px] grow bg-gray-200"></div>
                 <button type="button"
-                  class=" bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md  px-2 py-1 me-2 mb-2  text-base font-semibold text-primary-700">
-                  View All
-                </button>
+                  class="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md px-2 py-1 text-base font-semibold text-primary-700">
+                  View All </button>
               </div>
-            </div>
 
-            <div class="mb-4 mt-4 flex items-center">
-              <div class="w-full- h-[1px] grow bg-gray-200"></div>
-              <div class="ml-2 flex mr-2 text-center items-center font-semibold text-Mdblue-600"><span
-                  class="material-symbols-outlined mr-1 Mdblue-fill-600 icon-28"> view_timeline </span>
-                <h3 class="text-2xl font-semibold text-Mdblue-700">Docket Entries</h3>
-              </div>
-              <div class="w-full- h-[1px] grow bg-gray-200"></div>
-              <button type="button"
-                class="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md px-2 py-1 text-base font-semibold text-primary-700">
-                View All </button>
-            </div>
+              <div class="block mb-2 p-4 bg-white border rounded-md border-gray-300">
+                <div class="flex justify-between">
+                  <div class="flex">
+                    <span
+                      class="text-sm font-semibold bg-gray-200 text-Mdblue-600 rounded-full px-2.5 py-0.5">10/30/2023</span>
+                    <div>
+                      <p class="font-normal text-Mdblue-600 ml-4">
+                        <span class="text-sm font-semibold ">Non-Jury Trial:</span>
+                        <span class="text-sm font-normal text-Mdblue-700"> (2:00 PM) (Judicial Officer Curnutt, Mary
+                          Tom)</span>
+                      </p>
+                    </div>
 
-            <div class="block mb-2 p-4 bg-white border rounded-md border-gray-300">
-              <div class="flex justify-between">
-                <div class="flex">
-                  <span
-                    class="text-sm font-semibold bg-gray-200 text-Mdblue-600 rounded-full px-2.5 py-0.5">10/30/2023</span>
-                  <div>
-                    <p class="font-normal text-Mdblue-600 ml-4">
-                      <span class="text-sm font-semibold ">Non-Jury Trial:</span>
-                      <span class="text-sm font-normal text-Mdblue-700"> (2:00 PM) (Judicial Officer Curnutt, Mary
-                        Tom)</span>
-                    </p>
                   </div>
 
-                </div>
-
-                <div
-                  class="flex items-center bg-gray-200 text-Mdblue-600 text-sm font-semibold me-2 py-1 px-2 rounded-full  ">
-                  <span>3</span>
-                  <span class="material-symbols-outlined icon-18 Mdblue-fill-600 ml-1">article</span>
+                  <div
+                    class="flex items-center bg-gray-200 text-Mdblue-600 text-sm font-semibold me-2 py-1 px-2 rounded-full  ">
+                    <span>3</span>
+                    <span class="material-symbols-outlined icon-18 Mdblue-fill-600 ml-1">article</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="block  p-4 bg-white border rounded-md border-gray-300   ">
-              <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                  <span
-                    class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5">10/30/2023</span>
-                  <div>
-                    <p class="font-normal text-Mdblue-600 ml-4">
-                      <span class="text-sm font-semibold ">Financial Information :</span>
-                      <span class="text-sm font-normal text-Mdblue-700"> Plaintiff IBARRA, SALVADOR;</span>
-                    </p>
-                    <p class="font-normal text-Mdblue-600 ml-4">
-                      <span class="text-sm font-semibold ">Total Financial Assessment:</span>
-                      <span class="text-sm font-normal text-Mdblue-700"> Total Payments and Credits...</span>
-                    </p>
+              <div class="block  p-4 bg-white border rounded-md border-gray-300   ">
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center">
+                    <span
+                      class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5">10/30/2023</span>
+                    <div>
+                      <p class="font-normal text-Mdblue-600 ml-4">
+                        <span class="text-sm font-semibold ">Financial Information :</span>
+                        <span class="text-sm font-normal text-Mdblue-700"> Plaintiff IBARRA, SALVADOR;</span>
+                      </p>
+                      <p class="font-normal text-Mdblue-600 ml-4">
+                        <span class="text-sm font-semibold ">Total Financial Assessment:</span>
+                        <span class="text-sm font-normal text-Mdblue-700"> Total Payments and Credits...</span>
+                      </p>
+                    </div>
+
+
                   </div>
 
-
-                </div>
-
-                <div
-                  class="flex items-center bg-gray-200 text-Mdblue-600 text-sm font-semibold me-2 py-1 px-2 rounded-full ">
-                  <span>3</span>
-                  <span class="material-symbols-outlined icon-18 Mdblue-fill-600 ml-1">article</span>
+                  <div
+                    class="flex items-center bg-gray-200 text-Mdblue-600 text-sm font-semibold me-2 py-1 px-2 rounded-full ">
+                    <span>3</span>
+                    <span class="material-symbols-outlined icon-18 Mdblue-fill-600 ml-1">article</span>
+                  </div>
                 </div>
               </div>
+              <div class="text-center mt-4">
+                <button type="button"
+                  class=" bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  rounded-md px-2 py-1 me-2 mb-2       text-base font-semibold text-primary-700">View
+                  All</button>
+              </div>
             </div>
-            <div class="text-center mt-4">
-              <button type="button"
-                class=" bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200  rounded-md px-2 py-1 me-2 mb-2       text-base font-semibold text-primary-700">View
-                All</button>
-            </div>
-</div>
 
 
 
@@ -3740,7 +3927,8 @@
                       Systems as to Moes 1-100
                     </td>
                     <td class="px-4 py-4">
-                      Accessories
+                      <!-- Accessories -->
+                     <span class="text-Mdblue-700 text-base font-normal"> Jan 23 2023</span>
                     </td>
                   </tr>
                 </tbody>
