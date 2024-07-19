@@ -308,6 +308,12 @@ input[type="checkbox"] {
     "opsz" 24;
 }
 
+//accordian select start
+.accordion-heading[aria-expanded="true"] {
+  background-color: white;
+  border-bottom: none;
+}
+//accordian select end
 
 
 // .modal-backdrop {
