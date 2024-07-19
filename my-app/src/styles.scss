@@ -274,6 +274,15 @@ input[type="checkbox"] {
   font-size: 1rem;
 }
 
+.white-fill{
+  color: white;
+    font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
 .Mdblue-fill-600 {
   @apply text-Mdblue-600;
   font-variation-settings:
