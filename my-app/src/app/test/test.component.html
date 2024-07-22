@@ -2069,91 +2069,21 @@
 
 
 <!--html formater start-->
-<html lang="en">
-<head>
-</head>
-<body class="overflow-hidden d-none">
-  <app-root class="block h-full">
-      <div  class="flex flex-col h-100- border semantic-3-col  m-auto">
-        <div  class="header border h-[5rem]"> header </div>
-        <div  class="flex  overflow-y-auto mid-content relative grow">
-          <div  class="left  flex sticky top-0  w-1/3">
-            <div
-              class="first-col w-[22rem] max-w-[50%]- overflow-y-auto shadow-lg p-2 flex flex-col">
-              <div  class="grow overflow-auto">
-                <ul  class="space-y-6">
-                  <div  class="mb-4 mt-4 flex items-center">
-                    <div  class="mr-2 text-center text-sm font-semibold text-Mdblue-600 uppercase">
-                      Contact</div>
-                    <div  class="w-full- h-[1px] grow bg-gray-200"></div>
-                  </div>
-                  <li  class="space-y-1">
-                    <p  class="text-sm font-semibold text-Mdblue-600 flex items-center"><span
-                         class="material-icons mr-2 icon-16"> call </span><span
-                        >Phone</span></p>
-                    <p  class="text-base font-semibold text-primary-700">+1 (355) 456-8756</p>
-                  </li>
-                  <li  class="space-y-1">
-                    <p  class="text-sm font-semibold text-Mdblue-600 flex items-center"><span
-                         class="material-icons mr-2"> email </span><span
-                        >Email</span></p>
-                    <p  class="text-base font-semibold text-primary-700">john.smith@domain.com</p>
-                  </li>
-                  <li  class="space-y-1">
-                    <p  class="text-sm font-semibold text-Mdblue-600 flex items-center"><span
-                         class="material-icons mr-2"> place </span><span
-                        >Address</span></p>
-                    <p  class="text-base font-semibold text-primary-700">2972 Westheimer Rd. Santa
-                      Ana,Los Angeles 85486 </p>
-                  </li>
-                  <li  class="space-y-1">
-                    <p  class="text-sm font-semibold text-Mdblue-600 flex items-center"><span
-                         class="material-icons mr-2"> language </span><span
-                        >Website</span></p>
-                    <p  class="text-base font-semibold text-primary-700">linkedin.com/in/johnsmith
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div  class="w-2/3 grow">
-            <div  class="container right third-col border flex-1 p-4">
-              <div  class="carosel-section">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam tempora omnis voluptatem perspiciatis illo iste eveniet porro ad nemo unde fugiat ab in labore, ipsam voluptatum ipsum accusamus fugit maxime?
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-</app-root>
-</body>
+<div> 3 col str with logic
+<div class="flex sticky top-0 grow-, max-width: 40%;width: 100%;">
+<div class="max-width:100%-,width:100%,">
+first col
+</div>
+<div class="max-width:100%-,width:100%,">
+second col
+</div>
+</div>
+<div class="container- max-width:60%,width:100%">
+  skd;slkd
+</div>
+</div>
 
-<!--gemini suggested start-->
-<body class="overflow-hidden h-screen">
-  <app-root class="block">
-      <div class="flex flex-col border semantic-3-col  m-auto">
-        <div class="header border h-[5rem]"> header </div>
-        <div class="flex overflow-y-auto mid-content relative grow">
-          <div class="left flex sticky top-0  w-1/3">
-            <div class="first-col w-[22rem] max-w-[50%]- overflow-y-auto shadow-lg p-2 flex flex-col">
-              <div class="grow overflow-auto">
-                <ul class="space-y-6">
-                  </ul>
-              </div>
-            </div>
-          </div>
-          <div class="w-2/3 flex-grow">  <div class="container right third-col border flex-1 p-4">
-              <div class="carosel-section">
-                Lorem ipsum...
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-</app-root>
-</body>
-<!--gemini suggested end-->
+so, when second col is hidden make max-width 40 to 20% and add that 20% to third container which becomes max-width:60% to max-width:80%
 
-</html>
 <!--html formater end-->
+
