@@ -2078,6 +2078,55 @@
       </div>
 
       <div class="second-col border- w-[22rem] flex-1- p-2 overflow-y-auto d-none-">
+        <div class="attorney-filter-case-type">
+
+          <button type="button"
+            class=" py-2.5 px-2 flex items-center text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600 "
+           >
+           <div class="grow flex items-center">
+             <span class="material-symbols-outlined icon-24 mr-2 text-Mdblue-600"> list_alt </span>
+           <span class="text-sm font-semibold">Personal Injury</span>
+
+            </div>
+
+
+          <span class="material-symbols-outlined icon-16 text-Mdblue-600"> more_horiz </span>
+          </button>
+          <div class="cust-drop rounded-lg  bg-white z-10 block">
+            <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+              <div class="font-medium text-center mb-3">Showing</div>
+              <div class="relative">
+                <input type="text"
+                  class="block py-2.5 pe-10 text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600  "
+                  placeholder="All case types">
+                  <input  type="radio" value="" name="default-radio" class="absolute end-2.5 bottom-2.5 w-4 h-4  text-secondary-700 bg-gray-100 border-gray-300 focus:ring-offset-0 focus:ring-primary-500 focus:ring-2">
+                </div>
+            </div>
+            <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+            <ul class="py-2 text-sm text-Mdblue-600 h-32 overflow-y-scroll">
+              <li><button
+                  class="bg-white flex w-full items-center justify-between px-4 py-2 text-sm font-normal text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span>
+                    All </span></button></li>
+              <li class="ng-star-inserted"><button
+                  class="bg-white flex w-full items-center justify-between px-4 py-2 text-sm font-normal text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                    class="text-left"> Alabama </span><span
+                    class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5">AL</span></button>
+              </li>
+              <li class="ng-star-inserted"><button
+                  class="bg-white flex w-full items-center justify-between px-4 py-2 text-sm font-normal text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                    class="text-left"> Alaska </span><span
+                    class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5">AK</span></button>
+              </li>
+              <li class="ng-star-inserted"><button
+                  class="bg-white flex w-full items-center justify-between px-4 py-2 text-sm font-normal text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                    class="text-left"> Arizona </span><span
+                    class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5">AZ</span></button>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
         <div class="flex">
           <button type="button"
             class="cust-trans m-h-btn flex items-center rounded-md border border-gray-200 bg-white px-2 py-1 text-sm font-semibold text-primary-700 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100">
@@ -2091,9 +2140,9 @@
           <a href="#" class="block px-4 py-2 hover:bg-gray-100 border rounded-md">
             <div class="flex items-center gap-4">
               <img src="../../assets/jpg/accnt.jpg" alt="" class="h-10 w-10 rounded-full">
-              <div class="text-base font-medium">
-                <div class="text-Mdblue-700">Attorney</div>
-                <div class="text-sm font-normal text-Mdblue-600"> John Smith </div>
+              <div class="text-sm font-semibold">
+                <div class=" text-Mdblue-600 ">Attorney</div>
+                <div class=" text-primary-700"> John Smith </div>
               </div>
             </div>
           </a>
@@ -2101,14 +2150,14 @@
 
         <div class="space-y-4 mb-4">
           <p class="text-sm font-semibold text-Mdblue-600 uppercase">Filters</p>
-          <div class=" p-2 border border-gray-200 rounded-lg shadow bg-gray-100 text-center">
+          <div class=" p-2 rounded-lg bg-gray-100 text-center">
             <span class="material-icons-outlined text-Mdblue-600">
               tune
             </span>
             <p class="mb-3 font-normal text-Mdblue-700 ">No filters applied yet</p>
           </div>
           <button type="submit"
-            class="text-white flex items-center justify-center w-full bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 cust-trans">
+            class="w-full btn-focus flex items-center justify-center rounded bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none border border-transparent">
             <span class="material-icons-outlined">add</span>
             <span>Add filter</span>
           </button>
@@ -2122,13 +2171,13 @@
             <p class="mb-3 font-normal text-Mdblue-700 ">No AI filters applied yet</p>
           </div>
           <button type="submit"
-            class="text-white flex items-center justify-center w-full bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 cust-trans">
+            class="w-full btn-focus flex items-center justify-center rounded bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none border border-transparent">
             <span class="material-icons-outlined">add</span>
             <span>Add AI filter</span>
           </button>
           <button id="dropdownRightEndButton" data-dropdown-toggle="dropdownRightEnd"
             data-dropdown-placement="right-end"
-            class="mb-3 md:mb-0 text-white w-full flex items-center justify-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center "
+            class="w-full btn-focus flex items-center justify-center rounded bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none border border-transparent "
             type="button">
             <span class="material-icons-outlined">add</span>
             <span>Add AI filter</span>
@@ -2136,21 +2185,20 @@
 
           <!-- Dropdown menu -->
           <div id="dropdownRightEnd"
-            class="z-10 hidden w-[15rem] bg-white divide-y divide-gray-100 rounded-lg shadow w-44- ">
-
+            class="z-10 hidden w-[16rem] bg-white divide-y divide-gray-100 rounded-lg shadow cust-drop">
             <p class="text-sm font-semibold text-Mdblue-600 text-center mt-2 mb-2">Add Ai Filters</p>
             <ul class="p-2 text-base text-Mdblue-700 font-semibold space-y-2" aria-labelledby="dropdownRightEndButton">
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
-                    <span class="material-icons mr-2">
+                    <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
                       source
                     </span>
                     <span> Case Name</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2158,15 +2206,15 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
-                    <span class="material-icons mr-2">
+                    <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
                       gavel
                     </span>
                     <span> Judge</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2174,15 +2222,15 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
-                    <span class="material-icons mr-2">
+                    <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
                       gavel
                     </span>
                     <span> Law-Firm</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2190,15 +2238,15 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
-                    <span class="material-icons mr-2">
+                    <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
                       business_center
                     </span>
                     <span> Attorney</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2206,7 +2254,7 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
                     <span class="material-icons mr-2">
                       list_alt
@@ -2214,7 +2262,7 @@
                     <span> Case Type</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2222,7 +2270,7 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
                     <span class="material-icons mr-2">
                       date_range
@@ -2230,7 +2278,7 @@
                     <span> Date Range</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2238,7 +2286,7 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
                     <span class="material-icons mr-2">
                       social_distance
@@ -2246,7 +2294,7 @@
                     <span> Role</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2254,7 +2302,7 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
                     <span class="material-icons-outlined mr-2">
                       list_alt
@@ -2262,7 +2310,7 @@
                     <span> Injury Type</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2270,7 +2318,7 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
                     <span class="material-icons-outlined mr-2">
                       list_alt
@@ -2278,7 +2326,7 @@
                     <span> Ai Filter 2</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2286,7 +2334,7 @@
               </li>
               <li>
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
                     <span class="material-icons-outlined mr-2">
                       list_alt
@@ -2294,7 +2342,7 @@
                     <span> Ai Filter 3</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2302,7 +2350,7 @@
               </li>
               <li class="text-center">
                 <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
                   <div class="flex items-center">
                     <span class="material-icons-outlined mr-2">
                       list_alt
@@ -2310,7 +2358,7 @@
                     <span> Ai Filter 4</span>
                   </div>
                   <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
                       add
                     </span>
                   </div>
@@ -2318,6 +2366,8 @@
               </li>
             </ul>
           </div>
+
+
         </div>
 
 
@@ -2576,7 +2626,9 @@
           </div>
           <div class="w-full- h-[1px] grow bg-gray-200"></div>
         </div>
-        <p class="text-Mdblue-700 text-base text-center">Time period from <span class="font-semibold">2015</span> to <span class="font-semibold">2024</span></p>
+        <p class="text-Mdblue-700 text-base text-center">Time period from <span class="font-semibold">2015</span> to
+          <span class="font-semibold">2024</span>
+        </p>
         <div class="mb-4 mt-4 flex items-center">
           <div class="flex items-center text-sm font-semibold text-Mdblue-600">
             <span>Showing</span>
@@ -2600,8 +2652,7 @@
                 class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-200 rounded-full ml-1 mr-1">
                 <span class="font-medium text-Mdblue-600">6</span>
               </div> <span>of</span>
-              <div
-                class="">
+              <div class="">
                 <!-- <span class="font-medium text-Mdblue-600">12</span> -->
                 <span class="text-sm font-semibold bg-gray-200 rounded-full px-2.5 py-0.5">4147215</span>
               </div>
@@ -2773,7 +2824,7 @@
               </div>
               <!--using flex start-->
               <h4 cclass="text-black-700 font-bolder">flex method</h4>
-                <div class="flex grid- grid-cols-4- space-x-6- mt-2 overflow-hidden- flex-wrap">
+              <div class="flex grid- grid-cols-4- space-x-6- mt-2 overflow-hidden- flex-wrap">
                 <div class="space-y-1 mr-2 mb-2 flex-shrink-0- flex-grow-0-">
                   <div class="flex items-center ">
                     <span class="material-symbols-outlined icon-16 mr-1">
@@ -3005,5 +3056,3 @@
     </div>
   </div>
 </div>
-
-

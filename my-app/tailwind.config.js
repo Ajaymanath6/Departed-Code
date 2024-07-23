@@ -27,7 +27,7 @@ module.exports = {
           //royalblue-
           50: "#C0E7EF",
           100: "#ABBDD1", //on hover outline border color used
-          200: "#005C87",
+          200: "#CCECF2", // full gauge bottom 10%
           300: "#90B7CA",
           400: "#6CA0B8",
           500: "#72C3D4", //eg: hover for Document Requested btn
@@ -39,11 +39,11 @@ module.exports = {
         red: {
           50: "#FFE7E7",
           100: "#EDCFD9",
-          200: "#FBD5D5",
+          200: "#F0D4D9",
           300: "#C81E1E",
           400: "#C9D7E6",
           500: "#667683",
-          600: "#C9D7E6",
+          600: "#B2273F",
           700: "#A71042",
           800: "#C9D7E6",
           900: "#667683",
@@ -51,16 +51,28 @@ module.exports = {
         green: {
           50: "#DEF7EC",
           100: "#EDCFD9",
-          200: "#FBD5D5",
-          300: "#C9D7E6",
+          200: "#D5EBEC", //full gauge bottom 20%
+          300: "#DEE9E7", //full gauge bottom 30%
           400: "#C9D7E6",
-          500: "#667683",
+          500: "#589385", //full gauge bottom 30%
           600: "#C9D7E6",
-          700: "#03543F",
+          700: "#2C99A1", //full gauge bottom 20%
           800: "#C9D7E6",
           900: "#667683",
         },
 
+        orange: {
+          50: "",
+          100: "#F8E6D6", //full gauge middle 40% -50%, bottom 40%
+          200: "",
+          300: "#F4DDD7", //full gauge middle 40% -50%
+          400: "",
+          500: "",
+          600: "",
+          700: "#DD8332",
+          800: "",
+          900: "#C75538", //full gauge top 30%
+        },
         Mdblue: {
           //Midnight blue
           50: "#E5E8EC",
