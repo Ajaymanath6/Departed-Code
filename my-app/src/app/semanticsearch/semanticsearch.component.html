@@ -2079,18 +2079,16 @@
 
       <div class="second-col border- w-[22rem] flex-1- p-2 overflow-y-auto d-none-">
         <div class="attorney-filter-case-type">
-
           <button type="button"
-            class=" py-2.5 px-2 flex items-center text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600 "
-           >
-           <div class="grow flex items-center">
-             <span class="material-symbols-outlined icon-24 mr-2 text-Mdblue-600"> list_alt </span>
-           <span class="text-sm font-semibold">Personal Injury</span>
-
+            class=" py-2.5 px-2 flex items-center text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600 ">
+            <div class="grow flex items-center">
+              <span class="material-symbols-outlined icon-24 mr-2 text-Mdblue-600"> list_alt </span>
+              <div class="text-sm font-semibold">
+                <p class="text-Mdblue-600 text-start">Case Type</p>
+                <p class=" text-primary-700 text-start">Personal Injury</p>
+              </div>
             </div>
-
-
-          <span class="material-symbols-outlined icon-16 text-Mdblue-600"> more_horiz </span>
+            <span class="material-symbols-outlined icon-16 text-Mdblue-600"> more_horiz </span>
           </button>
           <div class="cust-drop rounded-lg  bg-white z-10 block">
             <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
@@ -2099,8 +2097,9 @@
                 <input type="text"
                   class="block py-2.5 pe-10 text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600  "
                   placeholder="All case types">
-                  <input  type="radio" value="" name="default-radio" class="absolute end-2.5 bottom-2.5 w-4 h-4  text-secondary-700 bg-gray-100 border-gray-300 focus:ring-offset-0 focus:ring-primary-500 focus:ring-2">
-                </div>
+                <input type="radio" value="" name="default-radio"
+                  class="absolute end-2.5 bottom-2.5 w-4 h-4  text-secondary-700 bg-gray-100 border-gray-300 focus:ring-offset-0 focus:ring-primary-500 focus:ring-2">
+              </div>
             </div>
             <div class="mt-4 h-[1px] grow bg-gray-200"></div>
             <ul class="py-2 text-sm text-Mdblue-600 h-32 overflow-y-scroll">
@@ -2122,7 +2121,16 @@
                     class="text-left"> Arizona </span><span
                     class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5">AZ</span></button>
               </li>
-
+              <li>
+                <label
+                  class="flex items-center justify-start text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-4 py-2 w-full">
+                  <div>
+                    <input type="checkbox" value=""
+                      class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0">
+                  </div>
+                  <span class="">Personall Injury</span>
+                </label>
+              </li>
 
             </ul>
           </div>

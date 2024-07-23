@@ -27,12 +27,12 @@ module.exports = {
           //royalblue-
           50: "#C0E7EF",
           100: "#ABBDD1", //on hover outline border color used
-          200: "#CCECF2", // full gauge bottom 10%
+          200: "#CCECF2", // full gauge bottom 10% bg
           300: "#90B7CA",
           400: "#6CA0B8",
           500: "#72C3D4", //eg: hover for Document Requested btn
           600: "#005C87",
-          700: "#009EBD", //eg: secondary main
+          700: "#009EBD", //eg: secondary main //full gauge bottom 10%
           800: "#CCECF2", //case detail tag color
           900: "#005C87",
         },
@@ -43,8 +43,8 @@ module.exports = {
           300: "#C81E1E",
           400: "#C9D7E6",
           500: "#667683",
-          600: "#B2273F",
-          700: "#A71042",
+          600: "#B2273F",//top 20% for full gauge
+          700: "#A71042",//top 10 for full gauge
           800: "#C9D7E6",
           900: "#667683",
         },
