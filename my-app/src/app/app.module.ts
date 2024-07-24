@@ -15,6 +15,7 @@ import { SearchBarComponent } from './searchbar/searchbar.component';
 import { ChipComponent } from './chip/chip.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ChatgptComponent } from './chatgpt/chatgpt.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CommonModule } from '@angular/common';
     SemanticsearchComponent,
     SearchBarComponent,
     ChipComponent,
+    ChatgptComponent,
   ],
   imports: [
     BrowserModule,
