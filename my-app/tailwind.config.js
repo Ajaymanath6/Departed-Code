@@ -13,7 +13,7 @@ module.exports = {
         primary: {
           //vintageblue-
           50: "#F9F9F9",
-          100: "#D8E6EC",
+          100: "#D8E6EC",//disabled for + icon
           200: "#005C87",
           300: "#90B7CA",
           400: "#6CA0B8",
@@ -43,8 +43,8 @@ module.exports = {
           300: "#C81E1E",
           400: "#C9D7E6",
           500: "#667683",
-          600: "#B2273F",//top 20% for full gauge
-          700: "#A71042",//top 10 for full gauge
+          600: "#B2273F", //top 20% for full gauge
+          700: "#A71042", //top 10 for full gauge
           800: "#C9D7E6",
           900: "#667683",
         },
@@ -76,7 +76,7 @@ module.exports = {
         Mdblue: {
           //Midnight blue
           50: "#E5E8EC",
-          100: "#D9DEE3",
+          100: "#C2C8CE",//chip disabled left icon and text
           200: "#D9DEE3",
           300: "#A9B3BC",
           400: "#909DA8",
