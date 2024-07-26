@@ -16,6 +16,7 @@ import { ChipComponent } from './chip/chip.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ChatgptComponent } from './chatgpt/chatgpt.component';
+import { ChildCompComponent } from './child-comp/child-comp.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ChatgptComponent } from './chatgpt/chatgpt.component';
     SearchBarComponent,
     ChipComponent,
     ChatgptComponent,
+    ChildCompComponent,
   ],
   imports: [
     BrowserModule,
