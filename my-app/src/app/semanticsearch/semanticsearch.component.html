@@ -1966,7 +1966,8 @@
   </div>
   <div class="flex h-[25rem]- overflow-y-auto mid-content relative grow">
     <div class="left border- flex sticky top-0  d-none-">
-      <div class="second-col border- w-[22rem] flex-1- p-2 overflow-y-auto d-none-">
+      <div
+        class="second-col border- w-[22rem] flex-1- p-2 overflow-y-auto d-none- shadow-[2px_0_4px_0_rgba(0,26,49,0.12)]">
         <div class="attorney-filter-case-type d-none-">
           <button type="button" id="dropdownDefaultButton" data-dropdown-toggle="dropdown-12"
             class=" py-2.5 px-2 flex items-center text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600 ">
@@ -1994,6 +1995,28 @@
                 <input type="radio" value="" name="default-radio"
                   class="absolute end-2.5 bottom-2.5 w-4 h-4  text-secondary-700 bg-gray-100 border-gray-300 focus:ring-offset-0 focus:ring-primary-500 focus:ring-2">
               </div>
+
+              <div
+                class="flex items-center justify-between py-2.5 pe-10- text-sm  text-Mdblue-700 border border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 ">
+                <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 ">
+                  Checked
+                  state
+                  <input type="radio" value="" name="default-radio" for="default-radio-2"
+                    class="w-4 h-4  text-secondary-700 bg-gray-100 border-gray-300 focus:ring-offset-0 focus:ring-primary-500 focus:ring-2">
+                </label>
+              </div>
+              <div class="relative">
+              <label
+                class="px-4 py-2 text-sm font-medium text-Mdblue-700 flex justify-between cursor-pointer w-full border border-gray-300 rounded-lg bg-gray-50">
+                <span
+                   class=""> All injury types
+                  </span>
+                   <input
+                   id="default-radio-1" type="radio" value="" name="default-radio"
+                  class="w-4 h-4  text-secondary-700 bg-gray-100 border-gray-300 focus:ring-offset-0 focus:ring-primary-500 focus:ring-2"></label>
+              </div>
+
+
             </div>
             <div class="mt-4 h-[1px] grow bg-gray-200"></div>
             <p class="text-center mt-2 text-Mdblue-600">All</p>
@@ -2252,7 +2275,7 @@
           </div>
         </div>
       </div>
-      <div class="first-col w-[22rem] overflow-y-auto shadow-lg p-2 flex flex-col">
+      <div class="first-col w-[22rem] overflow-y-auto shadow-lg- p-2 flex flex-col">
         <div class="flex d-none">
           <button type="button" id="myButton"
             class="flex items-center p-2 text-sm font-semibold text-primary-700 focus:outline-none bg-white rounded border border-gray-300 hover:bg-gray-100 hover:border-gray-600 hover:text-primary-700 focus:z-10 focus:border-gray-600 btn-focus focus:bg-gray-100">
