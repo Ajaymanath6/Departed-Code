@@ -2472,8 +2472,7 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
           <div>
             <div class="mb-8 mt-4 flex items-center">
               <div class="flex mr-2 text-center items-center font-semibold text-Mdblue-600">
-                <span
-                  class="material-symbols-outlined mr-1 Mdblue-fill-600 icon-28"> schedule </span>
+                <span class="material-symbols-outlined mr-1 Mdblue-fill-600 icon-28"> schedule </span>
                 <h3 class="text-2xl font-semibold text-Mdblue-700">My Tracked Cases </h3>
               </div>
               <div class="w-full- h-[1px] grow bg-gray-200"></div>
@@ -2634,7 +2633,7 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
                 All</span></button>
           </div>
           <div class="grid grid-cols-4 gap-8">
-            <div class="bg-gray-100  border-2 border-gray-200 hover:bg-gray-100- rounded-xl flex flex-col">
+            <div class="bg-gray-100  border-2 border-gray-200 hover:bg-gray-100- rounded-xl flex flex-col min-h-80">
               <div class="grow p-2 pb-4">
                 <div class="flex justify-end items-center">
                   <div>
@@ -2673,7 +2672,7 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
                   </span>
                 </div>
               </div>
-              <div class="p-2 bg-white">
+              <div class="p-2 bg-white border rounded-b-xl">
                 <p class="text-base font-semibold text-Mdblue-700">John S. on TBI cases</p>
                 <div class="flex justify-end text-Mdblue-600 font-semibold items-center">
                   <span class="material-symbols-outlined Mdblue-fill-600 text-base icon-12"> watch_later </span>
@@ -2681,7 +2680,7 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
                 </div>
               </div>
             </div>
-            <div class="bg-gray-100  border-2 border-gray-200 hover:bg-gray-100- rounded-xl flex flex-col">
+            <div class="bg-gray-100  border-2 border-gray-200 hover:bg-gray-100- rounded-xl flex flex-col min-h-80">
               <div class="grow p-2 pb-4">
                 <div class="flex justify-end items-center">
                   <div>
@@ -2808,6 +2807,18 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
                   View All
                 </button>
               </div>
+              <div class="bg-orange-400 rounded-lg text-Mdblue-700 text-sm p-4">
+                <div class="flex mb-2">
+                  <span class="material-symbols-outlined text-Mdblue-700 icon-18 mr-2">
+                    error
+                  </span>
+                  <p class="font-semibold">Filters limit reached</p>
+
+                </div>
+                <p class="">You’ve used 3 out of 3 case types as filters. If you want to add another unselect one of the
+                  others.</p>
+              </div>
+
             </div>
             <h2 id="accordion-collapse-heading-2">
               <button type="button"
@@ -3088,8 +3099,13 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
           <div>
             <p class="text-Mdblue-700 text-2xl font-semibold text-center mt-10">Related Attorneys, Law Firms and Judges
             </p>
-            <p class="text-Mdblue-700 text-base font-normal text-center mt-10">Click the "+" button in the cards below
+            <p class="text-Mdblue-700 text-base font-normal text-center mt-4">Click the "+" button in the cards below
               to filter your results or click on the card to view profile and analytics.</p>
+          </div>
+           <div>
+            <p class="text-Mdblue-700 text-2xl font-semibold text-center mt-10">Refine and Explore
+            </p>
+            <p class="text-Mdblue-700 text-base font-normal text-center mt-2">Use the cards below as filters to refine your search by clicking the “+” button or click on the cards to view the detailed view.</p>
           </div>
         </div>
 

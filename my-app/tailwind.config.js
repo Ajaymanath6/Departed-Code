@@ -43,8 +43,8 @@ module.exports = {
           300: "#C81E1E",
           400: "#C9D7E6",
           500: "#667683",
-          600: "#B2273F",//top 20% for full gauge
-          700: "#A71042",//top 10 for full gauge
+          600: "#B2273F", //top 20% for full gauge
+          700: "#A71042", //top 10 for full gauge
           800: "#C9D7E6",
           900: "#667683",
         },
@@ -63,7 +63,7 @@ module.exports = {
 
         orange: {
           50: "",
-          100: "#F8E6D6", //full gauge middle 40% -50%, bottom 40%
+          100: "#F8E6D6", //full gauge middle 40% -50%, bottom 40%,//notification bg
           200: "",
           300: "#F4DDD7", //full gauge middle 40% -50%
           400: "",
