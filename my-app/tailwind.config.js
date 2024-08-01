@@ -66,11 +66,11 @@ module.exports = {
           100: "#F8E6D6", //full gauge middle 40% -50%, bottom 40%,//notification bg
           200: "",
           300: "#F4DDD7", //full gauge middle 40% -50%
-          400: "",
+          400: "#F1CDAD", //in main searchbar below filter chip Ai btn
           500: "",
           600: "",
           700: "#DD8332",
-          800: "",
+          800: "#E7B281",
           900: "#C75538", //full gauge top 30%
         },
         Mdblue: {
@@ -96,7 +96,7 @@ module.exports = {
           600: "#C9D7E6",
           700: "#DD8332",
           800: "#C9D7E6",
-          900: "#667683",
+          900: "#492D02",
         },
         // gray: {
         //   50: "#FFFFFF", //hover bg for dropdown, accordian label,
@@ -123,6 +123,7 @@ module.exports = {
           900: "#667683", //popup overlay color default
           //shade-06 is in "Mdblue"
         },
+
         tag_unrep: "#CCECF2",
         tag_property: "#E9D6F8",
         tag_other: "#EDCFD9",
