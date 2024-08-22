@@ -224,3 +224,34 @@ input:focus ~ .input-container {
   margin: 0; /* Removes default margin for better control */
 }
 //grid text ellipse check end
+
+
+//google text ellipse start
+
+.xT {
+  display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.yi{
+    flex-shrink: 0;
+}
+.yi, .y6 {
+    flex-shrink: 0;
+}
+.y2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+}
+.bog {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+//google text ellipse end
