@@ -27,13 +27,13 @@ module.exports = {
           //royalblue-
           50: "#C0E7EF",
           100: "#ABBDD1", //on hover outline border color used
-          200: "#CCECF2", // full gauge bottom 10% bg
+          200: "#CCECF2", // full gauge bottom 10% bg //detail page tag color (unrepresented)
           300: "#90B7CA",
           400: "#6CA0B8",
           500: "#72C3D4", //eg: hover for Document Requested btn
-          600: "#005C87",
+          600: "",
           700: "#009EBD", //eg: secondary main //full gauge bottom 10%
-          800: "#CCECF2", //case detail tag color
+          800: "", //case detail tag color
           900: "#005C87",
         },
         red: {
@@ -47,6 +47,18 @@ module.exports = {
           700: "#A71042", //top 10 for full gauge
           800: "#C9D7E6",
           900: "#667683",
+        },
+        pink: {
+          50: "",
+          100: "",
+          200: "",
+          300: "#F5EAFB",
+          400: "",
+          500: "",
+          600: "#EAD6F7",
+          700: "",
+          800: "",
+          900: "",
         },
         green: {
           50: "#DEF7EC",
