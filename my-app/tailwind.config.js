@@ -26,7 +26,7 @@ module.exports = {
         secondary: {
           //royalblue-
           50: "#C0E7EF",
-          100: "#ABBDD1", //on hover outline border color used
+          100: "", //on hover outline border color used
           200: "#CCECF2", // full gauge bottom 10% bg //detail page tag color (unrepresented)
           300: "#90B7CA",
           400: "#6CA0B8",

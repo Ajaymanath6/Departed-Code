@@ -1117,7 +1117,7 @@
 
 
 <!--profile page rework test start-->
-<div class="flex flex-col h-100 border semantic-3-col max-w-[1613px]- m-auto d-none-">
+<div class="flex flex-col h-100 border semantic-3-col max-w-[1613px]- m-auto d-none">
   <div class="header border h-[5rem]">
     header
   </div>
@@ -1134,7 +1134,7 @@
   <div class="flex h-[25rem]- overflow-y-auto mid-content relative grow">
 
     <!--drawer AI shreyas start-->
-    <div class="grow mid-content">
+    <div class="grow mid-content d-none">
       <!-- <div>
         <div class="text-center">
           <button
@@ -1210,9 +1210,6 @@
         </div>
       </div>
     </div>
-
-
-
     <!--drawer AI shreyas end-->
 
 
@@ -2163,21 +2160,52 @@
 
 
 <!--html formater start-->
-<div class="mb-2 flex justify-between pb-4">
-  <div class="flex items-center gap-2 ">
-    <div
-      class="bg-green-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12"
-     ><span
-        class="font-semibold text-base text-white undefined">P1</span>
-      </div>
-    <div class="">
-      <div class="text-xl font-semibold text-Mdblue-700"> Prashantha Aithal 1
+<div type="attorney" class="bg-white block border-2 border-gray-200 p-2 parent-card rounded-xl w-80">
+  <div class="flex items-center">
+    <div class="flex-shrink-0 mr-2">
+      <div size="size-12" initialstextsize="text-base">
+        <div
+          class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
+          <span class="font-semibold text-base text-white">CJ</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="flex items-center ">
-    <div class="text-primary-700 text-base font-normal"> prashanthaa@unicourt.com
+    <div class="flex-1 overflow-hidden">
+      <h5 class="text-lg font-semibold text-Mdblue-600">
+        <div class="">
+          <div class="truncate">
+            <span> Cohen, Jacob fk fdhdkfh dfhkhdfk dfhkh djfkljdklgjldjg</span>
+          </div>
+        </div>
+      </h5>
+    </div>
+    <div class="flex-shrink-0" id="dropdownDefaultButton" data-dropdown-toggle="dropdown">
+      <span class="text-sm font-semibold text-primary-700 bg-secondary-200 rounded-full px-2.5 py-0.5 border border-primary-700">+3</span>
     </div>
   </div>
 </div>
+
+
+<div class="cust-drop rounded-lg bg-white z-10 w-80 d-none- block"
+    id="dropdown">
+  <div class="px-4 py-3 pb-0 text-sm text-Mdblue-600">
+    <div class="font-semibold text-center mb-3">Possible Matches</div>
+  </div>
+  <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+  <ul class="py-2 px-2 text-sm text-Mdblue-600 h-40 overflow-y-scroll space-y-4">
+    <li>
+      <div class="flex justify-between">
+        <div class="grow">
+          <p class="text-sm font-normal text-primary-700">
+              John Doe
+          </p>
+        </div>
+        <div class="flex items-center shrink-0">
+          <span class="text-sm font-semibold bg-gray-200 rounded-full px-2.5 py-0.5 ">86%</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
 <!--html formater end-->
