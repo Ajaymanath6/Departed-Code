@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from './test/test.component';
 import { SemanticsearchComponent } from './semanticsearch/semanticsearch.component';
 import { ChatgptComponent } from './chatgpt/chatgpt.component';
+import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'chatgpt',
     component: ChatgptComponent,
+  },
+  {
+    path: 'mobileUI',
+    component: MobileUIComponent,
   },
 ];
 
