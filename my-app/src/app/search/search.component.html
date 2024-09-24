@@ -6758,45 +6758,58 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
     </div>
   </section>
 
-  <section class="p-4 bg-white border  shadow-outer rounded-md md:p-6 xl:p-8 d-none">
+  <!--multi doc order bottom popup start-->
+  <section class="p-5 bg-white border fixed bottom-0 z-20 w-full shadow-outer rounded-md d-none-">
     <div class="container">
       <div class="flex justify-between items-center ">
         <div class="">
-          <div class="text-base font-semibold text-Mdblue-600 ">
-            <a href="#" class=" text-primary-700  hover:underline">Cancel</a>
-          </div>
+          <button class="cursor-pointer rounded border border-white p-3 text-base font-medium text-primary-700 hover:bg-gray-200 focus:border-Mdblue-600 focus:bg-gray-200">
+  Clear
+</button>
         </div>
         <div class=" text-sm text-Mdblue-600">
           <nav class="flex justify-center">
             <ul class="inline-flex -space-x-px text-sm">
               <li>
                 <div
-                  class="flex items-center text-base font-semibold stify-center px-1  h-8 leading-tight text-primary-700 bg-white  border-gray-300    ">
-                  <div
+                  class="flex items-center gap-1 text-base font-semibold justify-center px-1 text-primary-700 bg-white border-gray-300    ">
+                  <!-- <div
                     class="relative inline-flex items-center justify-center mr-2 w-10 h-10 hover:bg-primary-700 hover:text-white overflow-hidden bg-gray-100 text-white- rounded-full ">
                     <span class="font-medium  ">1</span>
+                  </div> -->
+                  <div class="relative ml-1 mr-1 inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-gray-200">
+                    <span class="font-medium text-Mdblue-600">2</span>
                   </div>
-                  <span>Selected</span>
+                  <span class="text-sm font-semibold text-Mdblue-600">Selected</span>
                 </div>
               </li>
             </ul>
           </nav>
         </div>
-        <div class="text-sm text-Mdblue-600">
-          <span class="text-lg font-semibold">Total: $4.00</span>
-          <button type="button"
-            class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 me-2 ms-2  focus:outline-none">
+        <div class="text-sm  gap-2 flex items-center">
+          <span class="text-lg font-semibold text-Mdblue-700">Total: $4.00</span>
+          <!-- <button type="button"
+            class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5  focus:outline-none">
             Order 2 Documents
-          </button>
-          <span>Or</span>
+          </button> -->
+          <button type="submit"
+  class="btn-focus flex items-center justify-center border border-transparent rounded bg-primary-700
+   p-3 text-base font-medium text-white
+   hover:bg-primary-800 focus:outline-none">
+   <span>  Order 2 Documents</span>
+  </button>
+          <span class="d-none">Or</span>
           <button type="button"
-            class="py-2.5 px-5 me-2 ms-2 text-sm font-medium text-Mdblue-700 focus:outline-none bg-white rounded-md border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 ">
+            class="d-none py-2.5 px-5 me-2 ms-2 text-sm font-medium text-Mdblue-700 focus:outline-none bg-white rounded-md border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 ">
             Download 1 Document
           </button>
+
         </div>
       </div>
     </div>
   </section>
+  <!--multi doc order bottom popup end-->
+
   <!--detail page end-->
 
   <!--orderpage start-->
