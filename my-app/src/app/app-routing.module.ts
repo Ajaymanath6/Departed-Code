@@ -9,6 +9,7 @@ import { TestComponent } from './test/test.component';
 import { SemanticsearchComponent } from './semanticsearch/semanticsearch.component';
 import { ChatgptComponent } from './chatgpt/chatgpt.component';
 import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
+import { Test2Component } from './test2/test2.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'test',
     component: TestComponent,
+  },
+  {
+    path: 'test2',
+    component: Test2Component,
   },
   {
     path: 'semantic',

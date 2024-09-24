@@ -184,6 +184,10 @@ module.exports = {
         },
       },
 
+      animation: {
+        'spin-slow': 'spin 1s linear infinite',
+      },
+
       maxWidth: {
         // seventeen: "17% !important", // custom class="max-w-twenty"
         // thirtyfive: "35% !important",

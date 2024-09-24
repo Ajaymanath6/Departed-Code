@@ -18,6 +18,8 @@ import { CommonModule } from '@angular/common';
 import { ChatgptComponent } from './chatgpt/chatgpt.component';
 import { ChildCompComponent } from './child-comp/child-comp.component';
 import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
+import { Test2Component } from './test2/test2.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
     ChatgptComponent,
     ChildCompComponent,
     MobileUIComponent,
+    Test2Component,
+
   ],
   imports: [
     BrowserModule,
@@ -41,6 +45,7 @@ import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
