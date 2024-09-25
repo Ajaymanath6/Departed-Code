@@ -15,6 +15,11 @@ import { SearchBarComponent } from './searchbar/searchbar.component';
 import { ChipComponent } from './chip/chip.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ChatgptComponent } from './chatgpt/chatgpt.component';
+import { ChildCompComponent } from './child-comp/child-comp.component';
+import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
+import { Test2Component } from './test2/test2.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,11 @@ import { CommonModule } from '@angular/common';
     SemanticsearchComponent,
     SearchBarComponent,
     ChipComponent,
+    ChatgptComponent,
+    ChildCompComponent,
+    MobileUIComponent,
+    Test2Component,
+
   ],
   imports: [
     BrowserModule,
@@ -35,6 +45,7 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

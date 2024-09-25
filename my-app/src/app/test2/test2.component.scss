@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.sliding-div {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 20;
+}

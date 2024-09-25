@@ -1,5 +1,5 @@
-<div class="semantic-page container d-none">
-  <div class="d-none mb-4">
+<div class="semantic-page container d-none-">
+  <div class="d-none- mb-4 law-firm-card">
     <button type="button"
       class="mb-2 me-2 inline-flex items-center space-x-2 rounded-lg bg-gray-100 px-5 py-2 text-center text-base font-semibold text-Mdblue-700 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100">
       <span class="material-icons"> source </span>
@@ -20,7 +20,7 @@
     </button>
   </div>
 
-  <div class="d-none mb-4">
+  <div class="d-none- mb-4">
     <p class="mb-3 text-sm font-semibold uppercase text-Mdblue-600">
       Your Recent Searches
     </p>
@@ -40,7 +40,7 @@
     </button>
   </div>
 
-  <div class="d-none">
+  <div class="d-none-">
     <h4 class="text-center text-2xl font-semibold text-Mdblue-700">
       Showing results for
     </h4>
@@ -65,23 +65,16 @@
 
     <div class="grid grid-cols-4 gap-4">
       <div
-        class="max-w-sm- box-outer w-full rounded-lg border border-gray-200 bg-white p-3 text-center shadow hover:bg-gray-100">
+        class="bg-white block- parent-card border-2 text-center  border-gray-200 cursor-pointer hover:bg-gray-100 p-2 pb-4 rounded-xl">
         <div class="flex justify-between">
           <button type="button"
-            class="me-2 flex items-center rounded-lg border border-gray-300 bg-white px-1.5 py-1.5 text-sm font-medium text-Mdblue-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100">
-            <span class="material-icons"> add </span>
+            class="text-primary-700 card-btn flex bg-gray-100 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-1">
+            <span class="material-symbols-outlined icon-24"> add </span>
           </button>
 
-          <button id="dropdownButton" data-dropdown-toggle="dropdown"
-            class="inline-block rounded-lg p-1.5 text-sm text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
-            type="button">
-            <span class="sr-only">Open dropdown</span>
-            <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-              viewBox="0 0 16 3">
-              <path
-                d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-            </svg>
-          </button>
+          <button type="button"
+            class="text-primary-700- text-Mdblue-600 card-btn flex bg-gray-100- border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+              class="material-symbols-outlined icon-24"> more_horiz </span></button>
           <!-- Dropdown menu -->
           <div id="dropdown"
             class="z-10 hidden w-44 list-none divide-y divide-gray-100 rounded-lg bg-white text-base shadow">
@@ -98,7 +91,7 @@
             </ul>
           </div>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center mt-[-0.8rem]">
           <img class="mb-3 h-[56px] w-[56px] rounded-full shadow-lg" src="../../assets/jpg/biffcon.png"
             alt="Bonnie image" />
           <div class="w-full space-y-2">
@@ -106,13 +99,20 @@
               <h5 class="mb-1 text-lg font-semibold text-primary-700">
                 Biffco Attorneys
               </h5>
+              <div class="flex items-center justify-center mt-1 mb-1"><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined text-secondary-700 icon-16"> star_half </span><span
+                  class="material-symbols-outlined text-secondary-700 icon-16"> star </span>
+              </div>
               <span class="text-sm font-semibold text-Mdblue-600">Los Angeles</span>
             </div>
 
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> verified </span>Litigation
-                Score
+              <p class="flex justify-center items-center text-sm font-semibold text-Mdblue-600">
+                <span class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> domain </span><span>Litigation
+                  Score</span>
               </p>
               <p class="text-lg font-semibold text-secondary-700">
                 4.56
@@ -120,9 +120,10 @@
               </p>
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> verified </span>
-                Number of Offices
+              <p class="flex justify-center items-center text-sm font-semibold text-Mdblue-600">
+                <span class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> beach_access </span>
+                <span>Number of Offices</span>
+
               </p>
               <p class="">
                 <span class="text-sm font-semibold text-Mdblue-700">6</span>
@@ -130,7 +131,8 @@
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
               <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> beach_access </span>
+
+                <span class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> beach_access </span>
                 Parent Law-firm
               </p>
               <p class="">
@@ -138,32 +140,27 @@
               </p>
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-primary-700">
+              <p class="flex justify-center items-center text-primary-700">
                 <span class="mr-2 text-sm font-semibold">biffcoattorneys.com</span>
-                <span class="material-icons"> north_east </span>
+                <span class="material-symbols-outlined mr-2 icon-16">
+                  arrow_outward
+                </span>
               </p>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="max-w-sm- box-outer w-full rounded-lg border border-gray-200 bg-white p-3 text-center shadow hover:bg-gray-100">
+        class="max-w-sm- box-outer w-full parent-card rounded-lg border border-gray-200 bg-white p-3 text-center shadow hover:bg-gray-100">
         <div class="flex justify-between">
           <button type="button"
-            class="me-2 flex items-center rounded-lg border border-gray-300 bg-white px-1.5 py-1.5 text-sm font-medium text-Mdblue-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100">
-            <span class="material-icons"> add </span>
+            class="text-primary-700 card-btn flex bg-gray-100 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-1">
+            <span class="material-symbols-outlined icon-24"> add </span>
           </button>
 
-          <button id="dropdownButton" data-dropdown-toggle="dropdown"
-            class="inline-block rounded-lg p-1.5 text-sm text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
-            type="button">
-            <span class="sr-only">Open dropdown</span>
-            <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-              viewBox="0 0 16 3">
-              <path
-                d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-            </svg>
-          </button>
+          <button type="button"
+            class="text-primary-700- text-Mdblue-600 card-btn flex bg-gray-100- border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+              class="material-symbols-outlined icon-24"> more_horiz </span></button>
           <!-- Dropdown menu -->
           <div id="dropdown"
             class="z-10 hidden w-44 list-none divide-y divide-gray-100 rounded-lg bg-white text-base shadow">
@@ -180,7 +177,7 @@
             </ul>
           </div>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center mt-[-0.8rem]">
           <img class="mb-3 h-[56px] w-[56px] rounded-full shadow-lg" src="../../assets/jpg/biffcon.png"
             alt="Bonnie image" />
           <div class="w-full space-y-2">
@@ -188,64 +185,63 @@
               <h5 class="mb-1 text-lg font-semibold text-primary-700">
                 Biffco Attorneys
               </h5>
+              <div class="flex items-center justify-center mt-1 mb-1"><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined text-secondary-700 icon-16"> star_half </span><span
+                  class="material-symbols-outlined text-secondary-700 icon-16"> star </span>
+              </div>
               <span class="text-sm font-semibold text-Mdblue-600">Los Angeles</span>
             </div>
 
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> verified </span>Litigation
-                Score
-              </p>
+              <p class="flex justify-center items-center text-sm font-semibold text-Mdblue-600"><span
+                  class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> domain </span><span>Litigation
+                  Score</span></p>
               <p class="text-lg font-semibold text-secondary-700">
                 4.56
                 <span class="text-sm font-semibold text-Mdblue-600"> / 5</span>
               </p>
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> verified </span>
-                Number of Offices
-              </p>
+              <p class="flex justify-center items-center text-sm font-semibold text-Mdblue-600"><span
+                  class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> beach_access </span><span>Number of
+                  Offices</span></p>
               <p class="">
                 <span class="text-sm font-semibold text-Mdblue-700">6</span>
               </p>
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> beach_access </span>
-                Parent Law-firm
-              </p>
+              <p class="flex justify-center items-center text-sm font-semibold text-Mdblue-600"><span
+                  class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> beach_access </span><span>Number of
+                  Offices</span></p>
               <p class="">
                 <span class="text-sm font-semibold text-primary-700">Biffco Global</span>
               </p>
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-primary-700">
+              <p class="flex justify-center items-center text-primary-700">
                 <span class="mr-2 text-sm font-semibold">biffcoattorneys.com</span>
-                <span class="material-icons"> north_east </span>
+                <span class="material-symbols-outlined mr-2 icon-16">
+                  arrow_outward
+                </span>
               </p>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="max-w-sm- box-outer w-full rounded-lg border border-gray-200 bg-white p-3 text-center shadow hover:bg-gray-100">
+        class="max-w-sm- parent-card box-outer w-full rounded-lg border border-gray-200 bg-white p-3 text-center shadow hover:bg-gray-100">
         <div class="flex justify-between">
           <button type="button"
-            class="me-2 flex items-center rounded-lg border border-gray-300 bg-white px-1.5 py-1.5 text-sm font-medium text-Mdblue-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100">
-            <span class="material-icons"> add </span>
+            class="text-primary-700 card-btn flex bg-gray-100 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-1">
+            <span class="material-symbols-outlined icon-24"> add </span>
           </button>
 
-          <button id="dropdownButton" data-dropdown-toggle="dropdown"
-            class="inline-block rounded-lg p-1.5 text-sm text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
-            type="button">
-            <span class="sr-only">Open dropdown</span>
-            <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-              viewBox="0 0 16 3">
-              <path
-                d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-            </svg>
-          </button>
+          <button type="button"
+            class="text-primary-700- text-Mdblue-600 card-btn flex bg-gray-100- border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+              class="material-symbols-outlined icon-24"> more_horiz </span></button>
           <!-- Dropdown menu -->
           <div id="dropdown"
             class="z-10 hidden w-44 list-none divide-y divide-gray-100 rounded-lg bg-white text-base shadow">
@@ -262,7 +258,7 @@
             </ul>
           </div>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center mt-[-0.8rem]">
           <img class="mb-3 h-[56px] w-[56px] rounded-full shadow-lg" src="../../assets/jpg/biffcon.png"
             alt="Bonnie image" />
           <div class="w-full space-y-2">
@@ -270,41 +266,47 @@
               <h5 class="mb-1 text-lg font-semibold text-primary-700">
                 Biffco Attorneys
               </h5>
+              <div class="flex items-center justify-center mt-1 mb-1"><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined secondary-fill-700 icon-16"> star </span><span
+                  class="material-symbols-outlined text-secondary-700 icon-16"> star_half </span><span
+                  class="material-symbols-outlined text-secondary-700 icon-16"> star </span>
+              </div>
               <span class="text-sm font-semibold text-Mdblue-600">Los Angeles</span>
             </div>
 
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> verified </span>Litigation
-                Score
-              </p>
+              <p class="flex justify-center items-center text-sm font-semibold text-Mdblue-600"><span
+                  class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> domain </span><span>Litigation
+                  Score</span></p>
               <p class="text-lg font-semibold text-secondary-700">
                 4.56
                 <span class="text-sm font-semibold text-Mdblue-600"> / 5</span>
               </p>
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> verified </span>
-                Number of Offices
-              </p>
+              <p class="flex justify-center items-center text-sm font-semibold text-Mdblue-600"><span
+                  class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> beach_access </span><span>Number of
+                  Offices</span></p>
               <p class="">
                 <span class="text-sm font-semibold text-Mdblue-700">6</span>
               </p>
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-sm font-semibold text-Mdblue-600">
-                <span class="material-icons mr-2"> beach_access </span>
-                Parent Law-firm
-              </p>
+              <p class="flex justify-center items-center text-sm font-semibold text-Mdblue-600"><span
+                  class="material-symbols-outlined Mdblue-fill-600 mr-2 icon-16"> beach_access </span><span>Number of
+                  Offices</span></p>
               <p class="">
                 <span class="text-sm font-semibold text-primary-700">Biffco Global</span>
               </p>
             </div>
             <div class="box-inner rounded-md bg-gray-100 p-4 text-center">
-              <p class="flex justify-center text-primary-700">
+              <p class="flex justify-center items-center text-primary-700">
                 <span class="mr-2 text-sm font-semibold">biffcoattorneys.com</span>
-                <span class="material-icons"> north_east </span>
+                <span class="material-symbols-outlined mr-2 icon-16">
+                  arrow_outward
+                </span>
               </p>
             </div>
           </div>
@@ -587,9 +589,6 @@
             <p class="mb-2 pb-3 text-sm font-semibold text-Mdblue-700 border-b">
               Total Cases
             </p>
-
-
-
             <div class="relative overflow-x-auto">
               <table class="w-full text-sm text-left  text-Mdblue-600 ">
                 <thead class="text-sm text-Mdblue-600 font-semibold bg-gray-50  ">
@@ -620,15 +619,21 @@
                 <tbody class="text-base font-semibold">
                   <tr class="bg-white border-b- ">
                     <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
-                      <span class="bg-primary-100   px-2 py-0.5 rounded ">
-                        Personal Injury
-                      </span>
+                      <div class="bg-gray-100 px-2 py-0.5 rounded flex items-center">
+                        <span class="material-symbols-outlined icon-8 bg-red-700 rounded-full mr-2">
+                          fiber_manual_record
+                        </span>
+                        <span class=" ">
+                          Personal Injury
+                        </span>
+                      </div>
+
                     </td>
 
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       104
                     </td>
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       43.33%
                     </td>
 
@@ -641,10 +646,10 @@
                       </span>
                     </td>
 
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       62
                     </td>
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       25.83%
                     </td>
                   </tr>
@@ -656,10 +661,10 @@
                       </span>
                     </td>
 
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       54
                     </td>
-                    <td class="px-6 py-4 text-right">
+                    <td class="px-6 py-4 text-right text-Mdblue-700">
                       22.5%
                     </td>
                   </tr>
@@ -681,7 +686,6 @@
                 </tbody>
               </table>
             </div>
-
           </div>
           <div class="rounded-lg border- border-gray-200- bg-white p-6 text-center shadow-">
             <!-- <div class="flex justify-end">
@@ -758,10 +762,8 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col bg-white rounded-lg border border-gray-200 pt-4">
+      <div class="flex flex-col bg-white pt-4 border-2 border-gray-200 rounded-xl opposing-lawfirm-attorney">
         <h5 class="text-center text-lg font-semibold text-Mdblue-700">Opposing Law-firms and Attorneys</h5>
-
-
         <div class="mb-4 border-b border-gray-200 ">
           <ul class="flex flex-wrap justify-center text-sm font-medium text-center" id="default-styled-tab"
             data-tabs-toggle="#default-styled-tab-content"
@@ -769,12 +771,12 @@
             data-tabs-inactive-classes=" text-Mdblue-600 hover:text-gray-600  border-gray-100 hover:border-gray-300  "
             role="tablist">
             <li class="me-2" role="presentation">
-              <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab"
-                data-tabs-target="#styled-profile1" type="button" role="tab" aria-controls="profile"
-                aria-selected="false">Law Firms</button>
+              <button class="inline-block p-4 border-b-2 rounded-t-lg text-Mdblue-600 hover:!text-Mdblue-700"
+                id="profile-styled-tab" data-tabs-target="#styled-profile1" type="button" role="tab"
+                aria-controls="profile" aria-selected="false">Law Firms</button>
             </li>
             <li class="me-2" role="presentation">
-              <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 "
+              <button class="inline-block p-4 border-b-2 rounded-t-lg text-Mdblue-600 hover:!text-Mdblue-700 "
                 id="dashboard-styled-tab" data-tabs-target="#styled-dashboard2" type="button" role="tab"
                 aria-controls="dashboard" aria-selected="false">
                 Attorneys</button>
@@ -784,7 +786,7 @@
         </div>
         <div id="default-styled-tab-content">
           <div class="text-center mt-4">
-            <label class="inline-flex items-center cursor-pointer bg-primary-100 px-2 py-0.5 rounded min-h-[2.2rem]">
+            <label class="inline-flex items-center cursor-pointer bg-gray-100 px-2 py-0.5 rounded min-h-[2.2rem]">
               <span class="ms-3 text-sm font-medium text-Mdblue-700  mr-2">Show only law firms from my
                 panel</span>
               <input type="checkbox" value="" class="sr-only peer">
@@ -807,13 +809,10 @@
               <p class=" text-sm text-Mdblue-600 font-semibold">Top<span class="text-secondary-700 text-lg"> 10%</span>
               </p>
             </div> -->
-                <p class="text-lg font-semibold mb-4 text-secondary-700">Hightest Winning Track Record</p>
+                <p class="text-lg font-semibold mb-2 text-secondary-700">Hightest Winning Track Record</p>
                 <p class="mb-2 pb-3 text-sm font-semibold text-Mdblue-600 border-b">
                   Top 5 law-firms with better performance against <br><span class="font-bold">Biffco Attorneys</span>
                 </p>
-
-
-
                 <div class="relative overflow-x-auto">
                   <table class="w-full text-sm text-left  text-Mdblue-600 ">
                     <thead class="text-sm text-Mdblue-600 font-semibold bg-gray-50  ">
@@ -822,12 +821,20 @@
                           Law-Firm Name
                         </th>
                         <th scope="col" class="px-6 py-3 ">
-                          <div class="flex   justify-end">
-                            <span>Wins</span>
-                            <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
-                                  class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                type="button" class="flex items-center press text-center"><span
-                                  class="material-symbols-outlined font-semibold">expand_more</span></button></div>
+                          <div class="flex justify-end text-Mdblue-700">
+                            <span class="text-Mdblue-700">Wins</span>
+                            <div class="ml-2">
+                              <!-- <button type="button" class="flex items-center press- text-center">
+                                <span class="material-symbols-outlined font-semibold">expand_less</span>
+                              </button> -->
+                              <span class="material-symbols-outlined icon-16">
+                                arrow_downward
+                              </span>
+                              <!-- <button
+                                type="button" class="flex items-center press text-center">
+                                <span class="material-symbols-outlined font-semibold">expand_more</span>
+                              </button> -->
+                            </div>
                           </div>
                         </th>
                         <th scope="col" class="px-6 py-3 ">
@@ -843,52 +850,152 @@
                     </thead>
                     <tbody class="text-base font-semibold">
                       <tr class="bg-white border-b- ">
-                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
-                          <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
                             Amicus Law Chambers
-                          </span>
+                          </span> -->
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
                         </td>
 
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           104
                         </td>
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           43.33%
                         </td>
 
                       </tr>
                       <tr class="bg-white border-b- ">
-                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
-
-                          <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap- ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
                             Proteus Law Firm
-                          </span>
+                          </span> -->
                         </td>
 
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           62
                         </td>
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           25.83%
                         </td>
                       </tr>
                       <tr class="bg-white ">
-                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
-
-                          <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap- ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
                             Liberty Legal Advisors
-                          </span>
+                          </span> -->
                         </td>
 
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           54
                         </td>
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           22.5%
                         </td>
                       </tr>
                       <tr class="bg-white ">
-                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
+                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap- ">
 
                           <span class="bg-primary-100   px-2 py-0.5 rounded ">
                             Renaissance Legal Services
@@ -908,7 +1015,7 @@
 
               </div>
               <div class="rounded-lg border- border-gray-200- bg-white p-6 text-center shadow-">
-                <p class="text-lg font-semibold mb-4 text-red-700">Lowest Winning Track Record</p>
+                <p class="text-lg font-semibold mb-2 text-red-700">Lowest Winning Track Record</p>
                 <p class="mb-2 pb-3 text-sm font-semibold text-Mdblue-600 border-b">
                   Top 5 law-firms with worse performance against <br><span class="font-bold">Biffco Attorneys</span>
                 </p>
@@ -920,12 +1027,20 @@
                           Law-Firm Name
                         </th>
                         <th scope="col" class="px-6 py-3 ">
-                          <div class="flex   justify-end">
-                            <span>Losses</span>
-                            <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
-                                  class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                          <div class="flex   justify-end text-Mdblue-700">
+                            <span class="text-Mdblue-700">Losses</span>
+                            <div class="ml-2">
+                              <span class="material-symbols-outlined icon-16">
+                                arrow_downward
+                              </span>
+                              <!-- <button type="button" class="flex items-center press text-center"><span
+                                  class="material-symbols-outlined font-semibold">expand_less</span>
+                                </button>
+                                <button
                                 type="button" class="flex items-center press text-center"><span
-                                  class="material-symbols-outlined font-semibold">expand_more</span></button></div>
+                                  class="material-symbols-outlined font-semibold">expand_more</span>
+                                </button> -->
+                            </div>
                           </div>
                         </th>
                         <th scope="col" class="px-6 py-3 ">
@@ -941,47 +1056,147 @@
                     </thead>
                     <tbody class="text-base font-semibold">
                       <tr class="bg-white border-b- ">
-                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
-                          <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
                             Hilltop Legal Lounge
-                          </span>
+                          </span> -->
                         </td>
 
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           104
                         </td>
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           43.33%
                         </td>
 
                       </tr>
                       <tr class="bg-white border-b- ">
-                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
-
-                          <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
                             Legal Lab
-                          </span>
+                          </span> -->
                         </td>
 
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           62
                         </td>
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           25.83%
                         </td>
                       </tr>
                       <tr class="bg-white ">
-                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
-
-                          <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
                             Affaires Ideas
-                          </span>
+                          </span> -->
                         </td>
 
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           54
                         </td>
-                        <td class="px-6 py-4 text-right">
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
                           22.5%
                         </td>
                       </tr>
@@ -1003,17 +1218,438 @@
                     </tbody>
                   </table>
                 </div>
-
               </div>
             </div>
           </div>
           <div class="hidden p-4 rounded-lg bg-gray-50 " id="styled-dashboard2" role="tabpanel"
             aria-labelledby="dashboard-tab">
-            <p class="text-sm text-Mdblue-600 ">This is some placeholder content the <strong
-                class="font-medium text-gray-800 ">Dashboard tab's associated content</strong>. Clicking
-              another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.</p>
+            attorney
+            <div class="mb-5 grid grid-cols-2 gap-6 ">
+              <div class="rounded-lg border- border-gray-200- bg-white p-6 text-center shadow-">
+                <!-- <div class="flex justify-end">
+              <p class=" text-sm text-Mdblue-600 font-semibold">Top<span class="text-secondary-700 text-lg"> 10%</span>
+              </p>
+            </div> -->
+                <p class="text-lg font-semibold mb-2 text-secondary-700">Hightest Winning Track Record</p>
+                <p class="mb-2 pb-3 text-sm font-semibold text-Mdblue-600 border-b">
+                  Top 5 law-firms with better performance against <br><span class="font-bold">Biffco Attorneys</span>
+                </p>
+                <div class="relative overflow-x-auto">
+                  <table class="w-full text-sm text-left  text-Mdblue-600 ">
+                    <thead class="text-sm text-Mdblue-600 font-semibold bg-gray-50  ">
+                      <tr>
+                        <th scope="col" class="px-6 py-3">
+                          Law-Firm Name
+                        </th>
+                        <th scope="col" class="px-6 py-3 ">
+                          <div class="flex justify-end text-Mdblue-700">
+                            <span class="text-Mdblue-700">Wins</span>
+                            <div class="ml-2">
+                              <!-- <button type="button" class="flex items-center press- text-center">
+                                <span class="material-symbols-outlined font-semibold">expand_less</span>
+                              </button> -->
+                              <span class="material-symbols-outlined icon-16">
+                                arrow_downward
+                              </span>
+                              <!-- <button
+                                type="button" class="flex items-center press text-center">
+                                <span class="material-symbols-outlined font-semibold">expand_more</span>
+                              </button> -->
+                            </div>
+                          </div>
+                        </th>
+                        <th scope="col" class="px-6 py-3 ">
+                          <div class="flex  justify-end">
+                            <span>Trials</span>
+                            <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                                  class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                                type="button" class="flex items-center press text-center"><span
+                                  class="material-symbols-outlined font-semibold">expand_more</span></button></div>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-base font-semibold">
+                      <tr class="bg-white border-b- ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                            Amicus Law Chambers
+                          </span> -->
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          104
+                        </td>
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          43.33%
+                        </td>
+
+                      </tr>
+                      <tr class="bg-white border-b- ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap- ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                            Proteus Law Firm
+                          </span> -->
+                        </td>
+
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          62
+                        </td>
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          25.83%
+                        </td>
+                      </tr>
+                      <tr class="bg-white ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap- ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                            Liberty Legal Advisors
+                          </span> -->
+                        </td>
+
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          54
+                        </td>
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          22.5%
+                        </td>
+                      </tr>
+                      <tr class="bg-white ">
+                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap- ">
+
+                          <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                            Renaissance Legal Services
+                          </span>
+                        </td>
+
+                        <td class="px-6 py-4 text-right">
+                          62
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                          25.8%
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+              <div class="rounded-lg border- border-gray-200- bg-white p-6 text-center shadow-">
+                <p class="text-lg font-semibold mb-2 text-red-700">Lowest Winning Track Record</p>
+                <p class="mb-2 pb-3 text-sm font-semibold text-Mdblue-600 border-b">
+                  Top 5 law-firms with worse performance against <br><span class="font-bold">Biffco Attorneys</span>
+                </p>
+                <div class="relative overflow-x-auto">
+                  <table class="w-full text-sm text-left  text-Mdblue-600 ">
+                    <thead class="text-sm text-Mdblue-600 font-semibold bg-gray-50  ">
+                      <tr>
+                        <th scope="col" class="px-6 py-3">
+                          Law-Firm Name
+                        </th>
+                        <th scope="col" class="px-6 py-3 ">
+                          <div class="flex   justify-end text-Mdblue-700">
+                            <span class="text-Mdblue-700">Losses</span>
+                            <div class="ml-2">
+                              <span class="material-symbols-outlined icon-16">
+                                arrow_downward
+                              </span>
+                              <!-- <button type="button" class="flex items-center press text-center"><span
+                                  class="material-symbols-outlined font-semibold">expand_less</span>
+                                </button>
+                                <button
+                                type="button" class="flex items-center press text-center"><span
+                                  class="material-symbols-outlined font-semibold">expand_more</span>
+                                </button> -->
+                            </div>
+                          </div>
+                        </th>
+                        <th scope="col" class="px-6 py-3 ">
+                          <div class="flex  justify-end">
+                            <span>Trials</span>
+                            <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                                  class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                                type="button" class="flex items-center press text-center"><span
+                                  class="material-symbols-outlined font-semibold">expand_more</span></button></div>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-base font-semibold">
+                      <tr class="bg-white border-b- ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                            Hilltop Legal Lounge
+                          </span> -->
+                        </td>
+
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          104
+                        </td>
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          43.33%
+                        </td>
+
+                      </tr>
+                      <tr class="bg-white border-b- ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                            Legal Lab
+                          </span> -->
+                        </td>
+
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          62
+                        </td>
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          25.83%
+                        </td>
+                      </tr>
+                      <tr class="bg-white ">
+                        <td scope="row" class="px-6- py-4- font-medium text-Mdblue-700 whitespace-nowrap ">
+                          <div class="parent-card block p-2 bg-gray-100 border-gray-200 rounded-xl hover:bg-gray-100">
+                            <div class="flex items-center mt-[-0.8rem]- relative">
+                              <span
+                                class="material-symbols-outlined icon-16 absolute top-0 right-2 secondary-fill-700">verified</span>
+                              <div class="flex-shrink-0 mr-2">
+                                <img src="../../assets/jpg/biffcon.png" alt="Neil image"
+                                  class="w-12- h-12- size-12 rounded-full">
+                              </div>
+                              <div class="flex-1">
+                                <h5 class="text-lg font-semibold text-primary-700"> John Smith </h5>
+                                <div class="mb-1 mt-1 flex ">
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star
+                                  </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined secondary-fill-700 icon-16">
+                                    star </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star_half </span>
+                                  <span class="material-symbols-outlined icon-16 text-secondary-700">
+                                    star
+                                  </span>
+                                </div>
+                                <p class="text-sm text-Mdblue-600 font-semibold"> Bond &amp; Associates </p>
+                              </div>
+                              <div>
+                                <button type="button"
+                                  class="text-primary-700 card-btn flex bg-gray-100 border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
+                                    class="material-symbols-outlined icon-24">more_horiz</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                            Affaires Ideas
+                          </span> -->
+                        </td>
+
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          54
+                        </td>
+                        <td class="px-6 py-4 text-right text-Mdblue-700">
+                          22.5%
+                        </td>
+                      </tr>
+                      <tr class="bg-white ">
+                        <td scope="row" class="px-6 py-4 font-medium text-Mdblue-700 whitespace-nowrap ">
+
+                          <span class="bg-primary-100   px-2 py-0.5 rounded ">
+                            First Class Law Firm
+                          </span>
+                        </td>
+
+                        <td class="px-6 py-4 text-right">
+                          62
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                          25.8%
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="flex items-center justify-center pb-8 px-2 py-0.5 ">
+          <div class="bg-gray-100 flex items-center">
+            <span class="material-symbols-outlined icon-16 secondary-fill-700 mr-2">verified</span>
+            <span class="text-Mdblue-700 text-base font-semibold ">Part of your Law-firm panel</span>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -1185,7 +1821,7 @@
           </div>
         </div>
       </a>
-      <div class="parent-card block p-2 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-100 ">
+      <div class="parent-card block p-4 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-100 ">
         <div class="flex justify-between items-center">
           <div>
             <button type="button"
@@ -1269,6 +1905,7 @@
   </div>
 </div>
 
+<!--echart responsive resize start-->
 <div class="d-none chart container">
   <div class="grid grid-cols-1 md:grid-cols-4">
     <div>
@@ -1297,6 +1934,7 @@
     </div>
   </div>
 </div>
+<!--echart responsive resize end-->
 
 <div class="d-none">
   <div>
@@ -1326,10 +1964,347 @@
   <div class="header border h-[5rem]">
     header
   </div>
-  <div class="flex h-[25rem]- overflow-y-auto mid-content relative">
+  <div class="flex h-[25rem]- overflow-y-auto mid-content relative grow">
     <div class="left border- flex sticky top-0  d-none-">
-      <div class="first-col w-[22rem] overflow-y-auto shadow-lg p-2 ">
+      <div
+        class="second-col border- w-[22rem] flex-1- p-2 overflow-y-auto d-none- shadow-[2px_0_4px_0_rgba(0,26,49,0.12)]">
+        <div class="attorney-filter-case-type d-none-">
+          <button type="button" id="dropdownDefaultButton" data-dropdown-toggle="dropdown-12"
+            class=" py-2.5 px-2 flex items-center text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600 ">
+            <div class="grow flex items-center">
+              <span class="material-symbols-outlined icon-24 mr-2 text-Mdblue-600"> list_alt </span>
+              <div class="text-sm font-semibold">
+                <div class="text-Mdblue-600 text-start flex">
+                  <div> Newyork city courts</div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 text-primary-700"> add </span>
+                    <span>3 more</span>
+                  </div>
+                </div>
+                <!-- <p class=" text-primary-700 text-start">Newyork city courts</p> -->
+              </div>
+            </div>
+            <span class="material-symbols-outlined icon-16 text-Mdblue-600"> more_horiz </span>
+          </button>
+          <!--ellipse testing start-->
+          <!--ellipse works start-->
+          <div class="flex border border-gray-300 rounded">
+            <div class="flex-shrink-0 mr-2">Avatar</div>
+            <div class="flex-grow truncate">
+              <div class="truncate">This text will be truncated if it's </div>
+              <div>
+                <div class="truncate">This text will be truncated if it's too long.</div>
+              </div>
+            </div>
+            <div class="flex-shrink-0 mr-2 flex items-center">
+              <div>+3more</div>
+              <button>...</button>
+            </div>
+          </div>
+          <!--ellipse works end-->
+
+
+          <button type="button" id="dropdownDefaultButton" data-dropdown-toggle="dropdown-12"
+            class=" py-2.5 px-2 flex items-center text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600 ">
+            <span class="material-symbols-outlined icon-24 mr-2 text-Mdblue-600"> list_alt </span>
+            <div class="grow- flex items-center shrink-0">
+              <div class="text-sm font-semibold shrink">
+                <div class="text-Mdblue-600 text-start flex shrink">
+                  <div class="truncate shrink"> Newyork city courts</div>
+                  <!-- <div class="flex shrink-0	">
+                    <span class="material-symbols-outlined icon-18 text-primary-700"> add </span>
+                    <span>3 more</span>
+                  </div> -->
+                </div>
+                <!-- <p class=" text-primary-700 text-start">Newyork city courts</p> -->
+              </div>
+            </div>
+            <span class="material-symbols-outlined icon-16 text-Mdblue-600"> more_horiz </span>
+          </button>
+
+
+
+          <!--ellipse testing end-->
+
+          <div class="cust-drop rounded-lg  bg-white z-10 block w-[21rem]" id="dropdown-12">
+            <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+              <div class="font-medium text-center mb-3 text-Mdblue-600">Showing</div>
+              <div class="relative">
+                <input type="text"
+                  class="block py-2.5 pe-10 text-sm placeholder:font-medium text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600  "
+                  placeholder="All case types">
+                <input type="radio" value="" name="default-radio"
+                  class="absolute end-2.5 bottom-2.5 w-4 h-4  text-secondary-700 bg-gray-100 border-gray-300 focus:ring-offset-0 focus:ring-primary-500 focus:ring-2">
+              </div>
+
+              <div class="relative">
+                <label
+                  class="px-4 py-2 text-sm font-medium text-Mdblue-700 flex justify-between cursor-pointer w-full border border-gray-300 rounded-lg bg-gray-50">
+                  <span class=""> All injury types
+                  </span>
+                  <input id="default-radio-1" type="radio" value="" name="default-radio"
+                    class="w-4 h-4  text-secondary-700 bg-gray-100 border-gray-300 focus:ring-offset-0 focus:ring-primary-500 focus:ring-2"></label>
+              </div>
+            </div>
+            <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+            <p class="text-center mt-2 text-Mdblue-600">All</p>
+            <ul class="py-2 text-sm text-Mdblue-600 h-32 overflow-y-scroll">
+              <li>
+                <label
+                  class="flex items-center justify-start text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-4 py-2 w-full">
+                  <div>
+                    <input type="checkbox" value=""
+                      class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0">
+                  </div>
+                  <span class="">Personall Injury</span>
+                </label>
+              </li>
+
+            </ul>
+          </div>
+        </div>
         <div class="flex">
+          <button type="button"
+            class="cust-trans m-h-btn flex items-center rounded-md border border-gray-200 bg-white px-2 py-1 text-sm font-semibold text-primary-700 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100">
+            <span class="material-symbols-outlined icon-16"> arrow_back </span>
+            <span>Search</span>
+          </button>
+        </div>
+        <h4 class="text-xl font-semibold text-Mdblue-700 mt-4 mb-4">Showing analytics for...</h4>
+        <div class="space-y-4 mb-4">
+          <P class="text-sm font-semibold text-Mdblue-600 uppercase">Main Dimension</P>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 border rounded-md">
+            <div class="flex items-center gap-4">
+              <img src="../../assets/jpg/accnt.jpg" alt="" class="h-10 w-10 rounded-full">
+              <div class="text-sm font-semibold">
+                <div class=" text-Mdblue-600 ">Attorney</div>
+                <div class=" text-primary-700"> John Smith </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="space-y-4 mb-4">
+          <p class="text-sm font-semibold text-Mdblue-600 uppercase">Filters</p>
+          <div class=" p-2 rounded-lg bg-gray-100 text-center">
+            <span class="material-icons-outlined text-Mdblue-600">
+              tune
+            </span>
+            <p class="mb-3 font-normal text-Mdblue-700 ">No filters applied yet</p>
+          </div>
+          <button type="submit"
+            class="w-full btn-focus flex items-center justify-center rounded bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none border border-transparent">
+            <span class="material-icons-outlined">add</span>
+            <span>Add filter</span>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <p class="text-sm font-semibold text-Mdblue-600 uppercase">Docket Search AI</p>
+          <div class=" p-2 border border-gray-200 rounded-lg shadow bg-gray-100 text-center">
+            <span class="material-icons-outlined text-Mdblue-600">
+              tune
+            </span>
+            <p class="mb-3 font-normal text-Mdblue-700 ">No AI filters applied yet</p>
+          </div>
+          <button type="submit"
+            class="w-full btn-focus flex items-center justify-center rounded bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none border border-transparent">
+            <span class="material-icons-outlined">add</span>
+            <span>Add AI filter</span>
+          </button>
+          <button id="dropdownRightEndButton" data-dropdown-toggle="dropdownRightEnd"
+            data-dropdown-placement="right-end"
+            class="w-full btn-focus flex items-center justify-center rounded bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none border border-transparent "
+            type="button">
+            <span class="material-icons-outlined">add</span>
+            <span>Add AI filter</span>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdownRightEnd"
+            class="z-10 hidden w-[16rem] bg-white divide-y divide-gray-100 rounded-lg shadow cust-drop">
+            <p class="text-sm font-semibold text-Mdblue-600 text-center mt-2 mb-2">Add Ai Filters</p>
+            <ul class="p-2 text-base text-Mdblue-700 font-semibold space-y-2" aria-labelledby="dropdownRightEndButton">
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
+                      source
+                    </span>
+                    <span> Case Name</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
+                      gavel
+                    </span>
+                    <span> Judge</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
+                      gavel
+                    </span>
+                    <span> Law-Firm</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
+                      business_center
+                    </span>
+                    <span> Attorney</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-icons mr-2">
+                      list_alt
+                    </span>
+                    <span> Case Type</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-icons mr-2">
+                      date_range
+                    </span>
+                    <span> Date Range</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-icons mr-2">
+                      social_distance
+                    </span>
+                    <span> Role</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-icons-outlined mr-2">
+                      list_alt
+                    </span>
+                    <span> Injury Type</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-icons-outlined mr-2">
+                      list_alt
+                    </span>
+                    <span> Ai Filter 2</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-icons-outlined mr-2">
+                      list_alt
+                    </span>
+                    <span> Ai Filter 3</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+              <li class="text-center">
+                <button type="button"
+                  class="hover:bg-gray-200- inline-flex w-full items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 ">
+                  <div class="flex items-center">
+                    <span class="material-icons-outlined mr-2">
+                      list_alt
+                    </span>
+                    <span> Ai Filter 4</span>
+                  </div>
+                  <div class="flex">
+                    <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+                      add
+                    </span>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="first-col w-[22rem] overflow-y-auto shadow-lg- p-2 flex flex-col">
+        <div class="flex d-none">
           <button type="button" id="myButton"
             class="flex items-center p-2 text-sm font-semibold text-primary-700 focus:outline-none bg-white rounded border border-gray-300 hover:bg-gray-100 hover:border-gray-600 hover:text-primary-700 focus:z-10 focus:border-gray-600 btn-focus focus:bg-gray-100">
             <span class="material-symbols-outlined icon-16"> arrow_back </span>
@@ -1354,319 +2329,91 @@
             </span><span>Show Filters</span>
           </button>
         </div>
-        <div class="mt-8 mb-8">
-          <div class="text-Mdblue-600 flex items-center">
-            <span class="material-symbols-outlined mr-2 icon-16">
-              domain
-            </span>
-            <span class=" text-sm font-semibold">Law Firm</span>
-          </div>
-          <p class="text-primary-700 text-base font-semibold">Hilltop Legal Lounge</p>
-        </div>
-        <ul class="space-y-6">
-          <div class="mb-4 mt-4 flex items-center">
-            <div class=" mr-2 text-center text-sm font-semibold text-Mdblue-600 uppercase"> States Barred and Numbers
-            </div>
-            <div class="w-full- h-[1px] grow bg-gray-200"></div>
-          </div>
-          <li class="space-y-1">
-            <p class="text-sm font-semibold text-Mdblue-600">California</p>
-            <p class="text-base font-semibold text-Mdblue-700">2342456347</p>
-          </li>
-          <li class="space-y-1">
-            <p class="text-sm font-semibold text-Mdblue-600">New York</p>
-            <p class="text-base font-semibold text-Mdblue-700">7645115687</p>
-          </li>
-          <li class="space-y-1">
-            <p class="text-sm font-semibold text-Mdblue-600">Florida</p>
-            <p class="text-base font-semibold text-Mdblue-700">8756132159</p>
-          </li>
-        </ul>
-        <ul class="space-y-6">
-          <div class="mb-4 mt-4 flex items-center">
-            <div class=" mr-2 text-center text-sm font-semibold text-Mdblue-600 uppercase"> Contact</div>
-            <div class="w-full- h-[1px] grow bg-gray-200"></div>
-          </div>
-          <li class="space-y-1">
-            <p class="text-sm font-semibold text-Mdblue-600 flex items-center">
-              <span class="material-icons mr-2 icon-16">
-                call
+        <div class="grow overflow-auto">
+
+
+          <div class="mt-8 mb-8">
+            <div class="text-Mdblue-600 flex items-center">
+              <span class="material-symbols-outlined mr-2 icon-16">
+                domain
               </span>
-              <span>Phone</span>
-            </p>
-            <p class="text-base font-semibold text-primary-700">+1 (355) 456-8756</p>
-          </li>
-          <li class="space-y-1">
-            <p class="text-sm font-semibold text-Mdblue-600  flex items-center"><span class="material-icons mr-2">
-                email
-              </span><span>Email</span>
-            </p>
-            <p class="text-base font-semibold text-primary-700">john.smith@domain.com</p>
-          </li>
-          <li class="space-y-1">
-            <p class="text-sm font-semibold text-Mdblue-600  flex items-center"><span class="material-icons mr-2">
-                place
-              </span><span>Address</span>
-            </p>
-            <p class="text-base font-semibold text-primary-700">2972 Westheimer Rd. Santa Ana,Los Angeles 85486 </p>
-          </li>
-          <li class="space-y-1">
-            <p class="text-sm font-semibold text-Mdblue-600  flex items-center"><span class="material-icons mr-2">
-                language
-              </span><span>Website</span>
-            </p>
-            <p class="text-base font-semibold text-primary-700">linkedin.com/in/johnsmith </p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="second-col border- w-[22rem] flex-1- p-2 overflow-y-auto d-none-">
-        <div class="flex">
-          <button type="button"
-            class="cust-trans m-h-btn flex items-center rounded-md border border-gray-200 bg-white px-2 py-1 text-sm font-semibold text-primary-700 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100">
-            <span class="material-symbols-outlined icon-16"> arrow_back </span>
-            <span>Search</span>
-          </button>
-        </div>
-        <h4 class="text-xl font-semibold text-Mdblue-700 mt-4 mb-4">Showing analytics for...</h4>
-        <div class="space-y-4 mb-4">
-          <P class="text-sm font-semibold text-Mdblue-600 uppercase">Main Dimension</P>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100 border rounded-md">
-            <div class="flex items-center gap-4">
-              <img src="../../assets/jpg/accnt.jpg" alt="" class="h-10 w-10 rounded-full">
-              <div class="text-base font-medium">
-                <div class="text-Mdblue-700">Attorney</div>
-                <div class="text-sm font-normal text-Mdblue-600"> John Smith </div>
-              </div>
+              <span class=" text-sm font-semibold">Law Firm</span>
             </div>
-          </a>
+            <p class="text-primary-700 text-base font-semibold">Hilltop Legal Lounge</p>
+          </div>
+          <ul class="space-y-6">
+            <div class="mb-4 mt-4 flex items-center">
+              <div class=" mr-2 text-center text-sm font-semibold text-Mdblue-600 uppercase"> States Barred and Numbers
+              </div>
+              <div class="w-full- h-[1px] grow bg-gray-200"></div>
+            </div>
+            <li class="space-y-1">
+              <p class="text-sm font-semibold text-Mdblue-600">California</p>
+              <p class="text-base font-semibold text-Mdblue-700">2342456347</p>
+            </li>
+            <li class="space-y-1">
+              <p class="text-sm font-semibold text-Mdblue-600">New York</p>
+              <p class="text-base font-semibold text-Mdblue-700">7645115687</p>
+            </li>
+            <li class="space-y-1">
+              <p class="text-sm font-semibold text-Mdblue-600">Florida</p>
+              <p class="text-base font-semibold text-Mdblue-700">8756132159</p>
+            </li>
+          </ul>
+          <ul class="space-y-6">
+            <div class="mb-4 mt-4 flex items-center">
+              <div class=" mr-2 text-center text-sm font-semibold text-Mdblue-600 uppercase"> Contact</div>
+              <div class="w-full- h-[1px] grow bg-gray-200"></div>
+            </div>
+            <li class="space-y-1">
+              <p class="text-sm font-semibold text-Mdblue-600 flex items-center">
+                <span class="material-icons mr-2 icon-16">
+                  call
+                </span>
+                <span>Phone</span>
+              </p>
+              <p class="text-base font-semibold text-primary-700">+1 (355) 456-8756</p>
+            </li>
+            <li class="space-y-1">
+              <p class="text-sm font-semibold text-Mdblue-600  flex items-center"><span class="material-icons mr-2">
+                  email
+                </span><span>Email</span>
+              </p>
+              <p class="text-base font-semibold text-primary-700">john.smith@domain.com</p>
+            </li>
+            <li class="space-y-1">
+              <p class="text-sm font-semibold text-Mdblue-600  flex items-center"><span class="material-icons mr-2">
+                  place
+                </span><span>Address</span>
+              </p>
+              <p class="text-base font-semibold text-primary-700">2972 Westheimer Rd. Santa Ana,Los Angeles 85486 </p>
+            </li>
+            <li class="space-y-1">
+              <p class="text-sm font-semibold text-Mdblue-600  flex items-center"><span class="material-icons mr-2">
+                  language
+                </span><span>Website</span>
+              </p>
+              <p class="text-base font-semibold text-primary-700">linkedin.com/in/johnsmith </p>
+            </li>
+          </ul>
         </div>
-
-        <div class="space-y-4 mb-4">
-          <p class="text-sm font-semibold text-Mdblue-600 uppercase">Filters</p>
-          <div class=" p-2 border border-gray-200 rounded-lg shadow bg-gray-100 text-center">
-            <span class="material-icons-outlined text-Mdblue-600">
-              tune
+        <div class="p-2 flex justify-end">
+          <div class="text-base font-semibold text-primary-700 flex  justify-right">
+            <span class="material-symbols-outlined text-sm text-Mdblue-600 font-semibold ">
+              code
             </span>
-            <p class="mb-3 font-normal text-Mdblue-700 ">No filters applied yet</p>
-          </div>
-          <button type="submit"
-            class="text-white flex items-center justify-center w-full bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 cust-trans">
-            <span class="material-icons-outlined">add</span>
-            <span>Add filter</span>
-          </button>
-        </div>
-        <div class="space-y-4">
-          <p class="text-sm font-semibold text-Mdblue-600 uppercase">Docket Search AI</p>
-          <div class=" p-2 border border-gray-200 rounded-lg shadow bg-gray-100 text-center">
-            <span class="material-icons-outlined text-Mdblue-600">
-              tune
-            </span>
-            <p class="mb-3 font-normal text-Mdblue-700 ">No AI filters applied yet</p>
-          </div>
-          <button type="submit"
-            class="text-white flex items-center justify-center w-full bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 cust-trans">
-            <span class="material-icons-outlined">add</span>
-            <span>Add AI filter</span>
-          </button>
-          <button id="dropdownRightEndButton" data-dropdown-toggle="dropdownRightEnd"
-            data-dropdown-placement="right-end"
-            class="mb-3 md:mb-0 text-white w-full flex items-center justify-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center "
-            type="button">
-            <span class="material-icons-outlined">add</span>
-            <span>Add AI filter</span>
-          </button>
-
-          <!-- Dropdown menu -->
-          <div id="dropdownRightEnd"
-            class="z-10 hidden w-[15rem] bg-white divide-y divide-gray-100 rounded-lg shadow w-44- ">
-
-            <p class="text-sm font-semibold text-Mdblue-600 text-center mt-2 mb-2">Add Ai Filters</p>
-            <ul class="p-2 text-base text-Mdblue-700 font-semibold space-y-2" aria-labelledby="dropdownRightEndButton">
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons mr-2">
-                      source
-                    </span>
-                    <span> Case Name</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons mr-2">
-                      gavel
-                    </span>
-                    <span> Judge</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons mr-2">
-                      gavel
-                    </span>
-                    <span> Law-Firm</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons mr-2">
-                      business_center
-                    </span>
-                    <span> Attorney</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons mr-2">
-                      list_alt
-                    </span>
-                    <span> Case Type</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons mr-2">
-                      date_range
-                    </span>
-                    <span> Date Range</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons mr-2">
-                      social_distance
-                    </span>
-                    <span> Role</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons-outlined mr-2">
-                      list_alt
-                    </span>
-                    <span> Injury Type</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons-outlined mr-2">
-                      list_alt
-                    </span>
-                    <span> Ai Filter 2</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li>
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons-outlined mr-2">
-                      list_alt
-                    </span>
-                    <span> Ai Filter 3</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-              <li class="text-center">
-                <button type="button"
-                  class="text-Mdblue-700 w-full justify-between bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex ">
-                  <div class="flex items-center">
-                    <span class="material-icons-outlined mr-2">
-                      list_alt
-                    </span>
-                    <span> Ai Filter 4</span>
-                  </div>
-                  <div class="flex">
-                    <span class="material-icons-outlined bg-white text-primary-700">
-                      add
-                    </span>
-                  </div>
-                </button>
-              </li>
-            </ul>
+            <button class="d-none-" data-modal-target="scrolltest" data-modal-toggle="scrolltest">
+              View JSON Data
+            </button>
           </div>
         </div>
-
-
-
-
+        <button data-modal-target="default-modal" data-modal-toggle="default-modal"
+          class="block d-none- text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button">
+          Toggle modal
+        </button>
       </div>
+
     </div>
     <div class="container right third-col border flex-1  p-4">
       <div>
@@ -1812,41 +2559,102 @@
         <div class="mb-4 mt-4 flex items-center">
           <div class="w-full- h-[1px] grow bg-gray-200"></div>
           <div class="ml-2 flex mr-2 text-center items-center font-semibold text-Mdblue-600"><span
-              class="material-symbols-outlined">balance</span>
+              class="material-symbols-outlined mr-2 icon-28">balance</span>
             <h3 class="text-2xl font-semibold text-Mdblue-700">Judgment Metrics</h3>
           </div>
           <div class="w-full- h-[1px] grow bg-gray-200"></div>
         </div>
-        <div class="mb-5 grid grid-cols-3 gap-6">
-          <div class="rounded-lg border border-gray-200 bg-white p-6 text-center shadow">
+        <div class="flex justify-center items-center text-Mdblue-600 space-x-3 font-extrabold">
+          <button><span class="material-symbols-outlined icon-16 font-extrabold">
+              arrow_back_ios
+            </span></button>
+          <button> <span class="material-symbols-outlined icon-16 font-extrabold">
+              arrow_forward_ios
+            </span></button>
+        </div>
+        <div class="mb-5 grid grid-cols-3 gap-6 ">
+          <!-- z-[-5] class given coz left bar attorney filter dropdown goes back to this card (in order to go back from dropdown given "z-[-5]"), coz this card has position relative given coz to set popover icon at the bottom-->
+          <div class="bg-white block- border-2 border-gray-200  p-2  rounded-xl relative z-[-5]">
             <div class="flex justify-end">
-              <p class="text-sm text-Mdblue-600 font-semibold">Top<span class="text-secondary-700 text-lg"> 10%</span>
-              </p>
+              <div class="text-sm text-Mdblue-600 font-semibold flex items-center">
+                <span class="mr-1">Top</span>
+                <div class="text-secondary-700 text-lg size-16"> 10%</div>
+              </div>
             </div>
-            <p class="text-4xl font-semibold mb-4">240</p>
-            <p class="mb-2 text-sm font-semibold text-Mdblue-700"> Total Cases </p>
-            <p class="mb-3 flex items-center justify-center text-sm font-semibold text-secondary-700"> 5 more cases than
-              the average in the same time </p>
+            <div class="text-left pl-2 pr-2">
+              <p class="text-4xl font-semibold mb-4">240</p>
+              <p class="mb-2 text-sm font-semibold text-Mdblue-700"> Total Cases </p>
+              <p class="mb-3-  items-center justify-center text-sm font-semibold text-secondary-700"> 5 more cases than
+                the average in the same time </p>
+            </div>
+
+            <p class="absolute bottom-0 right-2">
+              <span
+                class="material-symbols-outlined text-sm  font-semibold text-white hover:!text-Mdblue-600 cursor-pointer">
+                code </span>
+              <span class="material-symbols-outlined icon-20 text-Mdblue-600">
+                info
+              </span>
+            </p>
           </div>
-          <div class="rounded-lg border border-gray-200 bg-white p-6 text-center shadow">
+          <div class="bg-white block- border-2 border-gray-200  p-2  rounded-xl relative z-[-5]">
             <div class="flex justify-end">
-              <p class="text-sm text-Mdblue-600 font-semibold">Top<span class="text-secondary-700 text-lg"> 20%</span>
-              </p>
+              <div class="text-sm text-Mdblue-600 font-semibold flex items-center">
+                <span class="mr-1">Top</span>
+                <div class="text-secondary-700 text-lg"> 10%</div>
+              </div>
             </div>
-            <p class="text-4xl font-semibold mb-4">42 days</p>
-            <p class="mb-2 text-sm font-semibold text-Mdblue-700"> Average Case Duration </p>
-            <p class="mb-3 flex items-center justify-center text-sm font-semibold text-secondary-700"> 5 days less than
-              the average </p>
+            <div class="text-left pl-2 pr-2">
+              <p class="text-4xl font-semibold mb-4">
+                <span class="text-2xl">$</span>
+                <span>42 days</span>
+                <span class="text-2xl">%</span>
+              </p>
+              <p class="mb-2 text-sm font-semibold text-Mdblue-700"> Average Case Duration </p>
+              <p class="mb-3-  items-center justify-center text-sm font-semibold text-secondary-700"> 5 days less than
+                the average </p>
+            </div>
+            <p class="absolute  bottom-0 right-2">
+              <span class="material-symbols-outlined icon-20 text-Mdblue-600">
+                info
+              </span>
+            </p>
           </div>
-          <div class="rounded-lg border border-gray-200 bg-white p-6 text-center shadow">
+          <div class="bg-white block- border-2 border-gray-200  p-2  rounded-xl relative z-[-5]">
             <div class="flex justify-end">
-              <p class="text-sm text-Mdblue-600 font-semibold">Top<span class="text-secondary-700 text-lg"> 20%</span>
-              </p>
+              <div class="text-sm text-Mdblue-600 font-semibold flex items-center">
+                <span class="mr-1">Top</span>
+                <div class="text-secondary-700 text-lg"> 10%</div>
+              </div>
             </div>
-            <p class="text-4xl font-semibold mb-4">42 days</p>
-            <p class="mb-2 text-sm font-semibold text-Mdblue-700"> Average Case Duration </p>
-            <p class="mb-3 flex items-center justify-center text-sm font-semibold text-secondary-700"> 5 days less than
-              the average </p>
+            <div class="text-left pl-2 pr-2">
+              <p class="text-4xl font-semibold mb-4">42 days</p>
+              <p class="mb-2 text-sm font-semibold text-Mdblue-700"> Average Case Duration </p>
+              <p class="mb-3-  items-center justify-center text-sm font-semibold text-secondary-700"> 5 days less than
+                the average </p>
+            </div>
+            <p class="absolute  bottom-0 right-2">
+              <span class="material-symbols-outlined icon-20 text-Mdblue-600">
+                info
+              </span>
+            </p>
+          </div>
+          <div class="bg-white block- border-2 border-gray-200  p-2  rounded-xl relative z-[-5]">
+            <div class="flex justify-center">
+              <div class="text-sm text-Mdblue-600 font-semibold flex items-center flex-col">
+                <div class="text-secondary-700 text-lg size-28 flex justify-center text-center">Add half gauge here
+                </div>
+                <span class="mt-1 text-secondary-700">Low</span>
+              </div>
+            </div>
+            <div class="text-center pl-2 pr-2">
+              <p class="text-Mdblue-700 mb-2 text-lg font-semibold">Litigation Risk Score</p>
+            </div>
+            <p class="absolute  bottom-0 right-2">
+              <span class="material-symbols-outlined icon-20 text-Mdblue-600">
+                info
+              </span>
+            </p>
           </div>
         </div>
       </div>
@@ -1854,16 +2662,18 @@
         <div class="mb-4 mt-4 flex items-center">
           <div class="w-full- h-[1px] grow bg-gray-200"></div>
           <div class="ml-2 flex mr-2 text-center items-center font-semibold text-Mdblue-600">
-            <span class="material-symbols-outlined mr-1 Mdblue-fill-600"> topic </span>
-            <h3 class="text-2xl font-semibold text-Mdblue-700">Cases</h3>
+            <span class="material-symbols-outlined mr-1 Mdblue-fill-600 icon-28"> topic </span>
+            <h3 class="text-2xl font-semibold text-Mdblue-700 ">Cases</h3>
           </div>
           <div class="w-full- h-[1px] grow bg-gray-200"></div>
         </div>
-        <p class="text-Mdblue-700">Time period from <span class="font-normal">2015</span> to <span>2024</span></p>
+        <p class="text-Mdblue-700 text-base text-center">Time period from <span class="font-semibold">2015</span> to
+          <span class="font-semibold">2024</span>
+        </p>
         <div class="mb-4 mt-4 flex items-center">
           <div class="flex items-center text-sm font-semibold text-Mdblue-600">
             <span>Showing</span>
-            <div class="block px-2 py-2 hover:bg-gray-100- flex items-center justify-between">
+            <div class=" px-2 py-2 hover:bg-gray-100- flex items-center justify-between">
               <div><button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal"
                   type="button"
                   class="inline-flex items-center p-2 text-sm font-medium text-center text-Mdblue-700 border border-white focus:border-Mdblue-600 focus:bg-gray-200 bg-white rounded-lg hover:bg-gray-200"><span
@@ -1877,14 +2687,15 @@
             <span>cases</span>
           </div>
           <div class="w-full- h-[1px] grow bg-gray-200 ml-2 mr-2"></div>
-          <div class="flex items-center">
-            <div class="text-sm font-semibold text-Mdblue-600"><span>Showing</span>
+          <div class="flex items-center space-x-2 ">
+            <div class="text-sm font-semibold text-Mdblue-600 flex items-center space-x-2"><span>Showing</span>
               <div
                 class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-200 rounded-full ml-1 mr-1">
                 <span class="font-medium text-Mdblue-600">6</span>
-              </div> of <div
-                class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-200 rounded-full ml-1 mr-1">
-                <span class="font-medium text-Mdblue-600">12</span>
+              </div> <span>of</span>
+              <div class="">
+                <!-- <span class="font-medium text-Mdblue-600">12</span> -->
+                <span class="text-sm font-semibold bg-gray-200 rounded-full px-2.5 py-0.5">4147215</span>
               </div>
             </div>
             <button type="button"
@@ -1896,9 +2707,9 @@
         <div class="p-2 pb-4 bg-white border-2 border-gray-200 rounded-xl">
           <div class="flex w-full-">
             <div><span class="material-symbols-outlined mr-2 mt-1 text-Mdblue-600 icon-24">topic</span></div>
-            <div class="text-Mdblue-600 w-full overflow-scroll">
+            <div class="text-Mdblue-600 w-full overflow-scroll- overflow-hidden">
               <div class="text-lg font-semibold flex justify-between text-primary-700 mb-1">
-                <div class="truncate text-ellipsis"> State of Florida vs Roberta Smith </div>
+                <a class="truncate text-ellipsis- grow"> State of Florida vs Roberta Smith </a>
                 <div class="flex justify-between items-center space-x-1">
                   <button type="button"
                     class="text-primary-700 card-btn flex bg-gray-100  font-medium rounded-lg text-sm p-1"><span
@@ -1926,10 +2737,15 @@
                       class="text-primary-700 font-semibold">Personal Injury - Other
                       Personal Injury</span>
                   </div>
+                  <div class="flex items-center ">
+                    <span class="material-symbols-outlined icon-16 mr-1">inventory
+                    </span><span class="text-primary-700 font-semibold">Personal Injury - Other
+                      Personal Injury</span>
+                  </div>
                 </div>
               </div>
-              <div class="flex space-x-6 mt-2 overflow-hidden right-fade">
-                <div class="space-y-1 flex-shrink-0 flex-grow-0">
+              <div class="flex space-x-6- mt-2 overflow-hidden- right-fade flex-wrap">
+                <div class="space-y-1- mr-2 mb-2 flex-shrink-0 flex-grow-0">
                   <div class="flex items-center ">
                     <span class="material-symbols-outlined icon-16 mr-1">
                       balance
@@ -1951,7 +2767,7 @@
                       </span><span>Dismissed</span></span>
                   </div>
                 </div>
-                <div class="space-y-1 flex-shrink-0 flex-grow-0">
+                <div class="space-y-1- mr-2 mb-2 flex-shrink-0 flex-grow-0">
                   <div class="flex items-center ">
                     <span class="material-symbols-outlined icon-16 mr-1">
                       gavel
@@ -1970,7 +2786,7 @@
                       </span><span>Dismissed</span></span>
                   </div>
                 </div>
-                <div class="space-y-1 flex-shrink-0 flex-grow-0">
+                <div class="space-y-1- mr-2 mb-2 flex-shrink-0 flex-grow-0">
                   <div class="flex items-center ">
 
                     <span class="material-symbols-outlined icon-16 mr-1"> domain </span>
@@ -1986,13 +2802,13 @@
                   <div class="flex items-center ">
                     <span class="text-Mdblue-600 text-sm font-semibold mr-1">Defendant:</span>
 
-                      <span class="text-primary-700 text-sm font-semibold">Biffco Attorneys</span>
+                    <span class="text-primary-700 text-sm font-semibold">Biffco Attorneys</span>
                   </div>
                 </div>
-                <div class="space-y-1 flex-shrink-0 flex-grow-0">
+                <div class="space-y-1- mr-2 mb-2 flex-shrink-0 flex-grow-0">
                   <div class="flex items-center ">
 
-                   <span  class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
+                    <span class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
                     <span class="text-Mdblue-700 text-sm font-semibold">Attorneys</span>
                   </div>
                   <div class="flex items-center text-sm font-semibold">
@@ -2005,13 +2821,13 @@
                   <div class="flex items-center ">
                     <span class="text-Mdblue-600 text-sm font-semibold mr-1">Defendant:</span>
 
-                      <span class="text-primary-700 text-sm font-semibold">Maria Stevens, William Brown</span>
+                    <span class="text-primary-700 text-sm font-semibold">Maria Stevens, William Brown</span>
                   </div>
                 </div>
-                 <div class="space-y-1 flex-shrink-0 flex-grow-0">
+                <div class="space-y-1- mr-2 mb-2 flex-shrink-0 flex-grow-0">
                   <div class="flex items-center ">
 
-                   <span  class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
+                    <span class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
                     <span class="text-Mdblue-700 text-sm font-semibold">Attorneys</span>
                   </div>
                   <div class="flex items-center text-sm font-semibold">
@@ -2024,13 +2840,13 @@
                   <div class="flex items-center ">
                     <span class="text-Mdblue-600 text-sm font-semibold mr-1">Defendant:</span>
 
-                      <span class="text-primary-700 text-sm font-semibold">Robert Fox, Roger Kinnaird</span>
+                    <span class="text-primary-700 text-sm font-semibold">Robert Fox, Roger Kinnaird</span>
                   </div>
                 </div>
-                <div class="space-y-1 flex-shrink-0 flex-grow-0">
+                <div class="space-y-1- mr-2 mb-2 flex-shrink-0 flex-grow-0">
                   <div class="flex items-center ">
 
-                   <span  class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
+                    <span class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
                     <span class="text-Mdblue-700 text-sm font-semibold">Attorneys</span>
                   </div>
                   <div class="flex items-center text-sm font-semibold">
@@ -2043,31 +2859,241 @@
                   <div class="flex items-center ">
                     <span class="text-Mdblue-600 text-sm font-semibold mr-1">Defendant:</span>
 
-                      <span class="text-primary-700 text-sm font-semibold">Robert Fox, Roger Kinnaird</span>
+                    <span class="text-primary-700 text-sm font-semibold">Robert Fox, Roger Kinnaird</span>
                   </div>
                 </div>
               </div>
+              <!--using flex start-->
+              <h4 cclass="text-black-700 font-bolder">flex method</h4>
+              <div class="flex grid- grid-cols-4- space-x-6- mt-2 overflow-hidden- flex-wrap">
+                <div class="space-y-1 mr-2 mb-2 flex-shrink-0- flex-grow-0-">
+                  <div class="flex items-center ">
+                    <span class="material-symbols-outlined icon-16 mr-1">
+                      balance
+                    </span>
+                    <span class="text-Mdblue-700 text-sm font-semibold">Judgment and Trial</span>
+                  </div>
+                  <div class="flex items-center text-sm font-semibold">
+                    <span class=" text-Mdblue-600 mr-1">Went to trial:</span>
+                    <span class="text-Mdblue-700">
+                      No
+                    </span>
+
+                  </div>
+                  <div class="flex items-center ">
+                    <span class="text-Mdblue-600 text-sm font-semibold mr-1">Result:</span>
+                    <span class="bg-pink-100- text-gray-800 text-sm font-medium px-3 py-1 rounded flex items-center">
+                      <span class="material-symbols-outlined icon-16">
+                        close
+                      </span><span>Dismissed</span></span>
+                  </div>
+                </div>
+                <div class="space-y-1 mr-2 mb-2 flex-shrink-0- flex-grow-0-">
+                  <div class="flex items-center ">
+                    <span class="material-symbols-outlined icon-16 mr-1">
+                      gavel
+                    </span>
+                    <span class="text-Mdblue-700 text-sm font-semibold">Judge</span>
+                  </div>
+                  <div class="flex items-center text-sm font-semibold">
+                    <span class=" text-primary-700 mr-1">Steven Thomas</span>
+
+                  </div>
+                  <div class="flex items-center ">
+                    <span class="text-Mdblue-600 text-sm font-semibold mr-1">Result:</span>
+                    <span class="bg-pink-100- text-gray-800 text-sm font-medium px-3 py-1 rounded flex items-center">
+                      <span class="material-symbols-outlined icon-16">
+                        close
+                      </span><span>Dismissed</span></span>
+                  </div>
+                </div>
+                <div class="space-y-1 mr-2 mb-2 flex-shrink-0- flex-grow-0-">
+                  <div class="flex items-center ">
+
+                    <span class="material-symbols-outlined icon-16 mr-1"> domain </span>
+                    <span class="text-Mdblue-700 text-sm font-semibold">Judgment and Trial</span>
+                  </div>
+                  <div class="flex items-center text-sm font-semibold">
+                    <span class=" text-Mdblue-600 mr-1">Plaintiff:</span>
+                    <span class="text-primary-700">
+                      Abstergo Law
+                    </span>
+
+                  </div>
+                  <div class="flex items-center ">
+                    <span class="text-Mdblue-600 text-sm font-semibold mr-1">Defendant:</span>
+
+                    <span class="text-primary-700 text-sm font-semibold">Biffco Attorneys</span>
+                  </div>
+                </div>
+                <div class="space-y-1 mr-2 mb-2 flex-shrink-0- flex-grow-0-">
+                  <div class="flex items-center ">
+
+                    <span class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
+                    <span class="text-Mdblue-700 text-sm font-semibold">Attorneys</span>
+                  </div>
+                  <div class="flex items-center text-sm font-semibold">
+                    <span class=" text-Mdblue-600 mr-1">Plaintiff:</span>
+                    <span class="text-primary-700">
+                      Mary Richards, Samantha Evans
+                    </span>
+
+                  </div>
+                  <div class="flex items-center ">
+                    <span class="text-Mdblue-600 text-sm font-semibold mr-1">Defendant:</span>
+
+                    <span class="text-primary-700 text-sm font-semibold">Maria Stevens, William Brown</span>
+                  </div>
+                </div>
+                <div class="space-y-1 mr-2 mb-2 flex-shrink-0- flex-grow-0-">
+                  <div class="flex items-center ">
+
+                    <span class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
+                    <span class="text-Mdblue-700 text-sm font-semibold">Attorneys</span>
+                  </div>
+                  <div class="flex items-center text-sm font-semibold">
+                    <span class=" text-Mdblue-600 mr-1">Plaintiff:</span>
+                    <span class="text-primary-700">
+                      Guy Hawkins, Kristin Watson
+                    </span>
+
+                  </div>
+                  <div class="flex items-center ">
+                    <span class="text-Mdblue-600 text-sm font-semibold mr-1">Defendant:</span>
+
+                    <span class="text-primary-700 text-sm font-semibold">Robert Fox, Roger Kinnaird</span>
+                  </div>
+                </div>
+                <div class="space-y-1 mr-2 mb-2 flex-shrink-0- flex-grow-0-">
+                  <div class="flex items-center ">
+
+                    <span class="material-symbols-outlined Mdblue-fill-600 mr-1 icon-16"> business_center </span>
+                    <span class="text-Mdblue-700 text-sm font-semibold">Attorneys</span>
+                  </div>
+                  <div class="flex items-center text-sm font-semibold">
+                    <span class=" text-Mdblue-600 mr-1">Plaintiff:</span>
+                    <span class="text-primary-700">
+                      Guy Hawkins, Kristin Watson
+                    </span>
+
+                  </div>
+                  <div class="flex items-center ">
+                    <span class="text-Mdblue-600 text-sm font-semibold mr-1">Defendant:</span>
+
+                    <span class="text-primary-700 text-sm font-semibold">Robert Fox, Roger Kinnaird</span>
+                  </div>
+                </div>
+              </div>
+              <!--using flex end-->
+
             </div>
           </div>
           <div>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 </div>
 
-  <div class="flex items-center flex-col mt-20 no-result d-none">
-            <span
-              class="material-symbols-outlined text-Mdblue-600 icon-48 mb-3">
-              search
-            </span>
-            <div class="text-Mdblue-600 font-semibold text-2xl mb-2">
-              Whoops, no matches
-            </div>
-            <div class="text-Mdblue-600 text-base">
-              We couldn’t find any search results. Try with a different criteria
-              or category and give it another go.
-            </div>
+<div class="flex items-center flex-col mt-20 no-result d-none">
+  <span class="material-symbols-outlined text-Mdblue-600 icon-48 mb-3">
+    search
+  </span>
+  <div class="text-Mdblue-600 font-semibold text-2xl mb-2">
+    Whoops, no matches
   </div>
+  <div class="text-Mdblue-600 text-base">
+    We couldn’t find any search results. Try with a different criteria
+    or category and give it another go.
+  </div>
+</div>
+
+
+<!--popup jsondata start-->
+<!-- <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+  Toggle modal
+</button> -->
+<!-- Main modal -->
+<div id="default-modal" tabindex="-1" aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative p-4 w-full max-w-2xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal header -->
+      <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Terms of Service
+        </h3>
+        <button type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="default-modal">
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="p-4 md:p-5 space-y-4">
+        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+          With less than a month to go before the European Union enacts new consumer privacy laws for its citizens,
+          companies around the world are updating their terms of service agreements to comply.
+        </p>
+        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+          The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to
+          ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as
+          possible of high-risk data breaches that could personally affect them.
+        </p>
+      </div>
+      <!-- Modal footer -->
+      <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <button data-modal-hide="default-modal" type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
+          accept</button>
+        <button data-modal-hide="default-modal" type="button"
+          class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--popup jsondata end-->
+<div class="d-none-" id="scrolltest" tabindex="-1" aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div
+    class="flex flex-col bg-white  p-6 rounded-lg shadow-lg w-full max-w-screen-md	max-w-screen-lg- max-w-screen-xl-	max-w-screen-2xl- max-h-[95vh]">
+    <!-- Modal Header -->
+    <div class="pb-4 border-b border-gray-200">
+      <h2 class="text-2xl font-bold">Modal Title</h2>
+    </div>
+
+    <div class="overflow-y-auto  overflow-scroll- grow ">
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+      <h1 class="m-[2rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat feugiat libero sit
+        amet feugiat.</h1>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="pt-4 border-t border-gray-200 flex justify-end">
+      <button class="bg-primary-500 text-white px-4 py-2 rounded-md">Close</button>
+    </div>
+  </div>
+</div>

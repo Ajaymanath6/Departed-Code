@@ -47,51 +47,80 @@
 <!--main search end-->
 
 <!--semantic start-->
-<div
-  #containerRef
-  (keydown)="move($event)"
-  (click)="setFocusOnInput($event)"
-  class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- pr-[10rem]- container relative mb-1 flex min-h-[16px] w-full items-center justify-between rounded border-[1.5px] border-gray-300 bg-gray-50 p-2 text-sm text-Mdblue-700 focus-within:border-Mdblue-600"
->
-  <div
-    class="flex-1- flex-shrink-0- flex-nowrap- overflow-hidden- flex flex-wrap gap-2"
-  >
-    <app-chip
-      class="inline-flex- flex"
-      *ngFor="let chip of chips; let idx = index"
-      #chipRefs
-      [editable]="true"
-      [closeable]="true"
-      [chip]="chip"
-      (chipOutSelect)="selectChipAtIndex(idx)"
-      (chipOutEdit)="setChipEditingStatus($event)"
-      (chipOutDelete)="deleteChip(idx)"
-    ></app-chip>
-    <input
-      name="inputValue"
-      [(ngModel)]="inputValue"
-      #inputRef
-      tabindex="0"
-      (keydown.backspace)="selectChipAtIndex(chips.length - 1)"
-      (keyup.enter)="insertChip()"
-      (blur)="insertChip()"
-      class="bg-transparent px-2 py-1 text-base font-normal outline-none placeholder:text-Mdblue-600"
-      placeholder=""
-      required
-    />
+
+<div class="search-tab inline-flex flex-wrap items-center text-Mdblue-600 space-x-2 mb-3">
+   <div class="uppercase text-sm font-semibold mr-4">Search for</div>
+   <button type="button" class="px-4 py-2 text-sm font-medium bg-gray-200 text-Mdblue-700 rounded-full border">
+    Cases
+  </button>
+  <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+    Attorneys
+  </button>
+  <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+    Law firms
+  </button>
+    <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+    Parties
+  </button>
+    <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+    Judges
+  </button>
+</div>
+<div #containerRef (keydown)="move($event)" (click)="setFocusOnInput($event)" class="cust-trans focus-within:shadow-[0_2px_rgb(0,158,189)]- pr-[10rem]- container relative mb-1 flex
+  min-h-[16px] w-full items-center justify-between rounded border-[1.5px] border-gray-300 bg-gray-50 p-2 text-sm text-Mdblue-700
+   focus-within:border-Mdblue-600">
+
+  <div class="flex-1- flex-shrink-0- flex-nowrap- overflow-hidden- flex flex-wrap gap-2">
+    <app-chip class="inline-flex- flex" *ngFor="let chip of chips; let idx = index" #chipRefs [editable]="true"
+      [closeable]="true" [chip]="chip" (chipOutSelect)="selectChipAtIndex(idx)"
+      (chipOutEdit)="setChipEditingStatus($event)" (chipOutDelete)="deleteChip(idx)"></app-chip>
+    <input name="inputValue" [(ngModel)]="inputValue" #inputRef tabindex="0"
+      (keydown.backspace)="selectChipAtIndex(chips.length - 1)" (keyup.enter)="insertChip()" (blur)="insertChip()"
+      class="bg-transparent px-2 py-1 text-base font-normal outline-none placeholder:text-Mdblue-600" placeholder=""
+      required />
   </div>
-  <div
-    class="top-[1rem]- absolute- bottom-[0]- right-[0.5rem]- top-[0]- flex items-center"
-  >
+  <div class="top-[1rem]- absolute- bottom-[0]- right-[0.5rem]- top-[0]- flex items-center space-x-2">
     <button
-      class="mr-2 cursor-pointer text-base font-semibold text-primary-700 p-3  focus:bg-gray-200 border border-white focus:border-Mdblue-600 rounded hover:bg-gray-200"
-    >
+      class="mr-2- cursor-pointer text-base font-semibold text-primary-700 p-3  focus:bg-gray-200 border border-white focus:border-Mdblue-600 rounded hover:bg-gray-200">
       Clear
     </button>
-    <button
-      type="submit"
-      class="btn-focus flex items-center justify-center border border-transparent rounded bg-primary-700 p-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none"
-    >
+
+    <button id="dropdownfiltermatch" data-dropdown-toggle="dropdownfilter" type="button" class="focus:bg-gray-100 bg-white text-Mdblue-700 border border-gray-300
+hover:border-gray-600 flex justify-between focus:ring-4- focus:outline-none focus:ring-gray-500-
+focus:border-Mdblue-600 hover:bg-gray-100 font-semibold rounded text-base  p-3 text-center items-center">
+      <span class="font-base font-semibold text-Mdblue-600 ">Matches</span>
+      <span class="mx-1">Any</span>
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+        class="ms-2 size-2.5 text-Mdblue-600">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4">
+        </path>
+      </svg>
+    </button>
+
+    <div id="dropdownfilter"
+      class="z-10 hidden cust-drop text-sm font-semibold bg-white divide-y divide-gray-100 rounded-lg shadow w-36 ">
+      <div class="">
+        <ul class="py-2 text-sm text-Mdblue-600 ">
+          <li>
+            <button
+              class="flex w-full items-center justify-between px-4 py-2 text-sm font-normal text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100">
+              <span class=""> All</span>
+
+            </button>
+          </li>
+          <li>
+            <button
+              class="flex w-full items-center justify-between px-4 py-2 text-sm font-normal text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100">
+              <span class=""> Any </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <button type="submit"
+      class="btn-focus flex items-center justify-center border border-transparent rounded bg-primary-700 p-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none">
       <span class="material-symbols-outlined mr-1 icon-24"> search </span>
       <span>Search</span>
     </button>
@@ -101,52 +130,31 @@
 <div class="search-chip-overflow-test d-none container">
   <div class="container flex justify-between border border-2">
     <div class="items flex flex-grow overflow-x-hidden">
-      <button
-        class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400"
-        type="button"
-      >
+      <button class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400" type="button">
         <span>item 1</span>
         <span>dljkf jdfjldjlfjldjf</span>
       </button>
-      <button
-        class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400"
-        type="button"
-      >
+      <button class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400" type="button">
         <span>item 2</span>
         <span>dljkf jdfjldjlfjldjf</span>
       </button>
-      <button
-        class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400"
-        type="button"
-      >
+      <button class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400" type="button">
         <span>item 3</span>
         <span>dljkf jdfjldjlfjldjf</span>
       </button>
-      <button
-        class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400"
-        type="button"
-      >
+      <button class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400" type="button">
         <span>item 4</span>
         <span>dljkf jdfjldjlfjldjf</span>
       </button>
-      <button
-        class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400"
-        type="button"
-      >
+      <button class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400" type="button">
         <span>item 5</span>
         <span>dljkf jdfjldjlfjldjf</span>
       </button>
-      <button
-        class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400"
-        type="button"
-      >
+      <button class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400" type="button">
         <span>item 6</span>
         <span>dljkf jdfjldjlfjldjf</span>
       </button>
-      <button
-        class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400"
-        type="button"
-      >
+      <button class="item mr-1 flex flex-shrink-0 flex-grow-0 items-center bg-slate-400" type="button">
         <span>item 6</span>
         <span>dljkf jdfjldjlfjldjf</span>
       </button>
@@ -158,15 +166,10 @@
 </div>
 
 <div class="container- mb-4 mt-4">
-  <ul
-    class="space-x-2- pl-20- pr-20- mb-8- inline-flex flex-wrap space-y-2 text-base font-semibold text-Mdblue-700"
-  >
+  <ul class="space-x-2- pl-20- pr-20- mb-8- inline-flex flex-wrap space-y-2 text-base font-semibold text-Mdblue-700">
     <li class="mr-[0.5rem] mt-[0.5rem]">
-      <button
-        type="button"
-        (click)="insertFilterChip('caseName')"
-        class=" inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100"
-      >
+      <button type="button" (click)="insertFilterChip('caseName')"
+        class=" inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
         <div class="mr-2 flex items-center">
           <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
             source
@@ -174,20 +177,15 @@
           <span> Case Name</span>
         </div>
         <div class="flex">
-          <span
-            class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700"
-          >
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
             add
           </span>
         </div>
       </button>
     </li>
     <li class="mr-[0.5rem]">
-      <button
-        type="button"
-        (click)="insertFilterChip('judge')"
-        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100"
-      >
+      <button type="button" (click)="insertFilterChip('judge')"
+        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
         <div class="mr-2 flex items-center">
           <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
             gavel
@@ -195,20 +193,15 @@
           <span> Judge</span>
         </div>
         <div class="flex">
-          <span
-            class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700"
-          >
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
             add
           </span>
         </div>
       </button>
     </li>
     <li class="mr-[0.5rem]">
-      <button
-        type="button"
-        (click)="insertFilterChip('lawFirm')"
-        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100"
-      >
+      <button type="button" (click)="insertFilterChip('lawFirm')"
+        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
         <div class="mr-2 flex items-center">
           <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
             domain
@@ -216,43 +209,31 @@
           <span> Law-Firm</span>
         </div>
         <div class="flex">
-          <span
-            class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700"
-          >
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
             add
           </span>
         </div>
       </button>
     </li>
     <li class="mr-[0.5rem]">
-      <button
-        type="button"
-        (click)="insertFilterChip('attorney')"
-        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100"
-      >
+      <button type="button" (click)="insertFilterChip('attorney')"
+        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
         <div class="mr-2 flex items-center">
-          <span
-            class="material-symbols-outlined gray-fill Mdblue-fill-700 mr-2"
-          >
+          <span class="material-symbols-outlined gray-fill Mdblue-fill-700 mr-2">
             business_center
           </span>
           <span> Attorney</span>
         </div>
         <div class="flex">
-          <span
-            class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700"
-          >
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
             add
           </span>
         </div>
       </button>
     </li>
     <li class="mr-[0.5rem]">
-      <button
-        type="button"
-        (click)="insertFilterChip('court')"
-        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100"
-      >
+      <button type="button" (click)="insertFilterChip('court')"
+        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
         <div class="mr-2 flex items-center">
           <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
             list_alt
@@ -260,20 +241,15 @@
           <span> Court</span>
         </div>
         <div class="flex">
-          <span
-            class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700"
-          >
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
             add
           </span>
         </div>
       </button>
     </li>
     <li class="mr-[0.5rem]">
-      <button
-        type="button"
-        (click)="insertFilterChip('caseType')"
-        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100"
-      >
+      <button type="button" (click)="insertFilterChip('caseType')"
+        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
         <div class="mr-2 flex items-center">
           <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
             list_alt
@@ -281,9 +257,7 @@
           <span> Case Type</span>
         </div>
         <div class="flex">
-          <span
-            class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700"
-          >
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
             add
           </span>
         </div>

@@ -7,6 +7,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from './test/test.component';
 import { SemanticsearchComponent } from './semanticsearch/semanticsearch.component';
+import { ChatgptComponent } from './chatgpt/chatgpt.component';
+import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
+import { Test2Component } from './test2/test2.component';
 
 const routes: Routes = [
   {
@@ -35,8 +38,20 @@ const routes: Routes = [
     component: TestComponent,
   },
   {
+    path: 'test2',
+    component: Test2Component,
+  },
+  {
     path: 'semantic',
     component: SemanticsearchComponent,
+  },
+  {
+    path: 'chatgpt',
+    component: ChatgptComponent,
+  },
+  {
+    path: 'mobileUI',
+    component: MobileUIComponent,
   },
 ];
 

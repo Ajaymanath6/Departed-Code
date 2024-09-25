@@ -26,41 +26,65 @@ module.exports = {
         secondary: {
           //royalblue-
           50: "#C0E7EF",
-          100: "#ABBDD1", //on hover outline border color used
-          200: "#005C87",
+          100: "", //on hover outline border color used
+          200: "#CCECF2", // full gauge bottom 10% bg //detail page tag color (unrepresented)
           300: "#90B7CA",
           400: "#6CA0B8",
           500: "#72C3D4", //eg: hover for Document Requested btn
-          600: "#005C87",
-          700: "#009EBD", //eg: secondary main
-          800: "#004463",
+          600: "",
+          700: "#009EBD", //eg: secondary main //full gauge bottom 10%
+          800: "", //case detail tag color
           900: "#005C87",
         },
         red: {
           50: "#FFE7E7",
           100: "#EDCFD9",
-          200: "#FBD5D5",
+          200: "#F0D4D9",
           300: "#C81E1E",
           400: "#C9D7E6",
           500: "#667683",
-          600: "#C9D7E6",
-          700: "#A71042",
+          600: "#B2273F", //top 20% for full gauge
+          700: "#A71042", //top 10 for full gauge
           800: "#C9D7E6",
           900: "#667683",
+        },
+        pink: {
+          50: "",
+          100: "",
+          200: "",
+          300: "#F5EAFB",
+          400: "",
+          500: "",
+          600: "#EAD6F7",
+          700: "",
+          800: "",
+          900: "",
         },
         green: {
           50: "#DEF7EC",
           100: "#EDCFD9",
-          200: "#FBD5D5",
-          300: "#C9D7E6",
+          200: "#D5EBEC", //full gauge bottom 20%
+          300: "#DEE9E7", //full gauge bottom 30%
           400: "#C9D7E6",
-          500: "#667683",
+          500: "#589385", //full gauge bottom 30%
           600: "#C9D7E6",
-          700: "#03543F",
+          700: "#2C99A1", //full gauge bottom 20%
           800: "#C9D7E6",
           900: "#667683",
         },
 
+        orange: {
+          50: "",
+          100: "#F8E6D6", //full gauge middle 40% -50%, bottom 40%,//notification bg
+          200: "",
+          300: "#F4DDD7", //full gauge middle 40% -50%
+          400: "#F1CDAD", //in main searchbar below filter chip Ai btn
+          500: "",
+          600: "",
+          700: "#DD8332",
+          800: "#E7B281",
+          900: "#C75538", //full gauge top 30%
+        },
         Mdblue: {
           //Midnight blue
           50: "#E5E8EC",
@@ -84,7 +108,7 @@ module.exports = {
           600: "#C9D7E6",
           700: "#DD8332",
           800: "#C9D7E6",
-          900: "#667683",
+          900: "#492D02",
         },
         // gray: {
         //   50: "#FFFFFF", //hover bg for dropdown, accordian label,
@@ -111,6 +135,7 @@ module.exports = {
           900: "#667683", //popup overlay color default
           //shade-06 is in "Mdblue"
         },
+
         tag_unrep: "#CCECF2",
         tag_property: "#E9D6F8",
         tag_other: "#EDCFD9",
@@ -157,6 +182,10 @@ module.exports = {
           summary: "#FFF5EC",
           highlight: "#FCE3C8",
         },
+      },
+
+      animation: {
+        'spin-slow': 'spin 1s linear infinite',
       },
 
       maxWidth: {

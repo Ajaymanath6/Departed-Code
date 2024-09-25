@@ -60,12 +60,12 @@ tr:hover {
   line-height: 9px !important;
 }
 
-$primary-700: #005c87;
+//$primary-700: #005c87;
 
-button[aria-selected="true"] {
-  color: $primary-700;
-  border-bottom: 2px solid $primary-700;
-}
+// button[aria-selected="true"] {
+//   @apply text-primary-700 border-b-2 border-primary-700;
+//   //border-bottom: 2px solid $primary-700;
+// }
 
 //plancard start
 

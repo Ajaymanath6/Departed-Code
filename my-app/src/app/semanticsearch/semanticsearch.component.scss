@@ -50,17 +50,19 @@
 .parent-card:hover .card-btn {
   @apply bg-white;
 }
-.right-fade{
-  position: relative;
-}
+// .right-fade{
+//   position: relative;
+// }
 
-.right-fade::after {
-  content: ""; /* Empty content for the pseudo-element */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%; /* Adjust for desired fade width */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* Fade gradient */
-  z-index: 1; /* Ensures the pseudo-element is layered on top of the text */
-}
+// .right-fade::after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 50%;
+//   background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+//   z-index: 1;
+// }
+
+
