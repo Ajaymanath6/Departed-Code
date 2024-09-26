@@ -29,35 +29,89 @@
     </div>
   </div>
   <div class="mt-2 h-[1px] grow bg-gray-200"></div>
-  <ul class="py-2 px-2 text-sm text-Mdblue-600 h-40 overflow-y-scroll space-y-4-">
+  <ul class="py-2 px-2 text-sm text-Mdblue-600 h-40- h-60 overflow-y-scroll space-y-4-">
     <li class="">
       <label
         class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
-        for="Wisconsin Circuit Courts">
+        for="checkbox-1">
         <div class="flex">
           <input type="checkbox"
             class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0"
-            id="Wisconsin Circuit Courts">
+            id="checkbox-1">
           <span>Federal</span>
         </div>
         <div class="flex items-center">
-          <!-- <input type="checkbox"
-            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
-            id="Wisconsin Circuit Courts"> -->
           <span class="material-symbols-outlined icon-24 text-Mdblue-600">
             chevron_right
           </span>
         </div>
       </label>
+      <ul class="py-2 px-2- pl-4 text-sm text-Mdblue-600">
+         <li class="">
+      <label
+        class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
+        for="checkbox-2">
+        <div class="flex">
+          <input type="checkbox"
+            class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
+            id="checkbox-2">
+          <span>child-1</span>
+        </div>
+        <div class="flex items-center">
+          <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+            chevron_right
+          </span>
+        </div>
+      </label>
+       <ul class="py-2 px-2- pl-4 text-sm text-Mdblue-600">
+         <li class="">
+      <label
+        class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
+        for="checkbox-5">
+        <div class="flex">
+          <input type="checkbox"
+            class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
+            id="checkbox-5">
+          <span>child-2</span>
+        </div>
+        <div class="flex items-center">
+          <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+            chevron_right
+          </span>
+        </div>
+      </label>
+       <ul class="py-2 px-2- pl-4 text-sm text-Mdblue-600">
+         <li class="">
+      <label
+        class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
+        for="checkbox-4">
+        <div class="flex">
+          <input type="checkbox"
+            class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
+            id="checkbox-4">
+          <span>child-3</span>
+        </div>
+        <div class="flex items-center">
+          <!-- <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+            chevron_right
+          </span> -->
+        </div>
+      </label>
+    </li>
+      </ul>
+    </li>
+      </ul>
+    </li>
+      </ul>
     </li>
     <li class="">
       <label
         class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
-        for="Wisconsin Circuit Courts">
+        for="checkbox-3">
         <div class="flex">
           <input type="checkbox"
             class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
-            id="Wisconsin Circuit Courts">
+            id="checkbox-3">
           <span>State</span>
         </div>
         <div class="flex items-center">
@@ -71,7 +125,7 @@
       </label>
     </li>
   </ul>
-  <ul class="py-2 px-2 text-sm text-Mdblue-600 h-40 overflow-y-scroll space-y-4-">
+  <ul class="py-2 px-2 text-sm text-Mdblue-600 h-40 overflow-y-scroll space-y-4- d-none">
     <li class="">
       <label
         class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
@@ -135,7 +189,7 @@
 
 <!--angular animation -bottom to bottom start-->
 <div class="container">
-  <div [@slideInOut]="isVisible ? 'visible' : 'hidden'" class="sliding-div">
+  <div [@slideInOut]="isVisible ? 'visible' : 'hidden'" class="sliding-div w-full">
     This div slides in from the bottom
   </div>
   <button (click)="toggleVisibility()" class="toggle-button">
@@ -146,24 +200,5 @@
 
 
 <!--html str test start-->
-<!-- <button type="submit"
-  class="btn-focus flex items-center justify-center border border-transparent rounded bg-primary-700
-   p-3 text-base font-medium text-white
-   hover:bg-primary-800 focus:outline-none">
-   <span>Search</span>
-  </button>
-
-  <span class="material-symbols-outlined icon-20 text-primary-700 animate-spin">
-sync
-</span> -->
-
-<div class="flex items-center justify-center  bg-gray-100 shadow-sm p-4 gap-2">
-  <span class="material-symbols-outlined icon-20 Mdblue-fill-600 animate-spin">
-    sync
-  </span>
-  <p class="Mdblue-fill-700 text-base font-semibold">jfklgjl fjljgljfl gljfljgl</p>
-</div>
-
-
 
 <!--html str test end-->
