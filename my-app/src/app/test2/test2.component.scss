@@ -27,3 +27,36 @@
   cursor: pointer;
   z-index: 20;
 }
+
+
+// left sidebar sticky start
+
+.first-col {
+  position: sticky;
+  top: 0px;
+  height: calc(100vh - 48px); /* Adjust height to account for header (header(black) height should not change)*/
+  overflow-y: auto; /* Enable scrolling inside the first-col */
+
+}
+.border-red{
+  border: 3px solid red;
+}
+.border-green{
+  border: 3px solid #2ecc71;
+}
+.search-bar{
+  position:sticky;
+  top:0;
+  background-color: white;
+  z-index: 40;
+}
+@media screen and (max-width: 1366px) {
+  .search-bar{
+  position:static;
+  // top:0;
+  // background-color: white;
+  // z-index: 40;
+}
+}
+// left sidebar sticky end
+
