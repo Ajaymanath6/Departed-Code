@@ -1,10 +1,10 @@
 <!--UI design start-->
-<div class="cust-drop rounded-lg  bg-white z-10 w-96 block">
+<div class="cust-drop d-none z-10 block w-96 rounded-lg bg-white">
   <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
-    <div class="font-medium text-center mb-3">Add Court Filters</div>
+    <div class="mb-3 text-center font-medium">Add Court Filters</div>
     <div class="relative">
       <input type="text" placeholder="Search courts"
-        class="block py-2.5 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600">
+        class="w-80- block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-700 focus:border-Mdblue-600 focus:ring-0" />
       <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
           class="size-4 text-Mdblue-600">
@@ -13,51 +13,103 @@
         </svg>
       </div>
     </div>
-
   </div>
   <div class="mt-2 h-[1px] grow bg-gray-200"></div>
-  <div class="px-4 py-2 pb-0 flex items-center">
+  <div class="flex items-center px-4 py-2 pb-0">
     <button type="button"
-      class="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md px-2 py-2 text-sm font-semibold text-primary-700">
+      class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
       Back
     </button>
-    <div class="text-Mdblue-600 text-sm font-semibold flex justify-center grow gap-2 flex-wrap">
+    <div class="flex grow flex-wrap justify-center gap-2 text-sm font-semibold text-Mdblue-600">
       <a href="#"><span>Federal</span></a>
       <span>-</span>
       <a><span>Federal</span></a>
-
     </div>
   </div>
   <div class="mt-2 h-[1px] grow bg-gray-200"></div>
-  <ul class="py-2 px-2 text-sm text-Mdblue-600 h-40 overflow-y-scroll space-y-4-">
+  <ul class="h-40- space-y-4- h-60 overflow-y-scroll px-2 py-2 text-sm text-Mdblue-600">
     <li class="">
       <label
-        class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
-        for="Wisconsin Circuit Courts">
+        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+        for="checkbox-1">
         <div class="flex">
           <input type="checkbox"
-            class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0"
-            id="Wisconsin Circuit Courts">
+            class="mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+            id="checkbox-1" />
           <span>Federal</span>
         </div>
         <div class="flex items-center">
-          <!-- <input type="checkbox"
-            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
-            id="Wisconsin Circuit Courts"> -->
           <span class="material-symbols-outlined icon-24 text-Mdblue-600">
             chevron_right
           </span>
         </div>
       </label>
+      <ul class="px-2- py-2 pl-4 text-sm text-Mdblue-600">
+        <li class="">
+          <label
+            class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+            for="checkbox-2">
+            <div class="flex">
+              <input type="checkbox"
+                class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                id="checkbox-2" />
+              <span>child-1</span>
+            </div>
+            <div class="flex items-center">
+              <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+                chevron_right
+              </span>
+            </div>
+          </label>
+          <ul class="px-2- py-2 pl-4 text-sm text-Mdblue-600">
+            <li class="">
+              <label
+                class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+                for="checkbox-5">
+                <div class="flex">
+                  <input type="checkbox"
+                    class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                    id="checkbox-5" />
+                  <span>child-2</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+                    chevron_right
+                  </span>
+                </div>
+              </label>
+              <ul class="px-2- py-2 pl-4 text-sm text-Mdblue-600">
+                <li class="">
+                  <label
+                    class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+                    for="checkbox-4">
+                    <div class="flex">
+                      <input type="checkbox"
+                        class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                        id="checkbox-4" />
+                      <span>child-3</span>
+                    </div>
+                    <div class="flex items-center">
+                      <!-- <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+            chevron_right
+          </span> -->
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </li>
     <li class="">
       <label
-        class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
-        for="Wisconsin Circuit Courts">
+        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+        for="checkbox-3">
         <div class="flex">
           <input type="checkbox"
-            class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
-            id="Wisconsin Circuit Courts">
+            class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+            id="checkbox-3" />
           <span>State</span>
         </div>
         <div class="flex items-center">
@@ -71,15 +123,15 @@
       </label>
     </li>
   </ul>
-  <ul class="py-2 px-2 text-sm text-Mdblue-600 h-40 overflow-y-scroll space-y-4-">
+  <ul class="space-y-4- d-none h-40 overflow-y-scroll px-2 py-2 text-sm text-Mdblue-600">
     <li class="">
       <label
-        class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
+        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
         for="Wisconsin Circuit Courts">
         <div class="flex">
           <input type="checkbox"
-            class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0"
-            id="Wisconsin Circuit Courts">
+            class="mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+            id="Wisconsin Circuit Courts" />
           <span>Federal</span>
         </div>
         <div class="flex items-center">
@@ -94,7 +146,7 @@
     </li>
     <li class="">
       <label
-        class="flex items-center justify-between text-sm hover:cursor-pointer font-medium text-Mdblue-700 hover:bg-gray-100 rounded-md px-3 py-2 w-full"
+        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
         for="Wisconsin Circuit Courts">
         <div class="flex">
           <!-- <input type="checkbox"
@@ -104,8 +156,8 @@
         </div>
         <div class="flex items-center">
           <input type="checkbox"
-            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
-            id="Wisconsin Circuit Courts">
+            class="ng-untouched ng-pristine ng-valid h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+            id="Wisconsin Circuit Courts" />
           <!-- <span class="material-symbols-outlined icon-24 text-Mdblue-600">
             chevron_right
           </span> -->
@@ -116,54 +168,177 @@
   <div class="mt-4 h-[1px] grow bg-gray-200"></div>
   <div class="grid grid-cols-3 gap-2 px-4 py-3 text-sm text-Mdblue-700">
     <button type="button"
-      class="disabled opacity-50 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100- focus:ring-4 focus:ring-gray-200 rounded-md px-2 py-2 text-sm font-semibold text-primary-700">
+      class="disabled hover:bg-gray-100- rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 opacity-50 focus:outline-none focus:ring-4 focus:ring-gray-200">
       Clear All
     </button>
     <button type="button"
-      class="bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md px-2 py-2 text-sm font-semibold text-primary-700">
+      class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
       Select All
     </button>
     <button type="button"
-      class="btn-focus flex items-center justify-center rounded bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none border border-transparent">
+      class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none">
       <span>Done</span>
     </button>
   </div>
 </div>
 <!--UI design end-->
 
-
-
 <!--angular animation -bottom to bottom start-->
-<div class="container">
-  <div [@slideInOut]="isVisible ? 'visible' : 'hidden'" class="sliding-div">
+<div class="d-none- container multidoc-bottom-sheet">
+  <div [@slideInOut]="isVisible ? 'visible' : 'hidden'" class="sliding-div w-full">
     This div slides in from the bottom
   </div>
   <button (click)="toggleVisibility()" class="toggle-button">
-    {{ isVisible ? 'Hide' : 'Show' }} Sliding Div
+    {{ isVisible ? "Hide" : "Show" }} Sliding Div
   </button>
 </div>
 <!--angular animation -bottom to bottom end-->
 
+<!--search inside midcontent start-->
+<!--left sidebar sticky start-->
+<div class="outer-wrapper flex h-full flex-col d-none">
+  <div class="header border border-sky-700">
+    <div class="container">
+      <p>
+        header headerhe aderheaderh eaderhead erheade rheader header headerhe
+        aderheaderh eaderhead erheade rheader header headerhe aderheaderh
+        eaderhead erheade rheader header headerhe aderheaderh eaderhead erheade
+        rheader
+      </p>
+      <p>header headerhe aderheaderh eaderhead erheade rheader</p>
+    </div>
+  </div>
+  <div class="mid mid-content relative flex grow flex-col overflow-y-auto bg-section_gray">
+    <div class="search-bar border border-sky-500">
+      <div class="container">
+        <p>
+          search bar orem ipsum dolor sit amet consectetur adipisicing elit. Ea
+          modi similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+          debitis, consectetur commodi ratione impedit soluta atque
+          necessitatibus nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum
+          deleniti? Sint commodi doloremque optio id? Voluptate explicabo beatae
+          libero illum nihil accusantium nisi recusandae earum corporis atque,
+          dolores corrupti delectus soluta, sapiente ipsum suscipit sed. Sint
+          voluptatibus blanusdae quam deleniti, assumenda debit
+        </p>
+        <p>
+          search bar orem ipsum dolor sit amet consectetur adipisicing elit. Ea
+          modi similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+          debitis, consectetur commodi ratione impedit soluta atque
+          necessitatibus nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum
+          deleniti? Sint commodi doloremque optio id? Voluptate explicabo beatae
+          libero illum nihil accusantium nisi recusandae earum corporis atque,
+          dolores corrupti delectus soluta, sapiente ipsum suscipit sed. Sint
+          voluptatibus blanusdae quam deleniti, assumenda debit
+        </p>
+      </div>
+    </div>
 
-<!--html str test start-->
-<!-- <button type="submit"
-  class="btn-focus flex items-center justify-center border border-transparent rounded bg-primary-700
-   p-3 text-base font-medium text-white
-   hover:bg-primary-800 focus:outline-none">
-   <span>Search</span>
-  </button>
+    <div class="flex grow">
+      <div
+        class="first-col border-red sticky top-0 flex w-full max-w-[20%] overflow-y-auto bg-white p-6 pl-[1.2rem] pr-[1.2rem]">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
+        similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+        debitis, consectetur commodi ratione impedit soluta atque necessitatibus
+        nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
+        commodi doloremque optio id? Voluptate explicabo beatae libero illum
+        nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
+        delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
+        blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
+        sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
+        nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
+        distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
+        atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
+        similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+        debitis, consectetur commodi ratione impedit soluta atque necessitatibus
+        nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
+        commodi doloremque optio id? Voluptate explicabo beatae libero illum
+        nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
+        delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
+        blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
+        sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
+        nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
+        distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
+        atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
+        similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+        debitis, consectetur commodi ratione impedit soluta atque necessitatibus
+        nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
+        commodi doloremque optio id? Voluptate explicabo beatae libero illum
+        nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
+        delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
+        blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
+        sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
+        nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
+        distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
+        atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
+      </div>
+      <div class="second-col border-green w-full max-w-[80%]">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error,
+        quam quo sint maxime quos asperiores! Qui aliquid, odio natus,
+        perferendis explicabo ab error deleniti corporis consequatur, facere cum
+        ducimus. Fugit iusto ea saepe doloremque voluptas alias quae.
+        Perspiciatis quidem iusto quos fugit quia voluptatem soluta amet
+        excepturi quas eos, odit nisi, pariatur expedita eum delectus obcaecati
+        sit animi ducimus. Est, numquam vitae! Dolorem, iure officiis. Omnis
+        nostrum inventore quod voluptate culpa consequatur, nisi sequi vitae
+        optio magnam aspernatur expedita sed ipsam, dignissimos dolorem commodi
+        animi architecto vero. Est, ipsum! Dolore et doloremque molestias,
+        mollitia ea ullam minima, porro accusantium blanditiis possimus
+        voluptate repudiandae eum id ab reprehenderit, assumenda sequi quis
+        quisquam quam fugiat perspiciatis temporibus dicta aliquam nobis?
+        Accusantium? Labore adipisci illum inventore qui sit saepe nam
+        voluptatem ut sed, eius beatae, totam vel facilis alias quam officia
+        soluta velit. Consequatur quam ipsa, aliquam doloribus eos minima cumque
+        doloremque. Temporibus praesentium, qui magni facere repellendus nam
+        fuga non vel culpa, inventore laboriosam ratione deserunt! Aliquam,
+        facilis doloribus consectetur minus illo ut numquam a maiores culpa
+        reiciendis hic aliquid unde? Error doloremque eos sunt deserunt sapiente
+        eaque id facilis laudantium autem officia alias numquam ipsa tenetur,
+        voluptatem delectus, voluptatibus veniam dolorum eius dicta voluptate
+        voluptates nostrum tempore. Minima, ab ex? Consectetur, rerum a, et
+        cupiditate cumque expedita nam non nobis reiciendis explicabo ab soluta
+        laboriosam ea est, minus ex tempore odio. Odit nisi amet quas quidem
+        nihil est sapiente neque? Hic similique earum fugit modi nam beatae
+        dolorum possimus reprehenderit accusamus, aspernatur, quisquam veniam.
+        Fugit nemo praesentium optio voluptates consequuntur! Animi excepturi
+        praesentium, aperiam placeat sapiente quo est voluptate molestiae? Vel,
+        consequuntur? Minus necessitatibus veniam, quos quidem optio recusandae
+        in. Consequatur, quasi dignissimos! Alias nostrum, pariatur nisi
+        voluptates, deserunt ipsa praesentium at omnis quas, quod aspernatur
+        sunt consectetur assumenda ducimus!
+      </div>
+    </div>
+  </div>
+</div>
+<div class="chatgpt outer-wrapper flex h-full flex-col d-none">
+  <div class="header border border-sky-700">
+    <div class="container">
+      <p>header content</p>
+    </div>
+  </div>
 
-  <span class="material-symbols-outlined icon-20 text-primary-700 animate-spin">
-sync
-</span> -->
+  <div class="mid-content relative flex flex-grow overflow-hidden bg-section_gray">
+    <div class="flex flex-col">
 
-<div class="flex items-center justify-center  bg-gray-100 shadow-sm p-4 gap-2">
-  <span class="material-symbols-outlined icon-20 Mdblue-fill-600 animate-spin">
-    sync
-  </span>
-  <p class="Mdblue-fill-700 text-base font-semibold">jfklgjl fjljgljfl gljfljgl</p>
+
+      <div class=" border border-sky-700">
+        <div class="container">
+          <p>search content</p>
+        </div>
+      </div>
+<div class="flex">
+      <div class="first-col sticky top-0 w-[20%] h-full overflow-y-auto p-6 bg-white border-r">
+        <p>first-col content (scrollable)</p>
+      </div>
+      <div class="second-col w-[80%] h-full overflow-y-auto p-6 bg-gray-200">
+        <p>second-col content (scrollable)</p>
+      </div>
 </div>
 
-
-
-<!--html str test end-->
+    </div>
+  </div>
+</div>
+<!--left sidebar sticky end-->
+<!--search inside midcontent end-->
