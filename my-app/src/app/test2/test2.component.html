@@ -184,7 +184,7 @@
 <!--UI design end-->
 
 <!--angular animation -bottom to bottom start-->
-<div class="d-none container">
+<div class="d-none- container multidoc-bottom-sheet">
   <div [@slideInOut]="isVisible ? 'visible' : 'hidden'" class="sliding-div w-full">
     This div slides in from the bottom
   </div>
@@ -196,7 +196,7 @@
 
 <!--search inside midcontent start-->
 <!--left sidebar sticky start-->
-<div class="outer-wrapper flex h-full flex-col">
+<div class="outer-wrapper flex h-full flex-col d-none">
   <div class="header border border-sky-700">
     <div class="container">
       <p>
@@ -309,6 +309,34 @@
         voluptates, deserunt ipsa praesentium at omnis quas, quod aspernatur
         sunt consectetur assumenda ducimus!
       </div>
+    </div>
+  </div>
+</div>
+<div class="chatgpt outer-wrapper flex h-full flex-col d-none">
+  <div class="header border border-sky-700">
+    <div class="container">
+      <p>header content</p>
+    </div>
+  </div>
+
+  <div class="mid-content relative flex flex-grow overflow-hidden bg-section_gray">
+    <div class="flex flex-col">
+
+
+      <div class=" border border-sky-700">
+        <div class="container">
+          <p>search content</p>
+        </div>
+      </div>
+<div class="flex">
+      <div class="first-col sticky top-0 w-[20%] h-full overflow-y-auto p-6 bg-white border-r">
+        <p>first-col content (scrollable)</p>
+      </div>
+      <div class="second-col w-[80%] h-full overflow-y-auto p-6 bg-gray-200">
+        <p>second-col content (scrollable)</p>
+      </div>
+</div>
+
     </div>
   </div>
 </div>
