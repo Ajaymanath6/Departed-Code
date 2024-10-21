@@ -186,6 +186,7 @@ module.exports = {
 
       animation: {
         "spin-slow": "spin 1s linear infinite",
+        "draw-check": "drawCheck 1.5s ease-in-out forwards",
       },
 
       maxWidth: {
