@@ -135,7 +135,7 @@ module.exports = {
           900: "#667683", //popup overlay color default
           //shade-06 is in "Mdblue"
         },
-
+        //"tailwindCSS.colorDecorators": true ,
         tag_unrep: "#CCECF2",
         tag_property: "#E9D6F8",
         tag_other: "#EDCFD9",
