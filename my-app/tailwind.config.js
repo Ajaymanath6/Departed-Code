@@ -26,7 +26,7 @@ module.exports = {
         secondary: {
           //royalblue-
           50: "#C0E7EF",
-          100: "", //on hover outline border color used
+          100: "#E5F5F8", //banner color case detail page
           200: "#CCECF2", // full gauge bottom 10% bg //detail page tag color (unrepresented)
           300: "#90B7CA",
           400: "#6CA0B8",
@@ -39,7 +39,7 @@ module.exports = {
         red: {
           50: "#FFE7E7",
           100: "#EDCFD9",
-          200: "#F0D4D9",
+          200: "#F6E7EC", //banner color case detail page
           300: "#C81E1E",
           400: "#C9D7E6",
           500: "#667683",
@@ -135,7 +135,7 @@ module.exports = {
           900: "#667683", //popup overlay color default
           //shade-06 is in "Mdblue"
         },
-
+        //"tailwindCSS.colorDecorators": true ,
         tag_unrep: "#CCECF2",
         tag_property: "#E9D6F8",
         tag_other: "#EDCFD9",
@@ -185,7 +185,8 @@ module.exports = {
       },
 
       animation: {
-        'spin-slow': 'spin 1s linear infinite',
+        "spin-slow": "spin 1s linear infinite",
+        "draw-check": "drawCheck 1.5s ease-in-out forwards",
       },
 
       maxWidth: {

@@ -1,7 +1,80 @@
-<!--UI design start-->
-<!--court filter start -->
+<!--nishmitha court latest update alert start-->
+<div class="flex justify-between gap-2 p-4 shadow-sm bg-gray-100 rounded-md">
+  <div class="flex flex-col flex-1 gap-y-1 justify-center">
+    <div class="flex gap-1">
+      <span class="material-symbols-outlined flex items-center icon-20 text-Mdblue-700 animate-spin"> cached </span>
+      <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates. Please
+        wait... </p>
+    </div>
+    <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold on
+      for a momemt while we gather the most recent updates.</p>
+  </div>
+  <div class="d-none- shrink-0">
+    <button type="button" class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  ">
+      <span class="material-symbols-outlined Mdblue-fill-700 icon-20">
+        close
+      </span>
+    </button>
+  </div>
+</div>
 
-<div class="cust-drop d-none- z-10 block w-96 rounded-lg bg-white">
+<h2 class="mt-4"></h2>
+
+
+<div class="flex justify-between gap-2 p-4 shadow-sm bg-secondary-100 rounded-md">
+  <div class="flex flex-col flex-1 gap-y-1 justify-center">
+    <div class="flex gap-1">
+
+      <span class="material-symbols-outlined flex items-center icon-20 text-secondary-700 ">
+        check
+      </span>
+      <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates. Please
+        wait... </p>
+    </div>
+    <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold on
+      for a momemt while we gather the most recent updates.</p>
+  </div>
+  <div class="d-none- shrink-0">
+    <button type="button"
+      class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  text-white  hover:bg-secondary-500 bg-secondary-700">
+      Refresh
+    </button>
+  </div>
+</div>
+
+<h2 class="mt-4"></h2>
+
+
+<div class="flex justify-between gap-2 p-4 shadow-sm bg-red-200 rounded-md">
+  <div class="flex flex-col flex-1 gap-y-1 justify-center">
+    <div class="flex gap-1">
+
+      <span class="material-symbols-outlined flex items-center icon-20 text-red-700">
+        close
+      </span>
+      <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates. Please
+        wait... </p>
+    </div>
+    <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold on
+      for a momemt while we gather the most recent updates.</p>
+  </div>
+  <div class="d-none- shrink-0">
+    <button type="button" class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  ">
+      <span class="material-symbols-outlined text-gray-400">
+        close
+      </span>
+    </button>
+  </div>
+</div>
+
+<!--nishmitha court latest update alert end-->
+
+<h2 class="mt-4"></h2>
+
+<!--UI design start-->
+
+<!--court filter start -->
+<div class="cust-drop d-none z-10 block w-96 rounded-lg bg-white">
   <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
     <div class="mb-3 text-center font-medium">Add Court Filters</div>
     <div class="relative">
@@ -185,6 +258,227 @@
 </div>
 <!--court filter end -->
 
+<!--account switcher dropdown start-->
+<div class="cust-drop d-none- z-10 block w-64 rounded-lg bg-white ml-3">
+  <div id="accordion-collapse" data-accordion="collapse" class="px-2 py-2">
+    <h2 id="accordion-collapse-heading-1">
+      <button type="button"
+        class="inline-flex w-full items-center justify-between rounded border border-gray-300 bg-white p-2 text-center text-base font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-Mdblue-600 focus:bg-gray-100 focus:outline-none"
+        data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+        aria-controls="accordion-collapse-body-1">
+        <button class="p-2 hover:bg-gray-100">
+          <div class="flex items-center">
+            <div class="mr-2 flex-shrink-0">
+              <div size="size-8">
+                <div
+                  class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                  <span class="font-medium text-sm text-white">DP</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 text-start">
+              <h5 class="text-sm font-semibold text-Mdblue-700">
+                David Parnall
+              </h5>
+              <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+            </div>
+          </div>
+        </button>
+        <svg data-accordion-icon class="ms-3 size-2.5 text-Mdblue-600 rotate-180 shrink-0" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 5 5 1 1 5" />
+        </svg>
+      </button>
+    </h2>
+    <div id="accordion-collapse-body-1" class="hidden h-20 overflow-auto"
+      aria-labelledby="accordion-collapse-heading-1">
+      <ul class="flex flex-col">
+        <li>
+          <button class="p-2 hover:bg-gray-100 w-full">
+            <div class="flex items-center">
+              <div class="mr-2 flex-shrink-0">
+                <div size="size-8">
+                  <div
+                    class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                    <span class="font-medium text-sm text-white">DP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 text-start">
+                <h5 class="text-sm font-semibold text-Mdblue-700">
+                  David Parnall
+                </h5>
+                <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li> <button class="p-2 hover:bg-gray-100 w-full">
+            <div class="flex items-center">
+              <div class="mr-2 flex-shrink-0">
+                <div size="size-8">
+                  <div
+                    class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                    <span class="font-medium text-sm text-white">DP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 text-start">
+                <h5 class="text-sm font-semibold text-Mdblue-700">
+                  David Parnall
+                </h5>
+                <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+              </div>
+            </div>
+          </button></li>
+      </ul>
+    </div>
+    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown-accnt-switcher"
+      class="inline-flex w-full items-center justify-between rounded border border-gray-300 bg-white p-2 text-center text-base font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-Mdblue-600 focus:bg-gray-100 focus:outline-none"
+      type="button">
+      <button class="p-2 hover:bg-gray-100">
+        <div class="flex items-center">
+          <div class="mr-2 flex-shrink-0">
+            <div size="size-8">
+              <div
+                class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                <span class="font-medium text-sm text-white">DP</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 text-start">
+            <h5 class="text-sm font-semibold text-Mdblue-700">
+              David Parnall
+            </h5>
+            <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+          </div>
+        </div>
+      </button>
+      <svg data-accordion-icon class="ms-3 size-2.5 text-Mdblue-600 rotate-180 shrink-0" aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+      </svg>
+    </button>
+
+    <!-- Dropdown menu -->
+    <div id="dropdown-accnt-switcher"
+      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-64 dark:bg-gray-700">
+      <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+        <div class="mb-3 text-center font-medium">Select an account</div>
+      </div>
+      <ul class="flex flex-col">
+        <li>
+          <button class="p-2 hover:bg-gray-100 w-full">
+            <div class="flex items-center">
+              <div class="mr-2 flex-shrink-0">
+                <div size="size-8">
+                  <div
+                    class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                    <span class="font-medium text-sm text-white">DP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 text-start">
+                <h5 class="text-sm font-semibold text-Mdblue-700">
+                  David Parnall
+                </h5>
+                <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+              </div>
+            </div>
+          </button>
+        </li>
+        <li> <button class="p-2 hover:bg-gray-100 w-full">
+            <div class="flex items-center">
+              <div class="mr-2 flex-shrink-0">
+                <div size="size-8">
+                  <div
+                    class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                    <span class="font-medium text-sm text-white">DP</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 text-start">
+                <h5 class="text-sm font-semibold text-Mdblue-700">
+                  David Parnall
+                </h5>
+                <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+              </div>
+            </div>
+          </button></li>
+      </ul>
+    </div>
+  </div>
+  <!-- <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+    <div class="mb-3 text-center font-medium">Add Court Filters</div>
+  </div> -->
+  <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+  <!-- <div class="flex items-center px-4 py-2 pb-0">
+    <button type="button"
+      class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+      Back
+    </button>
+    <div class="flex grow flex-wrap justify-center gap-2 text-sm font-semibold text-Mdblue-600">
+      <a href="#"><span>Federal</span></a>
+      <span>-</span>
+      <a><span>Federal</span></a>
+    </div>
+  </div> -->
+  <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+  <ul class="h-40- space-y-4- h-60- overflow-y-scroll- px-2- py-2 text-sm text-Mdblue-600">
+    <li class="">
+      <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
+        <span class="material-symbols-outlined icon-20 text-Mdblue-600"> account_circle </span>
+        <span class="ml-2 text-Mdblue-700">My Account & Profile</span>
+      </button>
+    </li>
+    <li class="">
+
+      <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
+        <span class="material-symbols-outlined icon-20 text-Mdblue-600"> group </span>
+        <span class="ml-2 text-Mdblue-700">My Team</span>
+      </button>
+    </li>
+    <li class="">
+
+      <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
+        <span class="material-symbols-outlined icon-20 text-Mdblue-600"> tune </span>
+        <span class="ml-2 text-Mdblue-700">Notification Settings</span>
+      </button>
+    </li>
+  </ul>
+
+  <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+  <div class=" gap-2 text-sm text-Mdblue-700">
+    <ul class=" py-2 text-sm text-Mdblue-600">
+      <li class="">
+        <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
+          <span class="material-symbols-outlined icon-20 text-Mdblue-600"> logout </span>
+          <span class="ml-2 text-Mdblue-700"> Log Out</span>
+        </button>
+
+      </li>
+
+    </ul>
+    <!-- <button type="button"
+      class="disabled hover:bg-gray-100- rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 opacity-50 focus:outline-none focus:ring-4 focus:ring-gray-200">
+      Clear All
+    </button>
+    <button type="button"
+      class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+      Select All
+    </button>
+    <button type="button"
+      class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none">
+      <span>Done</span>
+    </button> -->
+  </div>
+
+
+
+</div>
+<!--account switcher dropdown end-->
+
 <!--UI design end-->
 
 <!--spinner start-->
@@ -366,21 +660,3 @@
 </div>
 <!--left sidebar sticky end-->
 <!--search inside midcontent end-->
-
-
-<!--nishmitha court latest update alert start-->
-<div class="flex justify-between gap-2 p-4 shadow-sm bg-gray-100 rounded-md">
-  <div class="flex flex-col flex-1 gap-y-1 justify-center">
-    <div class="flex gap-1">
-      <span class="material-symbols-outlined flex items-center icon-20 text-Mdblue-700 animate-spin"> cached </span>
-      <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates. Please
-        wait... </p>
-    </div>
-    <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold on
-      for a momemt while we gather the most recent updates.</p>
-  </div>
-  <div class="d-none- shrink-0">
-    button
-  </div>
-</div>
-<!--nishmitha court latest update alert end-->
