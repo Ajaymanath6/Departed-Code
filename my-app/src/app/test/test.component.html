@@ -2160,7 +2160,7 @@
 
 
 <!--html formater start-->
-<div class="cust-drop rounded-lg attorney-state-filter bg-white z-10 w-80 d-none- !ml-[1%] block"
+<div class="cust-drop rounded-lg attorney-state-filter bg-white z-10 w-80 d-none !ml-[1%] block"
   id="dropdown-court-search-search-1-866-target" data-popper-placement="bottom"
   style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-17px, 64px);">
   <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
@@ -2199,6 +2199,61 @@
   </div>
 </div>
 
+<!--ask with claude ai, for artemis uI which is breaking for different layouts eg:attorney page etc start-->
+<!--answer from claude ai start-->
+<body class="min-h-screen bg-gray-50 d-none">
+  <!-- Main wrapper -->
+  <div class="flex flex-col h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200 px-4 py-3">
+      <div class="flex items-center justify-between">
+        <h1 class="text-xl font-semibold text-gray-900">Header</h1>
+      </div>
+    </header>
+
+    <!-- Main content area with sidebar -->
+    <div class="flex flex-1 overflow-hidden">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white border-r border-gray-200 hidden md:block">
+        <div class="h-full overflow-y-auto p-4">
+          <!-- Sidebar content -->
+          <nav class="space-y-2">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Menu Item 1</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Menu Item 2</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Menu Item 3</a>
+            <!-- Add more menu items to test scrolling -->
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Menu Item 4</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Menu Item 5</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="flex-1 overflow-y-auto p-4 bg-gray-50">
+        <!-- Content -->
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold mb-4">Main Content</h2>
+          <p class="mb-4">This is the main content area. It scrolls independently of the sidebar.</p>
+          <!-- Add more content to test scrolling -->
+          <div class="space-y-4">
+            <div class="p-4 bg-white rounded-lg shadow">
+              <h3 class="text-lg font-semibold mb-2">Section 1</h3>
+              <p>Content for section 1</p>
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow">
+              <h3 class="text-lg font-semibold mb-2">Section 2</h3>
+              <p>Content for section 2</p>
+            </div>
+            <!-- Add more sections to test scrolling -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+<!--answer from claude ai end-->
+<!--ask with claude ai, for artemis uI which is breaking for different layouts eg:attorney page etc end-->
 
 
 
@@ -2206,7 +2261,7 @@
 
 <!--custom check animation using css and in config file start-->
 <!--animate-draw-check class-->
-<svg class="w-24 h-24 text-green-500 animate-draw-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<svg class="w-24 h-24 text-green-500 animate-draw-check d-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
   <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" />
 </svg>
 <!--custom check animation using css and in config file end-->
