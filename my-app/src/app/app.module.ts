@@ -20,6 +20,7 @@ import { ChildCompComponent } from './child-comp/child-comp.component';
 import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
 import { Test2Component } from './test2/test2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DeepComponent } from './deep/deep.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChildCompComponent,
     MobileUIComponent,
     Test2Component,
+    DeepComponent,
 
   ],
   imports: [

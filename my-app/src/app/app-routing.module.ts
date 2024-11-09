@@ -10,6 +10,7 @@ import { SemanticsearchComponent } from './semanticsearch/semanticsearch.compone
 import { ChatgptComponent } from './chatgpt/chatgpt.component';
 import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
 import { Test2Component } from './test2/test2.component';
+import { DeepComponent } from './deep/deep.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'test2',
     component: Test2Component,
+  },
+  {
+    path: 'deep',
+    component: DeepComponent,
   },
   {
     path: 'semantic',
