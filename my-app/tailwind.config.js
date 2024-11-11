@@ -218,6 +218,7 @@ module.exports = {
         //takes min-width
         sm: "700px", //both works, applied in intuitive tab, in welcome page 4 video
         md: "900px",
+        mdm: { max: "1366px" }, //will ONLY apply from 0 to 1366px eg: max:p-4
       },
       container: {
         center: true,

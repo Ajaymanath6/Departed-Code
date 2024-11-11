@@ -386,6 +386,14 @@ input[type="checkbox"] {
     "GRAD" 0,
     "opsz" 24;
 }
+.red-fill-700 {
+  @apply text-red-700;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
 
 //accordian select start
 .accordion-heading[aria-expanded="true"] {
