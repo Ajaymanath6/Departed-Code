@@ -1,3 +1,181 @@
+<!--radio test start-->
+
+<h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">How much do you expect to use each month?</h3>
+<ul class="grid w-full gap-6 md:grid-cols-2">
+    <li class="relative">
+        <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="absolute right-[0.3rem] top-[0.3rem] peer" required />
+
+        <label for="hosting-small" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div>j lfjldjfljldjfljdf</div>
+          <div class="block">
+                <div class="w-full text-lg font-semibold">0-50 MB</div>
+                <div class="w-full">Good for small websites</div>
+            </div>
+        </label>
+    </li>
+    <li  class="relative">
+        <input type="radio" id="hosting-big" name="hosting" value="hosting-big" class="absolute right-[0.3rem] top-[0.3rem] peer">
+        <label for="hosting-big" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <div class="block">
+                <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                <div class="w-full">Good for large websites</div>
+            </div>
+        </label>
+    </li>
+</ul>
+<ul class="grid w-full gap-6 md:grid-cols-2">
+    <li class="relative">
+        <input type="radio" id="hosting-small2" name="hosting" value="hosting-small2" class="absolute right-[0.3rem] top-[0.3rem] peer" required />
+        <label for="hosting-small2" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <div class="block">
+                <div class="w-full text-lg font-semibold">0-50 MB</div>
+                <div class="w-full">Good for small websites</div>
+            </div>
+        </label>
+    </li>
+    <li  class="relative">
+        <input type="radio" id="hosting-big2" name="hosting" value="hosting-big2" class="absolute right-[0.3rem] top-[0.3rem] peer">
+        <label for="hosting-big2" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <div class="block">
+                <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                <div class="w-full">Good for large websites</div>
+            </div>
+        </label>
+    </li>
+</ul>
+<!--radio test end-->
+
+
+<!-- Table with sticky first column, tooltip and horizontal scroll start-->
+<div class="relative d-none">
+  <div class="overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+        <tr>
+          <!-- Sticky header -->
+          <th class="sticky left-0 z-20 px-6 py-3 bg-gray-50">Name</th>
+          <th class="px-6 py-3">Email</th>
+          <th class="px-6 py-3">Role</th>
+          <!-- Add more columns as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white border-b hover:bg-gray-50">
+          <!-- Sticky column with Flowbite tooltip -->
+          <td class="sticky left-0 z-20 px-6 py-4 bg-white">
+            <div data-tooltip-target="tooltip-default" class="font-medium text-gray-900 cursor-pointer">
+              John Doe
+            </div>
+            <div id="tooltip-default" role="tooltip"
+              class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+              Senior Developer with 5 years experience
+              <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
+            </div>
+          </td>
+          <td class="px-6 py-4">john@example.com</td>
+          <td class="px-6 py-4">Developer</td>
+          <!-- Add more columns as needed -->
+        </tr>
+        <tr class="bg-white border-b hover:bg-gray-50">
+          <!-- Sticky column with Flowbite tooltip -->
+          <td class="sticky left-0 z-20 px-6 py-4 bg-white">
+            <div data-tooltip-target="tooltip-default2" class="font-medium text-gray-900 cursor-pointer">
+              test Doe
+            </div>
+            <div id="tooltip-default2" role="tooltip"
+              class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+              juniour Developer with 5 years experience
+              <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
+            </div>
+          </td>
+          <td class="px-6 py-4">john@example.com</td>
+          <td class="px-6 py-4">Developer</td>
+          <!-- Add more columns as needed -->
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- If you still see any positioning issues, you can also try using Flowbite's placement attributes: -->
+<!-- Table with sticky first column, tooltip and horizontal scroll end-->
+
+
+<!--table when width reduced tooltip go behind the row fix start-->
+<div class="relative w-[50%] d-none">
+  <div class="overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+        <tr>
+          <th class="sticky left-0 z-20 px-6 py-3 bg-gray-50">Name</th>
+          <th class="px-6 py-3">Email</th>
+          <th class="px-6 py-3">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white border-b hover:bg-gray-50">
+          <td class="sticky left-0 z-20 px-6 py-4 bg-white relative"> <!-- Added relative here -->
+            <div data-tooltip-target="tooltip-default" data-tooltip-placement="right"
+              class="font-medium text-gray-900 cursor-pointer">
+              John Doe
+            </div>
+            <div id="tooltip-default" role="tooltip"
+              class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip -translate-y-1/2- left-full- ml-2">
+              <!-- Added positioning classes -->
+              Senior Developer with 5 years experience
+            </div>
+          </td>
+          <td class="px-6 py-4">john@example.com</td>
+          <td class="px-6 py-4">Developer</td>
+        </tr>
+        <tr class="bg-white border-b hover:bg-gray-50">
+          <td class="sticky left-0 z-20 px-6 py-4 bg-white relative"> <!-- Added relative here -->
+            <div data-tooltip-target="tooltip-default2" data-tooltip-placement="right"
+              class="font-medium text-gray-900 cursor-pointer">
+              test Doe
+            </div>
+            <div id="tooltip-default2" role="tooltip"
+              class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip -translate-y-1/2- left-full- ml-2">
+              <!-- Added positioning classes -->
+              juniour Developer with 5 years experience
+            </div>
+          </td>
+          <td class="px-6 py-4">john@example.com</td>
+          <td class="px-6 py-4">Developer</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--claude AI: If you still see any positioning issues, you can also try using Flowbite's placement attributes:
+  Key changes made:
+
+Added relative to the sticky td cells
+Added positioning classes to tooltips:
+
+left-full to position tooltip to the right of the cell
+ml-2 for some margin from the cell
+-translate-y-1/2 to center vertically
+
+
+
+These changes will:
+
+Make tooltips appear consistently for all rows
+Position tooltips to the right of the sticky column
+Prevent tooltips from overlapping with other rows
+Maintain proper positioning even when table width is reduced
+
+If you still see any positioning issues, you can also try using Flowbite's placement attributes:
+<div data-tooltip-target="tooltip-default"
+     data-tooltip-placement="right"
+     class="font-medium text-gray-900 cursor-pointer">
+coz of padding in td it slightly goes in, so if remove padding right of first col and -translate-y-1/2 left-full works -->
+<!--table when width reduced tooltip go behind the row fix end-->
+
+
+
+
 <!--nishmitha court latest update alert start-->
 <div class="flex justify-between gap-2 p-4 shadow-sm bg-gray-100 rounded-md">
   <div class="flex flex-col flex-1 gap-y-1 justify-center">
@@ -299,6 +477,37 @@
       <span class="material-symbols-outlined mr-2 Mdblue-fill-600"> account_balance </span>
       <p class="text-base font-semibold">In order to add a tracker you need to add your pacer credentials.</p>
     </div>
+    <div class="testing-d-w-m-radio mt-4">
+      <ul class=" bg-white text-sm font-medium text-Mdblue-700 grid grid-cols-3 gap-x-2">
+        <li>
+          <input type="radio" id="d-w-m-1" name="hosting" value="d-w-m-1" class="hidden peer" required />
+          <label for="d-w-m-1"
+            class="relative group flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
+            <span
+              class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+            <p class="text-sm font-semibold">Daily</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" id="d-w-m-2" name="hosting" value="d-w-m-2" class="hidden peer" required />
+          <label for="d-w-m-2"
+            class="relative flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
+            <span
+              class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+            <p class="text-sm font-semibold">Daily</p>
+          </label>
+        </li>
+        <li>
+          <input type="radio" id="d-w-m-3" name="hosting" value="d-w-m-3" class="hidden peer" required />
+          <label for="d-w-m-3"
+            class="relative flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
+            <span
+              class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+            <p class="text-sm font-semibold">Daily</p>
+          </label>
+        </li>
+      </ul>
+    </div>
     <div class="mt-4 d-none-">
       <ul class="flex bg-white text-sm font-medium text-Mdblue-700 space-x-2">
         <li
@@ -313,98 +522,140 @@
             class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
           <p class="text-sm font-semibold">Weekly...</p>
         </li>
-         <li
+        <li
           class="group relative   flex w-full justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
           <span
             class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
           <p class="text-sm font-semibold">Monthly...</p>
         </li>
+
       </ul>
     </div>
     <div class="mt-4">
       <p class="text-base font-semibold text-Mdblue-700">Every...</p>
-       <div class=" d-none-">
-      <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
-        <li
-          class="  min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">Mon</p>
-        </li>
-        <li
-          class="   min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">Tue</p>
-        </li>
-         <li
-          class="   min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">Wed</p>
-        </li>
-         <li
-          class="  min-w-[4rem]  flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">Thu</p>
-        </li>
-         <li
-          class="  min-w-[4rem]  flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <!-- <span
+      <div class="d-none-">
+        <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
+          <li
+            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">Mon</p>
+          </li>
+          <li
+            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">Tue</p>
+          </li>
+          <li
+            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">Wed</p>
+          </li>
+          <li
+            class="min-w-[4rem]  flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">Thu</p>
+          </li>
+          <li
+            class="min-w-[4rem]  flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <!-- <span
             class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0
              transition-opacity duration-300 ease-in-out">check_circle</span> -->
-          <p class="text-sm font-semibold">Fri</p>
-        </li>
-        <li
-          class="   min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">Fri</p>
+          </li>
+          <li
+            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
 
-          <p class="text-sm font-semibold">Sat</p>
-        </li>
-        <li
-          class="   min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">Sat</p>
+          </li>
+          <li
+            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
 
-          <p class="text-sm font-semibold">Sun</p>
-        </li>
-      </ul>
-       <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
-        <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">01</p>
-        </li>
-        <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">01</p>
-        </li>
-         <li
-          class="  min-w-[3rem]flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">03</p>
-        </li>
-         <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">04</p>
-        </li>
-         <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <!-- <span
+            <p class="text-sm font-semibold">Sun</p>
+          </li>
+        </ul>
+        <ul
+          class="testing-week-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
+          <li>
+            <input type="checkbox" id="wk1" value="" class="hidden peer" required="">
+            <label for="wk1"
+              class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+              <p class="text-sm font-semibold">Mon</p>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="wk2" value="" class="hidden peer" required="">
+            <label for="wk2"
+              class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+              <p class="text-sm font-semibold">Tue</p>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="wk3" value="" class="hidden peer" required="">
+            <label for="wk3"
+              class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+              <p class="text-sm font-semibold">Wed</p>
+            </label>
+          </li>
+
+        </ul>
+        <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
+          <li
+            class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">01</p>
+          </li>
+          <li
+            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">01</p>
+          </li>
+          <li
+            class="  min-w-[3rem]flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">03</p>
+          </li>
+          <li
+            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">04</p>
+          </li>
+          <li
+            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <!-- <span
             class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 -hover:opacity-100 opacity-0
              transition-opacity duration-300 ease-in-out">check_circle</span> -->
-          <p class="text-sm font-semibold">05</p>
-        </li>
-        <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">06</p>
-        </li>
-        <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">07</p>
-        </li>
-         <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">08</p>
-        </li>
-         <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">08</p>
-        </li>
-         <li
-          class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <p class="text-sm font-semibold">10</p>
-        </li>
-      </ul>
-    </div>
+            <p class="text-sm font-semibold">05</p>
+          </li>
+          <li
+            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">06</p>
+          </li>
+          <li
+            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">07</p>
+          </li>
+          <li
+            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">08</p>
+          </li>
+          <li
+            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">08</p>
+          </li>
+          <li
+            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+            <p class="text-sm font-semibold">10</p>
+          </li>
+        </ul>
+        <ul class="testing-date-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
+          <li>
+            <input type="checkbox" id="date1" value="" class="hidden peer" required="">
+            <label for="date1"
+              class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+              <p class="text-sm font-semibold">01</p>
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="date2" value="" class="hidden peer" required="">
+            <label for="date2"
+              class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+              <p class="text-sm font-semibold">02</p>
+            </label>
+          </li>
+        </ul>
+      </div>
       <p class="text-base font-semibold text-Mdblue-600">Pick as many days as you want. </p>
     </div>
   </div>
