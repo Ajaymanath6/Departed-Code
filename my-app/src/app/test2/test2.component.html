@@ -54,9 +54,6 @@
 <!--radio test end-->
 
 
-
-
-
 <!-- Table with sticky first column, tooltip and horizontal scroll start-->
 <div class="relative d-none">
   <div class="overflow-x-auto shadow-md sm:rounded-lg">
@@ -167,8 +164,6 @@ Added positioning classes to tooltips:
 left-full to position tooltip to the right of the cell
 ml-2 for some margin from the cell
 -translate-y-1/2 to center vertically
-
-
 
 These changes will:
 
@@ -488,6 +483,7 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
       <span class="material-symbols-outlined mr-2 Mdblue-fill-600"> account_balance </span>
       <p class="text-base font-semibold">In order to add a tracker you need to add your pacer credentials.</p>
     </div>
+    <h6>testing-d-w-m-radio start</h6>
     <div class="testing-d-w-m-radio mt-4">
       <ul class=" bg-white text-sm font-medium text-Mdblue-700 grid grid-cols-3 gap-x-2">
         <li>
@@ -519,6 +515,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
         </li>
       </ul>
     </div>
+    <h6>testing-d-w-m-radio end</h6>
+
     <div class="mt-4 d-none-">
       <ul class="flex bg-white text-sm font-medium text-Mdblue-700 space-x-2">
         <li
@@ -580,6 +578,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             <p class="text-sm font-semibold">Sun</p>
           </li>
         </ul>
+        <h6>testing-week-checkbox start</h6>
+
         <ul
           class="testing-week-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
           <li>
@@ -605,6 +605,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
           </li>
 
         </ul>
+        <h6>testing-week-checkbox start</h6>
+
         <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
           <li
             class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
@@ -650,6 +652,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             <p class="text-sm font-semibold">10</p>
           </li>
         </ul>
+        <h6>testing-date-checkbox start</h6>
+
         <ul
           class="testing-date-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
           <li>
@@ -667,6 +671,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             </label>
           </li>
         </ul>
+        <h6>testing-date-checkbox start</h6>
+
       </div>
       <p class="text-base font-semibold text-Mdblue-600">Pick as many days as you want. </p>
     </div>
@@ -1093,3 +1099,18 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
 </div>
 <!--left sidebar sticky end-->
 <!--search inside midcontent end-->
+
+
+<!--shreyas tooltip prompt start-->
+
+<button data-tooltip-target="tooltip-no-arrow" class="">
+  <span class="material-symbols-outlined icon-18 text-Mdblue-600">
+info
+</span>
+</button>
+<div id="tooltip-no-arrow" role="tooltip" class="absolute w-60  text-wrap break-words z-10 invisible inline-block px-3 py-2
+text-sm transition-opacity
+duration-300 font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+    Tooltip content
+</div>
+<!--shreyas tooltip prompt end-->

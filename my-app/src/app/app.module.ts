@@ -21,6 +21,7 @@ import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
 import { Test2Component } from './test2/test2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeepComponent } from './deep/deep.component';
+import { ScrolltestComponent } from './scrolltest/scrolltest.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { DeepComponent } from './deep/deep.component';
     MobileUIComponent,
     Test2Component,
     DeepComponent,
+    ScrolltestComponent,
 
   ],
   imports: [
