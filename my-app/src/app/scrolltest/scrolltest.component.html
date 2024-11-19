@@ -5,120 +5,155 @@
 } -->
 <!-- Main container -->
 <div class="h-screen w-full bg-white">
-    <!-- Flex container -->
-    <div class="flex h-full flex-col">
-        <!-- Fixed header -->
-        <header class="bg-blue-600 text-white p-4">
-            Header Content
-        </header>
+  <!-- Flex container -->
+  <div class="flex h-full flex-col">
+    <!-- Fixed header -->
+    <header class="bg-blue-600 text-white p-4">
+      Header Content
+    </header>
 
-        <!-- Scrollable container -->
-        <div class="grow overflow-auto">
-            <h1 class="text-8xl">dhfkhkdhf kfk kdf</h1>
-            <!-- Table wrapper with horizontal scroll start-->
-            <div class="relative overflow-x-auto d-none">
-                <!-- Table container with shadow for scroll indication -->
-                <div class="relative shadow-md sm:rounded-lg">
-                    <table class="w-full text-sm text-left text-gray-500">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0 z-10">
-                            <tr>
-                                <!-- Sticky first header cell -->
-                                <th scope="col" class="px-6 py-3 bg-gray-50 sticky left-0 z-20">
-                                    Product name
-                                </th>
-                                <!-- Regular header cells -->
-                                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
-                                    Color
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
-                                    Category
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
-                                    Price
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
-                                    Stock
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
-                                    SKU
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
-                                    Manufacturer
-                                </th>
-                                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
-                                    Last Updated
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Table rows -->
-                            <tr class="bg-white border-b hover:bg-gray-50">
-                                <!-- Sticky first column cell -->
-                                <th scope="row"
-                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-white sticky left-0">
-                                    Apple MacBook Pro 17"
-                                </th>
-                                <!-- Regular cells -->
-                                <td class="px-6 py-4 whitespace-nowrap">Silver</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Laptop</td>
-                                <td class="px-6 py-4 whitespace-nowrap">$2999</td>
-                                <td class="px-6 py-4 whitespace-nowrap">123</td>
-                                <td class="px-6 py-4 whitespace-nowrap">APP-MBP-17</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Apple Inc.</td>
-                                <td class="px-6 py-4 whitespace-nowrap">2024-03-14</td>
-                            </tr>
-                            <!-- Additional rows -->
-                            <tr class="bg-white border-b hover:bg-gray-50">
-                                <th scope="row"
-                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-white sticky left-0">
-                                    Microsoft Surface Pro
-                                </th>
-                                <td class="px-6 py-4 whitespace-nowrap">Black</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Tablet PC</td>
-                                <td class="px-6 py-4 whitespace-nowrap">$1999</td>
-                                <td class="px-6 py-4 whitespace-nowrap">456</td>
-                                <td class="px-6 py-4 whitespace-nowrap">MS-SP-8</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Microsoft</td>
-                                <td class="px-6 py-4 whitespace-nowrap">2024-03-13</td>
-                            </tr>
-                            <!-- Add more rows as needed -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- Table wrapper with horizontal scroll end-->
-
-            <!-- Remove the max-height and use viewport positioning start -->
-            <div class="relative rounded-lg border border-gray-200 d-none-">
-                <!-- Changed from overflow-auto to overflow-x-auto since we want viewport scroll -->
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm text-left text-gray-500">
-                        <!-- Make header sticky relative to viewport -->
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0">
-                            <tr>
-                                <!-- Fixed column header -->
-                                <th class="sticky left-0 top-0 px-6 py-3 bg-gray-50 whitespace-nowrap z-20">Name</th>
-                                <!-- Regular headers -->
-                                <th class="px-6 py-3 bg-gray-50 whitespace-nowrap">Email</th>
-                                <th class="px-6 py-3 bg-gray-50 whitespace-nowrap">Role</th>
-                                <!-- More headers -->
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-white border-b hover:bg-gray-50">
-                                <!-- Fixed column data -->
-                                <td class="sticky left-0 px-6 py-4 bg-white whitespace-nowrap">John Doe</td>
-                                <td class="px-6 py-4 whitespace-nowrap">john@example.com</td>
-                                <td class="px-6 py-4 whitespace-nowrap">Developer</td>
-                            </tr>
-                            <!-- More rows -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- Remove the max-height and use viewport positioning end -->
+    <!-- Scrollable container -->
+    <div class="grow overflow-auto">
+      <h1 class="text-8xl">-</h1>
+      <!-- Table wrapper with horizontal scroll start-->
+      <div class="relative overflow-x-auto d-none">
+        <!-- Table container with shadow for scroll indication -->
+        <div class="relative shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0 z-10">
+              <tr>
+                <!-- Sticky first header cell -->
+                <th scope="col" class="px-6 py-3 bg-gray-50 sticky left-0 z-20">
+                  Product name
+                </th>
+                <!-- Regular header cells -->
+                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
+                  Color
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
+                  Category
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
+                  Price
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
+                  Stock
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
+                  SKU
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
+                  Manufacturer
+                </th>
+                <th scope="col" class="px-6 py-3 bg-gray-50 whitespace-nowrap">
+                  Last Updated
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows -->
+              <tr class="bg-white border-b hover:bg-gray-50">
+                <!-- Sticky first column cell -->
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-white sticky left-0">
+                  Apple MacBook Pro 17"
+                </th>
+                <!-- Regular cells -->
+                <td class="px-6 py-4 whitespace-nowrap">Silver</td>
+                <td class="px-6 py-4 whitespace-nowrap">Laptop</td>
+                <td class="px-6 py-4 whitespace-nowrap">$2999</td>
+                <td class="px-6 py-4 whitespace-nowrap">123</td>
+                <td class="px-6 py-4 whitespace-nowrap">APP-MBP-17</td>
+                <td class="px-6 py-4 whitespace-nowrap">Apple Inc.</td>
+                <td class="px-6 py-4 whitespace-nowrap">2024-03-14</td>
+              </tr>
+              <!-- Additional rows -->
+              <tr class="bg-white border-b hover:bg-gray-50">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-white sticky left-0">
+                  Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4 whitespace-nowrap">Black</td>
+                <td class="px-6 py-4 whitespace-nowrap">Tablet PC</td>
+                <td class="px-6 py-4 whitespace-nowrap">$1999</td>
+                <td class="px-6 py-4 whitespace-nowrap">456</td>
+                <td class="px-6 py-4 whitespace-nowrap">MS-SP-8</td>
+                <td class="px-6 py-4 whitespace-nowrap">Microsoft</td>
+                <td class="px-6 py-4 whitespace-nowrap">2024-03-13</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
         </div>
+      </div>
+      <!-- Table wrapper with horizontal scroll end-->
+
+      <!-- Remove the max-height and use viewport positioning start -->
+      <div class="relative rounded-lg border border-gray-200 d-none-">
+        <!-- Changed from overflow-auto to overflow-x-auto since we want viewport scroll -->
+        <div class="overflow-x-auto min-h-[16rem]">
+          <table class="w-full text-sm text-left text-gray-500">
+            <!-- Make header sticky relative to viewport -->
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0">
+              <tr>
+                <!-- Fixed column header -->
+                <th class="sticky left-0 top-0 px-6 py-3 bg-gray-50 whitespace-nowrap z-20 w-60">Name Name Name Name
+                  Name Name Name Name </th>
+                <!-- Regular headers -->
+                <th class="px-6 py-3 bg-gray-50 whitespace-nowrap w-60">Email</th>
+                <th class="px-6 py-3 bg-gray-50 whitespace-nowrap w-60">Role</th>
+                <!-- More headers -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b hover:bg-gray-50">
+                <!-- Fixed column data -->
+                <td class="sticky left-0 px-6 py-4 bg-white whitespace-nowrap" data-tooltip-target="tooltip-dark1" data-tooltip-placement="right">
+                 hghghghh vbfb hover ...
+                  <div id="tooltip-dark1" role="tooltip"
+                    class="absolute w-[256px] whitespace-pre-wrap  z-20 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+                    Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">john@example.com John Doe John Doe John Doe John Doe John Doe
+                  John</td>
+                <td class="px-6 py-4 whitespace-nowrap">Developer John Doe John Doe John Doe John Doe John Doe John</td>
+              </tr>
+               <tr class="bg-white border-b hover:bg-gray-50">
+                <!-- Fixed column data -->
+                <td class="sticky left-0 px-6 py-4 bg-white whitespace-nowrap" data-tooltip-target="tooltip-dark2" data-tooltip-placement="right">
+                 hghghghh vbfb hover ...
+                  <div id="tooltip-dark2" role="tooltip"
+                    class="absolute w-[256px] whitespace-pre-wrap  z-20 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+                    Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">john@example.com John Doe John Doe John Doe John Doe John Doe
+                  John</td>
+                <td class="px-6 py-4 whitespace-nowrap">Developer John Doe John Doe John Doe John Doe John Doe John</td>
+              </tr>
+               <tr class="bg-white border-b hover:bg-gray-50">
+                <!-- Fixed column data -->
+                <td class="sticky left-0 px-6 py-4 bg-white whitespace-nowrap" data-tooltip-target="tooltip-dark3" data-tooltip-placement="right">
+                 hghghghh vbfb hover ...
+                  <div id="tooltip-dark3" role="tooltip"
+                    class="absolute w-[256px] whitespace-pre-wrap  z-20 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+                    Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1  Tooltip content1 Tooltip content1
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">john@example.com John Doe John Doe John Doe John Doe John Doe
+                  John</td>
+                <td class="px-6 py-4 whitespace-nowrap">Developer John Doe John Doe John Doe John Doe John Doe John</td>
+              </tr>
+              <!-- More rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Remove the max-height and use viewport positioning end -->
     </div>
+  </div>
 </div>
 I need this table thead should be sticky and top 0 when I scroll down the mid-content. how to do this?
 <!--table with sticky header inside grow div end-->
