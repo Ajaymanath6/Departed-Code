@@ -11,6 +11,7 @@ import { ChatgptComponent } from './chatgpt/chatgpt.component';
 import { MobileUIComponent } from './mobile-ui/mobile-ui.component';
 import { Test2Component } from './test2/test2.component';
 import { DeepComponent } from './deep/deep.component';
+import { ScrolltestComponent } from './scrolltest/scrolltest.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: 'mobileUI',
     component: MobileUIComponent,
+  },
+  {
+    path: 'scrolltest',
+    component: ScrolltestComponent,
   },
 ];
 

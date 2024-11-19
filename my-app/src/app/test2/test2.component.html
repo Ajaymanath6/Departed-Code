@@ -1,61 +1,32 @@
-<!--radio test start-->
 
-<h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">How much do you expect to use each month?</h3>
-<ul class="grid w-full gap-6 md:grid-cols-2">
-  <li class="relative">
-    <input type="radio" id="hosting-small" name="hosting" value="hosting-small"
-      class="absolute right-[0.3rem] top-[0.3rem] peer" required />
-    <label for="hosting-small"
-      class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 ">
-      <div>j lfjldjfljldjfljdf</div>
-      <div class="block">
-        <div class="w-full text-lg font-semibold">0-50 MB</div>
-        <div class="w-full">Good for small websites</div>
-      </div>
-    </label>
-  </li>
-  <li class="relative">
-    <input type="radio" id="hosting-big" name="hosting" value="hosting-big"
-      class="absolute right-[0.3rem] top-[0.3rem] peer">
-    <label for="hosting-big"
-      class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 ">
-      <div class="block">
-        <div class="w-full text-lg font-semibold">500-1000 MB</div>
-        <div class="w-full">Good for large websites</div>
-      </div>
-    </label>
-  </li>
-</ul>
-<ul class="grid w-full gap-6 md:grid-cols-2">
-  <li class="relative">
-    <input type="radio" id="hosting-small2" name="hosting" value="hosting-small2"
-      class="absolute right-[0.3rem] top-[0.3rem] peer" required />
-    <label for="hosting-small2"
-      class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 ">
-      <div class="block">
-        <div class="w-full text-lg font-semibold">0-50 MB</div>
-        <div class="w-full">Good for small websites</div>
-      </div>
-    </label>
-  </li>
-  <li class="relative">
-    <input type="radio" id="hosting-big2" name="hosting" value="hosting-big2"
-      class="absolute right-[0.3rem] top-[0.3rem] peer">
-    <label for="hosting-big2"
-      class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 ">
-      <div class="block">
-        <div class="w-full text-lg font-semibold">500-1000 MB</div>
-        <div class="w-full">Good for large websites</div>
-      </div>
-    </label>
-  </li>
-</ul>
+<!--dropdown skidding start-->
+<div class="w-full text-center-">
 
-<!--radio test end-->
+<button id="dropdownOffsetButton" data-dropdown-toggle="dropdownSkidding" data-dropdown-offset-distance="10"
+data-dropdown-offset-skidding="-80" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4
+focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+type="button">Dropdown button
+</button>
 
-
-
-
+<!-- Dropdown menu -->
+<div id="dropdownSkidding" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+      </li>
+    </ul>
+</div>
+<div>
+<!--dropdown skidding end-->
 
 <!-- Table with sticky first column, tooltip and horizontal scroll start-->
 <div class="relative d-none">
@@ -168,8 +139,6 @@ left-full to position tooltip to the right of the cell
 ml-2 for some margin from the cell
 -translate-y-1/2 to center vertically
 
-
-
 These changes will:
 
 Make tooltips appear consistently for all rows
@@ -182,6 +151,7 @@ If you still see any positioning issues, you can also try using Flowbite's place
      data-tooltip-placement="right"
      class="font-medium text-gray-900 cursor-pointer">
 coz of padding in td it slightly goes in, so if remove padding right of first col and -translate-y-1/2 left-full works -->
+
 <!--table when width reduced tooltip go behind the row fix end-->
 
 
@@ -488,18 +458,22 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
       <span class="material-symbols-outlined mr-2 Mdblue-fill-600"> account_balance </span>
       <p class="text-base font-semibold">In order to add a tracker you need to add your pacer credentials.</p>
     </div>
+    <h6>testing-d-w-m-radio start</h6>
     <div class="testing-d-w-m-radio mt-4">
       <ul class=" bg-white text-sm font-medium text-Mdblue-700 grid grid-cols-3 gap-x-2">
         <li>
+          <div class="relative">
           <input type="radio" id="d-w-m-1" name="hosting" value="d-w-m-1" class="hidden peer" required />
           <label for="d-w-m-1"
             class="relative group flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
             <span
               class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
-            <p class="text-sm font-semibold">Daily</p>
+            <p class="text-sm font-semibold">Dailyk</p>
           </label>
+        </div>
         </li>
         <li>
+          <div class="relative">
           <input type="radio" id="d-w-m-2" name="hosting" value="d-w-m-2" class="hidden peer" required />
           <label for="d-w-m-2"
             class="relative flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
@@ -507,8 +481,10 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
               class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
             <p class="text-sm font-semibold">Daily</p>
           </label>
+          </div>
         </li>
         <li>
+           <div class="relative">
           <input type="radio" id="d-w-m-3" name="hosting" value="d-w-m-3" class="hidden peer" required />
           <label for="d-w-m-3"
             class="relative flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
@@ -516,9 +492,12 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
               class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
             <p class="text-sm font-semibold">Daily</p>
           </label>
+          </div>
         </li>
       </ul>
     </div>
+    <h6>testing-d-w-m-radio end</h6>
+
     <div class="mt-4 d-none-">
       <ul class="flex bg-white text-sm font-medium text-Mdblue-700 space-x-2">
         <li
@@ -580,6 +559,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             <p class="text-sm font-semibold">Sun</p>
           </li>
         </ul>
+        <h6>testing-week-checkbox start</h6>
+
         <ul
           class="testing-week-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
           <li>
@@ -605,6 +586,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
           </li>
 
         </ul>
+        <h6>testing-week-checkbox end</h6>
+
         <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
           <li
             class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
@@ -650,6 +633,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             <p class="text-sm font-semibold">10</p>
           </li>
         </ul>
+        <h6>testing-date-checkbox start</h6>
+
         <ul
           class="testing-date-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
           <li>
@@ -667,6 +652,8 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             </label>
           </li>
         </ul>
+        <h6>testing-date-checkbox end</h6>
+
       </div>
       <p class="text-base font-semibold text-Mdblue-600">Pick as many days as you want. </p>
     </div>
@@ -1093,3 +1080,18 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
 </div>
 <!--left sidebar sticky end-->
 <!--search inside midcontent end-->
+
+
+<!--shreyas tooltip prompt start-->
+
+<button data-tooltip-target="tooltip-no-arrow" class="">
+  <span class="material-symbols-outlined icon-18 text-Mdblue-600">
+info
+</span>
+</button>
+<div id="tooltip-no-arrow" role="tooltip" class="absolute w-60  text-wrap break-words z-10 invisible inline-block px-3 py-2
+text-sm transition-opacity
+duration-300 font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+    Tooltip content
+</div>
+<!--shreyas tooltip prompt end-->
