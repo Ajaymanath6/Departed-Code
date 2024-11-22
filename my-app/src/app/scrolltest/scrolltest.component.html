@@ -8,8 +8,48 @@
   <!-- Flex container -->
   <div class="flex h-full flex-col">
     <!-- Fixed header -->
-    <header class="bg-blue-600 text-white p-4">
+    <header class="bg-primary-700 text-white p-4 dynamic-header">
       Header Content
+                  <!-- Dropdown button -->
+                    <div class="relative-">
+                        <button
+                            id="dropdownDefaultButton"
+                            data-dropdown-toggle="dropdown"
+                            data-dropdown-offset-distance="10"
+                            data-dropdown-placement="bottom-end"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            type="button">
+                            Dropdown
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown"
+                             class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                            <div class="dropdown-container overflow-y-auto">
+                                <ul class="py-2 text-sm text-primary-600 ">
+                                    <!-- Generate many items to test scrolling -->
+                                    <li><a href="#" class="block px-4 py-2 ">Dashboard</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Settings</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Earnings</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Sign out</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Profile</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Messages</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Downloads</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Team</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Analytics</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Reports</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Projects</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">Tasks</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">last 3</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">last 2</a></li>
+                                    <li><a href="#" class="block px-4 py-2 ">last 1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
     </header>
 
     <!-- Scrollable container -->
@@ -89,10 +129,18 @@
       <!-- Remove the max-height and use viewport positioning start -->
       <div class="relative rounded-lg border border-gray-200 d-none-">
         <!-- Changed from overflow-auto to overflow-x-auto since we want viewport scroll -->
-        <div class="overflow-x-auto min-h-[16rem]">
+        <div class="overflow-x-auto min-h-[16rem]-">
           <table class="w-full text-sm text-left text-gray-500">
             <!-- Make header sticky relative to viewport -->
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 sticky top-0">
+              <!-- <tr>
+                <th class="sticky left-0 top-0 px-6 py-3 bg-gray-50 whitespace-nowrap z-20 w-60">Name Name Name Name
+                  Name Name Name Name </th>
+                <th class="px-6 py-3 bg-gray-50 whitespace-nowrap w-60">Email</th>
+                <th class="px-6 py-3 bg-gray-50 whitespace-nowrap w-60">Role</th>
+              </tr> -->
+            </thead>
+            <tbody>
               <tr>
                 <!-- Fixed column header -->
                 <th class="sticky left-0 top-0 px-6 py-3 bg-gray-50 whitespace-nowrap z-20 w-60">Name Name Name Name
@@ -102,8 +150,6 @@
                 <th class="px-6 py-3 bg-gray-50 whitespace-nowrap w-60">Role</th>
                 <!-- More headers -->
               </tr>
-            </thead>
-            <tbody>
               <tr class="bg-white border-b hover:bg-gray-50">
                 <!-- Fixed column data -->
                 <td class="sticky left-0 px-6 py-4 bg-white whitespace-nowrap" data-tooltip-target="tooltip-dark1"
@@ -163,7 +209,3 @@
 </div>
 I need this table thead should be sticky and top 0 when I scroll down the mid-content. how to do this?
 <!--table with sticky header inside grow div end-->
-
-
-
-
