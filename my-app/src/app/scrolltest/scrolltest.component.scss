@@ -1,0 +1,89 @@
+#dropdown {
+  z-index: 30;
+}
+
+/**1st method start**/
+//  /* Custom styles to ensure fixed header dropdown adapts properly when small viewport height and gets scrollbar inside dropdown*/
+//  .dropdown-container {
+//    max-height: calc(100vh - var(--offset));
+//    --offset: 80px;
+//    /* Adjust based on your header height + desired padding */
+//  }
+/**1st method end**/
+
+
+/**2nd method start**/
+/* Store header height in CSS variable */
+// .dynamic-header {
+//   --header-height: 96px;
+// }
+
+// /* Auto-updating dropdown container height */
+// .dropdown-container {
+//   /* Calculate max height based on viewport minus header height plus padding */
+//   max-height: calc(100vh - var(--header-height, 0px) - 20px);
+// }
+
+/**2nd method end**/
+
+
+/**3rd method js start**/
+//works properly super
+// const header = document.querySelector('.dynamic-header');
+// const headerHeight = header.offsetHeight; // This will give you the height in pixels
+// const dropdownContainer = document.querySelector('.dropdown-container');
+// dropdownContainer.style.maxHeight = `calc(100vh - ${headerHeight}px - 20px)`;
+/**3rd method js end**/
+
+
+
+/**4th js method with >1366px and < 136px js code  start**/
+// const updateDropdownHeight = () => {
+//   const header = document.querySelector('.dynamic-header');
+//   const headerHeight = header.offsetHeight;
+//   const dropdownContainer = document.querySelector('.dropdown-container');
+
+//   // Check window width
+//   if (window.innerWidth < 1366) {
+//     // For screens smaller than 1366px - dynamic calculation
+//     dropdownContainer.style.maxHeight = `calc(100vh - ${headerHeight}px - 20px)`;
+//   } else {
+//     // For larger screens - fixed height with scroll
+//     dropdownContainer.style.maxHeight = '500px'; // or whatever fixed height you want
+//   }
+// };
+
+// // Call initially
+// updateDropdownHeight();
+
+// // Add resize listener to update on window resize
+// window.addEventListener('resize', updateDropdownHeight);
+
+//with different height start
+// const updateDropdownHeight = () => {
+//   const header = document.querySelector('.dynamic-header');
+//   const headerHeight = header.offsetHeight;
+//   const dropdownContainer = document.querySelector('.dropdown-container');
+
+//   if (window.innerWidth < 1366) {
+//     dropdownContainer.style.maxHeight = `calc(100vh - ${headerHeight}px - 20px)`;
+//   } else if (window.innerWidth >= 1366 && window.innerWidth < 1920) {
+//     dropdownContainer.style.maxHeight = '500px';
+//   } else {
+//     dropdownContainer.style.maxHeight = '600px';
+//   }
+// };
+
+// // Call initially
+// updateDropdownHeight();
+
+// // Add resize listener with debounce for better performance
+// let resizeTimeout;
+// window.addEventListener('resize', () => {
+//   clearTimeout(resizeTimeout);
+//   resizeTimeout = setTimeout(updateDropdownHeight, 100);
+// });
+//with different height end
+
+
+/**4th js method with >1366px and < 136px js code  end**/
