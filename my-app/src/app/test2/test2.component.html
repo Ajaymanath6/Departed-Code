@@ -1,15 +1,15 @@
-
 <!--dropdown skidding start-->
 <div class="w-full text-center-">
 
-<button id="dropdownOffsetButton" data-dropdown-toggle="dropdownSkidding" data-dropdown-offset-distance="10"
-data-dropdown-offset-skidding="-80" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4
+  <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownSkidding" data-dropdown-offset-distance="10"
+    data-dropdown-offset-skidding="-80" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4
 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
-type="button">Dropdown button
-</button>
+    type="button">Dropdown button
+  </button>
 
-<!-- Dropdown menu -->
-<div id="dropdownSkidding" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 dark:bg-gray-700">
+  <!-- Dropdown menu -->
+  <div id="dropdownSkidding"
+    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 dark:bg-gray-700">
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
@@ -24,112 +24,112 @@ type="button">Dropdown button
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
       </li>
     </ul>
-</div>
-<div>
-<!--dropdown skidding end-->
-
-<!-- Table with sticky first column, tooltip and horizontal scroll start-->
-<div class="relative d-none">
-  <div class="overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500">
-      <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-        <tr>
-          <!-- Sticky header -->
-          <th class="sticky left-0 z-20 px-6 py-3 bg-gray-50">Name</th>
-          <th class="px-6 py-3">Email</th>
-          <th class="px-6 py-3">Role</th>
-          <!-- Add more columns as needed -->
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="bg-white border-b hover:bg-gray-50">
-          <!-- Sticky column with Flowbite tooltip -->
-          <td class="sticky left-0 z-20 px-6 py-4 bg-white">
-            <div data-tooltip-target="tooltip-default" class="font-medium text-gray-900 cursor-pointer">
-              John Doe
-            </div>
-            <div id="tooltip-default" role="tooltip"
-              class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
-              Senior Developer with 5 years experience
-              <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
-            </div>
-          </td>
-          <td class="px-6 py-4">john@example.com</td>
-          <td class="px-6 py-4">Developer</td>
-          <!-- Add more columns as needed -->
-        </tr>
-        <tr class="bg-white border-b hover:bg-gray-50">
-          <!-- Sticky column with Flowbite tooltip -->
-          <td class="sticky left-0 z-20 px-6 py-4 bg-white">
-            <div data-tooltip-target="tooltip-default2" class="font-medium text-gray-900 cursor-pointer">
-              test Doe
-            </div>
-            <div id="tooltip-default2" role="tooltip"
-              class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
-              juniour Developer with 5 years experience
-              <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
-            </div>
-          </td>
-          <td class="px-6 py-4">john@example.com</td>
-          <td class="px-6 py-4">Developer</td>
-          <!-- Add more columns as needed -->
-        </tr>
-        <!-- Add more rows as needed -->
-      </tbody>
-    </table>
   </div>
-</div>
-<!-- If you still see any positioning issues, you can also try using Flowbite's placement attributes: -->
-<!-- Table with sticky first column, tooltip and horizontal scroll end-->
+  <div>
+    <!--dropdown skidding end-->
+
+    <!-- Table with sticky first column, tooltip and horizontal scroll start-->
+    <div class="relative d-none">
+      <div class="overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <!-- Sticky header -->
+              <th class="sticky left-0 z-20 px-6 py-3 bg-gray-50">Name</th>
+              <th class="px-6 py-3">Email</th>
+              <th class="px-6 py-3">Role</th>
+              <!-- Add more columns as needed -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <!-- Sticky column with Flowbite tooltip -->
+              <td class="sticky left-0 z-20 px-6 py-4 bg-white">
+                <div data-tooltip-target="tooltip-default" class="font-medium text-gray-900 cursor-pointer">
+                  John Doe
+                </div>
+                <div id="tooltip-default" role="tooltip"
+                  class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+                  Senior Developer with 5 years experience
+                  <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
+                </div>
+              </td>
+              <td class="px-6 py-4">john@example.com</td>
+              <td class="px-6 py-4">Developer</td>
+              <!-- Add more columns as needed -->
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <!-- Sticky column with Flowbite tooltip -->
+              <td class="sticky left-0 z-20 px-6 py-4 bg-white">
+                <div data-tooltip-target="tooltip-default2" class="font-medium text-gray-900 cursor-pointer">
+                  test Doe
+                </div>
+                <div id="tooltip-default2" role="tooltip"
+                  class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+                  juniour Developer with 5 years experience
+                  <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
+                </div>
+              </td>
+              <td class="px-6 py-4">john@example.com</td>
+              <td class="px-6 py-4">Developer</td>
+              <!-- Add more columns as needed -->
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- If you still see any positioning issues, you can also try using Flowbite's placement attributes: -->
+    <!-- Table with sticky first column, tooltip and horizontal scroll end-->
 
 
-<!--table when width reduced tooltip go behind the row fix start-->
-<div class="relative w-[50%] d-none">
-  <div class="overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500">
-      <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-        <tr>
-          <th class="sticky left-0 z-20 px-6 py-3 bg-gray-50">Name</th>
-          <th class="px-6 py-3">Email</th>
-          <th class="px-6 py-3">Role</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="bg-white border-b hover:bg-gray-50">
-          <td class="sticky left-0 z-20 px-6 py-4 bg-white relative"> <!-- Added relative here -->
-            <div data-tooltip-target="tooltip-default" data-tooltip-placement="right"
-              class="font-medium text-gray-900 cursor-pointer">
-              John Doe
-            </div>
-            <div id="tooltip-default" role="tooltip"
-              class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip -translate-y-1/2- left-full- ml-2">
-              <!-- Added positioning classes -->
-              Senior Developer with 5 years experience
-            </div>
-          </td>
-          <td class="px-6 py-4">john@example.com</td>
-          <td class="px-6 py-4">Developer</td>
-        </tr>
-        <tr class="bg-white border-b hover:bg-gray-50">
-          <td class="sticky left-0 z-20 px-6 py-4 bg-white relative"> <!-- Added relative here -->
-            <div data-tooltip-target="tooltip-default2" data-tooltip-placement="right"
-              class="font-medium text-gray-900 cursor-pointer">
-              test Doe
-            </div>
-            <div id="tooltip-default2" role="tooltip"
-              class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip -translate-y-1/2- left-full- ml-2">
-              <!-- Added positioning classes -->
-              juniour Developer with 5 years experience
-            </div>
-          </td>
-          <td class="px-6 py-4">john@example.com</td>
-          <td class="px-6 py-4">Developer</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<!--claude AI: If you still see any positioning issues, you can also try using Flowbite's placement attributes:
+    <!--table when width reduced tooltip go behind the row fix start-->
+    <div class="relative w-[50%] d-none">
+      <div class="overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th class="sticky left-0 z-20 px-6 py-3 bg-gray-50">Name</th>
+              <th class="px-6 py-3">Email</th>
+              <th class="px-6 py-3">Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="sticky left-0 z-20 px-6 py-4 bg-white relative"> <!-- Added relative here -->
+                <div data-tooltip-target="tooltip-default" data-tooltip-placement="right"
+                  class="font-medium text-gray-900 cursor-pointer">
+                  John Doe
+                </div>
+                <div id="tooltip-default" role="tooltip"
+                  class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip -translate-y-1/2- left-full- ml-2">
+                  <!-- Added positioning classes -->
+                  Senior Developer with 5 years experience
+                </div>
+              </td>
+              <td class="px-6 py-4">john@example.com</td>
+              <td class="px-6 py-4">Developer</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="sticky left-0 z-20 px-6 py-4 bg-white relative"> <!-- Added relative here -->
+                <div data-tooltip-target="tooltip-default2" data-tooltip-placement="right"
+                  class="font-medium text-gray-900 cursor-pointer">
+                  test Doe
+                </div>
+                <div id="tooltip-default2" role="tooltip"
+                  class="absolute z-30 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip -translate-y-1/2- left-full- ml-2">
+                  <!-- Added positioning classes -->
+                  juniour Developer with 5 years experience
+                </div>
+              </td>
+              <td class="px-6 py-4">john@example.com</td>
+              <td class="px-6 py-4">Developer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--claude AI: If you still see any positioning issues, you can also try using Flowbite's placement attributes:
   Key changes made:
 
 Added relative to the sticky td cells
@@ -152,172 +152,161 @@ If you still see any positioning issues, you can also try using Flowbite's place
      class="font-medium text-gray-900 cursor-pointer">
 coz of padding in td it slightly goes in, so if remove padding right of first col and -translate-y-1/2 left-full works -->
 
-<!--table when width reduced tooltip go behind the row fix end-->
+    <!--table when width reduced tooltip go behind the row fix end-->
 
 
 
 
-<!--nishmitha court latest update alert start-->
-<div class="flex justify-between gap-2 p-4 shadow-sm bg-gray-100 rounded-md">
-  <div class="flex flex-col flex-1 gap-y-1 justify-center">
-    <div class="flex gap-1">
-      <span class="material-symbols-outlined flex items-center icon-20 text-Mdblue-700 animate-spin"> cached </span>
-      <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates. Please
-        wait... </p>
-    </div>
-    <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold on
-      for a momemt while we gather the most recent updates.</p>
+    <!--nishmitha court latest update alert start-->
+    <div class="flex justify-between gap-2 p-4 shadow-sm bg-gray-100 rounded-md">
+      <div class="flex flex-col flex-1 gap-y-1 justify-center">
+        <div class="flex gap-1">
+          <span class="material-symbols-outlined flex items-center icon-20 text-Mdblue-700 animate-spin"> cached </span>
+          <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates.
+            Please
+            wait... </p>
+        </div>
+        <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold
+          on
+          for a momemt while we gather the most recent updates.</p>
 
-    <ul class="flex gap-x-4">
-      <li class="flex gap-1 items-center">
-        <span class="material-symbols-outlined secondary-fill-700 icon-18">check_circle</span>
-        <span class="text-sm font-semibold text-secondary-700">text text</span>
-      </li>
-      <li class="flex gap-1 items-center">
-        <!-- <span class="material-symbols-outlined secondary-fill-700">check_circle</span> -->
-        <svg aria-hidden="true" class="inline w-[18px] h-[18px] text-gray-200 animate-spin fill-gray-600"
-          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-            fill="currentColor" />
-          <path
-            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-            fill="currentFill" />
-        </svg>
-        <span class="text-sm font-semibold text-secondary-700">In Progress</span>
-      </li>
-      <li class="flex gap-1 items-center">
-        <span class="material-symbols-outlined Mdblue-fill-600 icon-18">check_circle</span>
-        <span class="text-sm font-semibold text-Mdblue-700">pending</span>
-      </li>
-      <li class="flex gap-1 items-center">
-        <span class="material-symbols-outlined red-fill-700 icon-18">cancel</span>
-        <span class="text-sm font-semibold text-secondary-700">Error</span>
-      </li>
-    </ul>
-  </div>
-  <div class="d-none- shrink-0">
-    <button type="button" class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  ">
-      <span class="material-symbols-outlined Mdblue-fill-700 icon-20">
-        close
-      </span>
-    </button>
-  </div>
-</div>
-
-<h2 class="mt-4"></h2>
-
-
-<div class="flex justify-between gap-2 p-4 shadow-sm bg-secondary-100 rounded-md">
-  <div class="flex flex-col flex-1 gap-y-1 justify-center">
-    <div class="flex gap-1">
-
-      <span class="material-symbols-outlined flex items-center icon-20 text-secondary-700 ">
-        check
-      </span>
-      <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates. Please
-        wait... </p>
-    </div>
-    <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold on
-      for a momemt while we gather the most recent updates.</p>
-
-  </div>
-  <div class="d-none- shrink-0">
-    <button type="button"
-      class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  text-white  hover:bg-secondary-500 bg-secondary-700">
-      Refresh
-    </button>
-  </div>
-</div>
-
-<h2 class="mt-4"></h2>
-
-
-<div class="flex justify-between gap-2 p-4 shadow-sm bg-red-200 rounded-md">
-  <div class="flex flex-col flex-1 gap-y-1 justify-center">
-    <div class="flex gap-1">
-
-      <span class="material-symbols-outlined flex items-center icon-20 text-red-700">
-        close
-      </span>
-      <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates. Please
-        wait... </p>
-    </div>
-    <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold on
-      for a momemt while we gather the most recent updates.</p>
-
-  </div>
-  <div class="d-none- shrink-0">
-    <button type="button" class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  ">
-      <span class="material-symbols-outlined text-gray-400">
-        close
-      </span>
-    </button>
-  </div>
-</div>
-
-<!--nishmitha court latest update alert end-->
-
-<h2 class="mt-4"></h2>
-
-<!--UI design start-->
-
-<!--court filter start -->
-<div class="cust-drop d-none z-10 block w-96 rounded-lg bg-white">
-  <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
-    <div class="mb-3 text-center font-medium">Add Court Filters</div>
-    <div class="relative">
-      <input type="text" placeholder="Search courts"
-        class="w-80- block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-700 focus:border-Mdblue-600 focus:ring-0" />
-      <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
-          class="size-4 text-Mdblue-600">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
-        </svg>
+        <ul class="flex gap-x-4">
+          <li class="flex gap-1 items-center">
+            <span class="material-symbols-outlined secondary-fill-700 icon-18">check_circle</span>
+            <span class="text-sm font-semibold text-secondary-700">text text</span>
+          </li>
+          <li class="flex gap-1 items-center">
+            <!-- <span class="material-symbols-outlined secondary-fill-700">check_circle</span> -->
+            <svg aria-hidden="true" class="inline w-[18px] h-[18px] text-gray-200 animate-spin fill-gray-600"
+              viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="currentColor" />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentFill" />
+            </svg>
+            <span class="text-sm font-semibold text-secondary-700">In Progress</span>
+          </li>
+          <li class="flex gap-1 items-center">
+            <span class="material-symbols-outlined Mdblue-fill-600 icon-18">check_circle</span>
+            <span class="text-sm font-semibold text-Mdblue-700">pending</span>
+          </li>
+          <li class="flex gap-1 items-center">
+            <span class="material-symbols-outlined red-fill-700 icon-18">cancel</span>
+            <span class="text-sm font-semibold text-secondary-700">Error</span>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none- shrink-0">
+        <button type="button" class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  ">
+          <span class="material-symbols-outlined Mdblue-fill-700 icon-20">
+            close
+          </span>
+        </button>
       </div>
     </div>
-  </div>
-  <div class="mt-2 h-[1px] grow bg-gray-200"></div>
-  <div class="flex items-center px-4 py-2 pb-0">
-    <button type="button"
-      class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
-      Back
-    </button>
-    <div class="flex grow flex-wrap justify-center gap-2 text-sm font-semibold text-Mdblue-600">
-      <a href="#"><span>Federal</span></a>
-      <span>-</span>
-      <a><span>Federal</span></a>
-    </div>
-  </div>
-  <div class="mt-2 h-[1px] grow bg-gray-200"></div>
-  <ul class="h-40- space-y-4- h-60 overflow-y-scroll px-2 py-2 text-sm text-Mdblue-600">
-    <li class="">
-      <label
-        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
-        for="checkbox-1">
-        <div class="flex">
-          <input type="checkbox"
-            class="mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
-            id="checkbox-1" />
-          <span>Federal</span>
-        </div>
-        <div class="flex items-center">
-          <span class="material-symbols-outlined icon-24 text-Mdblue-600">
-            chevron_right
+
+    <h2 class="mt-4"></h2>
+
+
+    <div class="flex justify-between gap-2 p-4 shadow-sm bg-secondary-100 rounded-md">
+      <div class="flex flex-col flex-1 gap-y-1 justify-center">
+        <div class="flex gap-1">
+
+          <span class="material-symbols-outlined flex items-center icon-20 text-secondary-700 ">
+            check
           </span>
+          <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates.
+            Please
+            wait... </p>
         </div>
-      </label>
-      <ul class="px-2- py-2 pl-4 text-sm text-Mdblue-600">
+        <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold
+          on
+          for a momemt while we gather the most recent updates.</p>
+
+      </div>
+      <div class="d-none- shrink-0">
+        <button type="button"
+          class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  text-white  hover:bg-secondary-500 bg-secondary-700">
+          Refresh
+        </button>
+      </div>
+    </div>
+
+    <h2 class="mt-4"></h2>
+
+
+    <div class="flex justify-between gap-2 p-4 shadow-sm bg-red-200 rounded-md">
+      <div class="flex flex-col flex-1 gap-y-1 justify-center">
+        <div class="flex gap-1">
+
+          <span class="material-symbols-outlined flex items-center icon-20 text-red-700">
+            close
+          </span>
+          <p class="text-base- text-sm font-semibold text-Mdblue-700"> Connecting to court to fetch latest updates.
+            Please
+            wait... </p>
+        </div>
+        <p class="text-sm Mdblue-fill-700">We are currently fetching the latest data from the court system. Please hold
+          on
+          for a momemt while we gather the most recent updates.</p>
+
+      </div>
+      <div class="d-none- shrink-0">
+        <button type="button" class="flex justify-center rounded-md px-4 py-3 text-base font-medium text-center  ">
+          <span class="material-symbols-outlined text-gray-400">
+            close
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!--nishmitha court latest update alert end-->
+
+    <h2 class="mt-4"></h2>
+
+    <!--UI design start-->
+
+    <!--court filter start -->
+    <div class="cust-drop d-none z-10 block w-96 rounded-lg bg-white">
+      <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+        <div class="mb-3 text-center font-medium">Add Court Filters</div>
+        <div class="relative">
+          <input type="text" placeholder="Search courts"
+            class="w-80- block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-700 focus:border-Mdblue-600 focus:ring-0" />
+          <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
+              class="size-4 text-Mdblue-600">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+      <div class="flex items-center px-4 py-2 pb-0">
+        <button type="button"
+          class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+          Back
+        </button>
+        <div class="flex grow flex-wrap justify-center gap-2 text-sm font-semibold text-Mdblue-600">
+          <a href="#"><span>Federal</span></a>
+          <span>-</span>
+          <a><span>Federal</span></a>
+        </div>
+      </div>
+      <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+      <ul class="h-40- space-y-4- h-60 overflow-y-scroll px-2 py-2 text-sm text-Mdblue-600">
         <li class="">
           <label
             class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
-            for="checkbox-2">
+            for="checkbox-1">
             <div class="flex">
               <input type="checkbox"
-                class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
-                id="checkbox-2" />
-              <span>child-1</span>
+                class="mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                id="checkbox-1" />
+              <span>Federal</span>
             </div>
             <div class="flex items-center">
               <span class="material-symbols-outlined icon-24 text-Mdblue-600">
@@ -329,12 +318,12 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             <li class="">
               <label
                 class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
-                for="checkbox-5">
+                for="checkbox-2">
                 <div class="flex">
                   <input type="checkbox"
                     class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
-                    id="checkbox-5" />
-                  <span>child-2</span>
+                    id="checkbox-2" />
+                  <span>child-1</span>
                 </div>
                 <div class="flex items-center">
                   <span class="material-symbols-outlined icon-24 text-Mdblue-600">
@@ -346,450 +335,479 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
                 <li class="">
                   <label
                     class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
-                    for="checkbox-4">
+                    for="checkbox-5">
                     <div class="flex">
                       <input type="checkbox"
                         class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
-                        id="checkbox-4" />
-                      <span>child-3</span>
+                        id="checkbox-5" />
+                      <span>child-2</span>
                     </div>
                     <div class="flex items-center">
-                      <!-- <span class="material-symbols-outlined icon-24 text-Mdblue-600">
-            chevron_right
-          </span> -->
+                      <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+                        chevron_right
+                      </span>
                     </div>
                   </label>
+                  <ul class="px-2- py-2 pl-4 text-sm text-Mdblue-600">
+                    <li class="">
+                      <label
+                        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+                        for="checkbox-4">
+                        <div class="flex">
+                          <input type="checkbox"
+                            class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                            id="checkbox-4" />
+                          <span>child-3</span>
+                        </div>
+                        <div class="flex items-center">
+                          <!-- <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+            chevron_right
+          </span> -->
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
+        <li class="">
+          <label
+            class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+            for="checkbox-3">
+            <div class="flex">
+              <input type="checkbox"
+                class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                id="checkbox-3" />
+              <span>State</span>
+            </div>
+            <div class="flex items-center">
+              <!-- <input type="checkbox"
+            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
+            id="Wisconsin Circuit Courts"> -->
+              <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+                chevron_right
+              </span>
+            </div>
+          </label>
+        </li>
       </ul>
-    </li>
-    <li class="">
-      <label
-        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
-        for="checkbox-3">
-        <div class="flex">
-          <input type="checkbox"
-            class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
-            id="checkbox-3" />
-          <span>State</span>
-        </div>
-        <div class="flex items-center">
-          <!-- <input type="checkbox"
+      <ul class="space-y-4- d-none h-40 overflow-y-scroll px-2 py-2 text-sm text-Mdblue-600">
+        <li class="">
+          <label
+            class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+            for="Wisconsin Circuit Courts">
+            <div class="flex">
+              <input type="checkbox"
+                class="mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                id="Wisconsin Circuit Courts" />
+              <span>Federal</span>
+            </div>
+            <div class="flex items-center">
+              <!-- <input type="checkbox"
             class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
             id="Wisconsin Circuit Courts"> -->
-          <span class="material-symbols-outlined icon-24 text-Mdblue-600">
-            chevron_right
-          </span>
-        </div>
-      </label>
-    </li>
-  </ul>
-  <ul class="space-y-4- d-none h-40 overflow-y-scroll px-2 py-2 text-sm text-Mdblue-600">
-    <li class="">
-      <label
-        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
-        for="Wisconsin Circuit Courts">
-        <div class="flex">
-          <input type="checkbox"
-            class="mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
-            id="Wisconsin Circuit Courts" />
-          <span>Federal</span>
-        </div>
-        <div class="flex items-center">
-          <!-- <input type="checkbox"
-            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
-            id="Wisconsin Circuit Courts"> -->
-          <span class="material-symbols-outlined icon-24 text-Mdblue-600">
-            chevron_right
-          </span>
-        </div>
-      </label>
-    </li>
-    <li class="">
-      <label
-        class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
-        for="Wisconsin Circuit Courts">
-        <div class="flex">
-          <!-- <input type="checkbox"
+              <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+                chevron_right
+              </span>
+            </div>
+          </label>
+        </li>
+        <li class="">
+          <label
+            class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"
+            for="Wisconsin Circuit Courts">
+            <div class="flex">
+              <!-- <input type="checkbox"
             class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
             id="Wisconsin Circuit Courts"> -->
-          <span>Court Name</span>
-        </div>
-        <div class="flex items-center">
-          <input type="checkbox"
-            class="ng-untouched ng-pristine ng-valid h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
-            id="Wisconsin Circuit Courts" />
-          <!-- <span class="material-symbols-outlined icon-24 text-Mdblue-600">
+              <span>Court Name</span>
+            </div>
+            <div class="flex items-center">
+              <input type="checkbox"
+                class="ng-untouched ng-pristine ng-valid h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                id="Wisconsin Circuit Courts" />
+              <!-- <span class="material-symbols-outlined icon-24 text-Mdblue-600">
             chevron_right
           </span> -->
-        </div>
-      </label>
-    </li>
-  </ul>
-  <div class="mt-4 h-[1px] grow bg-gray-200"></div>
-  <div class="grid grid-cols-3 gap-2 px-4 py-3 text-sm text-Mdblue-700">
-    <button type="button"
-      class="disabled hover:bg-gray-100- rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 opacity-50 focus:outline-none focus:ring-4 focus:ring-gray-200">
-      Clear All
-    </button>
-    <button type="button"
-      class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
-      Select All
-    </button>
-    <button type="button"
-      class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none">
-      <span>Done</span>
-    </button>
-  </div>
-</div>
-<!--court filter end -->
-
-<!--Adding/Removing cases to track UI changes start -->
-<div class="cust-drop d-none- z-10 block w-96 rounded-lg bg-white">
-  <div class="px-4 py-3 pb-0 text-sm text-Mdblue-600">
-    <div class="mb-3 text-center font-semibold">Set Tracking</div>
-  </div>
-  <div class="mt-2 h-[1px] grow bg-gray-200"></div>
-  <div class="h-40- space-y-4- min-h-[124px]- max-h-[200px] overflow-y-scroll px-2 py-2 text-sm text-Mdblue-600">
-    <div class="text-center mt-4 d-none-">
-      <span class="material-symbols-outlined mr-2 Mdblue-fill-600"> account_balance </span>
-      <p class="text-base font-semibold">In order to add a tracker you need to add your pacer credentials.</p>
-    </div>
-    <h6>testing-d-w-m-radio start</h6>
-    <div class="testing-d-w-m-radio mt-4">
-      <ul class=" bg-white text-sm font-medium text-Mdblue-700 grid grid-cols-3 gap-x-2">
-        <li>
-          <div class="relative">
-          <input type="radio" id="d-w-m-1" name="hosting" value="d-w-m-1" class="hidden peer" required />
-          <label for="d-w-m-1"
-            class="relative group flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
-            <span
-              class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
-            <p class="text-sm font-semibold">Dailyk</p>
+            </div>
           </label>
-        </div>
-        </li>
-        <li>
-          <div class="relative">
-          <input type="radio" id="d-w-m-2" name="hosting" value="d-w-m-2" class="hidden peer" required />
-          <label for="d-w-m-2"
-            class="relative flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
-            <span
-              class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
-            <p class="text-sm font-semibold">Daily</p>
-          </label>
-          </div>
-        </li>
-        <li>
-           <div class="relative">
-          <input type="radio" id="d-w-m-3" name="hosting" value="d-w-m-3" class="hidden peer" required />
-          <label for="d-w-m-3"
-            class="relative flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
-            <span
-              class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
-            <p class="text-sm font-semibold">Daily</p>
-          </label>
-          </div>
         </li>
       </ul>
+      <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+      <div class="grid grid-cols-3 gap-2 px-4 py-3 text-sm text-Mdblue-700">
+        <button type="button"
+          class="disabled hover:bg-gray-100- rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 opacity-50 focus:outline-none focus:ring-4 focus:ring-gray-200">
+          Clear All
+        </button>
+        <button type="button"
+          class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+          Select All
+        </button>
+        <button type="button"
+          class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none">
+          <span>Done</span>
+        </button>
+      </div>
     </div>
-    <h6>testing-d-w-m-radio end</h6>
+    <!--court filter end -->
 
-    <div class="mt-4 d-none-">
-      <ul class="flex bg-white text-sm font-medium text-Mdblue-700 space-x-2">
-        <li
-          class="group relative  flex w-full justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <span
-            class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
-          <p class="text-sm font-semibold">Daily</p>
-        </li>
-        <li
-          class="group relative   flex w-full justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <span
-            class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
-          <p class="text-sm font-semibold">Weekly...</p>
-        </li>
-        <li
-          class="group relative   flex w-full justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-          <span
-            class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
-          <p class="text-sm font-semibold">Monthly...</p>
-        </li>
+    <!--Adding/Removing cases to track UI changes start -->
+    <div class="cust-drop d-none- z-10 block w-96- w-[24.2rem] rounded-lg bg-white">
+      <div class="px-4 py-3 pb-0 text-sm text-Mdblue-600">
+        <div class="mb-3 text-center font-semibold">Set Tracking</div>
+      </div>
+      <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+      <div class="h-40- space-y-4- min-h-[124px]- max-h-[200px] overflow-y-scroll px-2 py-2 text-sm text-Mdblue-600">
+        <div class="text-center mt-4 d-none-">
+          <span class="material-symbols-outlined mr-2 Mdblue-fill-600"> account_balance </span>
+          <p class="text-base font-semibold">In order to add a tracker you need to add your pacer credentials.</p>
+        </div>
+        <h6>testing-d-w-m-radio start</h6>
+        <div class="testing-d-w-m-radio mt-4">
+          <ul class=" bg-white text-sm font-medium text-Mdblue-700 grid grid-cols-3 gap-x-2">
+            <li>
+              <div class="relative">
+                <input type="radio" id="d-w-m-1" name="hosting" value="d-w-m-1" class="hidden peer" required />
+                <label for="d-w-m-1"
+                  class="relative group flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
+                  <span
+                    class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+                  <p class="text-sm font-semibold">Dailyk</p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="relative">
+                <input type="radio" id="d-w-m-2" name="hosting" value="d-w-m-2" class="hidden peer" required />
+                <label for="d-w-m-2"
+                  class="relative flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
+                  <span
+                    class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+                  <p class="text-sm font-semibold">Daily</p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="relative">
+                <input type="radio" id="d-w-m-3" name="hosting" value="d-w-m-3" class="hidden peer" required />
+                <label for="d-w-m-3"
+                  class="relative flex justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700 peer-checked:border-secondary-700">
+                  <span
+                    class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+                  <p class="text-sm font-semibold">Daily</p>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <h6>testing-d-w-m-radio end</h6>
 
-      </ul>
-    </div>
-    <div class="mt-4">
-      <p class="text-base font-semibold text-Mdblue-700">Every...</p>
-      <div class="d-none-">
-        <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
-          <li
-            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">Mon</p>
-          </li>
-          <li
-            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">Tue</p>
-          </li>
-          <li
-            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">Wed</p>
-          </li>
-          <li
-            class="min-w-[4rem]  flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">Thu</p>
-          </li>
-          <li
-            class="min-w-[4rem]  flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <!-- <span
+        <div class="mt-4 d-none-">
+          <ul class="flex bg-white text-sm font-medium text-Mdblue-700 space-x-2">
+            <li
+              class="group relative  flex w-full justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+              <span
+                class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+              <p class="text-sm font-semibold">Daily</p>
+            </li>
+            <li
+              class="group relative   flex w-full justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+              <span
+                class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+              <p class="text-sm font-semibold">Weekly...</p>
+            </li>
+            <li
+              class="group relative   flex w-full justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+              <span
+                class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span>
+              <p class="text-sm font-semibold">Monthly...</p>
+            </li>
+
+          </ul>
+        </div>
+        <div class="mt-4">
+          <p class="text-base font-semibold text-Mdblue-700">Every...</p>
+          <div class="d-none-">
+            <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
+              <li
+                class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">Mon</p>
+              </li>
+              <li
+                class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">Tue</p>
+              </li>
+              <li
+                class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">Wed</p>
+              </li>
+              <li
+                class="min-w-[4rem]  flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">Thu</p>
+              </li>
+              <li
+                class="min-w-[4rem]  flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <!-- <span
             class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0
              transition-opacity duration-300 ease-in-out">check_circle</span> -->
-            <p class="text-sm font-semibold">Fri</p>
-          </li>
-          <li
-            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">Fri</p>
+              </li>
+              <li
+                class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
 
-            <p class="text-sm font-semibold">Sat</p>
-          </li>
-          <li
-            class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">Sat</p>
+              </li>
+              <li
+                class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
 
-            <p class="text-sm font-semibold">Sun</p>
-          </li>
-        </ul>
-        <h6>testing-week-checkbox start</h6>
+                <p class="text-sm font-semibold">Sun</p>
+              </li>
+            </ul>
+            <h6>testing-week-checkbox start</h6>
 
-        <ul
-          class="testing-week-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
-          <li>
-            <input type="checkbox" id="wk1" value="" class="hidden peer" required="">
-            <label for="wk1"
-              class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
-              <p class="text-sm font-semibold">Mon</p>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="wk2" value="" class="hidden peer" required="">
-            <label for="wk2"
-              class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
-              <p class="text-sm font-semibold">Tue</p>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="wk3" value="" class="hidden peer" required="">
-            <label for="wk3"
-              class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
-              <p class="text-sm font-semibold">Wed</p>
-            </label>
-          </li>
+            <ul
+              class="testing-week-checkbox flex- bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap- grid grid-cols-6">
+              <li>
+                <input type="checkbox" id="wk1" value="" class="hidden peer" required="">
+                <label for="wk1"
+                  class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+                  <p class="text-sm font-semibold">Mon</p>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" id="wk2" value="" class="hidden peer" required="">
+                <label for="wk2"
+                  class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+                  <p class="text-sm font-semibold">Tue</p>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" id="wk3" value="" class="hidden peer" required="">
+                <label for="wk3"
+                  class="min-w-[4rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+                  <p class="text-sm font-semibold">Wed</p>
+                </label>
+              </li>
 
-        </ul>
-        <h6>testing-week-checkbox end</h6>
+            </ul>
+            <h6>testing-week-checkbox end</h6>
 
-        <ul class="flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
-          <li
-            class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">01</p>
-          </li>
-          <li
-            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">01</p>
-          </li>
-          <li
-            class="  min-w-[3rem]flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">03</p>
-          </li>
-          <li
-            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">04</p>
-          </li>
-          <li
-            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <!-- <span
+            <ul
+              class="flex- bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap- grid grid-cols-6">
+              <li
+                class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">01</p>
+              </li>
+              <li
+                class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">01</p>
+              </li>
+              <li
+                class="  min-w-[3rem]flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">03</p>
+              </li>
+              <li
+                class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">04</p>
+              </li>
+              <li
+                class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <!-- <span
             class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 -hover:opacity-100 opacity-0
              transition-opacity duration-300 ease-in-out">check_circle</span> -->
-            <p class="text-sm font-semibold">05</p>
-          </li>
-          <li
-            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">06</p>
-          </li>
-          <li
-            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">07</p>
-          </li>
-          <li
-            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">08</p>
-          </li>
-          <li
-            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">08</p>
-          </li>
-          <li
-            class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-            <p class="text-sm font-semibold">10</p>
-          </li>
-        </ul>
-        <h6>testing-date-checkbox start</h6>
+                <p class="text-sm font-semibold">05</p>
+              </li>
+              <li
+                class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">06</p>
+              </li>
+              <li
+                class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">07</p>
+              </li>
+              <li
+                class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">08</p>
+              </li>
+              <li
+                class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">08</p>
+              </li>
+              <li
+                class="  min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
+                <p class="text-sm font-semibold">10</p>
+              </li>
+            </ul>
+            <h6>testing-date-checkbox start</h6>
 
-        <ul
-          class="testing-date-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
-          <li>
-            <input type="checkbox" id="date1" value="" class="hidden peer" required="">
-            <label for="date1"
-              class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
-              <p class="text-sm font-semibold">01</p>
-            </label>
-          </li>
-          <li>
-            <input type="checkbox" id="date2" value="" class="hidden peer" required="">
-            <label for="date2"
-              class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
-              <p class="text-sm font-semibold">02</p>
-            </label>
-          </li>
-        </ul>
-        <h6>testing-date-checkbox end</h6>
+            <ul
+              class="testing-date-checkbox flex bg-white text-sm mt-2 mb-2 font-medium text-Mdblue-700 gap-x-2 gap-y-2 flex-wrap">
+              <li>
+                <input type="checkbox" id="date1" value="" class="hidden peer" required="">
+                <label for="date1"
+                  class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+                  <p class="text-sm font-semibold">01</p>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" id="date2" value="" class="hidden peer" required="">
+                <label for="date2"
+                  class="min-w-[3rem] flex  justify-center rounded-md border border-gray-200 px-4 py-3 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700- peer-checked:border-secondary-700">
+                  <p class="text-sm font-semibold">02</p>
+                </label>
+              </li>
+            </ul>
+            <h6>testing-date-checkbox end</h6>
 
+          </div>
+          <p class="text-base font-semibold text-Mdblue-600">Pick as many days as you want. </p>
+        </div>
       </div>
-      <p class="text-base font-semibold text-Mdblue-600">Pick as many days as you want. </p>
-    </div>
-  </div>
-  <div class="mt-4 h-[1px] grow bg-gray-200"></div>
-  <div class="grid grid-cols-2 gap-2 px-4 py-3 text-sm text-Mdblue-700">
-    <!-- <button type="button"
+      <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+      <div class="grid grid-cols-2 gap-2 px-4 py-3 text-sm text-Mdblue-700">
+        <!-- <button type="button"
       class="disabled hover:bg-gray-100- rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 opacity-50 focus:outline-none focus:ring-4 focus:ring-gray-200">
       Cancel
     </button> -->
-    <button type="button"
-      class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
-      Cancel
-    </button>
-    <button type="button"
-      class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none">
-      <span>Add Credentials</span>
-    </button>
-  </div>
-</div>
-<!--Adding/Removing cases to track UI changes end -->
-
-
-
-<!--account switcher dropdown start-->
-<div class="cust-drop d-none- z-10 block w-64 rounded-lg bg-white ml-3">
-  <div id="accordion-collapse" data-accordion="collapse" class="px-2 py-2">
-    <h2 id="accordion-collapse-heading-1">
-      <button type="button"
-        class="inline-flex w-full items-center justify-between rounded border border-gray-300 bg-white p-2 text-center text-base font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-Mdblue-600 focus:bg-gray-100 focus:outline-none"
-        data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
-        aria-controls="accordion-collapse-body-1">
-        <button class="p-2 hover:bg-gray-100">
-          <div class="flex items-center">
-            <div class="mr-2 flex-shrink-0">
-              <div size="size-8">
-                <div
-                  class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
-                  <span class="font-medium text-sm text-white">DP</span>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1 text-start">
-              <h5 class="text-sm font-semibold text-Mdblue-700">
-                David Parnall
-              </h5>
-              <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
-            </div>
-          </div>
+        <button type="button"
+          class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+          Cancel
         </button>
-        <svg data-accordion-icon class="ms-3 size-2.5 text-Mdblue-600 rotate-180 shrink-0" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9 5 5 1 1 5" />
-        </svg>
-      </button>
-    </h2>
-    <div id="accordion-collapse-body-1" class="hidden h-20 overflow-auto"
-      aria-labelledby="accordion-collapse-heading-1">
-      <ul class="flex flex-col">
-        <li>
-          <button class="p-2 hover:bg-gray-100 w-full">
-            <div class="flex items-center">
-              <div class="mr-2 flex-shrink-0">
-                <div size="size-8">
-                  <div
-                    class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
-                    <span class="font-medium text-sm text-white">DP</span>
-                  </div>
-                </div>
-              </div>
-              <div class="flex-1 text-start">
-                <h5 class="text-sm font-semibold text-Mdblue-700">
-                  David Parnall
-                </h5>
-                <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
-              </div>
-            </div>
-          </button>
-        </li>
-        <li> <button class="p-2 hover:bg-gray-100 w-full">
-            <div class="flex items-center">
-              <div class="mr-2 flex-shrink-0">
-                <div size="size-8">
-                  <div
-                    class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
-                    <span class="font-medium text-sm text-white">DP</span>
-                  </div>
-                </div>
-              </div>
-              <div class="flex-1 text-start">
-                <h5 class="text-sm font-semibold text-Mdblue-700">
-                  David Parnall
-                </h5>
-                <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
-              </div>
-            </div>
-          </button></li>
-      </ul>
+        <button type="button"
+          class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none">
+          <span>Add Credentials</span>
+        </button>
+      </div>
     </div>
-    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown-accnt-switcher"
-      class="inline-flex w-full items-center justify-between rounded border border-gray-300 bg-white p-2 text-center text-base font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-Mdblue-600 focus:bg-gray-100 focus:outline-none"
-      type="button">
-      <button class="p-2 hover:bg-gray-100">
-        <div class="flex items-center">
-          <div class="mr-2 flex-shrink-0">
-            <div size="size-8">
-              <div
-                class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
-                <span class="font-medium text-sm text-white">DP</span>
-              </div>
-            </div>
-          </div>
-          <div class="flex-1 text-start">
-            <h5 class="text-sm font-semibold text-Mdblue-700">
-              David Parnall
-            </h5>
-            <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+    <!--Adding/Removing cases to track UI changes end -->
+
+    <!--share case dropdown start-->
+    <div class="cust-drop d-none- z-10 block w-[29.5rem] rounded-lg bg-white p-4">
+      <div class="my-2 flex items-center">
+        <div class="mr-2 text-center text-sm font-semibold uppercase text-Mdblue-600"> Public Link </div>
+        <div class="h-px grow bg-gray-200"></div>
+      </div>
+      <div class="min-h-[124px]- max-h-[200px] overflow-y-scroll text-sm text-Mdblue-700">
+        <p class="text-sm font-normal">External link of the case, does not require an account.</p>
+        <div class="flex gap-3 mt-3 mb-3">
+          <input type="text" placeholder="" class="block w-full rounded border border-gray-300 bg-gray-50 py-2.5 text-sm text-Mdblue-700
+               placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+          <div class="flex shrink-0">
+            <button
+              class="btn-focus flex items-center rounded border border-gray-300 p-2 text-sm font-semibold text-primary-700  hover:border-gray-600 hover:bg-gray-100  focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+                class="icon-16 material-symbols-outlined mr-1"> content_copy </span><span>Copy</span></button>
           </div>
         </div>
-      </button>
-      <svg data-accordion-icon class="ms-3 size-2.5 text-Mdblue-600 rotate-180 shrink-0" aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-      </svg>
-    </button>
-
-    <!-- Dropdown menu -->
-    <div id="dropdown-accnt-switcher"
-      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-64 dark:bg-gray-700">
-      <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
-        <div class="mb-3 text-center font-medium">Select an account</div>
       </div>
-      <ul class="flex flex-col">
-        <li>
-          <button class="p-2 hover:bg-gray-100 w-full">
+
+      <div class="text-sm text-Mdblue-700">
+        <div class="my-2 flex items-center">
+          <div class="mr-2 text-center text-sm font-semibold uppercase text-Mdblue-600"> Share on </div>
+          <div class="h-px grow bg-gray-200"></div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button type="button" class="">
+            <span class="material-symbols-outlined black-fill icon-24 hover:cursor-pointer">
+              mail
+            </span>
+          </button>
+          <div>
+            icon1
+          </div>
+          <div>
+            icon1
+          </div>
+          <div>
+            icon1
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--share case dropdown end-->
+
+
+    <!--account switcher dropdown start-->
+    <div class="cust-drop d-none- z-10 block w-64 rounded-lg bg-white ml-3">
+      <div id="accordion-collapse" data-accordion="collapse" class="px-2 py-2">
+        <h2 id="accordion-collapse-heading-1">
+          <button type="button"
+            class="inline-flex w-full items-center justify-between rounded border border-gray-300 bg-white p-2 text-center text-base font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-Mdblue-600 focus:bg-gray-100 focus:outline-none"
+            data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+            aria-controls="accordion-collapse-body-1">
+            <button class="p-2 hover:bg-gray-100">
+              <div class="flex items-center">
+                <div class="mr-2 flex-shrink-0">
+                  <div size="size-8">
+                    <div
+                      class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                      <span class="font-medium text-sm text-white">DP</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 text-start">
+                  <h5 class="text-sm font-semibold text-Mdblue-700">
+                    David Parnall
+                  </h5>
+                  <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+                </div>
+              </div>
+            </button>
+            <svg data-accordion-icon class="ms-3 size-2.5 text-Mdblue-600 rotate-180 shrink-0" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 5 5 1 1 5" />
+            </svg>
+          </button>
+        </h2>
+        <div id="accordion-collapse-body-1" class="hidden h-20 overflow-auto"
+          aria-labelledby="accordion-collapse-heading-1">
+          <ul class="flex flex-col">
+            <li>
+              <button class="p-2 hover:bg-gray-100 w-full">
+                <div class="flex items-center">
+                  <div class="mr-2 flex-shrink-0">
+                    <div size="size-8">
+                      <div
+                        class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                        <span class="font-medium text-sm text-white">DP</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-1 text-start">
+                    <h5 class="text-sm font-semibold text-Mdblue-700">
+                      David Parnall
+                    </h5>
+                    <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li> <button class="p-2 hover:bg-gray-100 w-full">
+                <div class="flex items-center">
+                  <div class="mr-2 flex-shrink-0">
+                    <div size="size-8">
+                      <div
+                        class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                        <span class="font-medium text-sm text-white">DP</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-1 text-start">
+                    <h5 class="text-sm font-semibold text-Mdblue-700">
+                      David Parnall
+                    </h5>
+                    <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+                  </div>
+                </div>
+              </button></li>
+          </ul>
+        </div>
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown-accnt-switcher"
+          class="inline-flex w-full items-center justify-between rounded border border-gray-300 bg-white p-2 text-center text-base font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-Mdblue-600 focus:bg-gray-100 focus:outline-none"
+          type="button">
+          <button class="p-2 hover:bg-gray-100">
             <div class="flex items-center">
               <div class="mr-2 flex-shrink-0">
                 <div size="size-8">
@@ -807,33 +825,66 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
               </div>
             </div>
           </button>
-        </li>
-        <li> <button class="p-2 hover:bg-gray-100 w-full">
-            <div class="flex items-center">
-              <div class="mr-2 flex-shrink-0">
-                <div size="size-8">
-                  <div
-                    class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
-                    <span class="font-medium text-sm text-white">DP</span>
+          <svg data-accordion-icon class="ms-3 size-2.5 text-Mdblue-600 rotate-180 shrink-0" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5 5 1 1 5" />
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div id="dropdown-accnt-switcher"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-64 dark:bg-gray-700">
+          <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+            <div class="mb-3 text-center font-medium">Select an account</div>
+          </div>
+          <ul class="flex flex-col">
+            <li>
+              <button class="p-2 hover:bg-gray-100 w-full">
+                <div class="flex items-center">
+                  <div class="mr-2 flex-shrink-0">
+                    <div size="size-8">
+                      <div
+                        class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                        <span class="font-medium text-sm text-white">DP</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-1 text-start">
+                    <h5 class="text-sm font-semibold text-Mdblue-700">
+                      David Parnall
+                    </h5>
+                    <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
                   </div>
                 </div>
-              </div>
-              <div class="flex-1 text-start">
-                <h5 class="text-sm font-semibold text-Mdblue-700">
-                  David Parnall
-                </h5>
-                <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
-              </div>
-            </div>
-          </button></li>
-      </ul>
-    </div>
-  </div>
-  <!-- <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+              </button>
+            </li>
+            <li> <button class="p-2 hover:bg-gray-100 w-full">
+                <div class="flex items-center">
+                  <div class="mr-2 flex-shrink-0">
+                    <div size="size-8">
+                      <div
+                        class="bg-secondary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-8">
+                        <span class="font-medium text-sm text-white">DP</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-1 text-start">
+                    <h5 class="text-sm font-semibold text-Mdblue-700">
+                      David Parnall
+                    </h5>
+                    <p class="text-sm font-normal text-Mdblue-600">Company name 1</p>
+                  </div>
+                </div>
+              </button></li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
     <div class="mb-3 text-center font-medium">Add Court Filters</div>
   </div> -->
-  <div class="mt-2 h-[1px] grow bg-gray-200"></div>
-  <!-- <div class="flex items-center px-4 py-2 pb-0">
+      <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+      <!-- <div class="flex items-center px-4 py-2 pb-0">
     <button type="button"
       class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
       Back
@@ -844,43 +895,43 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
       <a><span>Federal</span></a>
     </div>
   </div> -->
-  <div class="mt-2 h-[1px] grow bg-gray-200"></div>
-  <ul class="h-40- space-y-4- h-60- overflow-y-scroll- px-2- py-2 text-sm text-Mdblue-600">
-    <li class="">
-      <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
-        <span class="material-symbols-outlined icon-20 text-Mdblue-600"> account_circle </span>
-        <span class="ml-2 text-Mdblue-700">My Account & Profile</span>
-      </button>
-    </li>
-    <li class="">
+      <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+      <ul class="h-40- space-y-4- h-60- overflow-y-scroll- px-2- py-2 text-sm text-Mdblue-600">
+        <li class="">
+          <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
+            <span class="material-symbols-outlined icon-20 text-Mdblue-600"> account_circle </span>
+            <span class="ml-2 text-Mdblue-700">My Account & Profile</span>
+          </button>
+        </li>
+        <li class="">
 
-      <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
-        <span class="material-symbols-outlined icon-20 text-Mdblue-600"> group </span>
-        <span class="ml-2 text-Mdblue-700">My Team</span>
-      </button>
-    </li>
-    <li class="">
+          <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
+            <span class="material-symbols-outlined icon-20 text-Mdblue-600"> group </span>
+            <span class="ml-2 text-Mdblue-700">My Team</span>
+          </button>
+        </li>
+        <li class="">
 
-      <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
-        <span class="material-symbols-outlined icon-20 text-Mdblue-600"> tune </span>
-        <span class="ml-2 text-Mdblue-700">Notification Settings</span>
-      </button>
-    </li>
-  </ul>
+          <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
+            <span class="material-symbols-outlined icon-20 text-Mdblue-600"> tune </span>
+            <span class="ml-2 text-Mdblue-700">Notification Settings</span>
+          </button>
+        </li>
+      </ul>
 
-  <div class="mt-4 h-[1px] grow bg-gray-200"></div>
-  <div class=" gap-2 text-sm text-Mdblue-700">
-    <ul class=" py-2 text-sm text-Mdblue-600">
-      <li class="">
-        <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
-          <span class="material-symbols-outlined icon-20 text-Mdblue-600"> logout </span>
-          <span class="ml-2 text-Mdblue-700"> Log Out</span>
-        </button>
+      <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+      <div class=" gap-2 text-sm text-Mdblue-700">
+        <ul class=" py-2 text-sm text-Mdblue-600">
+          <li class="">
+            <button class="flex w-full items-center px-4 py-2 text-sm font-normal  hover:bg-gray-100">
+              <span class="material-symbols-outlined icon-20 text-Mdblue-600"> logout </span>
+              <span class="ml-2 text-Mdblue-700"> Log Out</span>
+            </button>
 
-      </li>
+          </li>
 
-    </ul>
-    <!-- <button type="button"
+        </ul>
+        <!-- <button type="button"
       class="disabled hover:bg-gray-100- rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 opacity-50 focus:outline-none focus:ring-4 focus:ring-gray-200">
       Clear All
     </button>
@@ -892,206 +943,206 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
       class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none">
       <span>Done</span>
     </button> -->
-  </div>
+      </div>
 
 
 
-</div>
-<!--account switcher dropdown end-->
-
-<!--UI design end-->
-
-<!--spinner start-->
-<div class="h-[26rem]">
-  <div class="flex flex-col justify-center items-center gap-2 h-full">
-    <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin fill-gray-600" viewBox="0 0 100 101"
-      fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-        fill="currentColor" />
-      <path
-        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-        fill="currentFill" />
-    </svg>
-    <span class="text-sm text-Mdblue-600 font-semibold">Loading...</span>
-  </div>
-</div>
-
-
-<!--spinner end-->
-
-
-<!--angular animation -bottom to bottom start-->
-<div class="d-none- container multidoc-bottom-sheet">
-  <div [@slideInOut]="isVisible ? 'visible' : 'hidden'" class="bottom-sheet w-full">
-    This div slides in from the bottom
-  </div>
-  <button (click)="toggleVisibility()" class="toggle-button">
-    {{ isVisible ? "Hide" : "Show" }} Sliding Div
-  </button>
-</div>
-<!--angular animation -bottom to bottom end-->
-
-<!--search inside midcontent start-->
-<!--left sidebar sticky start-->
-<div class="outer-wrapper flex h-full flex-col d-none">
-  <div class="header border border-sky-700">
-    <div class="container">
-      <p>
-        header headerhe aderheaderh eaderhead erheade rheader header headerhe
-        aderheaderh eaderhead erheade rheader header headerhe aderheaderh
-        eaderhead erheade rheader header headerhe aderheaderh eaderhead erheade
-        rheader
-      </p>
-      <p>header headerhe aderheaderh eaderhead erheade rheader</p>
     </div>
-  </div>
-  <div class="mid mid-content relative flex grow flex-col overflow-y-auto bg-section_gray">
-    <div class="search-bar border border-sky-500">
-      <div class="container">
-        <p>
-          search bar orem ipsum dolor sit amet consectetur adipisicing elit. Ea
-          modi similique perspiciatis, ipsum eius repellendus, nam ab accusamus
-          debitis, consectetur commodi ratione impedit soluta atque
-          necessitatibus nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum
-          deleniti? Sint commodi doloremque optio id? Voluptate explicabo beatae
-          libero illum nihil accusantium nisi recusandae earum corporis atque,
-          dolores corrupti delectus soluta, sapiente ipsum suscipit sed. Sint
-          voluptatibus blanusdae quam deleniti, assumenda debit
-        </p>
-        <p>
-          search bar orem ipsum dolor sit amet consectetur adipisicing elit. Ea
-          modi similique perspiciatis, ipsum eius repellendus, nam ab accusamus
-          debitis, consectetur commodi ratione impedit soluta atque
-          necessitatibus nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum
-          deleniti? Sint commodi doloremque optio id? Voluptate explicabo beatae
-          libero illum nihil accusantium nisi recusandae earum corporis atque,
-          dolores corrupti delectus soluta, sapiente ipsum suscipit sed. Sint
-          voluptatibus blanusdae quam deleniti, assumenda debit
-        </p>
+    <!--account switcher dropdown end-->
+
+    <!--UI design end-->
+
+    <!--spinner start-->
+    <div class="h-[26rem]">
+      <div class="flex flex-col justify-center items-center gap-2 h-full">
+        <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin fill-gray-600" viewBox="0 0 100 101"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+            fill="currentColor" />
+          <path
+            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+            fill="currentFill" />
+        </svg>
+        <span class="text-sm text-Mdblue-600 font-semibold">Loading...</span>
       </div>
     </div>
 
-    <div class="flex grow">
-      <div
-        class="first-col border-red sticky top-0 flex w-full max-w-[20%] overflow-y-auto bg-white p-6 pl-[1.2rem] pr-[1.2rem]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
-        similique perspiciatis, ipsum eius repellendus, nam ab accusamus
-        debitis, consectetur commodi ratione impedit soluta atque necessitatibus
-        nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
-        commodi doloremque optio id? Voluptate explicabo beatae libero illum
-        nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
-        delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
-        blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
-        sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
-        nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
-        distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
-        atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
-        similique perspiciatis, ipsum eius repellendus, nam ab accusamus
-        debitis, consectetur commodi ratione impedit soluta atque necessitatibus
-        nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
-        commodi doloremque optio id? Voluptate explicabo beatae libero illum
-        nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
-        delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
-        blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
-        sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
-        nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
-        distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
-        atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
-        similique perspiciatis, ipsum eius repellendus, nam ab accusamus
-        debitis, consectetur commodi ratione impedit soluta atque necessitatibus
-        nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
-        commodi doloremque optio id? Voluptate explicabo beatae libero illum
-        nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
-        delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
-        blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
-        sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
-        nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
-        distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
-        atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
+
+    <!--spinner end-->
+
+
+    <!--angular animation -bottom to bottom start-->
+    <div class="d-none- container multidoc-bottom-sheet">
+      <div [@slideInOut]="isVisible ? 'visible' : 'hidden'" class="bottom-sheet w-full">
+        This div slides in from the bottom
       </div>
-      <div class="second-col border-green w-full max-w-[80%]">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error,
-        quam quo sint maxime quos asperiores! Qui aliquid, odio natus,
-        perferendis explicabo ab error deleniti corporis consequatur, facere cum
-        ducimus. Fugit iusto ea saepe doloremque voluptas alias quae.
-        Perspiciatis quidem iusto quos fugit quia voluptatem soluta amet
-        excepturi quas eos, odit nisi, pariatur expedita eum delectus obcaecati
-        sit animi ducimus. Est, numquam vitae! Dolorem, iure officiis. Omnis
-        nostrum inventore quod voluptate culpa consequatur, nisi sequi vitae
-        optio magnam aspernatur expedita sed ipsam, dignissimos dolorem commodi
-        animi architecto vero. Est, ipsum! Dolore et doloremque molestias,
-        mollitia ea ullam minima, porro accusantium blanditiis possimus
-        voluptate repudiandae eum id ab reprehenderit, assumenda sequi quis
-        quisquam quam fugiat perspiciatis temporibus dicta aliquam nobis?
-        Accusantium? Labore adipisci illum inventore qui sit saepe nam
-        voluptatem ut sed, eius beatae, totam vel facilis alias quam officia
-        soluta velit. Consequatur quam ipsa, aliquam doloribus eos minima cumque
-        doloremque. Temporibus praesentium, qui magni facere repellendus nam
-        fuga non vel culpa, inventore laboriosam ratione deserunt! Aliquam,
-        facilis doloribus consectetur minus illo ut numquam a maiores culpa
-        reiciendis hic aliquid unde? Error doloremque eos sunt deserunt sapiente
-        eaque id facilis laudantium autem officia alias numquam ipsa tenetur,
-        voluptatem delectus, voluptatibus veniam dolorum eius dicta voluptate
-        voluptates nostrum tempore. Minima, ab ex? Consectetur, rerum a, et
-        cupiditate cumque expedita nam non nobis reiciendis explicabo ab soluta
-        laboriosam ea est, minus ex tempore odio. Odit nisi amet quas quidem
-        nihil est sapiente neque? Hic similique earum fugit modi nam beatae
-        dolorum possimus reprehenderit accusamus, aspernatur, quisquam veniam.
-        Fugit nemo praesentium optio voluptates consequuntur! Animi excepturi
-        praesentium, aperiam placeat sapiente quo est voluptate molestiae? Vel,
-        consequuntur? Minus necessitatibus veniam, quos quidem optio recusandae
-        in. Consequatur, quasi dignissimos! Alias nostrum, pariatur nisi
-        voluptates, deserunt ipsa praesentium at omnis quas, quod aspernatur
-        sunt consectetur assumenda ducimus!
-      </div>
+      <button (click)="toggleVisibility()" class="toggle-button">
+        {{ isVisible ? "Hide" : "Show" }} Sliding Div
+      </button>
     </div>
-  </div>
-</div>
-<div class="chatgpt outer-wrapper flex h-full flex-col d-none">
-  <div class="header border border-sky-700">
-    <div class="container">
-      <p>header content</p>
-    </div>
-  </div>
+    <!--angular animation -bottom to bottom end-->
 
-  <div class="mid-content relative flex flex-grow overflow-hidden bg-section_gray">
-    <div class="flex flex-col">
-
-
-      <div class=" border border-sky-700">
+    <!--search inside midcontent start-->
+    <!--left sidebar sticky start-->
+    <div class="outer-wrapper flex h-full flex-col d-none">
+      <div class="header border border-sky-700">
         <div class="container">
-          <p>search content</p>
+          <p>
+            header headerhe aderheaderh eaderhead erheade rheader header headerhe
+            aderheaderh eaderhead erheade rheader header headerhe aderheaderh
+            eaderhead erheade rheader header headerhe aderheaderh eaderhead erheade
+            rheader
+          </p>
+          <p>header headerhe aderheaderh eaderhead erheade rheader</p>
         </div>
       </div>
-      <div class="flex">
-        <div class="first-col sticky top-0 w-[20%] h-full overflow-y-auto p-6 bg-white border-r">
-          <p>first-col content (scrollable)</p>
+      <div class="mid mid-content relative flex grow flex-col overflow-y-auto bg-section_gray">
+        <div class="search-bar border border-sky-500">
+          <div class="container">
+            <p>
+              search bar orem ipsum dolor sit amet consectetur adipisicing elit. Ea
+              modi similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+              debitis, consectetur commodi ratione impedit soluta atque
+              necessitatibus nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum
+              deleniti? Sint commodi doloremque optio id? Voluptate explicabo beatae
+              libero illum nihil accusantium nisi recusandae earum corporis atque,
+              dolores corrupti delectus soluta, sapiente ipsum suscipit sed. Sint
+              voluptatibus blanusdae quam deleniti, assumenda debit
+            </p>
+            <p>
+              search bar orem ipsum dolor sit amet consectetur adipisicing elit. Ea
+              modi similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+              debitis, consectetur commodi ratione impedit soluta atque
+              necessitatibus nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum
+              deleniti? Sint commodi doloremque optio id? Voluptate explicabo beatae
+              libero illum nihil accusantium nisi recusandae earum corporis atque,
+              dolores corrupti delectus soluta, sapiente ipsum suscipit sed. Sint
+              voluptatibus blanusdae quam deleniti, assumenda debit
+            </p>
+          </div>
         </div>
-        <div class="second-col w-[80%] h-full overflow-y-auto p-6 bg-gray-200">
-          <p>second-col content (scrollable)</p>
-        </div>
-      </div>
 
+        <div class="flex grow">
+          <div
+            class="first-col border-red sticky top-0 flex w-full max-w-[20%] overflow-y-auto bg-white p-6 pl-[1.2rem] pr-[1.2rem]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
+            similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+            debitis, consectetur commodi ratione impedit soluta atque necessitatibus
+            nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
+            commodi doloremque optio id? Voluptate explicabo beatae libero illum
+            nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
+            delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
+            blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
+            sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
+            nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
+            distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
+            atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
+            similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+            debitis, consectetur commodi ratione impedit soluta atque necessitatibus
+            nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
+            commodi doloremque optio id? Voluptate explicabo beatae libero illum
+            nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
+            delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
+            blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
+            sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
+            nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
+            distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
+            atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea modi
+            similique perspiciatis, ipsum eius repellendus, nam ab accusamus
+            debitis, consectetur commodi ratione impedit soluta atque necessitatibus
+            nemo at. Saepe, qui. Facilis sequi necessitatibus ipsum deleniti? Sint
+            commodi doloremque optio id? Voluptate explicabo beatae libero illum
+            nihil accusantium nisi recusandae earum corporis atque, dolores corrupti
+            delectus soluta, sapiente ipsum suscipit sed. Sint voluptatibus
+            blanusdae quam deleniti, assumenda debitis eveniet optio autem. Eligendi
+            sit ex officiis hic ullam! Rerum, vel. Corporis quos saepe a! Ipsam, ea
+            nostrum. Omnis, placeat, sapiente enim modi incidunt explicabo
+            distinctio cum itaque dolores architecto laboriosam? Ddiandae, mollitia
+            atque repellat? Neque, ratione sint! Libero at laudantium voluptas eos?
+          </div>
+          <div class="second-col border-green w-full max-w-[80%]">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error,
+            quam quo sint maxime quos asperiores! Qui aliquid, odio natus,
+            perferendis explicabo ab error deleniti corporis consequatur, facere cum
+            ducimus. Fugit iusto ea saepe doloremque voluptas alias quae.
+            Perspiciatis quidem iusto quos fugit quia voluptatem soluta amet
+            excepturi quas eos, odit nisi, pariatur expedita eum delectus obcaecati
+            sit animi ducimus. Est, numquam vitae! Dolorem, iure officiis. Omnis
+            nostrum inventore quod voluptate culpa consequatur, nisi sequi vitae
+            optio magnam aspernatur expedita sed ipsam, dignissimos dolorem commodi
+            animi architecto vero. Est, ipsum! Dolore et doloremque molestias,
+            mollitia ea ullam minima, porro accusantium blanditiis possimus
+            voluptate repudiandae eum id ab reprehenderit, assumenda sequi quis
+            quisquam quam fugiat perspiciatis temporibus dicta aliquam nobis?
+            Accusantium? Labore adipisci illum inventore qui sit saepe nam
+            voluptatem ut sed, eius beatae, totam vel facilis alias quam officia
+            soluta velit. Consequatur quam ipsa, aliquam doloribus eos minima cumque
+            doloremque. Temporibus praesentium, qui magni facere repellendus nam
+            fuga non vel culpa, inventore laboriosam ratione deserunt! Aliquam,
+            facilis doloribus consectetur minus illo ut numquam a maiores culpa
+            reiciendis hic aliquid unde? Error doloremque eos sunt deserunt sapiente
+            eaque id facilis laudantium autem officia alias numquam ipsa tenetur,
+            voluptatem delectus, voluptatibus veniam dolorum eius dicta voluptate
+            voluptates nostrum tempore. Minima, ab ex? Consectetur, rerum a, et
+            cupiditate cumque expedita nam non nobis reiciendis explicabo ab soluta
+            laboriosam ea est, minus ex tempore odio. Odit nisi amet quas quidem
+            nihil est sapiente neque? Hic similique earum fugit modi nam beatae
+            dolorum possimus reprehenderit accusamus, aspernatur, quisquam veniam.
+            Fugit nemo praesentium optio voluptates consequuntur! Animi excepturi
+            praesentium, aperiam placeat sapiente quo est voluptate molestiae? Vel,
+            consequuntur? Minus necessitatibus veniam, quos quidem optio recusandae
+            in. Consequatur, quasi dignissimos! Alias nostrum, pariatur nisi
+            voluptates, deserunt ipsa praesentium at omnis quas, quod aspernatur
+            sunt consectetur assumenda ducimus!
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<!--left sidebar sticky end-->
-<!--search inside midcontent end-->
+    <div class="chatgpt outer-wrapper flex h-full flex-col d-none">
+      <div class="header border border-sky-700">
+        <div class="container">
+          <p>header content</p>
+        </div>
+      </div>
+
+      <div class="mid-content relative flex flex-grow overflow-hidden bg-section_gray">
+        <div class="flex flex-col">
 
 
-<!--shreyas tooltip prompt start-->
+          <div class=" border border-sky-700">
+            <div class="container">
+              <p>search content</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="first-col sticky top-0 w-[20%] h-full overflow-y-auto p-6 bg-white border-r">
+              <p>first-col content (scrollable)</p>
+            </div>
+            <div class="second-col w-[80%] h-full overflow-y-auto p-6 bg-gray-200">
+              <p>second-col content (scrollable)</p>
+            </div>
+          </div>
 
-<button data-tooltip-target="tooltip-no-arrow" class="">
-  <span class="material-symbols-outlined icon-18 text-Mdblue-600">
-info
-</span>
-</button>
-<div id="tooltip-no-arrow" role="tooltip" class="absolute w-60  text-wrap break-words z-10 invisible inline-block px-3 py-2
+        </div>
+      </div>
+    </div>
+    <!--left sidebar sticky end-->
+    <!--search inside midcontent end-->
+
+
+    <!--shreyas tooltip prompt start-->
+
+    <button data-tooltip-target="tooltip-no-arrow" class="">
+      <span class="material-symbols-outlined icon-18 text-Mdblue-600">
+        info
+      </span>
+    </button>
+    <div id="tooltip-no-arrow" role="tooltip" class="absolute w-60  text-wrap break-words z-10 invisible inline-block px-3 py-2
 text-sm transition-opacity
 duration-300 font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
-    Tooltip content
-</div>
-<!--shreyas tooltip prompt end-->
+      Tooltip content
+    </div>
+    <!--shreyas tooltip prompt end-->
