@@ -10,46 +10,44 @@
     <!-- Fixed header -->
     <header class="bg-primary-700 text-white p-4 dynamic-header">
       Header Content
-                  <!-- Dropdown button -->
-                    <div class="relative-">
-                        <button
-                            id="dropdownDefaultButton"
-                            data-dropdown-toggle="dropdown"
-                            data-dropdown-offset-distance="10"
-                            data-dropdown-placement="bottom-end"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            type="button">
-                            Dropdown
-                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                            </svg>
-                        </button>
+      <!-- Dropdown button -->
+      <div class="relative-">
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" data-dropdown-offset-distance="10"
+          data-dropdown-placement="bottom-end"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button">
+          Dropdown
+          <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 4 4 4-4" />
+          </svg>
+        </button>
 
-                        <!-- Dropdown menu -->
-                        <div id="dropdown"
-                             class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
-                            <div class="dropdown-container overflow-y-auto">
-                                <ul class="py-2 text-sm text-primary-600 ">
-                                    <!-- Generate many items to test scrolling -->
-                                    <li><a href="#" class="block px-4 py-2 ">Dashboard</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Settings</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Earnings</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Sign out</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Profile</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Messages</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Downloads</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Team</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Analytics</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Reports</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Projects</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">Tasks</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">last 3</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">last 2</a></li>
-                                    <li><a href="#" class="block px-4 py-2 ">last 1</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Dropdown menu -->
+        <div id="dropdown" class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+          <div class="dropdown-container overflow-y-auto">
+            <ul class="py-2 text-sm text-primary-600 ">
+              <!-- Generate many items to test scrolling -->
+              <li><a href="#" class="block px-4 py-2 ">Dashboard</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Settings</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Earnings</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Sign out</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Profile</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Messages</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Downloads</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Team</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Analytics</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Reports</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Projects</a></li>
+              <li><a href="#" class="block px-4 py-2 ">Tasks</a></li>
+              <li><a href="#" class="block px-4 py-2 ">last 3</a></li>
+              <li><a href="#" class="block px-4 py-2 ">last 2</a></li>
+              <li><a href="#" class="block px-4 py-2 ">last 1</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Scrollable container -->
@@ -204,6 +202,69 @@
         </div>
       </div>
       <!-- Remove the max-height and use viewport positioning end -->
+
+      <!--table column width testing start-->
+
+
+      <div class="relative container overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-100">
+          <thead class="text-xs text-white uppercase bg-blue-600 dark:text-white">
+            <tr>
+              <th scope="col" class="px-6 py-3 ">
+                Product name
+              </th>
+              <th scope="col" class="px-6 py-3 w-[20%]">
+                Color
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Category
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Price
+              </th>
+              <th scope="col" class="px-6 py-3 w-[7%]">
+                Action
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-blue-500 border-b border-blue-400">
+              <th scope="row" class="px-6 py-4 font-medium text-blue-50  dark:text-blue-100">
+                Apple
+              </th>
+              <td class="px-6 py-4">
+                <div class="relative">
+                  Silver Apple MacBook Pro 17" Apple Apple MacBook Pro 17"ook Pro 17" Apple MacBook Pro 17" Apple
+                  MacBook
+                  Pro 17"
+                  <span class="info">info</span>
+                  <div class="cust-tooltip">
+                    Silver Apple MacBook Pro 17" Apple Appl
+
+                  </div>
+                </div>
+
+
+
+              <td class="px-6 py-4">
+                Laptop Apple Macple MacBook Pro 17" Apple MacBook Pro 17" Apple MacBook Pro 17" Laptop Apple Macple
+                MacBook Pro 17" Apple MacBook Pro 17" Apple MacBook Pro 17"
+              </td>
+              <td class="px-6 py-4">
+                $2999 Apple MacBook Pro 17" App
+              </td>
+              <td class="px-6 py-4">
+                <a href="#" class="font-medium text-white hover:underline">Edit</a>
+              </td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+
+      <!--table column width testing end-->
+
     </div>
   </div>
 </div>
@@ -212,25 +273,6 @@ I need this table thead should be sticky and top 0 when I scroll down the mid-co
 
 
 
-<!--data attorney data carosel h-sroll and mouse drag start-->
-<main
-  #mainContainer
-  (wheel)="onWheelScroll($event, mainContainer)"
-  (mousedown)="onMouseDown($event)"
-  (mouseup)="onMouseUp()"
-  (mousemove)="onMouseMove($event)"
->
-  <section>
-    <h1>Beep</h1>
-  </section>
-  <section>
-    <h1>Boop</h1>
-  </section>
-  <section>
-    <h1>Boooom</h1>
-  </section>
-  <section>
-    <h1>The End</h1>
-  </section>
-</main>
-<!--data attorney data carosel h-sroll and mouse drag end-->
+<p title="I'm a tooltip">Mouse over this paragraph, to display the title attribute as a tooltip. Mouse over this
+  paragraph, to display the title attribute as a tooltipMouse over this paragraph, to display the title attribute as a
+  tooltipMouse over this paragraph, to display the title attribute as a tooltip</p>
