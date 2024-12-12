@@ -22,6 +22,7 @@ import { Test2Component } from './test2/test2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeepComponent } from './deep/deep.component';
 import { ScrolltestComponent } from './scrolltest/scrolltest.component';
+import { ProfilepageComponent } from './profilepage/profilepage.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ScrolltestComponent } from './scrolltest/scrolltest.component';
     Test2Component,
     DeepComponent,
     ScrolltestComponent,
+    ProfilepageComponent,
 
   ],
   imports: [
