@@ -559,7 +559,7 @@ if (option && typeof option === "object") {
 //line chart artemis end
 
 //horizontal bar chart start
-var dom = document.getElementById("barchart");
+var dom = document.getElementById("barchart1");
 var myChart = echarts.init(dom, "null");
 var option = {
   dataset: {
