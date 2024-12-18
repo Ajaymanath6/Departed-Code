@@ -490,55 +490,67 @@ var app = {};
 
 var option;
 option = {
-    xAxis: {
-        type: "category",
-        data: ["2006", "2008", "2010", "2012", "2014", "2016", "2018", "2020", "2022", "2024"],
-    },
-    yAxis: {
-        type: "value",
-        min: 0,
-        max: 100,
-        interval: 25,
-    },
-    series: [
-        {
-            data: [10, 100, 20, 15, 30, 80, 70, 60, 75, 50],
-            type: "line",
-            smooth: false,
-            markLine: {
-                data: [
-                    { xAxis: "2006" },
-                    { xAxis: "2008" },
-                    { xAxis: "2010" },
-                    { xAxis: "2012" },
-                    { xAxis: "2014" },
-                    { xAxis: "2016" },
-                    { xAxis: "2018" },
-                    { xAxis: "2020" },
-                    { xAxis: "2022" },
-                    { xAxis: "2024" },
-                ],
-                lineStyle: {
-                    color: "#ABBDD1", // Solid line color
-                    type: "solid", // Solid line
-                    width: 1, // Line width
-                },
-                symbol: "none", // No arrows or markers
-            },
-        },
+  xAxis: {
+    type: "category",
+    data: [
+      "2006",
+      "2008",
+      "2010",
+      "2012",
+      "2014",
+      "2016",
+      "2018",
+      "2020",
+      "2022",
+      "2024",
     ],
-    tooltip: {
-        trigger: "axis",
-        axisPointer: {
-            type: "line",
+  },
+  yAxis: {
+    type: "value",
+    min: 0,
+    max: 100,
+    interval: 25,
+  },
+  series: [
+    {
+      data: [10, 100, 20, 15, 30, 80, 70, 60, 75, 50],
+      type: "line",
+      smooth: false,
+      markLine: {
+        data: [
+          { xAxis: "2006" },
+          { xAxis: "2008" },
+          { xAxis: "2010" },
+          { xAxis: "2012" },
+          { xAxis: "2014" },
+          { xAxis: "2016" },
+          { xAxis: "2018" },
+          { xAxis: "2020" },
+          { xAxis: "2022" },
+          { xAxis: "2024" },
+        ],
+        lineStyle: {
+          color: "#ABBDD1", // Solid line color
+          type: "solid", // Solid line
+          width: 1, // Line width
         },
+        symbol: "none", // No arrows or markers
+      },
     },
-    // grid: {
-    //     top: "10%",
-    //     bottom: "15%",
-    //     left: "10%",
-    //     right: "10%",
-    // },
+  ],
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "line",
+    },
+    extraCssText: "z-index: 10;",
+  },
+  // grid: {
+  //     top: "10%",
+  //     bottom: "15%",
+  //     left: "10%",
+  //     right: "10%",
+  // },
 };
 
 if (option && typeof option === "object") {
@@ -547,87 +559,182 @@ if (option && typeof option === "object") {
 //line chart artemis end
 
 //horizontal bar chart start
-var dom = document.getElementById("barchart");
-var myChart = echarts.init(dom, null, {
-    // renderer: "canvas",
-    // useDirtyRect: false,
-});
+// var dom = document.getElementById("barchart");
+// //var myChart = echarts.init(dom, null, {});
+// //var myChart = echarts.init(dom, "Apollo");
+// var myChart = echarts.init(dom, "null");
 
+
+// var option = {
+//     dataset: {
+//         source: [
+//             // Top 5 bars with names and values
+//             ["amount", "product"],
+//             [84, "Henry Jones"],
+//             [194, "Catherine James"],
+//             [62, "Edgar Clerk"],
+//             [85, "Maria Stevens"],
+//             [64, "James Ruskin"],
+//         ],
+//     },
+//     grid: {
+//         containLabel: true,
+//         left: "20%", // Spacing to accommodate the labels
+//         right: "10%",
+//         top: "10%",
+//         bottom: "10%",
+//     },
+//     tooltip: {
+//         trigger: "axis",
+//         axisPointer: {
+//             // Use axis to trigger tooltip
+//             type: "shadow", // 'shadow' as default; can also be 'line' or 'shadow'
+//         },
+//     },
+//     xAxis: {
+//         type: "value",
+//         position: "top", // Place the scale readings at the top
+//         axisLabel: {
+//             fontSize: 12,
+//             color: "#333",
+//         },
+//         splitLine: {
+//             lineStyle: {
+//                 color: "#e0e0e0",
+//             },
+//         },
+//     },
+//     yAxis: {
+//         type: "category",
+//         axisLabel: {
+//             fontSize: 14,
+//             color: "#333",
+//             fontWeight: "bold", // Bold for better readability
+//         },
+//     },
+//     series: [
+//         {
+//             type: "bar",
+//             label: {
+//                 show: true,
+//                 position: "right", // Numbers displayed at the right end of bars
+//                 color: "#000",
+//                 fontSize: 12,
+//                 fontWeight: "bold",
+//             },
+//             itemStyle: {
+//                 color: function (params) {
+//                     // Custom colors for the bars
+//                     const colors = ["#A71042", "#009EBD", "#001A31", "#DD8332", "#005C87"];
+//                     return colors[params.dataIndex];
+//                 },
+//                 borderRadius: [0, 0, 0, 0], // Rounded corners
+//             },
+//             barWidth: "90%", // Adjust bar thickness
+//             encode: {
+//                 x: "amount",
+//                 y: "product",
+//             },
+//         },
+//     ],
+// };
+// if (option && typeof option === "object") {
+//     myChart.setOption(option);
+// }
+var dom = document.getElementById("barchart");
+var myChart = echarts.init(dom, "null");
 var option = {
-    dataset: {
-        source: [
-            // Top 5 bars with names and values
-            ["amount", "product"],
-            [84, "Henry Jones"],
-            [194, "Catherine James"],
-            [62, "Edgar Clerk"],
-            [85, "Maria Stevens"],
-            [64, "James Ruskin"],
-        ],
-    },
-    grid: {
-        containLabel: true,
-        left: "20%", // Spacing to accommodate the labels
-        right: "10%",
-        top: "10%",
-        bottom: "10%",
-    },
-    tooltip: {
-        trigger: "axis",
-        axisPointer: {
-            // Use axis to trigger tooltip
-            type: "shadow", // 'shadow' as default; can also be 'line' or 'shadow'
-        },
-    },
-    xAxis: {
-        type: "value",
-        position: "top", // Place the scale readings at the top
-        axisLabel: {
-            fontSize: 12,
-            color: "#333",
-        },
-        splitLine: {
-            lineStyle: {
-                color: "#e0e0e0",
-            },
-        },
-    },
-    yAxis: {
-        type: "category",
-        axisLabel: {
-            fontSize: 14,
-            color: "#333",
-            fontWeight: "bold", // Bold for better readability
-        },
-    },
-    series: [
-        {
-            type: "bar",
-            label: {
-                show: true,
-                position: "right", // Numbers displayed at the right end of bars
-                color: "#000",
-                fontSize: 12,
-                fontWeight: "bold",
-            },
-            itemStyle: {
-                color: function (params) {
-                    // Custom colors for the bars
-                    const colors = ["#A71042", "#009EBD", "#001A31", "#DD8332", "#005C87"];
-                    return colors[params.dataIndex];
-                },
-                borderRadius: [0, 0, 0, 0], // Rounded corners
-            },
-            barWidth: "90%", // Adjust bar thickness
-            encode: {
-                x: "amount",
-                y: "product",
-            },
-        },
+  dataset: {
+    source: [
+      // Expanded to 10 bars with unique names and values
+      ["amount", "product"],
+      [84, "Henry Jones"],
+      [194, "Catherine James"],
+      [62, "Edgar Clerk"],
+      [85, "Maria Stevens"],
+      [64, "James Ruskin"],
+      [122, "Elizabeth Brown"],
+      [76, "Michael Thompson"],
+      [156, "Sarah Anderson"],
+      [95, "David Wilson"],
+      [43, "Jennifer Lee"],
     ],
+  },
+  grid: {
+    containLabel: true,
+    left: "25%", // Increased spacing for more labels
+    right: "10%",
+    top: "10%",
+    bottom: "10%",
+  },
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "shadow",
+    },
+  },
+  xAxis: {
+    type: "value",
+    position: "top",
+    axisLabel: {
+      fontSize: 12,
+      color: "#333",
+    },
+    splitLine: {
+      lineStyle: {
+        color: "#e0e0e0",
+        type: "dashed",
+      },
+    },
+  },
+  yAxis: {
+    type: "category",
+    axisLabel: {
+      fontSize: 12,
+      color: "#005C87",
+      fontWeight: "bold",
+    },
+  },
+  series: [
+    {
+      type: "bar",
+      label: {
+        show: true,
+        position: "right",
+        color: "#000",
+        fontSize: 11,
+        fontWeight: "bold",
+      },
+      itemStyle: {
+        color: function (params) {
+          // Expanded color palette with more unique colors
+          const colors = [
+            "#A71042", // Deep Crimson
+            "#009EBD", // Teal Blue
+            "#001A31", // Dark Navy
+            "#DD8332", // Burnt Orange
+            "#005C87", // Steel Blue
+            "#ABBDD1", // Deep Orchid
+            "#D0CFCD", // Sea Green
+            "#F8E00B", // Crimson
+            "#4B0082", // Indigo
+            "#B541FC", // Tomato Red
+          ];
+          return colors[params.dataIndex];
+        },
+        borderRadius: [0, 5, 5, 0], // Slightly rounded right corners
+      },
+      barWidth: "70%", // Reduced bar thickness to prevent overlap
+      barGap: "30%", // Add gap between bars
+      encode: {
+        x: "amount",
+        y: "product",
+      },
+    },
+  ],
 };
 if (option && typeof option === "object") {
-    myChart.setOption(option);
+  myChart.setOption(option);
 }
 //horizontal bar chart end
 
@@ -681,6 +788,7 @@ option = {
                 { value: 580, name: "Email" },
                 { value: 484, name: "Union Ads" },
                 { value: 300, name: "Video Ads" },
+
             ],
         },
     ],
@@ -698,46 +806,54 @@ var app = {};
 
 var option;
 option = {
-    tooltip: {
-        trigger: "item",
-    },
-    legend: {
-        show: false, // Hiding the legend
-    },
-    series: [
-        {
-            name: "Case Distribution",
-            type: "pie",
-            radius: ["40%", "70%"], // Donut chart
-            avoidLabelOverlap: false,
-            label: {
-                show: true,
-                position: "outside",
-                formatter: "{b} \n {c} cases ({d}%)", // Label format
-                fontSize: 12,
-                color: "#001A31",
-            },
-            labelLine: {
-                show: true, // Show arrow lines for labels
-                length: 10,
-                length2: 20,
-                color: "##EAEEF2",
-            },
-            emphasis: {
-                label: {
-                    show: true,
-                    fontSize: 16,
-                    fontWeight: "bold",
-                },
-            },
-            data: [
-                { value: 54, name: "Category A", itemStyle: { color: "#A71042" } },
-                { value: 62, name: "Category B", itemStyle: { color: "#B541FC" } },
-                { value: 20, name: "Category C", itemStyle: { color: "#F8E00B" } },
-                { value: 104, name: "Category D", itemStyle: { color: "#009EBD" } },
-            ],
+  tooltip: {
+    trigger: "item",
+  },
+  legend: {
+    show: false, // Hiding the legend
+  },
+  series: [
+    {
+      name: "Case Distribution",
+      type: "pie",
+      radius: ["40%", "70%"], // Donut chart
+      avoidLabelOverlap: true,
+      label: {
+        show: true,
+        position: "outside",
+        formatter: "{b} \n {c} cases ({d}%)", // Label format
+        fontSize: 12,
+        color: "#001A31",
+      },
+      labelLine: {
+        show: true, // Show arrow lines for labels
+        length: 10,
+        length2: 20,
+        color: "##EAEEF2",
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: 13,
+          fontWeight: "bold",
         },
-    ],
+      },
+      data: [
+        { value: 4, name: "Category A", itemStyle: { color: "#A71042" } },
+        { value: 2, name: "Category B", itemStyle: { color: "#B541FC" } },
+        { value: 1, name: "Category C", itemStyle: { color: "#F8E00B" } },
+        { value: 5, name: "Category D", itemStyle: { color: "#009EBD" } },
+        { value: 54, name: "Category A", itemStyle: { color: "#A71042" } },
+        { value: 62, name: "Category B", itemStyle: { color: "#B541FC" } },
+        { value: 20, name: "Category C", itemStyle: { color: "#F8E00B" } },
+        { value: 104, name: "Category D", itemStyle: { color: "#009EBD" } },
+        { value: 54, name: "Category A", itemStyle: { color: "#A71042" } },
+        { value: 62, name: "Category B", itemStyle: { color: "#B541FC" } },
+        { value: 20, name: "Category C", itemStyle: { color: "#F8E00B" } },
+        { value: 104, name: "Category D", itemStyle: { color: "#009EBD" } },
+      ],
+    },
+  ],
 };
 
 
