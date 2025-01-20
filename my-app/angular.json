@@ -25,7 +25,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss", "src/custum-js/css/style.css"],
-            "scripts": ["src/custum-js/echart.js"]
+            "scripts": ["src/custum-js/echart.js", "node_modules/flowbite-datepicker/dist/js/datepicker-full.min.js"]
           },
           "configurations": {
             "production": {

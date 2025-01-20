@@ -10,6 +10,6 @@ import { initFlowbite } from 'flowbite';
 export class AppComponent {
   title = 'my-app';
   ngOnInit(): void {
-    initFlowbite();
+     initFlowbite();
   }
 }
