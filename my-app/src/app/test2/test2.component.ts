@@ -7,12 +7,15 @@ import {
   transition,
 } from '@angular/animations';
 
+declare var DateRangePicker: any;
+declare var Datepicker: any;
+
 @Component({
   selector: 'app-test2',
   templateUrl: './test2.component.html',
   styleUrls: ['./test2.component.scss'],
 
-  // selector: 'app-sliding-div',
+  // selector: 'app-sliding-div',DateRangePicker
   //selector: 'app-test2',
 
   animations: [
@@ -39,5 +42,13 @@ export class Test2Component {
 
   toggleVisibility() {
     this.isVisible = !this.isVisible;
+  }
+
+  ngOnInit() {
+    console.log(Datepicker);
+    // const dateRangePickerEl = document.getElementById('date-range-picker');
+    // new DateRangePicker(dateRangePickerEl, {
+    //   pickLevel: 2,
+    // });
   }
 }
