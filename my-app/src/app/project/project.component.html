@@ -1,0 +1,565 @@
+<div class="outer-wrapper flex h-full flex-col">
+  <div class="z-20 bg-white">
+    <nav class="bg-white- relative w-full bg-Mdblue-700">
+      <section class="header-shadow">
+        <div class="mx-auto flex flex-wrap items-center justify-between px-4 py-3">
+          <a class="flex items-center space-x-3 align-middle" href="/DEV02/dashboard"><img alt="UniCourt Logo"
+              width="88" height="40" src="https://cdn-staging.unicourt.com/common_resources/images/logo-v2.svg"></a>
+          <div id="navbar-sticky" class="items-center justify-between md:flex md:w-auto">
+            <ul class="text-Mdblue-600- flex p-4 font-medium text-gray-600 md:p-0">
+              <li class=""><a
+                  class="hover:text-primary-500- flex items-center px-3 text-base font-semibold hover:text-white"
+                  href="/DEV02/dashboard"><span class="material-symbols-outlined icon-24 mr-1"> cottage
+                  </span><span>Home</span></a></li>
+              <li class=""><a
+                  class="hover:text-primary-500- flex items-center px-3 text-base font-semibold hover:text-white"
+                  href="/DEV02/trending"><span class="material-symbols-outlined icon-24 mr-1">
+                    star_outline </span><span>Tracking</span></a></li>
+              <li class=""><a
+                  class="hover:text-primary-500- flex items-center px-3 text-base font-semibold hover:text-white"
+                  href="/DEV02/tracking"><span class="material-symbols-outlined icon-24 mr-1"> watch_later
+                  </span><span>Bookmarks</span></a></li>
+              <li class=""><a
+                  class="hover:text-primary-500- flex items-center px-3 text-base font-semibold hover:text-white"
+                  href="/DEV02/orders"><span class="material-symbols-outlined icon-24 mr-1">
+                    receipt_long </span><span>Searches</span></a></li>
+              <li class=""><a
+                  class="hover:text-primary-500- flex items-center px-3 text-base font-semibold hover:text-white"
+                  href="/DEV02/settings/my-team"><span class="material-symbols-outlined icon-24 mr-1"> grid_view
+                  </span><span>More</span></a></li>
+            </ul>
+          </div>
+          <div class="flex align-middle">
+            <div>
+              <div class="flex h-full items-center px-3"><button type="button"
+                  class="focus:ring-primary-300- text-Mdblue-600- focus:ring-0- focus:bg-gray-100- focus:border-Mdblue-600- hover:bg-gray-100- border-white- relative inline-flex items-center rounded-lg border border-Mdblue-700 p-2 text-center text-sm font-medium text-gray-600"><span
+                    class="material-symbols-outlined icon-24"> notifications
+                  </span></button>
+                <div aria-labelledby="notificationDropdownTarget"
+                  class="cust-drop z-20 hidden w-[30rem] rounded-lg bg-white p-4">
+                  <div class="my-4 flex items-center">
+                    <div class="mr-2 text-center text-sm font-semibold uppercase text-Mdblue-600"> New For you </div>
+                    <div class="h-px grow bg-gray-200"></div>
+                  </div>
+                  <div>
+                    <div class="my-4 text-center text-Mdblue-600 "><span class="material-symbols-outlined"> auto_awesome
+                      </span>
+                      <p class="text-center text-base font-semibold"> Nothing new for you at the moment </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="relative flex h-full items-center">
+                <button type="button" class="focus:ring-4- focus:ring-gray-300- flex rounded-full text-sm md:me-0"><span
+                    class="sr-only">Open
+                    user menu</span>
+                  <div size="size-10"><img alt="Profile Avatar" class="rounded-full size-10 "
+                      src="https://lh3.googleusercontent.com/a/ACg8ocKfW4JenPkHVDEBKdn_P1nPVW-hcuzPxbc60iNtTqSPbB4jtJ8=s96-c">
+                  </div>
+                </button>
+              </div>
+              <div class="cust-drop z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white">
+                <div class="space-y-1 px-4 py-3 text-sm text-Mdblue-700">
+                  <div class=""> Kishor Yermal </div>
+                  <div class="truncate font-medium "> kishory@unicourt.com </div>
+
+                </div>
+                <ul class="py-2 text-sm text-Mdblue-700">
+                  <li class=""><a class="block px-4 py-2 hover:bg-gray-100" href="/DEV02/dashboard">Dashboard</a></li>
+                  <li class=""><a class="block px-4 py-2 hover:bg-gray-100" href="/DEV02/settings/my-team">Settings</a>
+                  </li>
+
+                </ul>
+                <div class="py-2"><button
+                    class="block w-full px-4 py-2 text-left text-sm text-Mdblue-700 hover:bg-gray-100"> Log out
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </nav>
+  </div>
+  <div class="h-full w-full grow overflow-y-auto">
+    <div class="container w-[73rem] mdm:w-full h-full-">
+
+      <!--main search start-->
+      <div class="">
+        <div class="w-full">
+          <div class="flex w-full items-center gap-6 relative">
+            <button
+              class="shrink-0 flex items-center justify-center rounded border border-gray-300 bg-white px-5 py-1 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"><span
+                class="material-symbols-outlined mr-1"></span><span>All Projects</span></button>
+            <div class="h-[1px] w-full bg-gray-300"></div>
+            <div class="mx-2 flex items-center space-x-2 text-center font-semibold text-Mdblue-600">
+              <!-- <span
+                class="Mdblue-fill-600 icon-24 material-symbols-outlined"> domain </span> -->
+              <h3 class="whitespace-nowrap text-xl font-semibold text-Mdblue-700"> Project Name </h3>
+            </div>
+            <div class="h-[1px] w-full bg-gray-300"></div>
+            <!-- <div class="absolute right-0 pl-6 bg-section_gray">
+              <div class="flex space-x-2 !mr-2">
+                <div><button type="button"
+                    class="inline-flex items-center rounded-lg border p-2 text-center font-medium text-Mdblue-700 hover:bg-gray-200 border-transparent"><span
+                      class="icon-24 material-symbols-outlined"> grid_view
+                    </span></button></div>
+                <div><button type="button"
+                    class="inline-flex items-center rounded-lg border p-2 text-center font-medium text-Mdblue-700 hover:bg-gray-200 border-Mdblue-600 bg-gray-200"><span
+                      class="icon-24 material-symbols-outlined"> reorder </span></button></div>
+              </div>
+            </div> -->
+            <button
+              class="shrink-0 flex items-center justify-center rounded border border-gray-300 bg-white px-5 py-1 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"><span
+                class="material-symbols-outlined mr-1"></span><span>View All</span></button>
+          </div>
+        </div>
+        <p class="my-4 text-center">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <div class="flex justify-center gap-2">
+          <div class=" items-center rounded-full bg-gray-200 px-2 py-1 text-xs font-semibold text-Mdblue-600">
+            Client Name
+          </div>
+          <div class=" items-center rounded-full bg-gray-200 px-2 py-1 text-xs font-semibold text-Mdblue-600">
+            Matter Name
+          </div>
+        </div>
+        <div
+          class="cust-trans mt-4 container- relative mb-1 flex min-h-[16px] w-full items-center justify-between rounded border-[1.5px] border-gray-300 bg-gray-50 p-2 text-sm text-Mdblue-700 focus-within:border-Mdblue-600">
+          <div class="flex w-full flex-wrap gap-2"><input placeholder="What are you looking for?"
+              class="w-full bg-transparent px-2 py-1 text-base font-normal outline-none placeholder:text-Mdblue-600 ng-untouched ng-pristine ng-valid ">
+          </div>
+          <div class="flex items-center space-x-2">
+            <div text="Search"><button type="submit"
+                class="btn-focus flex w-full items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none"><span
+                  class="material-symbols-outlined mr-1"> search
+                </span><span>Search</span></button></div>
+          </div>
+        </div>
+        <p class="text-center my-4">Or, explore the latest from this project</p>
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <div class="flex items-center">
+              <div class="mr-2 flex items-center text-center font-semibold text-Mdblue-600"><span
+                  class="material-symbols-outlined Mdblue-fill-600 icon-28 mr-1"> schedule </span>
+                <h3 class="text-2xl font-semibold text-Mdblue-700"> Tracking </h3>
+              </div>
+              <div class="w-full- h-[1px] grow bg-gray-200"></div><button
+                class="w-full- flex items-center justify-center rounded border border-gray-300 bg-white px-5 py-1 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"><span
+                  class="material-symbols-outlined mr-1"></span><span>View All</span></button>
+            </div>
+            <p class="my-2">Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.</p>
+            <div class="mb-3 inline-flex flex-wrap items-center space-x-2 text-Mdblue-600">
+              <button type="button"
+                class="rounded-full border px-4 py-2 text-sm font-medium bg-gray-200 text-Mdblue-700"> All
+              </button>
+              <button type="button" class="rounded-full px-4 py-2 text-sm font-medium hover:text-Mdblue-700"> Cases
+              </button>
+              <button type="button" class="rounded-full px-4 py-2 text-sm font-medium hover:text-Mdblue-700"> Attorneys
+              </button>
+            </div>
+            <div>
+              <table
+                class="w-full border-separate border-spacing-2 border-spacing-y-3 text-left text-sm text-Mdblue-600">
+                <tbody>
+                  <tr class="rounded-md outline outline-1 outline-gray-300 ">
+                    <td class="w-4- p-4">
+                      <!-- <div class="flex items-center">
+                        <input id="checkbox-table-search-1" type="checkbox"
+                          class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0"><label
+                          for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                        </div> -->
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="Mdblue-fill-700 shrink-0 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-10">
+                          <span class="font-semibold text-base text-white undefined">AM</span>
+                        </div>
+                        <div>
+                          <div class="text-base font-semibold text-Mdblue-700"> test-2 </div>
+                          <div class="flex"><span class="text-Mdblue-600 font-semibold"> Firm Name </span></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-4">
+                      <div>
+                        <div
+                          class="inline-flex items-center space-x-1 rounded-full bg-gray-200 px-2 py-1 text-xs font-semibold text-Mdblue-600"
+                          id="badge-grey-document-filed-date-32663"><span class="">10/02/2025</span></div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-4">
+                      <p class="font-normal text-Mdblue-700"> 02/10/2025: NOTICE TO QUIT POSSESSION - ORIGINAL SUMMARY
+                        PROCESS </p>
+                    </td>
+                    <td>
+                      <div
+                        class="inline-flex items-center space-x-1 rounded-full bg-gray-200 px-2 py-1 text-xs font-semibold text-Mdblue-600"
+                        id="badge-grey-number-of-documents-98951"><!----><span class="ng-star-inserted">1</span><span
+                          class="material-symbols-outlined icon-18 Mdblue-fill-600 ng-star-inserted">article</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--main search end-->
+
+      <!--new project start-->
+      <div class="w-[43rem] mt-6">
+        <div class="text-center flex flex-col justify-center">
+          <div size="size-10" class="flex justify-center"><img alt="Profile Avatar" class="rounded-full size-10 "
+              src="https://lh3.googleusercontent.com/a/ACg8ocKfW4JenPkHVDEBKdn_P1nPVW-hcuzPxbc60iNtTqSPbB4jtJ8=s96-c">
+          </div>
+          <p class="text-[2rem] font-bold text-Mdblue-700">New Project</p>
+          <p class="text-base font-normal text-Mdblue-600 mb-4">lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+        </div>
+        <div class="parent-card rounded-xl border-2 border-gray-200 bg-white">
+          <div class="flex flex-col rounded-xl p-12">
+            <div class="flex grow- flex-col gap-4">
+              <div>
+                <p class="text-base font-semibold mb-1">Project Name</p>
+                <input name="Project" type="ProjectName" id="ProjectName" formcontrolname="Project Name"
+                  placeholder="Project Name..." required=""
+                  class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+              </div>
+              <div>
+                <p class="text-base font-semibold mb-1">Description</p>
+                <textarea name="Description" rows="3" type="Description" id="Description" formcontrolname="Description"
+                  placeholder="Description..." required="" class="w-full rounded border border-gray-300 bg-gray-50 p-4 text-base
+                font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                </textarea>
+              </div>
+              <div>
+                <p class="text-base font-semibold mb-1">Client</p>
+                <input name="Client" type="Client" id="Client" formcontrolname="Client" placeholder="Client..."
+                  required=""
+                  class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+              </div>
+              <div>
+                <p class="text-base font-semibold mb-1">Matter</p>
+                <input name="Matter" type="Matter" id="Matter" formcontrolname="Matter" placeholder="Matter..."
+                  required=""
+                  class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="border-t border-b border-gray-200 p-12">
+              <div>
+                <p class="text-base font-semibold ">Members</p>
+                <p class="text-xs mb-4">Add people to the project</p>
+                <div class="relative">
+                  <input name="Project" type="ProjectName" id="ProjectName"
+                    placeholder="Search people by name or email..." required="" class="w-full rounded border border-gray-300 bg-gray-50 p-3 pe-10 text-base
+                font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                  <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg
+                      aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
+                      class="size-4 text-Mdblue-600 ">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                    </svg></div>
+                </div>
+                <div class="flex mt-4 gap-4 flex-wrap">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="Mdblue-fill-700 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-10">
+                      <span class="font-semibold text-base text-white undefined">AM</span>
+                    </div>
+                    <div>
+                      <div class="text-base font-semibold text-Mdblue-700"> test-2 </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col flex-1 rounded-xl p-12 pt-2 pb-12 margin-0 overflow-y-auto max-h-[15rem] relative">
+              <div class="">
+                <table class="w-full text-left text-sm text-Mdblue-600 ">
+                  <thead class="border-b text-sm font-semibold text-Mdblue-600 ">
+                    <tr class="">
+                      <th class="p-4 font-semibold">Name</th>
+                      <th class="p-4 font-semibold">Email</th>
+                      <th class="p-4 font-semibold"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-100 ">
+                    <tr class="bg-white">
+                      <td class="p-4 pl-0">
+                        <div class="flex items-center gap-2">
+                          <div
+                            class="Mdblue-fill-700 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-10 ">
+                            <span class="font-semibold text-base text-white undefined">AM</span>
+                          </div>
+                          <div>
+                            <div class="text-base font-semibold text-Mdblue-700"> test-2 </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="p-4"><span class="text-base font-normal text-primary-700">
+                          <div><span> test@unicourt.com
+                            </span></div>
+                        </span></td>
+                      <td class="p-4">
+                        <div class="flex items-center"><input type="checkbox"
+                            class="hidden- focus:ring-primary-500- h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0">
+                        </div>
+                      </td>
+                      <td class="p-4 pr-0 flex justify-end">
+                        <button type="button" class="flex items-center rounded-lg border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-Mdblue-700
+                           hover:border-gray-600
+                           hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                            class="material-symbols-outlined icon-16"> more_horiz </span></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <button type="button" class="btn-focus mb-6 mt-6 flex w-auto items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 hover:border-gray-600
+                 hover:bg-gray-100 hover:text-primary-700
+                focus:z-10- focus:border-gray-600 focus:bg-gray-100 focus:outline-none ">
+                  <span class="material-symbols-outlined icon-16 "> add </span>
+                  <span>Add member</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="border-t bg-white p-3">
+              <div class="grid grid-cols-2 gap-4 px-4 py-3 text-sm text-Mdblue-700">
+                <button type="button"
+                  class="rounded border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+                  Back to projects
+                </button>
+                <button type="button"
+                  class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none"><span>Create
+                    this project</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--new project end-->
+
+      <div class="my-6 text-center ">
+        <p class=" text-thirtytwo font-semibold text-Mdblue-700"> Projects </p>
+        <p class="text-base mt-2">Start searching to add it to your projects.</p>
+      </div>
+      <div class="flex justify-between">
+        <div class="w-[30%]">
+          <div class="relative ">
+            <input type="text" id="table-search" placeholder="Search users"
+              class="w-80- block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+            <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3 "><svg aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="size-4 text-Mdblue-600 ">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" class=""></path>
+              </svg></div>
+          </div>
+        </div>
+        <div>
+          <button type="submit"
+            class="btn-focus flex w-full items-center justify-center rounded border border-transparent
+             bg-primary-700 px-4 py-3 text-base font-medium text-white hover:bg-primary-800 focus:outline-none"><span>New
+              Project</span></button>
+        </div>
+      </div>
+      <div class="mt-6">
+        <div class="mb-8 mt-6 flex items-center">
+          <div class="mr-2 flex items-center text-center font-semibold text-Mdblue-600">
+            <span class="material-symbols-outlined Mdblue-fill-600 icon-28 mr-1">
+              keep
+            </span>
+            <h3 class="text-2xl font-semibold text-Mdblue-700"> Pinned </h3>
+          </div>
+          <div class="w-full- h-[1px] grow bg-gray-200"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="parent-card flex flex-col rounded-xl border-2 border-gray-200 bg-white p-2">
+            <div class="flex items-start grow min-h-[4rem]">
+              <div class="flex-1">
+                <p class="text-sm font-semibold text-Mdblue-600">Client Name</p>
+              </div>
+              <div class="flex">
+                <span class="material-symbols-outlined Mdblue-fill-600 icon-28 mr-1">
+                  keep
+                </span>
+                <button type="button"
+                  class="card-btn bg-gray-100- border- border-gray-300- px-1.5- py-1.5- flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                    class="material-symbols-outlined icon-24">more_horiz</span>
+                </button>
+              </div>
+
+            </div>
+            <div class="flex flex-col gap-3">
+              <div>
+                <div class="text-lg font-semibold text-primary-700">
+                  <p class="truncate"><a target="_blank" href="/AQA01/attorney/NATY8zFaQgtbPcZp3Q"> GERARD FERRARA
+                      PROJECT
+                      NAME </a></p>
+
+                </div>
+                <p class="text-sm font-semibold text-Mdblue-600 truncate">Nulla vitae elit libero, a pharetra augue.
+                  Nullam quis
+                  risus.</p>
+              </div>
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm font-semibold text-Mdblue-600">Matter Name</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-Mdblue-600">Last update Jan 3, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="parent-card flex flex-col rounded-xl border-2 border-gray-200 bg-white p-2">
+            <div class="flex items-start grow min-h-[4rem]">
+              <div class="flex-1">
+                <p class="text-sm font-semibold text-Mdblue-600">Client Name</p>
+              </div>
+              <div class="flex">
+                <span class="material-symbols-outlined Mdblue-fill-600 icon-28 mr-1">
+                  keep
+                </span>
+                <button type="button"
+                  class="card-btn bg-gray-100- border- border-gray-300- px-1.5- py-1.5- flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                    class="material-symbols-outlined icon-24">more_horiz</span>
+                </button>
+              </div>
+
+            </div>
+            <div class="flex flex-col gap-3">
+              <div>
+                <div class="text-lg font-semibold text-primary-700">
+                  <p class="truncate"><a target="_blank" href="/AQA01/attorney/NATY8zFaQgtbPcZp3Q"> GERARD FERRARA
+                      PROJECT
+                      NAME </a></p>
+
+                </div>
+                <p class="text-sm font-semibold text-Mdblue-600 truncate">Nulla vitae elit libero, a pharetra augue.
+                  Nullam quis
+                  risus.</p>
+              </div>
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm font-semibold text-Mdblue-600">Matter Name</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-Mdblue-600">Last update Jan 3, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6">
+        <div>
+          <div class="my-4 flex items-center gap-6">
+            <div class="mr-2 flex items-center space-x-2 text-center font-semibold text-Mdblue-600">
+              <h5 class="text-lg font-semibold text-Mdblue-700">My Projects</h5>
+            </div>
+            <div class="w-full- h-px grow bg-gray-200"></div>
+            <div class="flex space-x-2 !mr-2">
+              <div><button type="button"
+                  class="inline-flex items-center rounded-lg border p-2 text-center font-medium text-Mdblue-700 hover:bg-gray-200 border-Mdblue-600 bg-gray-200"><span
+                    class="icon-24 material-symbols-outlined"> grid_view
+                  </span></button></div>
+              <div><button type="button"
+                  class="inline-flex items-center rounded-lg border p-2 text-center font-medium text-Mdblue-700 hover:bg-gray-200 border-transparent"><span
+                    class="icon-24 material-symbols-outlined">
+                    reorder </span></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="parent-card flex flex-col rounded-xl border-2 border-gray-200 bg-white p-2">
+            <div class="flex items-start grow min-h-[4rem]">
+              <div class="flex-1">
+                <p class="text-sm font-semibold text-Mdblue-600">Client Name</p>
+              </div>
+              <div class="flex">
+                <span class="material-symbols-outlined Mdblue-fill-600 icon-28 mr-1">
+                  keep
+                </span>
+                <button type="button"
+                  class="card-btn bg-gray-100- border- border-gray-300- px-1.5- py-1.5- flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                    class="material-symbols-outlined icon-24">more_horiz</span>
+                </button>
+              </div>
+
+            </div>
+            <div class="flex flex-col gap-3">
+              <div>
+                <div class="text-lg font-semibold text-primary-700">
+                  <p class="truncate"><a target="_blank" href="/AQA01/attorney/NATY8zFaQgtbPcZp3Q"> GERARD FERRARA
+                      PROJECT
+                      NAME </a></p>
+
+                </div>
+                <p class="text-sm font-semibold text-Mdblue-600 truncate">Nulla vitae elit libero, a pharetra augue.
+                  Nullam quis
+                  risus.</p>
+              </div>
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm font-semibold text-Mdblue-600">Matter Name</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-Mdblue-600">Last update Jan 3, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="parent-card flex flex-col rounded-xl border-2 border-gray-200 bg-white p-2">
+            <div class="flex items-start grow min-h-[4rem]">
+              <div class="flex-1">
+                <p class="text-sm font-semibold text-Mdblue-600">Client Name</p>
+              </div>
+              <div class="flex">
+                <span class="material-symbols-outlined Mdblue-fill-600 icon-28 mr-1">
+                  keep
+                </span>
+                <button type="button"
+                  class="card-btn bg-gray-100- border- border-gray-300- px-1.5- py-1.5- flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                    class="material-symbols-outlined icon-24">more_horiz</span>
+                </button>
+              </div>
+
+            </div>
+            <div class="flex flex-col gap-3">
+              <div>
+                <div class="text-lg font-semibold text-primary-700">
+                  <p class="truncate"><a target="_blank" href="/AQA01/attorney/NATY8zFaQgtbPcZp3Q"> GERARD FERRARA
+                      PROJECT
+                      NAME </a></p>
+
+                </div>
+                <p class="text-sm font-semibold text-Mdblue-600 truncate">Nulla vitae elit libero, a pharetra augue.
+                  Nullam quis
+                  risus.</p>
+              </div>
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm font-semibold text-Mdblue-600">Matter Name</p>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-Mdblue-600">Last update Jan 3, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>

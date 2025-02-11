@@ -23,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeepComponent } from './deep/deep.component';
 import { ScrolltestComponent } from './scrolltest/scrolltest.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
+import { SearchWidgetComponent } from './search-widget/search-widget.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { ProfilepageComponent } from './profilepage/profilepage.component';
     DeepComponent,
     ScrolltestComponent,
     ProfilepageComponent,
+    SearchWidgetComponent,
+    ProjectComponent,
 
   ],
   imports: [
