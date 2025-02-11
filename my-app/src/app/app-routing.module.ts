@@ -13,6 +13,8 @@ import { Test2Component } from './test2/test2.component';
 import { DeepComponent } from './deep/deep.component';
 import { ScrolltestComponent } from './scrolltest/scrolltest.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
+import { SearchWidgetComponent } from './search-widget/search-widget.component';
+import { ProjectComponent } from './project/project.component';
 
 const routes: Routes = [
   {
@@ -67,6 +69,14 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfilepageComponent,
+  },
+  {
+    path: 'searchwidget',
+    component: SearchWidgetComponent,
+  },
+  {
+    path: 'project',
+    component: ProjectComponent,
   },
 ];
 
