@@ -211,13 +211,15 @@
     </div> -->
     <!--left content end-->
     <!--left content ng open/close start-->
-    <div class="w-full overflow-y-auto" [ngClass]="{'max-w-[12%]': isSidebarExpanded, 'max-w-[4%]': !isSidebarExpanded}">
+    <div class="w-full overflow-y-auto"
+      [ngClass]="{'max-w-[12%]': isSidebarExpanded, 'max-w-[4%]': !isSidebarExpanded}">
       <div class="items-center justify-between bg-gray-300 h-full overflow-y-auto">
         <div class="mb-4 font-semibold text-Mdblue-600 text-base">
           <ul class="space-y-1 px-2">
             <li class="flex justify-end">
-              <button class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700"
-                      (click)="toggleSidebar()">
+              <button
+                class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700"
+                (click)="toggleSidebar()">
                 <span class="material-symbols-outlined icon-20" *ngIf="!isSidebarExpanded">chevron_right</span>
                 <span class="material-symbols-outlined icon-20" *ngIf="isSidebarExpanded">chevron_left</span>
               </button>
@@ -237,7 +239,7 @@
                 <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">My Team</div>
               </a>
               <div id="tooltip-my-team" role="tooltip"
-                  class="absolute z-10 invisible inline-block py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300">
+                class="absolute z-10 invisible inline-block py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300">
                 Tooltip content here
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
@@ -512,7 +514,7 @@
                   </div>
                   <div class="grid grid-cols-4 gap-2">
                     <div
-                      class="hover:bg-gray-100- flex min-h-80 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
+                      class="hover:bg-gray-100- flex min-h-60 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
                       <div class="grow p-2 pb-4">
                         <div class="flex items-center justify-end">
                           <div class="flex items-center justify-end font-semibold text-Mdblue-600"><span
@@ -526,8 +528,8 @@
                         </div>
                         <div class="space-y-2">
                           <div class="flex">
-                            <div class="border-1 flex items-center rounded-lg border-gray-200 bg-white p-1">
-                              <div class="mr-2 flex-shrink-0">
+                            <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1">
+                              <div class="mr-2 ">
                                 <div size="size-6">
                                   <div
                                     class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 "
@@ -537,23 +539,23 @@
 
                                 </div>
                               </div>
-                              <div>
-                                <div class="text-sm font-semibold text-primary-700"> JOHN MICHAEL HEUER </div>
-                                <p class="text-sm font-semibold text-Mdblue-600"> Steinberg Law Firm </p>
+                              <div class="text-sm font-semibold">
+                                <div class=" text-primary-700"> JOHN MICHAEL HEUER </div>
+                                <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
                               </div>
                             </div>
                           </div>
                           <div
-                            class="inline-flex select-none items-center rounded-lg border border-gray-200 bg-white p-2 text-base font-semibold text-Mdblue-600 ">
-                            <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> source </span>
-                            <span class="font-base font-semibold">Case: </span>
-                            <span class="font-base font-semibold text-Mdblue-700">240702853</span>
+                            class="inline-flex  items-center rounded-lg border border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-700 mr-1"> source </span>
+                            <span class=" ">Case: </span>
+                            <span class="  text-Mdblue-700">240702853</span>
                           </div>
                           <div
-                            class="inline-flex select-none items-center rounded-lg border border-gray-200 bg-white p-2 text-base font-semibold text-Mdblue-600 ">
-                            <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> personal_injury </span>
-                            <span class="font-base font-semibold">Case Type: </span>
-                            <span class="font-base font-semibold text-Mdblue-700">Personal Injury</span>
+                            class="inline-flex  items-center rounded-lg border-2 border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-600 mr-1"> personal_injury </span>
+                            <span class=" ">Case Type: </span>
+                            <span class="  text-Mdblue-700">Personal Injury</span>
                           </div>
                         </div>
                       </div>
@@ -571,13 +573,227 @@
                           </div>
                         </div>
 
-                        <div class="flex items-center justify-end font-semibold text-Mdblue-600"><span
-                            class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base"> watch_later
-                          </span><span class="text-sm font-semibold">10:45 AM</span></div>
+                        <div class="flex items-center justify-end font-semibold text-Mdblue-600">
+                          <span class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base"> watch_later
+                          </span>
+                          <span class="text-sm font-semibold">10:45 AM</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="hover:bg-gray-100- flex min-h-60 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
+                      <div class="rounded-t-xl border-b-2 border-gray-200 flex bg-white p-2 gap-2 items-center">
+                        <div class="flex text-sm font-semibold flex-col justify-start grow">
+                          <p class=" text-primary-700">Name</p>
+                          <p class=" text-Mdblue-600">Created at Jan 3, 2024</p>
+                        </div>
+                        <div class="">
+                          <button type="button"
+                            class="flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                              class="material-symbols-outlined icon-24"> more_horiz
+                            </span></button>
+                        </div>
+                      </div>
+                      <div class="grow p-2 pb-4 mt-2">
+                        <div class="space-y-2">
+                          <div class="flex">
+                            <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1">
+                              <div class="mr-2 ">
+                                <div size="size-6">
+                                  <div
+                                    class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 "
+                                    id="standalone-profile-avatar-saved-search-15263"
+                                    data-testid="standalone-profile-avatar-saved-search-15263"><span
+                                      class="font-semibold text-base text-white text-xs">JH</span></div>
+
+                                </div>
+                              </div>
+                              <div class="text-sm font-semibold">
+                                <div class=" text-primary-700"> JOHN MICHAEL HEUER </div>
+                                <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="inline-flex  items-center rounded-lg border-2 border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-700 mr-1"> source </span>
+                            <span class=" ">Case: </span>
+                            <span class="  text-Mdblue-700">240702853</span>
+                          </div>
+                          <div
+                            class="inline-flex  items-center rounded-lg border-2 border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-600 mr-1"> personal_injury </span>
+                            <span class=" ">Case Type: </span>
+                            <span class="  text-Mdblue-700">Personal Injury</span>
+                          </div>
+                          <div
+                            class="flex flex-col rounded-lg border-2 border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-700 ">
+                            <div class="flex items-center">
+                              <span class="material-symbols-outlined Mdblue-fill-600 mr-1"> source </span>
+                              <span class=" ">Case</span>
+                            </div>
+                            <div>
+                              <span class="text-Mdblue-600 font-semibold text-sm"> Number: </span>
+                              <span class=" text-Mdblue-700 truncate">2017FA001896</span>
+                            </div>
+                          </div>
+                          <div
+                            class="inline-flex items-center rounded-lg border-2 border-gray-200 bg-white text-sm font-semibold text-Mdblue-700 ">
+                            <div class="flex items-center border-r-2 border-gray-200 p-2"><span
+                                class="material-symbols-outlined  mr-2"> list_alt </span><span class=" ">Case Type
+                              </span>
+                            </div>
+                            <div class="flex p-2">
+                              <span class=" "> Personal Injury
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <!--tablular recent start-->
+                <div class="grid grid-cols-1 gap-2">
+                  <div class="flex items-center rounded-lg border-2 border-gray-200 bg-white p-2">
+                    <div class="flex grow gap-1 flex-wrap- overflow-x-auto flex-nowrap items-center">
+                      <div
+                        class="inline-flex items-center rounded-lg shrink-0 bg-gray-200 text-sm font-semibold text-Mdblue-600 ">
+                        <div class="flex items-center border-r-2 border-gray-600 p-2"><span
+                            class="material-symbols-outlined Mdblue-fill-700 mr-2"> list_alt </span><span
+                            class="text-Mdblue-700">Case
+                          </span>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">Name:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> 2017FA001896 </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1 shrink-0">
+                        <div class="mr-2 ">
+                          <div size="size-6">
+                            <div
+                              class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 ">
+                              <span class="font-semibold text-base text-white text-xs">JH</span>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="text-sm font-semibold">
+                          <div class=" text-primary-700"> John Michael Heuer</div>
+                          <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
+                        </div>
+                      </div>
+                      <div
+                        class="inline-flex items-center rounded-lg shrink-0 bg-gray-200 text-sm font-semibold text-Mdblue-600 ">
+                        <div class="flex items-center border-r-2 border-gray-600 p-2"><span
+                            class="material-symbols-outlined Mdblue-fill-700 mr-2"> list_alt </span><span
+                            class="text-Mdblue-700">Case Type
+                          </span>
+                        </div>
+                        <div class="flex p-2">
+                          <span class="font-base font-semibold text-Mdblue-700">Personal Injury</span>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">Name:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> 2017FA001896 </span>
+                          </div>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">and Category:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> All </span>
+                          </div>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">and Category:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> All </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <button type="button"
+                        class="flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                          class="material-symbols-outlined icon-24"> more_horiz </span></button>
+                    </div>
+                  </div>
+                </div>
+                <!--tablular recent end-->
+                <!--tablular saved start-->
+                <div class="grid grid-cols-1 gap-2">
+                  <div class="flex items-center rounded-lg border-2 border-gray-200 bg-white p-2">
+                    <div class="flex grow gap-1 flex-wrap- overflow-x-auto flex-nowrap items-center">
+                      <div class="flex text-sm font-semibold flex-col justify-start shrink-0 pr-6">
+                        <p class="text-primary-700">Name</p>
+                        <p class="text-Mdblue-600">Created at Jan 3, 2024</p>
+                      </div>
+                      <div
+                        class="inline-flex items-center rounded-lg shrink-0 bg-gray-200 text-sm font-semibold text-Mdblue-600 ">
+                        <div class="flex items-center border-r-2 border-gray-600 p-2"><span
+                            class="material-symbols-outlined Mdblue-fill-700 mr-2"> list_alt </span><span
+                            class="text-Mdblue-700">Case
+                          </span>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">Name:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> 2017FA001896 </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1 shrink-0">
+                        <div class="mr-2 ">
+                          <div size="size-6">
+                            <div
+                              class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 ">
+                              <span class="font-semibold text-base text-white text-xs">JH</span>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="text-sm font-semibold">
+                          <div class=" text-primary-700"> John Michael Heuer</div>
+                          <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
+                        </div>
+                      </div>
+                      <div
+                        class="inline-flex items-center rounded-lg shrink-0 bg-gray-200 text-sm font-semibold text-Mdblue-600 ">
+                        <div class="flex items-center border-r-2 border-gray-600 p-2"><span
+                            class="material-symbols-outlined Mdblue-fill-700 mr-2"> list_alt </span><span
+                            class="text-Mdblue-700">Case Type
+                          </span>
+                        </div>
+                        <div class="flex p-2">
+                          <span class="font-base font-semibold text-Mdblue-700">Personal Injury</span>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">Name:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> 2017FA001896 </span>
+                          </div>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">and Category:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> All </span>
+                          </div>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">and Category:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> All </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <button type="button"
+                        class="flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                          class="material-symbols-outlined icon-24"> more_horiz </span></button>
+                    </div>
+                  </div>
+                </div>
+                <!--tablular saved end-->
+
+
                 <div>
                   <div class="flex items-center">
                     <div class="mr-2 flex items-center text-center font-semibold text-Mdblue-600"><span
@@ -592,17 +808,22 @@
                   </p>
                   <div class="grid grid-cols-4 gap-2">
                     <div
-                      class="hover:bg-gray-100- flex min-h-80 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
+                      class="hover:bg-gray-100- flex min-h-60 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
                       <div class="grow p-2 pb-4">
                         <div class="flex items-center justify-end">
+                          <div class="flex items-center justify-end font-semibold text-Mdblue-600"><span
+                              class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base">
+                              watch_later</span><span class="text-sm font-semibold">10:45
+                              AM</span>
+                          </div>
                           <div><button type="button"
                               class=" flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
                                 class="material-symbols-outlined icon-24"> more_horiz </span></button></div>
                         </div>
                         <div class="space-y-2">
                           <div class="flex">
-                            <div class="border-1 flex items-center rounded-lg border-gray-200 bg-white p-1">
-                              <div class="mr-2 flex-shrink-0">
+                            <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1">
+                              <div class="mr-2 ">
                                 <div size="size-6">
                                   <div
                                     class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 "
@@ -612,23 +833,24 @@
 
                                 </div>
                               </div>
-                              <div>
-                                <div class="text-sm font-semibold text-primary-700"> JOHN MICHAEL HEUER </div>
-                                <p class="text-sm font-semibold text-Mdblue-600"> Steinberg Law Firm </p>
+                              <div class="text-sm font-semibold">
+                                <div class=" text-primary-700"> JOHN MICHAEL HEUER </div>
+                                <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
                               </div>
                             </div>
                           </div>
                           <div
-                            class="inline-flex select-none items-center rounded-lg border border-gray-200 bg-white p-2 text-base font-semibold text-Mdblue-600 ">
-                            <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> source </span>
-                            <span class="font-base font-semibold">Case: </span>
-                            <span class="font-base font-semibold text-Mdblue-700">240702853</span>
+                            class="inline-flex  items-center rounded-lg border border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-700 mr-1"> source </span>
+                            <span class=" ">Case: </span>
+                            <span class="  text-Mdblue-700">240702853</span>
                           </div>
+
                           <div
-                            class="inline-flex select-none items-center rounded-lg border border-gray-200 bg-white p-2 text-base font-semibold text-Mdblue-600 ">
-                            <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> personal_injury </span>
-                            <span class="font-base font-semibold">Case Type: </span>
-                            <span class="font-base font-semibold text-Mdblue-700">Personal Injury</span>
+                            class="inline-flex  items-center rounded-lg border border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-600 mr-1"> personal_injury </span>
+                            <span class=" ">Case Type: </span>
+                            <span class="  text-Mdblue-700">Personal Injury</span>
                           </div>
                         </div>
                       </div>
@@ -646,9 +868,11 @@
                           </div>
                         </div>
 
-                        <div class="flex items-center justify-end font-semibold text-Mdblue-600"><span
-                            class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base"> watch_later
-                          </span><span class="text-sm font-semibold">10:45 AM</span></div>
+                        <div class="flex items-center justify-end font-semibold text-Mdblue-600">
+                          <span class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base"> watch_later
+                          </span>
+                          <span class="text-sm font-semibold">10:45 AM</span>
+                        </div>
                       </div>
                     </div>
                   </div>
