@@ -211,36 +211,81 @@
     </div> -->
     <!--left content end-->
     <!--left content ng open/close start-->
-    <div class="w-full overflow-y-auto" [ngClass]="{'max-w-[12%]': isSidebarExpanded, 'max-w-[4%]': !isSidebarExpanded}">
+    <div class="w-full overflow-y-auto-"
+      [ngClass]="{'max-w-[12%]': isSidebarExpanded, 'max-w-[4%]': !isSidebarExpanded}">
       <div class="items-center justify-between bg-gray-300 h-full overflow-y-auto">
         <div class="mb-4 font-semibold text-Mdblue-600 text-base">
+          <div class="flex justify-end px-2 py-2">
+            <button
+              class="inline-flex- w-full- cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700"
+              (click)="toggleSidebar()">
+              <span class="material-symbols-outlined icon-20" *ngIf="!isSidebarExpanded">chevron_right</span>
+              <span class="material-symbols-outlined icon-20" *ngIf="isSidebarExpanded">chevron_left</span>
+            </button>
+          </div>
           <ul class="space-y-1 px-2">
-            <li class="flex justify-end">
-              <button class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700"
-                      (click)="toggleSidebar()">
+            <!-- <li class="flex justify-end">
+              <button
+                class="inline-flex- w-full- cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700"
+                (click)="toggleSidebar()">
                 <span class="material-symbols-outlined icon-20" *ngIf="!isSidebarExpanded">chevron_right</span>
                 <span class="material-symbols-outlined icon-20" *ngIf="isSidebarExpanded">chevron_left</span>
               </button>
+            </li> -->
+            <li>
+              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="">
+                <!-- <span class="material-symbols-outlined icon-20 mr-2">layers</span> -->
+                <!-- <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> watch_later </span> -->
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> search </span>
+                <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Search</div>
+              </a>
             </li>
             <li>
-              <a class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700"
+              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
                 href="">
-                <span class="material-symbols-outlined icon-20 mr-2">layers</span>
-                <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Plans</div>
+                <!-- <span class="material-symbols-outlined icon-20 mr-2">layers</span> -->
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> watch_later </span>
+                <span class="bg-red-700 rounded-full size-2 absolute top-[0.4rem] right-[1rem]"></span>
+                <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Tracking</div>
+                <div
+                  class="relative ml-1 inline-flex h-5 w-5 items-center justify-center overflow-hidden rounded-full bg-red-700">
+                  <span class="font-medium text-white text-sm">1</span>
+                </div>
               </a>
             </li>
             <li>
               <a data-tooltip-target="tooltip-my-team"
-                class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700 text-Mdblue-700"
-                ng-reflect-router-link="">
-                <span class="material-symbols-outlined icon-20 mr-2 icon-fill">group</span>
-                <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">My Team</div>
+                class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700- text-Mdblue-700-">
+                <span class="material-symbols-outlined Mdblue-fill-600 icon-20 mr-2"> bookmarks </span>
+                <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Bookmarks</div>
               </a>
               <div id="tooltip-my-team" role="tooltip"
-                  class="absolute z-10 invisible inline-block py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300">
+                class="absolute z-10 invisible inline-block py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300">
                 Tooltip content here
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
+            </li>
+            <li>
+              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="">
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> groups </span>
+                <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Groups</div>
+              </a>
+            </li>
+            <li>
+              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="">
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> search </span>
+                <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Usage</div>
+              </a>
+            </li>
+            <li>
+              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="">
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> settings </span>
+                <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Manage Project</div>
+              </a>
             </li>
           </ul>
         </div>
@@ -512,7 +557,7 @@
                   </div>
                   <div class="grid grid-cols-4 gap-2">
                     <div
-                      class="hover:bg-gray-100- flex min-h-80 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
+                      class="hover:bg-gray-100- flex min-h-60 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
                       <div class="grow p-2 pb-4">
                         <div class="flex items-center justify-end">
                           <div class="flex items-center justify-end font-semibold text-Mdblue-600"><span
@@ -526,8 +571,8 @@
                         </div>
                         <div class="space-y-2">
                           <div class="flex">
-                            <div class="border-1 flex items-center rounded-lg border-gray-200 bg-white p-1">
-                              <div class="mr-2 flex-shrink-0">
+                            <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1">
+                              <div class="mr-2 ">
                                 <div size="size-6">
                                   <div
                                     class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 "
@@ -537,23 +582,23 @@
 
                                 </div>
                               </div>
-                              <div>
-                                <div class="text-sm font-semibold text-primary-700"> JOHN MICHAEL HEUER </div>
-                                <p class="text-sm font-semibold text-Mdblue-600"> Steinberg Law Firm </p>
+                              <div class="text-sm font-semibold">
+                                <div class=" text-primary-700"> JOHN MICHAEL HEUER </div>
+                                <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
                               </div>
                             </div>
                           </div>
                           <div
-                            class="inline-flex select-none items-center rounded-lg border border-gray-200 bg-white p-2 text-base font-semibold text-Mdblue-600 ">
-                            <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> source </span>
-                            <span class="font-base font-semibold">Case: </span>
-                            <span class="font-base font-semibold text-Mdblue-700">240702853</span>
+                            class="inline-flex  items-center rounded-lg border border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-700 mr-1"> source </span>
+                            <span class=" ">Case: </span>
+                            <span class="  text-Mdblue-700">240702853</span>
                           </div>
                           <div
-                            class="inline-flex select-none items-center rounded-lg border border-gray-200 bg-white p-2 text-base font-semibold text-Mdblue-600 ">
-                            <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> personal_injury </span>
-                            <span class="font-base font-semibold">Case Type: </span>
-                            <span class="font-base font-semibold text-Mdblue-700">Personal Injury</span>
+                            class="inline-flex  items-center rounded-lg border-2 border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-600 mr-1"> personal_injury </span>
+                            <span class=" ">Case Type: </span>
+                            <span class="  text-Mdblue-700">Personal Injury</span>
                           </div>
                         </div>
                       </div>
@@ -571,13 +616,227 @@
                           </div>
                         </div>
 
-                        <div class="flex items-center justify-end font-semibold text-Mdblue-600"><span
-                            class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base"> watch_later
-                          </span><span class="text-sm font-semibold">10:45 AM</span></div>
+                        <div class="flex items-center justify-end font-semibold text-Mdblue-600">
+                          <span class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base"> watch_later
+                          </span>
+                          <span class="text-sm font-semibold">10:45 AM</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="hover:bg-gray-100- flex min-h-60 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
+                      <div class="rounded-t-xl border-b-2 border-gray-200 flex bg-white p-2 gap-2 items-center">
+                        <div class="flex text-sm font-semibold flex-col justify-start grow">
+                          <p class=" text-primary-700">Name</p>
+                          <p class=" text-Mdblue-600">Created at Jan 3, 2024</p>
+                        </div>
+                        <div class="">
+                          <button type="button"
+                            class="flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                              class="material-symbols-outlined icon-24"> more_horiz
+                            </span></button>
+                        </div>
+                      </div>
+                      <div class="grow p-2 pb-4 mt-2">
+                        <div class="space-y-2">
+                          <div class="flex">
+                            <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1">
+                              <div class="mr-2 ">
+                                <div size="size-6">
+                                  <div
+                                    class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 "
+                                    id="standalone-profile-avatar-saved-search-15263"
+                                    data-testid="standalone-profile-avatar-saved-search-15263"><span
+                                      class="font-semibold text-base text-white text-xs">JH</span></div>
+
+                                </div>
+                              </div>
+                              <div class="text-sm font-semibold">
+                                <div class=" text-primary-700"> JOHN MICHAEL HEUER </div>
+                                <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="inline-flex  items-center rounded-lg border-2 border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-700 mr-1"> source </span>
+                            <span class=" ">Case: </span>
+                            <span class="  text-Mdblue-700">240702853</span>
+                          </div>
+                          <div
+                            class="inline-flex  items-center rounded-lg border-2 border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-600 mr-1"> personal_injury </span>
+                            <span class=" ">Case Type: </span>
+                            <span class="  text-Mdblue-700">Personal Injury</span>
+                          </div>
+                          <div
+                            class="flex flex-col rounded-lg border-2 border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-700 ">
+                            <div class="flex items-center">
+                              <span class="material-symbols-outlined Mdblue-fill-600 mr-1"> source </span>
+                              <span class=" ">Case</span>
+                            </div>
+                            <div>
+                              <span class="text-Mdblue-600 font-semibold text-sm"> Number: </span>
+                              <span class=" text-Mdblue-700 truncate">2017FA001896</span>
+                            </div>
+                          </div>
+                          <div
+                            class="inline-flex items-center rounded-lg border-2 border-gray-200 bg-white text-sm font-semibold text-Mdblue-700 ">
+                            <div class="flex items-center border-r-2 border-gray-200 p-2"><span
+                                class="material-symbols-outlined  mr-2"> list_alt </span><span class=" ">Case Type
+                              </span>
+                            </div>
+                            <div class="flex p-2">
+                              <span class=" "> Personal Injury
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <!--tablular recent start-->
+                <div class="grid grid-cols-1 gap-2">
+                  <div class="flex items-center rounded-lg border-2 border-gray-200 bg-white p-2">
+                    <div class="flex grow gap-1 flex-wrap- overflow-x-auto flex-nowrap items-center">
+                      <div
+                        class="inline-flex items-center rounded-lg shrink-0 bg-gray-200 text-sm font-semibold text-Mdblue-600 ">
+                        <div class="flex items-center border-r-2 border-gray-600 p-2"><span
+                            class="material-symbols-outlined Mdblue-fill-700 mr-2"> list_alt </span><span
+                            class="text-Mdblue-700">Case
+                          </span>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">Name:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> 2017FA001896 </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1 shrink-0">
+                        <div class="mr-2 ">
+                          <div size="size-6">
+                            <div
+                              class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 ">
+                              <span class="font-semibold text-base text-white text-xs">JH</span>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="text-sm font-semibold">
+                          <div class=" text-primary-700"> John Michael Heuer</div>
+                          <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
+                        </div>
+                      </div>
+                      <div
+                        class="inline-flex items-center rounded-lg shrink-0 bg-gray-200 text-sm font-semibold text-Mdblue-600 ">
+                        <div class="flex items-center border-r-2 border-gray-600 p-2"><span
+                            class="material-symbols-outlined Mdblue-fill-700 mr-2"> list_alt </span><span
+                            class="text-Mdblue-700">Case Type
+                          </span>
+                        </div>
+                        <div class="flex p-2">
+                          <span class="font-base font-semibold text-Mdblue-700">Personal Injury</span>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">Name:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> 2017FA001896 </span>
+                          </div>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">and Category:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> All </span>
+                          </div>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">and Category:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> All </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <button type="button"
+                        class="flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                          class="material-symbols-outlined icon-24"> more_horiz </span></button>
+                    </div>
+                  </div>
+                </div>
+                <!--tablular recent end-->
+                <!--tablular saved start-->
+                <div class="grid grid-cols-1 gap-2">
+                  <div class="flex items-center rounded-lg border-2 border-gray-200 bg-white p-2">
+                    <div class="flex grow gap-1 flex-wrap- overflow-x-auto flex-nowrap items-center">
+                      <div class="flex text-sm font-semibold flex-col justify-start shrink-0 pr-6">
+                        <p class="text-primary-700">Name</p>
+                        <p class="text-Mdblue-600">Created at Jan 3, 2024</p>
+                      </div>
+                      <div
+                        class="inline-flex items-center rounded-lg shrink-0 bg-gray-200 text-sm font-semibold text-Mdblue-600 ">
+                        <div class="flex items-center border-r-2 border-gray-600 p-2"><span
+                            class="material-symbols-outlined Mdblue-fill-700 mr-2"> list_alt </span><span
+                            class="text-Mdblue-700">Case
+                          </span>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">Name:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> 2017FA001896 </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1 shrink-0">
+                        <div class="mr-2 ">
+                          <div size="size-6">
+                            <div
+                              class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 ">
+                              <span class="font-semibold text-base text-white text-xs">JH</span>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="text-sm font-semibold">
+                          <div class=" text-primary-700"> John Michael Heuer</div>
+                          <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
+                        </div>
+                      </div>
+                      <div
+                        class="inline-flex items-center rounded-lg shrink-0 bg-gray-200 text-sm font-semibold text-Mdblue-600 ">
+                        <div class="flex items-center border-r-2 border-gray-600 p-2"><span
+                            class="material-symbols-outlined Mdblue-fill-700 mr-2"> list_alt </span><span
+                            class="text-Mdblue-700">Case Type
+                          </span>
+                        </div>
+                        <div class="flex p-2">
+                          <span class="font-base font-semibold text-Mdblue-700">Personal Injury</span>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">Name:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> 2017FA001896 </span>
+                          </div>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">and Category:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> All </span>
+                          </div>
+                        </div>
+                        <div class="flex p-2">
+                          <div class=""><span class="font-base font-semibold">and Category:
+                            </span><span class="font-base font-semibold text-Mdblue-700"> All </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <button type="button"
+                        class="flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                          class="material-symbols-outlined icon-24"> more_horiz </span></button>
+                    </div>
+                  </div>
+                </div>
+                <!--tablular saved end-->
+
+
                 <div>
                   <div class="flex items-center">
                     <div class="mr-2 flex items-center text-center font-semibold text-Mdblue-600"><span
@@ -592,17 +851,22 @@
                   </p>
                   <div class="grid grid-cols-4 gap-2">
                     <div
-                      class="hover:bg-gray-100- flex min-h-80 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
+                      class="hover:bg-gray-100- flex min-h-60 flex-col rounded-xl border-2 border-gray-200 bg-gray-100">
                       <div class="grow p-2 pb-4">
                         <div class="flex items-center justify-end">
+                          <div class="flex items-center justify-end font-semibold text-Mdblue-600"><span
+                              class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base">
+                              watch_later</span><span class="text-sm font-semibold">10:45
+                              AM</span>
+                          </div>
                           <div><button type="button"
                               class=" flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
                                 class="material-symbols-outlined icon-24"> more_horiz </span></button></div>
                         </div>
                         <div class="space-y-2">
                           <div class="flex">
-                            <div class="border-1 flex items-center rounded-lg border-gray-200 bg-white p-1">
-                              <div class="mr-2 flex-shrink-0">
+                            <div class="border-2 flex items-center rounded-lg border-gray-200 bg-white p-1">
+                              <div class="mr-2 ">
                                 <div size="size-6">
                                   <div
                                     class="Mdblue-fill-700 bg-orange-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6 "
@@ -612,23 +876,24 @@
 
                                 </div>
                               </div>
-                              <div>
-                                <div class="text-sm font-semibold text-primary-700"> JOHN MICHAEL HEUER </div>
-                                <p class="text-sm font-semibold text-Mdblue-600"> Steinberg Law Firm </p>
+                              <div class="text-sm font-semibold">
+                                <div class=" text-primary-700"> JOHN MICHAEL HEUER </div>
+                                <p class=" text-Mdblue-600"> Steinberg Law Firm </p>
                               </div>
                             </div>
                           </div>
                           <div
-                            class="inline-flex select-none items-center rounded-lg border border-gray-200 bg-white p-2 text-base font-semibold text-Mdblue-600 ">
-                            <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> source </span>
-                            <span class="font-base font-semibold">Case: </span>
-                            <span class="font-base font-semibold text-Mdblue-700">240702853</span>
+                            class="inline-flex  items-center rounded-lg border border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-700 mr-1"> source </span>
+                            <span class=" ">Case: </span>
+                            <span class="  text-Mdblue-700">240702853</span>
                           </div>
+
                           <div
-                            class="inline-flex select-none items-center rounded-lg border border-gray-200 bg-white p-2 text-base font-semibold text-Mdblue-600 ">
-                            <span class="material-symbols-outlined Mdblue-fill-600 mr-2"> personal_injury </span>
-                            <span class="font-base font-semibold">Case Type: </span>
-                            <span class="font-base font-semibold text-Mdblue-700">Personal Injury</span>
+                            class="inline-flex  items-center rounded-lg border border-gray-200 bg-white p-2 text-sm font-semibold text-Mdblue-600 ">
+                            <span class="material-symbols-outlined Mdblue-fill-600 mr-1"> personal_injury </span>
+                            <span class=" ">Case Type: </span>
+                            <span class="  text-Mdblue-700">Personal Injury</span>
                           </div>
                         </div>
                       </div>
@@ -646,9 +911,11 @@
                           </div>
                         </div>
 
-                        <div class="flex items-center justify-end font-semibold text-Mdblue-600"><span
-                            class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base"> watch_later
-                          </span><span class="text-sm font-semibold">10:45 AM</span></div>
+                        <div class="flex items-center justify-end font-semibold text-Mdblue-600">
+                          <span class="material-symbols-outlined Mdblue-fill-600 icon-12 text-base"> watch_later
+                          </span>
+                          <span class="text-sm font-semibold">10:45 AM</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -787,224 +1054,257 @@
             <!--main search end-->
 
             <!--new project add/list/update start-->
-            <div class="w-[43rem] mt-6">
-              <div class="text-center flex flex-col justify-center">
-                <div size="size-10" class="flex justify-center"><img alt="Profile Avatar" class="rounded-full size-10 "
-                    src="https://lh3.googleusercontent.com/a/ACg8ocKfW4JenPkHVDEBKdn_P1nPVW-hcuzPxbc60iNtTqSPbB4jtJ8=s96-c">
+            <div class="w-[43rem]- mt-6 m-auto- flex justify-center">
+              <div class="flex">
+                <div class="left-tab w-[16rem] w-full-">
+                  <ul class="space-y-1 px-2 mt-[11rem] font-semibold">
+                    <li>
+                      <a
+                        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"><span
+                          class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2"> sort
+                        </span>
+                        <div class="">General</div>
+                      </a>
+                    </li>
+                     <li>
+                      <a
+                        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"><span
+                          class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2"> group
+                        </span>
+                        <div class="">Members</div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <p class="text-[2rem] font-bold text-Mdblue-700">New Project</p>
-                <p class="text-base font-normal text-Mdblue-600 mb-4">Basic project information
-                </p>
-              </div>
-              <div class="parent-card rounded-xl border-2 border-gray-200 bg-white">
-                <div class="flex flex-col rounded-xl p-12">
-                  <div class="flex grow- flex-col gap-4">
-                    <div>
-                      <p class="text-base font-semibold mb-1">Project Name</p>
-                      <input name="Project" type="ProjectName" id="ProjectName" formcontrolname="Project Name"
-                        placeholder="Project Name..." required=""
-                        class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                <div class="w-[43rem]- w-[43rem] w-full-">
+                  <div class="text-center flex flex-col justify-center">
+                    <div size="size-10" class="flex justify-center"><img alt="Profile Avatar"
+                        class="rounded-full size-10 "
+                        src="https://lh3.googleusercontent.com/a/ACg8ocKfW4JenPkHVDEBKdn_P1nPVW-hcuzPxbc60iNtTqSPbB4jtJ8=s96-c">
                     </div>
-                    <div>
-                      <p class="text-base font-semibold mb-1">Description</p>
-                      <textarea name="Description" rows="3" type="Description" id="Description"
-                        formcontrolname="Description" placeholder="Description..." required="" class="w-full rounded border border-gray-300 bg-gray-50 p-4 text-base
-            font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
-            </textarea>
-                    </div>
-                    <div>
-                      <p class="text-base font-semibold mb-1">Client</p>
-                      <input name="Client" type="Client" id="Client" formcontrolname="Client" placeholder="Client..."
-                        required=""
-                        class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
-                    </div>
-                    <div>
-                      <p class="text-base font-semibold mb-1">Matter</p>
-                      <input name="Matter" type="Matter" id="Matter" formcontrolname="Matter" placeholder="Matter..."
-                        required=""
-                        class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
-                    </div>
+                    <p class="text-[2rem] font-bold text-Mdblue-700">New Project</p>
+                    <p class="text-base font-normal text-Mdblue-600 mb-4">Basic project information
+                    </p>
                   </div>
-                </div>
-                <div class="flex flex-col">
-                  <div class="border-t border-b border-gray-200 p-12">
-                    <div>
-                      <p class="text-base font-semibold ">Members</p>
-                      <p class="text-xs mb-4">Add people to the project</p>
-                      <div class="relative">
-                        <input name="Project" type="ProjectName" id="ProjectName"
-                          placeholder="Search people by name or email..." required="" class="w-full rounded border border-gray-300 bg-gray-50 p-3 pe-10 text-base
-            font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
-                        <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
-                            class="size-4 text-Mdblue-600 ">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
-                          </svg></div>
-                      </div>
-                      <div class="flex mt-4 gap-4 flex-wrap">
-                        <div class="flex items-center gap-2 px-2 py-2 bg-gray-200 rounded-md">
-                          <div
-                            class="Mdblue-fill-700 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6">
-                            <span class="font-semibold text-xs text-white undefined">AM</span>
+                  <div class="parent-card- rounded-xl- border--2 border-gray-200- bg-white-">
+                    <div class="flex">
+
+                      <div class="max-w-[43rem]- parent-card rounded-xl border-2 border-gray-200 bg-white">
+                        <div class="flex flex-col rounded-xl p-12">
+                          <div class="flex grow- flex-col gap-4">
+                            <div>
+                              <p class="text-base font-semibold mb-1">Project Name</p>
+                              <input name="Project" type="ProjectName" id="ProjectName" formcontrolname="Project Name"
+                                placeholder="Project Name..." required=""
+                                class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                            </div>
+                            <div>
+                              <p class="text-base font-semibold mb-1">Description</p>
+                              <textarea placeholder="Description..."
+                                class="w-full h-32 rounded border border-gray-300 bg-gray-50 p-4 text-base
+            font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 resize-none"></textarea>
+                            </div>
+
+
+                            <div>
+                              <p class="text-base font-semibold mb-1">Client</p>
+                              <input name="Client" type="Client" id="Client" formcontrolname="Client"
+                                placeholder="Client..." required=""
+                                class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                            </div>
+                            <div>
+                              <p class="text-base font-semibold mb-1">Matter</p>
+                              <input name="Matter" type="Matter" id="Matter" formcontrolname="Matter"
+                                placeholder="Matter..." required=""
+                                class="w-full rounded border border-gray-300 bg-gray-50 p-3 text-base font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                            </div>
                           </div>
-                          <div>
-                            <div class="text-base font-semibold text-Mdblue-700"> test-2 </div>
-                          </div>
-                          <button class="flex items-center"><span
-                              class="material-symbols-outlined icon-16 text-Mdblue-600">
-                              close </span></button>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex flex-col flex-1 rounded-xl p-12 pt-[0.1px] pb-12 margin-0 overflow-y-auto max-h-[15rem] relative">
-                    <div class="flex justify-between items-center">
-                      <div>
-                        <p class="text-base font-semibold">Members</p>
-                        <p class="text-xs mb-4">Add people to the project</p>
-                      </div>
-                      <div>
-                        <button type="button" class="btn-focus mb-6 mt-6 flex w-auto items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 hover:border-gray-600
-            hover:bg-gray-100 hover:text-primary-700
-            focus:z-10- focus:border-gray-600 focus:bg-gray-100 focus:outline-none ">
-                          <span class="material-symbols-outlined icon-16 "> add </span>
-                          <span>Add member</span>
-                        </button>
-                        <div class="cust-drop z-10 w-[30rem] rounded-lg bg-white d-none" data-popper-placement="bottom">
-                          <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700 ">
-                            <div class="mb-3 text-center font-medium">Add members...</div>
-                            <div class="relative">
-                              <input type="text" placeholder="Search people by name..."
-                                class="w-80- block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
-                              <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg
-                                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
-                                  class="size-4 text-Mdblue-600">
-                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
-                                </svg>
+                        <div class="flex flex-col">
+                          <div class="border-t border-b border-gray-200 p-12">
+                            <div>
+                              <p class="text-base font-semibold ">Members</p>
+                              <p class="text-xs mb-4">Add people to the project</p>
+                              <div class="relative">
+                                <input name="Project" type="ProjectName" id="ProjectName"
+                                  placeholder="Search people by name or email..." required="" class="w-full rounded border border-gray-300 bg-gray-50 p-3 pe-10 text-base
+            font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                                <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 20 20" class="size-4 text-Mdblue-600 ">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                                  </svg></div>
+                              </div>
+                              <div class="flex mt-4 gap-4 flex-wrap">
+                                <div class="flex items-center gap-2 px-2 py-2 bg-gray-200 rounded-md">
+                                  <div
+                                    class="Mdblue-fill-700 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-6">
+                                    <span class="font-semibold text-xs text-white undefined">AM</span>
+                                  </div>
+                                  <div>
+                                    <div class="text-base font-semibold text-Mdblue-700"> test-2 </div>
+                                  </div>
+                                  <button class="flex items-center"><span
+                                      class="material-symbols-outlined icon-16 text-Mdblue-600">
+                                      close </span></button>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div class="mt-2 h-[1px] grow bg-gray-200 "></div>
-                          <div class="">
-                            <ul class="h-60 space-y-4 overflow-y-scroll px-4 py-2 text-sm text-Mdblue-600">
-                              <li>
-                                <div class="flex gap-2">
-                                  <div class="grow">
-                                    <div class="flex items-center gap-2">
-                                      <div
-                                        class="Mdblue-fill-700 shrink-0 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-10">
-                                        <span class="font-semibold text-base text-white undefined">AM</span>
-                                      </div>
-                                      <div>
-                                        <div class="text-base font-semibold text-Mdblue-700">
-                                          test-2 </div>
-                                        <div class="flex"><span
-                                            class="text-base font-normal text-primary-700">e.howard@domain.com</span>
-                                        </div>
+                          <div
+                            class="flex flex-col flex-1 rounded-xl p-12 pt-[0.1px] pb-12 margin-0 overflow-y-auto max-h-[15rem] relative">
+                            <div class="flex justify-between items-center">
+                              <div>
+                                <p class="text-base font-semibold">Members</p>
+                                <p class="text-xs mb-4">Add people to the project</p>
+                              </div>
+                              <div>
+                                <button type="button" class="btn-focus mb-6 mt-6 flex w-auto items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 hover:border-gray-600
+            hover:bg-gray-100 hover:text-primary-700
+            focus:z-10- focus:border-gray-600 focus:bg-gray-100 focus:outline-none ">
+                                  <span class="material-symbols-outlined icon-16 "> add </span>
+                                  <span>Add member</span>
+                                </button>
+                                <div class="cust-drop z-10 w-[30rem] rounded-lg bg-white d-none-"
+                                  data-popper-placement="bottom">
+                                  <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700 ">
+                                    <div class="mb-3 text-center font-medium">Add members...</div>
+                                    <div class="relative">
+                                      <input type="text" placeholder="Search people by name..."
+                                        class="w-80- block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                                      <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3">
+                                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                          viewBox="0 0 20 20" class="size-4 text-Mdblue-600">
+                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                                        </svg>
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="flex items-center"><input id="default-checkbox" type="checkbox"
-                                      class="hidden- focus:ring-primary-500- h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0">
+                                  <div class="mt-2 h-[1px] grow bg-gray-200 "></div>
+                                  <div class="">
+                                    <ul class="h-60 space-y-4 overflow-y-scroll px-4 py-2 text-sm text-Mdblue-600">
+                                      <li>
+                                        <div class="flex gap-2">
+                                          <div class="grow">
+                                            <div class="flex items-center gap-2">
+                                              <div
+                                                class="Mdblue-fill-700 shrink-0 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-10">
+                                                <span class="font-semibold text-base text-white undefined">AM</span>
+                                              </div>
+                                              <div>
+                                                <div class="text-base font-semibold text-Mdblue-700">
+                                                  test-2 </div>
+                                                <div class="flex"><span
+                                                    class="text-base font-normal text-primary-700">e.howard@domain.com</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="flex items-center"><input id="default-checkbox" type="checkbox"
+                                              class="hidden- focus:ring-primary-500- h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0">
+                                          </div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="mt-4 h-[1px] grow bg-gray-200 "></div>
+                                  <div class="grid grid-cols-1 gap-2 px-4 py-3 text-sm text-Mdblue-700 ">
+                                    <button type="button"
+                                      class="rounded-md w-full border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">Done
+                                    </button>
                                   </div>
                                 </div>
-                              </li>
-                            </ul>
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <input name="Project" type="ProjectName" id="ProjectName"
+                                placeholder="Search people by name..." required="" class="w-full rounded border border-gray-300 bg-gray-50 p-3 pe-10 text-base
+            font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
+                              <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg
+                                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
+                                  class="size-4 text-Mdblue-600 ">
+                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                                </svg></div>
+                            </div>
+
+                            <div class="flex flex-col items-center mt-16">
+                              <span
+                                class="Mdblue-fill-600 size-8 material-symbols-outlined mb-3 text-Mdblue-600">person_add</span>
+                              <div class="mb-2 text-lg font-semibold text-Mdblue-600"> No members added yet </div>
+                              <div class="text-base text-Mdblue-600"> Use the button to add members to the project
+                              </div>
+                            </div>
+                            <div class="">
+                              <table class="w-full text-left text-sm text-Mdblue-600 ">
+                                <thead class="border-b text-sm font-semibold text-Mdblue-600 ">
+                                  <tr class=" sticky top-0 bg-white z-50">
+                                    <th class="p-4 font-semibold">Name</th>
+                                    <th class="p-4 font-semibold">Email</th>
+                                    <th class="p-4 font-semibold">Role</th>
+                                    <th class="p-4 font-semibold"></th>
+                                  </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100 ">
+                                  <tr class="bg-white">
+                                    <td class="p-4 pl-0">
+                                      <div class="flex items-center gap-2">
+                                        <div
+                                          class="Mdblue-fill-700 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-10 ">
+                                          <span class="font-semibold text-base text-white undefined">AM</span>
+                                        </div>
+                                        <div>
+                                          <div class="text-base font-semibold text-Mdblue-700"> test-2 </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="p-4"><span class="text-base font-normal text-primary-700">
+                                        <div><span> test@unicourt.com
+                                          </span></div>
+                                      </span></td>
+                                    <td class="p-4">
+                                      <div class="flex items-center d-none"><input type="checkbox"
+                                          class="hidden- focus:ring-primary-500- h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0">
+                                      </div>
+                                      <button type="button"
+                                        class=" inline-flex min-h-[3.125rem]- w-32 items-center justify-between rounded border border-gray-300 bg-white p-2 text-center text-base
+                                 font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-Mdblue-600 focus:bg-gray-100 focus:outline-none">
+                                        Member <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                          viewBox="0 0 10 6" class="ms-3 size-2.5 text-Mdblue-600">
+                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4"></path>
+                                        </svg></button>
+                                    </td>
+                                    <td class="p-4 pr-0 flex justify-end">
+                                      <button type="button" class="flex items-center rounded-lg border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-Mdblue-700
+                      hover:border-gray-600
+                      hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                                          class="material-symbols-outlined icon-16"> more_horiz </span></button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
                           </div>
-                          <div class="mt-4 h-[1px] grow bg-gray-200 "></div>
-                          <div class="grid grid-cols-1 gap-2 px-4 py-3 text-sm text-Mdblue-700 ">
-                            <button type="button"
-                              class="rounded-md w-full border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">Done
-                            </button>
+
+                          <div class="border-t bg-white p-3">
+                            <div class="grid grid-cols-2 gap-4 px-4 py-3 text-sm text-Mdblue-700">
+                              <button type="button"
+                                class="rounded border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+                                Back to projects
+                              </button>
+                              <button type="button"
+                                class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none"><span>Create
+                                  this project</span><span
+                                  class="material-symbols-outlined icon-18 ml-2">arrow_forward</span>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="relative">
-                      <input name="Project" type="ProjectName" id="ProjectName" placeholder="Search people by name..."
-                        required="" class="w-full rounded border border-gray-300 bg-gray-50 p-3 pe-10 text-base
-            font-normal text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
-                      <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg
-                          aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
-                          class="size-4 text-Mdblue-600 ">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
-                        </svg></div>
-                    </div>
-
-                    <div class="flex flex-col items-center mt-16">
-                      <span
-                        class="Mdblue-fill-600 size-8 material-symbols-outlined mb-3 text-Mdblue-600">person_add</span>
-                      <div class="mb-2 text-lg font-semibold text-Mdblue-600"> No members added yet </div>
-                      <div class="text-base text-Mdblue-600"> Use the button to add members to the project
-                      </div>
-                    </div>
-                    <div class="">
-                      <table class="w-full text-left text-sm text-Mdblue-600 ">
-                        <thead class="border-b text-sm font-semibold text-Mdblue-600 ">
-                          <tr class=" sticky top-0 bg-white z-50">
-                            <th class="p-4 font-semibold">Name</th>
-                            <th class="p-4 font-semibold">Email</th>
-                            <th class="p-4 font-semibold">Role</th>
-                            <th class="p-4 font-semibold"></th>
-                          </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100 ">
-                          <tr class="bg-white">
-                            <td class="p-4 pl-0">
-                              <div class="flex items-center gap-2">
-                                <div
-                                  class="Mdblue-fill-700 bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-10 ">
-                                  <span class="font-semibold text-base text-white undefined">AM</span>
-                                </div>
-                                <div>
-                                  <div class="text-base font-semibold text-Mdblue-700"> test-2 </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="p-4"><span class="text-base font-normal text-primary-700">
-                                <div><span> test@unicourt.com
-                                  </span></div>
-                              </span></td>
-                            <td class="p-4">
-                              <div class="flex items-center d-none"><input type="checkbox"
-                                  class="hidden- focus:ring-primary-500- h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0">
-                              </div>
-                              <button type="button"
-                                class=" inline-flex min-h-[3.125rem]- w-32 items-center justify-between rounded border border-gray-300 bg-white p-2 text-center text-base
-                                 font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-Mdblue-600 focus:bg-gray-100 focus:outline-none">
-                                Member <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                  viewBox="0 0 10 6" class="ms-3 size-2.5 text-Mdblue-600">
-                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4"></path>
-                                </svg></button>
-                            </td>
-                            <td class="p-4 pr-0 flex justify-end">
-                              <button type="button" class="flex items-center rounded-lg border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-Mdblue-700
-                      hover:border-gray-600
-                      hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
-                                  class="material-symbols-outlined icon-16"> more_horiz </span></button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                  </div>
-
-                  <div class="border-t bg-white p-3">
-                    <div class="grid grid-cols-2 gap-4 px-4 py-3 text-sm text-Mdblue-700">
-                      <button type="button"
-                        class="rounded border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
-                        Back to projects
-                      </button>
-                      <button type="button"
-                        class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none"><span>Create
-                          this project</span><span class="material-symbols-outlined icon-18 ml-2">arrow_forward</span>
-                      </button>
                     </div>
                   </div>
                 </div>
