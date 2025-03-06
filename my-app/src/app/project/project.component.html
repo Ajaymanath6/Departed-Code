@@ -17,18 +17,21 @@
           <div class="flex">
             <a class="flex items-center space-x-3 align-middle" href="/DEV02/dashboard"><img alt="UniCourt Logo"
                 width="88" height="40" src="https://cdn-staging.unicourt.com/common_resources/images/logo-v2.svg"></a>
-            <div class="ml-6 text-white">
-              <p class="flex gap-2 items-center">
-                <span class="font-semibold">Project Name</span>
-                <span class="Mdblue-fill-600- icon-18 material-symbols-outlined text-Mdblue-600-"> text_snippet </span>
-              </p>
-              <div class="flex gap-2 text-base">
-                <div>4364563</div>
-                <div class="flex items-center gap-2"><span class="flex w-1 h-1 bg-Mdblue-600 rounded-full"></span>
-                  <span>Google</span>
-                </div>
-                <div class="flex items-center gap-2"><span class="flex w-1 h-1 bg-Mdblue-600 rounded-full"></span>
-                  <span>Content</span>
+            <div class="flex items-center ml-36 text-white gap-x-4">
+              <span class="material-symbols-outlined icon-24 gray-fill-600"> grid_view </span>
+              <div>
+                <p class="flex gap-2 items-center">
+                  <span class="font-semibold">Project Name</span>
+                  <span class="gray-fill-600 icon-18 material-symbols-outlined"> text_snippet </span>
+                </p>
+                <div class="flex gap-2 text-base">
+                  <div>4364563</div>
+                  <div class="flex items-center gap-2"><span class="flex w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>Google</span>
+                  </div>
+                  <div class="flex items-center gap-2"><span class="flex w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>Content</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -211,7 +214,7 @@
     </div> -->
     <!--left content end-->
     <!--left content ng open/close start-->
-    <div class="w-full overflow-y-auto-"
+    <div class="w-full overflow-y-auto- duration-300"
       [ngClass]="{'max-w-[12%]': isSidebarExpanded, 'max-w-[4%]': !isSidebarExpanded}">
       <div class="items-center justify-between bg-gray-300 h-full overflow-y-auto">
         <div class="mb-4 font-semibold text-Mdblue-600 text-base">
@@ -233,57 +236,60 @@
               </button>
             </li> -->
             <li>
-              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
-                href="">
+              <a class="relative inline-flex w-full gap-x-1 cursor-pointer  rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="" [ngClass]="{'items-center': isSidebarExpanded, 'justify-center': !isSidebarExpanded}">
                 <!-- <span class="material-symbols-outlined icon-20 mr-2">layers</span> -->
                 <!-- <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> watch_later </span> -->
-                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> search </span>
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2- "> search </span>
                 <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Search</div>
               </a>
             </li>
             <li>
-              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
-                href="">
+              <a class="relative inline-flex w-full gap-x-1 cursor-pointer  rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="" [ngClass]="{'items-center': isSidebarExpanded, 'justify-center': !isSidebarExpanded}">
                 <!-- <span class="material-symbols-outlined icon-20 mr-2">layers</span> -->
-                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> watch_later </span>
-                <span class="bg-red-700 rounded-full size-2 absolute top-[0.4rem] right-[1rem]"></span>
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2- "> watch_later </span>
+                <span class="bg-red-700 rounded-full size-2 absolute top-[0.4rem] right-[1rem]"
+                  *ngIf="!isSidebarExpanded"></span>
                 <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Tracking</div>
                 <div
-                  class="relative ml-1 inline-flex h-5 w-5 items-center justify-center overflow-hidden rounded-full bg-red-700">
+                  class="relative ml-1 inline-flex h-5 w-5 items-center justify-center overflow-hidden rounded-full bg-red-700"
+                  *ngIf="isSidebarExpanded">
                   <span class="font-medium text-white text-sm">1</span>
                 </div>
               </a>
             </li>
             <li>
               <a data-tooltip-target="tooltip-my-team"
-                class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700- text-Mdblue-700-">
-                <span class="material-symbols-outlined Mdblue-fill-600 icon-20 mr-2"> bookmarks </span>
+                class="relative inline-flex w-full gap-x-1 cursor-pointer  rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700- text-Mdblue-700-"
+                [ngClass]="{'items-center': isSidebarExpanded, 'justify-center': !isSidebarExpanded}">
+                <span class="material-symbols-outlined Mdblue-fill-600 icon-20 mr-2-"> bookmarks </span>
                 <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Bookmarks</div>
               </a>
               <div id="tooltip-my-team" role="tooltip"
                 class="absolute z-10 invisible inline-block py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300">
-                Tooltip content here
+                Bookmarks
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
             </li>
             <li>
-              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
-                href="">
-                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> groups </span>
+              <a class="relative inline-flex w-full gap-x-1 cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="" [ngClass]="{'items-center': isSidebarExpanded, 'justify-center': !isSidebarExpanded}">
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2- "> groups </span>
                 <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Groups</div>
               </a>
             </li>
             <li>
-              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
-                href="">
-                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> search </span>
+              <a class="relative inline-flex w-full gap-x-1 cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="" [ngClass]="{'items-center': isSidebarExpanded, 'justify-center': !isSidebarExpanded}">
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2- "> search </span>
                 <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Usage</div>
               </a>
             </li>
             <li>
-              <a class="relative inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
-                href="">
-                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 "> settings </span>
+              <a class="relative inline-flex w-full gap-x-1 cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"
+                href="" [ngClass]="{'items-center': isSidebarExpanded, 'justify-center': !isSidebarExpanded}">
+                <span class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2- "> settings </span>
                 <div class="sidenav-text truncate" *ngIf="isSidebarExpanded">Manage Project</div>
               </a>
             </li>
@@ -295,7 +301,7 @@
     <!--right content start-->
     <div class="container- w-[73rem]- flex flex-col w-full mdm:w-full- h-full- d-none- overflow-y-auto- p-6">
       <div>
-        search
+        search bar
       </div>
       <div class="mid-content flex grow overflow-y-auto- overflow-hidden">
         <div class="overflow-y-auto max-w-[14%]">
@@ -1056,7 +1062,7 @@
             <!--new project add/list/update start-->
             <div class="w-[43rem]- mt-6 m-auto- flex justify-center">
               <div class="flex">
-                <div class="left-tab w-[16rem] w-full-">
+                <div class="left-tab w-[10rem] w-full-">
                   <ul class="space-y-1 px-2 mt-[11rem] font-semibold">
                     <li>
                       <a
@@ -1066,7 +1072,7 @@
                         <div class="">General</div>
                       </a>
                     </li>
-                     <li>
+                    <li>
                       <a
                         class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"><span
                           class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2"> group
@@ -1538,11 +1544,14 @@
                 <div class="rounded-md border border-gray-300">
                   <div class="relative h-80 bg-gray-200 flex items-center justify-center">
                     <button class="text-white rounded-full p-3">
-                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <!-- <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
                           d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                           clip-rule="evenodd"></path>
-                      </svg>
+                      </svg>-->
+                      <span class="material-symbols-outlined  Mdblue-fill-600 icon-48 ">
+                        play_circle
+                      </span>
                     </button>
                   </div>
 
@@ -1566,12 +1575,15 @@
                       <div class="w-[30%]">
                         <div class="relative h-24 bg-gray-200 flex items-center justify-center">
                           <button class="text-white rounded-full p-3">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            <!-- <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd"
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                                 clip-rule="evenodd"></path>
-                            </svg>
+                            </svg> -->
+                            <span class="material-symbols-outlined  Mdblue-fill-600 icon-24">
+                              play_circle
+                            </span>
                           </button>
                         </div>
                       </div>
@@ -1588,12 +1600,15 @@
                       <div class="w-[30%]">
                         <div class="relative h-24 bg-gray-200 flex items-center justify-center">
                           <button class="text-white rounded-full p-3">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            <!-- <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd"
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                                 clip-rule="evenodd"></path>
-                            </svg>
+                            </svg> -->
+                            <span class="material-symbols-outlined  Mdblue-fill-600 icon-24 ">
+                              play_circle
+                            </span>
                           </button>
                         </div>
                       </div>
