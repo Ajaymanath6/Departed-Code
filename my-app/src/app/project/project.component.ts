@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ProjectComponent {
   isSidebarExpanded: boolean = true;
-
+  // isfacetExpanded:boolean= false;
   toggleSidebar() {
     this.isSidebarExpanded = !this.isSidebarExpanded;
   }
+  //   toggleFacetbar() {
+  //   this.isfacetExpanded = !this.isfacetExpanded;
+  // }
 }
