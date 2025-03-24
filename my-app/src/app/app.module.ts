@@ -25,6 +25,7 @@ import { ScrolltestComponent } from './scrolltest/scrolltest.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { SearchWidgetComponent } from './search-widget/search-widget.component';
 import { ProjectComponent } from './project/project.component';
+import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ProjectComponent } from './project/project.component';
     ProfilepageComponent,
     SearchWidgetComponent,
     ProjectComponent,
+    TooltipTestComponent,
 
   ],
   imports: [
