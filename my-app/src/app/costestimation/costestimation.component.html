@@ -1,0 +1,198 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+  <!-- Main Container with Split Layout -->
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Left Panel - Steps Overview -->
+      <div class="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-bold text-gray-800">Case Progress</h2>
+          <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">6 Steps</span>
+        </div>
+
+        <!-- Timeline Steps -->
+        <div class="relative">
+          <!-- Timeline Line -->
+          <div class="grid grid-cols-[2rem_1fr_auto] gap-4">
+            <!-- Line container -->
+            <div class="relative col-start-1 row-start-1 row-span-full mx-auto w-0.5 bg-gray-200"></div>
+
+            <!-- Steps -->
+            <div class="space-y-6 col-span-full">
+              <div *ngFor="let step of steps; let i = index"
+                   class="grid grid-cols-[2rem_1fr_auto] items-start gap-4 group cursor-pointer hover:bg-gray-50 p-4 rounded-xl transition-all duration-200"
+                   [ngClass]="{
+                     'bg-primary-50': isStepActive(i),
+                     'opacity-50': showResult && !isStepComplete(i)
+                   }">
+                <!-- Step Number -->
+                <div class="flex-shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center"
+                     [ngClass]="{
+                       'border-primary-500': !isStepComplete(i),
+                       'border-green-500': isStepComplete(i),
+                       'bg-green-500': isStepComplete(i),
+                       'bg-white': !isStepComplete(i)
+                     }">
+                  <span class="font-semibold"
+                        [ngClass]="{
+                          'text-primary-600': !isStepComplete(i),
+                          'text-white': isStepComplete(i)
+                        }">
+                    <ng-container *ngIf="!isStepComplete(i)">{{i + 1}}</ng-container>
+                    <svg *ngIf="isStepComplete(i)" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </span>
+                </div>
+                <!-- Step Content -->
+                <div class="flex-grow">
+                  <h3 class="text-lg font-medium text-gray-900 group-hover:text-primary-600 transition-colors">
+                    {{step}}
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">
+                    {{getStepDescription(i)}}
+                  </p>
+                  <!-- Cost Breakdown -->
+                  <div *ngIf="showResult && estimationResult" class="mt-2">
+                    <p class="text-sm font-medium" [ngClass]="{'text-green-600': isStepComplete(i)}">
+                      Estimated Cost: {{formatCurrency(estimationResult.breakdown[i].cost)}}
+                    </p>
+                  </div>
+                </div>
+                <!-- Status Indicator -->
+                <div class="flex items-center">
+                  <div class="flex h-3 w-3 relative">
+                    <div *ngIf="isStepActive(i)" class="animate-ping h-full w-full rounded-full bg-primary-400 opacity-75"></div>
+                    <div class="h-3 w-3 rounded-full"
+                         [ngClass]="{
+                           'bg-gray-300': !isStepComplete(i) && !isStepActive(i),
+                           'bg-primary-500': isStepActive(i),
+                           'bg-green-500': isStepComplete(i) && !isStepActive(i)
+                         }">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel - Cost Estimation Form -->
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="bg-gradient-to-r from-primary-600 to-primary-700 p-6 lg:p-8">
+          <h2 class="text-2xl font-bold text-white mb-2">Cost Estimation</h2>
+          <p class="text-primary-100">Calculate and manage your case expenses</p>
+        </div>
+
+        <form [formGroup]="costForm" (ngSubmit)="onSubmit()" class="p-6 lg:p-8 space-y-6">
+          <!-- Name Field -->
+          <div class="space-y-2">
+            <label for="name" class="text-sm font-medium text-gray-700 flex items-center">
+              <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+              </svg>
+              CASE NAME
+            </label>
+            <div class="relative flex items-center">
+              <input
+                type="text"
+                id="name"
+                formControlName="name"
+                class="block w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                placeholder="Enter case name"
+              >
+            </div>
+            <p class="text-sm text-gray-500">Provide a unique identifier for your case</p>
+          </div>
+
+          <!-- Cost Fields Container -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Estimated Cost Field -->
+            <div class="space-y-2">
+              <label for="estimatedCost" class="text-sm font-medium text-gray-700 flex items-center">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                ESTIMATED COST
+              </label>
+              <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                <span class="px-4 text-gray-500">$</span>
+                <input
+                  type="number"
+                  id="estimatedCost"
+                  formControlName="estimatedCost"
+                  class="w-full py-3 pr-4 text-gray-900 focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500 sm:text-sm border-0"
+                  placeholder="0.00"
+                >
+              </div>
+            </div>
+
+            <!-- Limit Field -->
+            <div class="space-y-2">
+              <label for="limit" class="text-sm font-medium text-gray-700 flex items-center">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+                SPENDING LIMIT
+              </label>
+              <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                <span class="px-4 text-gray-500">$</span>
+                <input
+                  type="number"
+                  id="limit"
+                  formControlName="limit"
+                  class="w-full py-3 pr-4 text-gray-900 focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500 sm:text-sm border-0"
+                  placeholder="0.00"
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Summary (shows when estimation is complete) -->
+          <div *ngIf="showResult && estimationResult" class="bg-gray-50 rounded-xl p-4 space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-gray-700 font-medium">Total Estimated Cost:</span>
+              <span class="text-lg font-bold" [ngClass]="{
+                'text-green-600': !estimationResult.isOverLimit,
+                'text-red-600': estimationResult.isOverLimit
+              }">
+                {{formatCurrency(estimationResult.totalCost)}}
+              </span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-700 font-medium">Budget Limit:</span>
+              <span class="text-lg font-bold text-gray-900">
+                {{formatCurrency(costForm.get('limit')?.value)}}
+              </span>
+            </div>
+            <div *ngIf="estimationResult.isOverLimit" class="text-red-600 text-sm font-medium">
+              Warning: Estimated cost exceeds the specified limit
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-6">
+            <button
+              type="submit"
+              [disabled]="!costForm.valid || isLoading"
+              class="w-full relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed group"
+            >
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg *ngIf="!isLoading" class="h-5 w-5 text-primary-300 group-hover:text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                </svg>
+                <!-- Loading Spinner -->
+                <svg *ngIf="isLoading" class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </span>
+              {{isLoading ? 'CALCULATING...' : 'RUN ESTIMATION'}}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<p>hdkh</p>

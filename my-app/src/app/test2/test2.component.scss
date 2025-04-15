@@ -60,3 +60,36 @@
 }
 // left sidebar sticky end
 
+.scroll-container {
+  width: 300px; /* Set your desired width */
+  max-width: 100%;
+  overflow: hidden; /* Hide scrollbar initially */
+  white-space: nowrap;
+  display: flex;
+  scrollbar-gutter: stable; /* Prevents layout shift */
+}
+
+/* Enable scrolling when hovered */
+.scroll-container:hover {
+  overflow-x: auto;
+}
+
+/* Hide scrollbar but keep space allocated */
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* Set scrollbar height */
+  background: transparent; /* Invisible when not hovered */
+}
+
+/* Show scrollbar on hover */
+.scroll-container:hover::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0.1); /* Light background on hover */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 4px;
+}
+
+.scroll-container:hover::-webkit-scrollbar-thumb {
+  background: #555; /* Darker scrollbar on hover */
+}

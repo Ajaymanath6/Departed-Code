@@ -1,0 +1,19 @@
+image: node:20
+
+pages:
+  cache:
+    paths:
+      - my-app/node_modules/
+  script:
+    - cd my-app
+    - npm i
+    - npx @angular/cli build --configuration production --base-href ./
+    - cp -r dist/my-app ../public
+    - cp ../public/index.html ../public/404.html
+  artifacts:
+    paths:
+      - public
+  tags:
+    - app_shared_runner
+  only:
+    - flowbite-learning  # or your default branch
