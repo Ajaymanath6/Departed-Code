@@ -3,13 +3,14 @@ image: node:20
 pages:
   cache:
     paths:
-      - node_modules/
+      - my-app/node_modules/
   script:
     - cd my-app
     - npm ci
     - npx @angular/cli build --configuration production --base-href ./
-    - cp -r dist/flobite-local public
-    - cp public/index.html public/404.html
+    - mkdir -p ../public
+    - cp -r dist/flobite-local ../public
+    - cp ../public/index.html ../public/404.html
   artifacts:
     paths:
       - public
