@@ -15,6 +15,8 @@ import { ScrolltestComponent } from './scrolltest/scrolltest.component';
 import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { SearchWidgetComponent } from './search-widget/search-widget.component';
 import { ProjectComponent } from './project/project.component';
+import { CursoruiComponent } from './cursorui/cursorui.component';
+import { CostestimationComponent } from './costestimation/costestimation.component';
 
 const routes: Routes = [
   {
@@ -77,6 +79,14 @@ const routes: Routes = [
   {
     path: 'project',
     component: ProjectComponent,
+  },
+  {
+    path: 'cursor',
+    component: CursoruiComponent,
+  },
+  {
+    path: 'curscursoror',
+    component: CostestimationComponent,
   },
 ];
 

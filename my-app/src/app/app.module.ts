@@ -13,7 +13,7 @@ import { SemanticsearchComponent } from './semanticsearch/semanticsearch.compone
 import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from './searchbar/searchbar.component';
 import { ChipComponent } from './chip/chip.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ChatgptComponent } from './chatgpt/chatgpt.component';
 import { ChildCompComponent } from './child-comp/child-comp.component';
@@ -26,6 +26,8 @@ import { ProfilepageComponent } from './profilepage/profilepage.component';
 import { SearchWidgetComponent } from './search-widget/search-widget.component';
 import { ProjectComponent } from './project/project.component';
 import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
+import { CursoruiModule } from './cursorui/cursorui.module';
+import { CostestimationComponent } from './costestimation/costestimation.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,7 @@ import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
     SearchWidgetComponent,
     ProjectComponent,
     TooltipTestComponent,
-
+    CostestimationComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,9 @@ import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
+    CursoruiModule
   ],
   providers: [],
   bootstrap: [AppComponent],

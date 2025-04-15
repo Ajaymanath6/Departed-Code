@@ -1,0 +1,38 @@
+<div class="md-checkbox-container" [class.disabled]="disabled">
+  <div class="md-checkbox relative"
+    (mousedown)="onMouseDown($event)"
+    (mouseup)="onMouseUp($event)"
+    (mouseleave)="onMouseUp($event)">
+    <input
+      type="checkbox"
+      [id]="id"
+      [checked]="checked"
+      [disabled]="disabled"
+      class="sr-only"
+    />
+    <div class="md-checkbox-frame" [class.checked]="checked">
+      <svg class="md-checkbox-check" viewBox="0 0 18 18">
+        <path
+          class="check-path"
+          [class.checked]="checked"
+          fill="none"
+          stroke="currentColor"
+          d="M4.5,10 l3,3 l6,-6"
+        />
+      </svg>
+    </div>
+    <div
+      class="ripple-container"
+      [class.ripple-effect]="isRippling"
+      [class.checked]="checked"
+    ></div>
+  </div>
+  <label
+    *ngIf="label"
+    [for]="id"
+    class="md-checkbox-label"
+    [class.disabled]="disabled"
+  >
+    {{ label }}
+  </label>
+</div>
