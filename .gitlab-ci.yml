@@ -5,6 +5,7 @@ pages:
     paths:
       - node_modules/
   script:
+    - cd my-app
     - npm ci
     - npx @angular/cli build --configuration production --base-href ./
     - cp -r dist/flobite-local public
