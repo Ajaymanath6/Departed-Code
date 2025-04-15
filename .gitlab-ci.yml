@@ -9,7 +9,7 @@ pages:
     - npm i
     - npx @angular/cli build --configuration production --base-href ./
     - mkdir -p ../public
-    - cp -r dist/flobite-local ../public
+    - cp -r dist/my-app ../public
     - cp ../public/index.html ../public/404.html
   artifacts:
     paths:
