@@ -1,0 +1,29 @@
+// /* Basic container styling */
+// .custom-scrollbar {
+//   overflow-y: auto;
+//   overflow-x: hidden;
+// }
+
+/* Full height layout styling - these are already in inline Tailwind but kept for reference */
+.h-screen {
+  height: 100vh; /* Viewport height */
+}
+
+.h-full {
+  height: 100%; /* Full height of parent */
+}
+
+/* Add visibility class for tooltips since Tailwind doesn't directly support this transition */
+.visible {
+  visibility: visible;
+}
+
+/* Position elements properly */
+li {
+  position: relative;
+}
+
+a {
+  position: relative;
+  overflow: visible;
+}

@@ -28,6 +28,7 @@ import { ProjectComponent } from './project/project.component';
 import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
 import { CursoruiModule } from './cursorui/cursorui.module';
 import { CostestimationComponent } from './costestimation/costestimation.component';
+import { Cursertest2Component } from './cursertest2/cursertest2.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { CostestimationComponent } from './costestimation/costestimation.compone
     ProjectComponent,
     TooltipTestComponent,
     CostestimationComponent,
+    Cursertest2Component,
   ],
   imports: [
     BrowserModule,
