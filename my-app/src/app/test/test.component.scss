@@ -255,3 +255,14 @@ input:focus ~ .input-container {
     white-space: nowrap;
 }
 //google text ellipse end
+
+
+/* For outlined icons (default) */
+.material-symbols-outlined {
+  // font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* For filled icons */
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

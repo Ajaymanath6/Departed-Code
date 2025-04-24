@@ -17,6 +17,8 @@ import { SearchWidgetComponent } from './search-widget/search-widget.component';
 import { ProjectComponent } from './project/project.component';
 import { CursoruiComponent } from './cursorui/cursorui.component';
 import { CostestimationComponent } from './costestimation/costestimation.component';
+import { Cursertest2Component } from './cursertest2/cursertest2.component';
+import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
 
 const routes: Routes = [
   {
@@ -87,6 +89,14 @@ const routes: Routes = [
   {
     path: 'curscursoror',
     component: CostestimationComponent,
+  },
+  // {
+  //   path: 'cursertest2',
+  //   component: Cursertest2Component,
+  // },
+  {
+    path: 'tooltip',
+    component: TooltipTestComponent,
   },
 ];
 
