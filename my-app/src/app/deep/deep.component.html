@@ -72,7 +72,7 @@
                         </svg></button>
                     </div>
                   </div>
-                   <div class="flex justify-between rounded-md border border-gray-300 bg-white p-2">
+                  <div class="flex justify-between rounded-md border border-gray-300 bg-white p-2">
                     <div class="flex space-x-2 items-center">
                       <span class="material-symbols-outlined icon-24 Mdblue-fill-600"> group </span>
                       <div class="flex flex-col text-Mdblue-600 text-sm font-medium-">
@@ -132,32 +132,50 @@
               <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris.</p>
               <div class="flex flex-col gap-3">
                 <div class="">
-                  <ul class="flex bg-white text-sm font-medium text-Mdblue-700">
-                    <li
+                  <div class="flex- grid grid-cols-2 gap-4 bg-white text-sm font-medium text-Mdblue-700">
+                    <!-- <div
                       class="group relative  mr-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-4 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-                      <!-- <span
-                        class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0
-                        transition-opacity duration-300 ease-in-out">check_circle</span> -->
                       <input id="" type="radio" value=""
                         class="!h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
                       <div class="space-y-2">
                         <p class="text-base font-semibold">On Demand</p>
                         <p class="text-Mdblue-600">Manually by you.</p>
                       </div>
-                    </li>
-                    <li
+                    </div>
+                    <div
                       class="group relative   flex w-full items-center rounded-md border border-gray-200 px-4 py-4 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-                      <!-- <span
-                        class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100
-                        opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span> -->
                       <input id="" type="radio" value=""
                         class="!h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
                       <div class="space-y-2">
                         <p class="text-base font-semibold">Schedule it...</p>
                         <p class="">You pick when</p>
                       </div>
-                    </li>
-                  </ul>
+                    </div> -->
+                    <div
+                      class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer transition-colors relative">
+                      <input type="radio" id="case-review" value=""
+                        class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+                      <label for="case-review" class="absolute inset-0 cursor-pointer"></label>
+                      <div
+                        class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                      </div>
+                      <h3 class="font-medium text-Mdblue-700 mb-2">On Demand</h3>
+                      <p class="text-sm text-Mdblue-600">Manually by you.</p>
+                    </div>
+                    <div
+                      class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer transition-colors relative">
+                      <input type="radio" id="case-review2" value=""
+                        class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+                      <label for="case-review2" class="absolute inset-0 cursor-pointer"></label>
+                      <div
+                        class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                      </div>
+                      <h3 class="font-medium text-Mdblue-700 mb-2">Schedule it...</h3>
+                      <p class="text-sm text-Mdblue-600">You pick when</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -174,73 +192,106 @@
           <div class="w-full- h-px grow bg-gray-200"></div>
         </div>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris.</p>
-
         <div class="mt-4">
-          <ul class="flex flex-col gap-y-2  text-sm font-medium text-Mdblue-700">
-            <li
+          <div class="flex- flex-col- gap-y-2- grid grid-cols-1 gap-2  text-sm font-medium text-Mdblue-700">
+            <!-- <div
               class="group relative bg-white  mr-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-4 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-              <!-- <span
-                        class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100 opacity-0
-                        transition-opacity duration-300 ease-in-out">check_circle</span> -->
               <input id="" type="radio" value=""
                 class="!h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
               <div class="space-y-2">
                 <p class="text-base font-semibold">Daily</p>
                 <p class="text-Mdblue-600">The data will be automatically updated daily at 9:00 AM.</p>
               </div>
-            </li>
-            <li
+            </div>
+            <div
               class="group relative  bg-white flex w-full items-center rounded-md border border-gray-200 px-4 py-4 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-              <!-- <span
-                        class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100
-                        opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span> -->
               <input id="" type="radio" value=""
                 class="!h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
               <div class="space-y-2">
                 <p class="text-base font-semibold">Weekly</p>
-                <p class="text-Mdblue-600">If you pick this option will be able to select a day of the week and an hour.</p>
+                <p class="text-Mdblue-600">If you pick this option will be able to select a day of the week and an hour.
+                </p>
               </div>
-            </li>
-             <li
+            </div>
+            <div
               class="group relative  bg-white flex w-full items-center rounded-md border border-gray-200 px-4 py-4 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-              <!-- <span
-                        class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100
-                        opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span> -->
               <input id="" type="radio" value=""
                 class="!h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
               <div class="space-y-2">
                 <p class="text-base font-semibold">Monthly</p>
-                <p class="text-Mdblue-600">If you pick this option will be able to select a day of the week and an hour.</p>
+                <p class="text-Mdblue-600">If you pick this option will be able to select a day of the week and an hour.
+                </p>
               </div>
-            </li>
-             <li
+            </div>
+            <div
               class="group relative  bg-white flex w-full items-center rounded-md border border-gray-200 px-4 py-4 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-              <!-- <span
-                        class="material-symbols-outlined absolute right-[0.3rem] top-[0.3rem] secondary-fill-700 group-hover:opacity-100
-                        opacity-0 transition-opacity duration-300 ease-in-out">check_circle</span> -->
               <input id="" type="radio" value=""
                 class="!h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
               <div class="space-y-2">
                 <p class="text-base font-semibold">On Demand</p>
                 <p class="text-Mdblue-600">Manually by you.</p>
               </div>
-            </li>
-          </ul>
+            </div> -->
+            <div
+              class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer transition-colors relative">
+              <input type="radio" id="case1" value=""
+                class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+              <label for="case1" class="absolute inset-0 cursor-pointer"></label>
+              <div
+                class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+              </div>
+              <h3 class="font-medium text-Mdblue-700 mb-2">Case Review</h3>
+              <p class="text-sm text-Mdblue-600">Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+            <div
+              class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer transition-colors relative">
+              <input type="radio" id="case2" value=""
+                class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+              <label for="case2" class="absolute inset-0 cursor-pointer"></label>
+              <div
+                class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+              </div>
+              <h3 class="font-medium text-Mdblue-700 mb-2">Weekly</h3>
+              <p class="text-sm text-Mdblue-600">If you pick this option will be able to select a day of the week and an hour.</p>
+            </div>
+               <div
+              class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer transition-colors relative">
+              <input type="radio" id="case3" value=""
+                class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+              <label for="case3" class="absolute inset-0 cursor-pointer"></label>
+              <div
+                class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+              </div>
+              <h3 class="font-medium text-Mdblue-700 mb-2">Monthly</h3>
+              <p class="text-sm text-Mdblue-600">If you pick this option will be able to select a day of the week and an hour.</p>
+            </div>
+                           <div
+              class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer transition-colors relative">
+              <input type="radio" id="case4" value=""
+                class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+              <label for="case4" class="absolute inset-0 cursor-pointer"></label>
+              <div
+                class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+              </div>
+              <h3 class="font-medium text-Mdblue-700 mb-2">Custom...</h3>
+              <p class="text-sm text-Mdblue-600">You pick the frequency.</p>
+            </div>
+          </div>
         </div>
         <div class="mt-4">
-
-
           <label class="inline-flex items-center cursor-pointer">
             <input type="checkbox" value="" class="sr-only peer">
             <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-secondary-300
    rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white
    after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full
     after:h-5 after:w-5 after:transition-all  peer-checked:bg-secondary-700"></div>
-            <span class="ms-3 text-base font-normal text-Mdblue-700 ">Notify me every time there’s new data in my
+            <span class="ms-3 text-base font-normal text-Mdblue-700 ">Notify me every time there's new data in my
               view.</span>
           </label>
-
-
         </div>
       </div>
 
@@ -249,8 +300,8 @@
   <!--2page deep end -->
 
   <div class="mt-4">
-    <p class="text-center text-base font-semibold text-Mdblue-700">Showing cases for “Atradius Collection” + “All New
-      York City” courts</p>
+    <p class="text-center text-base font-semibold text-Mdblue-700">Showing cases for "Atradius Collection" + "All New
+      York City" courts</p>
     <p class="text-center font-normal text-Mdblue-700">You can use the customize button to pick what columns you want as
       part of your data extraction.</p>
   </div>
@@ -350,3 +401,213 @@
     </table>
   </div>
 </div>
+
+<!--smart flow start-->
+<div class="bg-white overflow-hidden shadow-sm">
+  <div class="flex">
+    <!-- Left Sidebar Navigation -->
+    <div class="w-[22rem] border-r border-gray-200 min-h-screen-">
+      <div class="p-8">
+        <h3 class="text-xl font-medium text-Mdblue-700">New Smart Flow</h3>
+        <div class="mt-8 space-y-6">
+          <!-- Step 1: Active -->
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="flex h-8 w-8 min-h-8 min-w-8 items-center justify-center rounded-full bg-Mdblue-700">
+                <span class="text-white font-medium text-sm">1</span>
+              </div>
+              <div class="h-full w-px border-l border-dashed border-gray-300 my-1"></div>
+            </div>
+            <div class="flex-1">
+              <h5 class="font-bold text-Mdblue-700">General Info</h5>
+              <p class="text-sm text-Mdblue-600">Name your flow and use one of our prebuilt prompts.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="flex h-8 w-8 min-h-8 min-w-8 items-center justify-center rounded-full bg-gray-100">
+                <span class="text-Mdblue-600 font-medium text-sm">2</span>
+              </div>
+              <div class="h-full w-px border-l border-dashed border-gray-300 my-1"></div>
+            </div>
+            <div class="flex-1">
+              <h5 class="font-bold text-Mdblue-600">Cases</h5>
+              <p class="text-sm text-Mdblue-600">Search, filter and select the cases you want in your flow.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="flex h-8 w-8 min-h-8 min-w-8 items-center justify-center rounded-full bg-gray-100">
+                <span class="text-Mdblue-600 font-medium text-sm">3</span>
+              </div>
+              <div class="h-full w-px border-l border-dashed border-gray-300 my-1"></div>
+            </div>
+            <div class="flex-1">
+              <h5 class="font-bold text-Mdblue-600">Schedule</h5>
+              <p class="text-sm text-Mdblue-600">When and how often you want the case list to be refreshed and updated.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="flex h-8 w-8 min-h-8 min-w-8 items-center justify-center rounded-full bg-gray-100">
+                <span class="text-Mdblue-600 font-medium text-sm">4</span>
+              </div>
+              <div class="h-full w-px border-l border-dashed border-gray-300 my-1"></div>
+            </div>
+            <div class="flex-1">
+              <h5 class="font-bold text-Mdblue-600">Track</h5>
+              <p class="text-sm text-Mdblue-600">Which cases do you want to track</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="flex h-8 w-8 min-h-8 min-w-8 items-center justify-center rounded-full bg-gray-100">
+                <span class="text-Mdblue-600 font-medium text-sm">5</span>
+              </div>
+              <div class="h-full w-px border-l border-dashed border-gray-300 my-1"></div>
+            </div>
+            <div class="flex-1">
+              <h5 class="font-bold text-Mdblue-600">Export</h5>
+              <p class="text-sm text-Mdblue-600">What do you want to do with the data. Be notified, receive an email,
+                use the API or export it.</p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="flex h-8 w-8 min-h-8 min-w-8 items-center justify-center rounded-full bg-gray-100">
+                <span class="text-Mdblue-600 font-medium text-sm">6</span>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h5 class="font-bold text-Mdblue-600">Summary and cost</h5>
+              <p class="text-sm text-Mdblue-600">Review your flow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 p-8 bg-gray-100">
+      <div class="max-w-4xl- max-w-[44rem]  mx-auto">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-Mdblue-700">General Info</h2>
+          <p class="text-base text-Mdblue-600">Name your flow and use one of our prebuilt prompts</p>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-12 mb-8 bg-white">
+          <!-- Form Fields -->
+          <div class="space-y-10">
+            <!-- SmartFlow Name -->
+            <div>
+              <label for="flow-name" class="block text-xl font-medium text-Mdblue-700 mb-3">SmartFlow Name</label>
+              <div class="relative">
+                <input type="text" id="flow-name"
+                  class="block w-full rounded-md border-1.5 border-Mdblue-700 px-4 py-3.5 text-Mdblue-700 shadow-sm focus:border-Mdblue-700 focus:ring-0"
+                  placeholder="Enter a name for your SmartFlow">
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <label for="flow-description" class="block text-xl font-medium text-Mdblue-700 mb-3">Description
+                (Optional)</label>
+              <textarea id="flow-description" rows="3"
+                class="block w-full rounded-md border-gray-300 px-4 py-3.5 text-Mdblue-700 shadow-sm focus:border-Mdblue-700 focus:ring-0"
+                placeholder="Description..."></textarea>
+            </div>
+
+            <!-- SmartFlow Type -->
+            <div>
+              <div class="mb-4">
+                <label class="block text-xl font-medium text-Mdblue-700">SmartFlow Type</label>
+                <p class="text-sm text-Mdblue-600 mt-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed
+                  diam eget risus varius blandit sit amet non magna.</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <!-- Card 1: Case Review (Selected) -->
+                <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+                  <!-- <input type="radio" name="flow-type" class="hidden- peer" id="case-review" checked> -->
+                  <input type="radio" id="case-review" value=""
+                    class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+                  <label for="case-review" class="absolute inset-0 cursor-pointer"></label>
+                  <div
+                    class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                  </div>
+                  <h3 class="font-medium text-Mdblue-700 mb-2">Case Review</h3>
+                  <p class="text-sm text-Mdblue-600">Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+
+                <!-- Card 2: Judgment Handling -->
+                <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+                  <input type="radio" id="case-review2" value=""
+                    class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0"> <label for="judgment-handling"
+                    class="absolute inset-0 cursor-pointer"></label>
+                  <label for="case-review2" class="absolute inset-0 cursor-pointer"></label>
+                  <div
+                    class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                  </div>
+                  <h3 class="font-medium text-Mdblue-700 mb-2">Judgment Handling</h3>
+                  <p class="text-sm text-Mdblue-600">Fusce dapibus, tellus ac cursus commodo, tortor mauris.</p>
+                </div>
+
+                <!-- Card 3: Patent Monitoring -->
+                <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+                  <input type="radio" id="case-review3" value=""
+                    class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+                  <label for="case-review3" class="absolute inset-0 cursor-pointer"></label>
+                  <div
+                    class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                  </div>
+                  <h3 class="font-medium text-Mdblue-700 mb-2">Patent Monitoring</h3>
+                  <p class="text-sm text-Mdblue-600">Vestibulum id ligula porta felis euismod semper.</p>
+                </div>
+
+                <!-- Card 4: Custom Workflow -->
+                <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+                  <input type="radio" id="case-review4" value=""
+                    class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+                  <label for="case-review4" class="absolute inset-0 cursor-pointer"></label>
+                  <div
+                    class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                  </div>
+                  <h3 class="font-medium text-Mdblue-700 mb-2">Custom Workflow</h3>
+                  <p class="text-sm text-Mdblue-600">You write your prompt and settings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex justify-between mt-12 gap-4">
+            <button type="button"
+              class="btn-focus flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 hover:text-Mdblue-700 focus:z-10 focus:border-gray-600 focus:bg-gray-100 focus:outline-none py-3 flex-1">
+              Cancel
+            </button>
+            <button type="button"
+              class="btn-focus flex items-center justify-center rounded border border-Mdblue-700 bg-Mdblue-700 p-2 text-sm font-semibold text-white hover:bg-Mdblue-800 focus:z-10 focus:border-Mdblue-800 focus:bg-Mdblue-800 focus:outline-none py-3 flex-1">
+              Next: Cases
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--smart flow end-->

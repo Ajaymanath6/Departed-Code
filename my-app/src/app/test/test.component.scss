@@ -266,3 +266,90 @@ input:focus ~ .input-container {
 .material-symbols-outlined.filled {
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+
+  .carousel-inner {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+    &::-webkit-scrollbar {
+      display: none; /* WebKit */
+    }
+  }
+
+  .carousel-control {
+    transition: all 0.3s ease;
+    opacity: 0; /* Hidden by default */
+    box-shadow: 0 2px 5px rgba(0, 26, 49, 0.1);
+
+    &:hover {
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 26, 49, 0.15);
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+  }
+
+  .carousel-control-prev {
+    left: 1rem;
+  }
+
+  .carousel-control-next {
+    right: 1rem;
+  }
+
+  /* Show controls on hover over the carousel container */
+  &:hover {
+    .carousel-control {
+      opacity: 1;
+    }
+  }
+
+  /* Fade indicators */
+  .left-fade, .right-fade {
+    transition: opacity 0.3s ease;
+    position: absolute;
+    pointer-events: none; /* Allow clicks to pass through */
+  }
+
+  /* Left fade initially hidden since we start at the beginning */
+  .left-fade {
+    opacity: 0; /* Start hidden */
+  }
+
+  /* Right fade initially visible if there's overflow content */
+  .right-fade {
+    opacity: 1;
+  }
+}
+
+// Simple hover effect for case items
+.carousel-inner > div {
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: theme('colors.primary.700');
+  }
+}
+
+// When user is actively dragging
+.carousel-inner.dragging {
+  cursor: grabbing !important;
+  scroll-behavior: auto;
+}
+
+// Disable text selection when dragging
+.user-select-none {
+  user-select: none;
+}
