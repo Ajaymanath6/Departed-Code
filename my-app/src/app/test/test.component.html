@@ -1591,7 +1591,7 @@ star
                   email
                 </span><span>Email</span>
               </p>
-              <p class="text-base font-semibold text-primary-700">john.smith@domain.com</p>
+              <p class="text-base font-semibold text-primary-700">john.smith&#64;domain.com</p>
             </li>
             <li class="space-y-1">
               <p class="text-sm font-semibold text-Mdblue-600  flex items-center"><span class="material-icons mr-2">
@@ -2570,234 +2570,101 @@ star
 <!--custom check animation using css and in config file end-->
 
 <!--case carosel start-->
-<div class="flex overflow-x-auto gap-6 p-4">
-  <!-- Case Card - Enhanced -->
-  <div class="min-w-[380px] flex bg-white border border-gray-200 rounded-lg shadow-sm relative">
-    <!-- Icon -->
-    <div class="p-4">
-      <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 6H16V4C16 2.9 15.1 2 14 2H10C8.9 2 8 2.9 8 4V6H4C2.9 6 2 6.9 2 8V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V8C22 6.9 21.1 6 20 6ZM10 4H14V6H10V4ZM20 19H4V8H20V19Z" fill="#667683"/>
-        </svg>
-      </div>
-    </div>
+<div class="mb-20">
+<div class="p-4 max-w-7xl mx-auto ">
+  <h2 class="text-2xl font-semibold text-primary-700 mb-2">Recent Cases</h2>
+  <p class="text-Mdblue-600 mb-4">Browse through recent case files by dragging right or left</p>
 
-    <!-- Content -->
-    <div class="flex flex-col p-4 flex-grow overflow-hidden">
-      <!-- Title -->
-      <div class="mb-2">
-        <h3 class="text-lg font-semibold text-primary-700">Peter John Hoeper vs. Crystal Wollitz</h3>
-      </div>
-
-      <!-- Case Basic Data -->
-      <div class="bg-gray-50 p-2 rounded mb-3">
-        <div class="flex items-center mb-1">
-          <div class="flex items-center mr-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-              <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#667683"/>
-            </svg>
-            <span class="text-sm font-semibold text-primary-700">Federal - Pennsylvania Middle District</span>
-          </div>
+  <div #caseCarousel class="carousel-container w-full overflow-hidden relative mb-8">
+    <div class="flex overflow-x-auto gap-8 p-4 carousel-inner" style="cursor: grab;">
+      <!-- Case Item 1 -->
+      <div class="min-w-[300px] flex-none">
+        <h3 class="text-lg font-semibold text-primary-700 mb-2">Peter John Hoeper vs. Crystal Wollitz</h3>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Location:</span> Federal - Pennsylvania Middle District
         </div>
-        <div class="flex items-center mb-1">
-          <div class="flex items-center mr-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-              <path d="M19 3H18V1H16V3H8V1H6V3H5C3.89 3 3.01 3.9 3.01 5L3 19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19ZM7 10H12V15H7V10Z" fill="#667683"/>
-            </svg>
-            <span class="text-sm font-semibold text-primary-700">03/30/2016</span>
-          </div>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Date:</span> 03/30/2016
         </div>
-        <div class="flex items-center mb-1">
-          <div class="flex items-center mr-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-              <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20ZM8 15.01L9.41 16.42L11 14.84V19H13V14.84L14.59 16.43L16 15.01L12.01 11L8 15.01Z" fill="#667683"/>
-            </svg>
-            <span class="text-sm font-semibold text-primary-700">2017FA001896</span>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <div class="flex items-center mr-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-              <path d="M13.5 5.5C14.59 5.5 15.5 4.59 15.5 3.5C15.5 2.41 14.59 1.5 13.5 1.5C12.41 1.5 11.5 2.41 11.5 3.5C11.5 4.59 12.41 5.5 13.5 5.5ZM9.89 19.38L10.88 15L13 17V23H15V15.5L12.89 13.5L13.5 10.5C14.79 12 16.79 13 19 13V11C17.09 11 15.5 10 14.69 8.58L13.69 7.13C13.29 6.56 12.69 6.17 12 6.17C11.69 6.17 11.5 6.22 11.29 6.29L6.5 8.29V13H8.5V9.59L11.5 8.29L10.19 14.21L7.01 12.29L6 16.01L9.89 19.38Z" fill="#667683"/>
-            </svg>
-            <span class="text-sm font-semibold text-primary-700">Personal Injury - Other Personal Injury</span>
-          </div>
+        <div class="text-sm text-Mdblue-600">
+          <span class="font-medium">Case Type:</span> Personal Injury
         </div>
       </div>
 
-      <!-- Detailed Info Sections -->
-      <div class="overflow-x-auto pb-2">
-        <div class="flex space-x-4 min-w-max">
-          <!-- Judgment and Trial -->
-          <div class="flex flex-col min-w-[200px]">
-            <div class="flex items-center mb-1">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-                <path d="M13 3C8.03 3 4 7.03 4 12H1L4.89 15.89L4.96 16.03L9 12H6C6 8.13 9.13 5 13 5C16.87 5 20 8.13 20 12C20 15.87 16.87 19 13 19C11.07 19 9.32 18.21 8.06 16.94L6.64 18.36C8.27 19.99 10.51 21 13 21C17.97 21 22 16.97 22 12C22 7.03 17.97 3 13 3ZM12 8V13L16.28 15.54L17 14.33L13.5 12.25V8H12Z" fill="#667683"/>
-              </svg>
-              <span class="text-sm font-semibold text-gray-900">Judgment and Trial</span>
-            </div>
-            <div class="pl-6 space-y-1">
-              <div class="flex items-center">
-                <span class="text-sm text-gray-600 mr-1">Went to trial:</span>
-                <span class="text-sm text-gray-900">Yes</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-sm text-gray-600 mr-1">Award:</span>
-                <span class="text-sm text-gray-900">USD$56,000</span>
-                <span class="ml-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-100 text-cyan-800">
-                  <svg class="mr-1 h-3 w-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#009EBD"/>
-                  </svg>
-                  Awarded
-                </span>
-              </div>
-            </div>
-          </div>
+      <!-- Case Item 2 -->
+      <div class="min-w-[300px] flex-none">
+        <h3 class="text-lg font-semibold text-primary-700 mb-2">James Wilson vs. Metropolitan Insurance Co.</h3>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Location:</span> New York - Southern District
+        </div>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Date:</span> 11/15/2019
+        </div>
+        <div class="text-sm text-Mdblue-600">
+          <span class="font-medium">Case Type:</span> Insurance Claim
+        </div>
+      </div>
 
-          <!-- Other sections here... -->
+      <!-- Case Item 3 -->
+      <div class="min-w-[300px] flex-none">
+        <h3 class="text-lg font-semibold text-primary-700 mb-2">Maria Stevens vs. City of Chicago</h3>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Location:</span> Illinois - Northern District
+        </div>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Date:</span> 05/22/2021
+        </div>
+        <div class="text-sm text-Mdblue-600">
+          <span class="font-medium">Case Type:</span> Civil Rights
+        </div>
+      </div>
+
+      <!-- Case Item 4 -->
+      <div class="min-w-[300px] flex-none">
+        <h3 class="text-lg font-semibold text-primary-700 mb-2">Robert Johnson vs. ABC Corporation</h3>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Location:</span> Texas - Eastern District
+        </div>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Date:</span> 09/14/2020
+        </div>
+        <div class="text-sm text-Mdblue-600">
+          <span class="font-medium">Case Type:</span> Employment
+        </div>
+      </div>
+
+      <!-- Case Item 5 -->
+      <div class="min-w-[300px] flex-none">
+        <h3 class="text-lg font-semibold text-primary-700 mb-2">Jennifer Lopez vs. Healthcare Partners</h3>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Location:</span> California - Central District
+        </div>
+        <div class="text-sm text-Mdblue-600 mb-1">
+          <span class="font-medium">Date:</span> 02/17/2022
+        </div>
+        <div class="text-sm text-Mdblue-600">
+          <span class="font-medium">Case Type:</span> Medical Malpractice
         </div>
       </div>
     </div>
 
-    <!-- Right button (at symbol) -->
-    <button class="absolute top-2 right-2 p-1 rounded-md bg-gray-50 hover:bg-gray-100">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 7H11V13H17V11H13V7Z" fill="#667683"/>
+    <!-- Navigation arrows - hidden by default, shown on hover -->
+    <button class="carousel-control carousel-control-prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 opacity-0 hover:opacity-100" type="button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-Mdblue-600">
+        <path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z" fill="currentColor"/>
+      </svg>
+    </button>
+    <button class="carousel-control carousel-control-next absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10 opacity-0 hover:opacity-100" type="button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-Mdblue-600">
+        <path d="M10 6L8.59 7.41L13.17 12L8.59 16.59L10 18L16 12L10 6Z" fill="currentColor"/>
       </svg>
     </button>
 
-    <!-- Overlay gradient on right side for horizontal scroll indication -->
-    <div class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
-  </div>
-
-  <!-- Second Case Card -->
-  <div class="min-w-[380px] flex bg-white border border-gray-200 rounded-lg shadow-sm relative">
-    <!-- Icon -->
-    <div class="p-4">
-      <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 6H16V4C16 2.9 15.1 2 14 2H10C8.9 2 8 2.9 8 4V6H4C2.9 6 2 6.9 2 8V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V8C22 6.9 21.1 6 20 6ZM10 4H14V6H10V4ZM20 19H4V8H20V19Z" fill="#667683"/>
-        </svg>
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div class="flex flex-col p-4 flex-grow overflow-hidden">
-      <!-- Title -->
-      <div class="mb-2">
-        <h3 class="text-lg font-semibold text-primary-700">James Wilson vs. Metropolitan Insurance Co.</h3>
-      </div>
-
-      <!-- Case Basic Data -->
-      <div class="bg-gray-50 p-2 rounded mb-3">
-        <div class="flex items-center mb-1">
-          <div class="flex items-center mr-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-              <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#667683"/>
-            </svg>
-            <span class="text-sm font-semibold text-primary-700">New York - Southern District</span>
-          </div>
-        </div>
-        <div class="flex items-center mb-1">
-          <div class="flex items-center mr-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-              <path d="M19 3H18V1H16V3H8V1H6V3H5C3.89 3 3.01 3.9 3.01 5L3 19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19ZM7 10H12V15H7V10Z" fill="#667683"/>
-            </svg>
-            <span class="text-sm font-semibold text-primary-700">11/15/2019</span>
-          </div>
-        </div>
-        <div class="flex items-center mb-1">
-          <div class="flex items-center mr-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-              <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20ZM8 15.01L9.41 16.42L11 14.84V19H13V14.84L14.59 16.43L16 15.01L12.01 11L8 15.01Z" fill="#667683"/>
-            </svg>
-            <span class="text-sm font-semibold text-primary-700">2019CV005782</span>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <div class="flex items-center mr-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-              <path d="M13.5 5.5C14.59 5.5 15.5 4.59 15.5 3.5C15.5 2.41 14.59 1.5 13.5 1.5C12.41 1.5 11.5 2.41 11.5 3.5C11.5 4.59 12.41 5.5 13.5 5.5ZM9.89 19.38L10.88 15L13 17V23H15V15.5L12.89 13.5L13.5 10.5C14.79 12 16.79 13 19 13V11C17.09 11 15.5 10 14.69 8.58L13.69 7.13C13.29 6.56 12.69 6.17 12 6.17C11.69 6.17 11.5 6.22 11.29 6.29L6.5 8.29V13H8.5V9.59L11.5 8.29L10.19 14.21L7.01 12.29L6 16.01L9.89 19.38Z" fill="#667683"/>
-            </svg>
-            <span class="text-sm font-semibold text-primary-700">Insurance - Bad Faith Claims</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Detailed Info Sections -->
-      <div class="overflow-x-auto pb-2">
-        <div class="flex space-x-4 min-w-max">
-          <!-- Judgment and Trial -->
-          <div class="flex flex-col min-w-[200px]">
-            <div class="flex items-center mb-1">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-                <path d="M13 3C8.03 3 4 7.03 4 12H1L4.89 15.89L4.96 16.03L9 12H6C6 8.13 9.13 5 13 5C16.87 5 20 8.13 20 12C20 15.87 16.87 19 13 19C11.07 19 9.32 18.21 8.06 16.94L6.64 18.36C8.27 19.99 10.51 21 13 21C17.97 21 22 16.97 22 12C22 7.03 17.97 3 13 3ZM12 8V13L16.28 15.54L17 14.33L13.5 12.25V8H12Z" fill="#667683"/>
-              </svg>
-              <span class="text-sm font-semibold text-gray-900">Judgment and Trial</span>
-            </div>
-            <div class="pl-6 space-y-1">
-              <div class="flex items-center">
-                <span class="text-sm text-gray-600 mr-1">Went to trial:</span>
-                <span class="text-sm text-gray-900">No</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-sm text-gray-600 mr-1">Settlement:</span>
-                <span class="text-sm text-gray-900">USD$125,000</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Judge -->
-          <div class="flex flex-col min-w-[180px]">
-            <div class="flex items-center mb-1">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z" fill="#667683"/>
-              </svg>
-              <span class="text-sm font-semibold text-gray-900">Judge</span>
-            </div>
-            <div class="pl-6 space-y-1">
-              <span class="text-sm text-primary-700">Robert Thompson</span>
-            </div>
-          </div>
-
-          <!-- Law Firms -->
-          <div class="flex flex-col min-w-[200px]">
-            <div class="flex items-center mb-1">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
-                <path d="M12 7V3H2V21H22V7H12ZM6 19H4V17H6V19ZM6 15H4V13H6V15ZM6 11H4V9H6V11ZM6 7H4V5H6V7ZM10 19H8V17H10V19ZM10 15H8V13H10V15ZM10 11H8V9H10V11ZM10 7H8V5H10V7ZM20 19H12V17H14V15H12V13H14V11H12V9H20V19ZM18 11H16V13H18V11ZM18 15H16V17H18V15Z" fill="#667683"/>
-              </svg>
-              <span class="text-sm font-semibold text-gray-900">Law Firms</span>
-            </div>
-            <div class="pl-6 space-y-1">
-              <div class="flex flex-col">
-                <span class="text-sm text-gray-600">Plaintiff:</span>
-                <span class="text-sm text-primary-700">Anderson Legal Group</span>
-                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-100 text-cyan-800 w-fit">
-                  <svg class="mr-1 h-3 w-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 5H5V19L9.5 14.5L13.5 18.5L16 16L19 19V5Z" fill="#009EBD"/>
-                  </svg>
-                  Winner
-                </span>
-              </div>
-              <div class="flex flex-col">
-                <span class="text-sm text-gray-600">Defendant:</span>
-                <span class="text-sm text-primary-700">Metro Insurance Legal Team</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right button (at symbol) -->
-    <button class="absolute top-2 right-2 p-1 rounded-md bg-gray-50 hover:bg-gray-100">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 7H11V13H17V11H13V7Z" fill="#667683"/>
-      </svg>
-    </button>
-
-    <!-- Overlay gradient on right side for horizontal scroll indication -->
-    <div class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+    <!-- Indicators for horizontal scroll -->
+    <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none right-fade"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent pointer-events-none left-fade"></div>
   </div>
 </div>
+</div>
 <!--case carosel end-->
+
