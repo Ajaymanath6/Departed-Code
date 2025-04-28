@@ -254,9 +254,10 @@
                 class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
               </div>
               <h3 class="font-medium text-Mdblue-700 mb-2">Weekly</h3>
-              <p class="text-sm text-Mdblue-600">If you pick this option will be able to select a day of the week and an hour.</p>
+              <p class="text-sm text-Mdblue-600">If you pick this option will be able to select a day of the week and an
+                hour.</p>
             </div>
-               <div
+            <div
               class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer transition-colors relative">
               <input type="radio" id="case3" value=""
                 class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
@@ -266,9 +267,10 @@
                 class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
               </div>
               <h3 class="font-medium text-Mdblue-700 mb-2">Monthly</h3>
-              <p class="text-sm text-Mdblue-600">If you pick this option will be able to select a day of the week and an hour.</p>
+              <p class="text-sm text-Mdblue-600">If you pick this option will be able to select a day of the week and an
+                hour.</p>
             </div>
-                           <div
+            <div
               class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer transition-colors relative">
               <input type="radio" id="case4" value=""
                 class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
@@ -501,6 +503,7 @@
     <!-- Main Content Area -->
     <div class="flex-1 p-8 bg-gray-100">
       <div class="max-w-4xl- max-w-[44rem]  mx-auto">
+
         <div class="text-center mb-8">
           <h2 class="text-3xl font-bold text-Mdblue-700">General Info</h2>
           <p class="text-base text-Mdblue-600">Name your flow and use one of our prebuilt prompts</p>
@@ -606,6 +609,212 @@
             </button>
           </div>
         </div>
+
+        <!--track start-->
+        <h4>Track start</h4>
+        <div class="space-y-4">
+          <div class="p-6 flex justify-between border border-gray-200 rounded-lg bg-white">
+            <div class="flex items-center text-center font-semibold text-Mdblue-600"><span
+                class="material-symbols-outlined Mdblue-fill-600 icon-24 mr-1"> source </span><span
+                class="text-xl font-medium text-Mdblue-600"> Cases </span>
+              <div class="flex items-center space-x-2 text-center text-sm font-semibold text-Mdblue-600 ml-2"><span
+                  class="rounded-full bg-gray-200  px-2.5 py-0.5 text-sm font-semibold">32</span><span>selected</span>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2 text-center text-sm font-semibold text-Mdblue-600"><span
+                class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">32</span><span>selected</span>
+              <button type="button"
+                class="flex items-center rounded-lg border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="material-symbols-outlined icon-16"> tune </span></button><button type="button"
+                id="chip-primary-search-0-97013-button"
+                class="inline-flex items-center rounded-full bg-Mdblue-600 p-1 text-sm text-white hover:bg-primary-300 hover:text-primary-900"><svg
+                  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" class="h-2 w-2">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                </svg></button>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-12 mb-8 bg-white">
+            <!-- Form Fields -->
+            <div class="space-y-10">
+              <!-- SmartFlow Type -->
+              <div>
+                <div class="mb-4-">
+                  <label class="block text-xl font-medium text-Mdblue-700">Do you want to track these cases?</label>
+                  <p class="text-sm text-Mdblue-600 mt-1">This will track all the cases in your selection.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <!-- Card 1: Case Review (Selected) -->
+                  <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+                    <!-- <input type="radio" name="flow-type" class="hidden- peer" id="case-review" checked> -->
+                    <input type="radio" id="case-review" value=""
+                      class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                     right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
+                    <label for="case-review" class="absolute inset-0 cursor-pointer"></label>
+                    <div
+                      class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                    </div>
+                    <h3 class="font-medium text-Mdblue-700 mb-2">No, don't track them</h3>
+                    <p class="text-sm text-Mdblue-600">You can also track individual cases later if you want.</p>
+                  </div>
+
+                  <!-- Card 2: Judgment Handling -->
+                  <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+                    <input type="radio" id="case-review2" value=""
+                      class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
+                     right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0"> <label for="judgment-handling"
+                      class="absolute inset-0 cursor-pointer"></label>
+                    <label for="case-review2" class="absolute inset-0 cursor-pointer"></label>
+                    <div
+                      class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                    </div>
+                    <h3 class="font-medium text-Mdblue-700 mb-2">Yes, track them...</h3>
+                    <p class="text-sm text-Mdblue-600">If you pick this option you will be able to select the frequency.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+              <div>
+                <div class="mb-4">
+                  <label class="block text-lg font-medium text-Mdblue-700">How often do you want to update these
+                    cases?</label>
+                </div>
+                <div class="grid grid-cols-5 gap-4">
+                  <div class="">
+                    <input type="checkbox" id="high-freq" value="" class="hidden peer">
+                    <label for="high-freq"
+                      class="flex items-center justify-center rounded-md border border-gray-200 px-4 py-3 hover:border-secondary-700- hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700 h-14">
+                      <h3 class="font-medium text-Mdblue-700 text-base text-center w-full">High Frequency</h3>
+                    </label>
+                  </div>
+                  <div class="">
+                    <input type="checkbox" id="daily" value="" class="hidden peer">
+                    <label for="daily"
+                      class="flex items-center justify-center rounded-md border border-gray-200 px-4 py-3 hover:border-secondary-700- hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700 h-14">
+                      <h3 class="font-medium text-Mdblue-700 text-base text-center w-full">Daily</h3>
+                    </label>
+                  </div>
+                  <div class="">
+                    <input type="checkbox" id="weekly" value="" class="hidden peer">
+                    <label for="weekly"
+                      class="flex items-center justify-center rounded-md border border-gray-200 px-4 py-3 hover:border-secondary-700- hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700 h-14">
+                      <h3 class="font-medium text-Mdblue-700 text-base text-center w-full">Weekly</h3>
+                    </label>
+                  </div>
+                  <div class="">
+                    <input type="checkbox" id="monthly" value="" class="hidden peer">
+                    <label for="monthly"
+                      class="flex items-center justify-center rounded-md border border-gray-200 px-4 py-3 hover:border-secondary-700- hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700 h-14">
+                      <h3 class="font-medium text-Mdblue-700 text-base text-center w-full">Monthly</h3>
+                    </label>
+                  </div>
+                  <div class="">
+                    <input type="checkbox" id="Yearly" value="" class="hidden peer">
+                    <label for="Yearly"
+                      class="flex items-center justify-center rounded-md border border-gray-200 px-4 py-3 hover:border-secondary-700- hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700 h-14">
+                      <h3 class="font-medium text-Mdblue-700 text-base text-center w-full">Yearly</h3>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-4">
+                  <label class="block text-lg font-medium text-Mdblue-700">Schedule type?</label>
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                  <div class="">
+                    <input type="checkbox" id="opt-shed" value="" class="hidden peer">
+                    <label for="opt-shed"
+                      class="flex flex-col  justify-center rounded-md border border-gray-200 px-4 py-3 hover:border-secondary-700- hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700 ">
+                      <h3 class="font-medium text-Mdblue-700 text-base  w-full">UniCourt Optimized Schedule</h3>
+                      <p class="text-sm text-Mdblue-600">Automatically optimized for best performance. Receive updates
+                        every 3 hours from 7AM to 8PM during court local hours, and updates for late filings</p>
+                    </label>
+                  </div>
+                  <div class="">
+                    <input type="checkbox" id="cust-shed" value="" class="hidden peer">
+                    <label for="cust-shed"
+                      class="flex flex-col  justify-center rounded-md border border-gray-200 px-4 py-3 hover:border-secondary-700- hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700 ">
+                      <h3 class="font-medium text-Mdblue-700 text-base  w-full">Custom Schedule</h3>
+                      <p class="text-sm text-Mdblue-600">Set your own custom schedule</p>
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="">
+                  <label class="block text-xl font-medium text-Mdblue-700">When do you want to start and end?</label>
+                  <p class="text-sm text-Mdblue-600 mt-1">If you don’t specify a start day by default ‘today’ is
+                    selected
+                  </p>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div>
+                    <div class="text-sm font-semibold text-Mdblue-700"> Start Date </div>
+                    <div class="flex gap-2">
+                      <div class="grow">
+                        <div class="items-center"><div elementid="filing-date-from"
+                            placeholder="Filing Date From...">
+                            <div class="items-center">
+                              <div class="relative"><input autocomplete="off"
+                                  class="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 datepicker-input"
+                                  id="datepicker-primary-filing-date-from-19236" placeholder="Filing Date From...">
+                                <div class="pointer-events-none absolute inset-y-0 end-0 flex items-center pe-3.5"><svg
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20" class="h-4 w-4 text-Mdblue-600">
+                                    <path
+                                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z">
+                                    </path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                          </div></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-Mdblue-700">End Date <span class="font-normal"> (optional)</span></div>
+                    <div class="flex gap-2">
+                      <div class="grow">
+                        <div class="items-center"><div elementid="filing-date-to"
+                            placeholder="Filing Date To...">
+                            <div class="items-center">
+                              <div class="relative"><input autocomplete="off"
+                                  class="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 datepicker-input"
+                                  id="datepicker-primary-filing-date-to-1283" placeholder="Filing Date To...">
+                                <div class="pointer-events-none absolute inset-y-0 end-0 flex items-center pe-3.5"><svg
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20" class="h-4 w-4 text-Mdblue-600">
+                                    <path
+                                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z">
+                                    </path>
+                                  </svg></div>
+                              </div>
+                            </div>
+                          </div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-between mt-12 gap-4">
+              <button type="button"
+                class="btn-focus flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 hover:text-Mdblue-700 focus:z-10 focus:border-gray-600 focus:bg-gray-100 focus:outline-none py-3 flex-1">
+                Cancel
+              </button>
+              <button type="button"
+                class="btn-focus flex items-center justify-center rounded border border-Mdblue-700 bg-Mdblue-700 p-2 text-sm font-semibold text-white hover:bg-Mdblue-800 focus:z-10 focus:border-Mdblue-800 focus:bg-Mdblue-800 focus:outline-none py-3 flex-1">
+                Next: Cases
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--track end-->
       </div>
     </div>
   </div>
