@@ -130,48 +130,35 @@
             <div class="space-y-1 mt-4 text-Mdblue-600">
               <p class="text-Mdblue-700 font-medium">How do you want to update the data?</p>
               <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris.</p>
-              <div class="flex flex-col gap-3">
-                <div class="">
-                  <div class="flex- grid grid-cols-2 gap-4 bg-white text-sm font-medium text-Mdblue-700">
-                    <!-- <div
-                      class="group relative  mr-4 flex w-full items-center rounded-md border border-gray-200 px-4 py-4 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-                      <input id="" type="radio" value=""
-                        class="!h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
-                      <div class="space-y-2">
-                        <p class="text-base font-semibold">On Demand</p>
-                        <p class="text-Mdblue-600">Manually by you.</p>
+              <div class="mt-4">
+                <div class="grid grid-cols-2 gap-4 bg-white text-sm font-medium text-Mdblue-700">
+                  <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer relative">
+                    <input type="radio" id="on-demand" name="update-type" value="on-demand" class="hidden peer">
+                    <label for="on-demand" class="absolute inset-0 cursor-pointer"></label>
+                    <div class="peer-checked:border-Mdblue-700 peer-checked:border-2 absolute inset-0 rounded-lg pointer-events-none"></div>
+                    <div class="flex items-start">
+                      <div class="peer-checked:text-Mdblue-700">
+                        <h3 class="font-medium text-Mdblue-700 mb-2">On Demand</h3>
+                        <p class="text-sm text-Mdblue-600">Manually by you.</p>
+                      </div>
+                      <div class="ml-auto peer-checked:visible invisible">
+                        <span class="material-symbols-outlined text-Mdblue-700">check_circle</span>
                       </div>
                     </div>
-                    <div
-                      class="group relative   flex w-full items-center rounded-md border border-gray-200 px-4 py-4 hover:cursor-pointer hover:bg-gray-100 hover:border-secondary-700">
-                      <input id="" type="radio" value=""
-                        class="!h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
-                      <div class="space-y-2">
-                        <p class="text-base font-semibold">Schedule it...</p>
-                        <p class="">You pick when</p>
+                  </div>
+
+                  <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer relative">
+                    <input type="radio" id="schedule-it" name="update-type" value="schedule-it" class="hidden peer">
+                    <label for="schedule-it" class="absolute inset-0 cursor-pointer"></label>
+                    <div class="peer-checked:border-Mdblue-700 peer-checked:border-2 absolute inset-0 rounded-lg pointer-events-none"></div>
+                    <div class="flex items-start">
+                      <div class="peer-checked:text-Mdblue-700">
+                        <h3 class="font-medium text-Mdblue-700 mb-2">Schedule it...</h3>
+                        <p class="text-sm text-Mdblue-600">You pick when</p>
                       </div>
-                    </div> -->
-                    <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
-                      <input type="radio" id="case-review" value=""
-                        class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
-                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
-                      <label for="case-review" class="absolute inset-0 cursor-pointer"></label>
-                      <div
-                        class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
+                      <div class="ml-auto peer-checked:visible invisible">
+                        <span class="material-symbols-outlined text-Mdblue-700">check_circle</span>
                       </div>
-                      <h3 class="font-medium text-Mdblue-700 mb-2">On Demand</h3>
-                      <p class="text-sm text-Mdblue-600">Manually by you.</p>
-                    </div>
-                    <div class="border border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
-                      <input type="radio" id="case-review2" value=""
-                        class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
-                   right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
-                      <label for="case-review2" class="absolute inset-0 cursor-pointer"></label>
-                      <div
-                        class="peer-checked:border-Mdblue-700 peer-checked:border absolute inset-0 rounded-lg pointer-events-none">
-                      </div>
-                      <h3 class="font-medium text-Mdblue-700 mb-2">Schedule it...</h3>
-                      <p class="text-sm text-Mdblue-600">You pick when</p>
                     </div>
                   </div>
                 </div>
@@ -230,7 +217,8 @@
                 <p class="text-Mdblue-600">Manually by you.</p>
               </div>
             </div> -->
-            <div class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+            <div
+              class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
               <input type="radio" id="case1" value=""
                 class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
                    right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
@@ -241,7 +229,8 @@
               <h3 class="font-medium text-Mdblue-700 mb-2">Case Review</h3>
               <p class="text-sm text-Mdblue-600">Donec ullamcorper nulla non metus auctor fringilla.</p>
             </div>
-            <div class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+            <div
+              class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
               <input type="radio" id="case2" value=""
                 class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
                    right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
@@ -253,7 +242,8 @@
               <p class="text-sm text-Mdblue-600">If you pick this option will be able to select a day of the week and an
                 hour.</p>
             </div>
-            <div class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+            <div
+              class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
               <input type="radio" id="case3" value=""
                 class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
                    right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
@@ -265,7 +255,8 @@
               <p class="text-sm text-Mdblue-600">If you pick this option will be able to select a day of the week and an
                 hour.</p>
             </div>
-            <div class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
+            <div
+              class="border bg-white border-gray-200 rounded-lg p-5 hover:bg-gray-50 cursor-pointer  relative">
               <input type="radio" id="case4" value=""
                 class="hidden- peer !h-6 !w-6 border-Mdblue-600 bg-gray-100 absolute
                    right-[0.4rem] top-[0.4rem] text-secondary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-0">
@@ -737,10 +728,9 @@
 
                 </div>
               </div>
-              <div>
+                            <div>
                 <div class="mb-4">
-                  <label class="block text-lg font-medium text-Mdblue-700">How often you want to receive
-                    updates?</label>
+                  <label class="block text-lg font-medium text-Mdblue-700">How often you want to receive updates?</label>
                   <p>Every...</p>
                 </div>
                 <div class="grid grid-cols-7 gap-4">
@@ -784,7 +774,7 @@
               <div class="space-y-4">
                 <div class="">
                   <label class="block text-xl font-medium text-Mdblue-700">When do you want to start and end?</label>
-                  <p class="text-sm text-Mdblue-600 mt-1">If you don’t specify a start day by default ‘today’ is
+                  <p class="text-sm text-Mdblue-600 mt-1">If you don't specify a start day by default 'today' is
                     selected
                   </p>
                 </div>
@@ -793,8 +783,8 @@
                     <div class="text-sm font-semibold text-Mdblue-700"> Start Date </div>
                     <div class="flex gap-2">
                       <div class="grow">
-                        <div class="items-center">
-                          <div elementid="filing-date-from" placeholder="Filing Date From...">
+                        <div class="items-center"><div elementid="filing-date-from"
+                            placeholder="Filing Date From...">
                             <div class="items-center">
                               <div class="relative"><input autocomplete="off"
                                   class="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 datepicker-input"
@@ -808,18 +798,16 @@
                                   </svg></div>
                               </div>
                             </div>
-                          </div>
-                        </div>
+                          </div></div>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <div class="text-sm font-semibold text-Mdblue-700">End Date <span class="font-normal">
-                        (optional)</span></div>
+                    <div class="text-sm font-semibold text-Mdblue-700">End Date <span class="font-normal"> (optional)</span></div>
                     <div class="flex gap-2">
                       <div class="grow">
-                        <div class="items-center">
-                          <div elementid="filing-date-to" placeholder="Filing Date To...">
+                        <div class="items-center"><div elementid="filing-date-to"
+                            placeholder="Filing Date To...">
                             <div class="items-center">
                               <div class="relative"><input autocomplete="off"
                                   class="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 datepicker-input"
@@ -833,8 +821,7 @@
                                   </svg></div>
                               </div>
                             </div>
-                          </div>
-                        </div>
+                          </div></div>
                       </div>
                     </div>
                   </div>

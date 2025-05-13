@@ -928,3 +928,207 @@ if (option && typeof option === "object") {
     myChart.setOption(option);
 }
 // Pie end
+
+
+//scatter chart start
+var dom = document.getElementById("scatter");
+var myChart = echarts.init(dom, "Apollo");
+var app = {};
+
+var option;
+option = {
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "line",
+    },
+  },
+  xAxis: {},
+  yAxis: {},
+  series: [
+    {
+      symbolSize: 10,
+      data: [
+        [10.0, 8.04],
+        [8.07, 6.95],
+        [13.0, 7.58],
+        [12.5, 6.82],
+        [9.15, 7.2],
+        [11.5, 7.2],
+        [3.03, 4.23],
+        [12.2, 7.83],
+        [12.0, 8.84],
+        [7.08, 5.82],
+        [5.02, 5.68],
+      ],
+      type: "scatter",
+    },
+  ],
+
+};
+if (option && typeof option === "object") {
+  myChart.setOption(option);
+}
+
+//gemini scatter chart start
+// var dom = document.getElementById("scatter");
+// var myChart = echarts.init(dom, "Apollo");
+// var app = {};
+
+// var option;
+// option = {
+//   tooltip: {
+//     trigger: "axis",
+//     axisPointer: {
+//       type: "line",
+//     },
+//   },
+//   xAxis: {
+//     name: 'Year',
+//     type: 'value',
+//     boundaryGap: false,
+//     splitLine: {
+//       show: false
+//     },
+//     axisLabel: {
+//       formatter: function (value) {
+//         return value;
+//       }
+//     },
+//     min: 1998,
+//     max: 2025,
+//     interval: 3 // Set the interval to 3 to show every 3 years
+//   },
+//   yAxis: {
+//     name: 'Amount ($)',
+//     type: 'value',
+//     splitLine: {
+//       show: false
+//     },
+//     axisLabel: {
+//       formatter: function (value) {
+//         if (value === 1500000) {
+//           return '$1,500,000';
+//         } else if (value === 1000000) {
+//           return '$1,000,000';
+//         } else if (value === 500000) {
+//           return '$500,000';
+//         } else if (value === 100000) {
+//           return '$100,000';
+//         }
+//         return ''; // Hide other labels
+//       }
+//     },
+//     min: 0,
+//     max: 1500000,
+//     splitNumber: 3 // Set the number of intervals to control the ticks
+//   },
+//   series: [
+//     {
+//       symbolSize: 10,
+//       data: [
+//         [1999, 80400],
+//         [2000, 695000],
+//         [2001, 758000],
+//         [2002, 682000],
+//         [2003, 720000],
+//         [2004, 720000],
+//         [2005, 423000],
+//         [2006, 783000],
+//         [2007, 884000],
+//         [2008, 582000],
+//         [2009, 568000],
+//         [2010, 900000],
+//         [2011, 600000],
+//         [2012, 100000],
+//         [2013, 100000],
+//         [2014, 700000],
+//         [2015, 200000],
+//         [2016, 100000],
+//         [2017, 800000],
+//         [2018, 200000],
+//         [2019, 900000],
+//         [2020, 600000],
+//         [2021, 100000],
+//         [2022, 1200000],
+//         [2023, 700000],
+//         [2024, 1400000],
+//         [2025, 600000],
+//         [1998, 1200000],
+//         [2000, 450000],
+//         [2002, 150000],
+//         [2003, 100000],
+//         [2005, 1400000],
+//         [2006, 500000],
+//         [2008, 1200000],
+//         [2009, 250000],
+//         [2011, 800000],
+//         [2012, 1450000],
+//         [2014, 750000],
+//         [2015, 950000],
+//         [2017, 100000],
+//         [2018, 400000],
+//         [2020, 250000],
+//         [2021, 950000],
+//         [2023, 100000],
+//         [2024, 700000],
+//         [1999, 750000],
+//         [2001, 1050000],
+//         [2003, 400000],
+//         [2004, 850000],
+//         [2006, 1150000],
+//         [2007, 350000],
+//         [2009, 650000],
+//         [2010, 100000],
+//         [2012, 300000],
+//         [2013, 1400000],
+//         [2015, 750000],
+//         [2016, 250000],
+//         [2018, 1000000],
+//         [2019, 150000],
+//         [2021, 1250000],
+//         [2022, 900000],
+//         [2024, 500000],
+//         [1998, 900000],
+//         [2000, 1450000],
+//         [2002, 550000],
+//         [2004, 1200000],
+//         [2005, 950000],
+//         [2007, 650000],
+//         [2008, 350000],
+//         [2010, 1250000],
+//         [2011, 450000],
+//         [2013, 950000],
+//         [2014, 250000],
+//         [2016, 1350000],
+//         [2017, 550000],
+//         [2019, 350000],
+//         [2020, 1150000],
+//         [2022, 200000],
+//         [2023, 1450000],
+//       ],
+//       type: "scatter",
+//       itemStyle: {
+//         color: function (params) {
+//           const year = params.data[0];
+//           if (year >= 1998 && year < 2004) {
+//             return '#009EBD';
+//           } else if (year >= 2004 && year < 2010) {
+//             return '#F8E00B';
+//           } else if (year >= 2010 && year < 2016) {
+//             return '#A71042';
+//           } else {
+//             return '#B541FC';
+//           }
+//         }
+//       }
+//     },
+//   ],
+
+// };
+// if (option && typeof option === "object") {
+//   myChart.setOption(option);
+// }
+//gemini scatter chart end
+
+//scatter chart end
