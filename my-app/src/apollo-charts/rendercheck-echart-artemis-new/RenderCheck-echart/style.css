@@ -45,6 +45,6 @@
 .cust-sticky{
     position: sticky;
     top: 0;
-    background: red;
+    background: rgb(187, 186, 156);
     z-index: 20;
 }
