@@ -1,0 +1,101 @@
+---
+description: Artemsi Ui descreption
+globs: 
+alwaysApply: false
+---
+# Rules to be followed for UI Development Projects  
+## Core Principles  
+We follow these UI development principles:  
+Use **Tailwind CSS utility classes** for all styling  
+Use **Flowbite components** where applicable  
+Prioritize **responsive design** from the start (mobile-first)  
+Ensure full accessibility (a11y) compliance  
+Prefer **semantic HTML** over div-heavy structures  
+Use **flexbox** for 1D layouts and **grid** for 2D layouts  
+Avoid custom CSS unless absolutely necessary  
+Skip inline styles; use Tailwind classes consistently  
+Stick to a design system using Tailwind and Flowbite utilities
+
+## Layout and Structure  
+For layout systems, follow these guidelines:  
+Use flex, flex-col, flex-row, justify-*, items-* for linear layouts  
+Use grid, grid-cols-*, gap-*, and place-items-* for grid-based layouts  
+Use container, mx-auto, and max-w-* for page structure and centering  
+Use w-full, min-w-*, max-w-*, h-screen, min-h-* for sizing  
+Avoid absolute and fixed unless for overlays, tooltips, or modals  
+Prefer relative positioning for child layout containment
+
+## Responsive Design and Media Queries  
+For responsive behavior:  
+Use Tailwind's responsive prefixes (sm:, md:, lg:, xl:, 2xl:)  
+Design mobile-first, and scale up progressively  
+Use hidden, block, flex, grid with breakpoints for conditional rendering  
+Avoid writing custom media queries – Tailwind utilities should cover most use cases
+
+## Tailwind Usage  
+When using Tailwind:  
+Use Tailwind's spacing scale (p-4, m-2, gap-6) instead of raw pixel values  
+Use text-*, font-*, leading-*, tracking-* for typography  
+Use rounded-*, shadow-*, border-*, ring-* for UI depth and borders  
+Prefer bg-*, text-*, and hover:* classes over custom CSS  
+Use transition, duration-*, ease-* for animation  
+Use dark: classes for dark mode theming when required  
+Avoid overriding Tailwind globally or creating new utility classes unnecessarily
+
+## Flowbite Integration  
+When using Flowbite:  
+Use Flowbite components like buttons, dropdowns, modals, and tabs  
+Ensure required JavaScript initialization is done for interactive components  
+Customize Flowbite components using Tailwind classes, not custom CSS  
+Follow Flowbite documentation for accessibility and component setup  
+Avoid mixing other UI libraries with Flowbite to maintain consistency
+
+## Accessibility and Semantics  
+Ensure all components are:  
+Built with semantic HTML (<main>, <button>, <nav>, etc.)  
+Have appropriate ARIA attributes (aria-*) where needed  
+Keyboard-navigable  
+Use focus:* and outline-* Tailwind classes for focus states  
+Include proper alt text for images and ARIA labels for interactive elements
+
+## Component and Code Organization  
+When structuring UI code:  
+Keep components small and reusable  
+Co-locate related files (component + test + style)  
+Use consistent naming: feature.component.ts, feature-card.tsx, etc.  
+Extract repeated UI pieces into shared components  
+Avoid tightly coupling logic and UI – delegate data and logic to hooks/services
+
+## Performance and Optimization  
+For optimized UI:  
+Lazy-load heavy components  
+Use loading="lazy" on images  
+Use Tailwind’s utility-based classes for performance and caching  
+Avoid rendering off-screen or unnecessary elements  
+Use skeleton loaders or spinners for loading states  
+Use aspect-ratio, object-cover for image responsiveness
+## Theming and Design Tokens  
+For consistency in design:  
+Follow Tailwind’s color palette (text-primary, bg-gray-100, etc.)  
+Customize via tailwind.config.js for tokens like spacing, colors, and fonts  
+Use design tokens via Tailwind variables instead of hardcoded values  
+Maintain light/dark themes using dark: variant support  
+Avoid introducing random hex values; use configured theme palette
+
+## Error and State Handling  
+Ensure all UI states are handled:  
+Use placeholders, skeletons, or fallback text for loading states  
+Use error messages that are accessible and visually distinct  
+Use Tailwind text-red-*, bg-red-* classes for errors  
+Avoid using toast-only error handling — errors should appear inline where possible  
+Use aria-live regions for dynamically changing content
+
+## Forms and Controls  
+For building forms:  
+Use Tailwind for input styling (form-input, focus:outline-none, etc.)  
+Use Flowbite form components where available  
+Maintain spacing and alignment using flex, grid, or space-* classes  
+Group inputs with labels using semantic HTML (<label for="">)  
+Validate inputs visually and with screen reader accessibility
+
+---
