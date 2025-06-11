@@ -1,3 +1,25 @@
+<div class="flex justify-end items-center mt-2 mb-2">
+<label class="inline-flex cursor-pointer items-center ">
+  <input type="checkbox"
+    class="peer sr-only " value="false">
+  <div
+    class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-secondary-700 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-secondary-300 rtl:peer-checked:after:-translate-x-full ">
+  </div>
+  <span class="flex items-center gap-2 ">
+    <span
+      class="ms-2 text-base font-normal text-Mdblue-700 ">
+       <span class="font-semibold ">enable email </span>
+    </span>
+  </span>
+</label>
+</div>
+
+
+
+
+
+
+
 <div class="flex h-full flex-col outer-wrapper">
   <section class="bg-white shadow-md header-shadow">
     <div class="container-">
@@ -110,20 +132,16 @@
                           <ul class="py-2 text-sm text-Mdblue-700 dark:text-gray-200"
                             aria-labelledby="dropdownDefaultButton">
                             <li>
-                              <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
+                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
                             </li>
                             <li>
-                              <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 ">Settings</a>
+                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Settings</a>
                             </li>
                             <li>
-                              <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 ">Earnings</a>
+                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Earnings</a>
                             </li>
                             <li>
-                              <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 ">Sign
+                              <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Sign
                                 out</a>
                             </li>
                           </ul>
@@ -162,7 +180,9 @@
 </div>
 
 <!--modal content animation start-->
-<button (click)="toggleModal(true)" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+<button (click)="toggleModal(true)"
+  class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  type="button">
   Open Modal
 </button>
 
@@ -170,18 +190,20 @@
 <div *ngIf="modalVisible" class="modal-wrapper">
   <!-- Backdrop with animation -->
   <div @backdropAnimation (@backdropAnimation.done)="onAnimationDone($event)"
-       class="modal-backdrop overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full inset-0 h-full bg-black bg-opacity-50">
+    class="modal-backdrop overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full inset-0 h-full bg-black bg-opacity-50">
     <!-- Modal with animation -->
     <div @modalAnimation (@modalAnimation.done)="onAnimationDone($event)"
-         class="modal-dialog relative p-4 w-full max-w-md h-auto">
+      class="modal-dialog relative p-4 w-full max-w-md h-auto">
       <div class="modal-content relative bg-white rounded-lg shadow dark:bg-gray-700">
         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
             Select Content
           </h3>
-          <button type="button" (click)="toggleModal(false)" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+          <button type="button" (click)="toggleModal(false)"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
             </svg>
             <span class="sr-only">Close modal</span>
           </button>
@@ -189,17 +211,17 @@
         <div class="flex space-x-4 p-4 md:p-5">
           <div class="flex items-center">
             <input id="less-content-radio" type="radio" value="less" name="contentType"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:bg-gray-600 dark:border-gray-500"
-                  (click)="onContentTypeChange('less')"
-                  [checked]="selectedContentType === 'less'">
-            <label for="less-content-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Less Content</label>
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:bg-gray-600 dark:border-gray-500"
+              (click)="onContentTypeChange('less')" [checked]="selectedContentType === 'less'">
+            <label for="less-content-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Less
+              Content</label>
           </div>
           <div class="flex items-center">
             <input id="more-content-radio" type="radio" value="more" name="contentType"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:bg-gray-600 dark:border-gray-500"
-                  (click)="onContentTypeChange('more')"
-                  [checked]="selectedContentType === 'more'">
-            <label for="more-content-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">More Content</label>
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:bg-gray-600 dark:border-gray-500"
+              (click)="onContentTypeChange('more')" [checked]="selectedContentType === 'more'">
+            <label for="more-content-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">More
+              Content</label>
           </div>
         </div>
 
@@ -208,20 +230,27 @@
           <div class="content-container">
             <!-- Each content section has its own div with explicit animation -->
             <div *ngIf="isContentVisible('less')" @fadeAnimation class="content-section">
-              <p class="text-gray-500 dark:text-gray-400">This is the section with less content. Just a short paragraph here.</p>
+              <p class="text-gray-500 dark:text-gray-400">This is the section with less content. Just a short paragraph
+                here.</p>
             </div>
 
             <div *ngIf="isContentVisible('more')" @fadeAnimation class="content-section">
-              <p class="text-gray-500 dark:text-gray-400 mb-2">This is the section with more content. It includes multiple paragraphs to demonstrate the difference.</p>
-              <p class="text-gray-500 dark:text-gray-400 mb-2">Here's another paragraph with some additional information.</p>
-              <p class="text-gray-500 dark:text-gray-400">And one more paragraph to really showcase the extra content.</p>
+              <p class="text-gray-500 dark:text-gray-400 mb-2">This is the section with more content. It includes
+                multiple paragraphs to demonstrate the difference.</p>
+              <p class="text-gray-500 dark:text-gray-400 mb-2">Here's another paragraph with some additional
+                information.</p>
+              <p class="text-gray-500 dark:text-gray-400">And one more paragraph to really showcase the extra content.
+              </p>
             </div>
           </div>
         </div>
 
         <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-          <button (click)="toggleModal(false)" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I understand</button>
-          <button (click)="toggleModal(false)" type="button" class="ms-3 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600">Cancel</button>
+          <button (click)="toggleModal(false)" type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
+            understand</button>
+          <button (click)="toggleModal(false)" type="button"
+            class="ms-3 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600">Cancel</button>
         </div>
       </div>
     </div>
@@ -231,8 +260,1026 @@
 
 <div class="blur-box blur-[2px]">
   <div>
-  fkgjkl jgkjjglkjrlgkj Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis atque reiciend
-  is deserunt magni molestiae debitis fugit vi
-  tae, eum perspiciatis, eligendi vel placeat, non inventore soluta tempora veritatis eaque officia error!
+    fkgjkl jgkjjglkjrlgkj Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis atque reiciend
+    is deserunt magni molestiae debitis fugit vi
+    tae, eum perspiciatis, eligendi vel placeat, non inventore soluta tempora veritatis eaque officia error!
   </div>
 </div>
+
+<!--demo cursor figma UI start-->
+<div class="min-h-screen bg-gray-100">
+  <!-- Header -->
+  <header class="bg-Mdblue-700 text-white h-16 flex">
+    <!-- Left side: Logo Container (fixed width to match sidebar) -->
+    <div class="w-64 bg-white bg-opacity-10 border-r border-white border-opacity-20 h-16 flex items-center px-6">
+      <div class="text-primary-500 font-bold text-xl">UniCourt</div>
+    </div>
+
+    <!-- Main header content area (matches main content layout) -->
+    <div class="flex-1 flex items-center justify-between px-10">
+      <!-- Left: Apps Button + Project Details -->
+      <div class="flex items-center space-x-6">
+        <!-- Apps/Home Button -->
+        <button class="p-2 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors">
+          <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+          </svg>
+        </button>
+
+        <!-- Project Details -->
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-2">
+            <h1 class="text-xl font-semibold text-white">Google V Apple</h1>
+            <button class="p-1 rounded hover:bg-white hover:bg-opacity-10">
+              <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center space-x-2 text-sm text-gray-300">
+            <span class="text-primary-400">4364563</span>
+            <span>•</span>
+            <span class="text-primary-400">Google</span>
+            <span>•</span>
+            <span class="text-primary-400">Content</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: User Tools -->
+      <div class="flex items-center space-x-4">
+        <!-- Notifications -->
+        <button class="relative p-2 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors">
+          <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
+          </svg>
+          <div class="absolute -top-1 -right-1 w-3 h-3 bg-red-600 rounded-full"></div>
+        </button>
+
+        <!-- User Avatar -->
+        <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center text-white font-semibold">
+          AA
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-100 border-r border-gray-300 min-h-screen relative">
+      <!-- Back Button (positioned absolutely in top right) -->
+      <button
+        class="absolute top-5 right-6 p-2 rounded-lg bg-white bg-opacity-70 hover:bg-opacity-100 transition-colors">
+        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Navigation Container -->
+      <div class="pt-20 px-6">
+        <!-- Project Tabs -->
+        <nav class="space-y-4">
+          <!-- Search Tab -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+            <span class="font-semibold">Search</span>
+          </a>
+
+          <!-- Tracking Tab with Counter -->
+          <a href="#"
+            class="flex items-center justify-between px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+              </svg>
+              <span class="font-semibold">Tracking</span>
+            </div>
+            <span
+              class="bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full min-w-[16px] h-4 flex items-center justify-center">1</span>
+          </a>
+
+          <!-- Bookmarks Tab -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+            </svg>
+            <span class="font-semibold">Bookmarks</span>
+          </a>
+
+          <!-- Groups Tab -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 12.75c1.63 0 3.07.39 4.24.9c1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73C8.93 13.14 10.37 12.75 12 12.75zM4 13c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2S2.9 13 4 13zM5.13 14.1C4.76 14.04 4.39 14 4 14c-0.99 0-1.93.21-2.78.58C0.48 14.9 0 15.62 0 16.43V18h4.5v-1.61C4.5 15.56 4.73 14.78 5.13 14.1zM20 13c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2S18.9 13 20 13zM24 16.43c0-0.81-0.48-1.53-1.22-1.85C21.93 14.21 20.99 14 20 14c-0.39 0-0.76 0.04-1.13 0.1C19.27 14.78 19.5 15.56 19.5 16.39V18H24V16.43zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3S10.34 6 12 6zM4 6c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3S2.34 6 4 6zM20 6c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3S18.34 6 20 6z" />
+            </svg>
+            <span class="font-semibold">Groups</span>
+          </a>
+
+          <!-- Usage Tab -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" />
+            </svg>
+            <span class="font-semibold">Usage</span>
+          </a>
+
+          <!-- Manage Project Tab (Active) -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-t-md bg-white text-primary-600 border-b-2 border-primary-600 shadow-sm no-underline">
+            <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+            </svg>
+            <span class="font-semibold">Manage Project</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 bg-gray-100 min-h-screen">
+      <!-- Page Header -->
+      <div class="text-center py-10">
+        <h1 class="text-3xl font-semibold text-Mdblue-700 mb-2">Manage Project</h1>
+        <p class="text-lg text-Mdblue-600">Nulla vitae elit libero, a pharetra augue.</p>
+      </div>
+
+      <!-- Content Card -->
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg border border-gray-300 overflow-hidden">
+          <!-- Main Content Layout with Left Tabs -->
+          <div class="flex">
+            <!-- Left Side Navigation Tabs -->
+            <div class="w-40 flex-shrink-0">
+              <nav class="p-4 space-y-2">
+                <!-- General Tab -->
+                <a href="#"
+                  class="transition flex items-center space-x-2 px-3 py-2.5 rounded-lg text-Mdblue-600 hover:bg-gray-100 transition-colors no-underline">
+                  <svg class="w-4 h-4 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                  </svg>
+                  <span class="font-semibold text-sm">General</span>
+                </a>
+
+                <!-- Members Tab (Active) -->
+                <a href="#"
+                  class="flex items-center space-x-2 px-3 py-2.5 rounded-lg bg-primary-50 text-primary-600 border-l-4 border-primary-600 no-underline">
+                  <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
+                  </svg>
+                  <span class="font-semibold text-sm">Members</span>
+                </a>
+              </nav>
+            </div>
+
+            <!-- Right Side Content Area -->
+            <div class="flex-1 min-w-0 bg-gray-50">
+              <!-- Page Header -->
+              <div class="text-center py-10 bg-gray-50">
+                <h1 class="text-3xl font-semibold text-Mdblue-700 mb-2">Manage Project</h1>
+                <p class="text-lg text-Mdblue-600">Nulla vitae elit libero, a pharetra augue.</p>
+              </div>
+
+              <!-- Content Container -->
+              <div class="px-10 pb-10">
+                <!-- White Content Card -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                  <!-- Members Management Content -->
+                  <div class="p-12">
+                    <!-- Add Members Section -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-8 mb-8">
+                      <div class="flex justify-between items-start mb-6">
+                        <div class="flex-1">
+                          <label class="block text-xl font-medium text-Mdblue-700 mb-2">Members</label>
+                          <p class="text-Mdblue-600">Add people to the project</p>
+                        </div>
+                        <button
+                          class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded text-sm font-medium text-primary-600 hover:bg-gray-50 transition-colors flex-shrink-0">
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                          </svg>
+                          <span>Add People...</span>
+                        </button>
+                      </div>
+
+                      <!-- Search Bar -->
+                      <div class="mb-8">
+                        <div class="flex rounded-lg border border-gray-300 overflow-hidden bg-white">
+                          <input type="text" placeholder="Search people by name..."
+                            class="flex-1 px-4 py-3 text-Mdblue-700 placeholder-Mdblue-500 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                          <button
+                            class="px-4 py-3 bg-gray-50 border-l border-gray-300 hover:bg-gray-100 transition-colors">
+                            <svg class="w-5 h-5 text-Mdblue-500" fill="currentColor" viewBox="0 0 24 24">
+                              <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- Members Table -->
+                      <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <!-- Table Header -->
+                        <div class="bg-white border-b border-gray-200 px-6 py-6">
+                          <div class="grid grid-cols-12 gap-4 text-sm font-semibold text-Mdblue-700">
+                            <div class="col-span-4">Name</div>
+                            <div class="col-span-4">Email</div>
+                            <div class="col-span-3">Role</div>
+                            <div class="col-span-1">Actions</div>
+                          </div>
+                        </div>
+
+                        <!-- Table Body -->
+                        <div class="divide-y divide-gray-200">
+                          <!-- Member Row 1 -->
+                          <div class="px-6 py-4 bg-white">
+                            <div class="grid grid-cols-12 gap-4 items-center">
+                              <div class="col-span-4 flex items-center space-x-3">
+                                <div
+                                  class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                  AA
+                                </div>
+                                <div class="min-w-0">
+                                  <div class="font-medium text-Mdblue-700 truncate">Essie Howard</div>
+                                </div>
+                              </div>
+                              <div class="col-span-4 text-primary-600 truncate">e.howard&#64;domain.com</div>
+                              <div class="col-span-3">
+                                <select
+                                  class="w-full px-3 py-2 border border-gray-300 rounded text-sm bg-white text-Mdblue-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                  <option>Member</option>
+                                  <option>Admin</option>
+                                  <option>Viewer</option>
+                                </select>
+                              </div>
+                              <div class="col-span-1">
+                                <button
+                                  class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors">
+                                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Member Row 2 -->
+                          <div class="px-6 py-4 bg-white">
+                            <div class="grid grid-cols-12 gap-4 items-center">
+                              <div class="col-span-4 flex items-center space-x-3">
+                                <div
+                                  class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                  AA
+                                </div>
+                                <div class="min-w-0">
+                                  <div class="font-medium text-Mdblue-700 truncate">Essie Howard</div>
+                                </div>
+                              </div>
+                              <div class="col-span-4 text-primary-600 truncate">e.howard&#64;domain.com</div>
+                              <div class="col-span-3">
+                                <select
+                                  class="w-full px-3 py-2 border border-gray-300 rounded text-sm bg-white text-Mdblue-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                  <option>Member</option>
+                                  <option>Admin</option>
+                                  <option>Viewer</option>
+                                </select>
+                              </div>
+                              <div class="col-span-1">
+                                <button
+                                  class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors">
+                                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Member Row 3 -->
+                          <div class="px-6 py-4 bg-white">
+                            <div class="grid grid-cols-12 gap-4 items-center">
+                              <div class="col-span-4 flex items-center space-x-3">
+                                <div
+                                  class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                  AA
+                                </div>
+                                <div class="min-w-0">
+                                  <div class="font-medium text-Mdblue-700 truncate">Essie Howard</div>
+                                </div>
+                              </div>
+                              <div class="col-span-4 text-primary-600 truncate">e.howard&#64;domain.com</div>
+                              <div class="col-span-3">
+                                <select
+                                  class="w-full px-3 py-2 border border-gray-300 rounded text-sm bg-white text-Mdblue-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                  <option>Member</option>
+                                  <option>Admin</option>
+                                  <option>Viewer</option>
+                                </select>
+                              </div>
+                              <div class="col-span-1">
+                                <button
+                                  class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors">
+                                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Member Row 4 -->
+                          <div class="px-6 py-4 bg-white">
+                            <div class="grid grid-cols-12 gap-4 items-center">
+                              <div class="col-span-4 flex items-center space-x-3">
+                                <div
+                                  class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                  AA
+                                </div>
+                                <div class="min-w-0">
+                                  <div class="font-medium text-Mdblue-700 truncate">Essie Howard</div>
+                                </div>
+                              </div>
+                              <div class="col-span-4 text-primary-600 truncate">e.howard&#64;domain.com</div>
+                              <div class="col-span-3">
+                                <select
+                                  class="w-full px-3 py-2 border border-gray-300 rounded text-sm bg-white text-Mdblue-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                  <option>Member</option>
+                                  <option>Admin</option>
+                                  <option>Viewer</option>
+                                </select>
+                              </div>
+                              <div class="col-span-1">
+                                <button
+                                  class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors">
+                                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Results Counter and Pagination -->
+                      <div class="flex justify-between items-center mt-6">
+                        <!-- Results Counter -->
+                        <div class="flex items-center space-x-2 text-sm text-Mdblue-600">
+                          <span class="font-semibold">Showing</span>
+                          <span
+                            class="px-2 py-1 bg-gray-200 text-Mdblue-700 rounded-full font-semibold text-sm">1-7</span>
+                          <span class="font-semibold">of</span>
+                          <span
+                            class="px-2 py-1 bg-gray-200 text-Mdblue-700 rounded-full font-semibold text-sm">34</span>
+                          <span class="font-semibold">results</span>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="flex items-center bg-white rounded border border-gray-200 p-1">
+                          <button class="p-2 rounded hover:bg-gray-100 transition-colors">
+                            <svg class="w-4 h-4 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                            </svg>
+                          </button>
+                          <button
+                            class="px-3 py-1 bg-gray-200 text-primary-600 font-semibold rounded-full text-sm min-w-[32px] h-7 flex items-center justify-center">1</button>
+                          <button
+                            class="px-3 py-1 text-primary-600 font-semibold rounded-full text-sm hover:bg-gray-100 transition-colors min-w-[32px] h-7 flex items-center justify-center">2</button>
+                          <button
+                            class="px-3 py-1 text-primary-600 font-semibold rounded-full text-sm hover:bg-gray-100 transition-colors min-w-[32px] h-7 flex items-center justify-center">3</button>
+                          <button
+                            class="px-3 py-1 text-primary-600 font-semibold rounded-full text-sm hover:bg-gray-100 transition-colors min-w-[32px] h-7 flex items-center justify-center">...</button>
+                          <button
+                            class="px-3 py-1 text-primary-600 font-semibold rounded-full text-sm hover:bg-gray-100 transition-colors min-w-[32px] h-7 flex items-center justify-center">100</button>
+                          <button class="p-2 rounded hover:bg-gray-100 transition-colors">
+                            <svg class="w-4 h-4 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Save Button -->
+                    <div class="flex justify-end">
+                      <button
+                        class="px-6 py-3 bg-primary-600 text-white font-medium rounded opacity-40 cursor-not-allowed">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources Button (Floating) -->
+      <button
+        class="fixed bottom-8 right-8 flex items-center space-x-2 px-4 py-2 border border-gray-400 rounded text-sm font-medium text-primary-600 bg-white hover:bg-gray-100 shadow-lg transition-all">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+        </svg>
+        <span>Resources</span>
+      </button>
+    </main>
+  </div>
+</div>
+<!--demo cursor figma UI end-->
+
+
+<!--project template start-->
+<div class="min-h-screen bg-gray-50 py-8" role="main" aria-labelledby="main-heading">
+  <!-- Skip Links for Accessibility -->
+  <div class="sr-only">
+    <a href="#main-content"
+      class="skip-link focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+      Skip to main content
+    </a>
+    <a href="#template-selection"
+      class="skip-link focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50">
+      Skip to templates
+    </a>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4" id="main-content">
+    <!-- Template Selection Header -->
+    <header class="text-center mb-8">
+      <h1 id="main-heading" class="text-3xl font-bold text-gray-900 mb-2">Choose Project Template</h1>
+      <p class="text-lg text-gray-600">Select a template that best fits your project needs</p>
+    </header>
+
+    <!-- Template Selection Cards -->
+    <section id="template-selection" aria-labelledby="template-selection-heading"
+      class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <h2 id="template-selection-heading" class="sr-only">Available Project Templates</h2>
+      <!-- Basic Project Template -->
+      <article class="bg-white rounded-lg border-2 cursor-pointer transition-all duration-200 p-6"
+        [class.border-blue-500]="selectedTemplate === 'basic'" [class.bg-blue-50]="selectedTemplate === 'basic'"
+        [class.border-gray-200]="selectedTemplate !== 'basic'" (click)="selectTemplate('basic')"
+        (keydown.enter)="selectTemplate('basic')" (keydown.space)="selectTemplate('basic')" tabindex="0" role="button"
+        [attr.aria-pressed]="selectedTemplate === 'basic'" aria-labelledby="basic-template-title"
+        aria-describedby="basic-template-desc">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+            </svg>
+          </div>
+          <h3 id="basic-template-title" class="text-xl font-semibold text-gray-900 mb-2">Basic Project</h3>
+          <p id="basic-template-desc" class="text-gray-600 text-sm mb-4">Simple project setup with essential information
+          </p>
+          <div class="text-xs text-gray-500" aria-label="Template features">
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded mr-1">Quick Setup</span>
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded">Essential Fields</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Research Project Template -->
+      <article class="bg-white rounded-lg border-2 cursor-pointer transition-all duration-200 p-6"
+        [class.border-green-500]="selectedTemplate === 'research'" [class.bg-green-50]="selectedTemplate === 'research'"
+        [class.border-gray-200]="selectedTemplate !== 'research'" (click)="selectTemplate('research')"
+        (keydown.enter)="selectTemplate('research')" (keydown.space)="selectTemplate('research')" tabindex="0"
+        role="button" [attr.aria-pressed]="selectedTemplate === 'research'" aria-labelledby="research-template-title"
+        aria-describedby="research-template-desc">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true">
+            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+            </svg>
+          </div>
+          <h3 id="research-template-title" class="text-xl font-semibold text-gray-900 mb-2">Research Project</h3>
+          <p id="research-template-desc" class="text-gray-600 text-sm mb-4">Comprehensive setup for research and
+            analysis projects</p>
+          <div class="text-xs text-gray-500" aria-label="Template features">
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded mr-1">Research Focus</span>
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded">Detailed Setup</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg border-2 cursor-pointer transition-all duration-200 p-6"
+        [class.border-orange-500]="selectedTemplate === 'custom'" [class.bg-orange-50]="selectedTemplate === 'custom'"
+        [class.border-gray-200]="selectedTemplate !== 'custom'" (click)="selectTemplate('custom')"
+        (keydown.enter)="selectTemplate('custom')" (keydown.space)="selectTemplate('custom')" tabindex="0" role="button"
+        [attr.aria-pressed]="selectedTemplate === 'custom'" aria-labelledby="custom-template-title"
+        aria-describedby="custom-template-desc">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true">
+            <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+            </svg>
+          </div>
+          <h3 id="custom-template-title" class="text-xl font-semibold text-gray-900 mb-2">Add Project</h3>
+          <p id="custom-template-desc" class="text-gray-600 text-sm mb-4">Create your own custom project template</p>
+          <div class="text-xs text-gray-500" aria-label="Template features">
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded mr-1">Custom Fields</span>
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded">Dynamic Form</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Basic Project Form -->
+    <section *ngIf="selectedTemplate === 'basic'" class="bg-white rounded-lg shadow-lg border border-gray-200 p-8"
+      aria-labelledby="basic-form-heading">
+      <header class="text-center mb-8">
+        <h2 id="basic-form-heading" class="text-2xl font-bold text-gray-900 mb-2">New Project</h2>
+        <p class="text-gray-600">Basic project information</p>
+      </header>
+
+      <form class="space-y-6" role="form" aria-labelledby="basic-form-heading" novalidate>
+        <fieldset class="space-y-6">
+          <legend class="sr-only">Project Details</legend>
+
+          <div>
+            <label for="basic-project-name" class="block text-sm font-medium text-gray-900 mb-2">
+              Project Name <span class="text-red-500" aria-label="required">(Required)</span>
+            </label>
+            <input type="text" id="basic-project-name" name="basic-project-name" placeholder="Project Name..." required
+              aria-required="true" aria-describedby="basic-project-name-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <div id="basic-project-name-help" class="sr-only">Enter a descriptive name for your project</div>
+          </div>
+
+          <div>
+            <label for="basic-project-id" class="block text-sm font-medium text-gray-900 mb-2">Project ID</label>
+            <input type="text" id="basic-project-id" name="basic-project-id" value="mCXpCE" readonly
+              aria-describedby="basic-project-id-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50">
+            <p id="basic-project-id-help" class="text-sm text-gray-500 mt-1">Minimum of 3 characters and 10 max. Once
+              the project is created you will no longer be able to change this ID</p>
+          </div>
+
+          <div>
+            <label for="basic-description" class="block text-sm font-medium text-gray-900 mb-2">Description</label>
+            <textarea id="basic-description" name="basic-description" rows="4" placeholder="Description..."
+              aria-describedby="basic-description-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            <div id="basic-description-help" class="sr-only">Provide a detailed description of your project</div>
+          </div>
+
+          <div>
+            <label for="basic-client" class="block text-sm font-medium text-gray-900 mb-2">Client</label>
+            <input type="text" id="basic-client" name="basic-client" placeholder="Client..."
+              aria-describedby="basic-client-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <div id="basic-client-help" class="sr-only">Enter the client name for this project</div>
+          </div>
+
+          <div>
+            <label for="basic-matter" class="block text-sm font-medium text-gray-900 mb-2">Matter</label>
+            <input type="text" id="basic-matter" name="basic-matter" placeholder="Matter..."
+              aria-describedby="basic-matter-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <div id="basic-matter-help" class="sr-only">Enter the matter or subject for this project</div>
+          </div>
+        </fieldset>
+
+        <div class="flex gap-4 pt-6" role="group" aria-label="Form actions">
+          <button type="button" aria-describedby="reset-basic-help"
+            class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-medium">
+            Reset Form
+          </button>
+          <div id="reset-basic-help" class="sr-only">Clear all form fields and start over</div>
+
+          <button type="submit" (click)="showMemberSelectionPage()" aria-describedby="create-basic-help"
+            class="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-medium flex items-center justify-center">
+            Create and add members
+            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+          </button>
+          <div id="create-basic-help" class="sr-only">Create the project and proceed to add team members</div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Research Project Form -->
+    <section *ngIf="selectedTemplate === 'research'" class="bg-white rounded-lg shadow-lg border border-gray-200 p-8"
+      aria-labelledby="research-form-heading">
+      <header class="text-center mb-8">
+        <h2 id="research-form-heading" class="text-2xl font-bold text-gray-900 mb-2">New Research Project</h2>
+        <p class="text-gray-600">Comprehensive setup for research and analysis projects</p>
+      </header>
+
+      <form class="space-y-6" role="form" aria-labelledby="research-form-heading" novalidate>
+        <fieldset class="space-y-6">
+          <legend class="sr-only">Research Project Details</legend>
+
+          <div>
+            <label for="research-project-name" class="block text-sm font-medium text-gray-900 mb-2">
+              Project Name <span class="text-red-500" aria-label="required">(Required)</span>
+            </label>
+            <input type="text" id="research-project-name" name="research-project-name"
+              placeholder="Research Project Name..." required aria-required="true"
+              aria-describedby="research-project-name-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            <div id="research-project-name-help" class="sr-only">Enter a descriptive name for your research project
+            </div>
+          </div>
+
+          <div>
+            <label for="research-type" class="block text-sm font-medium text-gray-900 mb-2">Research Type</label>
+            <select id="research-type" name="research-type" aria-describedby="research-type-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              <option value="">Select Research Type</option>
+              <option value="quantitative">Quantitative Research</option>
+              <option value="qualitative">Qualitative Research</option>
+              <option value="mixed">Mixed Methods</option>
+              <option value="experimental">Experimental</option>
+              <option value="observational">Observational</option>
+            </select>
+            <div id="research-type-help" class="sr-only">Select the type of research methodology for your project</div>
+          </div>
+
+          <div>
+            <label for="research-description" class="block text-sm font-medium text-gray-900 mb-2">Project
+              Description</label>
+            <textarea id="research-description" name="research-description" rows="4"
+              placeholder="Describe your research objectives, methodology, and expected outcomes..."
+              aria-describedby="research-description-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+            <div id="research-description-help" class="sr-only">Provide a detailed description of your research project
+            </div>
+          </div>
+
+          <div>
+            <label for="research-duration" class="block text-sm font-medium text-gray-900 mb-2">Duration
+              (months)</label>
+            <input type="number" id="research-duration" name="research-duration" placeholder="12" min="1" max="120"
+              aria-describedby="research-duration-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            <div id="research-duration-help" class="sr-only">Enter the expected duration of the research project in
+              months</div>
+          </div>
+
+          <div>
+            <label for="research-budget" class="block text-sm font-medium text-gray-900 mb-2">Budget Range</label>
+            <select id="research-budget" name="research-budget" aria-describedby="research-budget-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              <option value="">Select Budget Range</option>
+              <option value="under-10k">Under $10,000</option>
+              <option value="10k-50k">$10,000 - $50,000</option>
+              <option value="50k-100k">$50,000 - $100,000</option>
+              <option value="100k-500k">$100,000 - $500,000</option>
+              <option value="over-500k">Over $500,000</option>
+            </select>
+            <div id="research-budget-help" class="sr-only">Select the budget range for your research project</div>
+          </div>
+
+          <div>
+            <label for="research-lead" class="block text-sm font-medium text-gray-900 mb-2">Research Lead</label>
+            <input type="text" id="research-lead" name="research-lead" placeholder="Principal Investigator..."
+              aria-describedby="research-lead-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            <div id="research-lead-help" class="sr-only">Enter the name of the principal investigator or research lead
+            </div>
+          </div>
+
+          <div>
+            <label for="research-keywords" class="block text-sm font-medium text-gray-900 mb-2">Keywords</label>
+            <input type="text" id="research-keywords" name="research-keywords"
+              placeholder="machine learning, data analysis, statistics..." aria-describedby="research-keywords-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            <p id="research-keywords-help" class="text-sm text-gray-500 mt-1">Enter relevant keywords separated by
+              commas to help categorize your research</p>
+          </div>
+        </fieldset>
+
+        <div class="flex gap-4 pt-6" role="group" aria-label="Form actions">
+          <button type="button" aria-describedby="reset-research-help"
+            class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 font-medium">
+            Reset Form
+          </button>
+          <div id="reset-research-help" class="sr-only">Clear all form fields and start over</div>
+
+          <button type="submit" (click)="showMemberSelectionPage()" aria-describedby="create-research-help"
+            class="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 font-medium flex items-center justify-center">
+            Create and add members
+            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+          </button>
+          <div id="create-research-help" class="sr-only">Create the research project and proceed to add team members
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Custom Project Form Builder -->
+    <section *ngIf="selectedTemplate === 'custom'" class="bg-white rounded-lg shadow-lg border border-gray-200 p-8"
+      aria-labelledby="custom-form-heading">
+      <header class="text-center mb-8">
+        <h2 id="custom-form-heading" class="text-2xl font-bold text-gray-900 mb-2">Create Custom Project Template</h2>
+        <p class="text-gray-600">Build your own project template with custom fields</p>
+      </header>
+
+      <form class="space-y-6" role="form" aria-labelledby="custom-form-heading" novalidate>
+        <fieldset>
+          <legend class="sr-only">Template Information</legend>
+
+          <!-- Template Name -->
+          <div class="mb-6">
+            <label for="template-name" class="block text-sm font-medium text-gray-900 mb-2">
+              Template Name <span class="text-red-500" aria-label="required">(Required)</span>
+            </label>
+            <input type="text" id="template-name" name="template-name" [(ngModel)]="customTemplate.name"
+              placeholder="Enter template name..." required aria-required="true" aria-describedby="template-name-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+            <div id="template-name-help" class="sr-only">Enter a name for your custom template</div>
+          </div>
+
+          <!-- Template Description -->
+          <div class="mb-6">
+            <label for="template-description" class="block text-sm font-medium text-gray-900 mb-2">Template
+              Description</label>
+            <textarea id="template-description" name="template-description" [(ngModel)]="customTemplate.description"
+              rows="3" placeholder="Describe what this template is for..." aria-describedby="template-description-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+            <div id="template-description-help" class="sr-only">Describe the purpose and use case for this template
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Dynamic Fields Section -->
+        <fieldset class="mb-8">
+          <legend class="sr-only">Custom Form Fields</legend>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-gray-900">Form Fields</h3>
+            <button type="button" (click)="addCustomField()" aria-describedby="add-field-help"
+              class="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 font-medium flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+              </svg>
+              Add Field
+            </button>
+            <div id="add-field-help" class="sr-only">Add a new custom field to your template</div>
+          </div>
+
+          <!-- ARIA Live Region for field updates -->
+          <div aria-live="polite" aria-atomic="true" class="sr-only" id="field-status">
+            {{ customTemplate.fields.length }} custom field{{ customTemplate.fields.length !== 1 ? 's' : '' }} added
+          </div>
+
+          <!-- Custom Fields List -->
+          <div class="space-y-4" role="group" aria-labelledby="custom-fields-heading">
+            <h4 id="custom-fields-heading" class="sr-only">Custom Field Configuration</h4>
+
+            <div *ngFor="let field of customTemplate.fields; let i = index"
+              class="bg-gray-50 border border-gray-200 rounded-lg p-4" [attr.aria-labelledby]="'field-' + i + '-label'">
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+                <!-- Field Label -->
+                <div>
+                  <label [for]="'field-label-' + i" class="block text-sm font-medium text-gray-700 mb-1">Field
+                    Label</label>
+                  <input type="text" [id]="'field-label-' + i" [(ngModel)]="field.label" [name]="'field-label-' + i"
+                    placeholder="Field name..." [attr.aria-describedby]="'field-label-help-' + i"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                  <div [id]="'field-label-help-' + i" class="sr-only">Enter the label for field {{ i + 1 }}</div>
+                </div>
+
+                <!-- Field Type -->
+                <div>
+                  <label [for]="'field-type-' + i" class="block text-sm font-medium text-gray-700 mb-1">Field
+                    Type</label>
+                  <select [id]="'field-type-' + i" [(ngModel)]="field.type" [name]="'field-type-' + i"
+                    [attr.aria-describedby]="'field-type-help-' + i"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                    <option value="text">Text Input</option>
+                    <option value="textarea">Text Area</option>
+                    <option value="select">Dropdown</option>
+                    <option value="date">Date</option>
+                    <option value="number">Number</option>
+                    <option value="email">Email</option>
+                  </select>
+                  <div [id]="'field-type-help-' + i" class="sr-only">Select the input type for field {{ i + 1 }}</div>
+                </div>
+
+                <!-- Required Toggle -->
+                <div>
+                  <label [for]="'field-required-' + i"
+                    class="block text-sm font-medium text-gray-700 mb-1">Required</label>
+                  <div class="flex items-center">
+                    <input type="checkbox" [id]="'field-required-' + i" [(ngModel)]="field.required"
+                      [name]="'field-required-' + i" [attr.aria-describedby]="'field-required-help-' + i"
+                      class="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500">
+                    <span class="ml-2 text-sm text-gray-600">Required field</span>
+                  </div>
+                  <div [id]="'field-required-help-' + i" class="sr-only">Mark field {{ i + 1 }} as required</div>
+                </div>
+
+                <!-- Remove Button -->
+                <div>
+                  <button type="button" (click)="removeCustomField(i)" [attr.aria-label]="'Remove field ' + (i + 1)"
+                    [attr.aria-describedby]="'remove-field-help-' + i"
+                    class="w-full px-3 py-2 bg-red-100 text-red-700 rounded-md hover:bg-red-200 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 font-medium">
+                    Remove
+                  </button>
+                  <div [id]="'remove-field-help-' + i" class="sr-only">Remove field {{ i + 1 }} from the template</div>
+                </div>
+              </div>
+
+              <!-- Placeholder -->
+              <div class="mt-3">
+                <label [for]="'field-placeholder-' + i" class="block text-sm font-medium text-gray-700 mb-1">Placeholder
+                  Text</label>
+                <input type="text" [id]="'field-placeholder-' + i" [(ngModel)]="field.placeholder"
+                  [name]="'field-placeholder-' + i" placeholder="Enter placeholder text..."
+                  [attr.aria-describedby]="'field-placeholder-help-' + i"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                <div [id]="'field-placeholder-help-' + i" class="sr-only">Enter placeholder text for field {{ i + 1 }}
+                </div>
+              </div>
+
+              <!-- Options for Select Fields -->
+              <div *ngIf="field.type === 'select'" class="mt-3">
+                <label [for]="'field-options-' + i" class="block text-sm font-medium text-gray-700 mb-1">Options
+                  (comma-separated)</label>
+                <input type="text" [id]="'field-options-' + i" [(ngModel)]="field.options" [name]="'field-options-' + i"
+                  placeholder="Option 1, Option 2, Option 3..." [attr.aria-describedby]="'field-options-help-' + i"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                <div [id]="'field-options-help-' + i" class="sr-only">Enter comma-separated options for dropdown field
+                  {{ i + 1 }}</div>
+              </div>
+            </div>
+
+            <!-- Empty State -->
+            <div *ngIf="customTemplate.fields.length === 0" class="text-center py-8 text-gray-500" role="status"
+              aria-live="polite">
+              <svg class="w-12 h-12 mx-auto mb-4 text-gray-300" fill="currentColor" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+              </svg>
+              <p class="mb-4">No fields added yet.</p>
+              <button (click)="addCustomField()" aria-describedby="empty-state-help"
+                class="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 font-medium transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                </svg>
+                Add Field to start building your form
+              </button>
+              <div id="empty-state-help" class="sr-only">Add your first custom field to begin building the template
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Preview Section -->
+        <section *ngIf="customTemplate.fields.length > 0" class="mb-8" aria-labelledby="preview-heading">
+          <h3 id="preview-heading" class="text-lg font-semibold text-gray-900 mb-4">Form Preview</h3>
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-6" role="region" aria-label="Template preview">
+            <div class="space-y-4">
+              <div *ngFor="let field of customTemplate.fields; let i = index"
+                class="grid grid-cols-1 md:grid-cols-2 gap-4" [class.md:col-span-2]="field.type === 'textarea'">
+                <div [class.md:col-span-2]="field.type === 'textarea'">
+                  <label [for]="'preview-field-' + i" class="block text-sm font-medium text-gray-900 mb-2">
+                    {{ field.label }}
+                    <span *ngIf="field.required" class="text-red-500" aria-label="required">(Required)</span>
+                  </label>
+
+                  <!-- Text Input -->
+                  <input *ngIf="field.type === 'text' || field.type === 'email' || field.type === 'number'"
+                    [type]="field.type" [placeholder]="field.placeholder" [id]="'preview-field-' + i"
+                    [name]="'preview-field-' + i" [required]="field.required" [attr.aria-required]="field.required"
+                    [attr.aria-describedby]="'preview-field-help-' + i"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    readonly>
+                  <div *ngIf="field.type === 'text' || field.type === 'email' || field.type === 'number'"
+                    [id]="'preview-field-help-' + i" class="sr-only">
+                    Preview of {{ field.type }} input field for {{ field.label }}
+                  </div>
+
+                  <!-- Textarea -->
+                  <textarea *ngIf="field.type === 'textarea'" [placeholder]="field.placeholder" rows="3"
+                    [id]="'preview-field-' + i" [name]="'preview-field-' + i" [required]="field.required"
+                    [attr.aria-required]="field.required" [attr.aria-describedby]="'preview-field-help-' + i"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    readonly></textarea>
+                  <div *ngIf="field.type === 'textarea'" [id]="'preview-field-help-' + i" class="sr-only">
+                    Preview of textarea field for {{ field.label }}
+                  </div>
+
+                  <!-- Select -->
+                  <select *ngIf="field.type === 'select'" [id]="'preview-field-' + i" [name]="'preview-field-' + i"
+                    [required]="field.required" [attr.aria-required]="field.required"
+                    [attr.aria-describedby]="'preview-field-help-' + i"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    disabled>
+                    <option value="">{{ field.placeholder || 'Select an option' }}</option>
+                    <option *ngFor="let option of getSelectOptions(field.options)" [value]="option">{{ option }}
+                    </option>
+                  </select>
+                  <div *ngIf="field.type === 'select'" [id]="'preview-field-help-' + i" class="sr-only">
+                    Preview of dropdown field for {{ field.label }}
+                  </div>
+
+                  <!-- Date -->
+                  <input *ngIf="field.type === 'date'" type="date" [id]="'preview-field-' + i"
+                    [name]="'preview-field-' + i" [required]="field.required" [attr.aria-required]="field.required"
+                    [attr.aria-describedby]="'preview-field-help-' + i"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    readonly>
+                  <div *ngIf="field.type === 'date'" [id]="'preview-field-help-' + i" class="sr-only">
+                    Preview of date input field for {{ field.label }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-4 pt-6" role="group" aria-label="Template actions">
+          <button type="button" (click)="resetCustomTemplate()" aria-describedby="reset-template-help"
+            class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 font-medium">
+            Reset Template
+          </button>
+          <div id="reset-template-help" class="sr-only">Clear all template fields and start over</div>
+
+          <button type="submit" (click)="showMemberSelectionPage()" aria-describedby="create-template-help"
+            class="flex-1 px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 font-medium flex items-center justify-center">
+            Create Template and add members
+            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+          </button>
+          <div id="create-template-help" class="sr-only">Create the custom template and proceed to add team members
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- Member Selection Page -->
+    <section *ngIf="showMemberSelection" class="bg-white rounded-lg shadow-lg border border-gray-200 p-8"
+      aria-labelledby="member-selection-heading">
+      <header class="text-center mb-8">
+        <h2 id="member-selection-heading" class="text-2xl font-bold text-gray-900 mb-2">Add Project Members</h2>
+        <p class="text-gray-600">Select team members and assign their roles for this project</p>
+      </header>
+
+      <!-- Search Bar -->
+      <div class="mb-6">
+        <label for="member-search" class="sr-only">Search team members</label>
+        <div class="relative">
+          <input type="text" id="member-search" name="member-search" [(ngModel)]="searchTerm"
+            placeholder="Search people by name, email, or role..." aria-describedby="search-instructions"
+            class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" aria-hidden="true">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+          </div>
+        </div>
+        <div id="search-instructions" class="sr-only">Type to filter team members by name, email, or role</div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Available Users List -->
+        <section aria-labelledby="available-members-heading">
+          <div class="flex items-center justify-between mb-4">
+            <h3 id="available-members-heading" class="text-lg font-semibold text-gray-900">Available Team Members</h3>
+            <span class="text-sm text-gray-500" aria-live="polite">
+              {{ filteredUsers.length }} member{{ filteredUsers.length !== 1 ? 's' : '' }} available
+            </span>
+          </div>
+
+
+          <!--project template start-->
+          <div>
+
+          </div>
+          <!--project template end-->
+
+
+          <!--rotate secrete start-->
+          <div>
+
+          </div>
+          <!--rotate secrete end-->
