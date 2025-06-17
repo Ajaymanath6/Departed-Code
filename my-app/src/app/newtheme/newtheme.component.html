@@ -1,0 +1,704 @@
+<!--project page start-->
+<section class="border-b-2">
+  <div class="flex flex-col gap-2 text-center text-Mdblue-700 mt-4 mb-4">
+    <p class="text-base font-medium text-green-500">Step 1 of 2</p>
+    <h3 class="text-2xl font-bold text-[32px]">Create New Project</h3>
+    <h3 class="text-2xl font-bold text-[32px]">Create New Template</h3>
+    <p class="">Select a template and configure your project details</p>
+  </div>
+
+
+  <div class="border-gray-200 bg-white">
+    <ul class="flex flex-wrap text-center text-sm font-medium justify-center">
+      <li class=""><a routerlinkactive="text-primary-700 border-primary-700 hover:border-primary-700"
+          class="-mb-0.5 inline-block rounded-t-lg border-b-2 p-4 text-base font-semibold text-Mdblue-600 hover:!text-Mdblue-700 text-primary-700 border-primary-700 hover:border-primary-700">From
+          a Template</a>
+      </li>
+      <li class=""><a routerlinkactive="text-primary-700 border-primary-700 hover:border-primary-700"
+          class="-mb-0.5 inline-block rounded-t-lg border-b-2 p-4 text-base font-semibold text-Mdblue-600 hover:!text-Mdblue-700">
+          From Scratch</a></li>
+    </ul>
+  </div>
+</section>
+
+<div>
+  <div iconname="text_snippet" iconsize="icon-48" message="No similar cases found"
+    info="We couldn't find any similar cases for the case.">
+    <div class="flex flex-col items-center mt-16"><span
+        class="Mdblue-fill-600 icon-48 material-symbols-outlined mb-3 text-Mdblue-600 "> text_snippet
+      </span>
+      <div class="mb-2 text-2xl font-semibold text-Mdblue-600 "> No Templates Available </div>
+      <div class="text-base text-Mdblue-600 ">Create your first template to start using it for projects </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4 justify-center w-[28rem] mx-auto mt-4">
+    <button type="submit" id="button-search"
+      class="btn-focus flex w-full items-center justify-center rounded border border-transparent px-4 py-3 text-base font-medium text-white focus:outline-none bg-primary-700 hover:bg-primary-800"><span
+        class="material-symbols-outlined mr-1">
+        add </span><span>Create a template</span></button>
+    <button
+      class="btn-focus flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+        class="icon-16 material-symbols-outlined mr-1">
+        schedule </span><span>Manage Templates</span></button>
+  </div>
+</div>
+
+<!--create new template start-->
+<div class="max-w-2xl mx-auto bg-white rounded-lg border border-gray-300 shadow-sm mt-4">
+  <div class="p-12 pb-0">
+    <!-- Header Section -->
+    <div class="mb-6">
+      <div class="space-y-3">
+        <h2 class="text-2xl font-medium text-Mdblue-700">Template Fields</h2>
+        <p class="text-base text-Mdblue-700">Define and configure the fields that will appear in your template</p>
+      </div>
+    </div>
+
+    <!-- Info Alert -->
+    <div class="mb-6">
+      <div class="flex items-center p-4 border border-gray-300 rounded-lg bg-gray-100">
+        <!-- Content Column -->
+        <div class="flex-1 shrink">
+          <!-- Title + Icon + Description -->
+          <div class="flex flex-col gap-1.5">
+            <!-- Title + Icon Row -->
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-Mdblue-700">info</span>
+              <p class="text-sm text-Mdblue-700 font-normal">Configure each field with its type, validation, and display
+                options. Add multiple fields to collect the information you need.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="ml-6 shrink-0">
+          <button type="button"
+            class="btn-focus flex w-full items-center justify-center rounded border border-transparent px-4 py-3 text-base font-medium text-white focus:outline-none bg-primary-700 hover:bg-primary-800 ">
+            Action
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="p-12 pt-6 border-t border-gray-200">
+    <!-- Field Configuration Section -->
+    <div class=" pt-10">
+      <!-- Field Item -->
+      <div class="bg-primary-50 rounded-lg border border-primary-200- pb-6">
+        <!-- Field Header with Drag Handle -->
+        <div class="flex items-center border-b border-primary-200 p-3">
+          <div class="shrink-0 mr-2">
+            <span class="material-symbols-outlined text-primary-200">drag_indicator</span>
+          </div>
+          <h3 class="text-lg font-medium text-Mdblue-700">Field 1</h3>
+        </div>
+
+        <!-- Field Configuration Form -->
+        <div class="space-y-4 p-6">
+          <!-- Name Field -->
+          <div>
+            <div class="space-y-1">
+              <label for="field-name" class="block text-base font-medium text-Mdblue-700">Name</label>
+              <input type="text" id="field-name" name="field-name"
+                class="block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 disabled:bg-gray-100"
+                placeholder="e.g., Client Name, Budget, Target Audience">
+            </div>
+          </div>
+
+          <!-- Type Field -->
+          <div>
+            <div class="space-y-3">
+              <label class="block text-base font-medium text-Mdblue-700">Type</label>
+              <div class="space-y-2">
+                <!-- Text Radio Option -->
+                <div class="flex items-center">
+                  <input checked id="text-type" type="radio" value="text" name="field-type"
+                    class="w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 focus:ring-primary-500">
+                  <label for="text-type" class="ml-2 text-base text-Mdblue-700">Text</label>
+                </div>
+
+                <!-- Dropdown Radio Option -->
+                <div class="flex items-center">
+                  <input id="dropdown-type" type="radio" value="dropdown" name="field-type"
+                    class="w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 focus:ring-primary-500">
+                  <label for="dropdown-type" class="ml-2 text-base text-Mdblue-700">Dropdown</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Options Toggle -->
+          <div>
+            <div class="flex mt-2 mb-2">
+              <label class="inline-flex cursor-pointer items-center ">
+                <input type="checkbox" class="peer sr-only " value="false">
+                <div
+                  class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-secondary-700 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-secondary-300 rtl:peer-checked:after:-translate-x-full ">
+                </div>
+                <span class="flex items-center gap-2 ">
+                  <span class="ms-2 text-base font-normal text-Mdblue-700 ">
+                    <span class="font-semibold ">View advanced options </span>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Another Field Button -->
+      <div class="mt-4">
+        <button type="button"
+          class="btn-focus w-full flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
+          <span class="material-symbols-outlined mr-1">add</span>
+          Add another field
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Bottom Action Buttons -->
+  <div class="flex items-center justify-between  p-12 border-t border-gray-200">
+    <button type="button"
+      class="btn-focus w-full- flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-base font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
+      <span class="material-symbols-outlined mr-1">arrow_back</span>
+      Back: Basic Info
+    </button>
+
+    <div class="flex space-x-6 items-center">
+      <button type="button"
+        class="btn-focus w-full- flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-base font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
+        Cancel
+      </button>
+      <button type="submit"
+        class="px-3 py-3 text-base font-semibold text-white bg-primary-700 rounded hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500">
+        Save This Template
+      </button>
+    </div>
+  </div>
+</div>
+<!--create new template end-->
+<!--project page end-->
+
+<!--tracking page start-->
+<section class="border-b-2 ">
+  <div class="w-[57.5rem] mx-auto">
+
+    <div class="flex flex-col gap-2 text-center text-Mdblue-700 mt-4 mb-4">
+      <h3 class="text-2xl font-bold text-[32px]">Tracking</h3>
+      <p>Below are the cases you are tracking.</p>
+    </div>
+    <div class="flex justify-between">
+      <div class="w-[50%]">
+        <div class="relative"><input type="text" placeholder="Search..."
+            class="block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 disabled:bg-gray-100">
+          <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="size-4 text-Mdblue-600">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+            </svg></div>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button
+          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+            class="icon-16 material-symbols-outlined mr-1"> add_circle </span><span>Added</span></button>
+        <button
+          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+            class="icon-16 material-symbols-outlined mr-1"> do_not_disturb_on </span><span>Removed</span></button>
+        <button
+          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+            class="icon-16 material-symbols-outlined mr-1"> refresh </span><span>Changed</span></button>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2">
+
+      <div>
+        <div class="my-6 flex items-center">
+          <div class="mr-2 flex items-center text-center font-semibold text-Mdblue-600">
+            <h3 class="text-xl font-semibold text-Mdblue-700">New for you</h3>
+          </div>
+          <div class="w-full- h-[1px] grow bg-gray-200"></div>
+        </div>
+        <div>
+          <div class="flex flex-col items-center mt-16"><span
+              class="Mdblue-fill-600 icon-48 material-symbols-outlined mb-3 text-Mdblue-600"> text_snippet
+            </span>
+            <div class="mb-2 text-2xl font-semibold text-Mdblue-600"> Nothing new for you. </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="my-6 flex items-center">
+          <div class="mr-2 flex items-center text-center font-semibold text-Mdblue-600">
+            <h3 class="text-xl font-semibold text-Mdblue-700">All the cases you're tracking</h3>
+          </div>
+          <div class="w-full- h-[1px] grow bg-gray-200"></div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <div class="bg-white flex justify-between items-center border-2 border-gray-200 p-2 parent-card rounded-xl">
+            <div>
+              Case Name
+            </div>
+            <div class="flex gap-2">
+              <button class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600
+                 focus:bg-gray-100 focus:outline-none"><span>See Latest Updates</span></button>
+              <button
+                class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
+                <span class="icon-16 material-symbols-outlined mr-1"> refresh </span>
+                <span>Label</span>
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+                  class="ms-1 size-[0.5rem] text-Mdblue-600">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="track-case-list flex flex-col gap-4">
+      <div class="border-2 border-gray-200 p-4 rounded-xl">
+        <div class="flex justify-between items-center ">
+          <div> Case Name </div>
+          <div class="flex gap-2"><button
+              class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span>See
+                Latest Updates</span></button><button
+              class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+                class="icon-16 material-symbols-outlined mr-1"> refresh </span><span>Label</span><svg aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+                class="ms-1 size-[0.5rem] text-Mdblue-600">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4"></path>
+              </svg></button></div>
+        </div>
+        <ol class="mt-3">
+          <div class="grow border-t border-gray-300"></div>
+          <li class="pt-3 pb-3">
+            <div class="flex">
+              <div class="text-sm font-semibold text-Mdblue-600 mr-8">2/18/2023</div>
+              <div class="grow flex-col">
+                <div class="flex  pb-2">
+                  <div class="">
+                    <span class="material-symbols-outlined text-Mdblue-600 icon-24">
+                      group
+                    </span>
+                  </div>
+                  <div class="text-gray-600 grow ml-4">
+                    <div class="flex justify-between font-normal mb-4">
+                      <span class="text-lg font-semibold text-Mdblue-700 ">Parties</span>
+                      <span class="flex items-center text-Mdblue-600 text-sm font-semibold">
+                        <span class="material-symbols-outlined icon-12 Mdblue-fill-600">schedule</span>
+                        10:45 AM
+                      </span>
+                    </div>
+                    <div class="flex text-base font-semibold text-Mdblue-700 mb-2">
+
+                      <span
+                        class="flex items-center bg-secondary-200- py-1 px-3 mb-2- rounded-md border border-green-700">
+                        <span class="icon-16 material-symbols-outlined mr-1 text-green-700"> add_circle </span>
+                        <span>Zachary P Reynolds-</span>
+                        <span class="text-base font-normal italic">Defendant</span>
+                      </span>
+                    </div>
+                    <div class="flex text-base font-semibold rounded-md text-Mdblue-700">
+                      <span class="bg-red-100 py-1 px-3 rounded-md">Christine M Baker- <span
+                          class="text-base font-normal italic">Plaintiff</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex  border-t mt-4 pt-4 pb-2">
+                  <div class="">
+                    <!-- <span class="material-symbols-outlined text-Mdblue-600 icon-24">
+                            group
+                          </span> -->
+                    <span class="material-symbols-outlined text-Mdblue-600 icon-24"> business_center </span>
+                  </div>
+                  <div class="text-gray-600 grow ml-4">
+                    <div class="flex justify-between font-normal mb-4">
+                      <span class="text-lg font-semibold text-Mdblue-700">Attorneys</span>
+                      <span class="flex items-center text-sm font-semibold text-Mdblue-600">
+                        <span class="material-symbols-outlined icon-12 Mdblue-fill-600">schedule</span>
+                        10:45 AM
+                      </span>
+                    </div>
+                    <div class="flex text-base font-semibold text-Mdblue-700">
+                      <span class="bg-pink-300 py-1 px-3 mb-2 rounded-md">Matthew J Bakota - Attorney was added
+                        for
+                        Zachary P Reynolds
+                        <span class="text-base font-normal italic">- Defendant</span>
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="flex  border-t mt-4 pt-4 pb-2">
+                  <div class="">
+                    <!-- <span class="material-symbols-outlined text-Mdblue-600 icon-24">
+                            group
+                          </span> -->
+                    <span class="material-symbols-outlined text-Mdblue-600 icon-24"> gavel </span>
+                  </div>
+                  <div class="text-gray-600 grow ml-4">
+                    <div class="flex justify-between font-normal mb-4">
+                      <span class="text-lg font-semibold  text-Mdblue-700">Judges</span>
+                      <span class="flex items-center text-sm font-semibold text-Mdblue-600">
+                        <span class="material-symbols-outlined icon-12 Mdblue-fill-600">schedule</span>
+                        10:45 AM
+                      </span>
+                    </div>
+
+                    <div class="flex text-base font-semibold rounded-md text-Mdblue-700">
+                      <span class="bg-red-100 py-1 px-3 rounded-md">Caroline H. Gentry<span
+                          class="text-base font-normal italic">- Referral Judge</span></span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button"
+                  class="text-primary-700 mt-2 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded text-base px-5 py-2 text-center items-center w-full">
+                  Show All <span>(8)</span></button>
+              </div>
+            </div>
+          </li>
+          <li class="pt-3 pb-3">
+            <div class="flex">
+              <div class="text-sm font-semibold text-Mdblue-600 mr-8">2/18/2023</div>
+              <div class="grow">
+                <div class="flex pb-2">
+                  <div class="">
+                    <!-- <span class="material-symbols-outlined text-Mdblue-600 icon-24">
+                            group
+                          </span> -->
+                    <span class="material-symbols-outlined text-Mdblue-600 icon-24"> description </span>
+                  </div>
+                  <div class="text-gray-600 grow ml-4">
+                    <div class="flex justify-between font-normal mb-4">
+                      <span class="text-lg font-semibold  text-Mdblue-700">Docket Entries</span>
+                      <span class="flex items-center text-sm font-semibold text-Mdblue-600">
+                        <span class=" material-symbols-outlined icon-12 Mdblue-fill-600">schedule</span>
+                        10:45 AM</span>
+                    </div>
+                    <div class="flex text-base font-semibold items-center">
+                      <span class="bg-secondary-200 py-1 px-3 rounded-md text-Mdblue-700">10/30/2023
+                      </span>
+                      <p class="ml-3 text-Mdblue-600">COMPLAINT <span class="text-Mdblue-700 font-normal">Additional
+                          Info:
+                          Plaintiff: VELOCITY INVESTMENTS,
+                          LLC;</span></p>
+                    </div>
+                  </div>
+                </div>
+                <button type="button"
+                  class="text-primary-700 mt-2 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded text-base px-5 py-2 text-center items-center w-full">
+                  Show All <span>(8)</span></button>
+              </div>
+            </div>
+          </li>
+          <div class="grow border-t border-gray-300"></div>
+        </ol>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+<!--tracking page end-->
+
+<!--search page start-->
+<div class="bg-gray-700 py-1 px-3 rounded-md flex items-center gap-2">
+  <label class="inline-flex cursor-pointer items-center"><input type="checkbox" value="false" class="peer sr-only">
+    <div
+      class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-secondary-700 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-secondary-300 rtl:peer-checked:after:-translate-x-full">
+    </div><span class="flex items-center gap-2"><span class="ms-2 text-base font-normal text-Mdblue-700"><span
+          class="font-semibold">Use Boolean Search </span></span></span>
+  </label>
+  <span class="material-symbols-outlined Mdblue-fill-600 icon-20">info</span>
+</div>
+
+<!--boolean search start-->
+<div class="flex flex-col gap-10 bg-white rounded-lg p-8 border border-gray-200 mt-6 w-[62rem] mx-auto">
+  <!-- Title and Description -->
+  <div class="flex flex-col gap-2">
+    <h2 class="text-[32px] font-serif font-semibold text-Mdblue-700">Boolean Search</h2>
+    <p class="text-base text-Mdblue-700">
+      This search supports multiple use cases:<br>
+      <span class="block mt-2">Search for multiple keywords <span class="font-semibold">Google OR Facebook</span>.<br>
+        Search within particular attributes.<br>
+        Relational search using terms and connectors.<br>
+        And much more.</span>
+    </p>
+  </div>
+  <!-- Alert/Note -->
+  <div class="flex items-center gap-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
+
+    <div class="flex-1">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-Mdblue-700-600 bg-blue-100 rounded-full">sticky_note_2</span>
+        <span class="font-semibold text-blue-900">Note:</span>
+      </div>
+
+      <p class="flex-1 text-sm text-blue-900">A maximum of 15 operators are allowed in a single query.</p>
+    </div>
+    <button
+      class=" btn-focus flex w-full- items-center justify-center rounded border border-transparent px-4 py-3 text-base font-medium text-white focus:outline-none bg-primary-700 hover:bg-primary-800">Action</button>
+  </div>
+  <!-- Table 1: Allowed Connectors in Keyword Expressions -->
+  <div class="flex flex-col gap-2">
+    <h3 class="text-lg font-medium text-Mdblue-700">Allowed Connectors in Keyword Expressions</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-left border border-gray-200 rounded-lg overflow-hidden">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Connector</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Description</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Example</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr>
+            <td class="px-4 py-2 font-semibold">AND</td>
+            <td class="px-4 py-2">Find cases containing each of the terms joined by AND connectors.</td>
+            <td class="px-4 py-2">personal AND injury</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">OR</td>
+            <td class="px-4 py-2">Find cases containing any of the terms joined by OR connectors.</td>
+            <td class="px-4 py-2">order OR decision</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">NOT</td>
+            <td class="px-4 py-2">Find cases that do not contain the specified term.</td>
+            <td class="px-4 py-2">personal AND NOT injury</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">"[phrase]"</td>
+            <td class="px-4 py-2">Find the exact phrase placed between the quotation marks.</td>
+            <td class="px-4 py-2">"personal injury"</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">~</td>
+            <td class="px-4 py-2">Find cases in which the specified words appear near each other. For example, "personal
+              injury" ~ 5 targets cases in which the word "personal" appears within 5 words of the word "injury".</td>
+            <td class="px-4 py-2">"personal injury" ~ 5</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">( … )</td>
+            <td class="px-4 py-2">Specifies the order in which connectors are to be applied in a keyword expression.
+            </td>
+            <td class="px-4 py-2">personal AND (injury OR fall)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Table 2: Fields and Connectors Searching -->
+  <div class="flex flex-col gap-2">
+    <h3 class="text-lg font-medium text-Mdblue-700">Fields and Connectors Searching</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-left border border-gray-200 rounded-lg overflow-hidden">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Field</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Description</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Example</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-semibold">caseNumber</td>
+            <td class="px-4 py-2">Find cases with the specified case number (i.e., docket number).</td>
+            <td class="px-4 py-2">caseNumber:"2020-L-007212"</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">caseName</td>
+            <td class="px-4 py-2">Find cases with the specified case title.</td>
+            <td class="px-4 py-2">caseName:"THOMAS P. CARNEY, INC. VS BEHLER JAMES Et Al"</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">Court</td>
+            <td class="px-4 py-2">Find cases in the specified court.</td>
+            <td class="px-4 py-2">(Court:(name:(New York)))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">CaseStatus</td>
+            <td class="px-4 py-2">Find cases witih the specified case status.</td>
+            <td class="px-4 py-2">(CaseStatus:(name:Disposed))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">CaseType</td>
+            <td class="px-4 py-2">Find cases of the specified case type.</td>
+            <td class="px-4 py-2">(CaseType:(name:Property))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">Party</td>
+            <td class="px-4 py-2">Find cases involving the specified party.</td>
+            <td class="px-4 py-2">(Party:(name:Apple))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">partyId</td>
+            <td class="px-4 py-2">Find cases involving a party with the specified partyId value.</td>
+            <td class="px-4 py-2">(Party:(partyId:"PRTYgu1ffe866484c2"))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">PartyRole</td>
+            <td class="px-4 py-2">Find cases in which at least one party has the specified party role.</td>
+            <td class="px-4 py-2">(Party:((PartyRole:(name:"plaintiff"))))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">AttorneyRepresentationType</td>
+            <td class="px-4 py-2">Find cases in which at least one party has the specified attorney representation type.
+            </td>
+            <td class="px-4 py-2">(Party:(AttorneyRepresentationType:(name:"attorney represented")))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">Attorney</td>
+            <td class="px-4 py-2">Find cases involving the specified attorney.</td>
+            <td class="px-4 py-2">(Attorney:(name:"David Boies"))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">AttorneyType</td>
+            <td class="px-4 py-2">Find cases involving at least one attorney of the specified attorney type.</td>
+            <td class="px-4 py-2">(Attorney:((AttorneyType:(name:"Lead Attorney"))))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">Judge</td>
+            <td class="px-4 py-2">Find cases involving the specified judge.</td>
+            <td class="px-4 py-2">(Judge:(name:"Posner"))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">JudgeType</td>
+            <td class="px-4 py-2">Find cases involving at least one judge of the specified judge type.</td>
+            <td class="px-4 py-2">(Judge:((JudgeType:(name:"Magistrate"))))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">CaseStats</td>
+            <td class="px-4 py-2">Find cases with the specified case statistics.</td>
+            <td class="px-4 py-2">(CaseStats:(partyCount:[10 TO 100]))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">filedDate</td>
+            <td class="px-4 py-2">Find cases that were filed on the specified date or within the specified date range.
+            </td>
+            <td class="px-4 py-2">filedDate:[2020-03-15 TO 2021-12-01]</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">lastFetchDate</td>
+            <td class="px-4 py-2">Find cases in which UniCourt last checked for updates on the specified date or within
+              the specified date range.</td>
+            <td class="px-4 py-2">(lastFetchDate:[now-60d TO *])</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">lastFetchDateWithUpdates</td>
+            <td class="px-4 py-2">Find cases in which UniCourt last detected an update on the specified date or within
+              the specified date range.</td>
+            <td class="px-4 py-2">(lastFetchDateWithUpdates:[now-6d TO *])</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">participantsLastFetchDate</td>
+            <td class="px-4 py-2">Find cases in which information cocnerning participants was last updated on the
+              specified date or within the specified date range.</td>
+            <td class="px-4 py-2">(participantsLastFetchDate:[now-6d TO *])</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">DocketEntry</td>
+            <td class="px-4 py-2">Find cases in which at least one docket entry contains the specified text.</td>
+            <td class="px-4 py-2">(DocketEntry:(text:(Motion to Compel Responses) AND
+              docketEntryDate:[2020-01-01T00:00:00 TO 2020-05-01T00:00:00]))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">docketEntryDate</td>
+            <td class="px-4 py-2">Find cases in which at least one docket entry was made on the specified date or within
+              the specified date range.</td>
+            <td class="px-4 py-2">(DocketEntry:(docketEntryDate:[2020-01-01T00:00:00 TO 2020-05-01T00:00:00])) AND
+              (CaseStats:(allCaseDocumentCount:[0 TO 10]))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">HearingDate</td>
+            <td class="px-4 py-2">Find cases with at least one hearing scheduled for the specified date or within the
+              specified date range.</td>
+            <td class="px-4 py-2">(Hearing:(hearingDate:[now TO now+10d]))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">HearingDate</td>
+            <td class="px-4 py-2">Search for cases where hearing is going to happen in 10 to 20days.</td>
+            <td class="px-4 py-2">(Hearing:(hearingDate:[now+10d TO now+20d]))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">JurisdictionGeo</td>
+            <td class="px-4 py-2">Find cases in which the law of the specified state governs.</td>
+            <td class="px-4 py-2">(JurisdictionGeo:(state:"New York"))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">Party Address Exists</td>
+            <td class="px-4 py-2">Find cases with Party addresses.</td>
+            <td class="px-4 py-2">(Party:(Contact:(Address:(stateName:*))))</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">Document</td>
+            <td class="px-4 py-2">Find cases with specific document name and preview is available for the document.</td>
+            <td class="px-4 py-2">(CaseDocument:(name:"civil case cover sheet" AND isPreviewAvailable:true))</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Table 3: Party Sub Filter Examples -->
+  <div class="flex flex-col gap-2">
+    <h3 class="text-lg font-medium text-gray-900">Party Sub Filter Examples</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-left border border-gray-200 rounded-lg overflow-hidden">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Example</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Explanation</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-semibold">(Party:(name:google AND (PartyRole:(name:"plaintiff"))))</td>
+            <td class="px-4 py-2">Find cases involving at least one plaintiff whose name contains the term "Google".
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-semibold">(Party:(name:"OTELIA PEREIDA" AND
+              (AttorneyRepresentationType:(name:"Attorney represented")))) AND (Attorney:(name:"Law Offices of Todd M
+              Friedman"))</td>
+            <td class="px-4 py-2">Find cases where the Party is OTELIA PEREIDA and is represented by the attorney Law
+              Offices of Todd M Friedman.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--boolean search end-->
+
+<!--search page end-->
+
+<!--manage project start-->
+<div class="left-tab w-[10rem] w-full- mx-auto">
+  <ul class="space-y-1 px-2 pl-0 mt-[11rem] font-semibold border-l border-gray-300">
+    <li class="border-l-4- border-green-700- relative">
+      <div class="absolute w-[3px] h-full left-[-2px]  bg-gray-200 border-l-4 border-green-700"></div>
+      <a
+        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700- text-primary-700 border-primary-700 hover:border-primary-700 fill-primary-700"><span
+          class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 !text-primary-700"> sort </span>
+        <div>General</div>
+      </a></li>
+    <li class="">
+      <a
+        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"><span
+          class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2"> group </span>
+        <div>Members</div>
+      </a></li><!--container-->
+  </ul>
+</div>
+<!--manage project end-->
