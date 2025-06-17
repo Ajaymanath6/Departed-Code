@@ -19,6 +19,7 @@ import { CursoruiComponent } from './cursorui/cursorui.component';
 import { CostestimationComponent } from './costestimation/costestimation.component';
 import { Cursertest2Component } from './cursertest2/cursertest2.component';
 import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
+import { NewthemeComponent } from './newtheme/newtheme.component';
 
 const routes: Routes = [
   {
@@ -97,6 +98,10 @@ const routes: Routes = [
   {
     path: 'tooltip',
     component: TooltipTestComponent,
+  },
+  {
+    path: 'newtheme',
+    component: NewthemeComponent,
   },
 ];
 
