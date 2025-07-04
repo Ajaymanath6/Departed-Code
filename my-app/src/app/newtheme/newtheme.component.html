@@ -1,13 +1,174 @@
 <!--safri focus start-->
-<input type="text" placeholder="Search..."
-  class="block w-full rounded border border-gray-300 hover:bg-gray-50 hover:border-secondary-600 py-2.5 pe-10 text-sm
+<input type="text" placeholder="Search..." class="block hidden w-full rounded border border-gray-300 hover:bg-gray-50 hover:border-secondary-600 py-2.5 pe-10 text-sm
    text-Mdblue-700 placeholder:text-gray-700 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600
    focus:outline-none disabled:bg-gray-100
    focus-visible:ring-1 focus-visible:ring-secondary-600 focus-visible:outline-none
    ">
 <!--safari focus end-->
 
+<!--case-detail-start-->
+<section>
+  <div class="container">
+    <div class="flex justify-between">
+      <h3 class="mb-6 mt-8 text-thirtytwo font-semibold text-Mdblue-700 c_md:text-2xl c_md:mt-4 font-lora"> Case Name
+      </h3>
+      <a class="text-primary-600 text-base flex items-center gap-1 font-semibold">Open Court Portal <span
+          class="material-symbols-outlined icon-16">
+          arrow_outward
+        </span></a>
+    </div>
+    <div class="flex justify-between">
+      <p class="text-base text-gray-600">Last refreshed on 3 Jun 2024. Last refresh with an update 8 Jun 2025.</p>
+      <div class="flex gap-2">
+        <button
+          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"
+          id="button-outline-medium-case-updatecasebj7d4a2d598963-73440"><span
+            class="icon-16 material-symbols-outlined mr-1"> refresh </span><span>Refresh</span></button>
+        <button
+          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700  hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+            class="icon-16 material-symbols-outlined mr-1 primary-fill-600"> schedule </span><span>Set
+            Tracker</span></button>
+        <button
+          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700  hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+            class="icon-16 material-symbols-outlined mr-1 primary-fill-600"> bookmark_add </span><span>Add
+            Bookmark</span></button>
+      </div>
+    </div>
+  </div>
+</section>
 
+<div class="container">
+  <div class="w-full mt-6 mb-6">
+    <div class="relative"><input type="text" placeholder="Search..."
+        class="block w-full rounded-lg border border-gray-300 hover:bg-gray-50 hover:border-secondary-600 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600 focus:outline-none disabled:bg-gray-100">
+      <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="size-4 text-Mdblue-600">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+        </svg></div>
+    </div>
+  </div>
+  <table
+    class="w-full border-separate border-spacing-2 border-spacing-y-3 text-left text-sm text-Mdblue-600 rtl:text-right">
+    <thead class="text-sm font-semibold text-gray-700">
+      <tr>
+
+        <th scope="col" class="px-4 py-3 ">
+          <div class="flex items-center uppercase"><span>Date</span>
+            <div class="ml-2"><button type="button" class="press flex items-center text-center
+              "><span class="material-symbols-outlined font-semibold">expand_less</span></button><button type="button"
+                class="press flex items-center text-center
+                "><span class="material-symbols-outlined font-semibold">expand_more</span></button></div>
+          </div>
+        </th>
+        <!-- <th scope="col" class="w-[33%] px-4 py-3">
+          <div class="flex items-center uppercase"><span>Name</span></div>
+        </th> -->
+        <th scope="col" class="px-4 py-3 uppercase">Description</th>
+        <th scope="col" class="w-[17%] px-4 py-3">
+          <!-- <div class="flex justify-end uppercase">Buy or download</div> -->
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="rounded-md outline outline-1 outline-gray-200
+      ">
+
+        <td class="px-4 py-4">
+          <div>
+            <div
+              class="inline-flex items-center space-x-1 rounded bg-gray-100 px-2 py-1 text-base font-semibold text-Mdblue-700 whitespace-nowrap">
+              <span>2025/06/17</span>
+            </div>
+          </div>
+        </td>
+        <!-- <td class="px-4 py-4 text-base font-semibold text-primary-700 hover:cursor-pointer hover:underline"
+        > CI-25-04606_COMPLAINT_06172025043345 </td> -->
+        <td class="px-4 py-4">
+          <p class="font-semibold text-Mdblue-700 flex gap-2 items-center"><span
+              class="bg-primary-50 text-blue-600 text-base font-bold rounded px-2 py-1">Label 1</span> <span
+              class=" text-gray-600">Non-Jury Trial:</span> (2:00 PM) (Judicial Officer Curnutt, Mary Tom) </p>
+        </td>
+        <td class="px-4 py-4 font-medium flex justify-end text-Mdblue-700
+        ">
+          <div
+            class="inline-flex items-center space-x-1 rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold text-Mdblue-700 whitespace-nowrap">
+            <span class="material-symbols-outlined icon-18 Mdblue-fill-600 ">article</span> <span>2</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="rounded-md outline outline-1 outline-gray-200
+      ">
+
+        <td class="px-4 py-4">
+          <div>
+            <div
+              class="inline-flex items-center space-x-1 rounded bg-gray-100 px-2 py-1 text-base font-semibold text-Mdblue-700 whitespace-nowrap">
+              <span>2025/06/17</span>
+            </div>
+          </div>
+        </td>
+        <!-- <td class="px-4 py-4 text-base font-semibold text-primary-700 hover:cursor-pointer hover:underline"
+        > CI-25-04606_COMPLAINT_06172025043345 </td> -->
+        <td class="px-4 py-4">
+          <p class="font-semibold text-Mdblue-700 flex gap-2 items-center"><span
+              class="bg-yellow-50 text-yellow-900 text-base font-bold rounded px-2 py-1">Label 2</span> <span
+              class=" text-gray-600">Non-Jury Trial:</span> (2:00 PM) (Judicial Officer Curnutt, Mary Tom) </p>
+        </td>
+        <td class="px-4 py-4 font-medium flex justify-end text-Mdblue-700
+        ">
+          <div
+            class="inline-flex items-center space-x-1 rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold text-Mdblue-700 whitespace-nowrap">
+            <span class="material-symbols-outlined icon-18 Mdblue-fill-600 ">article</span> <span>2</span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <div class="grid grid-cols-1 gap-2">
+    <div class="mb-2 block rounded-md border border-gray-300 bg-white p-4">
+      <div class="flex">
+        <div><span class="material-symbols-outlined icon-24 Mdblue-fill-600- mr-2 mt-1 text-gray-600">topic</span>
+        </div>
+        <div class="overflow-scroll- w-full overflow-hidden text-Mdblue-600">
+          <div class="flex justify-between text-lg font-semibold text-primary-600"><a target="_blank" href=""
+              class="grow overflow-hidden">
+              <div class="truncate"> Grace Davidson v. Gregory Alexander, Steve Gorman </div>
+            </a>
+            <div class="flex items-center justify-between space-x-1">
+              <div
+                class="inline-flex items-center space-x-1 rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold text-Mdblue-700 whitespace-nowrap">
+                <span class="material-symbols-outlined icon-18 Mdblue-fill-600">article</span><span>2</span>
+              </div>
+              <button type="button"
+                class="flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                  class="material-symbols-outlined icon-24"> more_horiz </span></button>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="flex flex-wrap space-x-3 rounded p-2 text-sm font-normal group-hover:bg-white text-gray-600">
+              <div class="flex items-center"><span class="material-symbols-outlined icon-16 mr-1">tag</span><span
+                  class="font-semibold text-gray-600">0000</span></div>
+              <div class="flex items-center"><span class="material-symbols-outlined icon-16  mr-1">
+                  account_balance </span><span class="font-semibold text-gray-600">Content</span></div>
+              <div class="flex items-center"><span
+                  class="material-symbols-outlined icon-16  mr-1">calendar_month</span><span
+                  class="font-semibold text-gray-600">1 Jan 2025</span></div>
+              <div class="flex items-center"><span class="material-symbols-outlined icon-16 mr-1">list_alt</span><span
+                  class="font-semibold text-gray-600">Content</span></div>
+              <div class="flex items-center"><span class="material-symbols-outlined icon-16 mr-1">timelapse</span><span
+                  class="font-semibold text-gray-600">Status</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--case-detail-end-->
 
 
 <!--project page start-->
@@ -22,11 +183,11 @@
 
   <div class="border-gray-200 bg-white">
     <ul class="flex flex-wrap text-center text-sm font-medium justify-center">
-      <li class=""><a routerlinkactive="text-primary-700 border-primary-700 hover:border-primary-700"
-          class="-mb-0.5 inline-block rounded-t-lg border-b-2 p-4 text-base font-semibold text-Mdblue-600 hover:!text-Mdblue-700 text-primary-700 border-primary-700 hover:border-primary-700">From
+      <li class=""><a routerlinkactive="text-primary-600 border-primary-700 hover:border-primary-700"
+          class="-mb-0.5 inline-block rounded-t-lg border-b-2 p-4 text-base font-semibold text-Mdblue-600 hover:!text-Mdblue-700 text-primary-600 border-primary-700 hover:border-primary-700">From
           a Template</a>
       </li>
-      <li class=""><a routerlinkactive="text-primary-700 border-primary-700 hover:border-primary-700"
+      <li class=""><a routerlinkactive="text-primary-600 border-primary-700 hover:border-primary-700"
           class="-mb-0.5 inline-block rounded-t-lg border-b-2 p-4 text-base font-semibold text-Mdblue-600 hover:!text-Mdblue-700">
           From Scratch</a></li>
     </ul>
@@ -37,20 +198,20 @@
   <div iconname="text_snippet" iconsize="icon-48" message="No similar cases found"
     info="We couldn't find any similar cases for the case.">
     <div class="flex flex-col items-center mt-16"><span
-        class="Mdblue-fill-600 icon-48 material-symbols-outlined mb-3 text-Mdblue-600 "> text_snippet
+        class="Mdblue-fill-600 icon-48 material-symbols-outlined mb-3 gray-fill-600 "> text_snippet
       </span>
-      <div class="mb-2 text-2xl font-semibold text-Mdblue-600 "> No Templates Available </div>
-      <div class="text-base text-Mdblue-600 ">Create your first template to start using it for projects </div>
+      <div class="mb-2 text-2xl font-semibold text-gray-600 "> No Templates Available </div>
+      <div class="text-base text-gray-600 ">Create your first template to start using it for projects </div>
     </div>
   </div>
   <div class="grid grid-cols-2 gap-4 justify-center w-[28rem] mx-auto mt-4">
     <button type="submit" id="button-search"
-      class="btn-focus flex w-full items-center justify-center rounded border border-transparent px-4 py-3 text-base font-medium text-white focus:outline-none bg-primary-700 hover:bg-primary-800"><span
+      class="btn-focus flex w-full items-center justify-center rounded border border-transparent px-4 py-3 text-base font-medium text-white focus:outline-none bg-secondary-600 hover:bg-secondary-800"><span
         class="material-symbols-outlined mr-1">
         add </span><span>Create a template</span></button>
     <button
-      class="btn-focus flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
-        class="icon-16 material-symbols-outlined mr-1">
+      class="btn-focus flex items-center justify-center rounded border-[1.5px] border-gray-300 bg-white p-2 text-sm font-semibold text-secondary-600 bg-secondary-700- hover:border-gray-600 hover:bg-gray-100 hover:text-secondary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+        class="icon-16 material-symbols-outlined mr-1 text-secondary-600">
         schedule </span><span>Manage Templates</span></button>
   </div>
 </div>
@@ -61,7 +222,7 @@
     <!-- Header Section -->
     <div class="mb-6">
       <div class="space-y-3">
-        <h2 class="text-2xl font-medium text-Mdblue-700">Template Fields</h2>
+        <h2 class="text-2xl font-semibold text-Mdblue-700">Template Fields</h2>
         <p class="text-base text-Mdblue-700">Define and configure the fields that will appear in your template</p>
       </div>
     </div>
@@ -75,7 +236,7 @@
           <div class="flex flex-col gap-1.5">
             <!-- Title + Icon Row -->
             <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-Mdblue-700">info</span>
+              <span class="material-symbols-outlined Mdblue-fill-700">info</span>
               <p class="text-sm text-Mdblue-700 font-normal">Configure each field with its type, validation, and display
                 options. Add multiple fields to collect the information you need.</p>
             </div>
@@ -85,7 +246,7 @@
         <!-- Action Button -->
         <div class="ml-6 shrink-0">
           <button type="button"
-            class="btn-focus flex w-full items-center justify-center rounded border border-transparent px-4 py-3 text-base font-medium text-white focus:outline-none bg-primary-700 hover:bg-primary-800 ">
+            class="btn-focus flex w-full items-center justify-center rounded border border-transparent px-4 py-3 text-base font-medium text-white focus:outline-none bg-Mdblue-700 hover:bg-primary-800 ">
             Action
           </button>
         </div>
@@ -98,13 +259,13 @@
     <!-- Field Configuration Section -->
     <div class=" pt-10">
       <!-- Field Item -->
-      <div class="bg-primary-50 rounded-lg border border-primary-200- pb-6">
+      <div class="bg-gray-100 rounded-lg border border-primary-200- pb-6">
         <!-- Field Header with Drag Handle -->
         <div class="flex items-center border-b border-primary-200 p-3">
           <div class="shrink-0 mr-2">
             <span class="material-symbols-outlined text-primary-200">drag_indicator</span>
           </div>
-          <h3 class="text-lg font-medium text-Mdblue-700">Field 1</h3>
+          <h3 class="text-lg font-semibold text-Mdblue-700">Field 1</h3>
         </div>
 
         <!-- Field Configuration Form -->
@@ -112,7 +273,7 @@
           <!-- Name Field -->
           <div>
             <div class="space-y-1">
-              <label for="field-name" class="block text-base font-medium text-Mdblue-700">Name</label>
+              <label for="field-name" class="block text-base font-semibold text-Mdblue-700">Name</label>
               <input type="text" id="field-name" name="field-name"
                 class="block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 disabled:bg-gray-100"
                 placeholder="e.g., Client Name, Budget, Target Audience">
@@ -122,7 +283,7 @@
           <!-- Type Field -->
           <div>
             <div class="space-y-3">
-              <label class="block text-base font-medium text-Mdblue-700">Type</label>
+              <label class="block text-base font-semibold text-Mdblue-700">Type</label>
               <div class="space-y-2">
                 <!-- Text Radio Option -->
                 <div class="flex items-center">
@@ -163,7 +324,7 @@
       <!-- Add Another Field Button -->
       <div class="mt-4">
         <button type="button"
-          class="btn-focus w-full flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
+          class="btn-focus w-full flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-600 bg-secondary-700- hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
           <span class="material-symbols-outlined mr-1">add</span>
           Add another field
         </button>
@@ -173,18 +334,18 @@
   <!-- Bottom Action Buttons -->
   <div class="flex items-center justify-between  p-12 border-t border-gray-200">
     <button type="button"
-      class="btn-focus w-full- flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-base font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
+      class="btn-focus w-full- flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-base font-semibold text-gray-700 bg-secondary-700- hover:border-gray-600 hover:bg-gray-100 hover:text-gray-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
       <span class="material-symbols-outlined mr-1">arrow_back</span>
       Back: Basic Info
     </button>
 
     <div class="flex space-x-6 items-center">
       <button type="button"
-        class="btn-focus w-full- flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-base font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
+        class="btn-focus w-full- flex items-center justify-center rounded border border-gray-300 bg-white p-2 text-base font-semibold text-grat-700 bg-secondary-700- hover:border-gray-600 hover:bg-gray-100 hover:text-gray-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
         Cancel
       </button>
       <button type="submit"
-        class="px-3 py-3 text-base font-semibold text-white bg-primary-700 rounded hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500">
+        class="px-3 py-3 text-base font-semibold text-white bg-secondary-700 rounded hover:bg-secondary-800 focus:outline-none focus:ring-2 focus:ring-secondary-500">
         Save This Template
       </button>
     </div>
@@ -198,13 +359,13 @@
   <div class="w-[57.5rem] mx-auto">
 
     <div class="flex flex-col gap-2 text-center text-Mdblue-700 mt-4 mb-4">
-      <h3 class="text-2xl font-bold text-[32px]">Tracking</h3>
-      <p>Below are the cases you are tracking.</p>
+      <h3 class="text-2xl font-semibold text-[32px] font-lora">Tracking</h3>
+      <p class="text-base font-normal text-Mdblue-700">Below are the cases you are tracking.</p>
     </div>
-    <div class="flex justify-between">
-      <div class="w-[50%]">
+    <div class="flex">
+      <div class="w-full">
         <div class="relative"><input type="text" placeholder="Search..."
-            class="block w-full rounded border border-gray-300 bg-gray-50 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0 disabled:bg-gray-100">
+            class="block w-full rounded-lg border border-gray-300 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 focus:border-secondary-600 focus:ring-1 hover:bg-gray-50 hover:border-secondary-600 focus:ring-secondary-600 focus:outline-none">
           <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="size-4 text-Mdblue-600">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -212,36 +373,59 @@
             </svg></div>
         </div>
       </div>
-      <div class="flex gap-2">
-        <button
-          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
-            class="icon-16 material-symbols-outlined mr-1"> add_circle </span><span>Added</span></button>
-        <button
-          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
-            class="icon-16 material-symbols-outlined mr-1"> do_not_disturb_on </span><span>Removed</span></button>
-        <button
-          class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
-            class="icon-16 material-symbols-outlined mr-1"> refresh </span><span>Changed</span></button>
-      </div>
+
     </div>
     <div class="flex flex-col gap-2">
 
       <div>
-        <div class="my-6 flex items-center">
+        <div class="my-6 flex items-center gap-6 justify-between">
           <div class="mr-2 flex items-center text-center font-semibold text-Mdblue-600">
             <h3 class="text-xl font-semibold text-Mdblue-700">New for you</h3>
           </div>
           <div class="w-full- h-[1px] grow bg-gray-200"></div>
+          <div class="flex gap-2 items-center">
+            <button
+              class="btn-focus flex items-center rounded border border-secondary-600 bg-white p-2 py-1.5 text-sm font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+                class="icon-16 material-symbols-outlined mr-1 text-secondary-600"> add_circle
+              </span><span>Added</span></button>
+            <button
+              class="btn-focus flex items-center rounded border border-red-600 bg-white p-2 py-1.5 text-sm font-semibold text-Mdblue-700  hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+                class="icon-16 material-symbols-outlined mr-1 text-red-600"> do_not_disturb_on
+              </span><span>Removed</span></button>
+            <button
+              class="btn-focus flex items-center rounded border border-primary-600 bg-white p-2 py-1.5 text-sm font-semibold text-Mdblue-700  hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+                class="icon-16 material-symbols-outlined mr-1 text-primary-600"> refresh
+              </span><span>Changed</span></button>
+            <button
+              class="btn-focus ml-2 flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-600 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+                class="material-symbols-outlined icon-16 text-primary-600 mr-1">
+                visibility
+              </span><span>Mark All As Read</span></button>
+          </div>
         </div>
         <div>
           <div class="flex flex-col items-center mt-16"><span
-              class="Mdblue-fill-600 icon-48 material-symbols-outlined mb-3 text-Mdblue-600"> text_snippet
+              class="Mdblue-fill-600- icon-48 material-symbols-outlined mb-3 gray-fill-600"> text_snippet
             </span>
-            <div class="mb-2 text-2xl font-semibold text-Mdblue-600"> Nothing new for you. </div>
+            <div class="mb-2 text-2xl font-semibold text-gray-600"> Nothing new for you. </div>
           </div>
         </div>
       </div>
+      <div class="container flex gap-2 items-center justify-center">
+        <button
+          class="btn-focus flex items-center rounded border border-secondary-600 bg-white p-2 py-1.5 text-sm font-semibold text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+            class="icon-16 material-symbols-outlined mr-1 text-secondary-600"> add_circle
+          </span><span>Added</span></button>
+        <button
+          class="btn-focus flex items-center rounded border border-red-600 bg-white p-2 py-1.5 text-sm font-semibold text-Mdblue-700  hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+            class="icon-16 material-symbols-outlined mr-1 text-red-600"> do_not_disturb_on
+          </span><span>Removed</span></button>
+        <button
+          class="btn-focus flex items-center rounded border border-primary-600 bg-white p-2 py-1.5 text-sm font-semibold text-Mdblue-700  hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+            class="icon-16 material-symbols-outlined mr-1 text-primary-600"> sync
+          </span><span>Changed</span></button>
 
+      </div>
       <div>
         <div class="my-6 flex items-center">
           <div class="mr-2 flex items-center text-center font-semibold text-Mdblue-600">
@@ -256,10 +440,10 @@
               Case Name
             </div>
             <div class="flex gap-2">
-              <button class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600
+              <button class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-600 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600
                  focus:bg-gray-100 focus:outline-none"><span>See Latest Updates</span></button>
               <button
-                class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
+                class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-600 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none">
                 <span class="icon-16 material-symbols-outlined mr-1"> refresh </span>
                 <span>Label</span>
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
@@ -279,49 +463,57 @@
       <div class="border-2 border-gray-200 p-4 rounded-xl">
         <div class="flex justify-between items-center ">
           <div> Case Name </div>
-          <div class="flex gap-2"><button
-              class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span>See
+          <div class="flex gap-2">
+            <button
+              class="btn-focus ml-2 flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-600 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+                class="material-symbols-outlined icon-16 text-primary-600 mr-1">
+                visibility
+              </span><span>Mark Read</span></button>
+            <button
+              class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-600 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span>See
                 Latest Updates</span></button><button
-              class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-700 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-700 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
+              class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-600 bg-secondary-700 hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
                 class="icon-16 material-symbols-outlined mr-1"> refresh </span><span>Label</span><svg aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
                 class="ms-1 size-[0.5rem] text-Mdblue-600">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="m1 1 4 4 4-4"></path>
-              </svg></button></div>
+              </svg></button>
+          </div>
         </div>
         <ol class="mt-3">
           <div class="grow border-t border-gray-300"></div>
           <li class="pt-3 pb-3">
             <div class="flex">
-              <div class="text-sm font-semibold text-Mdblue-600 mr-8">2/18/2023</div>
+              <div class="text-sm font-semibold text-gray-600 mr-8">2023/12/18</div>
               <div class="grow flex-col">
                 <div class="flex  pb-2">
                   <div class="">
-                    <span class="material-symbols-outlined text-Mdblue-600 icon-24">
+                    <span class="material-symbols-outlined text-Mdblue-700 icon-24">
                       group
                     </span>
                   </div>
                   <div class="text-gray-600 grow ml-4">
                     <div class="flex justify-between font-normal mb-4">
                       <span class="text-lg font-semibold text-Mdblue-700 ">Parties</span>
-                      <span class="flex items-center text-Mdblue-600 text-sm font-semibold">
-                        <span class="material-symbols-outlined icon-12 Mdblue-fill-600">schedule</span>
+                      <span class="flex items-center text-gray-600 text-sm font-semibold">
+                        <span class="material-symbols-outlined icon-16 mr-1">schedule</span>
                         10:45 AM
                       </span>
                     </div>
                     <div class="flex text-base font-semibold text-Mdblue-700 mb-2">
 
-                      <span
-                        class="flex items-center bg-secondary-200- py-1 px-3 mb-2- rounded-md border border-green-700">
-                        <span class="icon-16 material-symbols-outlined mr-1 text-green-700"> add_circle </span>
+                      <span class="flex items-center py-1 px-3 mb-2- rounded-md border border-secondary-600">
+                        <span class="icon-16 material-symbols-outlined mr-1 text-secondary-600"> add_circle </span>
                         <span>Zachary P Reynolds-</span>
                         <span class="text-base font-normal italic">Defendant</span>
                       </span>
                     </div>
                     <div class="flex text-base font-semibold rounded-md text-Mdblue-700">
-                      <span class="bg-red-100 py-1 px-3 rounded-md">Christine M Baker- <span
-                          class="text-base font-normal italic">Plaintiff</span></span>
+                      <span class="flex items-center py-1 px-3 rounded-md border border-red-600">
+                        <span class="icon-16 material-symbols-outlined mr-1 text-red-600"> do_not_disturb_on </span>
+                        <span>Christine M Baker- </span>
+                        <span class="text-base font-normal italic">Plaintiff</span></span>
                     </div>
                   </div>
                 </div>
@@ -330,20 +522,24 @@
                     <!-- <span class="material-symbols-outlined text-Mdblue-600 icon-24">
                             group
                           </span> -->
-                    <span class="material-symbols-outlined text-Mdblue-600 icon-24"> business_center </span>
+                    <span class="material-symbols-outlined text-Mdblue-700 icon-24"> business_center </span>
                   </div>
                   <div class="text-gray-600 grow ml-4">
                     <div class="flex justify-between font-normal mb-4">
                       <span class="text-lg font-semibold text-Mdblue-700">Attorneys</span>
-                      <span class="flex items-center text-sm font-semibold text-Mdblue-600">
-                        <span class="material-symbols-outlined icon-12 Mdblue-fill-600">schedule</span>
+                      <span class="flex items-center text-sm font-semibold text-gray-600">
+                        <span class="material-symbols-outlined icon-16 mr-1">schedule</span>
                         10:45 AM
                       </span>
                     </div>
                     <div class="flex text-base font-semibold text-Mdblue-700">
-                      <span class="bg-pink-300 py-1 px-3 mb-2 rounded-md">Matthew J Bakota - Attorney was added
-                        for
-                        Zachary P Reynolds
+                      <span class="flex items-center py-1 px-3 mb-2 rounded-md border border-primary-600">
+                        <span class="icon-16 material-symbols-outlined mr-1 text-primary-600"> sync </span>
+                        <span> Matthew J Bakota - Attorney was
+                          added
+                          for
+                          Zachary P Reynolds</span>
+
                         <span class="text-base font-normal italic">- Defendant</span>
                       </span>
                     </div>
@@ -355,59 +551,69 @@
                     <!-- <span class="material-symbols-outlined text-Mdblue-600 icon-24">
                             group
                           </span> -->
-                    <span class="material-symbols-outlined text-Mdblue-600 icon-24"> gavel </span>
+                    <span class="material-symbols-outlined text-Mdblue-700 icon-24"> gavel </span>
                   </div>
                   <div class="text-gray-600 grow ml-4">
                     <div class="flex justify-between font-normal mb-4">
                       <span class="text-lg font-semibold  text-Mdblue-700">Judges</span>
-                      <span class="flex items-center text-sm font-semibold text-Mdblue-600">
-                        <span class="material-symbols-outlined icon-12 Mdblue-fill-600">schedule</span>
+                      <span class="flex items-center text-sm font-semibold text-gray-600">
+                        <span class="material-symbols-outlined icon-16 mr-1">schedule</span>
                         10:45 AM
                       </span>
                     </div>
 
                     <div class="flex text-base font-semibold rounded-md text-Mdblue-700">
-                      <span class="bg-red-100 py-1 px-3 rounded-md">Caroline H. Gentry<span
-                          class="text-base font-normal italic">- Referral Judge</span></span>
+                      <span class="flex items-center py-1 px-3 rounded-md border border-red-600">
+                        <span class="icon-16 material-symbols-outlined mr-1 text-red-600"> do_not_disturb_on </span>
+                        <span> Caroline H. Gentry</span>
+                        <span class="text-base font-normal italic">- Referral Judge</span></span>
                     </div>
                   </div>
                 </div>
                 <button type="button"
-                  class="text-primary-700 mt-2 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded text-base px-5 py-2 text-center items-center w-full">
+                  class="text-primary-600 mt-2 bg-gray-50 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded text-base px-5 py-2 text-center items-center w-full">
                   Show All <span>(8)</span></button>
               </div>
             </div>
           </li>
           <li class="pt-3 pb-3">
             <div class="flex">
-              <div class="text-sm font-semibold text-Mdblue-600 mr-8">2/18/2023</div>
+              <div class="text-sm font-semibold text-gray-600 mr-8">2023/12/18</div>
               <div class="grow">
                 <div class="flex pb-2">
                   <div class="">
                     <!-- <span class="material-symbols-outlined text-Mdblue-600 icon-24">
                             group
                           </span> -->
-                    <span class="material-symbols-outlined text-Mdblue-600 icon-24"> description </span>
+                    <span class="material-symbols-outlined text-Mdblue-700 icon-24"> description </span>
                   </div>
                   <div class="text-gray-600 grow ml-4">
                     <div class="flex justify-between font-normal mb-4">
                       <span class="text-lg font-semibold  text-Mdblue-700">Docket Entries</span>
-                      <span class="flex items-center text-sm font-semibold text-Mdblue-600">
-                        <span class=" material-symbols-outlined icon-12 Mdblue-fill-600">schedule</span>
+                      <span class="flex items-center text-sm font-semibold text-gray-600">
+                        <span class=" material-symbols-outlined icon-16 mr-1">schedule</span>
                         10:45 AM</span>
                     </div>
                     <div class="flex text-base font-semibold items-center">
-                      <span class="bg-secondary-200 py-1 px-3 rounded-md text-Mdblue-700">10/30/2023
+                      <span class="flex items-center py-1 px-3 rounded-md text-Mdblue-700 border border-secondary-600">
+                        <span class="icon-16 material-symbols-outlined mr-1 text-secondary-600"> add_circle </span>
+                        <span>10/30/2023</span>
                       </span>
-                      <p class="ml-3 text-Mdblue-600">COMPLAINT <span class="text-Mdblue-700 font-normal">Additional
-                          Info:
-                          Plaintiff: VELOCITY INVESTMENTS,
-                          LLC;</span></p>
+                      <p class="ml-3 text-Mdblue-700"><span class="text-Mdblue-700 font-bold">Name: </span> <span
+                          class="text-Mdblue-700 font-normal">
+                          Content</span>
+                        <span class="text-Mdblue-700 font-bold">
+                          Description:
+                        </span>
+                        <span class="text-Mdblue-700 font-normal">
+                          Content, content
+                        </span>
+                      </p>
                     </div>
                   </div>
                 </div>
                 <button type="button"
-                  class="text-primary-700 mt-2 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded text-base px-5 py-2 text-center items-center w-full">
+                  class="text-primary-600 mt-2 bg-gray-50 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded text-base px-5 py-2 text-center items-center w-full">
                   Show All <span>(8)</span></button>
               </div>
             </div>
@@ -438,7 +644,7 @@
 <!--boolean search start-->
 <div class="flex flex-col gap-10 bg-white rounded-lg p-8 border border-gray-200 mt-6 w-[62rem] mx-auto">
   <!-- Title and Description -->
-<div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-2">
     <h2 class="text-[32px] font-serif font-semibold text-Mdblue-700">Boolean Search</h2>
     <p class="text-base text-Mdblue-700">
       This search supports multiple use cases:<br>
@@ -469,9 +675,9 @@
       <table class="min-w-full text-left border border-gray-200 rounded-lg overflow-hidden">
         <thead class="bg-gray-50">
           <tr>
-            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Connector</th>
-            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Description</th>
-            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Example</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-700 uppercase ">Connector</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-700 uppercase ">Description</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-700 uppercase ">Example</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100">
@@ -518,9 +724,9 @@
       <table class="min-w-full text-left border border-gray-200 rounded-lg overflow-hidden">
         <thead class="bg-gray-50">
           <tr>
-            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Field</th>
-            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Description</th>
-            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Example</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-700 uppercase ">Field</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-700 uppercase ">Description</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-700 uppercase ">Example</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100 text-sm">
@@ -669,8 +875,8 @@
       <table class="min-w-full text-left border border-gray-200 rounded-lg overflow-hidden">
         <thead class="bg-gray-50">
           <tr>
-            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Example</th>
-            <th class="px-4 py-2 text-xs font-semibold text-gray-600 uppercase ">Explanation</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-700 uppercase ">Example</th>
+            <th class="px-4 py-2 text-xs font-semibold text-gray-700 uppercase ">Explanation</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100 text-sm">
@@ -701,18 +907,18 @@
     <li class="border-l-4- border-green-700- relative">
       <div class="absolute w-[3px] h-full left-[-2px]  bg-gray-200 border-l-4 border-green-700"></div>
       <a
-        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700- text-primary-700 border-primary-700 hover:border-primary-700 fill-primary-700"><span
-          class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 !text-primary-700"> sort </span>
+        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-600- text-primary-600 border-primary-700 hover:border-primary-700 fill-primary-700"><span
+          class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 !text-primary-600"> sort </span>
         <div>General</div>
       </a>
     </li>
     <li class="">
       <a
-        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-700-"><span
+        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-600-"><span
           class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2"> group </span>
         <div>Members</div>
       </a>
-    </li><!--container-->
+    </li>
   </ul>
 </div>
 <!--manage project end-->
@@ -742,7 +948,7 @@
         </div>
         <div>
           <button type="button"
-            class="flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md text-sm p-2 font-semibold text-primary-700">
+            class="flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md text-sm p-2 font-semibold text-primary-600">
             Change Password
           </button>
         </div>
@@ -757,84 +963,198 @@
 <!--my accounts end-->
 
 <!--new case detailpage start-->
-<div class="max-w-4xl mx-auto bg-white rounded-lg border border-gray-200 shadow-sm mt-8">
+<div class="max-w-4xl- container mx-auto bg-white rounded-lg border border-gray-200 shadow-sm mt-8">
   <!-- Header -->
   <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4">
     <div class="flex items-center gap-3">
-      <span class="text-lg font-semibold text-primary-700">Party Name</span>
-      <span class="bg-gray-100 text-gray-700 text-base font-semibold rounded-full px-3 py-1">Party Role</span>
+      <span class="text-lg font-semibold text-primary-600">Party Name</span>
+      <span class="bg-gray-50 text-Mdblue-700 text-base font-semibold rounded-full px-3 py-1">Party Role</span>
     </div>
   </div>
   <!-- Table -->
-  <div class="px-6 pt-4 pb-2">
+  <div class="">
     <div class="overflow-x-auto">
-   <div class="flex flex-col px-6 py-3 pb-6">
-  <div class="flex flex-col gap-2">
-    <table class="w-full">
-      <thead>
-        <tr>
-          <th class="px-3 py-1 text-left">
-            <div class="flex items-center gap-1">
-              <span class="text-xs font-semibold uppercase text-gray-600">Attorney</span>
-              <div class="inline-block align-middle"><button type="button" class="press flex items-center text-center"><span class="material-symbols-outlined font-semibold">expand_less</span></button><button type="button" class="press flex items-center text-center"><span class="material-symbols-outlined font-semibold">expand_more</span></button></div>
-            </div>
-          </th>
-          <th class="px-3 py-1 text-left">
-            <div class="flex items-center gap-1">
-              <span class="text-xs font-semibold uppercase text-gray-600">Lawfirm</span>
-              <div class="inline-block align-middle"><button type="button" class="press flex items-center text-center"><span class="material-symbols-outlined font-semibold">expand_less</span></button><button type="button" class="press flex items-center text-center"><span class="material-symbols-outlined font-semibold">expand_more</span></button></div>
-            </div>
-          </th>
-          <th class="px-3 py-1 text-right">
-            <div class="flex items-center justify-end gap-1">
-              <span class="text-xs font-semibold uppercase text-gray-600">Type</span>
-              <div class="inline-block align-middle"><button type="button" class="press flex items-center text-center"><span class="material-symbols-outlined font-semibold">expand_less</span></button><button type="button" class="press flex items-center text-center"><span class="material-symbols-outlined font-semibold">expand_more</span></button></div>
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody class="outline outline-1 outline-gray-300 rounded-md bg-white">
-        <tr>
-          <td class="px-3 py-3">
-            <span class="text-base font-semibold text-primary-700">Martha Jones</span>
-          </td>
-          <td class="px-3 py-3">
-            <span class="text-base font-semibold text-primary-700">Wisdom Law</span>
-          </td>
-          <td class="px-3 py-3 text-right">
-            <span class="text-base font-normal text-gray-900">Lead Attorney</span>
-          </td>
-        </tr>
-        <tr class="border-t border-gray-300">
-          <td class="px-3 py-3">
-            <span class="text-base font-semibold text-primary-700">William Brown</span>
-          </td>
-          <td class="px-3 py-3">
-            <span class="text-base font-semibold text-primary-700">Total Quality Paralegal</span>
-          </td>
-          <td class="px-3 py-3 text-right">
-            <span class="text-base font-normal text-gray-900">Attorney</span>
-          </td>
-        </tr>
-        <tr class="border-t border-gray-300">
-          <td class="px-3 py-3">
-            <span class="text-base font-semibold text-primary-700">Guy Hawkins</span>
-          </td>
-          <td class="px-3 py-3">
-            <span class="text-base font-semibold text-primary-700">Renaissance Legal Services</span>
-          </td>
-          <td class="px-3 py-3 text-right">
-            <span class="text-base font-normal text-gray-900">Attorney</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="flex flex-col px-6 py-3 pb-6">
+        <div class="flex flex-col gap-2">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="px-3 py-1 text-left">
+                  <div class="flex items-center gap-1">
+                    <span class="text-sm font-semibold uppercase text-gray-700">Attorney</span>
+                    <div class="inline-block align-middle"><button type="button"
+                        class="press flex items-center text-center"><span
+                          class="material-symbols-outlined font-semibold text-gray-700">expand_less</span></button><button
+                        type="button" class="press flex items-center text-center"><span
+                          class="material-symbols-outlined font-semibold text-gray-700">expand_more</span></button>
+                    </div>
+                  </div>
+                </th>
+                <th class="px-3 py-1 text-left">
+                  <div class="flex items-center gap-1">
+                    <span class="text-sm font-semibold uppercase text-gray-700">Lawfirm</span>
+                    <div class="inline-block align-middle"><button type="button"
+                        class="press flex items-center text-center"><span
+                          class="material-symbols-outlined font-semibold text-gray-700">expand_less</span></button><button
+                        type="button" class="press flex items-center text-center"><span
+                          class="material-symbols-outlined font-semibold text-gray-700">expand_more</span></button>
+                    </div>
+                  </div>
+                </th>
+                <th class="px-3 py-1 text-right">
+                  <div class="flex items-center justify-end gap-1">
+                    <span class="text-sm font-semibold uppercase text-gray-700">Type</span>
+                    <div class="inline-block align-middle"><button type="button"
+                        class="press flex items-center text-center"><span
+                          class="material-symbols-outlined font-semibold text-gray-700">expand_less</span></button><button
+                        type="button" class="press flex items-center text-center"><span
+                          class="material-symbols-outlined font-semibold text-gray-700">expand_more</span></button>
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="outline outline-1 outline-gray-300 rounded-md bg-white">
+              <tr>
+                <td class="px-3 py-3">
+                  <span class="text-base font-semibold text-primary-600">Martha Jones</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="text-base font-semibold text-primary-600">Wisdom Law</span>
+                </td>
+                <td class="px-3 py-3 text-right">
+                  <span class="text-base font-normal text-gray-900">Lead Attorney</span>
+                </td>
+              </tr>
+              <tr class="border-t border-gray-300">
+                <td class="px-3 py-3">
+                  <span class="text-base font-semibold text-primary-600">William Brown</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="text-base font-semibold text-primary-600">Total Quality Paralegal</span>
+                </td>
+                <td class="px-3 py-3 text-right">
+                  <span class="text-base font-normal text-gray-900">Attorney</span>
+                </td>
+              </tr>
+              <tr class="border-t border-gray-300">
+                <td class="px-3 py-3">
+                  <span class="text-base font-semibold text-primary-600">Guy Hawkins</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="text-base font-semibold text-primary-600">Renaissance Legal Services</span>
+                </td>
+                <td class="px-3 py-3 text-right">
+                  <span class="text-base font-normal text-gray-900">Attorney</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-  </div>
-</div>
+        </div>
+      </div>
     </div>
 
   </div>
 </div>
 
 <!--new case detailpage end-->
+
+<!--label start-->
+<div class="flex gap-2">
+
+  <span class="bg-primary-50 text-blue-600 text-base font-bold rounded px-2 py-1">Label 1</span>
+  <span class="bg-yellow-50 text-yellow-900 text-base font-bold rounded px-2 py-1">Label 2</span>
+  <span class="bg-purple-50 text-purple-600 text-base font-bold rounded px-2 py-1">Label 3</span>
+  <span class="bg-red-50 text-red-600 text-base font-bold rounded px-2 py-1">Label 4</span>
+</div>
+<!--label end-->
+
+<!--user roles start-->
+<div class="relative overflow-x-auto">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead class="border-b text-sm font-semibold text-gray-600 uppercase">
+      <tr>
+        <th scope="col" class="p-4 ">
+          Name
+        </th>
+        <th scope="col" class="p-4">
+          Number of Permissions
+        </th>
+        <th scope="col" class="p-4">
+
+        </th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-100">
+      <tr class="text-base font-semibold border-b-0 text-Mdblue-700">
+        <td class="p-4 text-base  ">
+          Admin
+        </td>
+        <td class="p-4 font-normal ">
+          9
+        </td>
+        <td class="p-4">
+          <div class="flex gap-x-2 justify-end">
+            <button type="button"
+              class="text-primary-700- card-btn bg-gray-100- border- border-gray-300- px-1.5- py-1.5- flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                class="material-symbols-outlined icon-24"> more_horiz </span></button>
+          </div>
+        </td>
+      </tr>
+      <tr class="text-base font-semibold border-b-0 text-Mdblue-700">
+        <td class="p-4 text-base  ">
+          Billing Admin
+        </td>
+        <td class="p-4 font-normal">
+          7
+        </td>
+        <td class="p-4">
+          <div class="flex gap-x-2 justify-end">
+            <button type="button"
+              class="text-primary-700- card-btn bg-gray-100- border- border-gray-300- px-1.5- py-1.5- flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                class="material-symbols-outlined icon-24"> more_horiz </span></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
+<!--user roles end-->
+
+<!--dart-deep-dropdown-start-->
+<button type="submit" class="btn-focus flex w-[16rem] items-center justify-between rounded border border-transparent bg-gray-900 px-4 py-3 text-base
+  font-medium text-white hover:bg-gray-900 focus:outline-none">
+  <span></span>
+  <span>DART</span>
+  <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+    fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+  </svg>
+</button>
+<div class="cust-drop z-10 w-[16rem] divide-y divide-gray-100 rounded  shadow block bg-gray-900 mt-1"
+  data-popper-placement="bottom">
+  <ul class="space-y-2 p-2 text-base font-semibold text-Mdblue-700">
+    <li class="">
+      <div><button type="button" class="disabled inline-flex w-full items-center rounded justify-center  border- p-2 text-sm font-semibold
+           focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 bg-gray-900 text-white
+            hover:bg-primary-600">
+          <div class="mr-2 flex items-center">
+            <span> DART</span>
+          </div>
+        </button></div>
+    </li>
+    <li class="">
+      <div><button type="button" class="disabled inline-flex w-full items-center rounded justify-center  border- p-2 text-sm font-semibold
+           focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 bg-gray-900 text-white
+            hover:bg-primary-600">
+          <div class="mr-2 flex items-center">
+            <span> DEEP</span>
+          </div>
+        </button></div>
+    </li>
+  </ul>
+</div>
+<!--dart-deep-dropdown-end-->'
