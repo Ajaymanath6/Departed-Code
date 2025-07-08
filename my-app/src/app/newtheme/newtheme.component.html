@@ -905,16 +905,15 @@
 <div class="left-tab w-[10rem] w-full- mx-auto">
   <ul class="space-y-1 px-2 pl-0 mt-[11rem] font-semibold border-l border-gray-300">
     <li class="border-l-4- border-green-700- relative">
-      <div class="absolute w-[3px] h-full left-[-2px]  bg-gray-200 border-l-4 border-green-700"></div>
+      <div class="absolute w-[3px] h-full left-[-2px]  bg-gray-200 border-l-4 border-primary-600"></div>
       <a
-        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-600- text-primary-600 border-primary-700 hover:border-primary-700 fill-primary-700"><span
-          class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 !text-primary-600"> sort </span>
+        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 hover:bg-gray-200  text-Mdblue-700 border-primary-700 hover:border-primary-700 fill-primary-700"><span
+          class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2 !text-Mdblue-700"> sort </span>
         <div>General</div>
       </a>
     </li>
     <li class="">
-      <a
-        class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-primary-600-"><span
+      <a class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 "><span
           class="material-symbols-outlined icon-20 Mdblue-fill-600 mr-2"> group </span>
         <div>Members</div>
       </a>
@@ -924,7 +923,7 @@
 <!--manage project end-->
 
 <!--my accounts start-->
-<div class="flex flex-col gap-2 max-w-[42rem] mx-auto">
+<div class="flex flex-col gap-2 max-w-[48rem] mx-auto">
   <div class="text-medium text-Mdblue-600 border-2 border-gray-200 rounded-xl">
     <div class="flex items-center flex-col gap-2 mb-2 text-center border-b pb-4 p-6">
       <div
@@ -938,23 +937,23 @@
     </div>
     <div class="grid grid-cols-1 gap-6 mt-6 p-6">
       <div>
-        <p class="text-base text-Mdblue-600 font-semibold">Email</p>
+        <p class="text-base text-Mdblue-700 font-semibold">Email</p>
         <p class="text-base text-Mdblue-700 font-normal">John@domain.com</p>
       </div>
       <div class="flex justify-between">
         <div>
-          <p class="text-base text-Mdblue-600 font-semibold">Password</p>
+          <p class="text-base text-Mdblue-700 font-semibold">Password</p>
           <p class="text-base text-Mdblue-700 font-normal">••••••••••</p>
         </div>
         <div>
           <button type="button"
-            class="flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md text-sm p-2 font-semibold text-primary-600">
+            class="flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-md text-sm p-2 font-semibold text-secondary-600">
             Change Password
           </button>
         </div>
       </div>
       <div>
-        <p class="text-base text-Mdblue-600 font-semibold">Time Zone</p>
+        <p class="text-base text-Mdblue-700 font-semibold">Time Zone</p>
         <p class="text-base text-Mdblue-700 font-normal">(GMT-5:00) Eastern Time (US & Canada)</p>
       </div>
     </div>
@@ -1125,7 +1124,7 @@
 <!--user roles end-->
 
 <!--dart-deep-dropdown-start-->
-<button type="submit" class="btn-focus flex w-[16rem] items-center justify-between rounded border border-transparent bg-gray-900 px-4 py-3 text-base
+<button type="submit" class="btn-focus flex w-full items-center justify-between rounded border border-transparent bg-gray-900 px-4 py-3 text-base
   font-medium text-white hover:bg-gray-900 focus:outline-none">
   <span></span>
   <span>DART</span>
@@ -1134,12 +1133,12 @@
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
   </svg>
 </button>
-<div class="cust-drop z-10 w-[16rem] divide-y divide-gray-100 rounded  shadow block bg-gray-900 mt-1"
+<div class="cust-drop z-10 w-full divide-y divide-gray-100 rounded  shadow block bg-gray-900 mt-1"
   data-popper-placement="bottom">
   <ul class="space-y-2 p-2 text-base font-semibold text-Mdblue-700">
     <li class="">
       <div><button type="button" class="disabled inline-flex w-full items-center rounded justify-center  border- p-2 text-sm font-semibold
-           focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 bg-gray-900 text-white
+           focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-primary-600 bg-gray-900 text-white
             hover:bg-primary-600">
           <div class="mr-2 flex items-center">
             <span> DART</span>
@@ -1148,7 +1147,7 @@
     </li>
     <li class="">
       <div><button type="button" class="disabled inline-flex w-full items-center rounded justify-center  border- p-2 text-sm font-semibold
-           focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100 bg-gray-900 text-white
+           focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-primary-600 bg-gray-900 text-white
             hover:bg-primary-600">
           <div class="mr-2 flex items-center">
             <span> DEEP</span>
@@ -1157,4 +1156,38 @@
     </li>
   </ul>
 </div>
-<!--dart-deep-dropdown-end-->'
+<!--dart-deep-dropdown-end-->
+<!--dart-deep-left menu-start-->
+<ul class="space-y-2 px-2 c_md:mt-2 bg-Mdblue-700">
+  <li class=""><a
+      class="flex w-full cursor-pointer items-center gap-x-2 rounded-md px-4 py-1 text-Mdblue-600- !text-white c_md:justify-center"><span
+        class="material-symbols-outlined- flex items-center icon-20 Mdblue-fill-600- py-2"><span
+          class="material-symbols-outlined icon-20 "> api </span></span>
+      <div class="sidenav-text truncate "> API &  Documentation </div>
+    </a></li>
+  <li class=""><a
+      class="flex w-full cursor-pointer items-center gap-x-2 rounded-md px-4 py-1 text-Mdblue-600- !text-white c_md:justify-center"><span
+        class="material-symbols-outlined- flex items-center icon-20 Mdblue-fill-600- py-2"><span
+          class="material-symbols-outlined icon-20 "> assured_workload </span></span>
+      <div class="sidenav-text truncate "> Court Standards </div>
+    </a></li>
+     <li class=""><a
+      class="flex w-full cursor-pointer items-center gap-x-2 rounded-md px-4 py-1 text-Mdblue-600- !text-white c_md:justify-center"><span
+        class="material-symbols-outlined- flex items-center icon-20 Mdblue-fill-600- py-2"><span
+          class="material-symbols-outlined icon-20 "> account_tree </span></span>
+      <div class="sidenav-text truncate "> Data Model </div>
+    </a></li>
+     <li class=""><a
+      class="flex w-full cursor-pointer items-center gap-x-2 rounded-md px-4 py-1 text-Mdblue-600- !text-white c_md:justify-center"><span
+        class="material-symbols-outlined- flex items-center icon-20 Mdblue-fill-600- py-2"><span
+          class="material-symbols-outlined icon-20 "> widgets </span></span>
+      <div class="sidenav-text truncate "> Widgets </div>
+    </a></li>
+         <li class=""><a
+      class="flex w-full cursor-pointer items-center gap-x-2 rounded-md px-4 py-1 text-Mdblue-600- !text-white c_md:justify-center"><span
+        class="material-symbols-outlined- flex items-center icon-20 Mdblue-fill-600- py-2"><span
+          class="material-symbols-outlined icon-20 "> extension </span></span>
+      <div class="sidenav-text truncate "> Integrations </div>
+    </a></li>
+</ul>
+<!--dart-deep-left menu-end-->
