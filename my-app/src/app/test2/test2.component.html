@@ -1,495 +1,484 @@
 
+
 <div class="container container-query">
-<div class="w-[20%]">
-  left
-</div>
-<div class="flex-1">
-  <div class="">
-    <div class="font-bold">div 2 (font-bold)</div>
-    <div class="font-[750]">div 2 (font-[750])</div>
-    <div class="font-extrabold">div 2 (font-extrabold)</div>
-    <div>div 4</div>
+  <div class="w-[20%]">
+    left
   </div>
-</div>
+  <div class="flex-1">
+    <div class="">
+      <div class="font-bold">div 2 (font-bold)</div>
+      <div class="font-[750]">div 2 (font-[750])</div>
+      <div class="font-extrabold">div 2 (font-extrabold)</div>
+      <div>div 4</div>
+    </div>
+  </div>
 </div>
 
 
 
 
 <!--parties and attorney new Ui start-->
-         <div class=" parties-attorney-UI">
-                <div class="">
-                  <div class="grid gap-y-6">
-                    <h3 class="text-2xl font-semibold text-Mdblue-700 text-center">Parties and Attorneys</h3>
-                    <div class="relative w-full d-none- test1">
-                      <input type="text" id="table-search"
-                        class="block py-2.5 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600"
-                        placeholder="Search parties, attorneys and law firms...">
-                      <div class="absolute inset-y-0 rtl:inset-r-0 end-2 flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-Mdblue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                          fill="none" viewBox="0 0 20 20">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="flex justify-center">
-                      <div class="flex  items-center space-x-2 text-sm font-semibold text-Mdblue-600">
-                        <span>Showing</span>
-                        <!-- <div
-                      class="relative ml-1 mr-1 inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-gray-200">
-                      <span class="font-medium text-Mdblue-600">25</span>
-                    </div> -->
-                        <div><span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">1 - 3</span>
-                        </div>
-                        <span>of</span>
-                        <div>
-                          <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">10</span>
-                        </div>
-                        <span>results</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex">
-                    <div class="mb-4 font-semibold max-w-[15%] pr-[2%] text-Mdblue-600 text-base w-full">
-
-                      <ul class="space-y-1">
-                        <li class="">
-                          <a class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-Mdblue-700 text-Mdblue-700"
-                            href="">
-                            My Team
-                            <div
-                              class="flex ml-2 items-center rounded-full bg-gray-200 px-2 py-1 text-sm font-semibold text-Mdblue-600">
-                              <span>19</span>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-
-                    </div>
-                    <div class="mt-4 w-full p-6- pl-0 pt-0">
-                      <div class="flex justify-center mb-8 d-none">
-                        <div class="flex  items-center space-x-2 text-sm font-semibold text-Mdblue-600">
-                          <span>Showing</span>
-                          <!-- <div
-                      class="relative ml-1 mr-1 inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-gray-200">
-                      <span class="font-medium text-Mdblue-600">25</span>
-                    </div> -->
-                          <div><span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">1 - 3</span>
-                          </div>
-                          <span>of</span>
-                          <div>
-                            <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">10</span>
-                          </div>
-                          <span>results</span>
-                        </div>
-                      </div>
-                      <div class="bg-gray-100 border-2 border-gray-200 p-2- mb-4 rounded-xl relative d-none-">
-                        <div class="p-5 border-b-2 border-gray-200">
-                          <div class="flex items-center gap-x-4">
-                            <h4 class="text-xl text-primary-700 font-semibold">Party Name</h4>
-                            <span
-                              class="text-base font-semibold bg-white rounded-full px-2.5 py-0.5 text-Mdblue-700">Party
-                              Role</span>
-                          </div>
-                        </div>
-                        <div class="p-5 ">
-                          <div class="relative overflow-x-auto-">
-                            <table class="w-full text-sm text-left text-Mdblue-600 border-spacing-2 rounded-lg">
-                              <thead class="text-sm font-semibold text-Mdblue-600 bg-gray-50-">
-                                <tr>
-                                  <th scope="col" class="p-4">
-                                    <div class="flex items-center"><span>Attorney</span>
-                                      <div class="ml-2"><button type="button"
-                                          class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                          type="button" class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_more</span></button>
-                                      </div>
-                                    </div>
-                                  </th>
-                                  <th scope="col" class="px-4 py-3">
-                                    <div class="flex items-center"><span>Lawfirm</span>
-                                      <div class="ml-2"><button type="button"
-                                          class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                          type="button" class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_more</span></button>
-                                      </div>
-                                    </div>
-                                  </th>
-                                  <th scope="col" class="px-4 py-3 flex justify-end">
-                                    <div class="flex items-center"><span>Type</span>
-                                      <div class="ml-2"><button type="button"
-                                          class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                          type="button" class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_more</span></button>
-                                      </div>
-                                    </div>
-                                  </th>
-                                  <!-- <th scope="col" class="px-4 py-3">
-                              <div class="flex items-center"><span>Lawfirm</span>
-                                <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
-                                      class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                    type="button" class="flex items-center press text-center"><span
-                                      class="material-symbols-outlined font-semibold">expand_more</span></button></div>
-                              </div>
-                            </th> -->
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr class="bg-white border rounded-md text-Mdblue-700 hover:bg-gray-50 ">
-                                  <td class="p-4">
-                                    <div class="flex">
-                                      <div class="parent-card block p-2 bg-white border-2- border-gray-200- rounded-xl">
-                                        <div class="flex items-center mt-[-0.8rem]- relative">
-                                          <div class="flex-shrink-0 mr-2">
-                                            <div size="size-12" initialstextsize="text-base">
-                                              <div
-                                                class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
-                                                <span class="font-semibold text-base text-white">CG</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="flex-1-">
-                                            <h5 class="text-lg font-semibold text-primary-700"><a target="_blank"
-                                                href="/DEV02/attorney/NATYZY6QtFRuVkMovY">
-                                                CHRISTOPHER J. GORAYEB </a></h5>
-                                            <div class="mb-1 mt-1 flex"><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star
-                                              </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star
-                                              </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star </span></div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <th class="px-4 py-4 font-medium text-Mdblue-700">Paralegal Practice</th>
-                                  <td class="px-4 py-4 text-right"><span
-                                      class="text-sm font-normal text-Mdblue-700">Lead
-                                      Attorney
-                                    </span>
-                                  </td>
-                                </tr>
-                                <tr class="bg-white border rounded-md text-Mdblue-700 hover:bg-gray-50 ">
-                                  <td class="p-4">
-                                    <div class="flex">
-                                      <div class="parent-card block p-2 bg-white border-2- border-gray-200- rounded-xl">
-                                        <div class="flex items-center mt-[-0.8rem]- relative">
-                                          <div class="flex-shrink-0 mr-2">
-                                            <div size="size-12" initialstextsize="text-base">
-                                              <div
-                                                class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
-                                                <span class="font-semibold text-base text-white">CG</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="flex-1-">
-                                            <h5 class="text-lg font-semibold text-primary-700"><a target="_blank"
-                                                href="/DEV02/attorney/NATYZY6QtFRuVkMovY">
-                                                CHRISTOPHER J. GORAYEB </a></h5>
-                                            <div class="mb-1 mt-1 flex"><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star
-                                              </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star
-                                              </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star </span></div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <th class="px-4 py-4 font-medium text-Mdblue-700">Legal Alliance</th>
-                                  <td class="px-4 py-4 text-right"><span class="text-sm font-normal text-Mdblue-700">Pro
-                                      Hac
-                                      Vice
-                                    </span></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <div class="flex justify-between mt-6">
-                              <div class="text-sm font-semibold text-Mdblue-600 flex items-center space-x-2">
-                                <span>Showing</span>
-                                <div><span class="text-sm font-semibold bg-white rounded-full px-2.5 py-0.5">1 -
-                                    3</span>
-                                </div>
-                                <div
-                                  class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-white rounded-full ml-1 mr-1">
-                                  <span class="font-medium text-Mdblue-600">25</span>
-                                </div>
-                                <span>of</span>
-                                <span>results</span>
-                              </div>
-                              <div>
-                                <nav class="flex justify-center ">
-                                  <ul class="inline-flex space-x-2 text-sm items-center">
-                                    <li><span
-                                        class="material-symbols-outlined icon-12 font-extrabold text-Mdblue-600">arrow_back_ios</span>
-                                    </li>
-                                    <li>
-                                      <a href="#"
-                                        class="flex items-center text-base font-semibold stify-center px-1 h-8 text-primary-700  border-gray-300">
-                                        <div
-                                          class="relative inline-flex items-center justify-center w-8 h-8 hover:bg-primary-700 hover:text-white overflow-hidden bg-white rounded-full">
-                                          <span class="font-medium">1</span>
-                                        </div>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#"
-                                        class="flex items-center text-base font-semibold justify-center px-1 h-8  border-gray-300">
-                                        <div
-                                          class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden  text-primary-700 hover:bg-primary-700 hover:text-white rounded-full">
-                                          <span class="font-medium">2</span>
-                                        </div>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#"
-                                        class="flex items-center text-base font-semibold justify-center px-1 h-8  border-gray-300">
-                                        <div
-                                          class="relative inline-flex items-center justify-center w-8 h-8  text-primary-700">
-                                          <span class="font-medium">...</span>
-                                        </div>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#" aria-current="page"
-                                        class="flex items-center text-base font-semibold justify-center px-2 h-8 border-gray-300">
-                                        <div
-                                          class="relative inline-flex items-center justify-center w-8 h-8 text-primary-700 hover:bg-primary-700 hover:text-white overflow-hidden rounded-full">
-                                          <span class="font-medium">100</span>
-                                        </div>
-                                      </a>
-                                    </li>
-                                    <li><span
-                                        class="material-symbols-outlined icon-12 font-extrabold text-Mdblue-600">arrow_forward_ios</span>
-                                    </li>
-                                  </ul>
-                                </nav>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="bg-gray-100 border-2 border-gray-200 p-2- rounded-xl relative d-none-">
-                        <div class="p-5 border-b-2 border-gray-200">
-                          <div class="flex items-center gap-x-4">
-                            <h4 class="text-xl text-primary-700 font-semibold">Party Name</h4>
-                            <span
-                              class="text-base font-semibold bg-white rounded-full px-2.5 py-0.5 text-Mdblue-700">Party
-                              Role</span>
-                          </div>
-                        </div>
-                        <div class="p-5">
-                          <div class="relative overflow-x-auto-">
-                            <table class="w-full text-sm text-left text-Mdblue-600 border-spacing-2 rounded-lg">
-                              <thead class="text-sm font-semibold text-Mdblue-600 bg-gray-50-">
-                                <tr>
-                                  <th scope="col" class="p-4">
-                                    <div class="flex items-center"><span>Attorney</span>
-                                      <div class="ml-2"><button type="button"
-                                          class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                          type="button" class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_more</span></button>
-                                      </div>
-                                    </div>
-                                  </th>
-                                  <th scope="col" class="px-4 py-3">
-                                    <div class="flex items-center"><span>Lawfirm</span>
-                                      <div class="ml-2"><button type="button"
-                                          class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                          type="button" class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_more</span></button>
-                                      </div>
-                                    </div>
-                                  </th>
-                                  <th scope="col" class="px-4 py-3 flex justify-end">
-                                    <div class="flex items-center"><span>Type</span>
-                                      <div class="ml-2"><button type="button"
-                                          class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                          type="button" class="flex items-center press text-center"><span
-                                            class="material-symbols-outlined font-semibold">expand_more</span></button>
-                                      </div>
-                                    </div>
-                                  </th>
-                                  <!-- <th scope="col" class="px-4 py-3">
-                              <div class="flex items-center"><span>Lawfirm</span>
-                                <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
-                                      class="material-symbols-outlined font-semibold">expand_less</span></button><button
-                                    type="button" class="flex items-center press text-center"><span
-                                      class="material-symbols-outlined font-semibold">expand_more</span></button></div>
-                              </div>
-                            </th> -->
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr class="bg-white border rounded-md text-Mdblue-700 hover:bg-gray-50 ">
-                                  <td class="p-4">
-                                    <div class="flex">
-                                      <div class="parent-card block p-2 bg-white border-2- border-gray-200- rounded-xl">
-                                        <div class="flex items-center mt-[-0.8rem]- relative">
-                                          <div class="flex-shrink-0 mr-2">
-                                            <div size="size-12" initialstextsize="text-base">
-                                              <div
-                                                class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
-                                                <span class="font-semibold text-base text-white">CG</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="flex-1-">
-                                            <h5 class="text-lg font-semibold text-primary-700"><a target="_blank"
-                                                href="/DEV02/attorney/NATYZY6QtFRuVkMovY">
-                                                CHRISTOPHER J. GORAYEB </a></h5>
-                                            <div class="mb-1 mt-1 flex"><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star
-                                              </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star
-                                              </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star </span></div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <th class="px-4 py-4 font-medium text-Mdblue-700">Paralegal Practice</th>
-                                  <td class="px-4 py-4 text-right"><span
-                                      class="text-sm font-normal text-Mdblue-700">Lead
-                                      Attorney
-                                    </span>
-                                  </td>
-                                </tr>
-                                <tr class="bg-white border rounded-md text-Mdblue-700 hover:bg-gray-50 ">
-                                  <td class="p-4">
-                                    <div class="flex">
-                                      <div class="parent-card block p-2 bg-white border-2- border-gray-200- rounded-xl">
-                                        <div class="flex items-center mt-[-0.8rem]- relative">
-                                          <div class="flex-shrink-0 mr-2">
-                                            <div size="size-12" initialstextsize="text-base">
-                                              <div
-                                                class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
-                                                <span class="font-semibold text-base text-white">CG</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="flex-1-">
-                                            <h5 class="text-lg font-semibold text-primary-700"><a target="_blank"
-                                                href="/DEV02/attorney/NATYZY6QtFRuVkMovY">
-                                                CHRISTOPHER J. GORAYEB </a></h5>
-                                            <div class="mb-1 mt-1 flex"><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star
-                                              </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star
-                                              </span><span
-                                                class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                                                star </span></div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <th class="px-4 py-4 font-medium text-Mdblue-700">Legal Alliance</th>
-                                  <td class="px-4 py-4 text-right"><span class="text-sm font-normal text-Mdblue-700">Pro
-                                      Hac
-                                      Vice
-                                    </span></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <div class="flex justify-between mt-6">
-                              <div class="text-sm font-semibold text-Mdblue-600 flex items-center space-x-2">
-                                <span>Showing</span>
-                                <div><span class="text-sm font-semibold bg-white rounded-full px-2.5 py-0.5">1 -
-                                    3</span>
-                                </div>
-                                <div
-                                  class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-white rounded-full ml-1 mr-1">
-                                  <span class="font-medium text-Mdblue-600">25</span>
-                                </div>
-                                <span>of</span>
-                                <span>results</span>
-                              </div>
-                              <div>
-                                <nav class="flex justify-center">
-                                  <ul class="inline-flex space-x-2 text-sm items-center">
-                                    <li><span
-                                        class="material-symbols-outlined icon-12 font-extrabold text-Mdblue-600">arrow_back_ios</span>
-                                    </li>
-                                    <li>
-                                      <a href="#"
-                                        class="flex items-center text-base font-semibold stify-center px-1 h-8 text-primary-700  border-gray-300">
-                                        <div
-                                          class="relative inline-flex items-center justify-center w-8 h-8 hover:bg-primary-700 hover:text-white overflow-hidden bg-white rounded-full">
-                                          <span class="font-medium">1</span>
-                                        </div>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#"
-                                        class="flex items-center text-base font-semibold justify-center px-1 h-8  border-gray-300">
-                                        <div
-                                          class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden  text-primary-700 hover:bg-primary-700 hover:text-white rounded-full">
-                                          <span class="font-medium">2</span>
-                                        </div>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#"
-                                        class="flex items-center text-base font-semibold justify-center px-1 h-8  border-gray-300">
-                                        <div
-                                          class="relative inline-flex items-center justify-center w-8 h-8  text-primary-700">
-                                          <span class="font-medium">...</span>
-                                        </div>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#" aria-current="page"
-                                        class="flex items-center text-base font-semibold justify-center px-2 h-8 border-gray-300">
-                                        <div
-                                          class="relative inline-flex items-center justify-center w-8 h-8 text-primary-700 hover:bg-primary-700 hover:text-white overflow-hidden rounded-full">
-                                          <span class="font-medium">100</span>
-                                        </div>
-                                      </a>
-                                    </li>
-                                    <li><span
-                                        class="material-symbols-outlined icon-12 font-extrabold text-Mdblue-600">arrow_forward_ios</span>
-                                    </li>
-                                  </ul>
-                                </nav>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<div class=" parties-attorney-UI">
+  <div class="">
+    <div class="grid gap-y-6">
+      <h3 class="text-2xl font-semibold text-Mdblue-700 text-center">Parties and Attorneys</h3>
+      <div class="relative w-full d-none- test1">
+        <input type="text" id="table-search"
+          class="block py-2.5 pe-10 text-sm text-Mdblue-700 border placeholder:text-Mdblue-700 border-gray-300 rounded w-80- w-full bg-gray-50 focus:ring-0 focus:border-Mdblue-600"
+          placeholder="Search parties, attorneys and law firms...">
+        <div class="absolute inset-y-0 rtl:inset-r-0 end-2 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-Mdblue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+          </svg>
         </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="flex  items-center space-x-2 text-sm font-semibold text-Mdblue-600">
+          <span>Showing</span>
+          <!-- <div
+                      class="relative ml-1 mr-1 inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-gray-200">
+                      <span class="font-medium text-Mdblue-600">25</span>
+                    </div> -->
+          <div><span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">1 - 3</span>
+          </div>
+          <span>of</span>
+          <div>
+            <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">10</span>
+          </div>
+          <span>results</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="mb-4 font-semibold max-w-[15%] pr-[2%] text-Mdblue-600 text-base w-full">
+
+        <ul class="space-y-1">
+          <li class="">
+            <a class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-Mdblue-600 hover:bg-gray-200 hover:!text-Mdblue-700 text-Mdblue-700"
+              href="">
+              My Team
+              <div
+                class="flex ml-2 items-center rounded-full bg-gray-200 px-2 py-1 text-sm font-semibold text-Mdblue-600">
+                <span>19</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="mt-4 w-full p-6- pl-0 pt-0">
+        <div class="flex justify-center mb-8 d-none">
+          <div class="flex  items-center space-x-2 text-sm font-semibold text-Mdblue-600">
+            <span>Showing</span>
+            <!-- <div
+                      class="relative ml-1 mr-1 inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-gray-200">
+                      <span class="font-medium text-Mdblue-600">25</span>
+                    </div> -->
+            <div><span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">1 - 3</span>
+            </div>
+            <span>of</span>
+            <div>
+              <span class="rounded-full bg-gray-200 px-2.5 py-0.5 text-sm font-semibold">10</span>
+            </div>
+            <span>results</span>
+          </div>
+        </div>
+        <div class="bg-gray-100 border-2 border-gray-200 p-2- mb-4 rounded-xl relative d-none-">
+          <div class="p-5 border-b-2 border-gray-200">
+            <div class="flex items-center gap-x-4">
+              <h4 class="text-xl text-primary-700 font-semibold">Party Name</h4>
+              <span class="text-base font-semibold bg-white rounded-full px-2.5 py-0.5 text-Mdblue-700">Party
+                Role</span>
+            </div>
+          </div>
+          <div class="p-5 ">
+            <div class="relative overflow-x-auto-">
+              <table class="w-full text-sm text-left text-Mdblue-600 border-spacing-2 rounded-lg">
+                <thead class="text-sm font-semibold text-Mdblue-600 bg-gray-50-">
+                  <tr>
+                    <th scope="col" class="p-4">
+                      <div class="flex items-center"><span>Attorney</span>
+                        <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                            type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_more</span></button>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="px-4 py-3">
+                      <div class="flex items-center"><span>Lawfirm</span>
+                        <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                            type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_more</span></button>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="px-4 py-3 flex justify-end">
+                      <div class="flex items-center"><span>Type</span>
+                        <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                            type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_more</span></button>
+                        </div>
+                      </div>
+                    </th>
+                    <!-- <th scope="col" class="px-4 py-3">
+                              <div class="flex items-center"><span>Lawfirm</span>
+                                <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                                      class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                                    type="button" class="flex items-center press text-center"><span
+                                      class="material-symbols-outlined font-semibold">expand_more</span></button></div>
+                              </div>
+                            </th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border rounded-md text-Mdblue-700 hover:bg-gray-50 ">
+                    <td class="p-4">
+                      <div class="flex">
+                        <div class="parent-card block p-2 bg-white border-2- border-gray-200- rounded-xl">
+                          <div class="flex items-center mt-[-0.8rem]- relative">
+                            <div class="flex-shrink-0 mr-2">
+                              <div size="size-12" initialstextsize="text-base">
+                                <div
+                                  class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
+                                  <span class="font-semibold text-base text-white">CG</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="flex-1-">
+                              <h5 class="text-lg font-semibold text-primary-700"><a target="_blank"
+                                  href="/DEV02/attorney/NATYZY6QtFRuVkMovY">
+                                  CHRISTOPHER J. GORAYEB </a></h5>
+                              <div class="mb-1 mt-1 flex"><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star
+                                </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star
+                                </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star </span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <th class="px-4 py-4 font-medium text-Mdblue-700">Paralegal Practice</th>
+                    <td class="px-4 py-4 text-right"><span class="text-sm font-normal text-Mdblue-700">Lead
+                        Attorney
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="bg-white border rounded-md text-Mdblue-700 hover:bg-gray-50 ">
+                    <td class="p-4">
+                      <div class="flex">
+                        <div class="parent-card block p-2 bg-white border-2- border-gray-200- rounded-xl">
+                          <div class="flex items-center mt-[-0.8rem]- relative">
+                            <div class="flex-shrink-0 mr-2">
+                              <div size="size-12" initialstextsize="text-base">
+                                <div
+                                  class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
+                                  <span class="font-semibold text-base text-white">CG</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="flex-1-">
+                              <h5 class="text-lg font-semibold text-primary-700"><a target="_blank"
+                                  href="/DEV02/attorney/NATYZY6QtFRuVkMovY">
+                                  CHRISTOPHER J. GORAYEB </a></h5>
+                              <div class="mb-1 mt-1 flex"><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star
+                                </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star
+                                </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star </span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <th class="px-4 py-4 font-medium text-Mdblue-700">Legal Alliance</th>
+                    <td class="px-4 py-4 text-right"><span class="text-sm font-normal text-Mdblue-700">Pro
+                        Hac
+                        Vice
+                      </span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="flex justify-between mt-6">
+                <div class="text-sm font-semibold text-Mdblue-600 flex items-center space-x-2">
+                  <span>Showing</span>
+                  <div><span class="text-sm font-semibold bg-white rounded-full px-2.5 py-0.5">1 -
+                      3</span>
+                  </div>
+                  <div
+                    class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-white rounded-full ml-1 mr-1">
+                    <span class="font-medium text-Mdblue-600">25</span>
+                  </div>
+                  <span>of</span>
+                  <span>results</span>
+                </div>
+                <div>
+                  <nav class="flex justify-center ">
+                    <ul class="inline-flex space-x-2 text-sm items-center">
+                      <li><span
+                          class="material-symbols-outlined icon-12 font-extrabold text-Mdblue-600">arrow_back_ios</span>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="flex items-center text-base font-semibold stify-center px-1 h-8 text-primary-700  border-gray-300">
+                          <div
+                            class="relative inline-flex items-center justify-center w-8 h-8 hover:bg-primary-700 hover:text-white overflow-hidden bg-white rounded-full">
+                            <span class="font-medium">1</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="flex items-center text-base font-semibold justify-center px-1 h-8  border-gray-300">
+                          <div
+                            class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden  text-primary-700 hover:bg-primary-700 hover:text-white rounded-full">
+                            <span class="font-medium">2</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="flex items-center text-base font-semibold justify-center px-1 h-8  border-gray-300">
+                          <div class="relative inline-flex items-center justify-center w-8 h-8  text-primary-700">
+                            <span class="font-medium">...</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" aria-current="page"
+                          class="flex items-center text-base font-semibold justify-center px-2 h-8 border-gray-300">
+                          <div
+                            class="relative inline-flex items-center justify-center w-8 h-8 text-primary-700 hover:bg-primary-700 hover:text-white overflow-hidden rounded-full">
+                            <span class="font-medium">100</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li><span
+                          class="material-symbols-outlined icon-12 font-extrabold text-Mdblue-600">arrow_forward_ios</span>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 border-2 border-gray-200 p-2- rounded-xl relative d-none-">
+          <div class="p-5 border-b-2 border-gray-200">
+            <div class="flex items-center gap-x-4">
+              <h4 class="text-xl text-primary-700 font-semibold">Party Name</h4>
+              <span class="text-base font-semibold bg-white rounded-full px-2.5 py-0.5 text-Mdblue-700">Party
+                Role</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="relative overflow-x-auto-">
+              <table class="w-full text-sm text-left text-Mdblue-600 border-spacing-2 rounded-lg">
+                <thead class="text-sm font-semibold text-Mdblue-600 bg-gray-50-">
+                  <tr>
+                    <th scope="col" class="p-4">
+                      <div class="flex items-center"><span>Attorney</span>
+                        <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                            type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_more</span></button>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="px-4 py-3">
+                      <div class="flex items-center"><span>Lawfirm</span>
+                        <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                            type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_more</span></button>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col" class="px-4 py-3 flex justify-end">
+                      <div class="flex items-center"><span>Type</span>
+                        <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                            type="button" class="flex items-center press text-center"><span
+                              class="material-symbols-outlined font-semibold">expand_more</span></button>
+                        </div>
+                      </div>
+                    </th>
+                    <!-- <th scope="col" class="px-4 py-3">
+                              <div class="flex items-center"><span>Lawfirm</span>
+                                <div class="ml-2"><button type="button" class="flex items-center press text-center"><span
+                                      class="material-symbols-outlined font-semibold">expand_less</span></button><button
+                                    type="button" class="flex items-center press text-center"><span
+                                      class="material-symbols-outlined font-semibold">expand_more</span></button></div>
+                              </div>
+                            </th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border rounded-md text-Mdblue-700 hover:bg-gray-50 ">
+                    <td class="p-4">
+                      <div class="flex">
+                        <div class="parent-card block p-2 bg-white border-2- border-gray-200- rounded-xl">
+                          <div class="flex items-center mt-[-0.8rem]- relative">
+                            <div class="flex-shrink-0 mr-2">
+                              <div size="size-12" initialstextsize="text-base">
+                                <div
+                                  class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
+                                  <span class="font-semibold text-base text-white">CG</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="flex-1-">
+                              <h5 class="text-lg font-semibold text-primary-700"><a target="_blank"
+                                  href="/DEV02/attorney/NATYZY6QtFRuVkMovY">
+                                  CHRISTOPHER J. GORAYEB </a></h5>
+                              <div class="mb-1 mt-1 flex"><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star
+                                </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star
+                                </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star </span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <th class="px-4 py-4 font-medium text-Mdblue-700">Paralegal Practice</th>
+                    <td class="px-4 py-4 text-right"><span class="text-sm font-normal text-Mdblue-700">Lead
+                        Attorney
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="bg-white border rounded-md text-Mdblue-700 hover:bg-gray-50 ">
+                    <td class="p-4">
+                      <div class="flex">
+                        <div class="parent-card block p-2 bg-white border-2- border-gray-200- rounded-xl">
+                          <div class="flex items-center mt-[-0.8rem]- relative">
+                            <div class="flex-shrink-0 mr-2">
+                              <div size="size-12" initialstextsize="text-base">
+                                <div
+                                  class="bg-yellow-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
+                                  <span class="font-semibold text-base text-white">CG</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="flex-1-">
+                              <h5 class="text-lg font-semibold text-primary-700"><a target="_blank"
+                                  href="/DEV02/attorney/NATYZY6QtFRuVkMovY">
+                                  CHRISTOPHER J. GORAYEB </a></h5>
+                              <div class="mb-1 mt-1 flex"><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star
+                                </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star
+                                </span><span
+                                  class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                                  star </span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <th class="px-4 py-4 font-medium text-Mdblue-700">Legal Alliance</th>
+                    <td class="px-4 py-4 text-right"><span class="text-sm font-normal text-Mdblue-700">Pro
+                        Hac
+                        Vice
+                      </span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="flex justify-between mt-6">
+                <div class="text-sm font-semibold text-Mdblue-600 flex items-center space-x-2">
+                  <span>Showing</span>
+                  <div><span class="text-sm font-semibold bg-white rounded-full px-2.5 py-0.5">1 -
+                      3</span>
+                  </div>
+                  <div
+                    class="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-white rounded-full ml-1 mr-1">
+                    <span class="font-medium text-Mdblue-600">25</span>
+                  </div>
+                  <span>of</span>
+                  <span>results</span>
+                </div>
+                <div>
+                  <nav class="flex justify-center">
+                    <ul class="inline-flex space-x-2 text-sm items-center">
+                      <li><span
+                          class="material-symbols-outlined icon-12 font-extrabold text-Mdblue-600">arrow_back_ios</span>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="flex items-center text-base font-semibold stify-center px-1 h-8 text-primary-700  border-gray-300">
+                          <div
+                            class="relative inline-flex items-center justify-center w-8 h-8 hover:bg-primary-700 hover:text-white overflow-hidden bg-white rounded-full">
+                            <span class="font-medium">1</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="flex items-center text-base font-semibold justify-center px-1 h-8  border-gray-300">
+                          <div
+                            class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden  text-primary-700 hover:bg-primary-700 hover:text-white rounded-full">
+                            <span class="font-medium">2</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="flex items-center text-base font-semibold justify-center px-1 h-8  border-gray-300">
+                          <div class="relative inline-flex items-center justify-center w-8 h-8  text-primary-700">
+                            <span class="font-medium">...</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" aria-current="page"
+                          class="flex items-center text-base font-semibold justify-center px-2 h-8 border-gray-300">
+                          <div
+                            class="relative inline-flex items-center justify-center w-8 h-8 text-primary-700 hover:bg-primary-700 hover:text-white overflow-hidden rounded-full">
+                            <span class="font-medium">100</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li><span
+                          class="material-symbols-outlined icon-12 font-extrabold text-Mdblue-600">arrow_forward_ios</span>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!--parties and attorney new Ui end-->
 
 
@@ -626,33 +615,42 @@ focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.
   </div>
   <div>
     <!--dropdown skidding end-->
-<!--dropdown left start-->
-<div class="w-full flex justify-end">
+    <!--dropdown left start-->
+    <div class="w-full flex justify-end">
 
 
-<button id="dropdownLeftButton" data-dropdown-toggle="dropdownLeftStart" data-dropdown-placement="left-start" class="mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-2.5 h-2.5 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-</svg>Dropdown left</button>
+      <button id="dropdownLeftButton" data-dropdown-toggle="dropdownLeftStart" data-dropdown-placement="left-start"
+        class="mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        type="button"><svg class="w-2.5 h-2.5 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 1 1 5l4 4" />
+        </svg>Dropdown left</button>
 
-<!-- Dropdown menu -->
-<div id="dropdownLeftStart" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLeftButton">
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-      </li>
-    </ul>
-</div>
-</div>
-<!--dropdown left end-->
+      <!-- Dropdown menu -->
+      <div id="dropdownLeftStart"
+        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLeftButton">
+          <li>
+            <a href="#"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+              out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--dropdown left end-->
     <!--grid and list view btn start -->
     <div class="flex space-x-2">
       <button type="button"
@@ -963,7 +961,7 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
                 for="checkbox-2">
                 <div class="flex">
                   <input type="checkbox"
-                    class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                    class=" mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
                     id="checkbox-2" />
                   <span>child-1</span>
                 </div>
@@ -980,7 +978,7 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
                     for="checkbox-5">
                     <div class="flex">
                       <input type="checkbox"
-                        class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                        class=" mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
                         id="checkbox-5" />
                       <span>child-2</span>
                     </div>
@@ -997,7 +995,7 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
                         for="checkbox-4">
                         <div class="flex">
                           <input type="checkbox"
-                            class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                            class=" mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
                             id="checkbox-4" />
                           <span>child-3</span>
                         </div>
@@ -1020,13 +1018,13 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             for="checkbox-3">
             <div class="flex">
               <input type="checkbox"
-                class="ng-untouched ng-pristine ng-valid mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                class=" mr-2 h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
                 id="checkbox-3" />
               <span>State</span>
             </div>
             <div class="flex items-center">
               <!-- <input type="checkbox"
-            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
+            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 "
             id="Wisconsin Circuit Courts"> -->
               <span class="material-symbols-outlined icon-24 text-Mdblue-600">
                 chevron_right
@@ -1048,7 +1046,7 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             </div>
             <div class="flex items-center">
               <!-- <input type="checkbox"
-            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
+            class="w-4 h-4 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 "
             id="Wisconsin Circuit Courts"> -->
               <span class="material-symbols-outlined icon-24 text-Mdblue-600">
                 chevron_right
@@ -1062,13 +1060,13 @@ coz of padding in td it slightly goes in, so if remove padding right of first co
             for="Wisconsin Circuit Courts">
             <div class="flex">
               <!-- <input type="checkbox"
-            class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 ng-untouched ng-pristine ng-valid"
+            class="w-4 h-4 mr-2 cursor-pointer text-secondary-700 border border-gray-600 rounded focus:ring-offset-0 focus:outline-none focus:ring-0 "
             id="Wisconsin Circuit Courts"> -->
               <span>Court Name</span>
             </div>
             <div class="flex items-center">
               <input type="checkbox"
-                class="ng-untouched ng-pristine ng-valid h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
+                class=" h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0"
                 id="Wisconsin Circuit Courts" />
               <!-- <span class="material-symbols-outlined icon-24 text-Mdblue-600">
             chevron_right
