@@ -20,6 +20,7 @@ import { CostestimationComponent } from './costestimation/costestimation.compone
 import { Cursertest2Component } from './cursertest2/cursertest2.component';
 import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
 import { NewthemeComponent } from './newtheme/newtheme.component';
+import { EmailTempComponent } from './email-temp/email-temp.component';
 
 const routes: Routes = [
   {
@@ -91,10 +92,10 @@ const routes: Routes = [
     path: 'curscursoror',
     component: CostestimationComponent,
   },
-  // {
-  //   path: 'cursertest2',
-  //   component: Cursertest2Component,
-  // },
+  {
+    path: 'email-temp',
+    component: EmailTempComponent,
+  },
   {
     path: 'tooltip',
     component: TooltipTestComponent,

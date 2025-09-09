@@ -30,6 +30,7 @@ import { CursoruiModule } from './cursorui/cursorui.module';
 import { CostestimationComponent } from './costestimation/costestimation.component';
 import { Cursertest2Component } from './cursertest2/cursertest2.component';
 import { NewthemeComponent } from './newtheme/newtheme.component';
+import { EmailTempComponent } from './email-temp/email-temp.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { NewthemeComponent } from './newtheme/newtheme.component';
     CostestimationComponent,
     Cursertest2Component,
     NewthemeComponent,
+    EmailTempComponent,
   ],
   imports: [
     BrowserModule,
