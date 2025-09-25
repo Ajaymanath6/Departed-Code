@@ -1,3 +1,125 @@
+<!--add alert start-->
+<div class="grid grid-cols-1 gap-4 max-w-[22rem]">
+    <div class="px-4- py-3 pb-0 text-Mdblue-700">
+    <div class="mb-3 text-center text-lg font-semibold">Add Alert</div>
+    <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+  </div>
+  <div class="p-6">
+  <div class="">
+    <p class="text-Mdblue-700 text-base font-semibold">Search</p>
+    <div class="flex rounded-lg  bg-gray-100   p-2-">
+      <div class="flex border-r-2 border-gray-200 p-2 items-center"><span class="material-symbols-outlined mr-1">
+          auto_awesome</span></div>
+      <div class="flex grow p-2 items-center text-Mdblue-700 text-base font-bold">
+        <p>Cases involving IBM</p>
+      </div>
+      <div class="flex items-center p-2"><button type="button" aria-label="Remove"
+          class="ms-2 inline-flex items-center rounded-full bg-Mdblue-600 p-1 text-sm text-white hover:bg-primary-300 hover:text-primary-900"><svg
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" class="h-2 w-2">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+          </svg></button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p class="text-Mdblue-700 text-base font-semibold">Name your alert</p>
+    <div class="relative "><input type="text" placeholder="Alert name..."
+        class="block w-full h-[50px] rounded-lg border border-gray-300 hover:bg-gray-50 hover:border-secondary-600 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600 focus:outline-none disabled:bg-gray-100">
+    </div>
+  </div>
+  <div>
+    <p class="text-Mdblue-700 text-base font-semibold">When do you want to receive the alerts?</p>
+    <div class="w-full gap-x-4 bg-white text-sm font-medium text-Mdblue-700">
+      <div class="relative w-full"><input type="radio" value="enable-email-notification" class="peer hidden"><label
+          for="enable-email-notification"
+          class="group relative mb-4 flex w-full items-center rounded-lg border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700"
+          aria-selected="true"><span
+            class="material-symbols-outlined secondary-fill-700 absolute right-[0.3rem] top-[0.3rem] opacity-0 transition-opacity duration-300 ease-in-out group-aria-selected:opacity-100">
+            check_circle </span>
+          <div>
+            <p class="text-sm font-semibold">Daily Summary</p>
+            <p class="text-base">An email is sent daily to the recipients of the alert.</p>
+          </div>
+
+        </label></div>
+      <div class="relative w-full"><input type="radio" value="disable-email-notification" class="peer hidden"><label
+          for="disable-email-notification"
+          class="group relative mb-4 flex w-full items-center rounded-lg border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700"
+          aria-selected="false"><span
+            class="material-symbols-outlined secondary-fill-700 absolute right-[0.3rem] top-[0.3rem] opacity-0 transition-opacity duration-300 ease-in-out group-aria-selected:opacity-100">
+            check_circle </span>
+          <div>
+            <p class="text-sm font-semibold">Immediately when found</p>
+            <p class="text-base">We will let you know the moment we find a match.</p>
+          </div>
+        </label></div>
+    </div>
+  </div>
+  <div>
+    <p class="text-Mdblue-700 text-base font-semibold">Who should receive the alerts?</p>
+    <div class="w-full gap-x-4 bg-white text-sm font-medium text-Mdblue-700">
+      <div class="relative w-full"><input type="radio" value="enable-email-notification" class="peer hidden"><label
+          for="enable-email-notification"
+          class="group relative mb-4 flex w-full items-center rounded-lg border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700"
+          aria-selected="true"><span
+            class="material-symbols-outlined secondary-fill-700 absolute right-[0.3rem] top-[0.3rem] opacity-0 transition-opacity duration-300 ease-in-out group-aria-selected:opacity-100">
+            check_circle </span>
+          <div>
+            <p class="text-sm font-semibold">Everyone on the project</p>
+          </div>
+
+        </label></div>
+      <div class="relative w-full"><input type="radio" value="disable-email-notification" class="peer hidden"><label
+          for="disable-email-notification"
+          class="group relative mb-4 flex w-full items-center rounded-lg border border-gray-200 px-4 py-6 hover:cursor-pointer hover:bg-gray-100 peer-checked:border-secondary-700"
+          aria-selected="false"><span
+            class="material-symbols-outlined secondary-fill-700 absolute right-[0.3rem] top-[0.3rem] opacity-0 transition-opacity duration-300 ease-in-out group-aria-selected:opacity-100">
+            check_circle </span>
+          <div>
+            <p class="text-sm font-semibold">Pick who should receive them...</p>
+
+          </div>
+        </label></div>
+    </div>
+  </div>
+  <div>
+    <p class="text-sm font-semibold">Only send it to...</p>
+    <ul class="h-60- space-y-4 overflow-y-scroll px-4- py-2 text-sm text-Mdblue-600">
+      <li class="">
+        <div class="flex gap-2">
+          <div class="grow">
+            <div class="flex items-center gap-2">
+              <div size="size-10 min-w-[2.5rem] min-h-[2.5rem]">
+                <div
+                  class="Mdblue-fill-700 bg-yellow-700 inline-flex items-center justify-center min-h-[2.5rem] min-w-[2.5rem] overflow-hidden relative rounded-full size-10 ">
+                  <span class="font-semibold text-base text-white undefined">AM</span>
+                </div>
+              </div>
+              <div>
+                <div class="text-base font-semibold text-Mdblue-700"> Alexander Kelly </div>
+                <!-- <div class="flex"><span class="text-base font-normal text-primary-700">ajaym@unicourt.com</span></div> -->
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center"><input type="checkbox"
+              class="hidden- focus:ring-primary-500- h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+              id="default-checkbox-0"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+  <div class="border-t bg-white p-4 rounded-b-xl">
+    <div class="grid grid-cols-2 gap-4 text-sm text-gray-700"><button type="button"
+        class="rounded border border-gray-300 bg-white p-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+        Cancel </button><button type="button"
+        class="btn-focus flex items-center justify-center rounded border border-transparent bg-secondary-600 p-3 text-sm font-medium text-white hover:bg-secondary-800 focus:outline-none disabled:opacity-50"
+        disabled=""> Save this alert </button></div>
+  </div>
+</div>
+<!--add alert end-->
+
 <!--save search start-->
 <h5>Recent</h5>
 <div class="grid grid-cols-1 gap-2">
@@ -148,12 +270,15 @@
       <!-- <div class="flex grow p-3 items-center">
         <p>Cases with John Doe or Jane Doe in New York filed in 2025</p>
       </div> -->
-        <div class="flex grow p-3 items-center relative overflow-hidden">
-    <p class="text-Mdblue-700 whitespace-nowrap">Show me cases where John Smith is a defendant in Calif Show me cases where
-       John Smith is a defendant in Calif</p>
-    <div class="absolute inset-y-0 right-[-2px] w-40 bg-gradient-to-r from-transparent to-white border-1 rounded-lg	 border-transparent"></div>
+      <div class="flex grow p-3 items-center relative overflow-hidden">
+        <p class="text-Mdblue-700 whitespace-nowrap">Show me cases where John Smith is a defendant in Calif Show me
+          cases where
+          John Smith is a defendant in Calif</p>
+        <div
+          class="absolute inset-y-0 right-[-2px] w-40 bg-gradient-to-r from-transparent to-white border-1 rounded-lg	 border-transparent">
+        </div>
 
-  </div>
+      </div>
     </div>
     <div class="grid grid-cols-2 gap-2">
       <button class="btn-focus flex items-center  justify-center rounded border border-gray-300 bg-white p-3 text-sm font-semibold text-gray-700
@@ -686,7 +811,6 @@
       </tr>
       <tr class="rounded-md outline outline-1 outline-gray-200
       ">
-
         <td class="px-4 py-4">
           <div>
             <div
@@ -968,13 +1092,11 @@
   </div>
   <!-- Alert/Note -->
   <div class="flex items-center gap-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
-
     <div class="flex-1">
       <div class="flex items-center gap-2">
         <span class="material-symbols-outlined text-Mdblue-700-600 bg-blue-100 rounded-full">sticky_note_2</span>
         <span class="font-semibold text-blue-900">Note:</span>
       </div>
-
       <p class="flex-1 text-sm text-blue-900">A maximum of 15 operators are allowed in a single query.</p>
     </div>
     <button
@@ -1454,7 +1576,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
