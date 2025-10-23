@@ -22,6 +22,7 @@ import { TooltipTestComponent } from './tooltip-test/tooltip-test.component';
 import { NewthemeComponent } from './newtheme/newtheme.component';
 import { EmailTempComponent } from './email-temp/email-temp.component';
 import { VarshiTableComponent } from './varshi-table/varshi-table.component';
+import { AIUiComponent } from './ai-ui/ai-ui.component';
 
 const routes: Routes = [
   {
@@ -106,8 +107,12 @@ const routes: Routes = [
     component: NewthemeComponent,
   },
   {
-    path: 'tablevarshini',
+    path: 'tablevarsh',
     component: VarshiTableComponent,
+  },
+  {
+    path: 'aiui',
+    component: AIUiComponent,
   },
 ];
 

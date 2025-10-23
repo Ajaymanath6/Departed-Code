@@ -32,6 +32,7 @@ import { Cursertest2Component } from './cursertest2/cursertest2.component';
 import { NewthemeComponent } from './newtheme/newtheme.component';
 import { EmailTempComponent } from './email-temp/email-temp.component';
 import { VarshiTableComponent } from './varshi-table/varshi-table.component';
+import { AIUiComponent } from './ai-ui/ai-ui.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { VarshiTableComponent } from './varshi-table/varshi-table.component';
     NewthemeComponent,
     EmailTempComponent,
     VarshiTableComponent,
+    AIUiComponent,
   ],
   imports: [
     BrowserModule,
