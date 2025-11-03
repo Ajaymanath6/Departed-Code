@@ -1,0 +1,958 @@
+
+
+
+<!-- Premium Legal Case Tracker -->
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 hidden">
+  <!-- Animated Background -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -inset-10 opacity-50">
+      <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+      <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+    </div>
+  </div>
+
+  <div class="relative z-10 p-8">
+    <!-- Premium Header -->
+    <div class="glass-card mb-8 p-8 rounded-3xl">
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              Capital One N.A. v. Ellis, John David
+            </h1>
+            <p class="text-gray-300 flex items-center gap-2 mt-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Last updated: Oct 16, 2025 • Active tracking
+            </p>
+          </div>
+        </div>
+
+        <!-- Premium Action Buttons -->
+        <div class="flex gap-3">
+          <button (click)="onRefresh()" class="premium-btn premium-btn-primary">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            <span>Refresh Data</span>
+          </button>
+          <button (click)="onSetTracker()" class="premium-btn premium-btn-secondary">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12h0z"></path>
+            </svg>
+            <span>Set Tracker</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Overview -->
+      <div class="grid grid-cols-4 gap-4">
+        <div class="stats-card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">{{ getAddedCount() }}</p>
+              <p class="text-emerald-300 text-sm">Added</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">{{ getChangedCount() }}</p>
+              <p class="text-amber-300 text-sm">Changed</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">{{ getRemovedCount() }}</p>
+              <p class="text-red-300 text-sm">Removed</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">{{ getAllCount() }}</p>
+              <p class="text-blue-300 text-sm">Total</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Filter Pills -->
+    <div class="glass-card mb-8 p-6 rounded-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-semibold text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+          </svg>
+          Filter Updates
+        </h2>
+        <div class="text-sm text-gray-300">
+          Showing {{ filteredItems.length }} of {{ getAllCount() }} items
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <!-- Added Filter -->
+        <div class="group relative">
+          <button (click)="onFilterAdded()" [class]="getFilterButtonClass('added')" class="filter-pill">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+              <span class="font-medium">Added</span>
+              <span class="filter-badge">{{ getAddedCount() }}</span>
+            </div>
+          </button>
+          <div class="filter-tooltip">
+            Recently Added Items
+          </div>
+        </div>
+
+        <!-- Changed Filter -->
+        <div class="group relative">
+          <button (click)="onFilterChanged()" [class]="getFilterButtonClass('changed')" class="filter-pill">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-amber-400 rounded-full animate-bounce"></div>
+              <span class="font-medium">Changed</span>
+              <span class="filter-badge">{{ getChangedCount() }}</span>
+            </div>
+          </button>
+          <div class="filter-tooltip">
+            Recently Modified Items
+          </div>
+        </div>
+
+        <!-- Removed Filter -->
+        <div class="group relative">
+          <button (click)="onFilterRemoved()" [class]="getFilterButtonClass('removed')" class="filter-pill">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+              <span class="font-medium">Removed</span>
+              <span class="filter-badge">{{ getRemovedCount() }}</span>
+            </div>
+          </button>
+          <div class="filter-tooltip">
+            Recently Removed Items
+          </div>
+        </div>
+
+        <!-- All Items Filter -->
+        <div class="group relative">
+          <button (click)="onFilterAll()" [class]="getFilterButtonClass('all')" class="filter-pill">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span class="font-medium">All Items</span>
+              <span class="filter-badge">{{ getAllCount() }}</span>
+            </div>
+          </button>
+          <div class="filter-tooltip">
+            Show All Items
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Content Cards -->
+    <div class="space-y-6">
+      <!-- Dynamic Items -->
+      <div *ngFor="let item of filteredItems"
+           class="premium-card group"
+           [class.opacity-75]="item.type === 'removed'"
+           [class.border-l-emerald-400]="item.type === 'added'"
+           [class.border-l-amber-400]="item.type === 'changed'"
+           [class.border-l-red-400]="item.type === 'removed'">
+
+        <div class="flex items-start gap-6 p-6">
+          <!-- Enhanced Status Indicator -->
+          <div class="flex-shrink-0">
+            <div [class]="getStatusIconClass(item.type)" class="shadow-lg">
+              <!-- Added Icon -->
+              <svg *ngIf="item.type === 'added'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+              </svg>
+              <!-- Removed Icon -->
+              <svg *ngIf="item.type === 'removed'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+              </svg>
+              <!-- Changed Icon -->
+              <svg *ngIf="item.type === 'changed'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Enhanced Content -->
+          <div class="flex-1 min-w-0">
+            <!-- Header with badges -->
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3 flex-wrap">
+                <span [class]="getStatusBadgeClass(item.type)" class="premium-badge">
+                  <div [class]="getStatusDotClass(item.type)"></div>
+                  {{ item.type | titlecase }}
+                </span>
+                <span [class]="getCategoryBadgeClass(item.category)" class="premium-badge">
+                  <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="getCategoryIcon(item.category)"></path>
+                  </svg>
+                  {{ item.category | titlecase }}
+                </span>
+              </div>
+              <span class="text-sm text-gray-400 font-medium">{{ item.date }}</span>
+            </div>
+
+            <!-- Title -->
+            <h3 (click)="onViewDetails(item.id)"
+                class="text-xl font-bold text-white mb-3 cursor-pointer hover:text-blue-400 transition-colors group-hover:text-blue-300"
+                [class.line-through]="item.type === 'removed'">
+              {{ item.title }}
+            </h3>
+
+            <!-- Case Name -->
+            <p class="text-gray-300 text-sm mb-3 font-medium"
+               [class.line-through]="item.type === 'removed'">
+              {{ item.caseName }}
+            </p>
+
+            <!-- Highlight Text -->
+            <div *ngIf="item.highlightText" class="mb-4">
+              <div class="highlight-box">
+                <div class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <p class="text-amber-100 text-sm font-medium leading-relaxed"
+                     [class.line-through]="item.type === 'removed'">
+                    {{ item.highlightText }}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Regular Description for Added/Removed -->
+            <p *ngIf="item.type !== 'changed'"
+               class="text-gray-300 text-sm leading-relaxed"
+               [class.line-through]="item.type === 'removed'">
+              {{ item.description }}
+            </p>
+
+            <!-- Enhanced Before/After Comparison for Changed -->
+            <div *ngIf="item.type === 'changed'" class="space-y-3">
+              <p class="text-gray-300 text-sm leading-relaxed mb-4">{{ item.description }}</p>
+
+              <div class="change-comparison">
+                <div class="change-item change-from">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-4 h-4 text-red-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                    </svg>
+                    <div class="flex-1">
+                      <span class="text-red-300 font-semibold text-xs uppercase tracking-wide">From:</span>
+                      <p class="text-gray-400 line-through text-sm mt-1 break-all">{{ item.oldValue }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="change-item change-to">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                    <div class="flex-1">
+                      <span class="text-emerald-300 font-semibold text-xs uppercase tracking-wide">To:</span>
+                      <p class="text-white font-medium text-sm mt-1 break-all">{{ item.newValue }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Action Menu -->
+          <div class="flex-shrink-0">
+            <button (click)="onCardMenuClick(item.id, item.type)"
+                    class="action-menu-btn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div *ngIf="filteredItems.length === 0" class="glass-card p-12 rounded-2xl text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+          <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">No Updates Found</h3>
+        <p class="text-gray-300 max-w-md mx-auto">No case updates match your current filter selection. Try selecting a different filter or check back later for new updates.</p>
+      </div>
+    </div>
+
+    <!-- Premium Parties Section -->
+    <div class="glass-card mb-8 rounded-2xl overflow-hidden">
+      <div class="px-8 py-6 border-b border-white/10">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-white flex items-center gap-3">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            Case Parties
+          </h2>
+          <span class="text-sm text-gray-400 font-mono">Active</span>
+        </div>
+      </div>
+      <div class="p-8">
+        <div class="party-card">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-lg">Capital One N.A.</p>
+              <p class="text-blue-300 text-sm">Successor by Merger to Discover • Plaintiff</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Documents Section -->
+    <div class="glass-card mb-8 rounded-2xl overflow-hidden">
+      <div class="px-8 py-6 border-b border-white/10">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-white flex items-center gap-3">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Case Documents
+          </h2>
+          <span class="text-sm text-gray-400 font-mono">2 files</span>
+        </div>
+      </div>
+      <div class="p-8 space-y-4">
+        <div class="document-card document-primary">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-white font-semibold">Summons on Complaint by Certified Mail</p>
+              <p class="text-blue-300 text-sm">Issued • Sep 22, 2025 at 10:37 AM</p>
+            </div>
+            <div class="document-status document-status-sent">
+              <span>Sent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="document-card document-secondary">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-white font-semibold">Electronic Certified Mail Coversheet</p>
+              <p class="text-emerald-300 text-sm">IMPS Barcode • Electronic delivery</p>
+            </div>
+            <div class="document-status document-status-processed">
+              <span>Processed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Pagination -->
+    <div class="glass-card p-6 rounded-2xl">
+      <div class="flex items-center justify-between">
+        <div class="text-sm text-gray-300">
+          Showing <span class="font-semibold text-white">{{ filteredItems.length > 0 ? '1-' + filteredItems.length : '0' }}</span> of <span class="font-semibold text-white">{{ filteredItems.length }}</span> updates
+        </div>
+        <div class="flex items-center gap-2">
+          <button (click)="onPreviousPage()" class="pagination-btn">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Previous
+          </button>
+          <button (click)="onPageClick(1)" class="pagination-btn pagination-btn-active">
+            1
+          </button>
+          <button (click)="onPageClick(2)" class="pagination-btn">
+            2
+          </button>
+          <button (click)="onNextPage()" class="pagination-btn">
+            Next
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--docket history start-->
+<!-- Exact Court Case Management UI with Tabs -->
+<div class="w-full bg-gray-100 min-h-screen">
+  <div class="max-w-[1400px] mx-auto bg-white shadow-lg">
+  <!-- Case Header -->
+  <div class="px-6 py-4 border-b border-gray-200">
+    <h1 class="text-lg font-semibold text-gray-900 uppercase">CAPITAL ONE N.A SUCCESSOR BY MERGER TO DISCOVER ELLIS, JOHN</h1>
+    <p class="text-sm text-gray-600 mt-1">Last modified on 10-14-2025. Case History with an updated on 2-14-2025</p>
+  </div>
+
+  <!-- Navigation Tabs -->
+  <div class="border-b border-gray-200">
+    <nav class="flex space-x-8 px-6">
+      <button (click)="setActiveTab('summary')"
+              [class]="activeTab === 'summary' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'"
+              class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+        Summary
+      </button>
+      <button (click)="setActiveTab('docket-entries')"
+              [class]="activeTab === 'docket-entries' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'"
+              class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+        Docket Entries
+      </button>
+      <button (click)="setActiveTab('documents')"
+              [class]="activeTab === 'documents' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'"
+              class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+        Documents
+      </button>
+      <button (click)="setActiveTab('parties-attorneys')"
+              [class]="activeTab === 'parties-attorneys' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'"
+              class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+        Parties/Attorneys
+      </button>
+      <button (click)="setActiveTab('judges')"
+              [class]="activeTab === 'judges' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'"
+              class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+        Judges
+      </button>
+      <button (click)="setActiveTab('related-cases')"
+              [class]="activeTab === 'related-cases' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'"
+              class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+        Related Cases
+      </button>
+      <button (click)="setActiveTab('similar-cases')"
+              [class]="activeTab === 'similar-cases' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'"
+              class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+        Similar Cases
+      </button>
+      <button (click)="setActiveTab('docket-history')"
+              [class]="activeTab === 'docket-history' ? 'border-blue-500 text-blue-600 bg-blue-50' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'"
+              class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm bg-blue-50 border border-blue-200 rounded-t">
+        Docket History
+      </button>
+    </nav>
+  </div>
+
+  <!-- Filter Pills -->
+  <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
+    <div class="flex gap-2">
+      <button (click)="toggleFilter('added')"
+              [class]="activeFilters.includes('added') ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'"
+              class="px-3 py-1 rounded-full text-sm font-medium transition-colors">
+        Added
+      </button>
+      <button (click)="toggleFilter('removed')"
+              [class]="activeFilters.includes('removed') ? 'bg-red-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'"
+              class="px-3 py-1 rounded-full text-sm font-medium transition-colors">
+        Removed
+      </button>
+      <button (click)="toggleFilter('changed')"
+              [class]="activeFilters.includes('changed') ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'"
+              class="px-3 py-1 rounded-full text-sm font-medium transition-colors">
+        Changed
+      </button>
+    </div>
+  </div>
+
+  <!-- Timeline Content -->
+  <div class="p-6 bg-gray-50 min-h-screen">
+    <div class="space-y-4">
+
+      <!-- Case Details - Changed (2025-10-14) -->
+      <div *ngIf="shouldShowItem('changed')" class="flex gap-4">
+        <div class="flex-1 bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-10-14</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Case Details</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-blue-500 text-white">Changed</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span class="text-sm text-gray-600">Case Title</span>
+          </div>
+          <div class="border border-blue-200 bg-white rounded p-3">
+            <div class="flex items-center text-[13px] text-gray-700 overflow-x-auto">
+              <span class="text-red-600 font-semibold mr-2">— PREVIOUS</span>
+              <span class="truncate">CAPITAL ONE N.A SUCCESSOR BY MERGER TO DISCOVER vs ELLIS, JOHN, JOHN</span>
+              <svg class="w-4 h-4 mx-3 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-green-600 font-semibold mr-2">● CURRENT</span>
+              <span class="font-medium truncate">CAPITAL ONE N.A SUCCESSOR BY MERGER TO DISCOVER ELLIS, JOHN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Details - Changed (2025-10-09) -->
+      <div *ngIf="shouldShowItem('changed')" class="flex gap-4">
+        <div class="flex-1 bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-10-09</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Case Details</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-blue-500 text-white">Changed</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span class="text-sm text-gray-600">Case Title</span>
+          </div>
+          <div class="border border-blue-200 bg-white rounded p-3">
+            <div class="flex items-center text-[13px] text-gray-700 overflow-x-auto">
+              <span class="text-red-600 font-semibold mr-2">— PREVIOUS</span>
+              <span class="truncate">CAPITAL ONE N.A SUCCESSOR BY MERGER TO DISCOVER vs ELLIS, JOHN, JOHN, JOHN</span>
+              <svg class="w-4 h-4 mx-3 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-green-600 font-semibold mr-2">● CURRENT</span>
+              <span class="font-medium truncate">CAPITAL ONE N.A SUCCESSOR BY MERGER TO DISCOVER vs ELLIS, JOHN, JOHN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Details - Changed (2025-09-23) -->
+      <div *ngIf="shouldShowItem('changed')" class="flex gap-4">
+        <div class="flex-1 bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-09-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Case Details</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-blue-500 text-white">Changed</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span class="text-sm text-gray-600">Case Title</span>
+          </div>
+          <div class="border border-blue-200 bg-white rounded p-3">
+            <div class="flex items-center text-[13px] text-gray-700 overflow-x-auto">
+              <span class="text-red-600 font-semibold mr-2">— PREVIOUS</span>
+              <span class="truncate">CAPITAL ONE BANK vs ELLIS, JOHN</span>
+              <svg class="w-4 h-4 mx-3 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-green-600 font-semibold mr-2">● CURRENT</span>
+              <span class="font-medium truncate">CAPITAL ONE N.A SUCCESSOR BY MERGER TO DISCOVER vs ELLIS, JOHN, JOHN, JOHN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parties - Removed (2025-08-15) -->
+      <div *ngIf="shouldShowItem('removed')" class="flex gap-4">
+        <div class="flex-1 bg-red-50 border border-red-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-08-15</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Parties</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-red-500 text-white">Removed</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-600 mb-3">Third Party Defendant</div>
+          <div class="bg-red-50 border-2 border-dashed border-red-300 rounded p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.268 15.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              <span class="font-medium text-red-700">DANIELS, MICHAEL</span>
+              <span class="text-sm text-gray-500">- Removed due to settlement agreement. Contact: michael.daniels@email.com | Phone: (555) 234-5678</span>
+            </div>
+            <p class="text-sm text-red-600 mt-2">This party has been permanently removed from the case record.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Team - Removed (2025-07-22) -->
+      <div *ngIf="shouldShowItem('removed')" class="flex gap-4">
+        <div class="flex-1 bg-red-50 border border-red-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-07-22</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Legal Team</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-red-500 text-white">Removed</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-600 mb-3">Attorney</div>
+          <div class="bg-red-50 border-2 border-dashed border-red-300 rounded p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.268 15.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              <span class="font-medium text-red-700">Robert Chen, Esq.</span>
+              <span class="text-sm text-gray-500">- Withdrew from case. Contact: robert@legalfirm.com | Bar #: CA-67854</span>
+            </div>
+            <p class="text-sm text-red-600 mt-2">This legal team has been permanently removed from the case record.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Documents - Removed (2025-04-10) -->
+      <div *ngIf="shouldShowItem('removed')" class="flex gap-4">
+        <div class="flex-1 bg-red-50 border border-red-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-04-10</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Documents</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-red-500 text-white">Removed</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-600 mb-3">Motion Document</div>
+          <div class="bg-red-50 border-2 border-dashed border-red-300 rounded p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.268 15.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              <span class="font-medium text-red-700">MOTION TO DISMISS</span>
+              <span class="text-sm text-gray-500">- Document withdrawn by plaintiff counsel | File ID: DOC-2025-04-10-001 | Size: 2.4 MB | Originally uploaded: 2025-04-10</span>
+            </div>
+            <p class="text-sm text-red-600 mt-2">This document has been permanently removed from the case record.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Details - Added (2025-03-23) -->
+      <div *ngIf="shouldShowItem('added')" class="flex gap-4">
+        <div class="flex-1 bg-green-50 border border-green-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-03-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Case Details</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-500 text-white">Added</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span class="text-sm text-gray-600">Case Title</span>
+          </div>
+          <div class="bg-white border border-green-200 rounded p-3">
+            <div class="text-xs font-semibold text-green-600 mb-2">✓ CAPITAL ONE BANK vs ELLIS, JOHN</div>
+            <div class="text-sm text-gray-600 mb-2">Case Number: CV-2025-0123</div>
+            <div class="text-sm text-gray-600 mb-2">Superior Court of California, County of Los Angeles</div>
+            <div class="text-sm text-gray-600">Filing Date: 2025-03-23</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parties - Added Plaintiff (2025-03-23) -->
+      <div *ngIf="shouldShowItem('added')" class="flex gap-4">
+        <div class="flex-1 bg-green-50 border border-green-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-03-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Parties</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-500 text-white">Added</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-600 mb-3">Plaintiff</div>
+          <div class="bg-green-50 border-2 border-dashed border-green-300 rounded p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+              <span class="font-semibold text-gray-900">CAPITAL ONE BANK</span>
+              <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">Plaintiff</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+              <div><span class="font-medium text-gray-700">Type:</span> <span class="text-gray-600">Financial Institution</span></div>
+              <div><span class="font-medium text-gray-700">Phone:</span> <span class="text-gray-600">(800) 955-7070</span></div>
+              <div><span class="font-medium text-gray-700">Email:</span> <span class="text-gray-600">legal@capitalone.com</span></div>
+              <div><span class="font-medium text-gray-700">Address:</span> <span class="text-gray-600">1680 Capital One Drive, McLean, VA 22102</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parties - Added Defendant (2025-03-23) -->
+      <div *ngIf="shouldShowItem('added')" class="flex gap-4">
+        <div class="flex-1 bg-green-50 border border-green-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-03-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Parties</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-500 text-white">Added</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-600 mb-3">Defendant</div>
+          <div class="bg-green-50 border-2 border-dashed border-green-300 rounded p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+              <span class="font-semibold text-gray-900">ELLIS, JOHN</span>
+              <span class="px-2 py-1 bg-red-100 text-red-800 rounded text-xs">Defendant</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+              <div><span class="font-medium text-gray-700">Type:</span> <span class="text-gray-600">Individual</span></div>
+              <div><span class="font-medium text-gray-700">Phone:</span> <span class="text-gray-600">(555) 123-4567</span></div>
+              <div><span class="font-medium text-gray-700">Email:</span> <span class="text-gray-600">john.ellis@email.com</span></div>
+              <div><span class="font-medium text-gray-700">Address:</span> <span class="text-gray-600">123 Main Street, Los Angeles, CA 90001</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Team - Added Judge (2025-04-23) -->
+      <div *ngIf="shouldShowItem('added')" class="flex gap-4">
+        <div class="flex-1 bg-green-50 border border-green-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-04-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Legal Team</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-500 text-white">Added</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-600 mb-3">Presiding Judge</div>
+          <div class="bg-white border border-green-200 rounded p-3">
+            <div class="flex items-center gap-2 mb-3">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+              <span class="font-semibold text-gray-900">Hon. Margaret Thompson</span>
+              <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">Presiding Judge</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+              <div><span class="font-medium text-gray-700">Court:</span> <span class="text-gray-600">Superior Court of California</span></div>
+              <div><span class="font-medium text-gray-700">Division:</span> <span class="text-gray-600">Civil Division 40</span></div>
+              <div><span class="font-medium text-gray-700">Courtroom:</span> <span class="text-gray-600">40</span></div>
+              <div><span class="font-medium text-gray-700">Email:</span> <span class="text-gray-600">judge@lacourt.org</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parties - Changed (2025-05-23) -->
+      <div *ngIf="shouldShowItem('changed')" class="flex gap-4">
+        <div class="flex-1 bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-05-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Parties</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-blue-500 text-white">Changed</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-600 mb-3">Plaintiff</div>
+          <div class="border-2 border-dashed border-blue-300 bg-white rounded p-3">
+            <div class="flex items-center text-[13px] text-gray-700 overflow-x-auto">
+              <span class="text-red-600 font-semibold mr-2">— PREVIOUS</span>
+              <span class="truncate">CAPITAL ONE BANK</span>
+              <svg class="w-4 h-4 mx-3 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-green-600 font-semibold mr-2">● CURRENT</span>
+              <span class="font-medium truncate">CAPITAL ONE N.A SUCCESSOR BY MERGER TO DISCOVER</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- doc1 - Documents (Added) -->
+      <div *ngIf="shouldShowItem('added')" class="flex gap-4">
+        <div class="flex-1 bg-green-50 border border-green-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-05-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Documents</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-500 text-white">Added</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-700 mb-3 flex items-center gap-1"><span class="text-green-600">+</span> Coversheet Document</div>
+          <div class="bg-green-50 border-2 border-dashed border-green-300 rounded p-4 text-[13px]">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              <span class="font-semibold text-gray-900">ELECTRONIC CERTIFIED MAIL COVERSHEET (SPS BARCODE)</span>
+              <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-xs">Administrative Filing</span>
+              <span class="px-2 py-0.5 bg-green-100 text-green-800 rounded text-xs">Service Documents</span>
+            </div>
+            <div class="divide-y divide-green-200 text-gray-700">
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">File ID</span><span class="font-medium">DOC-2025-013-CVR</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Size</span><span class="font-medium">245 KB</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Format</span><span class="font-medium">PDF</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Uploaded</span><span class="font-medium">2025-05-23 09:03 AM</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">SPS Barcode</span><span class="font-medium">2015-LA-0X-6123</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- doc2 - Docket Entries (Added - Service Attempt) -->
+      <div *ngIf="shouldShowItem('added')" class="flex gap-4">
+
+        <div class="flex-1 bg-green-50 border border-green-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-05-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Docket Entries</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-500 text-white">Added</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-700 mb-3 flex items-center gap-1"><span class="text-green-600">+</span> Service Attempt</div>
+          <div class="bg-green-50 border-2 border-dashed border-green-300 rounded p-4 text-[13px]">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              <span class="font-semibold text-gray-900">2025-05-27 - SERVICE ATTEMPT</span>
+              <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded text-xs">Service Filing</span>
+              <span class="px-2 py-0.5 bg-green-100 text-green-800 rounded text-xs">Filed</span>
+            </div>
+            <div class="divide-y divide-green-200 text-gray-700 mb-2">
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Fees</span><span class="font-medium">$ 9.00</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Filed by</span><span class="font-medium">Plaintiff Counsel</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Recipient</span><span class="font-medium">Defendant</span></div>
+            </div>
+            <p class="text-gray-600">Note: Initial service attempt via certified mail to defendant's last known address.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- doc3 - Docket Entries (Added - Electronic Coversheet Filing) -->
+      <div *ngIf="shouldShowItem('added')" class="flex gap-4">
+
+        <div class="flex-1 bg-green-50 border border-green-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-05-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Docket Entries</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-500 text-white">Added</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-700 mb-3 flex items-center gap-1"><span class="text-green-600">+</span> Electronic Coversheet Filing</div>
+          <div class="bg-green-50 border-2 border-dashed border-green-300 rounded p-4 text-[13px]">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              <span class="font-semibold text-gray-900">2025-05-27 - ELECTRONIC CERTIFIED MAIL COVERSHEET</span>
+              <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-xs">Administrative Filing</span>
+              <span class="px-2 py-0.5 bg-green-100 text-green-800 rounded text-xs">Filed</span>
+            </div>
+            <div class="divide-y divide-green-200 text-gray-700 mb-2">
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Fees</span><span class="font-medium">$ 9.00</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Filed by</span><span class="font-medium">Court Clerk</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Recipient</span><span class="font-medium">Plaintiff</span></div>
+            </div>
+            <div class="text-gray-600"><span class="font-medium text-gray-700">Document:</span> SMS BARCODE coversheet attached to certified mail service package</div>
+            <p class="text-gray-600 mt-1">Note: Verification and barcode applied for certified mail processing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- doc4 - Docket Entries (Added - Summons Order Entry) -->
+      <div *ngIf="shouldShowItem('added')" class="flex gap-4">
+
+        <div class="flex-1 bg-green-50 border border-green-200 rounded-lg p-4">
+          <div class="flex items-center mb-2">
+            <span class="w-28 text-sm text-gray-500 font-mono flex-none">2025-05-23</span>
+            <div class="flex items-center justify-between flex-1">
+              <h3 class="font-semibold text-gray-900">Docket Entries</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-green-500 text-white">Added</span>
+            </div>
+          </div>
+          <div class="text-sm text-gray-700 mb-3 flex items-center gap-1"><span class="text-green-600">+</span> Summons Order Entry</div>
+          <div class="bg-green-50 border-2 border-dashed border-green-300 rounded p-4 text-[13px]">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              <span class="font-semibold text-gray-900">2025-05-27 - SUMMONS ON COMPLAINT BY CERTIFIED MAIL ISSUED</span>
+              <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded text-xs">Court Order</span>
+              <span class="px-2 py-0.5 bg-green-100 text-green-800 rounded text-xs">Completed</span>
+            </div>
+            <div class="divide-y divide-green-200 text-gray-700 mb-2">
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Fees</span><span class="font-medium">$ 9.00</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Filed by</span><span class="font-medium">Court Clerk Office</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Service Date</span><span class="font-medium">04/21/2025</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Service Method</span><span class="font-medium">Certified Mail</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Tracking</span><span class="font-medium">USPS/2025 3817-27-32</span></div>
+              <div class="flex items-center justify-between py-1"><span class="opacity-80">Recipient</span><span class="font-medium">Defendant</span></div>
+            </div>
+            <p class="text-gray-600">Note: Summons issued and service package dispatched via certified mail.</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex items-center justify-between mt-8 pt-4 border-t border-gray-200">
+      <div class="text-sm text-gray-500">
+        Showing 1 - 8 of 8 results
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 bg-blue-500 text-white">1</button>
+        <button class="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50">2</button>
+        <span class="text-sm text-gray-500">...</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--docket history end-->

@@ -2507,17 +2507,25 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
                     </div>
                     <div class="flex-1">
                       <h5 class="text-lg font-semibold text-primary-700"> Mary Smith </h5>
-                      <div class="mb-1 mt-1 flex"><span
+                      <div class="mb-1 mt-1 flex">
+                        <span
                           class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 "> star
-                        </span><span class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
-                          star </span><span
+                        </span>
+                        <span class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
+                          star
+                        </span>
+                        <span
                           class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 "> star
-                        </span></div>
+                        </span>
+                      </div>
                       <p class="text-sm text-Mdblue-600 font-semibold"> Proteus Law Firm </p>
                     </div>
-                    <div><button type="button"
+                    <div>
+                      <button type="button"
                         class="text-Mdblue-600 card-btn flex bg-gray-100- border- border-gray-300- focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1.5- py-1.5- p-1"><span
-                          class="material-symbols-outlined icon-24">more_horiz</span></button></div>
+                          class="material-symbols-outlined icon-24">more_horiz</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <div class="parent-card block p-2 bg-white border-2 border-gray-200 rounded-xl">
@@ -2535,7 +2543,8 @@ placeholder:text-Mdblue-700 border-gray-300 rounded bg-gray-50 focus:ring-0 focu
                         </span><span class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 ">
                           star </span><span
                           class="material-symbols-outlined text-secondary-700 secondary-fill-700 icon-16 "> star
-                        </span></div>
+                        </span>
+                      </div>
                       <p class="text-sm text-Mdblue-600 font-semibold"> Proteus Law Firm </p>
                     </div>
                     <div><button type="button"
@@ -7329,7 +7338,7 @@ justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
     test
   </button>
   <div id="scrolltest" tabindex="-1" aria-hidden="true"
-    class="hidden fixed inset-0 z-50 flex- items-center justify-center">
+    class="hidden- fixed inset-0 z-50 flex- items-center justify-center">
     <div class="flex flex-col bg-white  p-12 rounded-lg shadow-lg- w-full max-w-[802px] max-h-[95vh]">
       <!-- Modal Header start-->
       <div class="pb-4 border-b border-gray-200 d-none- text-center">
@@ -7391,7 +7400,7 @@ justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
         <!--user delete end-->
 
         <!--set tracker mid content start-->
-        <div class="space-y-6 mb-4">
+        <div class="space-y-6 mb-4 d-none">
           <div class="mt-4">
             <div class="mb-4">
               <label class="block text-lg font-medium text-Mdblue-700">How often do you want to update these
@@ -7602,6 +7611,403 @@ justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
           </div>
         </div>
         <!--set tracker mid content end-->
+
+        <!--table start-->
+
+
+        <div class="relative overflow-x-auto- shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left rtl:text-right text-gray-500  relative flex flex-col">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50flex sticky top-[0] z-[999]">
+              <tr class="bg-gray-300">
+                <th scope="col" class="p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-all-search" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                  </div>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Color
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Category
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Accessories
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Available
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Price
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Weight
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-1" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                  Silver
+                </td>
+                <td class="px-6 py-4">
+                  Laptop
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  $2999
+                </td>
+                <td class="px-6 py-4">
+                  3.0 lb.
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-2" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                  White
+                </td>
+                <td class="px-6 py-4">
+                  Laptop PC
+                </td>
+                <td class="px-6 py-4">
+                  No
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  $1999
+                </td>
+                <td class="px-6 py-4">
+                  1.0 lb.
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Magic Mouse 2
+                </th>
+                <td class="px-6 py-4">
+                  Black
+                </td>
+                <td class="px-6 py-4">
+                  Accessories
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  No
+                </td>
+                <td class="px-6 py-4">
+                  $99
+                </td>
+                <td class="px-6 py-4">
+                  0.2 lb.
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Apple Watch
+                </th>
+                <td class="px-6 py-4">
+                  Black
+                </td>
+                <td class="px-6 py-4">
+                  Watches
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  No
+                </td>
+                <td class="px-6 py-4">
+                  $199
+                </td>
+                <td class="px-6 py-4">
+                  0.12 lb.
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Apple iMac
+                </th>
+                <td class="px-6 py-4">
+                  Silver
+                </td>
+                <td class="px-6 py-4">
+                  PC
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  $2999
+                </td>
+                <td class="px-6 py-4">
+                  7.0 lb.
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Apple AirPods
+                </th>
+                <td class="px-6 py-4">
+                  White
+                </td>
+                <td class="px-6 py-4">
+                  Accessories
+                </td>
+                <td class="px-6 py-4">
+                  No
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  $399
+                </td>
+                <td class="px-6 py-4">
+                  38 g
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  iPad Pro
+                </th>
+                <td class="px-6 py-4">
+                  Gold
+                </td>
+                <td class="px-6 py-4">
+                  Tablet
+                </td>
+                <td class="px-6 py-4">
+                  No
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  $699
+                </td>
+                <td class="px-6 py-4">
+                  1.3 lb.
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Magic Keyboard
+                </th>
+                <td class="px-6 py-4">
+                  Black
+                </td>
+                <td class="px-6 py-4">
+                  Accessories
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  $99
+                </td>
+                <td class="px-6 py-4">
+                  453 g
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Apple TV 4K
+                </th>
+                <td class="px-6 py-4">
+                  Black
+                </td>
+                <td class="px-6 py-4">
+                  TV
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  No
+                </td>
+                <td class="px-6 py-4">
+                  $179
+                </td>
+                <td class="px-6 py-4">
+                  1.78 lb.
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                  </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  AirTag
+                </th>
+                <td class="px-6 py-4">
+                  Silver
+                </td>
+                <td class="px-6 py-4">
+                  Accessories
+                </td>
+                <td class="px-6 py-4">
+                  Yes
+                </td>
+                <td class="px-6 py-4">
+                  No
+                </td>
+                <td class="px-6 py-4">
+                  $29
+                </td>
+                <td class="px-6 py-4">
+                  53 g
+                </td>
+                <td class="flex items-center px-6 py-4">
+                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!--table end-->
 
       </div>
       <!-- Modal Middle Content (Scrollable) end-->

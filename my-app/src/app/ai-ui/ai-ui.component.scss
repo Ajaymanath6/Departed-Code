@@ -1,0 +1,543 @@
+// Premium Legal Case Tracker Styles
+
+// Keyframe Animations
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Animation Classes
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+// Glass Morphism Effect
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 40px 0 rgba(31, 38, 135, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+}
+
+// Premium Buttons
+.premium-btn {
+  @apply flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  &.premium-btn-primary {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(99, 102, 241, 0.8));
+    color: white;
+
+    &:hover {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 1), rgba(99, 102, 241, 1));
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    }
+  }
+
+  &.premium-btn-secondary {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.8), rgba(5, 150, 105, 0.8));
+    color: white;
+
+    &:hover {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 1), rgba(5, 150, 105, 1));
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    }
+  }
+}
+
+// Stats Cards
+.stats-card {
+  @apply p-4 rounded-xl;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+// Filter Pills
+.filter-pill {
+  @apply px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 transform hover:scale-105;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  &.active {
+    background: rgba(59, 130, 246, 0.8);
+    color: white;
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  }
+}
+
+.filter-badge {
+  @apply px-2 py-0.5 rounded-full text-xs font-bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.filter-tooltip {
+  @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap;
+
+  &::after {
+    content: '';
+    @apply absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #1f2937;
+  }
+}
+
+// Premium Cards
+.premium-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid transparent;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.premium-badge {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Highlight Box
+.highlight-box {
+  @apply p-4 rounded-lg;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1));
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+// Change Comparison
+.change-comparison {
+  @apply space-y-3;
+}
+
+.change-item {
+  @apply p-3 rounded-lg;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  &.change-from {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+    border-color: rgba(239, 68, 68, 0.3);
+  }
+
+  &.change-to {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+    border-color: rgba(16, 185, 129, 0.3);
+  }
+}
+
+// Action Menu Button
+.action-menu-btn {
+  @apply p-2 rounded-lg transition-all duration-200;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+}
+
+// Party Card
+.party-card {
+  @apply p-4 rounded-xl;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+// Document Cards
+.document-card {
+  @apply p-4 rounded-xl transition-all duration-300;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+  }
+
+  &.document-primary {
+    border-left: 4px solid #3b82f6;
+  }
+
+  &.document-secondary {
+    border-left: 4px solid #10b981;
+  }
+}
+
+.document-status {
+  @apply px-3 py-1 rounded-full text-xs font-semibold;
+
+  &.document-status-sent {
+    background: rgba(59, 130, 246, 0.2);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  &.document-status-processed {
+    background: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+}
+
+// Pagination
+.pagination-btn {
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  &.pagination-btn-active {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(99, 102, 241, 0.8));
+    color: white;
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .glass-card {
+    @apply mx-4;
+  }
+
+  .premium-card {
+    @apply mx-2;
+  }
+
+  .stats-card {
+    @apply text-center;
+  }
+
+  .filter-pill {
+    @apply text-xs px-3 py-1;
+  }
+
+  .premium-btn {
+    @apply px-4 py-2 text-xs;
+  }
+}
+
+// Dark mode enhancements
+@media (prefers-color-scheme: dark) {
+  .glass-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .premium-card {
+    background: rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Focus states for accessibility
+.premium-btn:focus,
+.filter-pill:focus,
+.action-menu-btn:focus,
+.pagination-btn:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.8);
+  outline-offset: 2px;
+}
+
+// Loading states
+.loading {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 2s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+// Docket History Styles
+.docket-section {
+  @apply mb-8;
+}
+
+.section-header {
+  @apply mb-6 pb-4 border-b border-white/10;
+}
+
+.docket-item {
+  @apply p-4 rounded-xl transition-all duration-300;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+  }
+
+  &.docket-added {
+    border-left: 4px solid #10b981;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(5, 150, 105, 0.05));
+  }
+
+  &.docket-changed {
+    border-left: 4px solid #f59e0b;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(217, 119, 6, 0.05));
+  }
+
+  &.docket-removed {
+    border-left: 4px solid #ef4444;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(220, 38, 38, 0.05));
+  }
+}
+
+.status-indicator {
+  @apply w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0;
+
+  &.status-added {
+    background: linear-gradient(135deg, #10b981, #059669);
+  }
+
+  &.status-changed {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+  }
+
+  &.status-removed {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+  }
+}
+
+.status-badge {
+  @apply px-2 py-1 rounded-full text-xs font-semibold;
+
+  &.status-badge-added {
+    background: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  &.status-badge-changed {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  &.status-badge-removed {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+}
+
+.category-badge {
+  @apply px-2 py-1 rounded text-xs font-medium;
+
+  &.category-case {
+    background: rgba(59, 130, 246, 0.2);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  &.category-party {
+    background: rgba(147, 51, 234, 0.2);
+    color: #c4b5fd;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+  }
+
+  &.category-attorney {
+    background: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  &.category-judge {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  &.category-docket {
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+  }
+
+  &.category-document {
+    background: rgba(20, 184, 166, 0.2);
+    color: #5eead4;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+  }
+}
+
+.change-comparison-mini {
+  @apply space-y-2 mt-3;
+}
+
+.change-from-mini, .change-to-mini {
+  @apply p-2 rounded-lg;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  .label {
+    @apply text-xs font-semibold text-gray-400 uppercase tracking-wide;
+  }
+
+  .value {
+    @apply text-sm text-gray-300 mt-1;
+  }
+}
+
+.change-from-mini {
+  border-left: 3px solid #ef4444;
+}
+
+.change-to-mini {
+  border-left: 3px solid #10b981;
+}
+
+.party-details, .attorney-details, .judge-details, .docket-details, .document-details {
+  @apply space-y-1;
+}
+
+.document-list {
+  @apply space-y-1 mt-2;
+}
+
+.document-item {
+  @apply flex items-center gap-2;
+}
+
+
+
+
