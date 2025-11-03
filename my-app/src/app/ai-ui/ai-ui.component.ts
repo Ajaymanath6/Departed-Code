@@ -20,8 +20,12 @@ interface CaseItem {
 })
 export class AIUiComponent {
 
+  // Tab state
+  activeTab: string = 'docket-history';
+
   // Filter state
   activeFilter: string = 'all';
+  activeFilters: string[] = ['added', 'removed', 'changed'];
 
   // Sample data
   allItems: CaseItem[] = [
@@ -132,6 +136,28 @@ export class AIUiComponent {
 
   constructor() {
     this.filteredItems = this.allItems;
+  }
+
+  // Tab functions
+  setActiveTab(tab: string): void {
+    this.activeTab = tab;
+    console.log('Active tab set to:', tab);
+  }
+
+  // Filter toggle functions
+  toggleFilter(filterType: string): void {
+    const index = this.activeFilters.indexOf(filterType);
+    if (index > -1) {
+      this.activeFilters.splice(index, 1);
+    } else {
+      this.activeFilters.push(filterType);
+    }
+    console.log('Active filters:', this.activeFilters);
+  }
+
+  // Check if item should be shown based on active filters
+  shouldShowItem(itemType: string): boolean {
+    return this.activeFilters.length === 0 || this.activeFilters.includes(itemType);
   }
 
   // Action button functions
