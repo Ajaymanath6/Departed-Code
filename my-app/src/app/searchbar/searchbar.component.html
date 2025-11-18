@@ -49,8 +49,8 @@
 <!--semantic start-->
 
 <div class="search-tab inline-flex flex-wrap items-center text-Mdblue-600 space-x-2 mb-3">
-   <div class="uppercase text-sm font-semibold mr-4">Search for</div>
-   <button type="button" class="px-4 py-2 text-sm font-medium bg-gray-200 text-Mdblue-700 rounded-full border">
+  <div class="uppercase text-sm font-semibold mr-4">Search for</div>
+  <button type="button" class="px-4 py-2 text-sm font-medium bg-gray-200 text-Mdblue-700 rounded-full border">
     Cases
   </button>
   <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
@@ -59,10 +59,10 @@
   <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
     Law firms
   </button>
-    <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+  <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
     Parties
   </button>
-    <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
+  <button type="button" class="px-4 py-2 text-sm font-medium  bg-white hover:text-Mdblue-700">
     Judges
   </button>
 </div>
@@ -175,6 +175,57 @@ focus:border-Mdblue-600 hover:bg-gray-100 font-semibold rounded text-base  p-3 t
             source
           </span>
           <span> Case Name</span>
+        </div>
+        <div class="flex">
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+    <li class="mr-[0.5rem]">
+      <button type="button" (click)="insertFilterChip('caseType')"
+        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
+        <div class="mr-2 flex items-center">
+          <!-- <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
+            list_alt
+          </span> -->
+          <img src="../../assets/svg/mapfill.svg" width="24" height="24" class="mr-1">
+          <span> State</span>
+        </div>
+        <div class="flex">
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+    <li class="mr-[0.5rem]">
+      <button type="button" (click)="insertFilterChip('caseType')"
+        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
+        <div class="mr-2 flex items-center">
+          <!-- <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
+            list_alt
+          </span> -->
+          <img src="../../assets/svg/map.svg" width="24" height="24" class="mr-1">
+          <span> State</span>
+        </div>
+        <div class="flex">
+          <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
+            add
+          </span>
+        </div>
+      </button>
+    </li>
+    <li class="mr-[0.5rem]">
+      <button type="button" (click)="insertFilterChip('caseType')"
+        class="inline-flex w-full- items-center justify-between rounded-lg border bg-gray-200 p-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-800 focus:border-Mdblue-600 focus:outline-none focus:ring-4 focus:ring-gray-100">
+        <div class="mr-2 flex items-center">
+          <!-- <span class="material-symbols-outlined Mdblue-fill-700 mr-2">
+            list_alt
+          </span> -->
+          <img src="../../assets/svg/mapmarker.svg" width="24" height="24" class="mr-1">
+          <span> State</span>
         </div>
         <div class="flex">
           <span class="material-symbols-outlined icon-18 rounded-md bg-white text-primary-700">
