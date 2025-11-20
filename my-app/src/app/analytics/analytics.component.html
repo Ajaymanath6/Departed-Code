@@ -1,0 +1,251 @@
+<!--analytics page start -->
+<div class="p-6">
+  <div class="cust-drop z-10 w-[30rem] rounded-lg bg-white block" data-popper-placement="bottom">
+    <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+      <p class="text-xl text-center font-semibold text-Mdblue-700">Select Courts</p>
+      <div class="mb-3 text-center font-medium">Below are the courts with analytics. Labels indicate the type of data
+        that
+        we have available for each state. We can’t combine states if the quality of the data is different.</div>
+      <div class="relative"><input type="text"
+          class="w-80- block w-full rounded-lg border border-gray-300 py-2.5 pe-16 text-sm text-Mdblue-700 placeholder:text-gray-700 hover:border-secondary-600 hover:bg-gray-50 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600 ng-untouched ng-pristine ng-valid"
+          placeholder="Search courts...">
+        <div class="pointer-events-none absolute inset-y-0 end-4 flex items-center ps-5 "><svg aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="size-4 text-Mdblue-600">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+          </svg></div>
+      </div>
+      <div class="mt-2 gap-1 px-4 c_md:px-0 c_md:gap-1 inline-flex justify-center w-full text-sm">
+        <div class="flex items-center gap-1 px-3 py-1 rounded-sm font-semibold text-Mdblue-700 c_md:px-1 ">
+          <span class="bg-orange-600 rounded-full size-2"></span><span class="text-sm">Judgment Analytics
+          </span>
+        </div>
+        <div class="flex items-center gap-1 px-3 py-1 rounded-sm font-semibold text-Mdblue-700 c_md:px-1 ">
+          <span class="bg-primary-600 rounded-full size-2"></span><span class="text-sm">Verdict Analytics
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-2 h-[1px] grow bg-gray-200"></div>
+    <div class="h-60 overflow-y-scroll">
+      <div>
+        <ul class="px-2 py-2 text-sm text-Mdblue-600 ">
+          <li class=""><button
+              class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-100 cursor-pointer">
+              <div class="flex"><button
+                  class="cust-tree-check-input mr-2 flex h-4 w-4 shrink-0 items-center justify-center rounded border border-gray-600 text-white "><span
+                    class="material-symbols-outlined icon-18 font-semibold"></span></button><span
+                  class="text-left">Civil</span></div>
+              <div class="flex items-center "><span class="material-symbols-outlined icon-24 text-Mdblue-600">
+                  keyboard_arrow_down </span></div>
+
+            </button>
+            <ul class="py-2 pl-4 text-sm text-Mdblue-600 ">
+              <li class=""><button
+                  class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-100 cursor-pointer">
+                  <div class="flex"><button
+                      class="cust-tree-check-input mr-2 flex h-4 w-4 shrink-0 items-center justify-center rounded border border-gray-600 text-white "><span
+                        class="material-symbols-outlined icon-18 font-semibold"></span></button><span
+                      class="text-left">Banking</span></div>
+                  <div class="flex items-center "><span class="material-symbols-outlined icon-24 text-Mdblue-600">
+                      chevron_right </span></div>
+                </button></li>
+
+
+            </ul>
+          </li>
+          <li class=""><button
+              class="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:bg-gray-100">
+              <div class="flex"><button
+                  class="cust-tree-check-input mr-2 flex h-4 w-4 shrink-0 items-center justify-center rounded border border-gray-600 text-white "><span
+                    class="material-symbols-outlined icon-18 font-semibold"></span></button><span
+                  class="text-left">Criminal</span></div>
+            </button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+    <div class="grid grid-cols-2 gap-2 px-4 py-3 text-sm text-Mdblue-700"><button type="button"
+        class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+        Cancel </button>
+      <button type="button"
+        class="btn-focus flex items-center justify-center rounded border border-transparent bg-primary-700 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none">
+        <div class="flex items-center">Show
+          me the analytics<span class="material-symbols-outlined ml-2 icon-18"> arrow_right_alt </span></div>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex w-full items-center gap-6 relative">
+    <div class="h-[1px] w-full bg-gray-300"></div>
+    <div class="flex items-center space-x-2 text-center font-semibold text-Mdblue-600 shrink-0"><img
+        alt="Profile Avatar" class="size-6 " src="./assets/images/Attorney_gray.svg">
+      <h3 class="text-xl font-semibold text-Mdblue-700"> Top Law Firm</h3>
+    </div>
+    <div class="h-[1px] w-full bg-gray-300"></div>
+  </div>
+  <p class="mb-4 mt-2 text-center text-sm text-Mdblue-700 ">Below are the top law firms. You can sort the table columns
+    and customize the view to your liking.</p>
+
+  <div class="flex items-center gap-2">
+    <div class="relative flex-1">
+      <input type="text" placeholder="Search law firms..."
+        class="block w-full rounded-lg border border-gray-300 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 focus:border-secondary-600 focus:ring-1 hover:bg-gray-50 hover:border-secondary-600 focus:ring-secondary-600 focus:outline-none">
+      <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="size-4 text-Mdblue-600">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+        </svg></div>
+    </div>
+    <div>custom button</div>
+  </div>
+
+
+  <div class="cust-drop attorney-state-filter d-none- z-10 !ml-[1%] w-[22.5rem] rounded-lg bg-white block"
+    data-popper-placement="bottom">
+    <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+      <div class="mb-3 text-center font-medium">Customize your View</div>
+      <div class="relative"><input type="text"
+          class="w-80- block w-full rounded-lg border border-gray-300 py-2.5 pe-16 text-sm text-Mdblue-700 placeholder:text-gray-700 hover:border-secondary-600 hover:bg-gray-50 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600"
+          placeholder="Column name...">
+        <div class="pointer-events-none absolute inset-y-0 end-4 flex items-center ps-5 "><svg aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="size-4 text-Mdblue-600">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+          </svg></div>
+      </div>
+    </div>
+    <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+    <ul class="grid gap-4 flex-wrap overflow-y-scroll px-4 py-2 text-sm text-Mdblue-600">
+      <li>
+        <div class="my-2 flex items-center gap-2 w-full">
+          <div class="flex items-center space-x-2 text-center font-semibold text-Mdblue-600">
+            <h5 class="text-sm font-semibold text-gray-600">CATEGORY</h5>
+          </div>
+          <div class="w-full- h-px grow bg-gray-200"></div>
+        </div>
+        <div class="flex justify-between bg-gray-100 p-2 rounded-md mb-2">
+          <div class="flex flex-col flex-1">
+            <p class=" text-base font-semibold text-Mdblue-700">Judgments Won</p>
+          </div><label class="inline-flex cursor-pointer items-center"><input type="checkbox" class="peer sr-only">
+            <div
+              class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-secondary-700 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-secondary-300 rtl:peer-checked:after:-translate-x-full">
+            </div>
+          </label>
+        </div>
+      </li>
+      <li>
+        <div class="my-2 flex items-center gap-2 w-full">
+          <div class="flex items-center space-x-2 text-center font-semibold text-Mdblue-600">
+            <h5 class="text-sm font-semibold text-gray-600">CATEGORY</h5>
+          </div>
+          <div class="w-full- h-px grow bg-gray-200"></div>
+        </div>
+        <div class="flex justify-between bg-gray-100 p-2 rounded-md">
+          <div class="flex flex-col flex-1">
+            <p class=" text-base font-semibold text-Mdblue-700">% Cases to Judgment</p>
+          </div><label class="inline-flex cursor-pointer items-center"><input type="checkbox" class="peer sr-only">
+            <div
+              class="peer relative h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-secondary-700 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-secondary-300 rtl:peer-checked:after:-translate-x-full">
+            </div>
+          </label>
+        </div>
+      </li>
+
+    </ul>
+    <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+    <div class="grid grid-cols-2 gap-2 px-4 py-3 text-sm text-Mdblue-700">
+      <button type="button"
+        class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+        Restore Defaults </button>
+      <button type="button"
+        class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-secondary-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+        Apply </button>
+    </div>
+  </div>
+
+  <!--compare start-->
+  <div>
+    <div class="bg-white rounded-lg border border-gray-300 shadow-sm">
+      <section class="border-b-2 sticky top-16 bg-white z-[9] c_lg:top-20">
+        <div class="container ">
+          <p class="text-2xl font-bold text-Mdblue-700 text-center my-2">Compare</p>
+          <div class="border-gray-200 bg-white">
+            <ul class="flex flex-wrap text-center text-sm font-medium">
+              <li class=""><a
+                  class="-mb-0.5 inline-block rounded-t-lg border-b-2 p-4 text-base font-semibold text-gray-600 hover:!text-Mdblue-700  text-primary-700 border-primary-700 hover:border-primary-700"
+                  href="">Attorneys</a>
+              </li>
+              <li class=""><a
+                  class="-mb-0.5 inline-block rounded-t-lg border-b-2 p-4 text-base font-semibold text-gray-600 hover:!text-Mdblue-700 "
+                  href="">Law Firms
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- <div class="flex p-4 text-lg font-bold items-center flex-col">
+        <div class="flex items-center"><span class="material-symbols-outlined icon-20 mr-1 text-gray-600"> schedule
+          </span> Tracking </div>
+      </div> -->
+      <div class="flex flex-col gap-y-4 border-t- border-gray-300 p-4">
+        <div class="relative flex-1"><input type="text" placeholder="Search attorneys..."
+            class="block w-full rounded-lg border border-gray-300 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 focus:border-secondary-600 focus:ring-1 hover:bg-gray-50 hover:border-secondary-600 focus:ring-secondary-600 focus:outline-none">
+          <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3"><svg aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="size-4 text-Mdblue-600">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+            </svg></div>
+        </div>
+        <p class="text-xl font-bold text-gray-600 text-center my-2">Search for attorneys to be able to compare them</p>
+      </div>
+    </div>
+  </div>
+  <!--compare end-->
+
+  <!--compare sheet right start-->
+  <div data-popper-placement="bottom"
+    class="cust-drop attorney-state-filter d-none- z-10 !ml-[1%] w-[22.5rem] rounded-lg bg-white block">
+    <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+      <div class="mb-3 text-center font-medium">Compare Attorneys</div>
+
+    </div>
+    <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+    <ul class="grid gap-4 flex-wrap overflow-y-scroll px-4 py-2 text-sm text-Mdblue-600">
+      <p class="text-base text-Mdblue-700 mt-3"><span class="font-bold">2</span> attorneys selected</p>
+      <li>
+        <div class="flex gap-2 rounded-lg border border-gray-300 p-2">
+          <div class="grow">
+            <div class="flex items-center gap-2">
+              <div size="size-10 min-w-[2.5rem] min-h-[2.5rem]">
+                <div
+                  class="Mdblue-fill-700 bg-yellow-700 inline-flex items-center justify-center min-h-[2.5rem] min-w-[2.5rem] overflow-hidden relative rounded-full size-10">
+                  <span class="font-semibold text-base text-white undefined">AM</span>
+                </div>
+              </div>
+              <div>
+                <div class="text-base font-semibold text-Mdblue-700"> First Last </div>
+                <p class="text-sm text-Mdblue-700"> Law Firm Name </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <button type="button"
+              class="flex rounded-lg p-1 text-sm font-medium text-Mdblue-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                class="material-symbols-outlined icon-16"> close </span></button>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+    <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+    <div class="grid grid-cols-2 gap-2 px-4 py-3 text-sm text-Mdblue-700"><button type="button"
+        class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+       Clear </button><button type="button"
+        class="btn-focus flex items-center justify-center rounded border border-transparent bg-secondary-600 p-3 text-base font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+        Compare </button></div>
+  </div>
+  <!--compare sheet right end-->
+
+</div>
+<!--analytics page end -->

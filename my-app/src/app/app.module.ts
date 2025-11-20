@@ -33,6 +33,7 @@ import { NewthemeComponent } from './newtheme/newtheme.component';
 import { EmailTempComponent } from './email-temp/email-temp.component';
 import { VarshiTableComponent } from './varshi-table/varshi-table.component';
 import { AIUiComponent } from './ai-ui/ai-ui.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { AIUiComponent } from './ai-ui/ai-ui.component';
     EmailTempComponent,
     VarshiTableComponent,
     AIUiComponent,
+    AnalyticsComponent,
   ],
   imports: [
     BrowserModule,
