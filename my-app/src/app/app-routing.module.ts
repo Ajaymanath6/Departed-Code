@@ -23,6 +23,7 @@ import { NewthemeComponent } from './newtheme/newtheme.component';
 import { EmailTempComponent } from './email-temp/email-temp.component';
 import { VarshiTableComponent } from './varshi-table/varshi-table.component';
 import { AIUiComponent } from './ai-ui/ai-ui.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
 
 const routes: Routes = [
   {
@@ -113,6 +114,10 @@ const routes: Routes = [
   {
     path: 'aiui',
     component: AIUiComponent,
+  },
+  {
+    path: 'analytics',
+    component: AnalyticsComponent,
   },
 ];
 
