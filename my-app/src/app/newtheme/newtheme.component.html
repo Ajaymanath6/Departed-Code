@@ -283,23 +283,25 @@
       </div>
     </div>
 
-<div class="bg-gray-100 rounded-lg p-4">
-  <p class="font-semibold text-Mdblue-700 text-lg mb-2">Fancy Search</p>
+    <div class="bg-gray-100 rounded-lg p-4">
+      <p class="font-semibold text-Mdblue-700 text-lg mb-2">Fancy Search</p>
       <div class="flex rounded-lg border-2 border-gray-200 bg-white p-2-">
-      <div class="flex border-r-2 border-gray-200 p-3 items-center">
-        <span class="material-symbols-outlined mr-1">  auto_awesome  </span>
-      </div>
-      <div class="flex grow p-3 items-center relative overflow-hidden">
-        <p class="text-Mdblue-700 whitespace-nowrap">Show me cases where John Smith is a defendant in Calif Show me
-          cases where
-          John Smith is a defendant in Calif</p>
-        <div
-          class="flex items-center absolute inset-y-0 right-[1px] bg-gradient-to-r from-transparent to-white border-1 rounded-lg	 border-transparent">
-          <button _ngcontent-vrg-c21="" class="flex w-full items-center justify-center rounded border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100"> Run Search </button>
+        <div class="flex border-r-2 border-gray-200 p-3 items-center">
+          <span class="material-symbols-outlined mr-1"> auto_awesome </span>
+        </div>
+        <div class="flex grow p-3 items-center relative overflow-hidden">
+          <p class="text-Mdblue-700 whitespace-nowrap">Show me cases where John Smith is a defendant in Calif Show me
+            cases where
+            John Smith is a defendant in Calif</p>
+          <div
+            class="flex items-center absolute inset-y-0 right-[1px] bg-gradient-to-r from-transparent to-white border-1 rounded-lg	 border-transparent">
+            <button _ngcontent-vrg-c21=""
+              class="flex w-full items-center justify-center rounded border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100">
+              Run Search </button>
+          </div>
         </div>
       </div>
     </div>
-</div>
 
 
     <div class="grid grid-cols-2 gap-2">
@@ -778,8 +780,8 @@
 </p>
 
 <!--judgement tabs start-->
-<div>
-  <div class="bg-white rounded-lg border border-gray-300 shadow-sm m-4">
+<div class="grid grid-cols-1 gap-4">
+  <div class="bg-white rounded-lg border border-gray-300 shadow-sm">
     <div class="p-4">
       <div>
         <div class=" flex items-center">
@@ -798,7 +800,7 @@
     <div class="p-4 border-t border-gray-200 grid grid-cols-1 gap-4">
       <div>
         <p class="text-lg font-semibold text-Mdblue-700 border-b border-gray-300 mb-4">Winning Party</p>
-        <div class="grid grid-cols-4 gap-2">
+        <div class="grid grid-cols-5 gap-2 c_md:grid-cols-3">
           <div>
             <div class="flex items-center text-Mdblue-600"><span
                 class="text-base font-semibold text-gray-600">Role</span></div>
@@ -823,11 +825,25 @@
             </div>
             <p class="text-base font-semibold text-primary-700 mt-2">John Doe, Kevin Smith</p>
           </div>
+          <div>
+            <div class="flex items-center text-Mdblue-600">
+              <span class="text-base font-semibold text-gray-600">Total Damages</span>
+            </div>
+            <div class="text-base font-semibold mt-2 flex text-Mdblue-700 items-center">$00000
+              <!-- <span
+                class="material-symbols-outlined ml-1 gray-fill-600">
+                receipt_long
+              </span> -->
+              <button type="button"
+                class="inline-flex items-center rounded-lg ml-1 border p-1 text-center font-medium gray-fill-600 hover:bg-gray-100 border-transparent"><span
+                  class="material-symbols-outlined"> receipt_long </span></button>
+            </div>
+          </div>
         </div>
       </div>
       <div>
         <p class="text-lg font-semibold text-Mdblue-700 border-b border-gray-300 mb-4">Losing Party</p>
-        <div class="grid grid-cols-4 gap-2">
+        <div class="grid grid-cols-5 gap-2 c_md:grid-cols-3">
           <div>
             <div class="flex items-center text-Mdblue-600"><span
                 class="text-base font-semibold text-gray-600">Role</span>
@@ -852,10 +868,10 @@
           </div>
         </div>
       </div>
-      <div>
+      <!-- <div>
         <p class="text-lg font-semibold text-Mdblue-700 border-b border-gray-300 mb-4">
           Damages</p>
-        <div class="grid grid-cols-5 gap-2">
+        <div class="grid grid-cols-5 gap-2 c_md:grid-cols-3">
           <div>
             <div class="flex items-center text-Mdblue-600"><span class="text-base font-semibold text-gray-600">Total
                 Judgment Amount</span></div>
@@ -882,9 +898,224 @@
             <p class="text-base font-semibold text-Mdblue-700"> $00000 </p>
           </div>
         </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="bg-white rounded-lg border border-gray-300 shadow-sm">
+    <div class="p-4">
+      <div>
+        <div class=" flex items-center">
+          <h2 class="text-lg font-semibold text-Mdblue-700 mr-2">Etiam porta sem malesuada magna mollis euismod.</h2>
+          <div
+            class="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-base font-semibold text-Mdblue-700 whitespace-nowrap">
+            <span>2025-10-05</span>
+          </div>
+        </div>
+        <div>
+          <span class="text-base font-semibold text-gray-600">Judgment Type: </span> <span
+            class="text-base font-semibold text-Mdblue-700">Jury Verdict</span>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-2">
+      <div class="p-4 border-t- border-gray-200- grid grid-cols-1 gap-4">
+        <div>
+          <p class="text-lg font-semibold text-Mdblue-700 border-b border-gray-300 mb-4">Winning Party</p>
+          <div class="grid grid-cols-5 gap-2 c_md:grid-cols-3">
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span
+                  class="text-base font-semibold text-gray-600">Role</span></div>
+              <p class="text-base font-semibold text-Mdblue-700"> Plaintiff </p>
+
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600">
+                <span class="text-base font-semibold text-gray-600">Name</span>
+              </div>
+              <p class="text-base font-semibold text-primary-700 mt-2">Party Name, </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600">
+                <span class="text-base font-semibold text-gray-600">Attorneys</span>
+              </div>
+              <p class="text-base font-semibold text-primary-700 mt-2">John Doe, Kevin Smith </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600">
+                <span class="text-base font-semibold text-gray-600">LawFirm</span>
+              </div>
+              <p class="text-base font-semibold text-primary-700 mt-2">John Doe, Kevin Smith</p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600">
+                <span class="text-base font-semibold text-gray-600">Total Damages</span>
+              </div>
+              <div class="text-base font-semibold mt-2 flex text-Mdblue-700 items-center">$00000
+                <!-- <span
+                class="material-symbols-outlined ml-1 gray-fill-600">
+                receipt_long
+              </span> -->
+                <button type="button"
+                  class="inline-flex items-center rounded-lg ml-1 border p-1 text-center font-medium gray-fill-600 hover:bg-gray-100 border-transparent"><span
+                    class="material-symbols-outlined"> receipt_long </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="text-lg font-semibold text-Mdblue-700 border-b border-gray-300 mb-4">Losing Party</p>
+          <div class="grid grid-cols-5 gap-2 c_md:grid-cols-3">
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span
+                  class="text-base font-semibold text-gray-600">Role</span>
+              </div>
+              <p class="text-base font-semibold text-Mdblue-700"> Plaintiff </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span
+                  class="text-base font-semibold text-gray-600">Name</span></div>
+              <p class="text-base font-semibold text-primary-700 mt-2">Party Name, </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span
+                  class="text-base font-semibold text-gray-600">Attorneys</span></div>
+              <p class="text-base font-semibold text-primary-700 mt-2">John Doe, Kevin Smith </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span class="text-base font-semibold text-gray-600">Law
+                  Firm</span></div>
+              <p class="text-base font-semibold text-primary-700 mt-2">
+                John Doe, Kevin Smith</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="border-t border-gray-200 border-b p-4">
+        <div><span class="text-base font-semibold text-gray-600">Judgment
+            Type: </span><span class="text-base font-semibold text-Mdblue-700">Summary Judgment</span>
+        </div>
+      </div>
+      <div class="p-4 border-t- border-gray-200- grid grid-cols-1 gap-4">
+        <div>
+          <p class="text-lg font-semibold text-Mdblue-700 border-b border-gray-300 mb-4">Winning Party</p>
+          <div class="grid grid-cols-5 gap-2 c_md:grid-cols-3">
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span
+                  class="text-base font-semibold text-gray-600">Role</span></div>
+              <p class="text-base font-semibold text-Mdblue-700"> Plaintiff </p>
+
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600">
+                <span class="text-base font-semibold text-gray-600">Name</span>
+              </div>
+              <p class="text-base font-semibold text-primary-700 mt-2">Party Name, </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600">
+                <span class="text-base font-semibold text-gray-600">Attorneys</span>
+              </div>
+              <p class="text-base font-semibold text-primary-700 mt-2">John Doe, Kevin Smith </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600">
+                <span class="text-base font-semibold text-gray-600">LawFirm</span>
+              </div>
+              <p class="text-base font-semibold text-primary-700 mt-2">John Doe, Kevin Smith</p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600">
+                <span class="text-base font-semibold text-gray-600">Total Damages</span>
+              </div>
+              <div class="text-base font-semibold mt-2 flex text-Mdblue-700 items-center">$00000
+                <!-- <span
+                class="material-symbols-outlined ml-1 gray-fill-600">
+                receipt_long
+              </span> -->
+                <button type="button"
+                  class="inline-flex items-center rounded-lg ml-1 border p-1 text-center font-medium gray-fill-600 hover:bg-gray-100 border-transparent"><span
+                    class="material-symbols-outlined"> receipt_long </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="text-lg font-semibold text-Mdblue-700 border-b border-gray-300 mb-4">Losing Party</p>
+          <div class="grid grid-cols-5 gap-2 c_md:grid-cols-3">
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span
+                  class="text-base font-semibold text-gray-600">Role</span>
+              </div>
+              <p class="text-base font-semibold text-Mdblue-700"> Plaintiff </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span
+                  class="text-base font-semibold text-gray-600">Name</span></div>
+              <p class="text-base font-semibold text-primary-700 mt-2">Party Name, </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span
+                  class="text-base font-semibold text-gray-600">Attorneys</span></div>
+              <p class="text-base font-semibold text-primary-700 mt-2">John Doe, Kevin Smith </p>
+            </div>
+            <div>
+              <div class="flex items-center text-Mdblue-600"><span class="text-base font-semibold text-gray-600">Law
+                  Firm</span></div>
+              <p class="text-base font-semibold text-primary-700 mt-2">
+                John Doe, Kevin Smith</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
+</div>
+<div class="cust-drop z-10 w-[22.5rem] divide-y divide-gray-100 rounded-lg bg-white shadow block">
+  <p class="my-3 text-center text-sm font-semibold text-Mdblue-700">Damages</p>
+  <ul class="space-y-2 p-2 text-base  text-Mdblue-700">
+    <li class="flex justify-between">
+      <span class="text-gray-600 font-semibold">
+        Total Judgment Amount
+      </span>
+      <span class="font-semibold">
+        $00000
+      </span>
+    </li>
+     <li class="flex justify-between">
+      <span class="text-gray-600 font-semibold">
+        Principal Amount
+      </span>
+      <span>
+        $00000
+      </span>
+    </li>
+     <li class="flex justify-between">
+      <span class="text-gray-600 font-semibold">
+        Interest
+      </span>
+      <span>
+        $00000
+      </span>
+    </li>
+     <li class="flex justify-between">
+      <span class="text-gray-600 font-semibold">
+        Attorneys Fees
+      </span>
+      <span>
+        $00000
+      </span>
+    </li>
+     <li class="flex justify-between">
+      <span class="text-gray-600 font-semibold">
+        Cost
+      </span>
+      <span>
+        $00000
+      </span>
+    </li>
+  </ul>
 </div>
 <!--judgement tabs end-->
 
