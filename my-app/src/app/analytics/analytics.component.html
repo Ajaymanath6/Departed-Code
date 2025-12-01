@@ -1,78 +1,112 @@
 <!--analytics page start -->
 
 <!--court analytics tab start-->
-<div class="bg-white rounded-[0.625rem] border border-gray-300 p-4 w-[57.5rem]">
-  <!-- Top Section -->
-  <div class="flex items-center justify-between border-b border-gray-300 py-2 pl-6 pr-2">
-    <div class="flex items-center gap-2">
-      <input type="checkbox" class="w-[1.125rem] h-[1.125rem] rounded border-[0.094rem] border-gray-400 cursor-pointer">
-      <h3 class="text-lg font-semibold text-Mdblue-700 leading-[1.4em]">State Name</h3>
-    </div>
-    <button class="flex items-center justify-center p-[0.438rem] rounded-md hover:bg-gray-100 transition-colors">
-      <span class="material-symbols-outlined icon-18 text-gray-600">more_horiz</span>
-    </button>
-  </div>
-
-  <!-- Content Section -->
-  <div class="flex flex-col gap-3 pt-4 px-6 pb-6">
-    <!-- Court Groups -->
-    <div class="border border-gray-300 rounded-lg w-[54.5rem]">
-      <div class="flex items-center justify-between border-b border-gray-300 py-2 pl-4 pr-2">
-        <div class="flex items-center gap-2 flex-1">
-          <input type="checkbox" class="w-[1.125rem] h-[1.125rem] rounded border-[0.094rem] border-gray-400 cursor-pointer">
-          <h4 class="text-lg font-semibold text-Mdblue-700 flex-1 leading-[1.4em]">Courts</h4>
+<div class="container mx-auto px-4 py-6">
+  <div class="mx-auto mb-10 max-w-[57.5rem]">
+    <div class=" w-[40rem]  bg-white block rounded-lg border border-gray-300 shadow-sm my-4">
+      <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+        <div class="">
+          <label class="flex w-full items-center rounded-md px-3 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer
+         hover:bg-gray-100 cursor-pointer gap-2" for=""><input type="checkbox" class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0
+           focus:ring-offset-0">
+            <p class="text-lg text-left font-semibold text-Mdblue-700">New York Supreme Courts <span
+                class=" text-gray-600">
+                (62)</span></p>
+          </label>
         </div>
-        <button class="flex items-center justify-center p-[0.438rem] rounded-md hover:bg-gray-100 transition-colors">
-          <span class="material-symbols-outlined icon-18 text-gray-600">arrow_forward_ios</span>
-        </button>
+      </div>
+      <div class="mt-4 h-[1px] grow bg-gray-200"></div>
+      <ul class="grid gap-4 flex-wrap overflow-y-scroll px-4 py-2 text-sm text-Mdblue-600">
+        <li></li>
+        <li>
+          <div class="my-2 flex items-center gap-2 w-full">
+            <div class="flex items-center space-x-2 text-center font-semibold text-Mdblue-600">
+              <h5 class="text-sm font-semibold text-gray-600">CATEGORY</h5>
+            </div>
+            <div class="w-full- h-px grow bg-gray-200"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8">
+      <div>
+        <div>
+          <div class="flex w-full items-center gap-6 relative">
+            <div class="h-[1px] w-full bg-gray-300"></div>
+            <div class="flex items-center space-x-2 text-center font-semibold text-Mdblue-600 shrink-0">
+              <h3 class="text-xl font-semibold text-Mdblue-700"> Courts With Judgment Analytics</h3>
+            </div>
+            <div class="h-[1px] w-full bg-gray-300"></div>
+          </div>
+          <p class="mb-4 mt-2 text-center text-sm text-Mdblue-700">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+
+        <div id="accordion-collapse" data-accordion="collapse"
+          class="rounded-lg border border-gray-300 shadow-sm overflow-hidden  m-2">
+          <h2 id="accordion-collapse-heading-1">
+            <button type="button"
+              class="flex w-full p-5 font-medium rounded-t-base border border-t-0 border-x-0 border-b-default hover:text-heading hover:bg-neutral-secondary-medium gap-3"
+              data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+              aria-controls="accordion-collapse-body-1">
+              <div class="flex flex-1 gap-2 items-center">
+                <input type="checkbox" class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0
+           focus:ring-offset-0">
+                <p class="text-lg text-left font-semibold text-Mdblue-700">New York Supreme Courts <span
+                    class=" text-gray-600">
+                    (62)</span></p>
+              </div>
+
+              <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m5 15 7-7 7 7" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-collapse-body-1"
+            class="hidden rounded-lg border-gray-300 shadow-sm border border-s-0 border-e-0 border-t-0 p-4 "
+            aria-labelledby="accordion-collapse-heading-1">
+            <ul class="grid grid-cols-1 gap-2  rounded-lg border-gray-300 shadow-sm border">
+              <li class="flex items-center gap-2 py-2 px-4">
+                <div class="flex-1 flex items-center gap-2">
+                  <input type="checkbox"
+                    class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                  <p class="text-lg text-left font-semibold text-Mdblue-700">Court Name</p>
+                </div>
+                <div class="flex-1 flex items-center gap-2">
+                  <input type="checkbox"
+                    class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                  <p class="text-lg text-left font-semibold text-Mdblue-700">Court Name </p>
+                </div>
+              </li>
+              <li class="flex items-center gap-2 py-2 px-4 border-t border-gray-300">
+                <div class="flex-1 flex items-center gap-2">
+                  <input type="checkbox"
+                    class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                  <p class="text-lg text-left font-semibold text-Mdblue-700">Court Name </p>
+                </div>
+                <div class="flex-1 flex items-center gap-2">
+                  <input type="checkbox"
+                    class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                  <p class="text-lg text-left font-semibold text-Mdblue-700">Court Name </p>
+                </div>
+              </li>
+            </ul>
+            <button type="button" class="text-primary-700 mt-4 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100
+      font-semibold rounded text-base px-5 py-2 text-center items-center w-full">
+              Show All <span>(8)</span></button>
+          </div>
+
+        </div>
       </div>
     </div>
-
-    <div class="border border-gray-300 rounded-lg w-[54.5rem]">
-      <div class="flex items-center justify-between border-b border-gray-300 py-2 pl-4 pr-2">
-        <div class="flex items-center gap-2 flex-1">
-          <input type="checkbox" class="w-[1.125rem] h-[1.125rem] rounded border-[0.094rem] border-gray-400 cursor-pointer">
-          <h4 class="text-lg font-semibold text-Mdblue-700 flex-1 leading-[1.4em]">Courts</h4>
-        </div>
-        <button class="flex items-center justify-center p-[0.438rem] rounded-md hover:bg-gray-100 transition-colors">
-          <span class="material-symbols-outlined icon-18 text-gray-600">arrow_forward_ios</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="border border-gray-300 rounded-lg w-[54.5rem]">
-      <div class="flex items-center justify-between border-b border-gray-300 py-2 pl-4 pr-2">
-        <div class="flex items-center gap-2 flex-1">
-          <input type="checkbox" class="w-[1.125rem] h-[1.125rem] rounded border-[0.094rem] border-gray-400 cursor-pointer">
-          <h4 class="text-lg font-semibold text-Mdblue-700 flex-1 leading-[1.4em]">Courts</h4>
-        </div>
-        <button class="flex items-center justify-center p-[0.438rem] rounded-md hover:bg-gray-100 transition-colors">
-          <span class="material-symbols-outlined icon-18 text-gray-600">arrow_forward_ios</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="border border-gray-300 rounded-lg w-[54.5rem]">
-      <div class="flex items-center justify-between border-b border-gray-300 py-2 pl-4 pr-2">
-        <div class="flex items-center gap-2 flex-1">
-          <input type="checkbox" class="w-[1.125rem] h-[1.125rem] rounded border-[0.094rem] border-gray-400 cursor-pointer">
-          <h4 class="text-lg font-semibold text-Mdblue-700 flex-1 leading-[1.4em]">Courts</h4>
-        </div>
-        <button class="flex items-center justify-center p-[0.438rem] rounded-md hover:bg-gray-100 transition-colors">
-          <span class="material-symbols-outlined icon-18 text-gray-600">arrow_forward_ios</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Show All Button -->
-    <button class="flex items-center justify-center gap-2 bg-gray-100 rounded-md py-3 px-1.5 border border-gray-300 hover:bg-gray-200 transition-colors w-full">
-      <span class="text-sm font-semibold text-primary-600 leading-[1.4em]">Show All (21)</span>
-      <span class="material-symbols-outlined icon-16 text-primary-600">arrow_right</span>
-    </button>
   </div>
 </div>
-<!--court analytics tab end-->
 
+
+
+<!--court analytics tab end-->
 
 
 <!--progress bar start-->
