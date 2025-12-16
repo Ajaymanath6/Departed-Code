@@ -75,12 +75,20 @@ export class AnalyticsComponent implements AfterViewInit {
         boundaryGap: false,
         axisLine: {
           show: true,
+          lineStyle: {
+            color: '#cccccc',
+          },
         },
         axisTick: {
           show: true,
         },
         splitLine: {
-          show: false,
+          show: true,
+          lineStyle: {
+            color: '#e5e7eb',
+            type: 'solid',
+            width: 1,
+          },
         },
       },
       yAxis: {
