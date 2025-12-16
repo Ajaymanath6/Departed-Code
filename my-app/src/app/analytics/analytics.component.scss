@@ -1,0 +1,23 @@
+.wh {
+  height: 400px;
+  width: 100% !important;
+  min-width: 0;
+  display: block;
+  position: relative;
+
+  > div {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  > div > canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+#line-artemis {
+  width: 100% !important;
+  min-width: 0;
+}
+
