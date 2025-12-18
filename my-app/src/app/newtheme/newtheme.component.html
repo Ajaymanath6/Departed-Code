@@ -533,6 +533,81 @@
 <!--pin end-->
 
 
+<!--verdict timings start-->
+<div class="bg-white border-2 border-gray-200 p-4 relative rounded-xl">
+  <h6 class="text-lg font-bold text-Mdblue-700 mb-5">Judgment Timing</h6>
+  <div class="flex flex-col gap-1 relative">
+    <div class="flex justify-between w-full">
+      <p class="text-sm font-semibold text-Mdblue-700"><span class="text-sm font-normal">Shortest:</span><br><span
+          class="text-lg font-semibold">69 days</span></p>
+      <p class="text-sm font-semibold text-Mdblue-700 text-right"><span
+          class="text-sm font-normal">Longest:</span><br><span class="text-lg font-semibold">530 days</span></p>
+    </div>
+    <div class="w-full h-14-">
+      <div class="flex items-end w-full h-[18px]">
+        <div class="bg-primary-600 h-full rounded-md w-full"></div>
+      </div>
+      <div class="absolute flex left-[35.7%] top-0 bottom-0 z-10 duration-300">
+        <div class="w-0.5 bg-Mdblue-700 z-10 h-[4.4rem]"></div>
+        <div class="text-sm font-semibold text-Mdblue-700 ml-[2px] min-w-[5rem]"><span
+            class="text-sm font-normal">Median:</span><br>
+          <div class="text-lg font-semibold flex">145 days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="verdict-new bg-white border-2 border-gray-200 p-4 relative rounded-xl">
+  <h6 class="text-lg font-semibold text-Mdblue-700 mb-5 text-center">Verdict Timing</h6>
+  <div class="flex flex-col gap-1 relative">
+    <div class="flex justify-between w-full">
+      <p class="text-sm font-semibold text-Mdblue-700"><span class="text-lg font-semibold">69 days</span></p>
+      <p class="text-sm font-semibold text-Mdblue-700 text-right"><span class="text-lg font-semibold">530 days</span>
+      </p>
+
+    </div>
+    <div class="w-full h-14- relative">
+      <div class="flex items-end w-full h-[18px]">
+        <div class="h-full rounded-l-md w-1/2 bg-[#028831]"></div>
+        <div class="h-full rounded-r-md w-1/2 bg-[#C5E7C1]"></div>
+      </div>
+      <!-- Left vertical marker -->
+      <div class="absolute left-0 top-[-3px] w-1 h-6 rounded-full bg-Mdblue-700 z-10"></div>
+      <!-- Middle vertical marker with label -->
+      <div class="absolute flex left-[50%] top-[-3px] z-10 duration-300">
+        <div class="w-1 bg-Mdblue-700 z-10 h-6 rounded-full"></div>
+        <div class="text-sm font-semibold text-Mdblue-700 ml-[-32px] min-w-[5rem] mt-[-32px]">
+          <div class="text-lg font-semibold flex">145 days</div>
+        </div>
+      </div>
+      <!-- Right vertical marker -->
+      <div class="absolute right-0 top-[-3px] w-1 h-6 rounded-full bg-Mdblue-700 z-10"></div>
+    </div>
+    <!-- Legend -->
+    <div class="flex flex-wrap justify-center font-semibold gap-4 mt-6 text-sm">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-secondary-100"></span>
+        <span class="text-Mdblue-700">Shortest number of days to Verdict</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-secondary-100"></span>
+        <span class="text-Mdblue-700">Longest number of days to Verdict</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-Mdblue-700"></span>
+        <span class="text-Mdblue-700">Median number of days to settlement</span>
+      </div>
+    </div>
+    <!-- <div class="flex justify-center mt-2 text-sm">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-Mdblue-700"></span>
+        <span class="text-Mdblue-700">Median number of days to settlement</span>
+      </div>
+    </div> -->
+  </div>
+</div>
+<!--verdict timings end-->
+
 <!--home new start-->
 <div class="text-center">
   <h1 class="text-[2rem] mt-2 font-semibold text-Mdblue-700 font-lora">Hello Michael!</h1>
@@ -1266,55 +1341,219 @@
         <div class="flex flex-col gap-8 px-6 pt-8 pb-6">
           <!-- Winning Parties -->
           <div class="flex flex-col gap-6">
-            <h5 class="text-xl font-bold text-Mdblue-700">Winning Parties <span class="font-normal">(25)</span></h5>
+
+            <h5 class="text-xl font-bold text-Mdblue-700">Individual Awards <span class="font-normal">(25)</span></h5>
+
 
             <!-- Party Card 1 -->
             <div class="flex flex-col gap-5 p-5 pl-7 border border-gray-400 rounded-xl relative">
               <div class="absolute left-0 top-0 bottom-0 w-2.5 bg-secondary-600 rounded-l-xl"></div>
               <div class="flex flex-col gap-6">
-                <div class="flex">
-                  <div class="grid grid-cols-3 flex-1 gap-5">
-                    <div>
-                      <div class="flex items-center gap-1.5">
-                        <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
-                        <span class="text-base font-semibold text-Mdblue-700">Plaintiff</span>
-                      </div>
-                      <div class="flex flex-col">
-                        <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
-                        <p class="text-base text-Mdblue-700 underline">Short Name</p>
-                      </div>
-
-                    </div>
-
-                    <div>
-                      <div class="flex flex-col gap-1.5 ">
-                        <div class="flex items-center gap-1.5 w-40">
+                <div>
+                  <div class="flex justify-between mb-4">
+                    <h5 class="text-xl font-bold text-Mdblue-700">Winning Parties <span class="font-normal">(25)</span>
+                    </h5>
+                    <div class="flex justify-end"><span
+                        class="material-symbols-outlined icon-28 text-secondary-600">workspace_premium</span></div>
+                  </div>
+                  <div class="flex flex-col gap-5">
+                    <div class="grid grid-cols-3 flex-1 gap-5">
+                      <div>
+                        <div class="flex items-center gap-1.5">
                           <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
-                          <span class="text-base font-semibold text-Mdblue-700">Attorneys</span>
+                          <span class="text-base font-semibold text-Mdblue-700">Plaintiff</span>
                         </div>
                         <div class="flex flex-col">
                           <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
                           <p class="text-base text-Mdblue-700 underline">Short Name</p>
                         </div>
+
                       </div>
-                    </div>
 
-                    <div class="flex flex-col gap-1.5 mt-1.5">
-                      <div class="flex items-center gap-1.5 w-40">
-                        <span class="material-symbols-outlined icon-20 text-gray-600">account_balance</span>
-                        <span class="text-base font-semibold text-Mdblue-700">Law Firm</span>
+                      <div>
+                        <div class="flex flex-col gap-1.5 ">
+                          <div class="flex items-center gap-1.5 w-40">
+                            <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                            <span class="text-base font-semibold text-Mdblue-700">Attorneys</span>
+                          </div>
+                          <div class="flex flex-col">
+                            <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                            <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                          </div>
+                        </div>
                       </div>
-                      <p class="text-base text-Mdblue-700 underline">Hilltop Legal Lounge</p>
+
+                      <div class="flex flex-col gap-1.5 mt-1.5">
+                        <div class="flex items-center gap-1.5 w-40">
+                          <span class="material-symbols-outlined icon-20 text-gray-600"> domain </span>
+                          <span class="text-base font-semibold text-Mdblue-700">Law Firm</span>
+                        </div>
+                        <p class="text-base text-Mdblue-700 underline">Hilltop Legal Lounge</p>
+                      </div>
+
+
                     </div>
+                    <div class="grid grid-cols-3 flex-1 gap-5">
+                      <div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                          <span class="text-base font-semibold text-Mdblue-700">Petitioner</span>
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                          <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                        </div>
+
+                      </div>
+
+                      <div>
+                        <div class="flex flex-col gap-1.5 ">
+                          <div class="flex items-center gap-1.5 w-40">
+                            <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                            <span class="text-base font-semibold text-Mdblue-700">Attorneys</span>
+                          </div>
+                          <div class="flex flex-col">
+                            <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                            <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col gap-1.5 mt-1.5">
+                        <div class="flex items-center gap-1.5 w-40">
+                          <span class="material-symbols-outlined icon-20 text-gray-600"> domain </span>
+                          <span class="text-base font-semibold text-Mdblue-700">Law Firm</span>
+                        </div>
+                        <p class="text-base text-Mdblue-700 underline">Hilltop Legal Lounge</p>
+                      </div>
 
 
+                    </div>
+                    <div class="grid grid-cols-3 flex-1 gap-5">
+                      <div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                          <span class="text-base font-semibold text-Mdblue-700">Counter Defendant</span>
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                          <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                        </div>
+
+                      </div>
+
+                      <div>
+                        <div class="flex flex-col gap-1.5 ">
+                          <div class="flex items-center gap-1.5 w-40">
+                            <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                            <span class="text-base font-semibold text-Mdblue-700">Attorneys</span>
+                          </div>
+                          <div class="flex flex-col">
+                            <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                            <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col gap-1.5 mt-1.5">
+                        <div class="flex items-center gap-1.5 w-40">
+                          <span class="material-symbols-outlined icon-20 text-gray-600"> domain </span>
+                          <span class="text-base font-semibold text-Mdblue-700">Law Firm</span>
+                        </div>
+                        <p class="text-base text-Mdblue-700 underline">Hilltop Legal Lounge</p>
+                      </div>
+
+
+                    </div>
+                    <div class="w-full h-px grow bg-gray-200"></div>
                   </div>
-                  <div class="flex justify-end"><span
-                      class="material-symbols-outlined icon-28 text-secondary-600">workspace_premium</span></div>
+                </div>
+<div>
+                  <div class="flex justify-between mb-4">
+                    <h5 class="text-xl font-bold text-Mdblue-700">Losing Parties <span class="font-normal">(25)</span>
+                    </h5>
+                    <!-- <div class="flex justify-end"><span
+                        class="material-symbols-outlined icon-28 text-secondary-600">workspace_premium</span></div> -->
+                  </div>
+                  <div class="flex flex-col gap-5">
+                    <div class="grid grid-cols-3 flex-1 gap-5">
+                      <div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                          <span class="text-base font-semibold text-Mdblue-700">Defendant</span>
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                          <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                        </div>
+
+                      </div>
+
+                      <div>
+                        <div class="flex flex-col gap-1.5 ">
+                          <div class="flex items-center gap-1.5 w-40">
+                            <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                            <span class="text-base font-semibold text-Mdblue-700">Attorneys</span>
+                          </div>
+                          <div class="flex flex-col">
+                            <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                            <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col gap-1.5 mt-1.5">
+                        <div class="flex items-center gap-1.5 w-40">
+                          <span class="material-symbols-outlined icon-20 text-gray-600"> domain </span>
+                          <span class="text-base font-semibold text-Mdblue-700">Law Firm</span>
+                        </div>
+                        <p class="text-base text-Mdblue-700 underline">Hilltop Legal Lounge</p>
+                      </div>
+
+
+                    </div>
+
+                    <div class="grid grid-cols-3 flex-1 gap-5">
+                      <div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                          <span class="text-base font-semibold text-Mdblue-700">Counter Plaintiff</span>
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                          <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                        </div>
+
+                      </div>
+
+                      <div>
+                        <div class="flex flex-col gap-1.5 ">
+                          <div class="flex items-center gap-1.5 w-40">
+                            <span class="material-symbols-outlined icon-20 text-gray-600">people</span>
+                            <span class="text-base font-semibold text-Mdblue-700">Attorneys</span>
+                          </div>
+                          <div class="flex flex-col">
+                            <p class="text-base text-Mdblue-700 underline">Reallylongname Lastnamerson</p>
+                            <p class="text-base text-Mdblue-700 underline">Short Name</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col gap-1.5 mt-1.5">
+                        <div class="flex items-center gap-1.5 w-40">
+                          <span class="material-symbols-outlined icon-20 text-gray-600"> domain </span>
+                          <span class="text-base font-semibold text-Mdblue-700">Law Firm</span>
+                        </div>
+                        <p class="text-base text-Mdblue-700 underline">Hilltop Legal Lounge</p>
+                      </div>
+
+
+                    </div>
+                    <div class="w-full h-px grow bg-gray-200"></div>
+                  </div>
                 </div>
 
-
-                <div class="flex flex-1 items-center">
+                <div class="flex flex-1 items-center-">
                   <div class="flex flex-col gap-1.5  w-4/12">
                     <div class="flex items-center gap-1.5">
                       <span class="material-symbols-outlined icon-20 text-gray-600">paid</span>
@@ -1342,9 +1581,13 @@
                     </h3>
                     <div id="award-breakdown-body" class="bg-gray-50" aria-labelledby="award-breakdown-heading">
                       <div class="flex gap-6 p-2.5">
-                        <div class="w-60 h-60 bg-gray-200 rounded-full flex items-center justify-center">
-                          <!-- Pie chart placeholder - left blank as requested -->
+                        <div class="relative" style="min-width: 240px; overflow: visible;">
+                          <div id="donut-chart-judgement" class="w-60 h-60" style="overflow: visible;"></div>
                         </div>
+
+                        <!-- <div class="w-60 h-60 bg-gray-200 rounded-full flex items-center justify-center">
+                          Pie chart placeholder - left blank as requested
+                        </div> -->
                         <div class="flex flex-col gap-2 flex-1">
                           <div class="flex flex-col gap-1">
                             <div class="flex items-center justify-between">
