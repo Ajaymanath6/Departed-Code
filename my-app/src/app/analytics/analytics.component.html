@@ -753,10 +753,17 @@
         <div class="flex flex-col gap-4 ">
           <div class="flex flex-col gap-2">
             <h5 class=" text-2xl font-semibold text-Mdblue-700 "> Top Attorneys </h5>
-            <p class="pr-[49rem]">Judgment Analytics are currently only available for <a href="#"
-                class=" font-semibold text-primary-600 underline">New York Supreme Courts</a>. You can
-              sort the table by each column to pick how attorneys are ranked, customize your view to add new columns
-              with different analytics, and compare attorneys directly by selecting them.</p>
+            <div class="flex justify-between">
+              <p class="pr-[49rem]- c_md:pr-[15rem]- c_lg:pr-[20rem]- ">Judgment Analytics are currently only available
+                for
+                <a href="#" class=" font-semibold text-primary-600 underline">New York Supreme Courts</a>. You can
+                sort the table by each column to pick how attorneys are ranked, customize your view to add new columns
+                with different analytics, and compare attorneys directly by selecting them.
+              </p>
+              <div class="w-[40%]"></div>
+            </div>
+
+
           </div>
           <div class="mt-8">
             <div class="relative h-full"><input type="text" placeholder="Search..."
@@ -848,8 +855,8 @@
                     </div>
                   </th>
 
-                  <th scope="col" class="px-4 py-3 ">
-                    <div class="flex items-center"><span> Total Cases </span>
+                  <th scope="col" class="px-4 py-3 text-center">
+                    <div class="flex items-center justify-center"><span> Total Cases </span>
                       <div class="ml-2">
                         <!-- <button type="button" class="press flex items-center text-center"><span
                             class="material-symbols-outlined">expand_less</span></button>
@@ -862,24 +869,24 @@
                       </div>
                     </div>
                   </th>
-                  <th scope="col" class="px-4 py-3 ">
-                    <div class="flex items-center"><span> Judgments Won </span>
+                  <th scope="col" class="px-4 py-3 text-center">
+                    <div class="flex items-center justify-center"><span> Judgments Won </span>
                       <div class="ml-2"><button type="button" class="press flex items-center text-center"><span
                             class="material-symbols-outlined">expand_less</span></button><button type="button"
                           class="press flex items-center text-center"><span
                             class="material-symbols-outlined">expand_more</span></button></div>
                     </div>
                   </th>
-                  <th scope="col" class="px-4 py-3 ">
-                    <div class="flex items-center"><span> Judg. Win % </span>
+                  <th scope="col" class="px-4 py-3 text-center">
+                    <div class="flex items-center justify-center"><span> Judg. Win % </span>
                       <div class="ml-2"><button type="button" class="press flex items-center text-center"><span
                             class="material-symbols-outlined">expand_less</span></button><button type="button"
                           class="press flex items-center text-center"><span
                             class="material-symbols-outlined">expand_more</span></button></div>
                     </div>
                   </th>
-                  <th scope="col" class="px-4 py-3 ">
-                    <div class="flex items-center"><span> Total Judg. $ Won </span>
+                  <th scope="col" class="px-4 py-3 text-center">
+                    <div class="flex items-center justify-center"><span> Total Judg. $ Won </span>
                       <div class="ml-2"><button type="button" class="press flex items-center text-center"><span
                             class="material-symbols-outlined">expand_less</span></button><button type="button"
                           class="press flex items-center text-center"><span
@@ -908,26 +915,26 @@
                       </div>
                     </a></td>
 
-                  <td class="px-4 py-3 ">
-                    <div class="flex  gap-1"><span> 12,345
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 justify-center"><span> 12,345
                       </span>
                       <span class="text-sm text-Mdblue-700 font-medium"> bars </span>
                     </div>
                   </td>
-                  <td class="px-4 py-3 ">
-                    <div class="flex  gap-1"><span> 12,345
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 justify-center"><span> 12,345
                       </span>
                       <span class="text-sm text-Mdblue-700 font-medium"> bars </span>
                     </div>
                   </td>
-                  <td class="px-4 py-3 ">
-                    <div class="flex  gap-1"><span> 855
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 justify-center"><span> 855
                       </span>
                       <span class="text-sm text-Mdblue-700 font-medium"> bars </span>
                     </div>
                   </td>
-                  <td class="px-4 py-3 ">
-                    <div class="flex  gap-1"><span> 12,345
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 justify-center"><span> 12,345
                       </span>
                       <span class="text-sm text-Mdblue-700 font-medium"> bars </span>
                     </div>
@@ -952,51 +959,204 @@
                       </div>
                     </a></td>
 
-                  <td class="px-4 py-3 flex  justify-center">
-                    <div class="flex  gap-1 items-center"><span> 12,345
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 items-center justify-center"><span> 12,345
                       </span>
                       <div class="text-sm text-Mdblue-700 font-medium"> <!-- Variation 1: No Fill (0%) -->
-                          <div class="flex items-end gap-[2px] ml-[5px]">
-                            <div class="w-1 h-3 rounded-full bg-[#EFEFEF]"></div>
-                            <div class="w-1 h-3 rounded-full bg-[#EFEFEF]"></div>
-                            <div class="w-1 h-3 rounded-full bg-[#EFEFEF]"></div>
-                            <div class="w-1 h-3 rounded-full bg-[#EFEFEF]"></div>
-                          </div>
+                        <div class="flex items-end gap-[2px] ml-[5px]">
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                        </div>
                       </div>
                     </div>
                   </td>
-                  <td class="px-4 py-3 ">
-                    <div class="flex  gap-1"><span> 12,345
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 items-center justify-center"><span> 12,345
                       </span>
-                      <span class="text-sm text-Mdblue-700 font-medium"> bars </span>
+                      <div class="text-sm text-Mdblue-700 font-medium">
+                        <div class="flex items-end gap-[2px] ml-[5px]">
+                          <div class="w-1 h-3 rounded-full bg-orange-300"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                        </div>
+                      </div>
                     </div>
                   </td>
-                  <td class="px-4 py-3 ">
-                    <div class="flex  gap-1"><span> 855
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 items-center justify-center"><span> 855
                       </span>
-                      <span class="text-sm text-Mdblue-700 font-medium"> bars </span>
+                      <div class="text-sm text-Mdblue-700 font-medium">
+                        <div class="flex items-end gap-[2px] ml-[5px]">
+                          <div class="w-1 h-3 rounded-full bg-primary-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-primary-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-primary-300"></div>
+                          <div class="w-1 h-3 rounded-full bg-primary-300"></div>
+                        </div>
+                      </div>
                     </div>
+
                   </td>
-                  <td class="px-4 py-3 ">
-                    <div class="flex  gap-1"><span> 12,345
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 items-center justify-center"><span> 855
                       </span>
-                      <span class="text-sm text-Mdblue-700 font-medium"> bars </span>
+                      <div class="text-sm text-Mdblue-700 font-medium">
+                        <div class="flex items-end gap-[2px] ml-[5px]">
+                          <div class="w-1 h-3 rounded-full bg-orange-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-orange-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-orange-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-orange-600"></div>
+                        </div>
+                      </div>
                     </div>
+
                   </td>
 
                 </tr>
                 <tr class="border">
                   <td colspan="6" class="px-0 py-0">
-                    <div class="mb-4 w-full mt-4 flex items-center relative px-4">
+                    <div class="mb-4 w-full mt-4 flex items-center relative px-4 gap-4">
                       <div class="h-[1px] grow bg-gray-200"></div>
                       <h3 class="text-base font-semibold text-Mdblue-700">All Other Results</h3>
                       <div class="h-[1px] grow bg-gray-200"></div>
                     </div>
                   </td>
                 </tr>
+                <tr class="border ">
+                  <td class="px-4 py-3 ">
+                    <div class="flex items-center gap-4">
+                      <input type="checkbox"
+                        class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-primary-600 focus:outline-none focus:ring-0 focus:ring-offset-0 disabled:opacity-50"
+                        id="Case Status Name">
+                      <span class="text-lg font-semibold">
+                        1
+                      </span>
+                    </div>
+                  </td>
+                  <td class="border-r- bg-white px-4 py-3 font-semibold "><a target="_blank" href="">
+                      <div class="flex flex-col gap-1"><span> First Last
+                        </span>
+                        <span class="text-sm text-Mdblue-700 font-medium"> Law Firm Name </span>
+                      </div>
+                    </a></td>
+
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 items-center justify-center"><span> 12,345
+                      </span>
+                      <div class="text-sm text-Mdblue-700 font-medium"> <!-- Variation 1: No Fill (0%) -->
+                        <div class="flex items-end gap-[2px] ml-[5px]">
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 items-center justify-center"><span> 12,345
+                      </span>
+                      <div class="text-sm text-Mdblue-700 font-medium">
+                        <div class="flex items-end gap-[2px] ml-[5px]">
+                          <div class="w-1 h-3 rounded-full bg-orange-300"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                          <div class="w-1 h-3 rounded-full bg-gray-200"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 items-center justify-center"><span> 855
+                      </span>
+                      <div class="text-sm text-Mdblue-700 font-medium">
+                        <div class="flex items-end gap-[2px] ml-[5px]">
+                          <div class="w-1 h-3 rounded-full bg-primary-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-primary-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-primary-300"></div>
+                          <div class="w-1 h-3 rounded-full bg-primary-300"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td class="px-4 py-3 text-center">
+                    <div class="flex  gap-1 items-center justify-center"><span> 855
+                      </span>
+                      <div class="text-sm text-Mdblue-700 font-medium">
+                        <div class="flex items-end gap-[2px] ml-[5px]">
+                          <div class="w-1 h-3 rounded-full bg-orange-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-orange-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-orange-600"></div>
+                          <div class="w-1 h-3 rounded-full bg-orange-600"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </td>
+
+                </tr>
               </tbody>
             </table>
           </div>
+          <div>
+            <div class="my-4 flex items-center justify-between">
+              <div>
+                <div class="flex items-center space-x-2 text-sm font-semibold text-Mdblue-600"><span>Showing</span>
+                  <div><span
+                      class="rounded-full bg-white outline outline-1 outline-gray-300 px-2.5 py-0.5 text-sm font-semibold">1
+                      - 10</span></div><span>of</span>
+                  <div><span
+                      class="rounded-full bg-white outline outline-1 outline-gray-300 px-2.5 py-0.5 text-sm font-semibold">42,984,382</span>
+                  </div><span>results</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <nav class="flex justify-center">
+                  <ul class="inline-flex items-center space-x-1 text-sm">
+                    <li><button
+                        class="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-gray-300 text-base font-semibold text-primary-700 disabled:opacity-40- disabled:hover:bg-transparent- cursor-default-"
+                        disabled=""><span
+                          class="material-symbols-outlined p-2 text-gray-600 group-disabled:hover:text-Mdblue-600">
+                          keyboard_arrow_left </span></button></li>
+                    <li class=""><button
+                        class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-gray-300 text-base font-semibold text-primary-600 hover:bg-gray-200 disabled:opacity-40 disabled:hover:bg-transparent pointer-events-none bg-white disabled:hover:bg-gray-200"><span>1</span></button>
+                    </li>
+                    <li class=""><button
+                        class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-gray-300 text-base font-semibold text-primary-600 hover:bg-gray-200 disabled:opacity-40 disabled:hover:bg-transparent"><span>2</span></button>
+                    </li>
+                    <li class=""><button
+                        class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-gray-300 text-base font-semibold text-primary-600 hover:bg-gray-200 disabled:opacity-40 disabled:hover:bg-transparent"><span>3</span></button>
+                    </li>
+                    <li class="">
+                      <div
+                        class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-gray-300 text-base font-semibold text-primary-700">
+                        <span>...</span>
+                      </div>
+                    </li>
+                    <li class=""><button
+                        class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-gray-300 text-base font-semibold text-primary-600 hover:bg-gray-200 disabled:opacity-40 disabled:hover:bg-transparent"><span>100</span></button>
+                    </li>
+                    <li><button
+                        class="group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full disabled:opacity-40 disabled:hover:bg-transparent hover:bg-gray-200"><span
+                          class="material-symbols-outlined p-2 text-gray-600 group-disabled:hover:text-Mdblue-600 hover:text-Mdblue-700">
+                          keyboard_arrow_right </span></button></li>
+                  </ul>
+                </nav>
+                <button class="flex text-base font-semibold text-primary-600 items-center">
+                  12 per page
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+                    class="ms-2 size-2.5 text-primary-600">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 4 4 4-4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
