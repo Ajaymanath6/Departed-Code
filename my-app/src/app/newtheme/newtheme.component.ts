@@ -1,4 +1,6 @@
 import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
+// Side nav open close - Animation imports for smooth expand/collapse transitions
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import theme from '../../utils/echart-theme.json';
 
 declare var echarts: any;
@@ -7,10 +9,45 @@ declare var echarts: any;
   selector: 'app-newtheme',
   templateUrl: './newtheme.component.html',
   styleUrls: ['./newtheme.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  // Side nav open close - Animation configuration for navigation menu expand/collapse
+  animations: [
+    trigger('slideInOut', [
+      // Side nav open close - Open state: full height, visible with fade in
+      state('open', style({
+        height: '*',
+        opacity: 1,
+        overflow: 'hidden'
+      })),
+      // Side nav open close - Closed state: collapsed height, invisible with fade out
+      state('closed', style({
+        height: '0px',
+        opacity: 0,
+        overflow: 'hidden'
+      })),
+      // Side nav open close - Smooth transition between open and closed states (300ms)
+      transition('open <=> closed', [
+        animate('300ms ease-in-out')
+      ])
+    ])
+  ]
 })
 export class NewthemeComponent implements AfterViewInit {
   private donutChart: any;
+  // Side nav open close - Track global navigation menu state (default: open)
+  globalNavOpen = true;
+  // Side nav open close - Track project navigation menu state (default: open)
+  projectNavOpen = true;
+
+  // Side nav open close - Toggle global navigation menu open/close
+  toggleGlobalNav(): void {
+    this.globalNavOpen = !this.globalNavOpen;
+  }
+
+  // Side nav open close - Toggle project navigation menu open/close
+  toggleProjectNav(): void {
+    this.projectNavOpen = !this.projectNavOpen;
+  }
 
   ngAfterViewInit(): void {
     setTimeout(() => {
