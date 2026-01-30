@@ -396,158 +396,177 @@
 <!--home recent activities/tracking end-->
 
 <!--navigation start-->
-<div class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all w-[15rem]">
-  <div class="bg-Mdblue-700 py-4 gap-4 flex flex-col">
-  <div>
-    <div class="flex gap-2 items-center text-white mb-4">
-      <div class="text-sm">Global Menu</div>
-      <div class="flex-1"></div>
-      <div class="flex">
-        <span *ngIf="globalNavOpen"
-          class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
-          (click)="toggleGlobalNav()"> remove </span>
-        <span *ngIf="!globalNavOpen"
-          class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
-          (click)="toggleGlobalNav()"> add </span>
+
+<div class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all w-[15rem] bg-Mdblue-700">
+  <div class="bg-Mdblue-700- py-4 gap-4 flex flex-col">
+    <div>
+      <div class="flex gap-2 items-center text-white mb-4">
+        <div class="text-sm">Global Menu</div>
+        <div class="flex-1"></div>
+        <div class="flex">
+          <span *ngIf="globalNavOpen"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
+            (click)="toggleGlobalNav()"> remove </span>
+          <span *ngIf="!globalNavOpen"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
+            (click)="toggleGlobalNav()"> add </span>
+        </div>
       </div>
+      <ul [@slideInOut]="globalNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 global-nav">
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-  text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
+              routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20   !text-primary-700- white-fill"
+              aria-label="cottage">cottage</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px] !text-primary-700- text-white">
+              Home </div>
+          </a></li>
+
+
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
+              routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              aria-label="watch_later">watch_later</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Tracking </div>
+          </a></li>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Pins </div>
+          </a></li>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              aria-label="keep">download</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Exports </div>
+          </a></li>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20 white-fill "
+              aria-label="keep">receipt_long</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Orders </div>
+          </a></li>
+
+      </ul>
     </div>
-    <ul [@slideInOut]="globalNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 global-nav">
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-  text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
-            routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20   !text-primary-700- white-fill"
-            aria-label="cottage">cottage</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px] !text-primary-700- text-white">
-            Home </div>
-        </a></li>
+     <div class=" h-[1px] grow bg-gray-800"></div>
+    <div>
+      <div class="flex gap-2 items-center text-white mb-4">
+        <div class="text-sm">Project Menu</div>
+        <div class="flex-1"></div>
+        <div class="flex">
+          <span *ngIf="projectNavOpen"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
+            (click)="toggleProjectNav()"> remove </span>
+          <span *ngIf="!projectNavOpen"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
+            (click)="toggleProjectNav()"> add </span>
+        </div>
+      </div>
+      <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 project-nav">
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-2  !text-white c_md:justify-center-  text-white bg-gray-900 hover:bg-secondary-700 hover:text-white"
+            href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
+              routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              aria-label="search">folder</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2  opacity-100 max-w-[150px] !text-primary-700- text-white">
+              Project Name</div>
+          </a></li>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/search"><span iconsize="20" iconcolor=""
+              routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              aria-label="search">search</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Search </div>
+          </a></li>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
+              routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              aria-label="watch_later">watch_later</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Tracking </div>
+          </a></li>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/analytics"><span iconsize="20" iconcolor=""
+              routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              aria-label="insert_chart">insert_chart</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Analytics </div>
+          </a></li>
 
-
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
-            routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-            aria-label="watch_later">watch_later</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Tracking </div>
-        </a></li>
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Pins </div>
-        </a></li>
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">download</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Exports </div>
-        </a></li>
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20 white-fill " aria-label="keep">receipt_long</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Orders </div>
-        </a></li>
-
-    </ul>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Pins </div>
+          </a></li>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              aria-label="keep">download</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Exports </div>
+          </a></li>
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
+            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              aria-label="keep">receipt_long</span>
+            <div routerlinkactive="!text-primary-700- text-white"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              Orders </div>
+          </a></li>
+      </ul>
+    </div>
   </div>
-  <div>
-    <div class="flex gap-2 items-center text-white mb-4">
-      <div class="text-sm">Project Menu</div>
-      <div class="flex-1"></div>
-      <div class="flex">
-        <span *ngIf="projectNavOpen"
-          class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
-          (click)="toggleProjectNav()"> remove </span>
-        <span *ngIf="!projectNavOpen"
-          class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
-          (click)="toggleProjectNav()"> add </span>
-      </div>
-    </div>
-    <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 project-nav">
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-2  !text-white c_md:justify-center-  text-white bg-gray-900 hover:bg-secondary-700 hover:text-white"
-          href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="search">folder</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2  opacity-100 max-w-[150px] !text-primary-700- text-white">
-           Project Name</div>
-        </a></li>
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/search"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="search">search</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Search </div>
-        </a></li>
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
-            routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-            aria-label="watch_later">watch_later</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Tracking </div>
-        </a></li>
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/analytics"><span iconsize="20" iconcolor=""
-            routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-            aria-label="insert_chart">insert_chart</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Analytics </div>
-        </a></li>
 
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Pins </div>
-        </a></li>
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">download</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Exports </div>
-        </a></li>
-      <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
-          href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">receipt_long</span>
-          <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
-            Orders </div>
-        </a></li>
-    </ul>
+  <div class="relative mb-2 flex px-2 py-2 pt-0 justify-end"><button
+      class="z-[2] cursor-pointer items-center rounded-md bg-Mdblue-700 px-4- py-1- text-Mdblue-600- text-gray-300"><span
+        class="material-symbols-outlined icon-20 py-1 px-1 border rounded-md border-white font-semibold">chevron_left</span></button>
   </div>
 </div>
-</div>
 
+
+
+
+<!--tooltip start-->
 <div class="bg-gray-900 text-white p-4 rounded-lg w-[16rem] flex flex-col gap-1 mt-1">
-<p class="text-gray-300 text-sm">Selected Project</p>
-<p class="text-white text-base font-semibold">Full Project Name Goes Here</p>
-<p class="text-white text-base font-semibold">Hide Global Menu</p>
-<p class="text-white text-base font-semibold">Open Project Menu</p>
-
+  <p class="text-gray-300 text-sm">Selected Project</p>
+  <p class="text-white text-base font-semibold">Full Project Name Goes Here</p>
+  <p class="text-white text-base font-semibold">Hide Global Menu</p>
+  <p class="text-white text-base font-semibold">Open Project Menu</p>
 </div>
+<!--tooltip end-->
 
 <!--navigation end-->
 
