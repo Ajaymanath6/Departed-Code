@@ -38,6 +38,8 @@ export class NewthemeComponent implements AfterViewInit {
   globalNavOpen = true;
   // Side nav open close - Track project navigation menu state (default: open)
   projectNavOpen = true;
+  // Track active tab (default: searches)
+  activeTab = 'searches';
 
   // Side nav open close - Toggle global navigation menu open/close
   toggleGlobalNav(): void {
@@ -47,6 +49,11 @@ export class NewthemeComponent implements AfterViewInit {
   // Side nav open close - Toggle project navigation menu open/close
   toggleProjectNav(): void {
     this.projectNavOpen = !this.projectNavOpen;
+  }
+
+  // Set active tab
+  setActiveTab(tab: string): void {
+    this.activeTab = tab;
   }
 
   ngAfterViewInit(): void {
