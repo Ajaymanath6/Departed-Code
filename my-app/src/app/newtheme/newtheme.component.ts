@@ -40,6 +40,10 @@ export class NewthemeComponent implements AfterViewInit {
   projectNavOpen = true;
   // Track active tab (default: searches)
   activeTab = 'searches';
+  // Track active filter tab (default: cases)
+  activeFilterTab = 'cases';
+  // Track sidebar collapsed state (default: expanded)
+  sidebarCollapsed = false;
 
   // Side nav open close - Toggle global navigation menu open/close
   toggleGlobalNav(): void {
@@ -54,6 +58,16 @@ export class NewthemeComponent implements AfterViewInit {
   // Set active tab
   setActiveTab(tab: string): void {
     this.activeTab = tab;
+  }
+
+  // Set active filter tab
+  setActiveFilterTab(tab: string): void {
+    this.activeFilterTab = tab;
+  }
+
+  // Toggle sidebar collapsed/expanded
+  toggleSidebar(): void {
+    this.sidebarCollapsed = !this.sidebarCollapsed;
   }
 
   ngAfterViewInit(): void {

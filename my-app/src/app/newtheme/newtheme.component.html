@@ -402,12 +402,12 @@
 
 <!--navigation start-->
 
-<div class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all w-[15rem] bg-Mdblue-700">
+<div [ngClass]="{'w-[4.25rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}" class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700">
   <div class="bg-Mdblue-700- py-4 gap-4 flex flex-col">
     <div>
-      <div class="flex gap-2 items-center text-white mb-4">
+      <div class="flex gap-2 items-center text-white mb-4 justify-between">
         <div class="text-sm">Global Menu</div>
-        <div class="flex-1"></div>
+
         <div class="flex">
           <span *ngIf="globalNavOpen"
             class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
@@ -425,7 +425,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20   !text-primary-700- white-fill"
               aria-label="cottage">cottage</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px] !text-primary-700- text-white">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 !text-primary-700- text-white">
               Home </div>
           </a></li>
 
@@ -437,7 +438,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="watch_later">watch_later</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Tracking </div>
           </a></li>
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -445,7 +447,8 @@
             href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Pins </div>
           </a></li>
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -454,7 +457,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="keep">download</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Exports </div>
           </a></li>
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -463,7 +467,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20 white-fill "
               aria-label="keep">receipt_long</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Orders </div>
           </a></li>
 
@@ -471,9 +476,9 @@
     </div>
      <div class=" h-[1px] grow bg-gray-800"></div>
     <div>
-      <div class="flex gap-2 items-center text-white mb-4">
+      <div class="flex gap-2 items-center text-white mb-4 justify-between">
         <div class="text-sm">Project Menu</div>
-        <div class="flex-1"></div>
+
         <div class="flex">
           <span *ngIf="projectNavOpen"
             class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
@@ -491,7 +496,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="search">folder</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2  opacity-100 max-w-[150px] !text-primary-700- text-white">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 !text-primary-700- text-white">
               Project Name</div>
           </a></li>
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -501,7 +507,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="search">search</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Search </div>
           </a></li>
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -511,7 +518,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="watch_later">watch_later</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Tracking </div>
           </a></li>
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -521,7 +529,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="insert_chart">insert_chart</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Analytics </div>
           </a></li>
 
@@ -530,7 +539,8 @@
             href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Pins </div>
           </a></li>
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -539,7 +549,8 @@
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="keep">download</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Exports </div>
           </a></li>
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -548,16 +559,20 @@
               class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="keep">receipt_long</span>
             <div routerlinkactive="!text-primary-700- text-white"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
+              [ngClass]="{'opacity-100 max-w-[150px]': !sidebarCollapsed, 'opacity-0 max-w-0': sidebarCollapsed}"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2">
               Orders </div>
           </a></li>
       </ul>
     </div>
   </div>
 
-  <div class="relative mb-2 flex px-2 py-2 pt-0 justify-end"><button
+  <div [ngClass]="{'justify-end': !sidebarCollapsed}" class="relative mb-2 flex px-2 py-2 pt-0">
+    <button
+      (click)="toggleSidebar()"
       class="z-[2] cursor-pointer items-center rounded-md bg-Mdblue-700 px-4- py-1- text-Mdblue-600- text-gray-300"><span
-        class="material-symbols-outlined icon-20 py-1 px-1 border rounded-md border-white font-semibold">chevron_left</span></button>
+        [ngClass]="{'ml-2': sidebarCollapsed}"
+        class="material-symbols-outlined icon-20 py-1 px-1 border rounded-md border-white font-semibold">{{ sidebarCollapsed ? 'chevron_right' : 'chevron_left' }}</span></button>
   </div>
 </div>
 
