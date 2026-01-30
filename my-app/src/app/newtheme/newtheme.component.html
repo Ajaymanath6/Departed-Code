@@ -396,12 +396,12 @@
 <!--home recent activities/tracking end-->
 
 <!--navigation start-->
-
-<div class="bg-Mdblue-700 py-4 gap-4 flex flex-col">
+<div class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all w-[15rem]">
+  <div class="bg-Mdblue-700 py-4 gap-4 flex flex-col">
   <div>
     <div class="flex gap-2 items-center text-white mb-4">
-      <div class="text-sm">Global</div>
-      <div class="w-full- h-[1px] grow bg-gray-800"></div>
+      <div class="text-sm">Global Menu</div>
+      <div class="flex-1"></div>
       <div class="flex">
         <span *ngIf="globalNavOpen"
           class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
@@ -428,7 +428,7 @@
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
             routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  "
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
             aria-label="watch_later">watch_later</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
@@ -437,7 +437,7 @@
       <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  " aria-label="keep">keep</span>
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
             Pins </div>
@@ -445,7 +445,7 @@
       <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  " aria-label="keep">download</span>
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">download</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
             Exports </div>
@@ -453,7 +453,7 @@
       <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  " aria-label="keep">receipt_long</span>
+            class="flex items-center py-2 material-symbols-outlined icon-20 white-fill " aria-label="keep">receipt_long</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
             Orders </div>
@@ -463,8 +463,8 @@
   </div>
   <div>
     <div class="flex gap-2 items-center text-white mb-4">
-      <div class="text-sm">Project</div>
-      <div class="w-full- h-[1px] grow bg-gray-800"></div>
+      <div class="text-sm">Project Menu</div>
+      <div class="flex-1"></div>
       <div class="flex">
         <span *ngIf="projectNavOpen"
           class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
@@ -476,16 +476,17 @@
     </div>
     <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 project-nav">
       <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-          class="flex w-full cursor-pointer items-center rounded-md px-4 py-2  !text-white c_md:justify-center-  text-white bg-gray-300 hover:bg-secondary-700 hover:text-white"
-          href="/PXsgD/b4wzvx/dashboard">
+          class="flex w-full cursor-pointer items-center rounded-md px-4 py-2  !text-white c_md:justify-center-  text-white bg-gray-900 hover:bg-secondary-700 hover:text-white"
+          href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="search">folder</span>
           <div routerlinkactive="!text-primary-700- text-white"
-            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2  opacity-100 max-w-[150px] !text-primary-700- text-Mdblue-700">
-            My Project </div>
+            class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2  opacity-100 max-w-[150px] !text-primary-700- text-white">
+           Project Name</div>
         </a></li>
       <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/search"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  " aria-label="search">search</span>
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="search">search</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
             Search </div>
@@ -494,7 +495,7 @@
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
             routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  "
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
             aria-label="watch_later">watch_later</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
@@ -504,7 +505,7 @@
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/analytics"><span iconsize="20" iconcolor=""
             routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  "
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
             aria-label="insert_chart">insert_chart</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
@@ -514,7 +515,7 @@
       <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  " aria-label="keep">keep</span>
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
             Pins </div>
@@ -522,7 +523,7 @@
       <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  " aria-label="keep">download</span>
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">download</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
             Exports </div>
@@ -530,7 +531,7 @@
       <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
           class="flex w-full cursor-pointer items-center rounded-md px-4 py-1  !text-white c_md:justify-center-"
           href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-            class="flex items-center py-2 material-symbols-outlined icon-20  " aria-label="keep">receipt_long</span>
+            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">receipt_long</span>
           <div routerlinkactive="!text-primary-700- text-white"
             class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden px-2 opacity-100 max-w-[150px]">
             Orders </div>
@@ -538,6 +539,8 @@
     </ul>
   </div>
 </div>
+</div>
+
 
 <!--navigation end-->
 
