@@ -29,6 +29,15 @@ declare var echarts: any;
       transition('open <=> closed', [
         animate('300ms ease-in-out')
       ])
+    ]),
+    trigger('tooltip', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('200ms ease-out', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({ opacity: 0 }))
+      ])
     ])
   ]
 })
@@ -36,8 +45,12 @@ export class NewthemeComponent implements AfterViewInit {
   private donutChart: any;
   // Side nav open close - Track global navigation menu state (default: open)
   globalNavOpen = true;
+  showGlobalNavTooltip = false;
+  globalNavTooltipStyle: { left?: string; top?: string } = {};
   // Side nav open close - Track project navigation menu state (default: open)
   projectNavOpen = true;
+  showProjectNavTooltip = false;
+  projectNavTooltipStyle: { left?: string; top?: string } = {};
   // Track active tab (default: searches)
   activeTab = 'searches';
   // Track active filter tab (default: cases)
@@ -50,9 +63,35 @@ export class NewthemeComponent implements AfterViewInit {
     this.globalNavOpen = !this.globalNavOpen;
   }
 
+  setGlobalNavTooltipPosition(event: MouseEvent): void {
+    const el = (event.currentTarget as HTMLElement).getBoundingClientRect();
+    this.globalNavTooltipStyle = {
+      left: `${el.right + 8}px`,
+      top: `${el.top + el.height / 2}px`
+    };
+    this.showGlobalNavTooltip = true;
+  }
+
+  hideGlobalNavTooltip(): void {
+    this.showGlobalNavTooltip = false;
+  }
+
   // Side nav open close - Toggle project navigation menu open/close
   toggleProjectNav(): void {
     this.projectNavOpen = !this.projectNavOpen;
+  }
+
+  setProjectNavTooltipPosition(event: MouseEvent): void {
+    const el = (event.currentTarget as HTMLElement).getBoundingClientRect();
+    this.projectNavTooltipStyle = {
+      left: `${el.right + 8}px`,
+      top: `${el.top + el.height / 2}px`
+    };
+    this.showProjectNavTooltip = true;
+  }
+
+  hideProjectNavTooltip(): void {
+    this.showProjectNavTooltip = false;
   }
 
   // Set active tab
