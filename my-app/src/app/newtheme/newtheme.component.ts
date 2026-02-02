@@ -66,7 +66,7 @@ export class NewthemeComponent implements AfterViewInit {
   setGlobalNavTooltipPosition(event: MouseEvent): void {
     const el = (event.currentTarget as HTMLElement).getBoundingClientRect();
     this.globalNavTooltipStyle = {
-      left: `${el.right + 8}px`,
+      left: `${el.right + 4}px`,
       top: `${el.top + el.height / 2}px`
     };
     this.showGlobalNavTooltip = true;
@@ -84,7 +84,7 @@ export class NewthemeComponent implements AfterViewInit {
   setProjectNavTooltipPosition(event: MouseEvent): void {
     const el = (event.currentTarget as HTMLElement).getBoundingClientRect();
     this.projectNavTooltipStyle = {
-      left: `${el.right + 8}px`,
+      left: `${el.right + 4}px`,
       top: `${el.top + el.height / 2}px`
     };
     this.showProjectNavTooltip = true;
