@@ -81,23 +81,28 @@
           <button type="button" role="tab"
             [ngClass]="{'bg-white text-primary-700 font-semibold shadow-sm': activeTab === 'searches', 'text-Mdblue-700': activeTab !== 'searches'}"
             (click)="setActiveTab('searches')"
-            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap"> Searches </button>
+            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap">
+            Searches </button>
           <button type="button" role="tab"
             [ngClass]="{'bg-white text-primary-700 font-semibold shadow-sm': activeTab === 'visited-profiles', 'text-Mdblue-700': activeTab !== 'visited-profiles'}"
             (click)="setActiveTab('visited-profiles')"
-            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap"> Visited Profiles </button>
+            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap">
+            Visited Profiles </button>
           <button type="button" role="tab"
             [ngClass]="{'bg-white text-primary-700 font-semibold shadow-sm': activeTab === 'visited-projects', 'text-Mdblue-700': activeTab !== 'visited-projects'}"
             (click)="setActiveTab('visited-projects')"
-            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap"> Visited Projects </button>
+            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap">
+            Visited Projects </button>
           <button type="button" role="tab"
             [ngClass]="{'bg-white text-primary-700 font-semibold shadow-sm': activeTab === 'saved-searches', 'text-Mdblue-700': activeTab !== 'saved-searches'}"
             (click)="setActiveTab('saved-searches')"
-            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap"> Saved Searches </button>
+            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap">
+            Saved Searches </button>
           <button type="button" role="tab"
             [ngClass]="{'bg-white text-primary-700 font-semibold shadow-sm': activeTab === 'document-orders', 'text-Mdblue-700': activeTab !== 'document-orders'}"
             (click)="setActiveTab('document-orders')"
-            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap"> Document Orders </button>
+            class="px-3 py-[3px] rounded-md text-base font-regular transition-all duration-300 ease-in-out whitespace-nowrap">
+            Document Orders </button>
         </div>
       </div>
       <div class="grid grid-cols-1 gap-3 outer ">
@@ -402,12 +407,15 @@
 
 <!--navigation start-->
 
-<div [ngClass]="{'w-[4.25rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}" class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700">
+<div [ngClass]="{'w-[4.25rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}"
+  class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700">
   <div class="bg-Mdblue-700- py-4 gap-4 flex flex-col">
     <div>
-      <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}" class="flex gap-2 items-center text-white mb-4">
+      <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
+        class="flex gap-2 items-center text-white mb-4">
         <div *ngIf="!sidebarCollapsed" class="text-sm">Global Menu</div>
-        <div class="flex">
+        <div class="flex relative" (mouseenter)="setGlobalNavTooltipPosition($event)"
+          (mouseleave)="hideGlobalNavTooltip()">
           <span *ngIf="globalNavOpen"
             class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
             (click)="toggleGlobalNav()"> remove </span>
@@ -415,15 +423,18 @@
             class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
             (click)="toggleGlobalNav()"> add </span>
         </div>
+        <div *ngIf="showGlobalNavTooltip" [@tooltip] role="tooltip" [ngStyle]="globalNavTooltipStyle"
+          class="fixed z-[9999] -translate-y-1/2 inline-block px-3 py-2 text-base font-semibold text-white bg-gray-900 rounded-lg duration-200 shadow-xs tooltip ">
+          {{ globalNavOpen ? 'Hide Global Menu' : 'Show Global Menu' }}
+        </div>
       </div>
       <ul [@slideInOut]="globalNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 global-nav">
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-  text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
             href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20   !text-primary-700- white-fill"
+              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20   !text-primary-700- white-fill"
               aria-label="cottage">cottage</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -436,9 +447,8 @@
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="watch_later">watch_later</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -450,7 +460,7 @@
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
               [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
               class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
@@ -461,7 +471,7 @@
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
               [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="keep">download</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -482,11 +492,14 @@
 
       </ul>
     </div>
-     <div class=" h-[1px] grow bg-gray-800"></div>
+    <div class=" h-[1px] grow bg-gray-800"></div>
     <div>
-      <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}" class="flex gap-2 items-center text-white mb-4">
+      <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
+        class="flex gap-2 items-center text-white mb-4">
         <div *ngIf="!sidebarCollapsed" class="text-sm">Project Menu</div>
-        <div class="flex">
+        <div class="flex relative"
+          (mouseenter)="setProjectNavTooltipPosition($event)"
+          (mouseleave)="hideProjectNavTooltip()">
           <span *ngIf="projectNavOpen"
             class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
             (click)="toggleProjectNav()"> remove </span>
@@ -494,15 +507,19 @@
             class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
             (click)="toggleProjectNav()"> add </span>
         </div>
+        <div *ngIf="showProjectNavTooltip" [@tooltip] role="tooltip"
+          [ngStyle]="projectNavTooltipStyle"
+          class="fixed z-[9999] -translate-y-1/2 inline-block px-3 py-2  text-base font-semibold text-white bg-gray-900 rounded-lg duration-200 shadow-xs tooltip dark:bg-gray-700">
+          {{ projectNavOpen ? 'Hide Project Menu' : 'Open Project Menu' }}
+        </div>
       </div>
       <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 project-nav">
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
             class="flex w-full cursor-pointer items-center rounded-md py-2  !text-white c_md:justify-center-  text-white bg-gray-900 hover:bg-secondary-700 hover:text-white"
             href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="search">folder</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -513,9 +530,8 @@
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/search"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="search">search</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -526,9 +542,8 @@
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="watch_later">watch_later</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -539,9 +554,8 @@
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/analytics"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="insert_chart">insert_chart</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -554,7 +568,7 @@
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
               [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
               class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
@@ -565,7 +579,7 @@
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
               [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="keep">download</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -577,7 +591,7 @@
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
             href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
               [ngClass]="{'pr-0': sidebarCollapsed}"
-            class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
               aria-label="keep">receipt_long</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
@@ -589,11 +603,11 @@
   </div>
 
   <div [ngClass]="{'justify-end': !sidebarCollapsed}" class="relative mb-2 flex px-2 py-2 pt-0">
-    <button
-      (click)="toggleSidebar()"
+    <button (click)="toggleSidebar()"
       class="z-[2] cursor-pointer items-center rounded-md bg-Mdblue-700 px-4- py-1- text-Mdblue-600- text-gray-300"><span
         [ngClass]="{'ml-2': sidebarCollapsed}"
-        class="material-symbols-outlined icon-20 py-1 px-1 border rounded-md border-white font-semibold">{{ sidebarCollapsed ? 'chevron_right' : 'chevron_left' }}</span></button>
+        class="material-symbols-outlined icon-20 py-1 px-1 border rounded-md border-white font-semibold">{{
+        sidebarCollapsed ? 'chevron_right' : 'chevron_left' }}</span></button>
   </div>
 </div>
 
@@ -604,8 +618,6 @@
 <div class="bg-gray-900 text-white p-4 rounded-lg w-[16rem] flex flex-col gap-1 mt-1">
   <p class="text-gray-300 text-sm">Selected Project</p>
   <p class="text-white text-base font-semibold">Full Project Name Goes Here</p>
-  <p class="text-white text-base font-semibold">Hide Global Menu</p>
-  <p class="text-white text-base font-semibold">Open Project Menu</p>
 </div>
 <!--tooltip end-->
 
