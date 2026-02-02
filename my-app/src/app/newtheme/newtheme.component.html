@@ -417,10 +417,10 @@
         <div class="flex relative" (mouseenter)="setGlobalNavTooltipPosition($event)"
           (mouseleave)="hideGlobalNavTooltip()">
           <span *ngIf="globalNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
             (click)="toggleGlobalNav()"> remove </span>
           <span *ngIf="!globalNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
             (click)="toggleGlobalNav()"> add </span>
         </div>
         <div *ngIf="showGlobalNavTooltip" [@tooltip] role="tooltip" [ngStyle]="globalNavTooltipStyle"
@@ -501,10 +501,10 @@
           (mouseenter)="setProjectNavTooltipPosition($event)"
           (mouseleave)="hideProjectNavTooltip()">
           <span *ngIf="projectNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
             (click)="toggleProjectNav()"> remove </span>
           <span *ngIf="!projectNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
             (click)="toggleProjectNav()"> add </span>
         </div>
         <div *ngIf="showProjectNavTooltip" [@tooltip] role="tooltip"
