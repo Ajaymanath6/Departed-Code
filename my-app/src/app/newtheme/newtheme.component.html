@@ -408,19 +408,19 @@
 <!--navigation start-->
 
 <div [ngClass]="{'w-[4.25rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}"
-  class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700 px-2">
+  class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700 ">
   <div class="bg-Mdblue-700- py-4 gap-4 flex flex-col">
     <div>
       <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
-        class="flex gap-2 items-center text-white mb-4">
+        class="flex gap-2 items-center text-white mb-4 px-2">
         <div *ngIf="!sidebarCollapsed" class="text-sm">Global Menu</div>
         <div class="flex relative" (mouseenter)="setGlobalNavTooltipPosition($event)"
           (mouseleave)="hideGlobalNavTooltip()">
           <span *ngIf="globalNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md"
             (click)="toggleGlobalNav()"> remove </span>
           <span *ngIf="!globalNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md"
             (click)="toggleGlobalNav()"> add </span>
         </div>
         <div *ngIf="showGlobalNavTooltip" [@tooltip] role="tooltip" [ngStyle]="globalNavTooltipStyle"
@@ -495,16 +495,16 @@
     <div class=" h-[1px] grow bg-gray-800"></div>
     <div>
       <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
-        class="flex gap-2 items-center text-white mb-4">
+        class="flex gap-2 items-center text-white mb-4 px-2">
         <div *ngIf="!sidebarCollapsed" class="text-sm">Project Menu</div>
         <div class="flex relative"
           (mouseenter)="setProjectNavTooltipPosition($event)"
           (mouseleave)="hideProjectNavTooltip()">
           <span *ngIf="projectNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md"
             (click)="toggleProjectNav()"> remove </span>
           <span *ngIf="!projectNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border-2 border-Mdblue-700"
+            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md"
             (click)="toggleProjectNav()"> add </span>
         </div>
         <div *ngIf="showProjectNavTooltip" [@tooltip] role="tooltip"
@@ -514,12 +514,12 @@
         </div>
       </div>
       <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 project-nav font-semibold">
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white "
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-2  !text-white c_md:justify-center-  text-white bg-gray-900 hover:bg-secondary-700 hover:text-white"
+            class="flex w-full cursor-pointer items-center rounded-md py-2 border border-gray-600  !text-white c_md:justify-center-  text-white bg-gray-900 hover:bg-secondary-700 hover:text-white"
             href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
               routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+              class="flex items-center py-2 material-symbols-outlined icon-20  "
               aria-label="search">folder</span>
             <div routerlinkactive="!text-primary-700- text-white"
               [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
