@@ -408,7 +408,7 @@
 <!--navigation start-->
 
 <div [ngClass]="{'w-[4.25rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}"
-  class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700">
+  class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700 px-2">
   <div class="bg-Mdblue-700- py-4 gap-4 flex flex-col">
     <div>
       <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
@@ -428,7 +428,7 @@
           {{ globalNavOpen ? 'Hide Global Menu' : 'Show Global Menu' }}
         </div>
       </div>
-      <ul [@slideInOut]="globalNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 global-nav">
+      <ul [@slideInOut]="globalNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 global-nav font-semibold">
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
             class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-  text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
@@ -513,7 +513,7 @@
           {{ projectNavOpen ? 'Hide Project Menu' : 'Open Project Menu' }}
         </div>
       </div>
-      <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 project-nav">
+      <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 project-nav font-semibold">
         <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
             [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
             class="flex w-full cursor-pointer items-center rounded-md py-2  !text-white c_md:justify-center-  text-white bg-gray-900 hover:bg-secondary-700 hover:text-white"
