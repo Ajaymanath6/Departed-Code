@@ -71,6 +71,83 @@
   </div>
 </div>
 
+<div class="p-4 bg-gray-100">
+  <div class="flex items-center gap-3 mb-4">
+    <h5 class="text-center text-base font-bold text-Mdblue-700"> Recent Projects</h5>
+
+  </div>
+  <div>
+    <div class="grid grid-cols-3 gap-4">
+      <div class="parent-card flex flex-col rounded-lg border- border-gray-300- bg-white p-3">
+        <div class="flex grow flex-col">
+          <div class="grow- min-h-[4rem]- flex justify-between items-center">
+            <div
+              class="inline-flex items-center gap-1 rounded-md bg-gray-50 px-2 py-1 text-xs font-semibold text-Mdblue-700 whitespace-nowrap">
+              <span class="material-symbols-outlined icon-16"> inventory_2 </span><span>Project</span>
+            </div>
+            <div class="flex shrink-0 items-center gap-2">
+              <span class="material-symbols-outlined gray-fill-600 icon-20  "> keep
+              </span>
+              <span class="material-symbols-outlined text-gray-600 icon-20  "> folder_special
+              </span>
+              <div>
+                <div class="relative flex h-full items-center"><button type="button"
+                    class="flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                      class="material-symbols-outlined icon-20">more_horiz</span></button></div>
+                <div class="cust-drop z-10 hidden min-w-[216px] divide-y divide-gray-100 rounded-lg bg-white shadow">
+                  <ul class="space-y-1 py-2 text-sm text-Mdblue-700">
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 Mdblue-fill-600"> keep_off </span><span
+                          class="ml-2">Unpin</span></button></li>
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 Mdblue-fill-600"> mode_edit </span><span
+                          class="ml-2">Edit</span></button></li>
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 text-Mdblue-600"> content_copy
+                        </span><span class="ml-2"> Copy Project ID </span></button></li>
+                    <li class=""><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-red-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 red-fill-700"> delete </span><span
+                          class="ml-2">Delete</span></button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="flex grow flex-col justify-end gap-3">
+            <div class="flex flex-col gap-y-1">
+              <div class="flex min-h-[3rem] items-end text-lg font-semibold text-Mdblue-700 relative">
+                <p class="w-full line-clamp-2"><a href="/PXsgD/b4wzvx/dashboard"> Project Name </a></p>
+              </div>
+              <p class="truncate text-sm font-normal text-Mdblue-700"> Description for the project will go here when
+                typed. </p>
+            </div>
+            <div class="flex justify-between ">
+              <div>
+                <p class="text-sm font-normal text-gray-600"> Rhaenyra Targaryen </p>
+              </div>
+              <div>
+                <p class="text-sm font-normal text-gray-600"> 2025/01/22 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <button
+        class="flex items-center rounded px-2 py-1 text-sm font-semibold text-primary-600 hover:cursor-pointer hover:bg-gray-100"><span>
+          Show All</span></button>
+    </div>
+  </div>
+
+</div>
+
 <div class="grid grid-cols- gap-4 bg-gray-100">
   <div class="mt-4 mb-4 mx-4">
     <div class="">
@@ -418,14 +495,19 @@
             <div class="flex items-center space-x-3 py-1 align-middle rtl:space-x-reverse ">
               <div><button class="flex items-center space-x-3 py-1 align-middle rtl:space-x-reverse"><img
                     alt="UniCourt Logo" width="88" height="40"
-                    [src]="sidebarCollapsed ? 'assets/svg/uniCourtLogo.svg' : 'assets/svg/logo-main.svg'"></button></div></div>
+                    [src]="sidebarCollapsed ? 'assets/svg/uniCourtLogo.svg' : 'assets/svg/logo-main.svg'"></button>
+              </div>
+            </div>
           </a></li>
         <li>
-          <div class="w-full"><div><button type="submit"
+          <div class="w-full">
+            <div><button type="submit"
                 [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
-                class="btn-focus flex w-full items-center rounded border bg-Mdblue-700 px-4 py-3 text-base font-medium text-white focus:border-primary-600 focus:ring-4 focus:ring-primary-600 whitespace-nowrap border-gray-700"><span *ngIf="!sidebarCollapsed"></span><span
+                class="btn-focus flex w-full items-center rounded border bg-Mdblue-700 px-4 py-3 text-base font-medium text-white focus:border-primary-600 focus:ring-4 focus:ring-primary-600 whitespace-nowrap border-gray-700"><span
+                  *ngIf="!sidebarCollapsed"></span><span
                   class="flex items-center justify-center shrink-0 transition-all duration-300 ease-in-out"><img
-                    class="h-5 w-auto max-w-full object-contain " [src]="sidebarCollapsed ? 'assets/svg/dartcollapse.svg' : 'assets/svg/dartlogo.svg'"
+                    class="h-5 w-auto max-w-full object-contain "
+                    [src]="sidebarCollapsed ? 'assets/svg/dartcollapse.svg' : 'assets/svg/dartlogo.svg'"
                     alt="dart logo"></span><svg *ngIf="!sidebarCollapsed" data-accordion-icon="" aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
                   class="w-3 h-3 rotate-180 shrink-0 ">
@@ -433,8 +515,7 @@
                     d="M9 5 5 1 1 5"></path>
                 </svg></button>
               <div class="hidden cust-drop- z-10 w-[12rem] divide-y divide-gray-100 rounded shadow bg-gray-900 mt-1"
-                 data-popper-placement="bottom"
-                >
+                data-popper-placement="bottom">
                 <ul class="space-y-2 p-2 text-base font-semibold text-Mdblue-700">
                   <li class="">
                     <div><button type="button" tabindex="-1"
@@ -452,7 +533,8 @@
                   </li>
                 </ul>
               </div>
-            </div></div>
+            </div>
+          </div>
         </li>
       </ul>
 
@@ -658,8 +740,7 @@
     </div>
   </div>
   <!--project dropdown start-->
-  <div *ngIf="projectDropdownOpen"
-    [@tooltip]
+  <div *ngIf="projectDropdownOpen" [@tooltip]
     class="cust-drop z-[50] w-[24rem] max-w-[24rem] shrink-0 flex flex-col min-h-0 rounded-lg bg-white shadow-lg border border-gray-200"
     data-popper-placement="right" (click)="$event.stopPropagation()">
     <div class="px-4 pt-3 shrink-0">
@@ -687,8 +768,7 @@
                     class="flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
                       class="material-symbols-outlined icon-20">more_horiz</span></button></div>
                 <div class="cust-drop z-10 hidden min-w-[216px] divide-y divide-gray-100 rounded-lg bg-white shadow"
-                   data-popper-placement="bottom"
-                  >
+                  data-popper-placement="bottom">
                   <ul class="space-y-1 py-2 text-sm text-Mdblue-700">
                     <li><button
                         class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
