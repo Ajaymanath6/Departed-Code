@@ -659,6 +659,7 @@
   </div>
   <!--project dropdown start-->
   <div *ngIf="projectDropdownOpen"
+    [@tooltip]
     class="cust-drop z-[50] w-[24rem] max-w-[24rem] shrink-0 flex flex-col min-h-0 rounded-lg bg-white shadow-lg border border-gray-200"
     data-popper-placement="right" (click)="$event.stopPropagation()">
     <div class="px-4 pt-3 shrink-0">
@@ -667,7 +668,7 @@
     <div class="p-3 border-b border-gray-200 shrink-0"><label class="sr-only" for="undefined-search">Search</label>
       <div class="relative">
         <div><input type="text"
-            class="block w-full border border-gray-300 rounded-lg py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600 focus:outline-none disabled:bg-gray-100 ng-untouched ng-pristine ng-valid"
+            class="block w-full border border-gray-300 rounded-lg py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600 focus:outline-none disabled:bg-gray-100 "
             placeholder="Search projects..."></div><span
           class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 icon-20 text-gray-400 pointer-events-none">search</span>
       </div>
@@ -686,8 +687,8 @@
                     class="flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
                       class="material-symbols-outlined icon-20">more_horiz</span></button></div>
                 <div class="cust-drop z-10 hidden min-w-[216px] divide-y divide-gray-100 rounded-lg bg-white shadow"
-                  id="dropdown-project-settings-project-selector-b4wzvx-51295" data-popper-placement="bottom"
-                  style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(354px, 176px);">
+                   data-popper-placement="bottom"
+                  >
                   <ul class="space-y-1 py-2 text-sm text-Mdblue-700">
                     <li><button
                         class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
@@ -819,7 +820,7 @@
         <div
           placeholder="Use natural language to find your case. Example: &quot;Cases where John Smith is a defendant in California&quot;"
           class="w-full  "><input
-            class="min-h-[16px] w-full bg-transparent px-3 text-base font-normal outline-none placeholder:text-Mdblue-600 ng-untouched ng-dirty ng-valid"
+            class="min-h-[16px] w-full bg-transparent px-3 text-base font-normal outline-none placeholder:text-Mdblue-600  ng-dirty "
             placeholder="Use natural language to find your case. Example: &quot;Cases where John Smith is a defendant in California&quot;">
         </div>
       </div>
