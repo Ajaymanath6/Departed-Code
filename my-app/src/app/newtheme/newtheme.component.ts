@@ -57,6 +57,8 @@ export class NewthemeComponent implements AfterViewInit {
   activeFilterTab = 'cases';
   // Track sidebar collapsed state (default: expanded)
   sidebarCollapsed = false;
+  // Project dropdown (Select a Project) visibility
+  projectDropdownOpen = false;
 
   // Side nav open close - Toggle global navigation menu open/close
   toggleGlobalNav(): void {
@@ -66,7 +68,7 @@ export class NewthemeComponent implements AfterViewInit {
   setGlobalNavTooltipPosition(event: MouseEvent): void {
     const el = (event.currentTarget as HTMLElement).getBoundingClientRect();
     this.globalNavTooltipStyle = {
-      left: `${el.right + 8}px`,
+      left: `${el.right + 4}px`,
       top: `${el.top + el.height / 2}px`
     };
     this.showGlobalNavTooltip = true;
@@ -84,7 +86,7 @@ export class NewthemeComponent implements AfterViewInit {
   setProjectNavTooltipPosition(event: MouseEvent): void {
     const el = (event.currentTarget as HTMLElement).getBoundingClientRect();
     this.projectNavTooltipStyle = {
-      left: `${el.right + 8}px`,
+      left: `${el.right + 4}px`,
       top: `${el.top + el.height / 2}px`
     };
     this.showProjectNavTooltip = true;
@@ -92,6 +94,14 @@ export class NewthemeComponent implements AfterViewInit {
 
   hideProjectNavTooltip(): void {
     this.showProjectNavTooltip = false;
+  }
+
+  toggleProjectDropdown(): void {
+    this.projectDropdownOpen = !this.projectDropdownOpen;
+  }
+
+  closeProjectDropdown(): void {
+    this.projectDropdownOpen = false;
   }
 
   // Set active tab
