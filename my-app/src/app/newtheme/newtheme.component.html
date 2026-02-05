@@ -405,213 +405,327 @@
 </div>
 <!--home recent activities/tracking end-->
 
+
 <!--navigation start-->
+<div class="flex flex-row items-stretch">
+  <div [ngClass]="{'w-[4.25rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}"
+    class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700 shrink-0">
+    <div class="bg-Mdblue-700- py-4 gap-4 flex flex-col">
+      <div>
+        <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
+          class="flex gap-2 items-center text-white mb-4 px-2">
+          <div *ngIf="!sidebarCollapsed" class="text-sm">Global Menu</div>
+          <div class="flex relative" (mouseenter)="setGlobalNavTooltipPosition($event)"
+            (mouseleave)="hideGlobalNavTooltip()">
+            <span *ngIf="globalNavOpen"
+              class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
+              (click)="toggleGlobalNav()"> remove </span>
+            <span *ngIf="!globalNavOpen"
+              class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
+              (click)="toggleGlobalNav()"> add </span>
+          </div>
+          <div *ngIf="showGlobalNavTooltip" [@tooltip] role="tooltip" [ngStyle]="globalNavTooltipStyle"
+            class="fixed z-[9999] -translate-y-1/2 inline-block px-3 py-2 text-base font-semibold text-white bg-gray-900 rounded-lg duration-200 shadow-xs tooltip ">
+            {{ globalNavOpen ? 'Hide Global Menu' : 'Show Global Menu' }}
+          </div>
+        </div>
+        <ul [@slideInOut]="globalNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 global-nav font-semibold">
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-  text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20   !text-primary-700- white-fill"
+                aria-label="cottage">cottage</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden !text-primary-700- text-white">
+                Home </div>
+            </a></li>
 
-<div [ngClass]="{'w-[4.25rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}"
-  class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700 ">
-  <div class="bg-Mdblue-700- py-4 gap-4 flex flex-col">
-    <div>
-      <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
-        class="flex gap-2 items-center text-white mb-4 px-2">
-        <div *ngIf="!sidebarCollapsed" class="text-sm">Global Menu</div>
-        <div class="flex relative" (mouseenter)="setGlobalNavTooltipPosition($event)"
-          (mouseleave)="hideGlobalNavTooltip()">
-          <span *ngIf="globalNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
-            (click)="toggleGlobalNav()"> remove </span>
-          <span *ngIf="!globalNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
-            (click)="toggleGlobalNav()"> add </span>
-        </div>
-        <div *ngIf="showGlobalNavTooltip" [@tooltip] role="tooltip" [ngStyle]="globalNavTooltipStyle"
-          class="fixed z-[9999] -translate-y-1/2 inline-block px-3 py-2 text-base font-semibold text-white bg-gray-900 rounded-lg duration-200 shadow-xs tooltip ">
-          {{ globalNavOpen ? 'Hide Global Menu' : 'Show Global Menu' }}
-        </div>
+
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="watch_later">watch_later</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Tracking </div>
+            </a></li>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="keep">keep</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Pins </div>
+            </a></li>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="keep">download</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Exports </div>
+            </a></li>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill"
+                class="flex items-center py-2 material-symbols-outlined icon-20 white-fill "
+                aria-label="keep">receipt_long</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Orders </div>
+            </a></li>
+
+        </ul>
       </div>
-      <ul [@slideInOut]="globalNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 global-nav font-semibold">
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-  text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20   !text-primary-700- white-fill"
-              aria-label="cottage">cottage</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden !text-primary-700- text-white">
-              Home </div>
-          </a></li>
+      <div class=" h-[1px] grow bg-gray-800"></div>
+      <div>
+        <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
+          class="flex gap-2 items-center text-white mb-4 px-2">
+          <div *ngIf="!sidebarCollapsed" class="text-sm">Project Menu</div>
+          <div class="flex relative" (mouseenter)="setProjectNavTooltipPosition($event)"
+            (mouseleave)="hideProjectNavTooltip()">
+            <span *ngIf="projectNavOpen"
+              class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
+              (click)="toggleProjectNav()"> remove </span>
+            <span *ngIf="!projectNavOpen"
+              class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
+              (click)="toggleProjectNav()"> add </span>
+          </div>
+          <div *ngIf="showProjectNavTooltip" [@tooltip] role="tooltip" [ngStyle]="projectNavTooltipStyle"
+            class="fixed z-[9999] -translate-y-1/2 inline-block px-3 py-2  text-base font-semibold text-white bg-gray-900 rounded-lg duration-200 shadow-xs tooltip dark:bg-gray-700">
+            {{ projectNavOpen ? 'Hide Project Menu' : 'Open Project Menu' }}
+          </div>
+        </div>
+        <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'"
+          class="space-y-2 px-2 c_md:mt-2 project-nav font-semibold">
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white "
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-2 border border-gray-600  !text-white c_md:justify-center-  text-white bg-gray-900 hover:border-primary-600 hover:text-white"
+              href="/PXsgD/b4wzvx/dashboard"
+              (click)="toggleProjectDropdown(); $event.preventDefault(); $event.stopPropagation()"><span iconsize="20"
+                iconcolor="" routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  " aria-label="search">folder</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden !text-primary-700- text-white">
+                Project Name</div>
+            </a></li>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/search"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="search">search</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Search </div>
+            </a></li>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="watch_later">watch_later</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Tracking </div>
+            </a></li>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/analytics"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="insert_chart">insert_chart</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Analytics </div>
+            </a></li>
 
-
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-              aria-label="watch_later">watch_later</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Tracking </div>
-          </a></li>
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Pins </div>
-          </a></li>
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-              aria-label="keep">download</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Exports </div>
-          </a></li>
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-              class="flex items-center py-2 material-symbols-outlined icon-20 white-fill "
-              aria-label="keep">receipt_long</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Orders </div>
-          </a></li>
-
-      </ul>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="keep">keep</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Pins </div>
+            </a></li>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="keep">download</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Exports </div>
+            </a></li>
+          <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
+              [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+              class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
+              href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor=""
+                routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
+                class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
+                aria-label="keep">receipt_long</span>
+              <div routerlinkactive="!text-primary-700- text-white"
+                [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
+                class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
+                Orders </div>
+            </a></li>
+        </ul>
+      </div>
     </div>
-    <div class=" h-[1px] grow bg-gray-800"></div>
-    <div>
-      <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
-        class="flex gap-2 items-center text-white mb-4 px-2">
-        <div *ngIf="!sidebarCollapsed" class="text-sm">Project Menu</div>
-        <div class="flex relative"
-          (mouseenter)="setProjectNavTooltipPosition($event)"
-          (mouseleave)="hideProjectNavTooltip()">
-          <span *ngIf="projectNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
-            (click)="toggleProjectNav()"> remove </span>
-          <span *ngIf="!projectNavOpen"
-            class="material-symbols-outlined icon-20 cursor-pointer text-gray-300 bg-gray-900 border border-gray-600 rounded-md hover:border-primary-600"
-            (click)="toggleProjectNav()"> add </span>
-        </div>
-        <div *ngIf="showProjectNavTooltip" [@tooltip] role="tooltip"
-          [ngStyle]="projectNavTooltipStyle"
-          class="fixed z-[9999] -translate-y-1/2 inline-block px-3 py-2  text-base font-semibold text-white bg-gray-900 rounded-lg duration-200 shadow-xs tooltip dark:bg-gray-700">
-          {{ projectNavOpen ? 'Hide Project Menu' : 'Open Project Menu' }}
-        </div>
-      </div>
-      <ul [@slideInOut]="projectNavOpen ? 'open' : 'closed'" class="space-y-2 px-2 c_md:mt-2 project-nav font-semibold">
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white "
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-2 border border-gray-600  !text-white c_md:justify-center-  text-white bg-gray-900 hover:border-primary-600 hover:text-white"
-            href="/PXsgD/b4wzvx/dashboard"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  "
-              aria-label="search">folder</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden !text-primary-700- text-white">
-              Project Name</div>
-          </a></li>
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/search"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-              aria-label="search">search</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Search </div>
-          </a></li>
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/tracking"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-              aria-label="watch_later">watch_later</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Tracking </div>
-          </a></li>
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/analytics"><span iconsize="20" iconcolor=""
-              routerlinkactive="!text-primary-700- white-fill" [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-              aria-label="insert_chart">insert_chart</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Analytics </div>
-          </a></li>
-
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill" aria-label="keep">keep</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Pins </div>
-          </a></li>
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-              aria-label="keep">download</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Exports </div>
-          </a></li>
-        <li class=""><a routerlinkactive=" text-white bg-secondary-700 hover:bg-secondary-700 hover:text-white"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md py-1  !text-white c_md:justify-center-"
-            href="/PXsgD/b4wzvx/pins"><span iconsize="20" iconcolor="" routerlinkactive="!text-primary-700- white-fill"
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20  white-fill"
-              aria-label="keep">receipt_long</span>
-            <div routerlinkactive="!text-primary-700- text-white"
-              [ngClass]="{'opacity-100 max-w-[150px] px-2': !sidebarCollapsed, 'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed}"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden">
-              Orders </div>
-          </a></li>
-      </ul>
+    <div [ngClass]="{'justify-end': !sidebarCollapsed}" class="relative mb-2 flex px-2 py-2 pt-0">
+      <button (click)="toggleSidebar()"
+        class="z-[2] cursor-pointer items-center rounded-md bg-Mdblue-700 px-4- py-1- text-Mdblue-600- text-gray-300"><span
+          [ngClass]="{'ml-2': sidebarCollapsed}"
+          class="material-symbols-outlined icon-20 py-1 px-1 border rounded-md border-white font-semibold">{{
+          sidebarCollapsed ? 'chevron_right' : 'chevron_left' }}</span></button>
     </div>
   </div>
+  <!--project dropdown start-->
+  <div *ngIf="projectDropdownOpen"
+    class="cust-drop z-[50] w-[24rem] max-w-[24rem] shrink-0 flex flex-col min-h-0 rounded-lg bg-white shadow-lg border border-gray-200"
+    data-popper-placement="right" (click)="$event.stopPropagation()">
+    <div class="px-4 pt-3 shrink-0">
+      <h3 class="text-sm font-semibold  text-Mdblue-700 text-center">Select a Project</h3>
+    </div>
+    <div class="p-3 border-b- border-gray-200- shrink-0"><label class="sr-only" for="undefined-search">Search</label>
+      <div class="relative">
+        <div><input type="text"
+            class="block w-full border border-gray-300 rounded-lg py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600 focus:outline-none disabled:bg-gray-100 ng-untouched ng-pristine ng-valid"
+            placeholder="Search projects..."></div><span
+          class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 icon-20 text-gray-400 pointer-events-none">search</span>
+      </div>
+    </div>
+    <div class="flex-1 min-h-0 overflow-y-auto">
+      <div class="">
+        <!-- <div class="px-4 py-2 text-sm font-semibold  text-gray-600 text-center">Pinned</div> -->
+        <ul class="pb-2 text-sm text-Mdblue-600">
+          <li class="flex items-center justify-between px-4 py-1 hover:bg-gray-100 "><button
+              class="flex flex-1 items-center text-left"><span class="text-sm font-semibold  text-Mdblue-700"> My
+                Project </span></button>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined icon-20 Mdblue-fill-600 ">keep</span>
+              <div>
+                <div class="relative flex h-full items-center"><button type="button"
+                    class="flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
+                      class="material-symbols-outlined icon-20">more_horiz</span></button></div>
+                <div class="cust-drop z-10 hidden min-w-[216px] divide-y divide-gray-100 rounded-lg bg-white shadow"
+                  id="dropdown-project-settings-project-selector-b4wzvx-51295" data-popper-placement="bottom"
+                  style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(354px, 176px);">
+                  <ul class="space-y-1 py-2 text-sm text-Mdblue-700">
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 Mdblue-fill-600"> keep_off </span><span
+                          class="ml-2">Unpin</span></button></li>
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 Mdblue-fill-600"> mode_edit </span><span
+                          class="ml-2">Edit</span></button></li>
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 text-Mdblue-600"> content_copy
+                        </span><span class="ml-2"> Copy Project ID </span></button></li>
+                    <li class=""><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-red-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 red-fill-700"> delete </span><span
+                          class="ml-2">Delete</span></button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="h-[1px] grow bg-gray-200"></div>
+      <div class="">
 
-  <div [ngClass]="{'justify-end': !sidebarCollapsed}" class="relative mb-2 flex px-2 py-2 pt-0">
-    <button (click)="toggleSidebar()"
-      class="z-[2] cursor-pointer items-center rounded-md bg-Mdblue-700 px-4- py-1- text-Mdblue-600- text-gray-300"><span
-        [ngClass]="{'ml-2': sidebarCollapsed}"
-        class="material-symbols-outlined icon-20 py-1 px-1 border rounded-md border-white font-semibold">{{
-        sidebarCollapsed ? 'chevron_right' : 'chevron_left' }}</span></button>
+        <div class="px-4 py-2 text-sm font-semibold  text-gray-600 text-center">Recent projects</div>
+        <ul class="pb-2 text-sm text-Mdblue-600">
+          <li class="flex items-center justify-between px-4 py-1 hover:bg-gray-100 "><button
+              class="flex flex-1 items-center text-left"><span class="text-sm font-semibold  text-Mdblue-700"> Project
+                Name
+              </span></button>
+            <div class="flex items-center gap-2">
+              <div>
+                <div class="relative flex h-full items-center">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined icon-20 Mdblue-fill-600 ">keep</span>
+                    <button type="button"
+                      class="flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+                      <span class="material-symbols-outlined icon-20">more_horiz</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="cust-drop z-10 hidden min-w-[216px] divide-y divide-gray-100 rounded-lg bg-white shadow"
+                  data-popper-placement="bottom"
+                  style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(354px, 328px);">
+                  <ul class="space-y-1 py-2 text-sm text-Mdblue-700">
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 Mdblue-fill-600"> keep </span><span
+                          class="ml-2">Pin</span></button></li>
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 Mdblue-fill-600"> mode_edit </span><span
+                          class="ml-2">Edit</span></button></li>
+                    <li><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-Mdblue-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 text-Mdblue-600"> content_copy
+                        </span><span class="ml-2"> Copy Project ID </span></button></li>
+                    <li class=""><button
+                        class="flex w-full items-center px-4 py-2 text-sm font-medium text-red-700 hover:cursor-pointer hover:bg-gray-100"><span
+                          class="material-symbols-outlined icon-20 red-fill-700"> delete </span><span
+                          class="ml-2">Delete</span></button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-200 px-4 py-3 shrink-0">
+      <div class="mb-2 text-center text-sm font-semibold  text-gray-600">Or</div>
+      <div class="flex w-full gap-2"><button
+          class="flex-1 rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-semibold  text-center text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200">
+          View All Projects </button><button
+          class="flex-1 rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-semibold  text-center text-secondary-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200">
+          New Project </button></div>
+    </div>
   </div>
+  <!--project dropdown end-->
 </div>
-
-
 
 
 <!--tooltip start-->
