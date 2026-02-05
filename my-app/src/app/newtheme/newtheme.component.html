@@ -410,7 +410,51 @@
 <div class="flex flex-row items-stretch">
   <div [ngClass]="{'w-[4.25rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}"
     class="c_md:w-[4.25rem]- duration-300 ease-in-out overflow-hidden transition-all bg-Mdblue-700 shrink-0">
-    <div class="bg-Mdblue-700- py-4 gap-4 flex flex-col">
+    <div class="bg-Mdblue-700- py-4 gap-6 flex flex-col">
+      <ul class="mt-4 space-y-2 px-2 c_md:mt-2">
+        <li><a
+            class="flex w-full  cursor-pointer items-center gap-x-2 justify-center rounded-md px-4 py-1 text-Mdblue-600- text-white c_md:justify-center-"
+            href="/PXsgD/projects">
+            <div class="flex items-center space-x-3 py-1 align-middle rtl:space-x-reverse ">
+              <div><button class="flex items-center space-x-3 py-1 align-middle rtl:space-x-reverse"><img
+                    alt="UniCourt Logo" width="88" height="40"
+                    src="assets/svg/logo-main.svg"></button></div></div>
+          </a></li>
+        <li>
+          <div class="w-full"><div><button type="submit"
+                class="btn-focus flex w-full items-center rounded border bg-Mdblue-700 px-4 py-3 text-base font-medium text-white focus:border-primary-600 focus:ring-4 focus:ring-primary-600 whitespace-nowrap border-gray-700 justify-between"><span></span><span
+                  class="flex items-center justify-center shrink-0 transition-all duration-300 ease-in-out"><img
+                    class="h-5 w-auto max-w-full object-contain " src="assets/svg/dartlogo.svg"
+                    alt="dart logo"></span><svg data-accordion-icon="" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+                  class="w-3 h-3 rotate-180 shrink-0 ">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 5 5 1 1 5"></path>
+                </svg></button>
+              <div class="hidden cust-drop- z-10 w-[12rem] divide-y divide-gray-100 rounded shadow bg-gray-900 mt-1"
+                 data-popper-placement="bottom"
+                >
+                <ul class="space-y-2 p-2 text-base font-semibold text-Mdblue-700">
+                  <li class="">
+                    <div><button type="button" tabindex="-1"
+                        class="disabled inline-flex w-full items-center rounded justify-center p-2 text-sm font-semibold focus:border-Mdblue-600 focus:outline-none- focus:ring-4 focus:ring-primary-600 hover:bg-Mdblue-700 text-white">
+                        <div class="mr-2 flex items-center"><span><img src="assets/svg/dartlogo.svg"
+                              alt="dart logo"></span></div>
+                      </button></div>
+                  </li>
+                  <li class="">
+                    <div><button type="button" tabindex="-1"
+                        class="disabled inline-flex w-full items-center rounded justify-center p-2 text-sm font-semibold focus:border-Mdblue-600 focus:outline-none- focus:ring-4 focus:ring-primary-600 hover:bg-Mdblue-700 text-white">
+                        <div class="mr-2 flex items-center"><span><img src="./assets/images/deeplogo.svg"
+                              alt="dart logo"></span></div>
+                      </button></div>
+                  </li>
+                </ul>
+              </div>
+            </div></div>
+        </li>
+      </ul>
+
       <div>
         <div [ngClass]="{'justify-center': sidebarCollapsed, 'justify-between': !sidebarCollapsed}"
           class="flex gap-2 items-center text-white mb-4 px-2">
@@ -619,7 +663,7 @@
     <div class="px-4 pt-3 shrink-0">
       <h3 class="text-sm font-semibold  text-Mdblue-700 text-center">Select a Project</h3>
     </div>
-    <div class="p-3 border-b- border-gray-200- shrink-0"><label class="sr-only" for="undefined-search">Search</label>
+    <div class="p-3 border-b border-gray-200 shrink-0"><label class="sr-only" for="undefined-search">Search</label>
       <div class="relative">
         <div><input type="text"
             class="block w-full border border-gray-300 rounded-lg py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600 focus:outline-none disabled:bg-gray-100 ng-untouched ng-pristine ng-valid"
@@ -629,7 +673,7 @@
     </div>
     <div class="flex-1 min-h-0 overflow-y-auto">
       <div class="">
-        <!-- <div class="px-4 py-2 text-sm font-semibold  text-gray-600 text-center">Pinned</div> -->
+        <div class="px-4 py-2 text-sm font-semibold  text-gray-600 text-center">Pinned</div>
         <ul class="pb-2 text-sm text-Mdblue-600">
           <li class="flex items-center justify-between px-4 py-1 hover:bg-gray-100 "><button
               class="flex flex-1 items-center text-left"><span class="text-sm font-semibold  text-Mdblue-700"> My
@@ -667,7 +711,7 @@
           </li>
         </ul>
       </div>
-      <div class="h-[1px] grow bg-gray-200"></div>
+      <!-- <div class="h-[1px] grow bg-gray-200"></div> -->
       <div class="">
 
         <div class="px-4 py-2 text-sm font-semibold  text-gray-600 text-center">Recent projects</div>
