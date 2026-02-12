@@ -59,6 +59,8 @@ export class NewthemeComponent implements AfterViewInit {
   sidebarCollapsed = false;
   // Project dropdown (Select a Project) visibility
   projectDropdownOpen = false;
+  // States Barred accordion – "More Details" expanded for first row
+  statesBarredMoreDetailsOpen = false;
 
   // Side nav open close - Toggle global navigation menu open/close
   toggleGlobalNav(): void {
@@ -102,6 +104,10 @@ export class NewthemeComponent implements AfterViewInit {
 
   closeProjectDropdown(): void {
     this.projectDropdownOpen = false;
+  }
+
+  toggleStatesBarredMoreDetails(): void {
+    this.statesBarredMoreDetailsOpen = !this.statesBarredMoreDetailsOpen;
   }
 
   // Set active tab
