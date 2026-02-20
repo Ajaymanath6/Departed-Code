@@ -71,14 +71,13 @@
   </div>
 </div>
 
-<!--info-drawer-start-->
+<!--info-drawer-popup-start-->
 <div tabindex="-1" class="z-50 items-center justify-center flex" aria-modal="true" role="dialog">
   <div class="">
-    <div class="shadow-lg- flex max-h-[95vh] w-[42rem]  flex-col rounded-lg bg-white p-12">
+    <div class="shadow-lg- flex  w-[42rem]  flex-col rounded-lg bg-white p-12">
       <div class=" pb-4 flex items-center justify-between">
         <h2 class="text-xl font-semibold ">Announcements</h2>
-        <button class=""><span
-            class="material-symbols-outlined text-Mdblue-700">close</span></button>
+        <button class=""><span class="material-symbols-outlined text-Mdblue-700">close</span></button>
       </div>
       <div class="overflow-scroll- max-h-[60vh] grow overflow-y-auto p-2 ">
         <div class="mb-4 space-y-6 ">
@@ -108,10 +107,14 @@
                 <p class="text-sm text-Mdblue-700"> Watch the video to get the basics of Order Documents. </p>
               </div>
               <div
-                class="flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
-                <img src="assets/svg/order.svg" width="100" height="100" alt="Order Documents"
+                class="relative flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
+                <img src="assets/png/order-document.png" width="100" height="100" alt="Order Documents"
                   class="h-full w-full object-cover object-center">
+                <button
+                  class="absolute inset-0 flex items-center justify-center rounded-full p-3 text-white pointer-events-none"><span
+                    class="material-symbols-outlined secondary-fill-700 icon-48"> play_circle </span></button>
               </div>
+
             </button>
             <button class="flex gap-2 overflow-hidden rounded-2xl border border-gray-300">
               <div class="flex flex-1 flex-col justify-center gap-2 p-4 text-left">
@@ -119,20 +122,26 @@
                 <p class="text-sm text-Mdblue-700"> Watch the video to get the basics of Save Search. </p>
               </div>
               <div
-                class="flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
-                <img src="assets/svg/search.svg" width="100" height="100" alt="Save Search"
+                class="relative flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
+                <img src="assets/png/saved-search.png" width="100" height="100" alt="Save Search"
                   class="h-full w-full object-cover object-center">
+                <button
+                  class="absolute inset-0 flex items-center justify-center rounded-full p-3 text-white pointer-events-none"><span
+                    class="material-symbols-outlined secondary-fill-700 icon-48"> play_circle </span></button>
               </div>
             </button>
-             <button class="flex gap-2 overflow-hidden rounded-2xl border border-gray-300">
+            <button class="flex gap-2 overflow-hidden rounded-2xl border border-gray-300">
               <div class="flex flex-1 flex-col justify-center gap-2 p-4 text-left">
                 <h5 class="text-base font-semibold text-Mdblue-700"> Docket Tracking </h5>
                 <p class="text-sm text-Mdblue-700"> Watch the video to get the basics of Save Search. </p>
               </div>
               <div
-                class="flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
-                <img src="assets/svg/docket.svg" width="100" height="100" alt="Save Search"
+                class="relative flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
+                <img src="assets/png/trackingv.png" width="100" height="100" alt="Docket Tracking"
                   class="h-full w-full object-cover object-center">
+                <button
+                  class="absolute inset-0 flex items-center justify-center rounded-full p-3 text-white pointer-events-none"><span
+                    class="material-symbols-outlined secondary-fill-700 icon-48"> play_circle </span></button>
               </div>
             </button>
           </div>
@@ -141,7 +150,86 @@
     </div>
   </div>
 </div>
-<!--info-drawer-end-->
+<!--info-drawer-popup-end-->
+<!--info-drawer-dropdown-start-->
+
+<div class="cust-drop z-10 w-[42rem] bg-white block " data-popper-placement="bottom">
+  <div class="px-4 py-3 pb-0 text-sm text-Mdblue-700">
+    <div class=" pb-4 flex items-center justify-between">
+      <h2 class="text-xl font-semibold ">Announcements</h2>
+      <button class=""><span class="material-symbols-outlined text-Mdblue-700">close</span></button>
+    </div>
+  </div>
+  <div class="overflow-scroll- max-h-[60vh] grow overflow-y-auto p-2 ">
+    <div class="mb-4 space-y-6 ">
+      <div class="mt-4 bg-secondary-50 p-4 rounded-2xl border border-secondary-200">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="overflow-hidden rounded-2xl"><img src="assets/svg/announcement.svg" width="100" height="100"
+              alt="Announcement 1" class="w-full h-full object-cover"></div>
+          <div class="flex flex-col gap-2">
+            <h2 class="text-sm font-semibold text-primary-600">1 JAN 2025</h2>
+            <h3 class="text-xl font-semibold text-Mdblue-700 truncate">Elit Vestibulum Euismod Parturient</h3>
+            <p class="text-sm font-normal text-Mdblue-700">Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+              dolor auctor. Aenean lacinia bibendum nulla
+              sed consectetur. Cras justo odio, dapibus ac facilisis in, </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class=" text-xl font-bold text-Mdblue-700 mb-2">Learn Something New</p>
+        <p class="text-base font-normal text-Mdblue-700">Cum sociis natoque penatibus et magnis dis parturient
+          montes,
+          nascetur ridiculus mus.</p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <button class="flex gap-2 overflow-hidden rounded-2xl border border-gray-300">
+          <div class="flex flex-1 flex-col justify-center gap-2 p-4 text-left">
+            <h5 class="text-base font-semibold text-Mdblue-700"> Order Documents </h5>
+            <p class="text-sm text-Mdblue-700"> Watch the video to get the basics of Order Documents. </p>
+          </div>
+          <div
+            class="relative flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
+            <img src="assets/png/order-document.png" width="100" height="100" alt="Order Documents"
+              class="h-full w-full object-cover object-center">
+            <button
+              class="absolute inset-0 flex items-center justify-center rounded-full p-3 text-white pointer-events-none"><span
+                class="material-symbols-outlined secondary-fill-700 icon-48"> play_circle </span></button>
+          </div>
+
+        </button>
+        <button class="flex gap-2 overflow-hidden rounded-2xl border border-gray-300">
+          <div class="flex flex-1 flex-col justify-center gap-2 p-4 text-left">
+            <h5 class="text-base font-semibold text-Mdblue-700"> Save Search </h5>
+            <p class="text-sm text-Mdblue-700"> Watch the video to get the basics of Save Search. </p>
+          </div>
+          <div
+            class="relative flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
+            <img src="assets/png/saved-search.png" width="100" height="100" alt="Save Search"
+              class="h-full w-full object-cover object-center">
+            <button
+              class="absolute inset-0 flex items-center justify-center rounded-full p-3 text-white pointer-events-none"><span
+                class="material-symbols-outlined secondary-fill-700 icon-48"> play_circle </span></button>
+          </div>
+        </button>
+        <button class="flex gap-2 overflow-hidden rounded-2xl border border-gray-300">
+          <div class="flex flex-1 flex-col justify-center gap-2 p-4 text-left">
+            <h5 class="text-base font-semibold text-Mdblue-700"> Docket Tracking </h5>
+            <p class="text-sm text-Mdblue-700"> Watch the video to get the basics of Save Search. </p>
+          </div>
+          <div
+            class="relative flex w-[12rem] shrink-0 items-center justify-center overflow-hidden rounded-r-2xl bg-gray-100">
+            <img src="assets/png/trackingv.png" width="100" height="100" alt="Docket Tracking"
+              class="h-full w-full object-cover object-center">
+            <button
+              class="absolute inset-0 flex items-center justify-center rounded-full p-3 text-white pointer-events-none"><span
+                class="material-symbols-outlined secondary-fill-700 icon-48"> play_circle </span></button>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--info-drawer-dropdown-end-->
 
 <div class="grid grid-cols-1 gap-4 bg-gray-100">
   <div class="mt-4 mb-4 mx-4">
