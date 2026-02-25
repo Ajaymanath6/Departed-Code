@@ -3977,7 +3977,11 @@
         <button
           class="btn-focus flex items-center rounded border border-primary-600 bg-white p-2 py-1.5 text-sm font-semibold text-Mdblue-700  hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span
             class="icon-16 material-symbols-outlined mr-1 text-primary-600"> sync
-          </span><span>Changed</span></button>
+          </span>
+          <span class="material-symbols-outlined icon-16 mr-1">
+            arrow_forward
+          </span>
+          <span>Changed</span></button>
 
       </div>
       <div class="track-case-list flex flex-col gap-4">
@@ -4004,10 +4008,10 @@
                   class="material-symbols-outlined icon-16 text-primary-600 mr-1">
                   visibility
                 </span><span>Mark Read</span></button>
-              <button
+              <!-- <button
                 class="btn-focus flex items-center rounded border border-gray-300 bg-white p-2 text-sm font-semibold text-primary-600  hover:border-gray-600 hover:bg-gray-100 hover:text-primary-600 focus:border-gray-600 focus:bg-gray-100 focus:outline-none"><span>See
                   Latest Updates</span>
-              </button>
+              </button> -->
               <span
                 class="btn-focus flex items-center rounded border- border-gray-300- bg-gray-50 p-2 text-sm font-semibold text-Mdblue-700
                  hover:border-gray-600- hover:bg-gray-100- hover:text-primary-600- focus:border-gray-600- focus:bg-gray-100- focus:outline-none-"><span
@@ -4076,7 +4080,16 @@
                           <span class="text-base font-normal italic">- Defendant</span>
                         </span>
                       </div>
-
+                      <div class="flex text-base font-semibold text-Mdblue-700">
+                        <span class="flex items-center py-1 px-3 mb-2 rounded-md border border-primary-600">
+                          <span class="icon-16 material-symbols-outlined mr-1 text-primary-600"> sync </span>
+                          <span class="line-through italic font-normal"> Original Text</span>
+                          <span class="flex text-base font-normal items-center"><span
+                              class="material-symbols-outlined icon-16 mr-1">
+                              arrow_forward
+                            </span><span class="font-semibold text-Mdblue-700">New Text</span> </span>
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <div class="flex  border-t mt-4 pt-4 pb-2">
@@ -4103,9 +4116,9 @@
                       </div>
                     </div>
                   </div>
-                  <button type="button"
+                  <!-- <button type="button"
                     class="text-primary-600 mt-2 bg-gray-50 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-semibold rounded text-base px-5 py-2 text-center items-center w-full">
-                    Show All <span>(8)</span></button>
+                    Show All <span>(8)</span></button> -->
                 </div>
               </div>
             </li>
@@ -4152,7 +4165,7 @@
                 </div>
               </div>
             </li>
-            <div class="grow border-t border-gray-300"></div>
+            <!-- <div class="grow border-t border-gray-300"></div> -->
           </ol>
         </div>
       </div>
