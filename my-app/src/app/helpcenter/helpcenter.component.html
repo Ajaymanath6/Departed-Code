@@ -1,0 +1,1357 @@
+<button type="button" aria-haspopup="dialog" [attr.aria-expanded]="helpCenterOpen"
+  class="focus:ring-primary-300- text-Mdblue-600- focus:ring-0- focus:bg-gray-100- focus:border-Mdblue-600- hover:bg-gray-100- border-white- relative inline-flex items-center rounded-lg border-Mdblue-700 p-2 text-center text-sm font-medium text-gray-600"
+  aria-label="Open Help Center" (click)="openHelpCenter()"><span aria-hidden="true"
+    class="material-symbols-outlined icon-24 gray-fill-600">info</span></button>
+
+<!--help-center-start-->
+<div *ngIf="helpCenterOpen" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 p-4"
+  role="presentation" (click)="closeHelpCenter()">
+  <div tabindex="-1"
+    class="relative flex w-full max-w-[99rem] max-h-[min(97vh,60rem)] min-h-0 flex-col overflow-hidden rounded-lg bg-white- bg-gray-100 p-4 shadow-lg outline-none"
+    aria-modal="true" role="dialog" aria-labelledby="help-center-title" (click)="$event.stopPropagation()">
+    <div class="flex min-h-0 flex-1 flex-col overflow-hidden">
+      <div class="shrink-0 flex items-center">
+        <div class="flex-1 text-center">
+          <h3 id="help-center-title" class="mb-2 text-base font-semibold font-lora text-Mdblue-700">Help Center</h3>
+          <p class="mb-2 text-lg font-normal text-Mdblue-700">
+            Learn how shortcuts, your active workspace, and the top bar help you move through UniCourt DART.
+          </p>
+        </div>
+        <button type="button" class="" aria-label="Close Help Center" (click)="closeHelpCenter()"><span
+            class="material-symbols-outlined text-Mdblue-700">close</span></button>
+      </div>
+      <div class="flex min-h-0 flex-1 flex-col overflow-hidden p-2">
+        <div class="mb-4 flex min-h-0 min-w-0 flex-1 items-stretch bg-white rounded-xl border-2 border-gray-200 p-4">
+          <div
+            class="w-full max-w-[19%] shrink-0 self-stretch overflow-y-auto pr-[1%] text-base font-semibold text-Mdblue-600">
+            <ul class="space-y-1 border-l border-gray-300">
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700 !text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/my-profile">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]"
+                    class="absolute h-full left-[-2px] !border-primary-600 border-l-4 w-[3px]"></div><span
+                    routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2 icon-fill">
+                    account_circle
+                  </span> Announcements
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span> Home Page
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Navigation
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Search
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Case Page
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Entity Pages
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Tracking
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Pins
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Analytics
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Workspaces
+                </a></li>
+              <li class="relative "><a
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  href="/PXsgD/v2/user-settings/notifications">
+                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
+                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
+                  </span>Account Management
+                </a></li>
+            </ul>
+          </div>
+          <div class="rightcontent min-h-0 min-w-0 flex-1 overflow-y-auto py-3 px-4">
+            <div class="announcements d-none">
+              <h2 class="text-xl font-bold text-Mdblue-700 mb-4">Announcements</h2>
+              <div class="grid grid-cols-2 gap-2 border border-secondary-600 rounded-lg ">
+                <div class="p-4">
+                  <h2 class="text-[2rem] font-lora font-semibold ">Meet UniCourt DART!</h2>
+                  <ul class="space-y-2 mt-4 ">
+                    <li class="flex items-center gap-2 "><span
+                        class="material-symbols-outlined text-2xl- shrink-0 ">text_snippet</span>Advanced
+                      <span class="font-semibold ">Docket Research</span>
+                    </li>
+                    <li class="flex items-center gap-2 "><span class="material-symbols-outlined text-2xl- shrink-0 ">
+                        schedule </span>Seamless <span class="font-semibold ">Case Tracking</span></li>
+                    <li class="flex items-center gap-2 "><span
+                        class="material-symbols-outlined text-2xl- shrink-0 ">analytics</span>Powerful <span
+                        class="font-semibold ">Legal Analytics</span></li>
+                  </ul>
+                </div>
+                <div>
+                  <img src="assets/png/Welcome.png" width="100" height="100" alt="Announcement 1"
+                    class="w-full h-full object-cover">
+                </div>
+              </div>
+              <div class="mt-6 text-left">
+                <p class="mb-6 text-base font-bold text-gray-900">Learn More</p>
+                <div class="space-y-7">
+                  <section>
+                    <h3 class="mb-2 flex items-center gap-1 text-base font-bold text-primary-700">
+                      Search
+                      <span class="material-symbols-outlined text-xl text-primary-700"
+                        aria-hidden="true">arrow_forward</span>
+                    </h3>
+                    <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                      The search bar allows you to instantly find what you need. Search has multiple modes depending on
+                      what
+                      you are searching for. You can search for cases or switch search modes to find profiles for
+                      attorneys,
+                      law firms, judges, or parties.
+                    </p>
+                  </section>
+                  <section>
+                    <h3 class="mb-2 flex items-center gap-1 text-base font-bold text-primary-700">
+                      Tracking
+                      <span class="material-symbols-outlined text-xl text-primary-700"
+                        aria-hidden="true">arrow_forward</span>
+                    </h3>
+                    <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                      The Case Tracking feature allows you to monitor cases automatically and stay informed of new
+                      activity
+                      without manually checking for updates.
+                    </p>
+                  </section>
+                  <section>
+                    <h3 class="mb-2 flex items-center gap-1 text-base font-bold text-primary-700">
+                      Analytics
+                      <span class="material-symbols-outlined text-xl text-primary-700"
+                        aria-hidden="true">arrow_forward</span>
+                    </h3>
+                    <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                      The Analytics section in UniCourt DART provides powerful insights into litigation trends and
+                      performance across the platform.
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="home-page min-w-0 space-y-8 text-left d-none">
+              <!-- Intro -->
+              <section>
+                <h2 class="mb-3 text-2xl font-bold text-Mdblue-700">Home Page</h2>
+                <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                  The Home Page is your central hub for quickly accessing and managing your work across all workspaces.
+                  It
+                  brings together all your recent activity, important items, and navigation tools in one place so you
+                  can
+                  pick up right where you left off.
+                </p>
+              </section>
+              <!-- Search Bar -->
+              <section class="space-y-3">
+                <h3 class="text-base font-bold text-Mdblue-700">Search Bar</h3>
+                <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                  The search bar allows you to instantly find what you need. Search has multiple modes depending on what
+                  you
+                  are searching for. You can search for cases or switch search modes to find profiles for attorneys, law
+                  firms, judges, or parties. A search must be done in a workspace; running a search from the homepage
+                  will
+                  run the search in your personal user workspace.
+                </p>
+                <div>
+                  <img src="assets/png/search-homepage.png" width="1200" height="360"
+                    alt="Search bar with Cases, Attorneys, Law Firms, Judges, and Parties tabs and Natural Language search field"
+                    class="h-auto w-full max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+              <!-- Recent Workspaces -->
+              <section class="space-y-3">
+                <h3 class="text-base font-bold text-Mdblue-700">Recent Workspaces</h3>
+                <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                  This section displays your most recently accessed workspaces. By default, it will include your
+                  personal
+                  user
+                  workspace, with additional workspaces appearing here as you create or are invited to them. All
+                  activities
+                  (tracking, pins, search) are done inside a workspace. Use this to quickly jump into a workspace.
+                </p>
+                <div>
+                  <img src="assets/png/recent-workspaces.png" width="1200" height="400"
+                    alt="Recent Workspaces: three workspace cards with Show All link"
+                    class="h-auto w-full max-w-full rounded-md object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+              <!-- Recent Activities -->
+              <section class="space-y-3">
+                <h3 class="text-base font-bold text-Mdblue-700">Recent Activities</h3>
+                <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                  Stay up to date with your latest actions. This list includes your recent searches and recently viewed
+                  cases
+                  across all workspaces, making it easy to revisit previous work.
+                </p>
+                <div class="">
+                  <img src="assets/png/recent-activities.png" width="1200" height="520"
+                    alt="Recent Activities: tabs All, Searches, Cases and list of case and search rows with View Case and Run Search"
+                    class="h-auto w-full max-w-full rounded-md object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+              <!-- Tracking Activities -->
+              <section class="space-y-3">
+                <h3 class="text-base font-bold text-Mdblue-700">Tracking Activities</h3>
+                <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                  The tracking section highlights the most recent updates to items across workspaces you are monitoring,
+                  helping you stay informed about important changes.
+                </p>
+                <div>
+                  <img src="assets/png/tracking-activities.png" width="1200" height="560"
+                    alt="Tracking: ten cases with updates, list with project, last updated, frequency, and View Case"
+                    class="h-auto w-full max-w-full rounded-md object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+              <!-- Pinned Items -->
+              <section class="space-y-3 pb-2">
+                <h3 class="text-base font-bold text-Mdblue-700">Pinned Items</h3>
+                <p class="text-base font-normal leading-relaxed text-Mdblue-700">
+                  Quickly access your most important content. This section displays any pinned cases or entity profiles
+                  across
+                  all workspaces so they&apos;re always within reach.
+                </p>
+                <div class="overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-3">
+                  <img src="assets/png/pinned-items.png" width="1200" height="640"
+                    alt="Pins: filter tabs and grid of pinned judges, parties, law firms, attorneys, and cases with Show All"
+                    class="h-auto w-full max-w-full rounded-md object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+            </div>
+            <div class="navigation min-w-0 space-y-8 text-left d-none">
+              <header class="space-y-3">
+                <h2 class="text-2xl font-bold text-Mdblue-700">Navigation</h2>
+
+              </header>
+              <!-- Step 1: Sidebar Navigation — Shortcuts -->
+              <section class="">
+                <h3 class="text-base font-bold text-Mdblue-700">Sidebar Navigation / Shortcuts</h3>
+                <p class="text-base leading-relaxed text-Mdblue-700">
+                  Shortcuts appear at the top of the sidebar. They help you quickly navigate to cross-project views so
+                  you
+                  can see and manage activity across workspaces.
+                </p>
+                <div class="nav w-[220px] overflow-hidden rounded-xl   p-4">
+                  <img src="assets/png/navigation-shortcuts.png" width="200"
+                    alt="Shortcuts sidebar: Home, All Tracking, All Pins, Tracking Activities, All Workspaces"
+                    class="h-auto w-[200px] max-w-[200px] rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+                <div class="space-y-4 text-base leading-relaxed text-Mdblue-700">
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Home</h4>
+                    <p>
+                      Takes you to the homepage where you can search and see your most recent activity across all
+                      workspaces.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">All Tracking</h4>
+                    <p>Takes you to an overview of all of your case tracking across workspaces.</p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">All Pins</h4>
+                    <p>Lets you see all saved pins across all workspaces you have access to.</p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Tracking Activities</h4>
+                    <p>
+                      The tracking section highlights the most recent updates to items across workspaces you are
+                      monitoring,
+                      helping you stay informed about important changes.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">All Workspaces</h4>
+                    <p>Takes you to workspace management where you can see and manage all your workspaces.</p>
+                  </div>
+                </div>
+
+              </section>
+              <!-- Step 2: Sidebar Navigation — Active Workspace -->
+              <section class="space-y-4">
+                <h3 class="text-base font-bold text-Mdblue-700">Sidebar / Active Workspace</h3>
+                <div class="space-y-3 text-base leading-relaxed text-Mdblue-700">
+                  <p>
+                    This menu helps you navigate to activities within your active workspace.
+                  </p>
+
+                  <div class=" w-[220px] max-w-full overflow-hidden rounded-xl  p-4 shadow-sm">
+                    <img src="assets/png/navigation-active-workspace-sidebar.png" width="200"
+                      alt="Active Workspace sidebar: Default workspace selector, Search, Tracking with 9+ badge, Analytics, Pins, Manage"
+                      class="h-auto w-[200px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                  </div>
+
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Workspace selector</h4>
+                    <p>
+                      Clicking on the workspace selector will open a menu to select or create a new workspace. Selecting
+                      a
+                      workspace will attribute all new activities (searches, tracks, downloads, pins, and page views) to
+                      the
+                      active workspace.
+                    </p>
+                    <div class=" mt-3 w-[372px] max-w-full overflow-hidden  p-4 shadow-sm">
+                      <img src="assets/png/navigation-select-workspace.png" width="372"
+                        alt="Select a Workspace: search field, Pinned and Workspaces lists with sidebar"
+                        class="h-auto w-[372px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Search</h4>
+                    <p>
+                      Takes you to the search page. From here you can search for cases, attorneys, law firms, judges, or
+                      parties. This page also has your recent and saved searches attributed to the active workspace.
+                      Learn
+                      more about search in the Search section.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Tracking</h4>
+                    <p>
+                      Takes you to the tracking page filtered to your active workspace. See all tracking associated with
+                      the
+                      active workspace.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Analytics</h4>
+                    <p class="mb-2">
+                      Takes you to the Analytics page. 3 types of analytics are available.
+                    </p>
+                    <ul class="list-disc space-y-2 pl-6">
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Court Analytics:</strong> Here you can see case
+                        count
+                        analytics that show UniCourt&apos;s case coverage (2000 - present)
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Judgment Analytics:</strong> See court level
+                        judgment
+                        analytics for NY state courts.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Attorney Analytics:</strong> Comparison tool for
+                        NY
+                        Attorneys by judgments and verdicts.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Pins</h4>
+                    <p>Lets you see all saved pins in your active workspace.</p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Manage</h4>
+                    <p>
+                      Lets you manage your active workspace. Here you can change the name or description as well as add
+                      and
+                      remove users.
+                    </p>
+                  </div>
+                </div>
+
+              </section>
+              <!-- Step 3: Topbar Navigation -->
+              <section class="space-y-4 pb-2">
+                <h3 class="text-base font-bold text-Mdblue-700">Topbar Navigation</h3>
+
+                <div class="space-y-4 text-base leading-relaxed text-Mdblue-700">
+                  <div>
+                    <h4 class="mb-2 text-base font-semibold text-Mdblue-700">DART/DEEP switches</h4>
+                    <p>
+                      This lets you switch between DART and DEEP. DART is your research portal for docket research,
+                      analytics, and case tracking. DEEP is for developers to learn more about our APIs and Widgets.
+                    </p>
+                    <div class="nav mt-3 w-[341px] max-w-full overflow-hidden   bg-white p-3 ">
+                      <img src="assets/png/navigation-topbar.png" width="341"
+                        alt="Top bar: DART switch, notification bell with badge, support headset, help, user avatar"
+                        class="h-auto w-[341px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Notification bell</h4>
+                    <p>
+                      The notification bell keeps you up to date with important activity across your workspace. Here,
+                      you&apos;ll see real-time alerts such as when document downloads are ready, confirmations that a
+                      case
+                      track has been set, and updates when case processing is complete. Use it to quickly stay informed
+                      and
+                      take action without needing to navigate back to individual cases or profiles.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Support icon</h4>
+                    <p>
+                      The Support icon connects you directly to the UniCourt Support Center where you can get assistance
+                      with the product. Use it to contact support when you need additional help.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">Information icon</h4>
+                    <p>
+                      The Information icon takes you to the Knowledge Base, where you can explore how-to videos and
+                      step-by-step documentation about the product. Use it to learn features, discover best practices,
+                      and
+                      find answers at your own pace.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="mb-2 text-lg font-semibold text-Mdblue-700">User icon</h4>
+                    <p>
+                      The User Account icon in the top bar provides quick access to your profile and account controls.
+                      Clicking it opens a dropdown menu displaying your name, email, and account details, along with an
+                      option to switch between DART accounts if you have access to multiple.
+                    </p>
+                    <p class="mt-2">
+                      From this menu, you can navigate to User Settings, Account Settings, and Usage, or choose to log
+                      out
+                      if you need to sign in with a different account.
+                    </p>
+                  </div>
+                </div>
+
+
+              </section>
+            </div>
+            <div class="search min-w-0 space-y-8 text-left text-Mdblue-700 d-none">
+              <header class="space-y-3">
+                <h2 class="text-2xl font-bold text-Mdblue-700">Search</h2>
+                <p class="text-base leading-relaxed">
+                  The Search page helps you quickly find the information you need using different search modes. Each
+                  mode is tailored to a specific type of data: Case Search locates cases from across all 4000+ UniCourt
+                  Courts both Federal and State. Attorney, Law Firm, Judge, and Party Search let you explore profiles
+                  and analytics for those entities.
+                </p>
+
+              </header>
+
+              <!-- 2 Case Search -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Case Search</h3>
+                <p class="text-base leading-relaxed">
+                  Case Search allows you to find cases from a comprehensive database covering over 4,000 courts. Use it
+                  to quickly locate relevant cases, review details, and access the information you need across
+                  jurisdictions. Case search has three different modes to help you find relevant cases.
+                </p>
+
+              </section>
+
+              <!-- 3 Natural Language Search -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Natural Language Search</h3>
+                <p class="text-base leading-relaxed">
+                  UniCourt DART’s Natural Language Search allows you to query our entire library of cases using
+                  everyday, conversational language instead of formal keywords or complex syntax. UniCourt then converts
+                  your natural language into our advanced query language to best find the cases you’re looking for.
+                  Below are some examples of natural language searches:
+                </p>
+                <ul class="list-disc space-y-1 pl-6 text-base leading-relaxed">
+                  <li>“Show me cases where John Smith is a defendant in California”</li>
+                  <li>“Cases with John Doe or Jane Doe in New York filed in 2025”</li>
+                  <li>E“Find cases where a summary judgement was granted on a rear end auto case in los angeles county,
+                    CA ”</li>
+                </ul>
+                <div class="mt-2 w-[810px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-case-search.png" width="810"
+                    alt="Case search: mode tabs and search bar"
+                    class="h-auto w-[810px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+
+              </section>
+
+              <!-- 4 Filter Search -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Filter Search</h3>
+                <p class="text-base leading-relaxed">
+                  UniCourt DART’s Filter Search allows you to narrow down results by applying specific criteria and
+                  parameters. This is a simplified version of our advanced query language that is suitable for most
+                  users. Simply select the filters you want to use and fill in the information you wish to search by.
+
+                </p>
+                <div class="mt-2 w-[810px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-filter.png" width="810"
+                    alt="Filter search: filter control and filter chips"
+                    class="h-auto w-[810px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+
+              <!-- 5 Advanced Search -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Advanced Search</h3>
+                <p class="text-base leading-relaxed">
+                  UniCourt DART’s Advanced Search combines keywords with operators to refine and control search results.
+                  This is our most advanced and complex search. To perform an advanced search you can enter the advanced
+                  query language directly into the search bar or open our Query Builder to construct an advanced search.
+                </p>
+                <div class="mt-2 w-[604px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-natural-language.png" width="604"
+                    alt="Natural language search with Cases tab and Natural Language mode"
+                    class="h-auto w-[604px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+
+              </section>
+
+              <!-- 6 Search Results (intro) -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Case Search Results</h3>
+                <p class="text-base leading-relaxed">
+                  After running a Case Search, your results are displayed in two flexible views to help you analyze and
+                  navigate cases efficiently.
+                </p>
+                <p> <span class="font-semibold text-Mdblue-700">Data View </span> presents results in a table format,
+                  listing cases by name with customizable metadata fields such as case number, filing date, case status,
+                  court type, court name, court system, case class, area of law, and case type. This view is ideal for
+                  sorting, comparing, and scanning large sets of results.</p>
+                <div class="mt-2 w-[810px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-advanced.png" width="810"
+                    alt="Advanced Search or Query Builder with conditions and actions"
+                    class="h-auto w-[810px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+
+              <!-- 7 Data Grid -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <!-- <h3 class="text-base font-bold text-Mdblue-700">Data Grid</h3> -->
+                <p class="text-base leading-relaxed">
+                  <span class="font-semibold text-Mdblue-700">Case Card View </span> provides a more visual summary of
+                  each case. Every card includes the case name, case number, court, filing date, case type, and case
+                  status. It also highlights relevant details based on your search criteria. For example, if you search
+                  for a specific case event like a summary judgment, the card will display the related docket text or
+                  document. If you search by judge, the card will show the associated judge from the case metadata to
+                  help you quickly assess relevance. This is the recommended DART experience.
+
+                </p>
+                <div class="mt-2 w-[810px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-05-case-results-table.png" width="810"
+                    alt="Case results table: columns, toolbar, pagination"
+                    class="h-auto w-[810px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+                <p class="text-base leading-relaxed">All results are automatically sorted by the most recent filing date
+                  and can be refined using filters such as state, court system, filing date, and case type. You can also
+                  save any search after execution using the Save Search button, preserving the exact parameters and
+                  format for easy access later.</p>
+              </section>
+
+
+
+
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Recent/Saved Searches</h3>
+                <p class="text-base leading-relaxed">
+                  <span class="font-semibold text-Mdblue-700">The Recent Searches </span> feature automatically displays
+                  your 20 most recent searches, making it easy to revisit and rerun queries without starting from
+                  scratch.
+
+                </p>
+                <p class="text-base leading-relaxed">
+                  <span class="font-semibold text-Mdblue-700">Saved Searches </span> allow you to store searches for
+                  future use. You can save a search directly from the search results page or by clicking the three dots
+                  next to a recent search and selecting save. Each saved search preserves the exact parameters and
+                  search format, so you can quickly access and reuse them whenever needed.
+
+                </p>
+                <div class="mt-2 w-[810px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-05-case-results-table.png" width="810"
+                    alt="Case results table: columns, toolbar, pagination"
+                    class="h-auto w-[810px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+
+              </section>
+              <!-- 11 Attorney Search -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <span class=" font-bold text-Mdblue-700">Sharable Case Search URLs</span>
+                <p class="text-base leading-relaxed">
+                  You can easily share your search results with other users by copying the URL from the case search
+                  results page and sending it to another user. They will be able to instantly run the same search on
+                  their account by pasting the URL into their browser search bar.
+                </p>
+
+              </section>
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Attorney Search</h3>
+                <p class="text-base leading-relaxed">
+                  Attorney Search allows you to quickly find UniCourt’s normalized attorneys by name, returning the
+                  closest matching results. Each result includes key details such as the attorney’s firm, states where
+                  they are barred, and total case count. To explore further, click on the attorney’s name or the View
+                  Profile button to access their full profile, including detailed analytics and additional background
+                  information.
+
+                </p>
+                <div class="mt-2 w-[858px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-law-firms.png" width="858"
+                    alt="Law firm search with yellow header and result cards"
+                    class="h-auto w-[858px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+              <!-- 12 Law Firm Search -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Law Firm Search</h3>
+                <p class="text-base leading-relaxed">
+                  Law Firm Search allows you to quickly find UniCourt’s normalized Law Firms by name, returning the
+                  closest matching results. Each result includes key details such as the firm’s location, secretary of
+                  state number, and total case count. To explore further, click on the Law Firm’s name or the View
+                  Profile button to access their full profile, including detailed analytics and additional background
+                  information.
+                </p>
+
+                <div class="mt-2 w-[858px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-attorneys.png" width="858"
+                    alt="Attorney search with green header and result cards"
+                    class="h-auto w-[858px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+
+              <!-- 13 Judge Search -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Judge Search</h3>
+                <p class="text-base leading-relaxed">
+                  Judge Search allows you to quickly find UniCourt’s normalized Judges by name, returning the closest
+                  matching results. Each result includes key details such as the Judge’s last court of record and their
+                  judicial status. To explore further, click on the Judges name or the View Profile button to access
+                  their full profile, including detailed analytics and additional background information.
+                </p>
+                <div class="mt-2 w-[858px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-judges.png" width="858"
+                    alt="Judge search with purple header and result cards"
+                    class="h-auto w-[858px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+
+              <!-- 14 Party Search -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Party Search</h3>
+                <p class="text-base leading-relaxed">
+                  Party Search allows you to quickly find UniCourt’s normalized parties by name, returning the closest
+                  matching results. Each result includes key details such as the parties location and their total case
+                  count. To explore further, click on the parties name or the View Profile button to access their full
+                  profile, including detailed analytics and additional background information.
+                </p>
+                <div class="mt-2 w-[858px] max-w-full overflow-hidden rounded-xl  p-4">
+                  <img src="assets/png/help-search-parties.png" width="858"
+                    alt="Party search with coral header and result cards"
+                    class="h-auto w-[858px] max-w-full rounded-lg object-contain" loading="lazy" decoding="async">
+                </div>
+              </section>
+            </div>
+            <div class="casepage min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
+              <header class="space-y-3">
+                <h2 class="text-2xl font-bold text-Mdblue-700">Case Page</h2>
+                <p class="text-base leading-relaxed">
+                  To access a Case Page, click on any case from your Case Search results. The case will open in a new
+                  tab, allowing you to continue working without losing your search.
+                </p>
+              </header>
+
+              <!-- 1 Case header: title, actions, status, tabs -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <p class="text-base leading-relaxed">
+                  A Case Page is a standardized view of a litigation matter that brings together all available
+                  information about a lawsuit in one place. At the top of the page, you’ll see the case name as provided
+                  by the court, along with notifications showing when the case was last refreshed and when a new update
+                  was last found. Cases are automatically refreshed each time you open them. If new activity is
+                  detected, you’ll be prompted to refresh the page to load the latest updates, which are then added
+                  seamlessly to the case.
+                  From the top of the page, you can also set a Case Track to receive notifications about updates and pin
+                  the case to bookmark it for quick access later.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-01-header.png" width="810"
+                    alt="Case page header with title, Refresh Set Tracker Pin to Project, refresh status line, and tab bar with Summary active"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+                <p class="text-base leading-relaxed">Below, you’ll find a series of tabs that organize the case details,
+                  including Summary, Docket Entries, Documents, Parties & Attorneys, Judges, Related Cases, Docket
+                  History, and Similar Cases. Each tab provides a deeper view into specific aspects of the case, making
+                  it easy to navigate and analyze the information you need.</p>
+              </section>
+
+              <!-- 2 Summary -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Summary Tab</h3>
+                <p class="text-base leading-relaxed">
+                  The Summary tab provides a high-level overview of the case, bringing together key information in one
+                  place. It includes important case metadata such as case number, court, and case type, along with a
+                  list of the top parties and attorneys involved. You’ll also find a recent case history section that
+                  highlights the latest filings, helping you quickly understand the most recent activity in the case.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-02-summary.png" width="810"
+                    alt="Case Summary tab with case details grid, Top Parties Attorneys tables, and Recent Case History"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+              </section>
+
+              <!-- 3 Docket Entries -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Docket Entries Tab</h3>
+                <p class="text-base leading-relaxed">
+                  The Docket Entries tab provides a complete list of all filings in a case, with the most recent entries
+                  displayed at the top. Up to 100 docket entries are shown per page, and additional entries are
+                  accessible through pagination.
+                  This list is fully text-searchable, allowing you to quickly locate specific case events such as a
+                  trial or complaint. When available, links to associated documents appear on the right side of each
+                  entry, making it easy to view or order documents directly from the docket.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-03-docket-entries.png" width="810"
+                    alt="Docket Entries tab with search, pagination, DATE and DESCRIPTION columns, and docket row cards"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+              </section>
+
+              <!-- 4 Documents -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Documents Tab</h3>
+                <p class="text-base leading-relaxed">
+                  The Documents tab provides a complete list of all documents filed in the case. By default, documents
+                  are sorted with the most recent first, but you can reorder the list by clicking the arrows next to the
+                  Date column.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-04-documents.png" width="810"
+                    alt="Documents tab with search, document list columns, and download actions"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="mt-4 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start">
+                  <div class="space-y-2">
+                    <p class="text-base leading-relaxed">Each document includes a name and description (when provided by
+                      the court). If a document is already available in the shared library, its name will appear
+                      highlighted, allowing you to open the PDF directly in the viewer. On the right side of each
+                      document, you’ll see options to download or purchase:</p>
+
+                    <ul class="list-disc space-y-2 pl-8 text-base leading-relaxed">
+                      <li>A download icon indicates the document is already available and can be downloaded as a PDF at
+                        no
+                        additional cost.
+                        <div class="nav w-[170px] max-w-full overflow-hidden rounded-xl  p-4">
+                          <img src="assets/png/help-case-page-05-document-order.png" width="170"
+                            alt="Cloud download icon with Ordered On label and timestamp"
+                            class="h-auto max-w-full rounded object-contain" loading="lazy" decoding="async">
+                        </div>
+                      </li>
+                      <li>A green button with a price allows you to purchase the document from the court.</li>
+                      <li>If the price is $0.00, the document is free and will be ordered at no cost.
+                        <div class="nav mt-2 w-[139px] max-w-full overflow-hidden rounded-xl p-4">
+                          <img src="assets/png/Case-page-6-1.png" width="139"
+                            alt="Green price badge showing zero dollars for a free document order"
+                            class="h-auto max-w-full rounded object-contain" loading="lazy" decoding="async">
+                        </div>
+
+                      </li>
+                      <li>If a cost is listed, that amount will be charged to your account upon purchase. If it is a
+                        Federal court document you will need a linked PACER account to order and the cost will be passed
+                        directly to your PACER account.
+                        <div class="nav mt-2 w-[139px] max-w-full overflow-hidden rounded-xl p-4">
+                          <img src="assets/png/Case-page-7-1.png" width="139"
+                            alt="Green price badge showing 7 dollars 25 cents for a paid document order"
+                            class="h-auto max-w-full rounded object-contain" loading="lazy" decoding="async">
+                        </div>
+                      </li>
+                    </ul>
+                    <p class="text-base leading-relaxed">
+                      Most document orders are fulfilled within 30–60 seconds, though timing may vary depending on the
+                      court system and file size.
+                    </p>
+                    <p class="text-base leading-relaxed">
+                      You can also select multiple documents using the checkboxes on the left side to place bulk orders.
+                    </p>
+                  </div>
+
+                </div>
+              </section>
+
+              <!-- 5 Parties / Attorneys -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Parties/Attorneys Tab</h3>
+                <p class="text-base leading-relaxed">
+                  The Parties & Attorneys tab lists all parties associated with the case, along with their assigned
+                  roles (such as plaintiff or defendant). For each party, you’ll also see their attorney of record and
+                  the attorney’s law firm when available in the court metadata.
+                </p>
+                <p class="text-base leading-relaxed">
+                  If any party, attorney, or law firm appears highlighted, it has been normalized and linked within the
+                  system. Clicking on these links will take you to that entity’s profile page, where you can explore
+                  additional details and analytics.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-08-parties-attorneys.png" width="810"
+                    alt="Parties Attorneys tab with plaintiff and defendant cards and attorney tables"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+              </section>
+
+              <!-- 6 Judges -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Judges Tab</h3>
+                <p class="text-base leading-relaxed">
+                  The judges tab lists all judges associated with the case in the court meta data. If a judge appears
+                  highlighted, it has been normalized and linked within the system. Clicking on these links will take
+                  you to that judge’s profile page, where you can explore additional details and analytics.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-09-judges.png" width="810"
+                    alt="Judges tab with list view selected and judge cards"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+              </section>
+
+              <!-- 8 Related Cases -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Related Cases Tab</h3>
+                <p class="text-base leading-relaxed">
+                  The Related Cases tab displays any cases that the court has associated with the current case. These
+                  relationships may include cases that are part of a multidistrict litigation (MDL), class actions,
+                  formally consolidated matters, appeals, or sister cases (such as those filed across multiple court
+                  systems in jurisdictions like New York).
+                  Use this tab to quickly identify and navigate to connected cases, giving you a broader view of how the
+                  matter fits into related litigation.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-11-related-cases.png" width="810"
+                    alt="Related Cases tab with pagination and related matter cards"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+              </section>
+
+              <!-- 7 Docket History -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Docket History Tab</h3>
+                <p class="text-base leading-relaxed">
+                  The Docket History tab provides a complete audit trail of all information ingested for the case. Each
+                  entry reflects a specific update, showing when new data was pulled and what information was added,
+                  removed, or changed. UniCourt tracks all updates to the case, including docket entries, documents, and
+                  any changes to parties, attorneys, or judges. Entries are color-coded to help you quickly understand
+                  activity:
+                </p>
+                <ul class="list-disc space-y-2 pl-8 text-base leading-relaxed text-Mdblue-700">
+                  <li>Green indicates new information was added</li>
+                  <li>Red indicates information was removed</li>
+                  <li>Blue indicates existing information was updated</li>
+                </ul>
+                <p class="text-base leading-relaxed">
+                  For each entry, the court filing date is displayed on the left, while the timestamp of when the
+                  information was ingested is shown on the right, giving you clear visibility into both the source event
+                  and when it was captured.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-10-docket-history.png" width="810"
+                    alt="Docket History tab with filter pills and activity cards"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+              </section>
+
+
+
+              <!-- 9 Similar Cases -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Similar Cases Tab</h3>
+                <p class="text-base leading-relaxed">
+                  The Similar Cases tab displays a list of other cases in the same court that share key characteristics
+                  with the current case, including the same judge and case type. This helps you quickly identify
+                  comparable litigation, providing useful context and insights into how similar matters are being
+                  handled within that court.
+                </p>
+                <div class="mt-2 max-w-[810px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-case-page-12-similar-cases.png" width="810"
+                    alt="Similar Cases tab with description, pagination, and case cards with metadata"
+                    class="h-auto w-full max-w-[810px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+              </section>
+            </div>
+            <div class="entity-pages min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
+              <header class="space-y-3">
+                <h2 class="text-2xl font-bold text-Mdblue-700">Entity Pages</h2>
+                <p class="text-base leading-relaxed">
+                  DART provides detailed profiles and analytics for all normalized entities, including attorneys, law
+                  firms, judges, and parties. These pages offer insights into activity, case history, and performance to
+                  help you better understand each entity.
+                </p>
+                <p class="text-base leading-relaxed">
+                  You can access an entity profile by searching for it using the appropriate search type, or by clicking
+                  on a linked name from a case page where the entity appears.
+                </p>
+              </header>
+
+              <!-- Profile header (above tabs) -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Profile header</h3>
+                <p class="text-base leading-relaxed">
+                  At the top, a role badge (for example <strong class="font-semibold text-Mdblue-700">Attorney</strong>)
+                  appears beside the normalized name in large serif-style type. Below that, <strong
+                    class="font-semibold text-Mdblue-700">Law Firm</strong> and <strong
+                    class="font-semibold text-Mdblue-700">Location</strong> lines use icons for quick scanning. On the
+                  right, actions such as <strong class="font-semibold text-Mdblue-700">Unpin from Project</strong> use
+                  an
+                  outlined button with icon and blue label text.
+                </p>
+                <div class="mt-2 max-w-[900px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-entity-01-profile-header.png" width="900"
+                    alt="Entity profile header with Attorney badge, name, law firm, location, and Unpin from Project"
+                    class="h-auto w-full max-w-[900px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+              </section>
+
+              <div class="">
+                <p class="text-base leading-relaxed">
+                  Below the header, a series of tabs organizes detailed insights:
+                </p>
+                <ul class="list-disc space-y-4 pl-8 text-base leading-relaxed text-Mdblue-700">
+                  <!-- Summary tab -->
+                  <li class="space-y-3">
+                    <strong class="font-semibold text-Mdblue-700">Summary:</strong>
+                    Highlights key metrics including total cases, party representation (types of clients
+                    represented), filings by year, filings by case type (standardized across courts), and filings by
+                    individual courts at both the state and federal level.
+                    <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/help-entity-02-summary.png" width="834"
+                        alt="Summary tab with filters, total cases, party representation bar, filings by year and by case type"
+                        class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <!-- Profile tab -->
+                  <li class="space-y-3 ">
+                    <strong class="font-semibold text-Mdblue-700">Profile tab:</strong>
+                    Contains biographical and professional details collected from state bar sources, including contact
+                    information, bar admissions (state, number, status, and admitted date), employment history (most
+                    recent shown), law school information, and any disciplinary records. Full employment history
+                    available
+                    through API.
+
+                    <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/help-entity-04-judgments.png" width="834"
+                        alt="Judgments dashboard with KPI cards, Judgments By Year chart, and judgment and verdict timing bars"
+                        class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <!-- Judgments tab -->
+                  <li class="space-y-3 ">
+                    <strong class="font-semibold text-Mdblue-700">Judgments tab:</strong>
+                    (New York only): Provides judgment and verdict analytics, including total judgments, win rates,
+                    percentage of cases reaching judgment or verdict, total and median award amounts, and breakdowns by
+                    year, timing, case type, and judgment type.
+
+                    <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/help-entity-05-attorneys.png" width="834"
+                        alt="Attorneys tab with filters and Top Opposing Attorneys bar chart"
+                        class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <!-- Attorneys tab -->
+                  <li class="space-y-3 ">
+                    <strong class="font-semibold text-Mdblue-700">Attorneys tab:</strong>
+                    Shows opposing counsel, with a visualization of the top 10 and a full list below. Each attorney is
+                    clickable to view their profile.
+
+                    <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/help-entity-06-law-firms.png" width="834"
+                        alt="Law Firms tab with filters and Top Law Firms horizontal bar chart"
+                        class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <!-- Law Firms tab -->
+                  <li class="space-y-3 ">
+                    <strong class="font-semibold text-Mdblue-700">Law Firms tab:</strong>
+                    Lists firms the attorney has been associated with.
+
+                    <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/help-entity-07-parties.png" width="834"
+                        alt="Parties tab with filters and Top Parties horizontal bar chart"
+                        class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <!-- Parties tab -->
+                  <li class="space-y-3 ">
+                    <strong class="font-semibold text-Mdblue-700">Parties tab:</strong>
+                    Displays normalized parties the attorney has represented (only companies and corporate entities are
+                    normalized and listed).
+
+                    Lists judges the attorney has appeared before.
+                    <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/help-entity-08-judges.png" width="834"
+                        alt="Judges tab with filters and Top Judges horizontal bar chart"
+                        class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <!-- Judges tab -->
+                  <li class="space-y-3 ">
+
+                    <strong class="font-semibold text-Mdblue-700">Judges tab:</strong>
+                    Lists judges the attorney has appeared before.
+
+                    <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/help-entity-09-cases.png" width="834"
+                        alt="Cases tab with filters, search chip, sidebar facets, and case result cards"
+                        class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <!-- Cases tab -->
+                  <li class="space-y-3 ">
+                    <strong class="font-semibold text-Mdblue-700">Cases tab:</strong>
+                    A complete list of normalized cases involving the attorney, fully searchable and filterable.
+                    <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/help-entity-03-profile-tab.png" width="834"
+                        alt="Profile tab with Contact, bar states, employment, law school, and disciplinary sections"
+                        class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                </ul>
+                <div class="last-section mt-10 space-y-10 border-t border-gray-200 pt-10 text-left text-Mdblue-700">
+
+                  <!-- 1 Law Firm Page -->
+                  <section class="space-y-3">
+                    <h3 class="text-base font-bold text-Mdblue-700">Law Firm Page</h3>
+                    <p class="text-base leading-relaxed">
+                      The Law Firm Page provides a detailed view of a firm&apos;s litigation activity and analytics. At
+                      the top of the page, you&apos;ll see the firm&apos;s primary location, along with the option to
+                      pin
+                      the profile to your workspace for easy access. This is a beta product that is currently being
+                      improved with new normalization efforts.
+                    </p>
+                    <p class="text-base leading-relaxed">Below the header, tabs organize key insights and information:
+                    </p>
+                    <ul class="list-disc space-y-3 pl-8 text-base leading-relaxed">
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Summary:</strong> Displays core metrics including
+                        total cases, party representation (types of clients the firm represents), filings by year,
+                        filings by standardized case type, and filings by individual courts across both state and
+                        federal
+                        systems.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Attorneys:</strong> Shows a historical list of
+                        attorneys who have litigated for the firm. The top 10 attorneys by total cases are highlighted
+                        in a chart, with a full list below. Each attorney is clickable to view their profile. Note this
+                        is a list of all attorneys who have represented the firm on litigation. It is not an active or
+                        current list.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Law Firms:</strong> Lists firms this firm has
+                        litigated against, providing insight into opposing counsel relationships.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Parties:</strong> Displays normalized parties
+                        represented by the firm (only companies and corporate entities are listed). Plaintiff-focused
+                        firms
+                        may have fewer associated normalized parties.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Judges:</strong> Lists judges the firm has
+                        appeared
+                        before.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Cases:</strong> Provides a complete list of
+                        normalized cases involving the firm.
+                      </li>
+                    </ul>
+                    <p class="text-base leading-relaxed">
+                      Across all analytics tabs, you can apply filters such as filing date, case type, court, and party
+                      role to refine results and focus on the most relevant insights.
+                    </p>
+                  </section>
+
+                  <!-- 2 Judge Page -->
+                  <section class="space-y-3">
+                    <h3 class="text-base font-bold text-Mdblue-700">Judge Page</h3>
+                    <p class="text-base leading-relaxed">
+                      The Judge Page provides a comprehensive view of a judge&apos;s litigation activity and related
+                      analytics. At the top of the page, you&apos;ll see the judge&apos;s primary location, along with
+                      the option to pin the profile to your workspace for quick access. This is a beta product that is
+                      currently being improved with new normalization efforts.
+                    </p>
+                    <p class="text-base leading-relaxed">Below the header, tabs organize key insights:</p>
+                    <ul class="list-disc space-y-3 pl-8 text-base leading-relaxed">
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Summary:</strong> Displays core metrics including
+                        total cases, filings by year, filings by standardized case type, and filings by individual
+                        courts
+                        across both state and federal systems.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Attorneys:</strong> Shows a historical list of
+                        attorneys who have appeared before the judge, separated into Plaintiff and Defense tabs. The top
+                        10 attorneys by total cases are highlighted in a chart, with a full list below. Each attorney is
+                        clickable to view their profile.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Law Firms:</strong> Lists firms that have
+                        litigated before the judge, split into Plaintiff and Defense tabs for easier analysis.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Parties:</strong> Displays normalized parties that
+                        have appeared before the judge, also separated into Plaintiff and Defendant views. (Note: Only
+                        companies and corporate entities are normalized.)
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Cases:</strong> Provides a complete list of
+                        normalized cases overseen by the judge.
+                      </li>
+                    </ul>
+                    <p class="text-base leading-relaxed">
+                      All analytics tabs can be filtered by filing date, case type, and court, allowing you to refine
+                      insights and focus on the most relevant data.
+                    </p>
+                  </section>
+
+                  <!-- 3 Party Page -->
+                  <section class="space-y-3">
+                    <h3 class="text-base font-bold text-Mdblue-700">Party Page</h3>
+                    <p class="text-base leading-relaxed">
+                      The Party Page provides a detailed view of a party&apos;s litigation activity and related
+                      analytics. At the top of the page, you&apos;ll see the party&apos;s primary location, along with
+                      the option to pin the profile to your workspace for easy access. This is a beta product that is
+                      currently being improved with new normalization efforts.
+                    </p>
+                    <p class="text-base leading-relaxed">Below the header, tabs organize key insights:</p>
+                    <ul class="list-disc space-y-3 pl-8 text-base leading-relaxed">
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Summary:</strong> Displays core metrics including
+                        total cases, party type (the types of roles this party appears as), filings by year, filings by
+                        standardized case type, and filings by individual courts across both state and federal systems.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Attorneys:</strong> Shows a historical list of
+                        attorneys who have represented this party. The top 10 attorneys by total cases are highlighted
+                        in a chart, with a full list below. Each attorney is clickable to view their profile.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Law Firms:</strong> Lists the firms that have
+                        represented this party.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Parties:</strong> Displays normalized opposing
+                        parties this entity has litigated against. (Note: Only companies and corporate entities are
+                        normalized, so some parties—especially defendants—may have limited results.)
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Judges:</strong> Lists judges this party has
+                        appeared before.
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Cases:</strong> Provides a complete list of
+                        normalized cases involving this party.
+                      </li>
+                    </ul>
+                    <p class="text-base leading-relaxed">
+                      These views help you understand a party&apos;s litigation history, representation, and activity
+                      across courts and case types.
+                    </p>
+                  </section>
+
+                  <!-- 4 Related Cases Tab -->
+                  <section class="space-y-3">
+                    <h3 class="text-base font-bold text-Mdblue-700">Related Cases Tab</h3>
+                    <p class="text-base leading-relaxed">
+                      The Related Cases tab displays any cases that the court has associated with the current case.
+                      These relationships may include cases that are part of a multidistrict litigation (MDL), class
+                      actions, formally consolidated matters, appeals, or sister cases (such as those filed across
+                      multiple court systems in jurisdictions like New York). Use this tab to quickly identify and
+                      navigate to connected cases, giving you a broader view of how the matter fits into related
+                      litigation.
+                    </p>
+                  </section>
+
+                  <!-- 5 Docket History Tab -->
+                  <section class="space-y-3">
+                    <h3 class="text-base font-bold text-Mdblue-700">Docket History Tab</h3>
+                    <p class="text-base leading-relaxed">
+                      The Docket History tab provides a complete audit trail of all information ingested for the case.
+                      Each entry reflects a specific update, showing when new data was pulled and what information was
+                      added, removed, or changed. UniCourt tracks all updates to the case, including docket entries,
+                      documents, and any changes to parties, attorneys, or judges.
+                    </p>
+                    <p class="text-base leading-relaxed">Entries are color-coded to help you quickly understand
+                      activity:</p>
+                    <ul class="list-disc space-y-2 pl-8 text-base leading-relaxed">
+                      <li>Green indicates new information was added</li>
+                      <li>Red indicates information was removed</li>
+                      <li>Blue indicates existing information was updated</li>
+                    </ul>
+                    <p class="text-base leading-relaxed">
+                      For each entry, the court filing date is displayed on the left, while the timestamp of when the
+                      information was ingested is shown on the right, giving you clear visibility into both the source
+                      event and when it was captured.
+                    </p>
+                  </section>
+
+                  <!-- 6 Similar Cases Tab -->
+                  <section class="space-y-3">
+                    <h3 class="text-base font-bold text-Mdblue-700">Similar Cases Tab</h3>
+                    <p class="text-base leading-relaxed">
+                      The Similar Cases tab displays a list of other cases in the same court that share key
+                      characteristics with the current case, including the same judge and case type. This helps you
+                      quickly identify comparable litigation, providing useful context and insights into how similar
+                      matters are being handled within that court.
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="tracking-page min-w-0 space-y-10 border-t border-gray-200 pt-10 text-left text-Mdblue-700">
+              <header class="space-y-3">
+                <h2 class="text-2xl font-bold text-Mdblue-700">Tracking</h2>
+                <p class="text-base leading-relaxed">
+                  The Case Tracking feature allows you to monitor cases automatically and stay informed of new activity
+                  without manually checking for updates. When you set a track on a case, UniCourt will refresh it at
+                  scheduled intervals based on your selected frequency. If an update is found, the case is updated in
+                  the platform, an in-product notification is generated, and an email notification is sent to all users
+                  in the associated workspace.
+
+                </p>
+              </header>
+
+              <!-- Image: help-tracking-04-case-page-summary-set-tracker.png — Case Page Summary + Set Tracker -->
+              <section class="space-y-3 rounded-xl bg-white">
+                <h3 class="text-base font-bold text-Mdblue-700">Set Tracking</h3>
+                <p class="text-base leading-relaxed">
+                  To start tracking a case, click the <strong class="font-semibold text-Mdblue-700">Set Tracker</strong>
+                  button in the top right of any Case Page.
+                </p>
+                <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-tracking-02-set-schedule-update-modal.png" width="834"
+                    alt="Set Tracking Schedule with Monthly selected, Stop Tracking and Update Tracker over All Tracked Cases"
+                    class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+
+                This opens a setup window where you can choose how often the case should be checked—ranging from monthly
+                to high-frequency tracking. By default, high-frequency tracking runs every three hours between 8 AM and
+                8 PM (local court hours), but you can customize it up to once per hour. You can also define a start date
+                (default is the current day) and an optional end date. Once configured, click <strong
+                  class="font-semibold text-Mdblue-700">Set Tracker</strong> to activate
+                tracking.
+                <div class="mt-2 max-w-[469px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-tracking-01-set-schedule-modal.png" width="469"
+                    alt="Set Tracking Schedule modal with frequency, schedule type, start and end dates, Set Tracker"
+                    class="h-auto w-full max-w-[469px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+                <p class="text-base leading-relaxed">You’ll receive a confirmation notification once it’s live.</p>
+                <div class="mt-2 max-w-[406px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-tracking-03-case-now-tracked-toast.png" width="406"
+                    alt="Toast: Your case is now being tracked, from Case Track with date"
+                    class="h-auto w-full max-w-[406px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+                <p class="text-base leading-relaxed">You can manage and review tracked cases from the Tracking page,
+                  accessible via the sidebar in the shortcut menu for all tracked cases across workspaces, or in
+                  tracking under the active workspace for a workspace specific view of tracking.
+                  Inside the Tracking Page there are three tabs:</p>
+              </section>
+
+              <ul class="list-disc space-y-4 pl-8 text-base leading-relaxed text-Mdblue-700">
+                <li class="space-y-3"><strong class="font-semibold text-Mdblue-700">New Updates: </strong> Shows unread
+                  updates with a snapshot of recent docket activity. Click a case name to open it, or mark updates as
+                  read when finished.
+                  <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                    <img src="assets/png/help-tracking-07-tracking-history-table.png" width="834"
+                      alt="Tracking History tab with search and refresh metrics table"
+                      class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                      decoding="async">
+                  </div>
+                </li>
+                <li class="space-y-3"><strong class="font-semibold text-Mdblue-700">Tracked Cases: </strong>Lists all
+                  active tracks, where you can open cases, adjust tracking schedules, or cancel tracking.
+                  <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                    <img src="assets/png/help-tracking-04-case-page-summary-set-tracker.png" width="834"
+                      alt="Case page Summary tab with Set Tracker action and case metadata"
+                      class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                      decoding="async">
+                  </div>
+                </li>
+                <li class="space-y-3"><strong class="font-semibold text-Mdblue-700">Tracking History: </strong>Provides
+                  a log of tracking activity, including when tracks ran, how many cases tracks succeeded, how many
+                  updates were found, and any failures.
+                  <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50">
+                    <img src="assets/png/help-tracking-06-tracking-new-updates.png" width="834"
+                      alt="Tracking New Updates tab with documents and docket entry activity"
+                      class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top" loading="lazy"
+                      decoding="async">
+                  </div>
+                </li>
+                <p class="text-base leading-relaxed">Tracking views are consistent across all workspaces, with
+                  workspace-specific views
+                  filtered accordingly.
+                </p>
+                <p class="text-base leading-relaxed">
+                  To edit or cancel tracking, click the tracking button again on the Case Page (which will display the
+                  current
+                  schedule), or manage it directly from the Tracked Cases tab.</p>
+                <div class="mt-2 max-w-[866px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/help-tracking-05-tracking-all-tracked-cases.png" width="866"
+                    alt="Tracking page with All Tracked Cases tab, search, case row, Monthly and View Case, pagination"
+                    class="h-auto w-full max-w-[866px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+                <p class="text-base leading-relaxed">
+                  By default, all users in a workspace receive email notifications for tracked cases. To adjust who
+                  receives notifications, add or remove users from the workspace. Individual users can also manage or
+                  disable email notifications in their User Settings.</p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--help-center-end-->
