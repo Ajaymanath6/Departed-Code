@@ -34,6 +34,7 @@ import { EmailTempComponent } from './email-temp/email-temp.component';
 import { VarshiTableComponent } from './varshi-table/varshi-table.component';
 import { AIUiComponent } from './ai-ui/ai-ui.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
+import { HelpcenterComponent } from './helpcenter/helpcenter.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { AnalyticsComponent } from './analytics/analytics.component';
     VarshiTableComponent,
     AIUiComponent,
     AnalyticsComponent,
+    HelpcenterComponent,
   ],
   imports: [
     BrowserModule,
