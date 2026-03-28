@@ -24,6 +24,7 @@ import { EmailTempComponent } from './email-temp/email-temp.component';
 import { VarshiTableComponent } from './varshi-table/varshi-table.component';
 import { AIUiComponent } from './ai-ui/ai-ui.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
+import { HelpcenterComponent } from './helpcenter/helpcenter.component';
 
 const routes: Routes = [
   {
@@ -118,6 +119,10 @@ const routes: Routes = [
   {
     path: 'analytics',
     component: AnalyticsComponent,
+  },
+  {
+    path: 'helpcenter',
+    component: HelpcenterComponent,
   },
 ];
 
