@@ -1423,8 +1423,7 @@
 
 
             </div>
-
-            <div class="analytics-page min-w-0 space-y-10 text-left text-Mdblue-700">
+            <div class="analytics-page min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
 
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Analytics</h2>
@@ -1472,12 +1471,215 @@
                   for side-by-side analysis. You can also expand the list to view up to 100 attorneys per page, helping
                   you identify the most relevant attorneys for your research.
                 </p>
-                 <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50"><img
-                      src="assets/png/Attorney-filter.png" width="834"
-                      alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
-                      class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top"></div>
+                <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50"><img
+                    src="assets/png/Attorney-filter.png" width="834"
+                    alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
+                    class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top"></div>
 
               </ul>
+            </div>
+            <div class="workspace-page min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
+              <header class="space-y-3">
+                <h2 class="text-2xl font-bold text-Mdblue-700">Workspaces</h2>
+                <p class="text-base leading-relaxed"> Workspaces are tied to all of your activity in DART, including
+                  searching, case tracking, and pinning important items. Every action you take is done inside a
+                  workspace, helping you stay organized and collaborate effectively.</p>
+                <p class="text-base leading-relaxed">Each user is given a personal workspace by default, which serves as
+                  a private area for individual research. In addition, you can create shared workspaces to collaborate
+                  with other users on your account. The sidebar always displays your Active Workspace, and anything you
+                  do—pins, tracks, saved/recent searches, and views—will be attributed to and saved within that
+                  workspace. To switch workspaces, use the workspace selector in the sidebar or navigate to the All
+                  Workspaces page to view and access any workspace you have permission to use.</p>
+              </header>
+              <div class="">
+                <p class="text-base leading-relaxed">There are three types of workspaces:</p>
+                <ul class="list-disc space-y-2- pl-8 text-base leading-relaxed text-Mdblue-700">
+                  <li>
+                    <strong class="font-semibold text-Mdblue-700">User Workspace:</strong> A private workspace unique to
+                    each user.
+                  </li>
+                  <li>
+                    <strong class="font-semibold text-Mdblue-700">Shared Workspaces:</strong> Collaborative workspaces
+                    where multiple users can be added.
+                  </li>
+                  <li>
+                    <strong class="font-semibold text-Mdblue-700">DEEP Workspace:</strong> A system workspace used for
+                    API activity, including tracking, searches, and usage. If an API track is created without selecting
+                    a
+                    workspace, it will default to DEEP. (Note: Older &quot;Default Project&quot; workspaces have been
+                    renamed to DEEP and will continue to function as before, but users must be added manually if
+                    needed.)
+                  </li>
+                </ul>
+              </div>
+              <div class="space-y-3">
+                <p class="text-base leading-relaxed">To create a shared workspace, go to the All Workspaces page and
+                  click the create option in the top right.</p>
+                <div class="mt-2 max-w-[846px] overflow-hidden rounded-xl bg-gray-50"><img
+                    src="assets/png/Workspace1.png" width="846"
+                    alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
+                    class="h-auto w-full max-w-[846px] rounded-lg object-contain object-top"></div>
+                <p class="text-base leading-relaxed">or use the New Workspace button in the sidebar workspace selector
+                  for a quick setup. </p>
+                <div class="mt-2 max-w-[278px] overflow-hidden rounded-xl bg-gray-50"><img
+                    src="assets/png/workspace2.png" width="278"
+                    alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
+                    class="h-auto w-full max-w-[278px] rounded-lg object-contain object-top"></div>
+                <p class="text-base leading-relaxed">During creation, you can name the workspace, add a description, and
+                  customize the project ID (3–10 characters).</p>
+                <div class="mt-2 max-w-[447px] overflow-hidden rounded-xl bg-gray-50"><img
+                    src="assets/png/Workspace3.png" width="447"
+                    alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
+                    class="h-auto w-full max-w-[447px] rounded-lg object-contain object-top"></div>
+                <p class="text-base leading-relaxed">You can also create <strong class="font-semibold text-Mdblue-700">
+                    workspace templates</strong> to standardize data across projects.</p>
+                <div class="mt-2 max-w-[640px] overflow-hidden rounded-xl bg-gray-50"><img
+                    src="assets/png/Workspace4.png" width="640"
+                    alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
+                    class="h-auto w-full max-w-[640px] rounded-lg object-contain object-top"></div>
+                <p class="text-base leading-relaxed">Templates allow you to define custom fields (such as client or
+                  matter), choose field types (free text or dropdown), and set fields as required or optional. Once a
+                  template is created, it can be selected when creating new workspaces.</p>
+                <div class="mt-2 max-w-[335px] overflow-hidden rounded-xl bg-gray-50"><img
+                    src="assets/png/workspace5.png" width="335"
+                    alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
+                    class="h-auto w-full max-w-[335px] rounded-lg object-contain object-top"></div>
+
+                <p class="text-base leading-relaxed">After creating a workspace, you’ll be prompted to add users from
+                  your account. You can also add or remove users later through the workspace management tool.</p>
+                <div class="mt-2 max-w-[834px] overflow-hidden rounded-xl bg-gray-50"><img
+                    src="assets/png/Workspace6.png" width="834"
+                    alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
+                    class="h-auto w-full max-w-[834px] rounded-lg object-contain object-top"></div>
+
+                <p class="text-base leading-relaxed">To manage a workspace, go to the <strong
+                    class="font-semibold text-Mdblue-700">Manage</strong> option in the sidebar or
+                  select edit on a selected workspace from the three-dot menu in the <strong
+                    class="font-semibold text-Mdblue-700">All Workspaces</strong> view. From there,
+                  you can update workspace details or manage members, making it easy to maintain access and keep your
+                  team aligned.</p>
+                <p class="text-base leading-relaxed">Workspaces can also be archived when they are no longer needed. To
+                  archive a workspace, go to the <strong class="font-semibold text-Mdblue-700">All Workspaces</strong>
+                  page, select the workspace, click the three dots in the top right corner of the workspace
+                  card, and choose <strong class="font-semibold text-Mdblue-700">Archive.</strong></p>
+                <div class="mt-2 max-w-[480px] overflow-hidden rounded-xl bg-gray-50"><img
+                    src="assets/png/workspace7.png" width="480"
+                    alt="Tracking History tab with search and refresh metrics table" loading="lazy" decoding="async"
+                    class="h-auto w-full max-w-[480px] rounded-lg object-contain object-top"></div>
+                <p class="text-base leading-relaxed">Once archived, the workspace is no longer accessible or
+                  usable—tracking is paused, and all associated tracks and pins are no longer visible. Archived
+                  workspaces cannot be edited, and users cannot be added or removed. An admin can unarchive a workspace
+                  at any time, restoring access along with all previous tracking and workspace activity.</p>
+              </div>
+            </div>
+            <div class="account-page min-w-0 space-y-10 text-left text-Mdblue-700 d-none-">
+              <header class="space-y-3">
+                <h2 class="text-2xl font-bold text-Mdblue-700">Account Management</h2>
+                <p class="text-base leading-relaxed"> The Account Management menu gives you access to your profile,
+                  notification preferences, and administrative settings. To open it, click the account icon on the far
+                  right of the top navigation bar. At the top of the dropdown, you can switch between DART accounts if
+                  you have access to more than one. Below that, you’ll find User Settings and Account Settings.</p>
+
+              </header>
+              <div class="space-y-3">
+                <p class="text-base leading-relaxed"> <strong class="font-semibold text-Mdblue-700">User
+                    Settings</strong> allow you to manage your personal profile and
+                  notification preferences. DART sends notifications for tracked case activity, and you can control how
+                  you receive them:</p>
+                <ul class="list-disc space-y-2 pl-8 text-base leading-relaxed text-Mdblue-700">
+                  <li>
+                    <strong class="font-semibold text-Mdblue-700">Tracking Summary Emails:</strong> Daily summaries
+                    showing how many tracks ran, including successes and failures (useful for docket tracking teams or
+                    developers).
+                  </li>
+                  <li>
+                    <strong class="font-semibold text-Mdblue-700">Case Update Emails:</strong> Sent when there is new
+                    activity on an individual tracked case (enabled by default).
+                  </li>
+                </ul>
+                <div class="mt-2 max-w-[568px] overflow-hidden rounded-xl bg-gray-50">
+                  <img src="assets/png/account1.png" width="568"
+                    alt="Tracking New Updates tab with documents and docket entry activity"
+                    class="h-auto w-full max-w-[568px] rounded-lg object-contain object-top" loading="lazy"
+                    decoding="async">
+                </div>
+                <p>You can enable or disable each type of email, or turn off notifications entirely. You can also
+                  control notifications at the workspace level—turning notifications on or off for specific workspaces.
+                  Note that workspace-level settings depend on your overall notification preferences. You can also
+                  manage workspace notifications directly from the <strong class="font-semibold text-Mdblue-700"> All
+                    Workspaces</strong> page using the options menu on each
+                  workspace card.</p>
+              </div>
+              <div class="space-y-3">
+                <p class="text-base leading-relaxed"> <strong class="font-semibold text-Mdblue-700">Account
+                    Settings</strong>
+                  are available to Admin users and provide tools to manage your account and team:
+                </p>
+                <ul class="list-disc space-y-2 pl-8 text-base leading-relaxed text-Mdblue-700">
+                  <li class="space-y-2">
+                    <span>
+                      <strong class="font-semibold text-Mdblue-700">My Team:</strong> Invite and manage users on your
+                      account. To add a user, click Invite New People, enter their email (must match an approved
+                      domain),
+                      and assign a role:
+                    </span>
+                    <ul class="list-disc space-y-2 pl-6 text-base leading-relaxed text-Mdblue-700">
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Admin:</strong> Full access to all DART and DEEP
+                        features, including user and account management
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">Developer:</strong> Access to DART and DEEP, but
+                        cannot manage users or account settings
+                      </li>
+                      <li>
+                        <strong class="font-semibold text-Mdblue-700">User:</strong> Can perform standard activities
+                        like
+                        searching, tracking, and workspace creation, but cannot access account settings
+                      </li>
+                      <li>
+                        You can also search, view, and remove users from this tab.
+                      </li>
+                    </ul>
+
+                    <div class="mt-2 max-w-[368px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/account2.png" width="368"
+                        alt="Tracking New Updates tab with documents and docket entry activity"
+                        class="h-auto w-full max-w-[368px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <li class="space-y-2">
+                    <p>
+                      <strong class="font-semibold text-Mdblue-700">PACER Account:</strong> Connect a PACER account to
+                      access and download federal court documents. To add one, click <strong>+ Add PACER
+                        Account</strong> and enter your
+                      credentials, including an optional client code and MFA secret key (if enabled).
+                    </p>
+
+                    <div class="mt-2 max-w-[600px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/account3.png" width="600"
+                        alt="Tracking New Updates tab with documents and docket entry activity"
+                        class="h-auto w-full max-w-[600px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <li class="space-y-2">
+                    <p class="text-base leading-relaxed">
+                      Once authenticated, select the account as active. You can store multiple PACER accounts but only
+                      one can be active at a time. Use the edit or delete options to manage saved accounts.
+                    </p>
+                    <div class="mt-2 max-w-[600px] overflow-hidden rounded-xl bg-gray-50">
+                      <img src="assets/png/account3.png" width="600"
+                        alt="Tracking New Updates tab with documents and docket entry activity"
+                        class="h-auto w-full max-w-[600px] rounded-lg object-contain object-top" loading="lazy"
+                        decoding="async">
+                    </div>
+                    <p class="text-base leading-relaxed">Additional account features will be added over time, and
+                      updates will be communicated as they become available.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
