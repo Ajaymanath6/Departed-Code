@@ -14,6 +14,6 @@ pages:
     paths:
       - public
   tags:
-    - app_shared_runner
+    - codaxtr_shared_runner
   only:
     - flowbite-learning  # or your default branch
