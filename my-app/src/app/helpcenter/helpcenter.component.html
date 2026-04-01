@@ -7,7 +7,7 @@
 <div *ngIf="helpCenterOpen" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 p-4"
   role="presentation" (click)="closeHelpCenter()">
   <div tabindex="-1"
-    class="relative flex w-full max-w-[99rem] max-h-[min(98vh,63rem)] min-h-0 flex-col overflow-hidden rounded-lg bg-white- bg-gray-100 p-4 shadow-lg outline-none"
+    class="relative flex w-full max-w-[99rem] max-h-[min(98vh,60rem)] min-h-0 flex-col overflow-hidden rounded-lg bg-white- bg-gray-100 p-4 shadow-lg outline-none"
     aria-modal="true" role="dialog" aria-labelledby="help-center-title" (click)="$event.stopPropagation()">
     <div class="flex min-h-0 flex-1 flex-col overflow-hidden">
       <div class="shrink-0 flex items-center">
@@ -21,7 +21,7 @@
             class="material-symbols-outlined text-Mdblue-700">close</span></button>
       </div>
       <div class="flex min-h-0 flex-1 flex-col overflow-hidden p-2">
-        <div class=" flex min-h-0 min-w-0 flex-1 items-stretch bg-white rounded-xl border-2 border-gray-200 p-4">
+        <div class="mb-4 flex min-h-0 min-w-0 flex-1 items-stretch bg-white rounded-xl border-2 border-gray-200 p-4">
           <div
             class="w-full max-w-[19%] shrink-0 self-stretch overflow-y-auto pr-[1%] text-base font-semibold text-Mdblue-600">
             <ul class="space-y-1 border-l border-gray-300">
