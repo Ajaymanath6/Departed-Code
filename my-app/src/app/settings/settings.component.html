@@ -1,3 +1,236 @@
+<!--users and settings page start-->
+<div class="mt-4 w-full p-6 pl-0- pt-0-">
+  <div class="max-w-[54rem]- bg-white rounded-xl border-2 border-gray-200 p-12-">
+    <div>
+      <div class="max-w-[802px]- space-x-14">
+        <div class="flex flex-col">
+
+          <div class="p-12 border-b border-gray-200">
+            <p class="mb-4 text-xl font-semibold text-Mdblue-700  ">Account Owner</p>
+            <div class="flex justify-between ">
+              <div class="flex items-center gap-2 ">
+                <div size="size-12">
+                  <div
+                    class="Mdblue-fill-700 bg-primary-700 inline-flex items-center justify-center overflow-hidden relative rounded-full size-12 ">
+                    <span class="font-semibold text-base text-white undefined">JS</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-base font-semibold text-Mdblue-700  "> John Smith
+                  </div>
+                  <div class="text-base font-normal text-primary-700"> john.smith@domain.com </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-12 py-8">
+            <div class="flex justify-between ">
+              <div>
+                <p class="text-xl font-semibold text-Mdblue-700 ">Members</p>
+                <p class="text-base font-normal text-Mdblue-700 "> Other people on your team </p>
+              </div>
+              <div><button type="button"
+                  class="btn-focus flex w-auto items-center rounded-md border border-transparent focus:outline-none  bg-secondary-700 p-2 text-sm font-semibold text-white  hover:bg-secondary-800   "><span
+                    class=" material-symbols-outlined icon-20" aria-label="add">add</span><span>Invite New
+                    Member</span></button></div>
+            </div>
+            <div class="relative mt-4 ">
+              <div class="mb-4 flex justify-between ">
+                <div class="flex items-center gap-2 ">
+                  <div class="text-base font-semibold text-Mdblue-700 mr-2">Filters</div>
+                  <div class="flex items-center gap-2 "><button id="dropdownDefaultButton"
+                      data-dropdown-toggle="dropdown_user_role" type="button"
+                      class="bg-white  text-Mdblue-700 border border-gray-300 hover:border-Mdblue-600 flex justify-between w-32- focus:ring-4- focus:outline-none focus:bg-gray-100 focus:border-Mdblue-600 hover:bg-gray-100 font-semibold rounded text-base px-5- py-3- p-2 text-center inline-flex items-center">
+                      Role <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+                        class="w-2.5 h-2.5 ms-3 text-Mdblue-600">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 4 4 4-4"></path>
+                      </svg></button>
+                    <button data-dropdown-toggle="dropdown_user_role" type="button"
+                      class="bg-white  text-Mdblue-700 border border-gray-300 hover:border-Mdblue-600 flex justify-between w-32- focus:ring-4- focus:outline-none focus:bg-gray-100 focus:border-Mdblue-600 hover:bg-gray-100 font-semibold rounded text-base px-5- py-3- p-2 text-center inline-flex items-center">
+                      Status <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+                        class="w-2.5 h-2.5 ms-3 text-Mdblue-600">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 4 4 4-4"></path>
+                      </svg></button>
+                    <div id="dropdown_user_role"
+                      class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow- shadow-md w-44 cust-drop hidden"
+                      data-popper-placement="bottom">
+                      <ul aria-labelledby="dropdownDefaultButton" class="py-2 text-sm text-Mdblue-700">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Settings</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Earnings</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Sign out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-1/5">
+                  <div class="">
+                    <div class="relative "><input type="text" id="table-search" placeholder="Search members"
+                        class="w-80- block w-full rounded-lg border border-gray-300 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600 focus:outline-none  ng-untouched ng-pristine ng-valid">
+                      <div class="pointer-events-none absolute inset-y-0 end-2 flex items-center ps-3 ">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"
+                          class="size-4 text-Mdblue-600 ">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="overflow-x-auto ">
+                <table class="w-full text-left text-sm text-Mdblue-600 ">
+                  <thead class="border-b text-sm font-semibold text-gray-600 ">
+                    <tr>
+                      <th scope="col" class="p-4 font-semibold  "> NAME </th>
+                      <th scope="col" class="p-4 font-semibold  "> EMAIL </th>
+                      <th scope="col" class="p-4 font-semibold  "> STATUS </th>
+                      <th scope="col" class="p-4 font-semibold  "> ROLE </th>
+                      <!-- <th scope="col" class="p-4 font-semibold  "> Action </th> -->
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-100 border-b border-gray-100">
+
+                    <tr class="bg-white">
+                      <td class="p-4">
+                        <div class="flex items-center gap-2">
+                          <!-- <div size="size-10 min-w-[2.5rem] min-h-[2.5rem]"
+                            ng-reflect-size="size-10 min-w-[2.5rem] min-h-[">
+                            <div
+                              class="Mdblue-fill-700 bg-red-700 inline-flex items-center justify-center min-h-[2.5rem] min-w-[2.5rem] overflow-hidden relative rounded-full size-10 "
+                              id="standalone-profile-avatar-users-34328"><span
+                                class="font-semibold text-base text-white undefined">NS</span></div>
+
+                          </div> -->
+                          <div>
+                            <div class="text-base font-semibold text-Mdblue-700"> Nishmitha S </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="p-4"><span class="text-base font-normal text-primary-700">
+                          <div elementid="user"><span> nishmithas@unicourt.com
+                            </span></div>
+                        </span></td>
+                      <td class="p-4">
+                        <div
+                          class=" bg-purple-50 text-Mdblue-700 border w-[10rem] text-center border-purple-200 rounded px-2 py-1 text-sm font-semibold">
+                          Invited
+                        </div>
+
+                      </td>
+                      <td class="p-4">
+                        <div class="flex items-center gap-2">
+                          <button data-dropdown-toggle="dropdown_user_role" type="button"
+                            class="bg-white  text-Mdblue-700 border border-gray-300 hover:border-Mdblue-600 flex justify-between w-[11rem] focus:ring-4- focus:outline-none focus:bg-gray-100 focus:border-Mdblue-600 hover:bg-gray-100 font-medium rounded text-base px-5- py-3- p-2 text-center inline-flex items-center">
+                            Admin <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 10 6" class="w-2.5 h-2.5 ms-3 text-Mdblue-600">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="m1 1 4 4 4-4"></path>
+                            </svg></button>
+                          <button type="button"
+                            class="flex items-center rounded-lg border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-600 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                              class="material-symbols-outlined icon-20"> delete </span></button>
+                          <div
+                            class="cust-drop z-10 min-w-[216px] divide-y divide-gray-100 rounded-lg bg-white shadow hidden"
+                            id="dropdown-user-action-user-67229" aria-hidden="true" data-popper-placement="bottom">
+                            <ul aria-labelledby="dropdownRadioButton" class="space-y-1 py-2 text-sm text-Mdblue-700">
+
+                              <li><button
+                                  class="flex w-full items-center px-4 py-2 text-sm font-normal text-red-700"><span
+                                    class="material-symbols-outlined icon-20 text-red-700"> delete </span><span
+                                    class="ml-2">Remove from team</span></button></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                      </td>
+
+
+                    </tr>
+                    <tr class="bg-white  ">
+                      <td class="p-4">
+                        <div class="flex items-center gap-2">
+
+                          <div>
+                            <div class="text-base font-semibold text-Mdblue-700"> Nihal Test </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="p-4"><span class="text-base font-normal text-primary-700">
+                          <div elementid="user"><span id="tooltip-tooltip-user-88096"> nihalk+dec16@unicourt.com
+                            </span></div>
+                        </span></td>
+                      <td class="p-4">
+                        <div
+                          class=" bg-secondary-50 text-Mdblue-700 border text-center w-[10rem] border-secondary-200 rounded px-2 py-1 text-sm font-semibold">
+                          Active
+                        </div>
+
+                      </td>
+                      <td class="p-4">
+                        <div class="flex items-center gap-2">
+                          <button data-dropdown-toggle="dropdown_user_role" type="button"
+                            class="bg-white  text-Mdblue-700 border border-gray-300 hover:border-Mdblue-600 flex justify-between w-[11rem]  focus:ring-4- focus:outline-none focus:bg-gray-100 focus:border-Mdblue-600 hover:bg-gray-100 font-medium rounded text-base px-5- py-3- p-2 text-center inline-flex items-center">
+                            User <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 10 6" class="w-2.5 h-2.5 ms-3 text-Mdblue-600">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="m1 1 4 4 4-4"></path>
+                            </svg></button>
+                          <button type="button"
+                            class="flex items-center rounded-lg border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-600 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                              class="material-symbols-outlined icon-20"> delete </span></button>
+                          <div
+                            class="cust-drop z-10 min-w-[216px] divide-y divide-gray-100 rounded-lg bg-white shadow hidden"
+                            id="dropdown-user-action-user-67229" aria-hidden="true" data-popper-placement="bottom">
+                            <ul aria-labelledby="dropdownRadioButton" class="space-y-1 py-2 text-sm text-Mdblue-700">
+
+                              <li><button
+                                  class="flex w-full items-center px-4 py-2 text-sm font-normal text-red-700"><span
+                                    class="material-symbols-outlined icon-20 text-red-700"> delete </span><span
+                                    class="ml-2">Remove from team</span></button></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--popup start-->
+<div class="p-4 w-[28rem] m-auto rounded-xl border-2 border-gray-200">
+  <p class="font-bold text-Mdblue-700 text-base  ">Remove Member</p>
+  <p class="text-Mdblue-700 text-sm">Are you sure you want to remove <span class="font-semibold">Edward Howard</span> from team?
+  </p>
+  <div class="mt-4 grid grid-cols-1 gap-6 border-t border-gray-200 pt-4">
+    <div class="grid grid-cols-2 gap-2 "><button type="button" class="rounded-md border border-gray-300 bg-white px-2
+      py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+      Cancel </button><button
+        class="btn-focus flex items-center justify-center rounded border border-transparent bg-red-600 p-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none "><span
+          class="">Yes Remove</span></button></div>
+  </div>
+</div>
+<!--popup end-->
+
+<!--users and settings page end-->
+
+
+
 <div class="toast fixed top-[4%] right-0 m-8 d-none">
   <div id="toast-notification" class="w-full max-w-[25rem] p-4 text-Mdblue-700 bg-white rounded-lg shadow "
     role="alert">
@@ -21,7 +254,7 @@
             </span> -->
       </div>
       <div class="ms-3 text-base text-Mdblue-700 font-normal">
-        <div class="">
+        <div>
           <span class="font-semibold">You</span> just sent an member invitation to <span
             class="font-semibold">“john@gmail.com”.</span>
           <p class="text-Mdblue-600 text-sm">From My Team • Jan 08, 2024</p>
@@ -41,7 +274,7 @@
     </div>
   </div>
 </div>
-<div class="toast2 fixed top-[10%] right-0 m-8 error d-none-">
+<div class="toast2 fixed top-[10%] right-0 m-8 error d-none">
   <div id="toast-notification" class="w-full max-w-[25rem] p-4 text-red-900 bg-red-50 rounded-lg shadow " role="alert">
 
     <div class="flex items-center-">
@@ -55,7 +288,7 @@
         </span>
       </div>
       <div class="ms-3 text-base text-Mdblue-700 font-normal">
-        <div class="">
+        <div>
           <span class="font-semibold">We</span> Could’nt sent member invitation to <span
             class="font-semibold">“john@gmail.com”.</span>
           <p class="text-Mdblue-600 text-sm">We're working on it! Please try again soon.</p>
@@ -77,7 +310,7 @@
 </div>
 
 
-<section class="border border-b">
+<section class="border border-b mt-44">
   <div class="container d-none">
     <h3 class="text-thirtytwo text-Mdblue-700 font-semibold mb-2 mt-6">
       Notification Settings
@@ -225,26 +458,26 @@
             </div>
             <div class="grid grid-cols-1 gap-4 mt-4">
               <div class="grid grid-cols-2 gap-4">
-                <div class="">
+                <div>
                   <label for="first_name" class="font-semibold text-base block mb-2 text-Mdblue-700">First Name</label>
                   <input type="text" id="first_name"
                     class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-base font-normal rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                     placeholder="John" required />
                 </div>
-                <div class="">
+                <div>
                   <label for="Last Name" class="font-semibold text-base block mb-2 text-Mdblue-700">Last Name</label>
                   <input type="text" id="last_name"
                     class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-base font-normal rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                     placeholder="Smith" required />
                 </div>
               </div>
-              <div class="">
+              <div>
                 <label for="first_name" class="font-semibold text-base block mb-2 text-Mdblue-700">Email</label>
                 <input type="text" id="Email"
                   class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-base font-normal rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="John@domain.com" required />
               </div>
-              <div class="">
+              <div>
                 <label for="first_name" class="font-semibold text-base block mb-2 text-Mdblue-700">Title</label>
                 <input type="text" id="Email"
                   class="bg-gray-50 border border-gray-300 text-Mdblue-700 text-base font-normal rounded-md focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
@@ -713,7 +946,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
 
                                 <label
                                   class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-Mdblue-700  flex justify-between cursor-pointer">
-                                  <span class="">Enabled</span>
+                                  <span>Enabled</span>
                                   <input id="default-radio-1" type="radio" value="" name="default-radio"
                                     class="w-5 h-5 text-secondary-700 border-gray-300 focus:ring-offset-0 focus:outline-none focus:ring-0 cust-trans">
                                 </label>
@@ -722,7 +955,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                               <li>
                                 <label
                                   class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-Mdblue-700  flex justify-between cursor-pointer">
-                                  <span class="">Disabled</span>
+                                  <span>Disabled</span>
                                   <input id="default-radio-1" type="radio" value="" name="default-radio"
                                     class="w-5 h-5 text-secondary-700 border-gray-300 focus:ring-0 focus:ring-offset-0 cust-trans">
                                 </label>
@@ -730,7 +963,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                               <li>
                                 <label
                                   class=" px-4 py-2 hover:bg-gray-100 text-sm font-medium text-Mdblue-700  flex justify-between cursor-pointer">
-                                  <span class="">Initated</span>
+                                  <span>Initated</span>
                                   <input id="default-radio-1" type="radio" value="" name="default-radio"
                                     class="w-5 h-5 text-secondary-700 border-gray-300 focus:ring-0 focus:ring-offset-0 cust-trans">
                                 </label>
@@ -1298,7 +1531,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                     </td>
                     <td class="p-4">
                       <div class="flex gap-x-2 justify-end">
-                 <button type="button"
+                        <button type="button"
                           class="text-primary-700- card-btn bg-gray-100- border- border-gray-300- px-1.5- py-1.5- flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"><span
                             class="material-symbols-outlined icon-24"> more_horiz </span></button>
                       </div>
@@ -1410,7 +1643,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
               </div>
 
               <div>
-                <div class="">
+                <div>
                   <h4 class="mb-3 text-lg font-semibold text-Mdblue-700"> Please enter your PACER
                     credentials </h4>
                   <p class="mb-8 text-base font-normal text-Mdblue-700"> All PACER fees will
@@ -1453,8 +1686,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                         <div class="relative">
                           <input type="Password" id="input-group-1" placeholder="Password"
                             class=" border-red-700 w-full rounded border border-gray-300- bg-gray-50 py-3 pe-10 text-base text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-Mdblue-600 focus:ring-0">
-                          <div class="absolute inset-y-0 end-2 flex items-center ps-3.5 hover:cursor-pointer"><button
-                              class="">
+                          <div class="absolute inset-y-0 end-2 flex items-center ps-3.5 hover:cursor-pointer"><button>
                               <span class="material-symbols-outlined text-Mdblue-700 icon-20"> visibility</span>
                               <span class="material-symbols-outlined text-Mdblue-700 icon-20">
                                 visibility_off
@@ -1484,7 +1716,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
                   </div>
                 </div>
               </div>
-              <div class="">
+              <div>
                 <h6 class="text-base">You can either <span class="text-primary-700 font-semibold">create your own PACER
                     account ...</span></h6>
                 <div class="mb-4 mt-4 flex items-center ">
@@ -1547,7 +1779,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
 </button>
 <!-- Main modal -->
 <div id="default-modal" tabindex="-1" aria-hidden="true"
-  class="hidden- overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
   <div class="relative p-4 w-full- max-w-2xl- w-[448px] max-h-full">
     <!-- Modal content -->
     <div class="relative bg-white rounded-md shadow p-[40px]">
@@ -1563,7 +1795,7 @@ text-sm p-2.5 text-center inline-flex items-center " type="button">
       <!-- Modal body -->
       <div class="p-4 md:p-5 space-y-6">
         <div class="grid grid-cols-1 gap-4">
-          <div class="">
+          <div>
             <label for="first_name" class="font-semibold text-base block mb-2 text-Mdblue-700">Create a new
               password</label>
             <input type="text" id="first_name"
