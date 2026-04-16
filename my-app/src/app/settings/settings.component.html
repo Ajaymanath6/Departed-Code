@@ -4,7 +4,6 @@
     <div>
       <div class="max-w-[802px]- space-x-14">
         <div class="flex flex-col">
-
           <div class="p-12 border-b border-gray-200">
             <p class="mb-4 text-xl font-semibold text-Mdblue-700  ">Account Owner</p>
             <div class="flex justify-between ">
@@ -215,12 +214,13 @@
 <!--popup start-->
 <div class="p-4 w-[28rem] m-auto rounded-xl border-2 border-gray-200">
   <p class="font-bold text-Mdblue-700 text-base  ">Remove Member</p>
-  <p class="text-Mdblue-700 text-sm">Are you sure you want to remove <span class="font-semibold">Edward Howard</span> from team?
+  <p class="text-Mdblue-700 text-sm">Are you sure you want to remove <span class="font-semibold">Edward Howard</span>
+    from team?
   </p>
   <div class="mt-4 grid grid-cols-1 gap-6 border-t border-gray-200 pt-4">
     <div class="grid grid-cols-2 gap-2 "><button type="button" class="rounded-md border border-gray-300 bg-white px-2
       py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
-      Cancel </button><button
+        Cancel </button><button
         class="btn-focus flex items-center justify-center rounded border border-transparent bg-red-600 p-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none "><span
           class="">Yes Remove</span></button></div>
   </div>
@@ -228,6 +228,235 @@
 <!--popup end-->
 
 <!--users and settings page end-->
+
+
+<!--document order start-->
+<div class="flex items-center text-Mdblue-700 mb-4 justify-between">
+  <div class="flex items-center">
+    <div class="mr-6"><span class="text-lg font-semibold text-Mdblue-700">Filters</span></div>
+    <div class="flex gap-3">
+      <button
+        class="inline-flex items-center justify-between rounded border font-semibold transition-colors focus:outline-none shadow-sm bg-transparent border-gray-300 text-Mdblue-700 hover:border-gray-600 px-3 py-1 text-sm"><span
+          class="flex items-center gap-2"><span>Order Status</span></span><span iconsize="18"
+          class="ms-1 text-Mdblue-700 material-symbols-outlined icon-18"
+          aria-label="keyboard_arrow_down">keyboard_arrow_down</span></button>
+      <button
+        class="inline-flex items-center justify-between rounded border font-semibold transition-colors focus:outline-none shadow-sm bg-transparent border-gray-300 text-Mdblue-700 hover:border-gray-600 px-3 py-1 text-sm"><span
+          class="flex items-center gap-2"><span>Date</span></span><span iconsize="18"
+          class="ms-1 text-Mdblue-700 material-symbols-outlined icon-18"
+          aria-label="keyboard_arrow_down">keyboard_arrow_down</span></button>
+      <button
+        class="inline-flex items-center justify-between rounded border font-semibold transition-colors focus:outline-none shadow-sm bg-transparent border-gray-300 text-Mdblue-700 hover:border-gray-600 px-3 py-1 text-sm"><span
+          class="flex items-center gap-2"><span>User</span></span><span iconsize="18"
+          class="ms-1 text-Mdblue-700 material-symbols-outlined icon-18"
+          aria-label="keyboard_arrow_down">keyboard_arrow_down</span></button>
+    </div>
+  </div>
+  <div class="flex items-center gap-2 justify-center ">
+    <button type="button"
+      class="rounded-md border flex items-center gap-1 border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 ">
+      <span  aria-label="add" class="material-symbols-outlined icon-20">upload</span>
+      <span>Export</span> </button>
+    <button type="button"
+      class="btn-focus flex w-auto items-center gap-1 rounded-md border border-transparent focus:outline-none bg-secondary-700 p-2 text-sm font-semibold text-white hover:bg-secondary-800"><span
+        aria-label="add" class="material-symbols-outlined icon-20">folder</span><span>Download Selected</span></button>
+  </div>
+
+</div>
+<div class="overflow-hidden rounded-xl border border-gray-200 bg-white mt-4">
+  <div class="overflow-x-auto bg-white">
+    <table class="w-full border-spacing-2 bg-white text-left text-sm text-Mdblue-600 rtl:text-right">
+      <tbody class="bg-white">
+        <tr class="bg-white border rounded-md  ">
+          <td class="w-4 p-4">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center">
+                <input id="checkbox-table-search-1" type="checkbox"
+                  class="w-4 h-4 text-primary-700 bg-gray-100 border-gray-300 rounded focus:ring-primary-500   focus:ring-2 ">
+                <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+              </div>
+              <span iconsize="18" class="ms-1 text-Mdblue-700 material-symbols-outlined icon-18"
+                aria-label="keyboard_arrow_down">keyboard_arrow_down</span>
+            </div>
+          </td>
+          <!-- <th class="px-4 py-4 ">
+            <span class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5">10/30/2023</span>
+          </th> -->
+          <td class="px-4 py-4">
+            <div class="flex items-center gap-4">
+              <button type="button"
+                class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="material-symbols-outlined icon-20 text-Mdblue-600"> receipt_long </span></button>
+              <div class="flex flex-1 flex-col gap-1">
+                <div class="flex items-center gap-1 text-primary-600"><a target="_blank" class=""
+                    rel="noopener noreferrer"
+                    class="text-base font-semibold text-Mdblue-700 hover:text-primary-600 cursor-pointer line-clamp-1"
+                    href="">
+                    Davis Estate v. Maryland Hospital Group dddd</a></div>
+                <div class="flex flex-row items-center gap-4">
+                  <div class="flex items-center gap-1"><span
+                      class="text-sm font-bold text-Mdblue-700">Workspace:</span><a tabindex="0"
+                      class="text-sm font-bold text-primary-600 hover:underline cursor-pointer"> My Workspace
+                    </a></div>
+
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      Date:</span><span class="text-sm font-normal text-Mdblue-700"> 2026-03-25</span></div>
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      Order:</span><span class="text-sm font-normal text-Mdblue-700"> 102021</span></div>
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      User:</span><span class="text-sm font-normal text-Mdblue-700">John Smith</span></div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="px-4 py-4">
+            <!-- <button type="button"
+              class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                class="material-symbols-outlined icon-20 text-Mdblue-600"> download </span></button> -->
+            <div class="flex items-center gap-2 justify-end">
+              <div
+                class="relative inline-flex justify-center items-center gap-1 bg-gray-100 text-Mdblue-700 border border-gray-200 rounded px-2 py-2 w-[4rem] text-sm font-semibold whitespace-nowrap">
+                <span class="material-symbols-outlined icon-18 text-Mdblue-700 " aria-label="source">downloading</span>
+              </div>
+              <button type="button"
+                class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="material-symbols-outlined icon-20 text-Mdblue-600"> download </span></button>
+            </div>
+
+          </td>
+
+        </tr>
+        <tr class="bg-white border rounded-md  ">
+          <td class="w-4 p-4">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center">
+                <input id="checkbox-table-search-1" type="checkbox"
+                  class="w-4 h-4 text-primary-700 bg-gray-100 border-gray-300 rounded focus:ring-primary-500   focus:ring-2 ">
+                <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+              </div>
+              <span iconsize="18" class="ms-1 text-Mdblue-700 material-symbols-outlined icon-18"
+                aria-label="keyboard_arrow_down">keyboard_arrow_down</span>
+            </div>
+          </td>
+          <!-- <th class="px-4 py-4">
+            <span
+              class="text-sm text-Mdblue-600  font-semibold bg-gray-200 rounded-full px-2.5 py-0.5">10/30/2023</span>
+          </th> -->
+          <td class="px-4 py-4">
+            <div class="flex items-center gap-4">
+              <button type="button"
+                class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="material-symbols-outlined icon-20"> receipt_long </span></button>
+              <div class="flex flex-1 flex-col gap-1">
+                <div class="flex items-center gap-1"><a target="_blank" rel="noopener noreferrer"
+                    class="text-base font-semibold text-Mdblue-700 hover:text-primary-600 cursor-pointer line-clamp-1"
+                    href="">
+                    Davis Estate v. Maryland Hospital Group </a></div>
+                <div class="flex flex-row items-center gap-4">
+                  <div class="flex items-center gap-1"><span
+                      class="text-sm font-bold text-Mdblue-700">Workspace:</span><a tabindex="0"
+                      class="text-sm font-bold text-primary-600 hover:underline cursor-pointer"> My Workspace
+                    </a></div>
+
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      Date:</span><span class="text-sm font-normal text-Mdblue-700"> 2026-03-25</span></div>
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      Order:</span><span class="text-sm font-normal text-Mdblue-700"> 102021</span></div>
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      User:</span><span class="text-sm font-normal text-Mdblue-700">John Smith</span></div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="px-4 py-4">
+            <div class="flex items-center gap-2 justify-end">
+              <div
+                class="relative inline-flex items-center gap-1 bg-primary-50 text-Mdblue-700 border border-primary-200 rounded px-2 py-2 w-[4rem] text-sm font-semibold whitespace-nowrap">
+                <span class="material-symbols-outlined icon-18 text-Mdblue-700 "
+                  aria-label="source">description</span><span class="">5</span>
+              </div>
+              <button type="button"
+                class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="material-symbols-outlined icon-20 "> download </span></button>
+            </div>
+
+            <!-- <div class="flex items-center ">
+              <div class="bg-gray-200 flex items-center py-1 px-2 text-Mdblue-600 text-xs font-semibold rounded-full">
+                <span>3</span>
+                <span class="material-symbols-outlined icon-18 Mdblue-fill-600 ml-1">article</span>
+              </div>
+            </div> -->
+          </td>
+
+
+        </tr>
+        <tr class="bg-white border rounded-md  ">
+          <td class="w-4 p-4">
+            <div class="flex items-center gap-2">
+              <div class="flex items-center">
+                <input id="checkbox-table-search-1" type="checkbox"
+                  class="w-4 h-4 text-primary-700 bg-gray-100 border-gray-300 rounded focus:ring-primary-500   focus:ring-2 ">
+                <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+              </div>
+              <span iconsize="18" class="ms-1 text-Mdblue-700 material-symbols-outlined icon-18"
+                aria-label="keyboard_arrow_down">keyboard_arrow_down</span>
+            </div>
+          </td>
+          <!-- <th class="px-4 py-4 ">
+            <span class="text-sm font-semibold text-Mdblue-600 bg-gray-200 rounded-full px-2.5 py-0.5">10/30/2023</span>
+          </th> -->
+          <td class="px-4 py-4 text-Mdblue-700">
+            <div class="flex items-center gap-4">
+              <button type="button"
+                class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="material-symbols-outlined icon-20"> receipt_long </span></button>
+              <div class="flex flex-1 flex-col gap-1">
+                <div class="flex items-center gap-1"><a target="_blank" rel="noopener noreferrer"
+                    class="text-base font-semibold text-Mdblue-700 hover:text-primary-600 cursor-pointer line-clamp-1"
+                    href="">
+                    Davis Estate v. Maryland Hospital Group </a></div>
+                <div class="flex flex-row items-center gap-4">
+                  <div class="flex items-center gap-1"><span
+                      class="text-sm font-bold text-Mdblue-700">Workspace:</span><a tabindex="0"
+                      class="text-sm font-bold text-primary-600 hover:underline cursor-pointer"> My Workspace
+                    </a></div>
+
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      Date:</span><span class="text-sm font-normal text-Mdblue-700"> 2026-03-25</span></div>
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      Order:</span><span class="text-sm font-normal text-Mdblue-700"> 102021</span></div>
+                  <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">
+                      User:</span><span class="text-sm font-normal text-Mdblue-700">John Smith</span></div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="px-4 py-4">
+            <div class="flex items-center gap-2 justify-end">
+              <div
+                class="relative inline-flex justify-center items-center gap-1 bg-red-50 text-Mdblue-700 border border-red-200 rounded px-2 py-2 w-[4rem] text-sm font-semibold whitespace-nowrap">
+                <span class="material-symbols-outlined icon-18 text-Mdblue-700 " aria-label="source">info</span>
+              </div>
+              <button type="button"
+                class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="material-symbols-outlined icon-20 text-Mdblue-600"> download </span></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--tooltip start-->
+      <div
+        class="w-[22rem] rounded-md bg-white px-4 py-3 text-center text-base text-gray-900 shadow-[0_0_20px_rgba(15,23,42,0.12),0_-4px_16px_rgba(15,23,42,0.08)]">
+        <p class="">There was an error ordering 1 document. </p>
+        <p class="mt-1 ">Please try again.</p>
+      </div>
+<!--tooltip end-->
+<!--document order end-->
+
 
 
 
