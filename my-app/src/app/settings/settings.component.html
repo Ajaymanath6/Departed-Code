@@ -255,7 +255,7 @@
   <div class="flex items-center gap-2 justify-center ">
     <button type="button"
       class="rounded-md border flex items-center gap-1 border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 ">
-      <span  aria-label="add" class="material-symbols-outlined icon-20">upload</span>
+      <span aria-label="add" class="material-symbols-outlined icon-20">upload</span>
       <span>Export</span> </button>
     <button type="button"
       class="btn-focus flex w-auto items-center gap-1 rounded-md border border-transparent focus:outline-none bg-secondary-700 p-2 text-sm font-semibold text-white hover:bg-secondary-800"><span
@@ -449,12 +449,33 @@
 </div>
 
 <!--tooltip start-->
-      <div
-        class="w-[22rem] rounded-md bg-white px-4 py-3 text-center text-base text-gray-900 shadow-[0_0_20px_rgba(15,23,42,0.12),0_-4px_16px_rgba(15,23,42,0.08)]">
-        <p class="">There was an error ordering 1 document. </p>
-        <p class="mt-1 ">Please try again.</p>
-      </div>
+<div
+  class="w-[22rem] mt-2 rounded-md bg-white px-4 py-3 text-center text-base text-gray-900 shadow-[0_0_20px_rgba(15,23,42,0.12),0_-4px_16px_rgba(15,23,42,0.08)]">
+  <p class="">There was an error ordering 1 document. </p>
+  <p class="mt-1 ">Please try again.</p>
+</div>
 <!--tooltip end-->
+<!--popup start-->
+<div class="p-4 w-[28rem] rounded-xl border-2 border-gray-200 mt-4">
+  <p class="font-bold text-Mdblue-700 text-base mb-2 ">Confirm Order</p>
+  <div class="text-Mdblue-700 text-base flex items-center justify-between rounded-md border  bg-gray-50 border-gray-200 p-4">
+    <div>1 document</div>
+    <div class="font-semibold">Total: $1.00</div>
+  </div>
+  <div class="mt-4 grid grid-cols-1 gap-6 border-t border-gray-200 pt-4">
+    <div class="grid grid-cols-2 gap-2 "><button type="button" class="rounded-md border border-gray-300 bg-white px-2
+      py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+        Cancel </button>
+      <button class="btn-focus flex items-center gap-1 justify-center rounded border border-transparent bg-secondary-600 p-3 text-sm font-semibold
+         text-white hover:bg-secondary-700 focus:outline-none">
+        <span class="material-symbols-outlined icon-20"> receipt_long </span>
+        <span class="">Order</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!--popup end-->
+
 <!--document order end-->
 
 
