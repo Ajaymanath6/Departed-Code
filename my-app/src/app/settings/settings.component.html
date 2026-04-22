@@ -488,13 +488,12 @@
       <div class="flex justify-between px-4 py-4">
         <div class="flex justify-between gap-2">
           <div class="flex items-center gap-2">
-            <!-- <div class="flex items-center">
-          <input id="checkbox-table-search-1" type="checkbox"
-            class="w-4 h-4 text-primary-700 bg-gray-100 border-gray-300 rounded focus:ring-primary-500   focus:ring-2 ">
-          <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-        </div> -->
-            <span iconsize="18" class="ms-1 text-Mdblue-700 material-symbols-outlined icon-18"
-              aria-label="keyboard_arrow_down">keyboard_arrow_down</span>
+            <button type="button" (click)="toggleAlertNewMatches()"
+              class="ms-1 flex items-center rounded border-0 bg-transparent p-0 text-Mdblue-700 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
+              [attr.aria-expanded]="showAlertNewMatches" aria-label="Show or hide new matches">
+              <span iconsize="18" class="material-symbols-outlined icon-18" aria-hidden="true">{{ showAlertNewMatches ?
+                'keyboard_arrow_down' : 'keyboard_arrow_right' }}</span>
+            </button>
           </div>
           <div class="flex items-center gap-4">
             <button type="button"
@@ -505,7 +504,7 @@
                   rel="noopener noreferrer"
                   class="text-base font-semibold text-Mdblue-700 hover:text-primary-600 cursor-pointer line-clamp-1"
                   href="">
-                  Davis Estate v. Maryland Hospital Group dddd</a></div>
+                  Davis Estate v. Maryland Hospital Group ddddk</a></div>
               <div class="flex flex-row items-center gap-2">
                 <div
                   class="bg-primary-50 flex items-center gap-2 rounded-full border border-primary-600 px-2 py-1 text-sm font-medium text-Mdblue-700 max-w-full">
@@ -578,7 +577,7 @@
         </div>
 
       </div>
-      <div class="border-t border-gray-200 bg-gray-50 px-4 pb-4 pt-3">
+      <div *ngIf="showAlertNewMatches" class="border-t border-gray-200 bg-gray-50 px-4 pb-4 pt-3">
         <div class="rounded-lg border border-default bg-white shadow-xs overflow-hidden">
           <div class="border-b border-gray-200  px-3 py-2 text-sm font-semibold text-Mdblue-700">
             2 New Matches
@@ -664,10 +663,10 @@
                     class="rounded-lg border border-primary-600 bg-white px-3 py-2 text-sm font-semibold text-primary-600 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-300">
                     View Case
                   </button> -->
-                  <button  type="button"
+                  <button type="button"
                     class="flex items-center justify-center min-w-[8rem] rounded-lg border border-gray-300 px-2 py-2 text-sm font-semibold text-primary-600
                      hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none">
-                     View Case</button>
+                    View Case</button>
                 </div>
                 <div class="flex items-center gap-2 justify-end text-gray-700 text-sm font-semibold"> Judgment Date:
                   2026/03/25 </div>
@@ -690,7 +689,7 @@
           <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
         </div> -->
           <span iconsize="18" class="ms-1 text-Mdblue-700 material-symbols-outlined icon-18"
-            aria-label="keyboard_arrow_down">keyboard_arrow_down</span>
+            aria-label="keyboard_arrow_down">keyboard_arrow_right</span>
         </div>
         <div class="flex items-center gap-4">
           <button type="button"
@@ -775,6 +774,179 @@
   </div>
 
 
+</div>
+
+
+<div tabindex="-1" aria-modal="true" role="dialog" class="z-50 items-center justify-center flex ">
+  <div class="">
+    <div class="shadow-lg- flex w-[45rem] flex-col rounded-lg bg-white p-10 ">
+      <div class="pb-4 flex flex-col items-center justify-between ">
+        <button class="w-full justify-end flex"><span
+            class="material-symbols-outlined text-Mdblue-700 ">close</span></button>
+        <h2 class="text-xl font-semibold ">Set New Alert</h2>
+        <p>Get notified via email once there’s a new judgment match.</p>
+        <div class="h-px w-full shrink-0 bg-gray-200 mt-4 mb-4"></div>
+        <div class="alert-stepper flex w-full justify-center self-stretch">
+          <nav class="flex max-w-full items-center gap-3">
+            <div class="flex shrink-0 items-center gap-2">
+              <span class="material-symbols-outlined icon-20 text-secondary-600">
+                check
+                </span>
+              <span
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-secondary-600 text-sm font-bold text-secondary-600"
+                aria-hidden="true">1</span>
+              <span class="text-sm font-semibold text-secondary-600">Alert Details</span>
+            </div>
+            <div class="h-px w-12 shrink-0 bg-gray-200 sm:w-20" role="presentation"></div>
+            <div class="flex shrink-0 items-center gap-2">
+              <span
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-600 text-sm font-medium text-gray-600"
+                aria-hidden="true">2</span>
+              <span class="text-sm font-semibold text-gray-600">Alert Parameters</span>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="overflow-scroll- max-h-[60vh] grow overflow-y-auto p-2 ">
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <div class="text-base font-semibold text-Mdblue-700"> Alert Name </div>
+            <div><input type="text"
+                class="block w-full rounded-lg border border-gray-300 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 hover:border-secondary-600 hover:bg-gray-50 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600"
+                placeholder="Maryland District Court 8 – Personal Injury"></div>
+          </div>
+          <div>
+            <p class="text-base font-semibold text-Mdblue-700">When do you want this schedule to start and end?</p>
+            <ul class="grid w-full list-none grid-cols-2 gap-4  py-2 text-sm text-Mdblue-600">
+              <li class="flex min-w-0 flex-col gap-1">
+                <div class="text-base font-semibold text-Mdblue-700"> Start Date </div>
+                <div class="w-full min-w-0">
+                  <div class="w-full">
+                    <div class="items-center">
+                      <div class="relative"><input autocomplete="off"
+                          class="block w-full cursor-pointer rounded-lg border border-gray-300 p-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 hover:border-secondary-600 hover:bg-gray-50 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600 datepicker-input"
+                          id="datepicker-primary-filingdatefrom-15835" placeholder="2026-03-16">
+                        <div class="pointer-events-none absolute inset-y-0 end-0 flex items-center pe-3.5"><svg
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20" class="h-4 w-4 text-Mdblue-600">
+                            <path
+                              d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z">
+                            </path>
+                          </svg></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="flex min-w-0 flex-col gap-1">
+                <div class="text-base font-semibold text-Mdblue-700"> End Date <span
+                    class="font-semibold text-gray-600">(Optional)</span> </div>
+                <div class="w-full min-w-0">
+                  <div class="w-full">
+                    <div class="items-center">
+                      <div class="relative"><input autocomplete="off"
+                          class="block w-full cursor-pointer rounded-lg border border-gray-300 p-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 hover:border-secondary-600 hover:bg-gray-50 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600 datepicker-input"
+                          id="datepicker-primary-filingdateto-86838" placeholder="Pick a date...">
+                        <div class="pointer-events-none absolute inset-y-0 end-0 flex items-center pe-3.5"><svg
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20" class="h-4 w-4 text-Mdblue-600">
+                            <path
+                              d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z">
+                            </path>
+                          </svg></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-base font-semibold text-Mdblue-700">Case Type </div>
+            <div>
+              <button type="button"
+                class="flex w-full items-center justify-between rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm hover:border-gray-600 hover:bg-gray-50 focus:border-secondary-600 focus:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-secondary-600 text-gray-700">
+                Personal Injury and Torts (23)<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6" class="ms-3 size-2.5 text-gray-600">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4"></path>
+                </svg></button>
+            </div>
+          </div>
+          <div>
+            <div class="text-base font-semibold text-Mdblue-700 flex items-center gap-1"> Court <span class="material-symbols-outlined icon-20">
+              error
+              </span></div>
+            <div> <button type="button"
+                class="flex w-full items-center justify-between rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm hover:border-gray-600 hover:bg-gray-50 focus:border-secondary-600 focus:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-secondary-600 text-gray-700">
+                Maryland District Court 8<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6" class="ms-3 size-2.5 text-gray-600">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4"></path>
+                </svg></button>
+            </div>
+          </div>
+          <div>
+            <div class="text-base font-semibold text-Mdblue-700"> Judgment Type </div>
+            <div> <button type="button"
+                class="flex w-full items-center justify-between rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm hover:border-gray-600 hover:bg-gray-50 focus:border-secondary-600 focus:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-secondary-600 text-gray-700">
+                Summary Judgment<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6" class="ms-3 size-2.5 text-gray-600">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4"></path>
+                </svg></button>
+            </div>
+          </div>
+          <div>
+            <div class="text-base font-semibold text-Mdblue-700"> Judgment Amount </div>
+            <div> <button type="button"
+                class="flex w-full items-center justify-between rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm hover:border-gray-600 hover:bg-gray-50 focus:border-secondary-600 focus:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-secondary-600 text-gray-700">
+                Under $1M<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"
+                  class="ms-3 size-2.5 text-gray-600">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4"></path>
+                </svg></button>
+            </div>
+          </div>
+          <div>
+            <ul class="grid w-full list-none grid-cols-2 gap-4  py-2 text-sm text-Mdblue-600">
+              <li class="flex min-w-0 flex-col gap-1">
+                <!-- <div class="text-base font-semibold text-Mdblue-700"> Start Date </div> -->
+                <div class="w-full min-w-0">
+                  <input type="text" placeholder="$  Above..."
+                    class="block w-full rounded-lg border border-gray-300 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 hover:border-secondary-600 hover:bg-gray-50 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600">
+                </div>
+              </li>
+              <li class="flex min-w-0 flex-col gap-1">
+                <!-- <div class="text-base font-semibold text-Mdblue-700"> End Date <span
+                    class="font-semibold text-gray-600">(Optional)</span> </div> -->
+                <div class="w-full min-w-0">
+                  <div class="w-full min-w-0">
+                    <input type="text" placeholder="$  Below..."
+                      class="block w-full rounded-lg border border-gray-300 py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-gray-700 hover:border-secondary-600 hover:bg-gray-50 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600">
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="p-2">
+        <div class="h-px w-full shrink-0 bg-gray-200 mt-4 mb-4 "></div>
+        <div class="grid grid-cols-2 gap-2 text-sm text-Mdblue-700 mt-4 mb-6">
+          <button type="button" class="rounded-md border border-gray-300 bg-white px-2 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100
+       focus:outline-none focus:ring-4 focus:ring-gray-200 ">
+            Cancel</button><button type="button"
+            class="btn-focus flex items-center justify-center rounded border border-transparent bg-secondary-700 px-4 py-2 text-sm font-medium text-white hover:bg-secondary-800 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed "><span
+              class="">Next: Alert Parameters</span></button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
 </div>
 
 <!--alert new UI end-->
