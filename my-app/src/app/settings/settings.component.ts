@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent {
+  /** Toggles the "2 New Matches" panel under the first alert row. */
+  showAlertNewMatches = false;
 
+  toggleAlertNewMatches(): void {
+    this.showAlertNewMatches = !this.showAlertNewMatches;
+  }
 }
