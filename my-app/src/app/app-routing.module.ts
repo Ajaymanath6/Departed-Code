@@ -25,6 +25,7 @@ import { VarshiTableComponent } from './varshi-table/varshi-table.component';
 import { AIUiComponent } from './ai-ui/ai-ui.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { HelpcenterComponent } from './helpcenter/helpcenter.component';
+import { AlertComponent } from './alert/alert.component';
 
 const routes: Routes = [
   {
@@ -120,10 +121,14 @@ const routes: Routes = [
     path: 'analytics',
     component: AnalyticsComponent,
   },
-  {
-    path: 'helpcenter',
-    component: HelpcenterComponent,
-  },
+    {
+      path: 'helpcenter',
+      component: HelpcenterComponent,
+    },
+    {
+      path: 'alert',
+      component: AlertComponent,
+    },
 ];
 
 @NgModule({
