@@ -35,6 +35,7 @@ import { VarshiTableComponent } from './varshi-table/varshi-table.component';
 import { AIUiComponent } from './ai-ui/ai-ui.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { HelpcenterComponent } from './helpcenter/helpcenter.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { HelpcenterComponent } from './helpcenter/helpcenter.component';
     AIUiComponent,
     AnalyticsComponent,
     HelpcenterComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
