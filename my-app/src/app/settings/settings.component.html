@@ -451,74 +451,84 @@
                     </div>
                   </div>
                 </div>
-                <div *ngIf="showDocumentOrderDetails" class="bg-gray-50 m-4 px-4 pb-4 pt-3 rounded-lg border border-default shadow-xs">
+                <div *ngIf="showDocumentOrderDetails"
+                  class="m-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-sm">
                   <!--table data start-->
-                  <div class="border-b border-gray-200 px-3 py-2 text-sm font-semibold text-Mdblue-700 bg-white flex justify-between items-center">
+                  <div
+                    class="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-Mdblue-700">
                     <span class="text-base font-semibold text-Mdblue-700">5 Document Orders</span>
                     <span class="text-sm font-normal text-Mdblue-600">Last Download: 2026/03/25</span>
                   </div>
-                  <table
-                    class="w-full border-separate border-spacing-y-3 text-left text-sm px-4 text-Mdblue-600 rtl:text-right ">
-                    <thead class="text-sm font-semibold text-Mdblue-600 ">
-                      <tr class="">
-                        <th scope="col" class="p-4 ">
-                          <div class="flex items-center "></div>
-                        </th>
-                        <th scope="col" class="px-4 py-3 ">
-                          <div class="flex items-center uppercase "><span class="">Date</span>
-                            <div class="ml-2  "><button type="button"
-                                aria-label="Sort date ascending"
-                                class="press flex items-center text-center  "><span
-                                  class="material-symbols-outlined font-semibold ">arrow_downward</span></button>
+                  <div class="px-4 pb-4 pt-3">
+                    <table
+                      class="w-full border-separate border-spacing-y-3 text-left text-sm text-Mdblue-600 rtl:text-right">
+                      <thead class="text-sm font-semibold text-Mdblue-600">
+                        <tr class="border-b border-gray-200 bg-white-">
+                          <th scope="col" class="p-4 ">
+                            <!-- <div class="flex items-center "></div> -->
+                            <div class="flex items-center"><input type="checkbox"
+                                class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0"><label
+                                for="checkbox-table-search-1" class="sr-only">checkbox</label>
                             </div>
-                          </div>
-                        </th>
-                        <th scope="col" class="w-[33%] px-4 py-3 ">
-                          <div class="flex items-center uppercase "><span
-                              class="">Name</span></div>
-                        </th>
-                        <th scope="col" class="px-4 py-3 uppercase ">Description</th>
-                        <th scope="col" class="w-[17%] px-4 py-3 ">
-                          <div class="flex justify-end uppercase ">Buy or download</div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody class="">
-                      <tr class="rounded-md bg-white outline outline-1 outline-gray-300  ">
-                        <td class="w-4 p-4 ">
-                          <div class="flex items-center "><input id="checkbox-table-search-1" type="checkbox"
-                              class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0  "><label
-                              for="checkbox-table-search-1"
-                              class="sr-only  ">checkbox</label></div>
-                        </td>
-                        <td class="px-4 py-4 "><div elementid="document-filed-date"
-                            class="">
-                            <div
-                              class="inline-flex items-center space-x-1 rounded bg-gray-100 px-2 py-1 text-base font-semibold text-Mdblue-700 whitespace-nowrap"
-                              ><span
-                                class="">2026-04-21</span></div>
-                          </div></td>
-                        <td
-                          class="px-4 py-4 text-base font-semibold text-primary-700  hover:cursor-pointer hover:underline">
-                          <div class="text-primary-700  "> Notice of Ruling </div>
-                        </td>
-                        <td class="px-4 py-4 ">
-                          <p class="font-normal text-Mdblue-700 "> 4/21/2026: Notice of Ruling </p>
-                        </td>
-                        <td class="px-4 py-4 font-medium text-Mdblue-700  ">
-                          <div class="flex flex-col items-end "><div
-                              elementid="document-download-available" iconname="cloud_download" iconsize="icon-16"
-                              class=""><button type="button"
-                                class="px-1.5- py-1.5- flex space-x-2 rounded-lg border border-gray-300 bg-white p-2 text-sm font-medium text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
-                                id="button-outline-x-small-document-download-available-54811"><span
-                                  class="icon-16 material-symbols-outlined "> cloud_download
-                                </span></button></div><span
-                              class="text-right text-sm font-normal text-Mdblue-600 "> Ordered On <br
-                                class=""> 2026-04-22, 11:27 PM</span></div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </th>
+                          <th scope="col" class="px-4 py-3 ">
+                            <div class="flex items-center uppercase "><span class="">Date</span>
+                              <div class="ml-2  "><button type="button" aria-label="Sort date ascending"
+                                  class="press flex items-center text-center  "><span
+                                    class="material-symbols-outlined font-semibold ">arrow_downward</span></button>
+                              </div>
+                            </div>
+                          </th>
+                          <th scope="col" class="w-[33%] px-4 py-3 ">
+                            <div class="flex items-center uppercase "><span class="">Name</span></div>
+                          </th>
+                          <th scope="col" class="px-4 py-3 uppercase ">Description</th>
+                          <th scope="col" class="w-[17%] px-4 py-3 ">
+                            <div class="flex justify-end uppercase ">Action</div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="">
+                        <tr class="rounded-md bg-white outline outline-1 outline-gray-300 ">
+                          <td class="w-4 p-4 ">
+                            <div class="flex items-center "><input id="checkbox-table-search-1" type="checkbox"
+                                class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0  "><label
+                                for="checkbox-table-search-1" class="sr-only  ">checkbox</label></div>
+                          </td>
+                          <td class="px-4 py-4 ">
+                            <div elementid="document-filed-date" class="">
+                              <div
+                                class="inline-flex items-center space-x-1 rounded bg-gray-100 px-2 py-1 text-base font-semibold text-Mdblue-700 whitespace-nowrap">
+                                <span class="">2026-04-21</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td
+                            class="px-4 py-4 text-base font-semibold text-primary-700  hover:cursor-pointer hover:underline">
+                            <div class="text-primary-700  "> Notice of Ruling </div>
+                          </td>
+                          <td class="px-4 py-4 ">
+                            <p class="font-normal text-Mdblue-700 "> 4/21/2026: Notice of Ruling </p>
+                          </td>
+                          <td class="px-4 py-4 font-medium text-Mdblue-700  ">
+                            <div class="flex flex-col items-end ">
+                              <div elementid="document-download-available" iconname="cloud_download" iconsize="icon-16"
+                                class=""><button type="button"
+                                  class="px-1.5- py-1.5- flex space-x-2 rounded-lg border border-gray-300 bg-white p-2 text-sm font-medium text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
+                                  id="button-outline-x-small-document-download-available-54811"><span
+                                    class="icon-16 material-symbols-outlined "> cloud_download
+                                  </span></button></div><span class="text-right text-sm font-normal text-Mdblue-600 ">
+                                Ordered On <br class=""> 2026-04-22, 11:27 PM</span>
+                              <button type="button"
+                                class="flex min-w-28 justify-center rounded-md px-6 gap-1 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 focus:ring-primary-300 hover:bg-secondary-500 bg-secondary-700">
+                                <span class="material-symbols-outlined icon-20"> receipt_long </span>
+                                <span class="">$3.00</span></button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                   <!--table data end-->
                 </div>
               </div>
