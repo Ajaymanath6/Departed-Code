@@ -582,6 +582,47 @@
     <p class="text-base text-Mdblue-700 ">View and manage alerts and alert results in this workspace.</p>
 
   </div>
+
+    <!--search bar document filter start-->
+    <div class="mt-5 mb-5 flex w-full flex-wrap items-stretch justify-between gap-3 text-left">
+      <div
+        class="relative flex min-h-[40px] w-full flex-1 items-stretch rounded-lg border border-gray-300 bg-white text-sm text-Mdblue-700">
+        <div class="relative flex items-stretch"><button type="button"
+            class="uc-search-filter inline-flex cursor-pointer items-center justify-between self-stretch rounded-lg border-0 bg-white px-3 text-center text-Mdblue-700 hover:bg-primary-50 focus:bg-primary-50 focus:outline-none">
+            <div class="flex items-center justify-center gap-2 border-r border-gray-300 pr-3"><span iconsize="20"
+                class="material-symbols-outlined icon-20" aria-label="search">filter_list</span><span class="text-base">
+                  Document Filters</span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 10 6" class="size-2 text-Mdblue-600 transition-transform rotate-180">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4"></path>
+              </svg></div>
+          </button></div>
+        <div class="flex min-h-0 min-w-0 flex-1 items-center"><input type="text" placeholder="Search by document name"
+            class="w-full min-w-0 bg-transparent px-3 text-base font-normal border-0 focus:ring-0 focus:outline-none placeholder:text-Mdblue-600">
+        </div>
+        <div class="flex items-stretch justify-center">
+          <div class="flex items-stretch"><button type="button"
+              class="uc-button-search flex items-center justify-center self-stretch rounded border border-transparent px-3 text-base font-medium hover:bg-gray-50 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-gray-50"><span
+                class="material-symbols-outlined icon-28 text-Mdblue-600"
+                aria-label="search">search</span></button></div>
+        </div>
+      </div>
+      <div class="flex min-h-[40px] shrink-0 items-stretch justify-center gap-2 sm:justify-end sm:gap-3">
+        <button type="button"
+          class="inline-flex items-center gap-1.5 self-stretch rounded-lg border border-gray-300 bg-white px-3 text-sm font-semibold
+           text-secondary-700 shadow-sm hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none">
+          <span class="material-symbols-outlined icon-20 text-secondary-700" aria-hidden="true">folder</span>
+          <span>Download Selected</span>
+        </button>
+        <button type="button"
+          class="btn-focus inline-flex items-center gap-1.5 self-stretch rounded-lg border border-transparent bg-secondary-700 px-3 text-sm font-semibold text-white shadow-sm hover:bg-secondary-800 focus:outline-none">
+          <span class="material-symbols-outlined icon-20 text-white" aria-hidden="true">description</span>
+          <span>Order Selected</span>
+        </button>
+      </div>
+    </div>
+    <!--search bar document filter end-->
+
   <div class="flex items-center text-Mdblue-700 mb-4 justify-between">
     <div class="flex items-center">
       <div class="mr-6"><span class="text-lg font-semibold text-Mdblue-700">Filters</span></div>
