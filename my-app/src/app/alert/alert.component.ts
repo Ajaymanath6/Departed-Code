@@ -8,14 +8,19 @@ import { Component } from '@angular/core';
 export class AlertComponent {
   activeTab: 'alerts' | 'configuration' = 'alerts';
 
-  /** Toggles the "2 New Matches" panel under the first alert row. */
-  showAlertNewMatches = false;
+  /** Tracks which configuration alert row is currently expanded. */
+  activeAlertNewMatchesPanel: number | null = null;
 
   setActiveTab(tab: 'alerts' | 'configuration'): void {
     this.activeTab = tab;
   }
 
-  toggleAlertNewMatches(): void {
-    this.showAlertNewMatches = !this.showAlertNewMatches;
+  toggleAlertNewMatches(panelIndex: number): void {
+    this.activeAlertNewMatchesPanel =
+      this.activeAlertNewMatchesPanel === panelIndex ? null : panelIndex;
+  }
+
+  isAlertNewMatchesOpen(panelIndex: number): boolean {
+    return this.activeAlertNewMatchesPanel === panelIndex;
   }
 }
