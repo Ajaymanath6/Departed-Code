@@ -26,6 +26,7 @@ import { AIUiComponent } from './ai-ui/ai-ui.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { HelpcenterComponent } from './helpcenter/helpcenter.component';
 import { AlertComponent } from './alert/alert.component';
+import { EmailTempTestComponent } from './email-temp-test/email-temp-test.component';
 
 const routes: Routes = [
   {
@@ -100,6 +101,10 @@ const routes: Routes = [
   {
     path: 'email-temp',
     component: EmailTempComponent,
+  },
+  {
+    path: 'email-temp-test',
+    component: EmailTempTestComponent,
   },
   {
     path: 'tooltip',
