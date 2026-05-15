@@ -68,20 +68,6 @@
     div {
       font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif !important;
     }
-
-    /*
-      Email clients that recolor for dark mode (Apple Mail, some Gmail builds, etc.):
-      force the hero title to stay #001A31. Not all clients honor CSS; Outlook.com uses data-ogsc.
-    */
-    @media (prefers-color-scheme: dark) {
-
-      .email-no-invert-title,
-      .email-no-invert-title span {
-        color: #001A31 !important;
-        -webkit-text-fill-color: #001A31 !important;
-        forced-color-adjust: none;
-      }
-    }
   </style>
 </head>
 
@@ -142,9 +128,7 @@
                                 <img src="../../assets/email-temp-icons/alarm.png" alt="" width="22" height="22" border="0" style="display: block; vertical-align: middle; margin: 0 auto;" />
                               </td>
                               <td
-                                class="email-no-invert-title"
-                                data-ogsc="rgb(0, 26, 49)"
-                                style="vertical-align: middle; font-size: 26px; font-weight: bold; line-height: 1.2; color: #001A31; -webkit-text-fill-color: #001A31; text-align: center;"
+                                style="vertical-align: middle; font-size: 26px; font-weight: bold; line-height: 1.2; color: #001A31; text-align: center;"
                                 valign="middle">
                                 Daily Alert Summary
                               </td>
