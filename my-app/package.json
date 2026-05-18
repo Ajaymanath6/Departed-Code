@@ -2,11 +2,11 @@
   "name": "my-app",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --port 4202",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "ng": "node ./node_modules/@angular/cli/bin/ng.js",
+    "start": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js serve --port 4202",
+    "build": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js build",
+    "watch": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js build --watch --configuration development",
+    "test": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js test"
   },
   "private": true,
   "dependencies": {
