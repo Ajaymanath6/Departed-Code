@@ -27,6 +27,7 @@ import { AnalyticsComponent } from './analytics/analytics.component';
 import { HelpcenterComponent } from './helpcenter/helpcenter.component';
 import { AlertComponent } from './alert/alert.component';
 import { EmailTempTestComponent } from './email-temp-test/email-temp-test.component';
+import { DocumentOrderComponent } from './document-order/document-order.component';
 
 const routes: Routes = [
   {
@@ -133,6 +134,10 @@ const routes: Routes = [
     {
       path: 'alert',
       component: AlertComponent,
+    },
+    {
+      path: 'document-order',
+      component: DocumentOrderComponent,
     },
 ];
 
