@@ -27,14 +27,14 @@
                         class="px-3 py-[3px] rounded-md text-sm sm:text-base text-Mdblue-700 font-regular transition-all duration-200 whitespace-nowrap cursor-pointer "><span
                           class="relative inline-block "><span
                             class="block font-semibold- invisible- whitespace-nowrap">Document Downloads</span>
-                          </span></button>
+                        </span></button>
                     </li>
                     <li class=""><button type="button" role="tab" aria-selected="false" data-label="Attorneys"
                         aria-disabled="false"
                         class="px-3 py-[3px] rounded-md text-sm sm:text-base text-Mdblue-700 font-regular transition-all duration-200 whitespace-nowrap cursor-pointer "><span
                           class="relative inline-block "><span
                             class="block font-semibold- invisible- whitespace-nowrap">Exports</span>
-                            </span></button>
+                        </span></button>
                     </li>
 
                   </ul>
@@ -95,19 +95,20 @@
 
   </div>
 
-<!--full table str start-->
+  <!--full table str start-->
   <div class="overflow-hidden  rounded-xl border border-gray-200 bg-white mt-4">
     <div class="overflow-x-auto bg-gray-50 px-4 pb-4 pt-3">
-      <table class="w-full border-separate border-spacing-y-3 text-left text-sm text-Mdblue-600 rtl:text-right">
+      <table
+        class="w-full table-fixed border-separate border-spacing-y-3 text-left text-sm text-Mdblue-600 rtl:text-right">
         <thead class="text-sm font-semibold text-Mdblue-600">
           <tr class="border-b border-gray-200 bg-white-">
-            <th scope="col" class="p-4 ">
+            <th scope="col" class="w-[5rem] p-4">
               <div class="flex items-center"><input type="checkbox"
                   class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0"><label
                   for="checkbox-full-table-all" class="sr-only">checkbox</label>
               </div>
             </th>
-            <th scope="col" class="px-4 py-3 ">
+            <th scope="col" class="w-2/5 px-4 py-3">
               <div class="flex items-center uppercase"><span>Order</span>
                 <div class="ml-2"><button type="button" aria-label="Sort order ascending"
                     class="press flex items-center text-center"><span
@@ -115,12 +116,10 @@
                 </div>
               </div>
             </th>
-            <th scope="col" class="px-4 py-3 uppercase">Date</th>
+            <th scope="col" class="px-4 py-3 uppercase whitespace-nowrap">Date</th>
             <th scope="col" class="px-4 py-3 uppercase">Status</th>
             <th scope="col" class="px-4 py-3 uppercase">Docs</th>
-            <th scope="col" class="w-[10%] px-4 py-3 ">
-              <div class="flex justify-end uppercase">Action</div>
-            </th>
+            <th scope="col" class="px-4 py-3 text-center align-middle uppercase">Action</th>
           </tr>
         </thead>
         <tbody class="">
@@ -134,8 +133,7 @@
                 </div>
                 <button type="button" (click)="toggleFullTableDetails()"
                   class="ms-1 flex items-center rounded border-0 bg-transparent p-0 text-Mdblue-700 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300 cust-click"
-                  [attr.aria-expanded]="fullTableDetailsExpanded"
-                  aria-label="Show or hide document order details">
+                  [attr.aria-expanded]="fullTableDetailsExpanded" aria-label="Show or hide document order details">
                   <span iconsize="18" class="material-symbols-outlined icon-18" aria-hidden="true">{{
                     fullTableDetailsExpanded ? 'keyboard_arrow_down' : 'keyboard_arrow_right' }}</span>
                 </button>
@@ -164,9 +162,9 @@
             </td>
             <td class="px-4 py-4">
               <div class="inline-flex items-center gap-2 whitespace-nowrap">
-                <div
-                  class="flex items-center gap-1">
-                  <span class="material-symbols-outlined icon-18 text-Mdblue-700" aria-label="downloading">downloading</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined icon-18 text-Mdblue-700"
+                    aria-label="downloading">downloading</span>
                   <span class="text-sm font-medium text-Mdblue-700">Manual Processing</span>
                 </div>
 
@@ -175,102 +173,104 @@
             <td class="px-4 py-4 align-middle">
               <div class="flex items-center gap-1 text-base font-semibold text-Mdblue-700">
                 <span class="leading-none">1</span>
-                <span class="material-symbols-outlined icon-18 leading-none text-Mdblue-700" aria-label="documents">description</span>
+                <span class="material-symbols-outlined icon-18 leading-none text-Mdblue-700"
+                  aria-label="documents">description</span>
               </div>
             </td>
-            <td class="px-4 py-4">
-              <div class="flex justify-end">
+            <td class="px-4 py-4 text-center align-middle">
+              <div class="flex justify-center">
                 <button type="button"
-                  class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="inline-flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
                     class="material-symbols-outlined icon-20 text-Mdblue-600"> download </span></button>
               </div>
             </td>
           </tr>
           <tr *ngIf="fullTableDetailsExpanded" class="bg-transparent">
             <td colspan="6" class="p-0 align-top">
-                        <div class="m-4- overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-sm">
-                          <!--table data start-->
-                          <div
-                            class="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-Mdblue-700">
-                            <span class="text-base font-semibold text-Mdblue-700">2 Document Orders</span>
-                            <span class="text-sm font-normal text-Mdblue-600">Last Download: 2026/03/25</span>
+              <div class="m-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 shadow-sm">
+                <!--table data start-->
+                <div
+                  class="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-Mdblue-700">
+                  <span class="text-base font-semibold text-Mdblue-700">2 Document Orders</span>
+                  <span class="text-sm font-normal text-Mdblue-600">Last Download: 2026/03/25</span>
+                </div>
+                <div class="px-4 pb-4 pt-3">
+                  <table
+                    class="w-full border-separate border-spacing-y-3 text-left text-sm text-Mdblue-600 rtl:text-right">
+                    <thead class="text-sm font-semibold text-Mdblue-600">
+                      <tr class="border-b border-gray-200 bg-white-">
+                        <th scope="col" class="p-4 ">
+                          <div class="flex items-center"><input type="checkbox"
+                              class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0"><label
+                              for="checkbox-table-search-1" class="sr-only">checkbox</label>
                           </div>
-                          <div class="px-4 pb-4 pt-3">
-                            <table
-                              class="w-full border-separate border-spacing-y-3 text-left text-sm text-Mdblue-600 rtl:text-right">
-                              <thead class="text-sm font-semibold text-Mdblue-600">
-                                <tr class="border-b border-gray-200 bg-white-">
-                                  <th scope="col" class="p-4 ">
-                                    <div class="flex items-center"><input type="checkbox"
-                                        class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0"><label
-                                        for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                    </div>
-                                  </th>
-                                  <th scope="col" class="px-4 py-3 ">
-                                    <div class="flex items-center uppercase "><span class="">Date</span>
-                                      <div class="ml-2  "><button type="button" aria-label="Sort date ascending"
-                                          class="press flex items-center text-center  "><span
-                                            class="material-symbols-outlined font-semibold ">arrow_downward</span></button>
-                                      </div>
-                                    </div>
-                                  </th>
-                                  <th scope="col" class="w-[33%] px-4 py-3 ">
-                                    <div class="flex items-center uppercase "><span class="">Name</span></div>
-                                  </th>
-                                  <th scope="col" class="px-4 py-3 uppercase ">Description</th>
-                                  <th scope="col" class="w-[17%] px-4 py-3 ">
-                                    <div class="flex justify-end uppercase ">Action</div>
-                                  </th>
-                                </tr>
-                              </thead>
-                              <tbody class="">
-                                <tr class="rounded-md bg-white outline outline-1 outline-gray-300 ">
-                                  <td class="w-4 p-4 ">
-                                    <div class="flex items-center ">
-                                      <!-- <input id="checkbox-table-search-1" type="checkbox"
+                        </th>
+                        <th scope="col" class="px-4 py-3 ">
+                          <div class="flex items-center uppercase "><span class="">Date</span>
+                            <div class="ml-2  "><button type="button" aria-label="Sort date ascending"
+                                class="press flex items-center text-center  "><span
+                                  class="material-symbols-outlined font-semibold ">arrow_downward</span></button>
+                            </div>
+                          </div>
+                        </th>
+                        <th scope="col" class="w-[33%] px-4 py-3 ">
+                          <div class="flex items-center uppercase "><span class="">Name</span></div>
+                        </th>
+                        <th scope="col" class="px-4 py-3 uppercase ">Description</th>
+                        <th scope="col" class="w-[17%] px-4 py-3 text-center uppercase">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="">
+                      <tr class="rounded-md bg-white outline outline-1 outline-gray-300 ">
+                        <td class="w-4 p-4 ">
+                          <div class="flex items-center ">
+                            <!-- <input id="checkbox-table-search-1" type="checkbox"
                                         class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0  "><label
                                         for="checkbox-table-search-1" class="sr-only  ">checkbox</label> -->
-                                        <span class="material-symbols-outlined icon-18 text-red-600">
-                                          error
-                                          </span>
-                                      </div>
-                                  </td>
-                                  <td class="px-4 py-4 ">
-                                    <div elementid="document-filed-date" class="">
-                                      <div
-                                        class="inline-flex items-center space-x-1 rounded bg-gray-100- px-2 py-1 text-base font-semibold- text-Mdblue-700 whitespace-nowrap">
-                                        <span class="">2026-04-21</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td
-                                    class="px-4 py-4 text-base font-semibold text-primary-700  hover:cursor-pointer hover:underline">
-                                    <div class="text-Mdblue-700  "> STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond & Adjourn Motion Date </div>
-                                  </td>
-                                  <td class="px-4 py-4 ">
-                                    <p class="font-normal text-Mdblue-700 "> STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond & Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026; Received: 02/17/2026 </p>
-                                  </td>
-                                  <td class="px-4 py-4 font-medium text-Mdblue-700  ">
-                                    <div class="flex flex-col items-end ">
-                                      <div elementid="document-download-available" iconname="cloud_download" iconsize="icon-16"
-                                        class=""><button type="button"
-                                          class="px-1.5- py-1.5- flex space-x-2 rounded-lg border border-gray-300 bg-white p-2 text-sm font-medium text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
-                                          id="button-outline-x-small-document-download-available-54811"><span
-                                            class="icon-16 material-symbols-outlined "> cloud_download
-                                          </span></button></div><span class="text-right text-sm font-normal text-Mdblue-600 ">
-                                        Ordered On <br class=""> 2026-04-22, 11:27 PM</span>
-                                      <button type="button"
-                                        class="flex min-w-28 justify-center rounded-md px-6 gap-1 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 focus:ring-primary-300 hover:bg-secondary-500 bg-secondary-700">
-                                        <span class="material-symbols-outlined icon-20"> receipt_long </span>
-                                        <span class="">$3.00</span></button>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                            <span class="material-symbols-outlined icon-18 text-red-600">
+                              error
+                            </span>
                           </div>
-                          <!--table data end-->
-                        </div>
+                        </td>
+                        <td class="px-4 py-4 ">
+                          <div elementid="document-filed-date" class="">
+                            <div
+                              class="inline-flex items-center space-x-1 rounded bg-gray-100- px-2 py-1 text-base font-semibold- text-Mdblue-700 whitespace-nowrap">
+                              <span class="">2026-04-21</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-4 py-4 text-base font-semibold text-primary-700  hover:cursor-pointer hover:underline">
+                          <div class="text-Mdblue-700  "> STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM
+                            130 (Motion #023) AMENDED Stipulation to Extend Time to Respond & Adjourn Motion Date </div>
+                        </td>
+                        <td class="px-4 py-4 ">
+                          <p class="font-normal text-Mdblue-700 "> STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS
+                            PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond & Adjourn Motion
+                            Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026; Received: 02/17/2026 </p>
+                        </td>
+                        <td class="px-4 py-4 text-center font-medium text-Mdblue-700">
+                          <div class="flex flex-col items-center">
+                            <div elementid="document-download-available" iconname="cloud_download" iconsize="icon-16"
+                              class=""><button type="button"
+                                class="px-1.5- py-1.5- flex space-x-2 rounded-lg border border-gray-300 bg-white p-2 text-sm font-medium text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
+                                id="button-outline-x-small-document-download-available-54811"><span
+                                  class="icon-16 material-symbols-outlined "> cloud_download
+                                </span></button></div><span class="text-center text-sm font-normal text-Mdblue-600 ">
+                              Ordered On <br class=""> 2026-04-22, 11:27 PM</span>
+                            <button type="button"
+                              class="flex min-w-28 justify-center rounded-md px-6 gap-1 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 focus:ring-primary-300 hover:bg-secondary-500 bg-secondary-700">
+                              <span class="material-symbols-outlined icon-20"> receipt_long </span>
+                              <span class="">$3.00</span></button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--table data end-->
+              </div>
 
             </td>
           </tr>
@@ -313,8 +313,10 @@
                 <span class="text-base font-semibold text-secondary-600">Ready</span>
                 <div class="relative h-1 w-full overflow-hidden rounded-full bg-gray-200" role="progressbar"
                   aria-busy="true" aria-valuetext="In progress" aria-label="Order progress">
-                  <div class="doc-order-progress-bar doc-order-progress-bar--primary"></div>
-                  <div class="doc-order-progress-bar doc-order-progress-bar--secondary"></div>
+                  <div class="absolute left-0 top-0 h-full w-2/5 rounded-full bg-secondary-600 animate-pulse"></div>
+                  <div
+                    class="absolute left-0 top-0 h-full w-1/3 rounded-full bg-secondary-600 animate-pulse delay-1000">
+                  </div>
                 </div>
                 <span class="w-full text-center text-sm font-semibold text-gray-600">In Progress</span>
               </div>
@@ -322,13 +324,14 @@
             <td class="px-4 py-4 align-middle">
               <div class="flex items-center gap-1 text-base font-semibold text-Mdblue-700">
                 <span class="leading-none">2</span>
-                <span class="material-symbols-outlined icon-18 leading-none text-Mdblue-700" aria-label="documents">description</span>
+                <span class="material-symbols-outlined icon-18 leading-none text-Mdblue-700"
+                  aria-label="documents">description</span>
               </div>
             </td>
-            <td class="px-4 py-4">
-              <div class="flex justify-end">
+            <td class="px-4 py-4 text-center align-middle">
+              <div class="flex justify-center">
                 <button type="button"
-                  class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="inline-flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
                     class="material-symbols-outlined icon-20 text-Mdblue-600"> download </span></button>
               </div>
             </td>
@@ -368,20 +371,22 @@
               <span>2026-03-25</span>
             </td>
             <td class="px-4 py-4">
-              <div class="relative inline-flex items-center justify-center gap-1 rounded border border-red-200 bg-red-50 px-2 py-2 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">
+              <div
+                class="relative inline-flex items-center justify-center gap-1 rounded border border-red-200 bg-red-50 px-2 py-2 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">
                 <span class="material-symbols-outlined icon-18 text-Mdblue-700" aria-label="info">info</span>
               </div>
             </td>
             <td class="px-4 py-4 align-middle">
               <div class="flex items-center gap-1 text-base font-semibold text-Mdblue-700">
                 <span class="leading-none">5</span>
-                <span class="material-symbols-outlined icon-18 leading-none text-Mdblue-700" aria-label="documents">description</span>
+                <span class="material-symbols-outlined icon-18 leading-none text-Mdblue-700"
+                  aria-label="documents">description</span>
               </div>
             </td>
-            <td class="px-4 py-4">
-              <div class="flex justify-end">
+            <td class="px-4 py-4 text-center align-middle">
+              <div class="flex justify-center">
                 <button type="button"
-                  class="flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
+                  class="inline-flex items-center rounded-lg border border-gray-300 bg-gray-50 px-2 py-2 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:border-gray-900 focus:bg-gray-100 focus:outline-none"><span
                     class="material-symbols-outlined icon-20 text-Mdblue-600"> download </span></button>
               </div>
             </td>
@@ -390,9 +395,9 @@
       </table>
     </div>
   </div>
-<!--full table str end-->
+  <!--full table str end-->
 
-<!--table mix div str start-->
+  <!--table mix div str start-->
   <div class="hidden overflow-hidden  rounded-xl border border-gray-200 bg-white mt-4 table-div-mix">
     <div class="overflow-x-auto bg-white">
       <table class="w-full border-spacing-2 bg-white text-left text-sm text-Mdblue-600 rtl:text-right">
@@ -666,7 +671,7 @@
       </table>
     </div>
   </div>
-<!--table mix div str end-->
+  <!--table mix div str end-->
 
 
 
