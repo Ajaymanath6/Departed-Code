@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-document-order',
   templateUrl: './document-order.component.html',
+  styleUrls: ['./document-order.component.scss'],
 })
 export class DocumentOrderComponent {
   /** Used by table mix div row expander (unchanged). */
