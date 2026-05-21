@@ -28,6 +28,7 @@ import { HelpcenterComponent } from './helpcenter/helpcenter.component';
 import { AlertComponent } from './alert/alert.component';
 import { EmailTempTestComponent } from './email-temp-test/email-temp-test.component';
 import { DocumentOrderComponent } from './document-order/document-order.component';
+import { MotionComponent } from './motion/motion.component';
 
 const routes: Routes = [
   {
@@ -138,6 +139,10 @@ const routes: Routes = [
     {
       path: 'document-order',
       component: DocumentOrderComponent,
+    },
+    {
+      path: 'motion',
+      component: MotionComponent,
     },
 ];
 
