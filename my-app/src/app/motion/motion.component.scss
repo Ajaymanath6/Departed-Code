@@ -1,0 +1,75 @@
+.case-lifecycle-line-fill {
+  transition: width 0.6s ease-out;
+}
+
+.case-lifecycle-dot-pop {
+  animation: lifecycle-dot-pop 0.28s ease-out forwards;
+}
+
+@keyframes lifecycle-dot-pop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.case-lifecycle-marker {
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+}
+
+.case-lifecycle-circle-pop {
+  animation: lifecycle-circle-pop 0.35s ease-out forwards;
+}
+
+.case-lifecycle-tick-path {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 22;
+  animation: lifecycle-tick-draw 0.4s 0.12s ease-out forwards;
+}
+
+@keyframes lifecycle-circle-pop {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes lifecycle-tick-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.case-lifecycle-active-ripple {
+  border: 3px solid #d8c1ff;
+  background-color: rgba(242, 235, 255, 0.55);
+  transform: translate(-50%, -50%);
+  animation: lifecycle-active-ripple 2s ease-in-out infinite;
+}
+
+@keyframes lifecycle-active-ripple {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0.4;
+  }
+}
