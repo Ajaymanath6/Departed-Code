@@ -389,6 +389,64 @@
 <!--summaries tab end-->
 
 <!--motions tab start-->
+
+<!--motion summary section start-->
+<div class="bg-gray-50 p-6">
+  <div class="p-4 bg-white rounded-lg border border-gray-200">
+    <div class="mb-4 flex items-center justify-between gap-4">
+      <h2 class="text-lg font-bold text-Mdblue-700">Motion Summary</h2>
+      <span class="text-base font-normal text-Mdblue-700">5 motions 3 decided</span>
+    </div>
+    <div class="grid grid-cols-2 items-stretch gap-3 lg:grid-cols-4">
+      <div
+        class="flex h-full flex-shrink-0 flex-col items-center justify-center rounded-lg border border-gray-200 bg-white p-4 text-center">
+        <p class="text-2xl font-bold text-Mdblue-700">5</p>
+        <p class="mt-2 text-sm font-semibold text-Mdblue-600">Total</p>
+      </div>
+      <div
+        class="flex h-full flex-shrink-0 flex-col items-center justify-center rounded-lg border border-gray-200 bg-white p-4 text-center">
+        <p class="text-2xl font-bold text-Mdblue-700">46d</p>
+        <p class="mt-2 text-sm font-semibold text-Mdblue-600">Avg Days to Ruling</p>
+      </div>
+      <div class="flex-shrink-0 rounded-lg bg-white p-4 relative border border-gray-200">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="text-base font-semibold text-Mdblue-700">Plaintiff</span>
+          <span class="text-sm font-bold text-Mdblue-700">Win Rate: 100%</span>
+        </div>
+        <div class="mb-3 inline-flex w-full items-start justify-start overflow-hidden rounded animated-bar">
+          <div class="bg-secondary-600 h-2" style="width: 100%;"></div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <div
+            class="relative inline-flex items-center gap-1 bg-secondary-50 text-Mdblue-700 border border-secondary-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">
+            <span>Granted 2</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex-shrink-0 rounded-lg bg-white p-4 relative border border-gray-200">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="text-base font-semibold text-Mdblue-700">Defendant</span>
+          <span class="text-sm font-bold text-Mdblue-700">Win Rate: 0%</span>
+        </div>
+        <div class="mb-3 inline-flex w-full items-start justify-start overflow-hidden rounded animated-bar">
+          <div class="bg-red-600 h-2" style="width: 66.666667%;"></div>
+          <div class="bg-purple-500 h-2" style="width: 33.333333%;"></div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <div
+            class="relative inline-flex items-center gap-1 bg-red-50 text-Mdblue-700 border border-red-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">
+            <span>Denied 2</span>
+          </div>
+          <div
+            class="relative inline-flex items-center gap-1 bg-purple-50 border border-purple-200 text-Mdblue-700 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">
+            <span>Partial 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--motion summary section end-->
 <!--filters start-->
 <div class="bg-gray-50- px-4- sm:px-6- lg:px-8- py-4 sm:py-6- gap-2">
   <div class="flex items-center text-Mdblue-700 mb-4 justify-between">
@@ -459,7 +517,7 @@
         <div class="flex min-w-0 flex-1 gap-3 items-center">
           <div aria-hidden="true"
             class="flex w-10 shrink-0 self-stretch items-center justify-center rounded bg-primary-50 border border-primary-200 text-Mdblue-700">
-            <span class="material-symbols-outlined icon-20 text-Mdblue-700">  description  </span>
+            <span class="material-symbols-outlined icon-20 text-Mdblue-700"> description </span>
           </div>
           <div class="flex flex-1 flex-col gap-1">
             <div class="flex items-center gap-1 text-primary-600"><a target="_blank" class="" rel="noopener noreferrer"
@@ -490,12 +548,14 @@
               </div>
               <div class="relative inline-flex items-center gap-1 bg-primary-50 text-Mdblue-700 border border-primary-200
               rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">
-              <span class="material-symbols-outlined icon-18 text-Mdblue-700"> description </span>
-              <span >2 Free</span></div>
+                <span class="material-symbols-outlined icon-18 text-Mdblue-700"> description </span>
+                <span>2 Free</span>
+              </div>
               <div class="relative inline-flex items-center gap-1 bg-primary-50 text-Mdblue-700 border border-primary-200
               rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">
-              <span class="material-symbols-outlined icon-18 text-Mdblue-700"> description </span>
-              <span >1 Paid</span></div>
+                <span class="material-symbols-outlined icon-18 text-Mdblue-700"> description </span>
+                <span>1 Paid</span>
+              </div>
             </div>
           </div>
         </div>
@@ -532,86 +592,377 @@
       </div>
     </div>
     <div *ngIf="isAlertNewMatchesOpen(0)" class="border-t border-gray-200 bg-gray-50 px-4 pb-4 pt-3">
-      <div class="rounded-lg border border-default bg-white shadow-xs overflow-hidden">
-        <div class="border-b border-gray-200  px-3 py-2 text-sm font-semibold text-Mdblue-700">
-          2 New Matches
-        </div>
-        <div class="divide-y divide-gray-200">
-          <div class="flex justify-between px-4 py-4">
-            <div class="flex justify-between gap-2">
-              <div class="flex items-center gap-2 w-[1.3rem]"><span aria-label="keyboard_arrow_down"
-                  class="ms-1 text-Mdblue-700 material-symbols-outlined w-2 h-2 bg-primary-600 rounded-full"></span>
+      <!--Motion for Summary Judgment details start-->
+      <div class="flex flex-col gap-3">
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-lg border border-gray-200 bg-white p-4">
+            <div class="mb-3 flex items-center justify-between gap-2">
+              <span class="text-base font-semibold text-Mdblue-700">Primary Motion</span>
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="relative inline-flex items-center gap-1 rounded border border-primary-600 bg-primary-50 px-2 py-1 text-sm font-semibold text-primary-600 whitespace-nowrap">Primary</span>
+                <span
+                  class="relative inline-flex items-center gap-1 bg-red-50 text-Mdblue-700 border border-red-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Denied</span>
               </div>
-              <div class="flex min-w-0 flex-1 gap-3 items-center">
-                <div aria-hidden="true"
-                  class="flex w-10 shrink-0 self-stretch items-center justify-center rounded bg-purple-50 border border-purple-200 text-Mdblue-700">
-                  <span class="material-symbols-outlined icon-20 text-Mdblue-700"> gavel </span>
+            </div>
+            <a target="_blank" rel="noopener noreferrer" href=""
+              class="text-base font-semibold text-primary-600 hover:text-primary-600 hover:underline cursor-pointer">Motion
+              for Summary Judgment</a>
+          </div>
+          <div class="rounded-lg border border-gray-200 bg-white p-4">
+            <div class="mb-3 flex items-center justify-between gap-2">
+              <span class="text-base font-semibold text-Mdblue-700">Alternative Motion</span>
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="inline-flex items-center justify-between rounded border border-gray-300 bg-transparent px-2 py-1 text-sm font-semibold text-Mdblue-700 shadow-sm">Alt</span>
+                <span
+                  class="relative inline-flex items-center gap-1 bg-purple-50 border border-purple-200 text-Mdblue-700 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Partial</span>
+              </div>
+            </div>
+            <a target="_blank" rel="noopener noreferrer" href=""
+              class="text-base font-semibold text-primary-600 hover:text-primary-600 hover:underline cursor-pointer">Motion
+              for Summary Adjudication</a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-lg border border-gray-200 bg-white p-4">
+            <h3 class="mb-4 text-base font-semibold text-Mdblue-700">Judicial Information</h3>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-4">
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-gray-200 bg-gray-50">
+                  <span class="material-symbols-outlined icon-20 text-Mdblue-700">person</span>
                 </div>
-                <div class="min-w-0 flex-1"><a target="_blank" rel="noopener noreferrer" href=""
-                    class="text-base font-semibold text-primary-600 hover:underline cursor-pointer line-clamp-2">
-                    Davis Estate v. Maryland Hospital Group</a>
-                  <div class="flex flex-row items-center gap-4">
-                    <div class="flex items-center gap-1"><span
-                        class="text-sm font-bold text-Mdblue-700">Workspace:</span><a tabindex="0"
-                        class="text-sm font-bold text-primary-600 hover:underline- cursor-pointer"> My Workspace
-                      </a>
-                    </div>
-                    <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">Alert:</span><a
-                        tabindex="0" class="text-sm font-bold text-primary-600 hover:underline- cursor-pointer">
-                        Personal Injury
-                        -
-                        Brain Injury </a></div>
-                    <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700"> Judgment
-                        Date:</span><span class="text-sm font-normal text-Mdblue-700"> 2025/01/20</span></div>
-                    <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700"> Judgment
-                        Type:</span><span class="text-sm font-normal text-Mdblue-700"> Summary Judgment</span></div>
-                    <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700"> Judgment
-                        Amount:</span><span class="text-sm font-normal text-Mdblue-700">$1,000,000</span></div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-base font-bold text-Mdblue-700">Assigned Trial Judge</p>
+                  <div
+                    class="relative mt-1 inline-flex items-center gap-1 rounded border border-purple-200 bg-purple-50 px-2.5 py-1 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">
+                    <span class="material-symbols-outlined icon-18 text-Mdblue-700">person</span>
+                    <span>Jim Kelly Smith</span>
                   </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-gray-200 bg-gray-50">
+                  <span class="material-symbols-outlined icon-20 text-Mdblue-700">gavel</span>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-base font-bold text-Mdblue-700">Deciding Judge</p>
+                  <div
+                    class="relative mt-1 inline-flex items-center gap-1 rounded border border-purple-200 bg-purple-50 px-2.5 py-1 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">
+                    <span class="material-symbols-outlined icon-18 text-Mdblue-700">person</span>
+                    <span>Samantha, Marry Jhones</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-gray-200 bg-gray-50">
+                  <span class="material-symbols-outlined icon-20 text-Mdblue-700">crop_free</span>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-base font-bold text-Mdblue-700">Motion Target</p>
+                  <p class="mt-1 text-sm font-normal text-Mdblue-700">Fewel</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-gray-200 bg-gray-50">
+                  <span class="material-symbols-outlined icon-20 text-Mdblue-700">hourglass_top</span>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-base font-bold text-Mdblue-700">Days to Ruling</p>
+                  <p class="mt-1 text-sm font-normal text-Mdblue-700">58</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex justify-between px-4 py-4">
-            <div class="flex justify-between gap-2">
-              <div class="flex items-center gap-2 w-[1.3rem]"><span aria-label="keyboard_arrow_down"
-                  class="ms-1 text-Mdblue-700 material-symbols-outlined w-2 h-2 bg-primary-600 rounded-full"></span>
+          <div class="rounded-lg border border-gray-200 bg-white p-4">
+            <h3 class="mb-3 text-base font-semibold text-Mdblue-700">Outcome History</h3>
+            <div class="overflow-hidden rounded-lg border border-gray-200 divide-y divide-gray-200">
+              <div class="px-4 py-3 text-sm text-Mdblue-700">
+                <span class="font-bold">2025-03-21</span><span class="font-normal"> Order Issued — MSJ Denied; Alt. MSA
+                  Granted in Part</span>
               </div>
-              <div class="flex min-w-0 flex-1 gap-3 items-center">
-                <div aria-hidden="true"
-                  class="flex w-10 shrink-0 self-stretch items-center justify-center rounded bg-purple-50 border border-purple-200 text-Mdblue-700">
-                  <span class="material-symbols-outlined icon-20 text-Mdblue-700"> gavel </span>
-                </div>
-                <div class="min-w-0 flex-1"><a target="_blank" rel="noopener noreferrer" href=""
-                    class="text-base font-semibold text-primary-600 hover:underline cursor-pointer line-clamp-2">
-                    Davis Estate v. Maryland Hospital Group</a>
-                  <div class="flex flex-row items-center gap-4">
-                    <div class="flex items-center gap-1"><span
-                        class="text-sm font-bold text-Mdblue-700">Workspace:</span><a tabindex="0"
-                        class="text-sm font-bold text-primary-600 hover:underline- cursor-pointer"> My
-                        Workspace </a></div>
-                    <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700">Alert:</span><a
-                        tabindex="0" class="text-sm font-bold text-primary-600 hover:underline- cursor-pointer">
-                        Personal Injury
-                        -
-                        Brain Injury </a></div>
-                    <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700"> Judgment
-                        Date:</span><span class="text-sm font-normal text-Mdblue-700"> 2025/01/20</span></div>
-                    <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700"> Judgment
-                        Type:</span><span class="text-sm font-normal text-Mdblue-700"> Summary Judgment</span></div>
-                    <div class="flex items-center gap-1"><span class="text-sm font-bold text-Mdblue-700"> Judgment
-                        Amount:</span><span class="text-sm font-normal text-Mdblue-700">$1,000,000</span></div>
-                  </div>
-                </div>
+              <div class="px-4 py-3 text-sm text-Mdblue-700">
+                <span class="font-bold">2025-03-14</span><span class="font-normal"> Hearing Held — Taken Under
+                  Submission</span>
+              </div>
+              <div class="px-4 py-3 text-sm text-Mdblue-700">
+                <span class="font-bold">2025-03-10</span><span class="font-normal"> Tentative Ruling — MSJ Tentatively
+                  Denied</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex gap-2 border-t border-gray-200  px-4 py-2.5 text-sm justify-between">
-          <span class="font-semibold text-gray-700">10 Total Cases</span>
-          <a href="" class="font-semibold text-primary-600 hover:underline">View All Matched Case</a>
+
+        <div class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+          <div class="border-b border-gray-200 bg-gray-50 px-4 py-2">
+            <h3 class="text-base font-semibold text-Mdblue-700">Ruling by Cause of Action</h3>
+          </div>
+          <div class="overflow-x-auto bg-gray-50 px-4 pb-4 pt-3">
+            <table
+              class="w-full border-separate bg-gray-50 px-4 py-0 rounded-lg border-spacing-y-3 text-left text-sm text-Mdblue-600">
+              <thead class="text-sm font-semibold text-Mdblue-600">
+                <tr>
+                  <th scope="col" class="px-4 py-3 text-base uppercase">Cause of Action</th>
+                  <th scope="col" class="w-[8rem] px-4 py-3 text-center uppercase">Ruling</th>
+                  <th scope="col" class="px-4 py-3 uppercase">Reason/Basis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="rounded-md bg-white ring-1 ring-gray-200">
+                  <td class="px-4 py-4 align-top text-base font-normal text-Mdblue-700">Breach of Contract — Delivery
+                    &amp; Payment
+                    Terms</td>
+                  <td class="px-4 py-4 align-top text-center">
+                    <span
+                      class="relative inline-flex items-center bg-secondary-50 text-Mdblue-700 border border-secondary-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Granted</span>
+                  </td>
+                  <td class="px-4 py-4 align-top font-normal text-Mdblue-700">Triable disputes remain as to what the
+                    delivery specifications required and whether partial payment constituted a waiver. Genuine issue of
+                    material fact.</td>
+                </tr>
+                <tr class="rounded-md bg-white ring-1 ring-gray-200">
+                  <td class="px-4 py-4 align-top text-base font-normal text-Mdblue-700">Breach of Implied Warranty of
+                    Merchantability (NY UCC § 2-314)</td>
+                  <td class="px-4 py-4 align-top text-center">
+                    <span
+                      class="relative inline-flex items-center bg-red-50 text-Mdblue-700 border border-red-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Denied</span>
+                  </td>
+                  <td class="px-4 py-4 align-top font-normal text-Mdblue-700">Plaintiff raised sufficient evidence that
+                    goods delivered did not conform to merchantable quality standards. Triable issue exists.</td>
+                </tr>
+                <tr class="rounded-md bg-white ring-1 ring-gray-200">
+                  <td class="px-4 py-4 align-top text-base font-normal text-Mdblue-700">Breach of Implied Warranty of
+                    Fitness for
+                    Particular Purpose (NY UCC § 2-315)</td>
+                  <td class="px-4 py-4 align-top text-center">
+                    <span
+                      class="relative inline-flex items-center bg-red-50 text-Mdblue-700 border border-red-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Denied</span>
+                  </td>
+                  <td class="px-4 py-4 align-top font-normal text-Mdblue-700">Plaintiff failed to produce evidence that
+                    Defendant had reason to know of the particular purpose at time of contracting; element not
+                    established.</td>
+                </tr>
+                <tr class="rounded-md bg-white ring-1 ring-gray-200">
+                  <td class="px-4 py-4 align-top text-base font-normal text-Mdblue-700">Unjust Enrichment</td>
+                  <td class="px-4 py-4 align-top text-center">
+                    <span
+                      class="relative inline-flex items-center bg-red-50 text-Mdblue-700 border border-red-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Denied</span>
+                  </td>
+                  <td class="px-4 py-4 align-top font-normal text-Mdblue-700">The existence of a disputed contract does
+                    not automatically foreclose the unjust enrichment claim at this stage; triable issues remain.</td>
+                </tr>
+                <tr class="rounded-md bg-white ring-1 ring-gray-200">
+                  <td class="px-4 py-4 align-top text-base font-normal text-Mdblue-700">Account Stated</td>
+                  <td class="px-4 py-4 align-top text-center">
+                    <span
+                      class="relative inline-flex items-center bg-red-50 text-Mdblue-700 border border-red-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Denied</span>
+                  </td>
+                  <td class="px-4 py-4 align-top font-normal text-Mdblue-700">Defendant disputes receipt and assent to
+                    the
+                    final invoices; a triable issue exists as to whether an account stated was established.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-lg border border-gray-200 bg-white p-4">
+            <h3 class="mb-3 text-base font-semibold text-Mdblue-700">Legal Authorities Cited</h3>
+            <div class="overflow-hidden rounded-lg border border-gray-200 divide-y divide-gray-200">
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">CPLR § 3212 — Motion for Summary Judgment
+              </div>
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">CPLR § 3212(b) — Burden of Proof</div>
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">CPLR § 3101 — Scope of Disclosure</div>
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">NY UCC § 2-314 — Implied Warranty of
+                Merchantability</div>
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">NY UCC § 2-315 — Fitness for Particular
+                Purpose</div>
+            </div>
+          </div>
+          <div class="rounded-lg border border-gray-200 bg-white p-4">
+            <h3 class="mb-3 text-base font-semibold text-Mdblue-700">Case Law (Representative)</h3>
+            <div class="overflow-hidden rounded-lg border border-gray-200 divide-y divide-gray-200">
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">Alvarez v. Prospect Hosp., 68 N.Y.2d 320
+                (1986)</div>
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">Zuckerman v. City of New York, 49 N.Y.2d 557
+                (1980)</div>
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">Andre v. Pomeroy, 35 N.Y.2d 361 (1974)</div>
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">Winegrad v. New York Univ. Med. Ctr., 64
+                N.Y.2d 851 (1985)</div>
+              <div class="px-4 py-3 text-base font-normal text-Mdblue-700">Friends of Animals v. Associated Fur Mfrs.,
+                46 N.Y.2d 1065 (1979)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+          <div class="border-b border-gray-200 bg-gray-50 px-4 py-2">
+            <h3 class="text-base font-semibold text-Mdblue-700">Related Docket Entries</h3>
+          </div>
+          <div class="overflow-x-auto bg-gray-50 px-4 pb-4 pt-3">
+            <table
+              class="w-full border-separate bg-gray-50 px-4 py-0 rounded-lg border-spacing-y-3 text-left text-sm text-Mdblue-600">
+              <thead class="text-sm font-semibold text-Mdblue-600">
+                <tr>
+                  <th scope="col" class="w-[8rem] px-4 py-3 text-left text-base uppercase">Date</th>
+                  <th scope="col" class="w-[8rem] px-4 py-3 text-left uppercase">Type</th>
+                  <th scope="col" class="px-4 py-3 uppercase">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="rounded-md bg-white ring-1 ring-gray-200">
+                  <td class="px-4 py-4 align-middle text-left text-base  text-Mdblue-700">2025-03-21</td>
+                  <td class="px-4 py-4 align-middle text-left">
+                    <span
+                      class="relative inline-flex items-center gap-1 rounded border border-gray-300 bg-gray-50 px-2 py-1 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">Event</span>
+                  </td>
+                  <td class="px-4 py-4 align-middle font-normal text-Mdblue-700">Message: Hearing on Motion for Summary
+                    Judgment filed by Kia Motors America, INC (Defendant) scheduled for 07/06/2023 at 02:30 PM in
+                    Hayward Hall of Justice at Department 517; Category: Event</td>
+                </tr>
+                <tr class="rounded-md bg-white ring-1 ring-gray-200">
+                  <td class="px-4 py-4 align-middle text-left text-base  text-Mdblue-700">2025-06-15</td>
+                  <td class="px-4 py-4 align-middle text-left">
+                    <span
+                      class="relative inline-flex items-center gap-1 rounded border border-gray-300 bg-gray-50 px-2 py-1 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">Docket
+                      Entry</span>
+                  </td>
+                  <td class="px-4 py-4 align-middle font-normal text-Mdblue-700">Message: Hearing on Motion for Summary
+                    Judgment filed by Kia Motors America, INC (Defendant) scheduled for 07/06/2023 at 02:30 PM in
+                    Hayward Hall of Justice at Department 517; Category: Event</td>
+                </tr>
+                <tr class="rounded-md bg-white ring-1 ring-gray-200">
+                  <td class="px-4 py-4 align-middle text-left text-base  text-Mdblue-700">2025-06-28</td>
+                  <td class="px-4 py-4 align-middle text-left">
+                    <span
+                      class="relative inline-flex items-center gap-1 bg-primary-50 text-Mdblue-700 border border-primary-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Document</span>
+                  </td>
+                  <td class="px-4 py-4 align-middle font-normal text-Mdblue-700">
+                    <a href="" class="text-sm font-semibold text-primary-600 underline hover:underline-">Order re:
+                      Motion for Summary Judgment</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+          <div class="border-b border-gray-200 bg-gray-50 px-4 py-2">
+            <h3 class="text-base font-semibold text-Mdblue-700">Documents (3)</h3>
+          </div>
+          <div class="bg-gray-50 px-4 pb-4 pt-3">
+            <div class="flex flex-col gap-3">
+              <div class="rounded-md border border-gray-200 bg-white p-4">
+                <div class="mb-3 flex items-center gap-4 border-b border-gray-200 pb-3">
+                  <span class="w-32 shrink-0 text-base font-normal text-Mdblue-700">2026-03-12</span>
+                  <a href="" class="min-w-0 flex-1 text-base font-semibold text-primary-600 hover:underline">Motion for
+                    Summary Judgment
+                    — March 21, 2025</a>
+                  <p class="min-w-0 flex-1 text-sm font-normal text-Mdblue-700">Time to Respond &amp; Adjourn Motion
+                    Date; Filed By:
+                    SHUKLA, KUSH; Filed Date: 03/12/2026</p>
+                  <button type="button"
+                    class="btn-focus flex shrink-0 items-center gap-1 rounded-md border border-transparent bg-secondary-700 px-4 py-2 text-sm font-semibold text-white hover:bg-secondary-800- focus:outline-none">
+                    <span class="material-symbols-outlined icon-20">description</span>
+                    <span>Free</span>
+                  </button>
+                </div>
+                <div class="mb-3 flex flex-wrap items-center gap-2 border-b border-gray-200 pb-3">
+                  <span
+                    class="relative inline-flex items-center gap-1 rounded border border-gray-300 bg-gray-50 px-2 py-1 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">Order</span>
+                  <span
+                    class="relative inline-flex items-center gap-1 bg-secondary-50 text-Mdblue-700 border border-secondary-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Granted</span>
+                  <span
+                    class="relative inline-flex items-center gap-1 bg-yellow-50 text-Mdblue-700 border border-yellow-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">CPLR
+                    § 3212(b)</span>
+                  <span
+                    class="relative inline-flex items-center gap-1 bg-yellow-50 text-Mdblue-700 border border-yellow-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">NY
+                    UCC § 2-314</span>
+                  <span
+                    class="relative inline-flex items-center gap-1 bg-primary-50 text-Mdblue-700 border border-primary-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Alvarez
+                    v. Prospect Hosp., 68 N.Y.2d 320 (1986)</span>
+                </div>
+                <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <p class="mb-3 text-base font-bold text-Mdblue-700">Order re: Motion for Summary Judgment — 2026-03-19
+                  </p>
+                  <p class="text-sm font-normal text-Mdblue-700">The Court, having taken this matter under submission
+                    following oral argument on March 14, 2025, hereby issues its Decision and Order. Defendant Reynolds'
+                    Motion for Summary Judgment pursuant to CPLR § 3212 is DENIED in its entirety. Defendant has not met
+                    the initial burden of tendering sufficient evidence to demonstrate the absence of a material issue
+                    of fact. The contract ambiguity regarding delivery specifications and the disputed invoice
+                    communications create triable issues on the First and Second Causes of Action.</p>
+                  <p class="mt-3 text-sm font-normal text-Mdblue-700">The Court further finds that triable issues of
+                    material fact exist as to the breach of contract and unjust enrichment claims. The motion is denied
+                    without prejudice to renewal following completion of discovery.</p>
+                </div>
+              </div>
+              <div class="rounded-md border border-gray-200 bg-white p-4">
+                <div class="mb-3 flex items-center gap-4 border-b border-gray-200 pb-3">
+                  <span class="w-32 shrink-0 text-base font-normal text-Mdblue-700">2026-03-10</span>
+                  <a href="" class="min-w-0 flex-1 text-base font-semibold text-primary-600 hover:underline">STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond & Adjourn Motion</a>
+                  <p class="min-w-0 flex-1 text-sm font-normal text-Mdblue-700">STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond & Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+                  </p>
+                  <button type="button"
+                    class="btn-focus flex shrink-0 items-center gap-1 rounded-md border border-transparent bg-secondary-700 px-4 py-2 text-sm font-semibold text-white hover:bg-secondary-800- focus:outline-none">
+                    <span class="material-symbols-outlined icon-20">description</span>
+                    <span>Free</span>
+                  </button>
+                </div>
+                <div class="mb-3 flex flex-wrap items-center gap-2 border-b border-gray-200 pb-3">
+                  <span
+                    class="relative inline-flex items-center gap-1 rounded border border-gray-300 bg-gray-50 px-2 py-1 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">Tentative
+                    Ruling</span>
+                  <span
+                    class="relative inline-flex items-center gap-1 bg-red-50 text-Mdblue-700 border border-red-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Denied</span>
+                  <span
+                    class="relative inline-flex items-center gap-1 bg-yellow-50 text-Mdblue-700 border border-yellow-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">CPLR
+                    § 3212</span>
+                </div>
+                <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <p class="mb-3 text-base font-bold text-Mdblue-700">Tentative Ruling — 2026-03-10</p>
+                  <p class="text-sm font-normal text-Mdblue-700">The motion is denied. Plaintiff has not demonstrated a
+                    triable issue of material fact on the breach of contract and warranty claims as pleaded.</p>
+                  <p class="mt-3 text-sm font-normal text-Mdblue-700">Parties are directed to appear at the hearing
+                    scheduled for March 21, 2026. The tentative ruling may be modified following oral argument.</p>
+                </div>
+              </div>
+              <div class="rounded-md border border-gray-200 bg-white p-4">
+                <div class="mb-3 flex items-center gap-4 border-b border-gray-200 pb-3">
+                  <span class="w-32 shrink-0 text-base font-normal text-Mdblue-700">2026-02-17</span>
+                  <a href="" class="min-w-0 flex-1 text-base font-semibold text-Mdblue-700 hover:underline">Paid Exhibit
+                    Annex —
+                    Internal Communications (Redacted)</a>
+                  <p class="min-w-0 flex-1 text-sm font-normal text-Mdblue-700">STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend
+                    42</p>
+                  <button type="button"
+                    class="btn-focus flex shrink-0 items-center gap-1 rounded-md border border-transparent bg-secondary-700 px-4 py-2 text-sm font-semibold text-white hover:bg-secondary-800- focus:outline-none">
+                    <span class="material-symbols-outlined icon-20">description</span>
+                    <span>$1.25</span>
+                  </button>
+                </div>
+                <div class="mb-3 flex flex-wrap items-center gap-2 border-b border-gray-200 pb-3">
+                  <span
+                    class="relative inline-flex items-center gap-1 rounded border border-gray-300 bg-gray-50 px-2 py-1 text-sm font-semibold text-Mdblue-700 whitespace-nowrap">Exhibit</span>
+                  <span
+                    class="relative inline-flex items-center gap-1 bg-yellow-50 text-Mdblue-700 border border-yellow-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">NY
+                    UCC § 2-314</span>
+                  <span
+                    class="relative inline-flex items-center gap-1 bg-primary-50 text-Mdblue-700 border border-primary-200 rounded px-2 py-1 text-sm font-semibold whitespace-nowrap">Zuckerman
+                    v. City of New York, 49 N.Y.2d 557 (1980)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <!--Motion for Summary Judgment details end-->
     </div>
   </div>
   <div class="flex flex-col">
