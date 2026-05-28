@@ -69,6 +69,15 @@
     div {
       font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif !important;
     }
+
+    @media (prefers-color-scheme: dark) {
+      .dark-text {
+        color: #001A31 !important;
+      }
+      .dark-gradient {
+        background: linear-gradient(to bottom, #112211 0%, #001A31 57%) !important;
+      }
+    }
   </style>
 </head>
 
@@ -135,15 +144,21 @@
                                 <img src="../../assets/email-temp-icons/alarm.png" alt="" width="22" height="22"
                                   border="0" style="display: block; vertical-align: middle; margin: 0 auto;" />
                               </td>
-                              <!-- <td
+                              <td
                                 style="vertical-align: middle; font-size: 26px; font-weight: bold; line-height: 1.2; color: #001A31 !important; -webkit-text-fill-color: #001A31; text-shadow: 0 0 0 #001A31; text-align: center;"
                                 valign="middle">
-                                Daily Alert Summary
-                              </td> -->
+                                Daily Alert Summary webkit-text-fill-color
+                              </td>
                               <td
                                 style="vertical-align: middle; font-size: 26px; font-weight: bold; line-height: 1.2; color: #667083; text-align: center;"
                                 valign="middle">
-                                Daily Alert Summary
+                                Daily Alert Summary gray color
+                              </td>
+                              <td style="vertical-align: middle; font-size: 26px; font-weight: bold; line-height: 1.2; text-align: center;" valign="middle">
+                                <span style="color: #001A31; mix-blend-mode: difference;">Daily Alert Summary mix-blend-mode</span>
+                              </td>
+                              <td class="dark-text" style="vertical-align: middle; font-size: 26px; font-weight: bold; line-height: 1.2; color: #001A31; text-align: center;" valign="middle">
+                                Daily Alert Summary Explicitly using Media Queries
                               </td>
                             </tr>
                           </table>
