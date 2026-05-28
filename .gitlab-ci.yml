@@ -1,8 +1,6 @@
-# node:20 runs as UID 1000 (node user), which aligns with restricted cluster policies.
 image: node:20
 
 variables:
-  # Ensures npm cache and Angular output are writable when the runner enforces runAsNonRoot.
   NPM_CONFIG_CACHE: "$CI_PROJECT_DIR/.npm"
   HOME: "$CI_PROJECT_DIR"
 
@@ -22,6 +20,6 @@ pages:
     paths:
       - public
   tags:
-    - app_shared_runner
-  only:
-    - flowbite-learning
+    - code_quality
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "flowbite-learning"'
