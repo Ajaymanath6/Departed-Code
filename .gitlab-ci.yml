@@ -1,27 +1,51 @@
-# node:20 runs as UID 1000 (node user), which aligns with restricted cluster policies.
-image: node:20
+default:
+  image: node:20-bookworm-slim
+  tags:
+    - app_shared_runner
 
 variables:
-  # Ensures npm cache and Angular output are writable when the runner enforces runAsNonRoot.
   NPM_CONFIG_CACHE: "$CI_PROJECT_DIR/.npm"
-  HOME: "$CI_PROJECT_DIR"
+  # Do not set HOME to CI_PROJECT_DIR — git cannot lock .gitconfig there during checkout.
+  HOME: "/tmp"
 
-pages:
-  cache:
-    paths:
-      - my-app/node_modules/
-      - .npm/
+stages:
+  - build
+  - deploy
+
+cache:
+  key:
+    files:
+      - my-app/package-lock.json
+  paths:
+    - my-app/node_modules/
+    - .npm/
+  policy: pull-push
+
+build_angular:
+  stage: build
   script:
-    - mkdir -p public "$NPM_CONFIG_CACHE"
+    - mkdir -p "$NPM_CONFIG_CACHE"
     - cd my-app
     - npm ci
-    - npx @angular/cli build --configuration production --base-href ./
-    - cp -r dist/my-app/* ../public
-    - cp ../public/index.html ../public/404.html
+    - npx @angular/cli@15.2.10 build --configuration production --base-href ./
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - my-app/dist/my-app/
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "flowbite-learning"'
+
+pages:
+  stage: deploy
+  needs: [build_angular]
+  before_script: []
+  script:
+    - rm -rf public
+    - mkdir -p public
+    - cp -r my-app/dist/my-app/* public/
+    - cp public/index.html public/404.html
   artifacts:
     paths:
       - public
-  tags:
-    - app_shared_runner
-  only:
-    - flowbite-learning
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "flowbite-learning"'
