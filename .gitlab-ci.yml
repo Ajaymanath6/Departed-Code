@@ -26,7 +26,7 @@ build_angular:
     - mkdir -p "$NPM_CONFIG_CACHE"
     - cd my-app
     - npm ci
-    - npx @angular/cli build --configuration production --base-href ./
+    - npx @angular/cli@15.2.10 build --configuration production --base-href ./
   artifacts:
     expire_in: 1 week
     paths:
