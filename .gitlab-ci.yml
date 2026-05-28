@@ -5,7 +5,8 @@ default:
 
 variables:
   NPM_CONFIG_CACHE: "$CI_PROJECT_DIR/.npm"
-  HOME: "$CI_PROJECT_DIR"
+  # Do not set HOME to CI_PROJECT_DIR — git cannot lock .gitconfig there during checkout.
+  HOME: "/tmp"
 
 stages:
   - build
