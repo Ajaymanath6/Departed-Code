@@ -1,7 +1,7 @@
 default:
   image: node:20-bookworm-slim
   tags:
-    - gitlab-org-medium
+    - app_shared_runner
 
 variables:
   NPM_CONFIG_CACHE: "$CI_PROJECT_DIR/.npm"
