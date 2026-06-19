@@ -39,6 +39,7 @@ import { AlertComponent } from './alert/alert.component';
 import { EmailTempTestComponent } from './email-temp-test/email-temp-test.component';
 import { DocumentOrderComponent } from './document-order/document-order.component';
 import { MotionComponent } from './motion/motion.component';
+import { CasedetailComponent } from './casedetail/casedetail.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { MotionComponent } from './motion/motion.component';
     EmailTempTestComponent,
     DocumentOrderComponent,
     MotionComponent,
+    CasedetailComponent,
   ],
   imports: [
     BrowserModule,

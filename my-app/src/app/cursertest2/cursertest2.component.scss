@@ -1,1 +1,108 @@
+.entity-attorney-page {
+  @apply relative flex w-full max-w-[1440px] bg-white;
+  font-family: 'IBM Plex Sans', sans-serif;
 
+  .caa-sidebar {
+    @apply flex w-[222px] shrink-0 flex-col justify-between bg-Mdblue-700 pt-5;
+  }
+
+  .caa-sidebar-brand {
+    @apply flex flex-col gap-4 px-6;
+  }
+
+  .caa-sidebar-logo {
+    @apply h-12 w-[120px] object-contain;
+  }
+
+  .caa-sidebar-divider {
+    @apply my-4 px-6;
+
+    &__line {
+      @apply h-px w-full bg-gray-800;
+    }
+  }
+
+  .caa-sidebar-nav {
+    @apply flex flex-col gap-1 px-3;
+  }
+
+  .caa-sidebar-footer {
+    @apply flex flex-col items-center px-3 py-[30px];
+  }
+
+  .caa-dart-select {
+    @apply flex w-full items-center justify-center gap-1 rounded-md bg-gray-900 py-1.5 text-base font-medium text-white;
+  }
+
+  .caa-project-select {
+    @apply flex w-full items-center gap-2 rounded-lg border border-gray-800 bg-gray-900 px-3 py-2 text-base text-white;
+  }
+
+  .caa-sidebar-link {
+    @apply flex items-center gap-2 rounded-md px-4 py-2.5 text-base font-semibold text-gray-100 hover:bg-white/10;
+  }
+
+  .caa-sidebar-link--active {
+    @apply bg-white font-semibold text-Mdblue-700;
+  }
+
+  .caa-sidebar-badge {
+    @apply ml-auto inline-flex min-w-5 items-center justify-center rounded-xl bg-red-600 px-1.5 py-0.5 text-xs font-semibold text-white;
+  }
+
+  .caa-sidebar-collapse {
+    @apply flex items-center justify-center rounded-lg bg-Mdblue-700 p-0 hover:bg-white/10;
+  }
+
+  .caa-page-header {
+    @apply border-b-[1.5px] border-gray-200 bg-white px-8 py-2;
+  }
+
+  .caa-page-header__title {
+    @apply text-lg font-semibold leading-[140%] text-Mdblue-700;
+  }
+
+  .caa-page-header__subtitle {
+    @apply text-base leading-[140%] text-gray-700;
+  }
+
+  .caa-icon-btn {
+    @apply rounded-md p-1 text-Mdblue-700 hover:bg-gray-100;
+  }
+
+  .caa-header-action {
+    @apply relative rounded-lg p-2 text-Mdblue-700 hover:bg-gray-100;
+  }
+
+  .caa-avatar {
+    @apply inline-flex size-10 items-center justify-center rounded-full bg-primary-600 text-base font-semibold text-white;
+  }
+
+  .caa-title-h3 {
+    @apply font-lora text-[32px] font-semibold leading-[120%] text-Mdblue-700;
+  }
+
+  .caa-entity-tabs {
+    @apply flex h-12 flex-wrap items-end gap-[30px] border-b border-gray-300;
+  }
+
+  .caa-entity-tab {
+    @apply flex h-12 items-center py-2 text-base font-normal leading-[140%] text-Mdblue-700;
+  }
+
+  .caa-entity-tab--active {
+    @apply border-b-2 border-primary-600 font-semibold text-primary-600;
+  }
+
+  .caa-quartile {
+    @apply inline-flex items-center gap-0.5;
+  }
+
+  .caa-quartile__bar {
+    @apply h-3 w-1 rounded-[3px];
+  }
+
+  .caa-resources-btn {
+    @apply fixed bottom-6 right-6 z-20 inline-flex items-center gap-1 rounded-md border-[1.5px] border-gray-300 bg-white px-2.5 py-2 text-sm font-semibold text-primary-600 shadow-sm;
+  }
+}

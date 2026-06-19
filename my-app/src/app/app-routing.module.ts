@@ -29,6 +29,7 @@ import { AlertComponent } from './alert/alert.component';
 import { EmailTempTestComponent } from './email-temp-test/email-temp-test.component';
 import { DocumentOrderComponent } from './document-order/document-order.component';
 import { MotionComponent } from './motion/motion.component';
+import { CasedetailComponent } from './casedetail/casedetail.component';
 
 const routes: Routes = [
   {
@@ -97,6 +98,10 @@ const routes: Routes = [
     component: CursoruiComponent,
   },
   {
+    path: 'test-cursor',
+    component: Cursertest2Component,
+  },
+  {
     path: 'curscursoror',
     component: CostestimationComponent,
   },
@@ -143,6 +148,10 @@ const routes: Routes = [
     {
       path: 'motion',
       component: MotionComponent,
+    },
+    {
+      path: 'casedetail',
+      component: CasedetailComponent,
     },
 ];
 
