@@ -1,4 +1,334 @@
-<!-- Main Community Platform UI -->
+<!--cursor race start-->
+<div class="entity-attorney-page">
+
+  <!-- Project Sidebar (Figma 2231:8259) -->
+  <aside class="caa-sidebar" aria-label="Project sidebar">
+    <div class="flex flex-col">
+      <div class="caa-sidebar-brand">
+        <img src="assets/svg/logo-main.svg" alt="UniCourt" class="caa-sidebar-logo" width="120" height="48">
+        <button type="button" class="caa-dart-select" aria-label="Select product">
+          <span>DART</span>
+          <span class="material-symbols-outlined icon-20 white-fill">keyboard_arrow_right</span>
+        </button>
+      </div>
+
+      <div class="caa-sidebar-divider"><div class="caa-sidebar-divider__line"></div></div>
+
+      <div class="px-6 pb-2">
+        <p class="mb-2 text-sm text-gray-400">Global Menu</p>
+      </div>
+
+      <div class="caa-sidebar-divider"><div class="caa-sidebar-divider__line"></div></div>
+
+      <div class="px-6 pb-3">
+        <p class="mb-2 text-sm text-gray-400">Project Menu</p>
+        <button type="button" class="caa-project-select" aria-label="Select project">
+          <span class="material-symbols-outlined icon-20 white-fill">folder</span>
+          <span class="flex-1 text-left">My Project</span>
+          <span class="material-symbols-outlined icon-20 white-fill">expand_more</span>
+        </button>
+      </div>
+
+      <nav class="caa-sidebar-nav" aria-label="Project navigation">
+        <a
+          *ngFor="let item of projectNavItems"
+          href="#"
+          class="caa-sidebar-link"
+          [class.caa-sidebar-link--active]="item.active"
+          [attr.aria-current]="item.active ? 'page' : null">
+          <span class="material-symbols-outlined icon-20" [class.white-fill]="!item.active" [class.text-Mdblue-700]="item.active">{{ item.icon }}</span>
+          <span>{{ item.label }}</span>
+          <span *ngIf="item.badge" class="caa-sidebar-badge">{{ item.badge }}</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="caa-sidebar-footer">
+      <button type="button" aria-label="Collapse sidebar" class="caa-sidebar-collapse">
+        <span class="material-symbols-outlined icon-24 rounded border border-white text-gray-300">keyboard_arrow_left</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main column -->
+  <div class="flex min-w-0 flex-1 flex-col">
+
+    <!-- Header -->
+    <header class="caa-page-header">
+      <div class="flex items-center justify-between gap-4">
+        <div class="flex flex-col gap-0.5">
+          <div class="flex items-center gap-2">
+            <h1 class="caa-page-header__title">Project Name</h1>
+            <button type="button" aria-label="Project description" class="caa-icon-btn">
+              <span class="material-symbols-outlined icon-20 text-primary-600">text_snippet</span>
+            </button>
+          </div>
+          <p class="caa-page-header__subtitle">000000 • Client • Content</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="button" aria-label="Notifications" class="caa-header-action">
+            <span class="material-symbols-outlined Mdblue-fill-600 icon-24">notifications</span>
+            <span class="absolute right-1 top-1 size-2 rounded-lg bg-red-600" aria-hidden="true"></span>
+          </button>
+          <button type="button" aria-label="Help" class="caa-header-action">
+            <span class="material-symbols-outlined icon-24">help</span>
+          </button>
+          <button type="button" aria-label="User menu" class="caa-avatar">AA</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Entity Hero (Figma 2231:4596) -->
+    <section class="border-b border-gray-300 bg-white px-8 pb-0 pt-6">
+      <div class="flex flex-wrap items-start justify-between gap-4 pb-6">
+        <div class="flex min-w-0 flex-col gap-3">
+          <div class="inline-flex w-fit items-center gap-1.5 rounded border border-gray-300 bg-gray-100 px-2 py-1">
+            <span class="material-symbols-outlined icon-16 text-Mdblue-700">gavel</span>
+            <span class="text-sm font-semibold text-Mdblue-700">Attorney</span>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h2 class="caa-title-h3">John Doe</h2>
+            <div class="flex flex-wrap items-center gap-6">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined icon-16 text-Mdblue-700">domain</span>
+                <span class="text-sm font-semibold text-Mdblue-700">Law Firm:</span>
+                <a href="#" class="text-sm font-bold text-primary-600 underline">Law Firm Name</a>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined icon-16 text-Mdblue-700">place</span>
+                <span class="text-sm font-semibold text-Mdblue-700">Location:</span>
+                <a href="#" class="text-sm font-bold text-primary-600 underline">Santa Ana, Los Angeles, CA</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="inline-flex items-center gap-1.5 rounded-md border-[1.5px] border-gray-300 bg-white px-3 py-2 text-base font-semibold text-primary-600">
+          <span class="material-symbols-outlined icon-18 primary-fill-600">push_pin</span>
+          <span>Pin to Project</span>
+        </button>
+      </div>
+
+      <nav class="caa-entity-tabs" aria-label="Entity sections">
+        <button
+          *ngFor="let tab of entityTabs"
+          type="button"
+          class="caa-entity-tab"
+          [class.caa-entity-tab--active]="tab === activeEntityTab"
+          [attr.aria-current]="tab === activeEntityTab ? 'page' : null">
+          {{ tab }}
+        </button>
+      </nav>
+    </section>
+
+    <!-- Tab Content: Judgments (Figma 2231:8421) -->
+    <div class="flex min-h-0 flex-1 bg-gray-50">
+
+      <!-- Left Filters Panel -->
+      <aside class="w-[280px] shrink-0 border-r border-gray-300 bg-gray-50 px-6 py-8" aria-label="Filters">
+        <div class="flex flex-col gap-5">
+          <h3 class="text-lg font-semibold text-Mdblue-700">Filters</h3>
+
+          <div class="flex flex-col gap-2.5">
+            <button
+              *ngFor="let filter of filterDropdowns"
+              type="button"
+              class="flex w-full items-center justify-between rounded border border-gray-300 bg-white px-3 py-2.5 text-base font-medium text-Mdblue-700">
+              <span>{{ filter.label }}</span>
+              <span class="material-symbols-outlined icon-20">{{ filter.icon }}</span>
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <span
+              *ngFor="let chip of activeFilters"
+              class="inline-flex items-center gap-2 rounded-[30px] border border-primary-600 bg-primary-50 py-0.5 pl-2.5 pr-1.5">
+              <span class="py-1 text-sm font-medium text-Mdblue-700">{{ chip }}</span>
+              <button type="button" [attr.aria-label]="'Remove ' + chip" class="text-Mdblue-700 hover:text-primary-700">
+                <span class="material-symbols-outlined icon-18">close</span>
+              </button>
+            </span>
+            <button type="button" class="text-left text-sm font-medium text-Mdblue-700 underline">Clear Filters</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Judgment Analytics Content -->
+      <main class="min-w-0 flex-1 px-8 py-8">
+        <div class="flex flex-col gap-5">
+
+          <!-- Dashboard Tiles: Judgments -->
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div *ngFor="let tile of judgmentTiles" class="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4">
+              <span class="text-base font-semibold text-Mdblue-700">{{ tile.label }}</span>
+              <span class="text-[28px] font-semibold leading-[120%] text-Mdblue-700">{{ tile.value }}</span>
+              <div *ngIf="tile.metric" class="flex items-center justify-between border-t border-Mdblue-700/30 pt-2">
+                <span class="caa-quartile" aria-hidden="true">
+                  <span *ngFor="let index of quartileBarIndexes" [class]="getQuartileBarClass(tile.metric!, index)"></span>
+                </span>
+                <button type="button" class="inline-flex items-center gap-0.5 border-b border-Mdblue-700 text-sm text-Mdblue-700">
+                  Compare
+                  <span class="material-symbols-outlined icon-16">arrow_outward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Tiles: Verdicts -->
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div *ngFor="let tile of verdictTiles" class="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4">
+              <span class="text-base font-semibold text-Mdblue-700">{{ tile.label }}</span>
+              <span class="text-[28px] font-semibold leading-[120%] text-Mdblue-700">{{ tile.value }}</span>
+              <div *ngIf="tile.metric" class="flex items-center justify-between border-t border-Mdblue-700/30 pt-2">
+                <span class="caa-quartile" aria-hidden="true">
+                  <span *ngFor="let index of quartileBarIndexes" [class]="getQuartileBarClass(tile.metric!, index)"></span>
+                </span>
+                <button type="button" class="inline-flex items-center gap-0.5 border-b border-Mdblue-700 text-sm text-Mdblue-700">
+                  Compare
+                  <span class="material-symbols-outlined icon-16">arrow_outward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amount Tiles -->
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div *ngFor="let tile of amountTiles" class="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4">
+              <span class="text-base font-semibold text-Mdblue-700">{{ tile.label }}</span>
+              <span class="text-[28px] font-semibold leading-[120%] text-primary-600">{{ tile.value }}</span>
+            </div>
+          </div>
+
+          <!-- Judgments By Year -->
+          <section class="rounded-lg border border-gray-200 bg-white p-4" aria-label="Judgments by year">
+            <h3 class="mb-4 text-base font-semibold text-Mdblue-700">Judgments By Year</h3>
+            <div class="relative h-[220px] rounded bg-gray-100">
+              <div class="absolute left-0 top-0 flex h-full flex-col justify-between py-4 pl-2 pr-1 text-xs text-Mdblue-700">
+                <span>100</span><span>75</span><span>50</span><span>25</span><span>0</span>
+              </div>
+              <div class="absolute bottom-8 left-8 right-2 top-4">
+                <svg class="h-full w-full" viewBox="0 0 800 140" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M0,120 L40,100 L80,90 L120,95 L160,70 L200,80 L240,60 L280,75 L320,55 L360,65 L400,50 L440,60 L480,45 L520,55 L560,40 L600,50 L640,35 L680,45 L720,30 L760,40 L800,25 L800,140 L0,140 Z" fill="rgba(47,85,217,0.15)" />
+                  <path d="M0,120 L40,100 L80,90 L120,95 L160,70 L200,80 L240,60 L280,75 L320,55 L360,65 L400,50 L440,60 L480,45 L520,55 L560,40 L600,50 L640,35 L680,45 L720,30 L760,40 L800,25" fill="none" stroke="#2F55D9" stroke-width="2" />
+                  <path d="M0,110 L40,105 L80,100 L120,102 L160,95 L200,98 L240,88 L280,92 L320,85 L360,88 L400,82 L440,85 L480,78 L520,82 L560,75 L600,80 L640,72 L680,76 L720,68 L760,72 L800,65" fill="none" stroke="#F97316" stroke-width="2" stroke-dasharray="4 3" />
+                </svg>
+              </div>
+              <div class="absolute bottom-1 left-8 right-2 flex justify-between text-[10px] font-semibold text-Mdblue-700">
+                <span *ngFor="let year of chartYears">{{ year }}</span>
+              </div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-4">
+              <span class="inline-flex items-center gap-1.5 rounded bg-gray-100 px-2 py-1 text-base font-semibold text-Mdblue-700">
+                <span class="size-2.5 rounded-full bg-primary-600"></span>Judgments
+              </span>
+              <span class="inline-flex items-center gap-1.5 rounded bg-gray-100 px-2 py-1 text-base font-semibold text-Mdblue-700">
+                <span class="size-2.5 rounded-full bg-orange-500"></span>Verdicts
+              </span>
+            </div>
+          </section>
+
+          <!-- Judgment & Verdict Timing -->
+          <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            <section class="rounded-lg border border-gray-200 bg-white p-4" aria-label="Judgment timing">
+              <h3 class="mb-4 text-base font-semibold text-Mdblue-700">Judgment Timing</h3>
+              <div class="relative h-16 rounded bg-primary-600">
+                <div class="absolute bottom-2 left-3 text-sm text-white">
+                  <span class="font-semibold">Shortest:</span><br><span class="text-base font-bold">69 days</span>
+                </div>
+                <div class="absolute bottom-2 right-3 text-right text-sm text-white">
+                  <span class="font-semibold">Longest:</span><br><span class="text-base font-bold">530 days</span>
+                </div>
+                <div class="absolute bottom-full left-1/2 mb-1 -translate-x-1/2 text-center text-sm text-Mdblue-700">
+                  <span class="font-semibold">Median:</span><br><span class="text-base font-bold">145 days</span>
+                  <span class="mx-auto mt-0.5 block h-2 w-px bg-Mdblue-700" aria-hidden="true"></span>
+                </div>
+              </div>
+            </section>
+            <section class="rounded-lg border border-gray-200 bg-white p-4" aria-label="Verdict timing">
+              <h3 class="mb-4 text-base font-semibold text-Mdblue-700">Verdict Timing</h3>
+              <div class="relative h-16 rounded bg-orange-500">
+                <div class="absolute bottom-2 left-3 text-sm text-white">
+                  <span class="font-semibold">Shortest:</span><br><span class="text-base font-bold">69 days</span>
+                </div>
+                <div class="absolute bottom-2 right-3 text-right text-sm text-white">
+                  <span class="font-semibold">Longest:</span><br><span class="text-base font-bold">530 days</span>
+                </div>
+                <div class="absolute bottom-full left-1/2 mb-1 -translate-x-1/2 text-center text-sm text-Mdblue-700">
+                  <span class="font-semibold">Median:</span><br><span class="text-base font-bold">145 days</span>
+                  <span class="mx-auto mt-0.5 block h-2 w-px bg-Mdblue-700" aria-hidden="true"></span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Judgments By Case Type -->
+          <section class="overflow-hidden rounded-lg border border-gray-200 bg-white" aria-label="Judgments by case type">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-4 py-3">
+              <h3 class="text-base font-semibold text-Mdblue-700">Judgments By Case Type</h3>
+              <div class="inline-flex rounded-lg bg-gray-100 p-1">
+                <button
+                  *ngFor="let tab of caseTypeTabs"
+                  type="button"
+                  class="rounded px-3 py-1.5 text-base"
+                  [class.bg-white]="tab === activeCaseTypeTab"
+                  [class.font-semibold]="tab === activeCaseTypeTab"
+                  [class.text-primary-600]="tab === activeCaseTypeTab"
+                  [class.shadow-sm]="tab === activeCaseTypeTab"
+                  [class.text-gray-600]="tab !== activeCaseTypeTab">
+                  {{ tab }}
+                </button>
+              </div>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[480px] text-left text-Mdblue-700">
+                <thead>
+                  <tr class="border-b border-gray-300 bg-gray-100">
+                    <th scope="col" class="px-4 py-2 text-sm font-semibold">Case Type</th>
+                    <th scope="col" class="px-4 py-2 text-sm font-semibold">
+                      <div class="flex items-center justify-end gap-1">
+                        Cases
+                        <span class="inline-flex size-5 items-center justify-center rounded-full bg-white">
+                          <span class="material-symbols-outlined icon-20">arrow_upward</span>
+                        </span>
+                      </div>
+                    </th>
+                    <th scope="col" class="px-4 py-2 text-sm font-semibold">
+                      <div class="flex items-center justify-end gap-1">
+                        Percentage
+                        <span class="inline-flex size-5 items-center justify-center">
+                          <span class="material-symbols-outlined icon-20">unfold_more</span>
+                        </span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of caseTypeRows" class="border-b border-gray-200 last:border-b-0">
+                    <td class="px-4 py-3">
+                      <span class="inline-flex items-center gap-2 rounded bg-gray-100 px-2 py-1 text-base font-semibold">
+                        <span class="size-2.5 shrink-0 rounded-full border border-white" [ngClass]="row.dotClass"></span>
+                        {{ row.name }}
+                      </span>
+                    </td>
+                    <td class="px-4 py-3 text-right text-base font-semibold">{{ row.cases }}</td>
+                    <td class="px-4 py-3 text-right text-base font-semibold">{{ row.percentage }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <button type="button" class="caa-resources-btn">
+    <span class="material-symbols-outlined icon-16 text-primary-600">book</span>
+    <span>Resources</span>
+  </button>
+</div>
+<!--cursor race end-->
+<!-- Main Community Platform UI start-->
 <div class="min-h-screen flex three-column-layout">
     <!-- Side Menu -->
     <div class="sidebar-gradient w-[300px] flex flex-col sidebar">

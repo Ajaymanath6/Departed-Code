@@ -1,0 +1,856 @@
+<div class="space-y-12 px-8 pt-4">
+  <!-- Case meta grid (commented out)
+  <div class="grid grid-cols-3 gap-8 rounded-lg border-2 border-gray-200 bg-white p-6">
+    <div class="space-y-2 text-base font-semibold">
+      <div class="flex items-center text-gray-600">
+        <span class="material-symbols-outlined icon-20 mr-1 text-gray-600">topic</span>
+        <span>Case Number</span>
+      </div>
+      <div class="font-normal text-Mdblue-700">000004-2020</div>
+    </div>
+    <div class="space-y-2 text-base font-semibold">
+      <div class="flex items-center text-gray-600">
+        <span class="material-symbols-outlined icon-20 mr-1 text-gray-600">timelapse</span>
+        <span>Case Status</span>
+      </div>
+      <div class="font-normal text-Mdblue-700">Dismissed</div>
+    </div>
+    <div class="space-y-2 text-base font-semibold">
+      <div class="flex items-center text-gray-600">
+        <span class="material-symbols-outlined icon-20 mr-1 text-gray-600">account_balance</span>
+        <span>Court</span>
+      </div>
+      <div class="font-normal text-Mdblue-700">
+        New York Supreme Courts - Livingston County Supreme Court
+      </div>
+    </div>
+    <div class="space-y-2 text-base font-semibold">
+      <div class="flex items-center text-gray-600">
+        <span class="material-symbols-outlined icon-20 mr-1 text-gray-600">calendar_month</span>
+        <span>Filed Date</span>
+      </div>
+      <div class="font-normal text-Mdblue-700">2020-01-02</div>
+    </div>
+    <div class="space-y-2 text-base font-semibold">
+      <div class="flex items-center text-gray-600">
+        <span class="material-symbols-outlined icon-20 mr-1 text-gray-600">list_alt</span>
+        <span>Case Type</span>
+      </div>
+      <div class="font-normal text-Mdblue-700">Civil - Real Property</div>
+    </div>
+    <div class="space-y-2 text-base font-semibold">
+      <div class="flex items-center text-gray-600">
+        <span class="material-symbols-outlined icon-20 mr-1 text-gray-600">gavel</span>
+        <span>Judge</span>
+      </div>
+      <a href="#" class="font-normal text-primary-700 hover:underline">Thomas E. Moran</a>
+    </div>
+  </div>
+  -->
+
+  <!-- Complaint Summary + Causes of Action -->
+  <div class="grid grid-cols-1 gap-8 xl:grid-cols-2">
+    <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+      <header class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-6 py-3">
+        <div class="flex items-center gap-1">
+          <h2 class="text-lg font-semibold text-Mdblue-700">Complaint Summary</h2>
+          <span class="material-symbols-outlined icon-16 text-purple-600" aria-hidden="true">auto_awesome</span>
+        </div>
+        <button
+          type="button"
+          class="shrink-0 text-base font-semibold text-primary-600 hover:text-primary-700 focus:outline-none"
+        >
+          See More
+        </button>
+      </header>
+      <div class="px-6 pb-6 pt-5">
+        <p class="text-base font-normal text-Mdblue-700">
+          John Hummel, individually and as Administrator of the Estate of Eleanor Hummel, brings this action under
+          Article 15 of the NY RPAPL to cancel and discharge a time-barred mortgage on the Estate's property at 5489
+          Federal Road, Conesus, NY. The six-year limitations period to foreclose is alleged to have expired on or
+          about June 21, 2017 after Omat I REO accelerated the debt in 2011.
+        </p>
+      </div>
+    </section>
+
+    <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+      <header class="border-b border-gray-200 px-6 py-3">
+        <h2 class="text-lg font-semibold text-Mdblue-700">
+          Causes of Action <span class="font-normal text-gray-600">(Total 5)</span>
+        </h2>
+      </header>
+      <div class="flex flex-col gap-2 px-6 pb-6 pt-5">
+        <div class="border-b border-gray-200 pb-2">
+          <span class="text-sm font-semibold text-gray-600">01</span>
+          <span class="ml-2 text-base font-semibold text-Mdblue-700">
+            Quiet Title — Cancellation &amp; Discharge of Mortgage
+          </span>
+          <span
+            class="ml-2 inline-flex items-center whitespace-nowrap rounded border border-gray-200 bg-gray-50 py-0.5 pl-1.5 pr-2 align-middle text-sm font-semibold text-Mdblue-700"
+          >
+            § 1793.2(d)
+          </span>
+        </div>
+        <div class="border-b border-gray-200 pb-2">
+          <span class="text-sm font-semibold text-gray-600">02</span>
+          <span class="ml-2 text-base font-semibold text-Mdblue-700">
+            Invalid Chain of Assignment
+          </span>
+          <span
+            class="ml-2 inline-flex items-center whitespace-nowrap rounded border border-gray-200 bg-gray-50 py-0.5 pl-1.5 pr-2 align-middle text-sm font-semibold text-Mdblue-700"
+          >
+            § 1793.2(d)
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Docket Entires (full width — Figma node 4389-21255) -->
+  <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <header class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-6 py-3">
+      <h2 class="text-lg font-semibold text-Mdblue-700">Docket Entires</h2>
+      <button
+        type="button"
+        class="shrink-0 text-base font-semibold text-primary-600 hover:text-primary-700 focus:outline-none"
+      >
+        See More
+      </button>
+    </header>
+    <div class="px-6 pb-6 pt-5">
+      <div class="overflow-hidden rounded-xl border border-gray-200 bg-gray-100 p-4">
+        <table
+          class="w-full border-separate border-spacing-y-2 text-left text-sm text-Mdblue-600 rtl:text-right"
+          aria-label="Docket entries"
+        >
+          <thead class="text-sm font-semibold text-gray-700">
+            <tr>
+              <th scope="col" class="px-4 py-3">
+                <div class="flex items-center uppercase"><span>Date</span></div>
+              </th>
+              <th scope="col" class="px-4 py-3 uppercase">Description</th>
+              <th scope="col" class="w-[17%] px-4 py-3">
+                <span class="sr-only">Document</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="rounded-md bg-white outline outline-1 outline-gray-200">
+              <td class="w-[6.75rem] whitespace-nowrap px-4 py-4 align-top">
+                <time class="text-sm font-normal text-Mdblue-700">2025-03-21</time>
+              </td>
+              <td class="px-4 py-4 align-top">
+                <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                  NOTICE OF ENTRY; Filed By: KAPLAN, DAVID M.; Filed: 05/10/2022; Received: 05/10/2022
+                </p>
+                <div class="mt-2.5 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-2.5">
+                  <span
+                    class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                  >
+                    Motion for Summary Judgment
+                  </span>
+                  <span
+                    class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                  >
+                    Motion Filing
+                  </span>
+                </div>
+              </td>
+              <td class="flex gap-3 px-4 py-4 font-medium text-Mdblue-700 align-top justify-end">
+                <div class="flex min-w-12 justify-end">
+                  <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="rounded-md bg-white outline outline-1 outline-gray-200">
+              <td class="w-[6.75rem] whitespace-nowrap px-4 py-4 align-top">
+                <time class="text-sm font-normal text-Mdblue-700">2025-03-21</time>
+              </td>
+              <td class="px-4 py-4 align-top">
+                <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                  NOTICE OF ENTRY; Filed By: KAPLAN, DAVID M.; Filed: 05/10/2022; Received: 05/10/2022
+                </p>
+                <div class="mt-2.5 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-2.5">
+                  <span
+                    class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                  >
+                    Motion for Summary Judgment
+                  </span>
+                  <span
+                    class="shrink-0 rounded border border-red-200 bg-red-50 px-4 py-0.5 text-xs font-semibold text-Mdblue-700"
+                  >
+                    Denied
+                  </span>
+                  <span
+                    class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                  >
+                    Motion Filing
+                  </span>
+                </div>
+              </td>
+              <td class="flex gap-3 px-4 py-4 font-medium text-Mdblue-700 align-top justify-end">
+                <div class="flex min-w-12 justify-end">
+                  <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="rounded-md bg-white outline outline-1 outline-gray-200">
+              <td class="w-[6.75rem] whitespace-nowrap px-4 py-4 align-top">
+                <time class="text-sm font-normal text-Mdblue-700">2025-03-21</time>
+              </td>
+              <td class="px-4 py-4 align-top">
+                <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                  JUDGMENT Entered per Appeal CA 20-01319; Filed By: Court User; Filed: 05/10/2022; Received:
+                  05/10/2022
+                </p>
+                <div class="mt-2.5 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-2.5">
+                  <span
+                    class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                  >
+                    Motion for Summary Judgment
+                  </span>
+                  <span
+                    class="shrink-0 rounded border border-secondary-200 bg-secondary-50 px-4 py-0.5 text-xs font-semibold text-Mdblue-700"
+                  >
+                    Granted
+                  </span>
+                  <span
+                    class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                  >
+                    Motion Filing
+                  </span>
+                  <span
+                    class="shrink-0 rounded border border-orange-200 bg-orange-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                  >
+                    Dispositive
+                  </span>
+                </div>
+              </td>
+              <td class="flex gap-3 px-4 py-4 font-medium text-Mdblue-700 align-top justify-end">
+                <div class="flex min-w-12 justify-end">
+                  <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motion Summary (Figma node 4389-19517) -->
+  <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <header class="border-b border-gray-200 px-6 py-3">
+      <h2 class="text-lg font-semibold text-Mdblue-700">
+        Motion Summary <span class="font-normal text-gray-600">(Total 3)</span>
+      </h2>
+    </header>
+    <div class="overflow-x-auto px-6 py-4">
+      <div class="flex w-max min-w-full flex-row flex-nowrap items-stretch">
+      <!-- Plaintiff -->
+      <div class="flex shrink-0 flex-nowrap items-center justify-start gap-6 px-6 py-0">
+        <div class="flex shrink-0 flex-col items-start gap-4">
+          <span
+            class="inline-flex w-[6.125rem] items-center justify-center rounded-full bg-gray-100 px-4 py-1 text-sm font-medium italic text-Mdblue-700"
+          >
+            Plaintiff
+          </span>
+          <div class="flex flex-col items-start gap-1">
+            <span class="text-sm font-semibold text-gray-600">Win Rate</span>
+            <span class="text-2xl font-semibold leading-tight text-Mdblue-700">100%</span>
+          </div>
+        </div>
+        <div id="motion-summary-plaintiff-chart" class="motion-summary-gauge shrink-0" aria-hidden="true"></div>
+        <div class="flex w-[9.375rem] shrink-0 flex-col justify-center gap-4 self-stretch py-2">
+          <span
+            class="flex w-full items-center justify-between rounded border border-secondary-200 bg-secondary-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"
+          >
+            <span>Granted</span>
+            <span>1</span>
+          </span>
+          <span
+            class="flex w-full items-center justify-between rounded border border-secondary-200 bg-secondary-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"
+          >
+            <span>Granted in Part</span>
+            <span>1</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="flex shrink-0 items-center self-stretch px-1 py-4" aria-hidden="true">
+        <div class="h-20 w-px bg-gray-200"></div>
+      </div>
+
+      <!-- Defendant -->
+      <div class="flex shrink-0 flex-nowrap items-center justify-start gap-6 px-6 py-0">
+        <div class="flex shrink-0 flex-col items-start gap-4">
+          <span
+            class="inline-flex items-center justify-center rounded-full bg-gray-100 px-4 py-1 text-sm font-medium italic text-Mdblue-700"
+          >
+            Defendant
+          </span>
+          <div class="flex flex-col items-start gap-1">
+            <span class="text-sm font-semibold text-gray-600">Win Rate</span>
+            <span class="text-2xl font-semibold leading-tight text-Mdblue-700">33%</span>
+          </div>
+        </div>
+        <div id="motion-summary-defendant-chart" class="motion-summary-gauge shrink-0" aria-hidden="true"></div>
+        <div class="flex w-[9.375rem] shrink-0 flex-col justify-center gap-4 self-stretch py-2">
+          <span
+            class="flex w-full items-center justify-between rounded border border-gray-200 bg-gray-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"
+          >
+            <span>Withdrawn</span>
+            <span>1</span>
+          </span>
+          <span
+            class="flex w-full items-center justify-between rounded border border-red-200 bg-red-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"
+          >
+            <span>Denied</span>
+            <span>1</span>
+          </span>
+          <span
+            class="flex w-full items-center justify-between rounded border border-secondary-200 bg-secondary-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"
+          >
+            <span>Granted in Part</span>
+            <span>1</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="flex shrink-0 items-center self-stretch px-1 py-4" aria-hidden="true">
+        <div class="h-20 w-px bg-gray-200"></div>
+      </div>
+
+      <!-- Avg Days to Ruling -->
+      <div class="flex shrink-0 items-center justify-center px-6 py-0">
+        <div
+          class="flex w-[14.4375rem] shrink-0 flex-col items-center gap-2 rounded-lg border border-gray-200 px-4 py-3"
+        >
+          <span class="text-sm font-semibold text-gray-600">Avg Days to Ruling</span>
+          <span class="text-2xl font-semibold leading-tight text-Mdblue-700">287d</span>
+          <div class="flex flex-col items-center gap-1">
+            <div class="flex items-center gap-1 text-xs font-semibold text-Mdblue-700">
+              <span>Filed</span>
+              <span class="material-symbols-outlined icon-16" aria-hidden="true">arrow_forward</span>
+              <span>Decision Date</span>
+            </div>
+            <span class="text-xs font-normal text-gray-600">(decided motions only)</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Documents (Figma node 4389-21526) -->
+  <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <header class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-6 py-3">
+      <h2 class="text-lg font-semibold text-Mdblue-700">Recent Documents</h2>
+      <button
+        type="button"
+        class="shrink-0 text-base font-semibold text-primary-600 hover:text-primary-700 focus:outline-none"
+      >
+        See More
+      </button>
+    </header>
+    <div class="px-6 pb-6 pt-5">
+      <div class="overflow-hidden rounded-xl border border-gray-200 bg-gray-100 p-4">
+        <table
+          class="w-full border-separate border-spacing-y-0 text-left text-sm text-Mdblue-600 rtl:text-right"
+          aria-label="Recent documents"
+        >
+          <thead class="text-sm font-semibold text-gray-700">
+            <tr>
+              <th scope="col" class="p-4">
+                <span class="sr-only">Select</span>
+              </th>
+              <th scope="col" class="px-4 py-2">
+                <div class="flex items-center gap-1 uppercase">
+                  <span>Date</span>
+                  <span class="material-symbols-outlined icon-16 font-semibold" aria-hidden="true">unfold_more</span>
+                </div>
+              </th>
+              <th scope="col" class="px-4 py-2 uppercase">Type</th>
+              <th scope="col" class="px-4 py-2 uppercase">Name</th>
+              <th scope="col" class="px-4 py-2 uppercase">Description</th>
+              <th scope="col" class="px-4 py-2">
+                <div class="flex justify-end uppercase">Buy or download</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 — Buy -->
+            <tr>
+              <td class="w-4 border-t border-l border-gray-200 bg-white p-4 align-top rounded-tl-[10px]">
+                <input
+                  type="checkbox"
+                  class="h-[1.125rem] w-[1.125rem] cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+                  aria-label="Select document filed 2024/06/19"
+                />
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">2024/06/19</span>
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">Motion</span>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <a
+                  class="block text-base font-semibold leading-[1.4] text-primary-600 hover:cursor-pointer hover:underline"
+                  href="#"
+                >
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation
+                  to Extend Time to Respond &amp; Adjourn Motion
+                </a>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                  Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+                </p>
+              </td>
+              <td class="border-t border-r border-gray-200 bg-white px-4 py-4 align-top font-medium text-Mdblue-700 rounded-tr-[10px]">
+                <div class="flex flex-col items-end justify-start">
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center gap-1 rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
+                  >
+                    <span class="material-symbols-outlined icon-16">receipt_long</span>
+                    <span>$1.00</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6" class="border border-t-0 border-gray-200 bg-white rounded-b-[10px] p-0">
+                <div class="flex flex-wrap items-center gap-2 border-t border-gray-200 px-6 pb-4 pt-2.5">
+                  <span
+                    class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Motion for Summary Judgment</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-secondary-200 bg-secondary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Granted</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Stipulation</span
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr aria-hidden="true">
+              <td colspan="6" class="h-2 border-0 bg-transparent p-0"></td>
+            </tr>
+            <!-- Row 2 — Manual Processing -->
+            <tr>
+              <td class="w-4 border-t border-l border-gray-200 bg-white p-4 align-top rounded-tl-[10px]">
+                <input
+                  type="checkbox"
+                  class="h-[1.125rem] w-[1.125rem] cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+                  aria-label="Select document filed 2024/06/19"
+                />
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">2024/06/19</span>
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">Motion</span>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <a
+                  class="block text-base font-semibold leading-[1.4] text-primary-600 hover:cursor-pointer hover:underline"
+                  href="#"
+                >
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation
+                  to Extend Time to Respond &amp; Adjourn Motion
+                </a>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                  Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+                </p>
+              </td>
+              <td class="border-t border-r border-gray-200 bg-white px-4 py-4 align-top font-medium text-Mdblue-700 rounded-tr-[10px]">
+                <div class="flex flex-col items-end justify-center">
+                  <div class="flex shrink-0 items-center gap-1 whitespace-nowrap">
+                    <span class="material-symbols-outlined icon-16 shrink-0 text-Mdblue-700">downloading</span>
+                    <span class="text-base font-normal leading-[1.4] text-Mdblue-700">Manual Processing</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6" class="border border-t-0 border-gray-200 bg-white rounded-b-[10px] p-0">
+                <div class="flex flex-wrap items-center gap-2 border-t border-gray-200 px-6 pb-4 pt-2.5">
+                  <span
+                    class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Motion for Summary Judgment</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-secondary-200 bg-secondary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Granted</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Stipulation</span
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr aria-hidden="true">
+              <td colspan="6" class="h-2 border-0 bg-transparent p-0"></td>
+            </tr>
+            <!-- Row 3 — Download available -->
+            <tr>
+              <td class="w-4 border-t border-l border-gray-200 bg-white p-4 align-top rounded-tl-[10px]">
+                <input
+                  type="checkbox"
+                  class="h-[1.125rem] w-[1.125rem] cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+                  aria-label="Select document filed 2024/06/19"
+                />
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">2024/06/19</span>
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">Motion</span>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <a
+                  class="block text-base font-semibold leading-[1.4] text-primary-600 hover:cursor-pointer hover:underline"
+                  href="#"
+                >
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation
+                  to Extend Time to Respond &amp; Adjourn Motion
+                </a>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                  Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+                </p>
+              </td>
+              <td class="border-t border-r border-gray-200 bg-white px-4 py-4 align-top font-medium text-Mdblue-700 rounded-tr-[10px]">
+                <div class="flex flex-col items-end">
+                  <button
+                    type="button"
+                    class="flex space-x-2 rounded-lg border border-gray-300 bg-white p-2 text-sm font-medium text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
+                  >
+                    <span class="material-symbols-outlined icon-16">cloud_download</span>
+                  </button>
+                  <p class="text-right text-sm font-semibold leading-[1.4] text-gray-600">
+                    Order Date<br />
+                    <span class="font-normal">2026-03-25</span>
+                  </p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6" class="border border-t-0 border-gray-200 bg-white rounded-b-[10px] p-0">
+                <div class="flex flex-wrap items-center gap-2 border-t border-gray-200 px-6 pb-4 pt-2.5">
+                  <span
+                    class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Motion for Summary Judgment</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-secondary-200 bg-secondary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Granted</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Stipulation</span
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr aria-hidden="true">
+              <td colspan="6" class="h-2 border-0 bg-transparent p-0"></td>
+            </tr>
+            <!-- Row 4 — Unavailable -->
+            <tr>
+              <td class="w-4 border-t border-l border-gray-200 bg-white p-4 align-top rounded-tl-[10px]">
+                <input
+                  type="checkbox"
+                  class="h-[1.125rem] w-[1.125rem] cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+                  aria-label="Select document filed 2024/06/19"
+                />
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">2024/06/19</span>
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">Motion</span>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <a
+                  class="block text-base font-semibold leading-[1.4] text-primary-600 hover:cursor-pointer hover:underline"
+                  href="#"
+                >
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation
+                  to Extend Time to Respond &amp; Adjourn Motion
+                </a>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                  Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+                </p>
+              </td>
+              <td class="border-t border-r border-gray-200 bg-white px-4 py-4 align-top font-medium text-Mdblue-700 rounded-tr-[10px]">
+                <div class="flex flex-col items-end justify-start">
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center rounded-md bg-gray-100 px-6 py-2 text-base font-semibold text-gray-600 focus:outline-none"
+                  >
+                    Unavailable
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6" class="border border-t-0 border-gray-200 bg-white rounded-b-[10px] p-0">
+                <div class="flex flex-wrap items-center gap-2 border-t border-gray-200 px-6 pb-4 pt-2.5">
+                  <span
+                    class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Motion for Summary Judgment</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-secondary-200 bg-secondary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Granted</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Stipulation</span
+                  >
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--complaint tab start-->
+<h4 class="mt-6 ml-8">Complaint Summary tab</h4>
+<div class="flex flex-col gap-4 px-8 pb-12 pt-4">
+  <!-- Complaint Summary -->
+  <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <header class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-6 py-3">
+      <div class="flex items-center gap-1">
+        <h2 class="text-lg font-semibold text-Mdblue-700">Complaint Summary</h2>
+        <span class="material-symbols-outlined icon-16 text-purple-600" aria-hidden="true">auto_awesome</span>
+      </div>
+    </header>
+    <div class="flex flex-col gap-4 px-6 pb-6 pt-5">
+      <p class="text-base font-normal leading-[1.4] text-Mdblue-700">
+        John Hummel, individually and as Administrator of the Estate of Eleanor Hummel, brings this action under
+        Article 15 of the New York Real Property Actions and Proceedings Law (RPAPL) to cancel and discharge a mortgage
+        encumbering the Estate's property at 5489 Federal Road, Conesus, New York. Eleanor Hummel granted a $50,000
+        mortgage to Homeamerican Credit, Inc. d/b/a Upland Mortgage in 2000. After her death in 2009, the mortgage passed
+        through a chain of six assignments ending with defendant Cilici, LLC. On June 22, 2011, Omat I REO Holdings
+        accelerated the entire balance by filing a foreclosure action, and no effective de-acceleration occurred within
+        the following six years. Plaintiff alleges the six-year statute of limitations to foreclose therefore expired on
+        or about June 21, 2017, and further that Cilici never legally acquired the note and mortgage. Plaintiff seeks
+        cancellation and discharge of the time-barred mortgage under RPAPL § 1501(4) and a judgment barring Cilici from
+        any claim to the property.
+      </p>
+      <p class="text-xs font-semibold uppercase text-gray-600">Legal Citations</p>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="shrink-0 rounded border border-gray-200 bg-gray-100 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+          >RPAPL Article 15</span
+        >
+        <span class="shrink-0 rounded border border-gray-200 bg-gray-100 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+          >RPAPL § 1501(4)</span
+        >
+        <span class="shrink-0 rounded border border-gray-200 bg-gray-100 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+          >Real Property Law § 319</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Relief Requested + Injuries Sustained -->
+  <div class="flex flex-col gap-4 lg:flex-row">
+    <section class="flex min-w-0 flex-1 flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+      <header class="border-b border-gray-200 px-6 py-3">
+        <h2 class="text-lg font-semibold text-Mdblue-700">Relief Requested</h2>
+      </header>
+      <div class="px-6 pb-6 pt-5">
+        <div class="flex flex-row items-start justify-between gap-2">
+          <div class="flex max-w-[439px] shrink-0 flex-col gap-1 pb-2">
+            <span class="pt-[3px] pb-1 pr-2.5 text-sm font-semibold uppercase text-gray-600">Primary Relief</span>
+            <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+              Cancel and discharge the mortgage of record; bar Defendant and all persons claiming under it from any estate
+              or interest in the property; award Plaintiff possession free and clear.
+            </p>
+          </div>
+          <div class="flex shrink-0 flex-col items-end gap-1 pb-2 text-right">
+            <span class="pt-[3px] pb-1 pl-2.5 text-sm font-semibold uppercase text-gray-600">Monetary Amount</span>
+            <div class="flex items-center gap-0.5 mt-4">
+              <span class="text-sm font-semibold text-Mdblue-700">Exceeds</span>
+              <span class="text-xl font-semibold leading-[1.4] text-secondary-600">$50,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex min-w-0 flex-1 flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+      <header class="border-b border-gray-200 px-6 py-3">
+        <h2 class="text-lg font-semibold text-Mdblue-700">Injuries Sustained</h2>
+      </header>
+      <div class="flex flex-row gap-6 px-6 pb-6 pt-5">
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <ul class="m-0 list-disc space-y-0 pl-5 text-sm font-normal leading-[1.4] text-Mdblue-700 marker:text-Mdblue-700">
+            <li>Loss of use of a conforming vehicle</li>
+            <li>Out-of-pocket repair and rental costs</li>
+            <li>Inability to rely on the vehicle for transportation</li>
+            <li>Incidental and consequential damages from Defendant's breach of warranty</li>
+            <li>Damages arising from fraudulent concealment of known defects</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Causes of Action -->
+  <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <header class="border-b border-gray-200 px-6 py-3">
+      <h2 class="text-lg font-semibold text-Mdblue-700">
+        Causes of Action <span class="font-normal text-gray-600">(Total 5)</span>
+      </h2>
+    </header>
+    <div class="flex flex-col gap-2 px-6 pb-6 pt-5">
+      <div class="flex items-center justify-between gap-4 border-b border-gray-200 pb-2">
+        <div class="flex min-w-0 items-center gap-2">
+          <span class="shrink-0 text-sm font-semibold text-gray-600">01</span>
+          <span class="text-base font-semibold text-Mdblue-700">
+            Quiet Title — Cancellation &amp; Discharge of Mortgage
+          </span>
+        </div>
+        <span
+          class="inline-flex shrink-0 items-center whitespace-nowrap rounded border border-gray-200 bg-gray-100 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+        >
+          § 1793.2(d)
+        </span>
+      </div>
+      <div class="flex items-center justify-between gap-4 pb-2">
+        <div class="flex min-w-0 items-center gap-2">
+          <span class="shrink-0 text-sm font-semibold text-gray-600">02</span>
+          <span class="text-base font-semibold text-Mdblue-700">Invalid Chain of Assignment</span>
+        </div>
+        <span
+          class="inline-flex shrink-0 items-center whitespace-nowrap rounded border border-gray-200 bg-gray-100 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+        >
+          § 1793.2(d)
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Document -->
+  <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <header class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-6 py-3">
+      <h2 class="text-lg font-semibold text-Mdblue-700">Related Document</h2>
+      <button
+        type="button"
+        class="shrink-0 text-base font-semibold text-primary-600 hover:text-primary-700 focus:outline-none"
+      >
+        See More
+      </button>
+    </header>
+    <div class="p-6">
+      <div class="overflow-hidden rounded-xl border border-gray-200 bg-gray-100 p-4">
+        <table
+          class="w-full border-separate border-spacing-y-0 text-left text-sm text-Mdblue-600 rtl:text-right"
+          aria-label="Related documents"
+        >
+          <thead class="text-sm font-semibold text-gray-700">
+            <tr>
+              <th scope="col" class="w-4 p-4">
+                <span class="sr-only">Select</span>
+              </th>
+              <th scope="col" class="px-4 py-2">
+                <div class="flex items-center gap-1 uppercase">
+                  <span>Date</span>
+                  <span class="material-symbols-outlined icon-16 font-semibold" aria-hidden="true">unfold_more</span>
+                </div>
+              </th>
+              <th scope="col" class="px-4 py-2 uppercase">Name</th>
+              <th scope="col" class="px-4 py-2 uppercase">Description</th>
+              <th scope="col" class="px-4 py-2">
+                <div class="flex justify-end uppercase">Buy or download</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="w-4 border-t border-l border-gray-200 bg-white p-4 align-top rounded-tl-[10px]">
+                <input
+                  type="checkbox"
+                  class="h-[1.125rem] w-[1.125rem] cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+                  aria-label="Select related document filed 2024/06/19"
+                />
+              </td>
+              <td class="whitespace-nowrap border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <span class="text-base font-normal text-Mdblue-700">2024/06/19</span>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <a
+                  class="block text-base font-semibold leading-[1.4] text-primary-600 hover:cursor-pointer hover:underline"
+                  href="#"
+                >
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                  Extend Time to Respond &amp; Adjourn Motion
+                </a>
+              </td>
+              <td class="border-t border-gray-200 bg-white px-4 py-4 align-top">
+                <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                  Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+                </p>
+              </td>
+              <td class="border-t border-r border-gray-200 bg-white px-4 py-4 align-top font-medium text-Mdblue-700 rounded-tr-[10px]">
+                <div class="flex flex-col items-end">
+                  <button
+                    type="button"
+                    class="flex space-x-2 rounded-lg border-[1.5px] border-gray-300 bg-white p-2 text-sm font-medium text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
+                  >
+                    <span class="material-symbols-outlined icon-16">file_download</span>
+                  </button>
+                  <p class="text-right text-sm font-semibold leading-[1.4] text-gray-600">
+                    Order Date<br />
+                    <span class="font-normal">2026-03-25</span>
+                  </p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5" class="border border-t-0 border-gray-200 bg-white rounded-b-[10px] p-0">
+                <div class="flex flex-wrap items-center gap-2 border-t border-gray-200 px-6 pb-4 pt-2.5">
+                  <span
+                    class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Motion for Summary Judgment</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-secondary-200 bg-secondary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Granted</span
+                  >
+                  <span
+                    class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700"
+                    >Stipulation</span
+                  >
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+<!--complaint tab end-->
