@@ -18,16 +18,62 @@ declare const echarts: {
   styleUrls: ['./casedetail.component.scss'],
 })
 export class CasedetailComponent implements AfterViewInit, OnDestroy {
+  /** Tracks which hearing accordion row is expanded. */
+  activeHearingPanel: number | null = 0;
+
+  /** Tracks which motion accordion row is expanded. */
+  activeMotionPanel: number | null = 0;
+
+  /** Tracks which motion design 2 accordion row is expanded. */
+  activeMotionDesign2Panel: number | null = 0;
+
   private plaintiffChart: ReturnType<typeof echarts.init> | null = null;
   private defendantChart: ReturnType<typeof echarts.init> | null = null;
+  private motionsTabPlaintiffChart: ReturnType<typeof echarts.init> | null = null;
+  private motionsTabDefendantChart: ReturnType<typeof echarts.init> | null = null;
   private readonly resizeHandler = (): void => {
     this.plaintiffChart?.resize();
     this.defendantChart?.resize();
+    this.motionsTabPlaintiffChart?.resize();
+    this.motionsTabDefendantChart?.resize();
   };
 
+  toggleHearingPanel(panelIndex: number): void {
+    this.activeHearingPanel =
+      this.activeHearingPanel === panelIndex ? null : panelIndex;
+  }
+
+  isHearingPanelOpen(panelIndex: number): boolean {
+    return this.activeHearingPanel === panelIndex;
+  }
+
+  toggleMotionPanel(panelIndex: number): void {
+    this.activeMotionPanel =
+      this.activeMotionPanel === panelIndex ? null : panelIndex;
+  }
+
+  isMotionPanelOpen(panelIndex: number): boolean {
+    return this.activeMotionPanel === panelIndex;
+  }
+
+  toggleMotionDesign2Panel(panelIndex: number): void {
+    this.activeMotionDesign2Panel =
+      this.activeMotionDesign2Panel === panelIndex ? null : panelIndex;
+  }
+
+  isMotionDesign2PanelOpen(panelIndex: number): boolean {
+    return this.activeMotionDesign2Panel === panelIndex;
+  }
+
   ngAfterViewInit(): void {
-    this.initPlaintiffChart();
-    this.initDefendantChart();
+    this.plaintiffChart = this.createPlaintiffGauge('motion-summary-plaintiff-chart');
+    this.defendantChart = this.createDefendantPie('motion-summary-defendant-chart');
+    this.motionsTabPlaintiffChart = this.createPlaintiffGauge(
+      'motions-tab-plaintiff-chart',
+    );
+    this.motionsTabDefendantChart = this.createDefendantPie(
+      'motions-tab-defendant-chart',
+    );
     window.addEventListener('resize', this.resizeHandler);
   }
 
@@ -35,12 +81,16 @@ export class CasedetailComponent implements AfterViewInit, OnDestroy {
     window.removeEventListener('resize', this.resizeHandler);
     this.plaintiffChart?.dispose();
     this.defendantChart?.dispose();
+    this.motionsTabPlaintiffChart?.dispose();
+    this.motionsTabDefendantChart?.dispose();
   }
 
-  private initPlaintiffChart(): void {
-    const dom = document.getElementById('motion-summary-plaintiff-chart');
+  private createPlaintiffGauge(
+    domId: string,
+  ): ReturnType<typeof echarts.init> | null {
+    const dom = document.getElementById(domId);
     if (!dom) {
-      return;
+      return null;
     }
 
     const gaugeData = [
@@ -53,8 +103,8 @@ export class CasedetailComponent implements AfterViewInit, OnDestroy {
       },
     ];
 
-    this.plaintiffChart = echarts.init(dom);
-    this.plaintiffChart.setOption({
+    const chart = echarts.init(dom);
+    chart.setOption({
       animationDuration: 4000,
       animationDurationUpdate: 4000,
       series: [
@@ -102,7 +152,7 @@ export class CasedetailComponent implements AfterViewInit, OnDestroy {
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         gaugeData[0].value = 100;
-        this.plaintiffChart?.setOption({
+        chart.setOption({
           series: [
             {
               data: gaugeData,
@@ -112,16 +162,20 @@ export class CasedetailComponent implements AfterViewInit, OnDestroy {
         });
       });
     });
+
+    return chart;
   }
 
-  private initDefendantChart(): void {
-    const dom = document.getElementById('motion-summary-defendant-chart');
+  private createDefendantPie(
+    domId: string,
+  ): ReturnType<typeof echarts.init> | null {
+    const dom = document.getElementById(domId);
     if (!dom) {
-      return;
+      return null;
     }
 
-    this.defendantChart = echarts.init(dom);
-    this.defendantChart.setOption({
+    const chart = echarts.init(dom);
+    chart.setOption({
       animationDuration: 4000,
       animationDurationUpdate: 4000,
       series: [
@@ -161,5 +215,7 @@ export class CasedetailComponent implements AfterViewInit, OnDestroy {
         },
       ],
     });
+
+    return chart;
   }
 }
