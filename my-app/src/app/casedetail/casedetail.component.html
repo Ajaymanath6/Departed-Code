@@ -242,7 +242,7 @@
   <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
     <header class="border-b border-gray-200 px-6 py-3">
       <h2 class="text-lg font-semibold text-Mdblue-700">
-        Motion Summary <span class="font-normal text-gray-600">(Total 3)</span>
+        Motion Summary <span class="font-normal text-gray-600">(Total 3) kk</span>
       </h2>
     </header>
     <div class="px-6 py-4">
@@ -852,6 +852,7 @@
 <!--complaint tab end-->
 
 <!--hearings tab start-->
+
 <div class="flex flex-col gap-4 px-8 pb-12 pt-4">
   <div
     class="rounded-xl border border-default shadow-xs overflow-hidden flex flex-col divide-y divide-gray-200 bg-white alert-configuration"
@@ -875,7 +876,7 @@
           <div class="flex min-w-0 flex-1 gap-3 items-center">
             <div
               aria-hidden="true"
-              class="flex w-10 shrink-0 self-stretch items-center justify-center rounded bg-primary-50 border border-primary-200 text-Mdblue-700"
+              class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2 text-Mdblue-700"
             >
               <span class="material-symbols-outlined icon-20 text-Mdblue-700">gavel</span>
             </div>
@@ -911,30 +912,61 @@
         </div>
       </div>
 
-      <div *ngIf="isHearingPanelOpen(0)" class="border-t border-gray-200 bg-gray-50 py-4 pr-4 pl-0">
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-row items-stretch gap-4 pl-4">
-            <div class="flex min-w-0 flex-1 flex-col">
-              <div class="flex flex-1 flex-col rounded-xl bg-white">
-                <div class="flex flex-1 flex-col self-stretch rounded-lg border border-gray-200 p-4">
-                  <div class="flex flex-col gap-4">
-                    <span class="text-base font-semibold text-Mdblue-700">Participants</span>
+      <div *ngIf="isHearingPanelOpen(0)" class="px-4 pb-4">
+        <div class="border-t border-gray-200 rounded-lg bg-gray-50 py-4 pr-4 pl-0">
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-row items-stretch gap-4 pl-4">
+              <div class="flex min-w-0 flex-1 flex-col">
+                <div class="flex flex-1 flex-col rounded-xl bg-white">
+                  <div class="flex flex-1 flex-col self-stretch rounded-lg border border-gray-200 p-4">
                     <div class="flex flex-col gap-4">
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                        <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
+                      <span class="text-base font-semibold text-Mdblue-700">Participants</span>
+                      <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-1">
+                          <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
+                          <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                          <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
+                          <span class="text-sm font-normal italic text-Mdblue-700">Plaintiff</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                          <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
+                          <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                          <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
+                          <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
+                        </div>
                       </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                        <span class="text-sm font-normal italic text-Mdblue-700">Plaintiff</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                        <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                        <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex min-w-0 flex-1 flex-col">
+                <div class="flex flex-1 flex-col rounded-xl bg-white">
+                  <div class="flex flex-1 flex-col self-stretch rounded-lg border border-gray-200 p-4">
+                    <div class="flex flex-col gap-4">
+                      <span class="text-base font-semibold text-Mdblue-700">Court Information</span>
+                      <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-1">
+                          <span class="text-sm font-semibold text-gray-500">Court</span>
+                          <span class="text-sm font-semibold text-Mdblue-700">
+                            California - Los Angeles County Superior Courts
+                          </span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                          <span class="text-sm font-semibold text-gray-500">Dep</span>
+                          <span class="text-sm font-semibold text-Mdblue-700">517</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                          <span class="text-sm font-semibold text-gray-500">Location</span>
+                          <span class="text-sm font-semibold text-Mdblue-700">
+                            Hayward Hall of Justice<br />
+                            24405 Amador St, Hayward, CA 94544
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -942,72 +974,43 @@
               </div>
             </div>
 
-            <div class="flex min-w-0 flex-1 flex-col">
-              <div class="flex flex-1 flex-col rounded-xl bg-white">
-                <div class="flex flex-1 flex-col self-stretch rounded-lg border border-gray-200 p-4">
-                  <div class="flex flex-col gap-4">
-                    <span class="text-base font-semibold text-Mdblue-700">Court Information</span>
+            <div class="flex flex-row items-stretch gap-4 pl-4">
+              <div class="flex min-w-0 flex-1 flex-col">
+                <div class="flex flex-col rounded-xl bg-white">
+                  <div class="flex flex-col self-stretch rounded-lg border border-gray-200 p-4">
                     <div class="flex flex-col gap-4">
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-gray-500">Court</span>
-                        <span class="text-sm font-semibold text-Mdblue-700">
-                          California - Los Angeles County Superior Courts
-                        </span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-gray-500">Dep</span>
-                        <span class="text-sm font-semibold text-Mdblue-700">517</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-gray-500">Location</span>
-                        <span class="text-sm font-semibold text-Mdblue-700">
-                          Hayward Hall of Justice<br />
-                          24405 Amador St, Hayward, CA 94544
-                        </span>
-                      </div>
+                      <span class="text-base font-semibold text-Mdblue-700">History</span>
+                      <ul class="m-0 flex list-none flex-col gap-2 border-l border-gray-300 pl-4">
+                        <li class="relative flex min-w-0 items-start gap-4 py-0.5">
+                          <span
+                            aria-hidden="true"
+                            class="absolute -left-4 top-1.5 z-[1] size-2.5 -translate-x-1/2 rounded-full bg-gray-300"
+                          ></span>
+                          <time
+                            datetime="2025-03-21"
+                            class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
+                            >2025-03-21</time
+                          >
+                          <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
+                            Tentative Ruling — MSJ Tentatively Denied
+                          </span>
+                        </li>
+                        <li class="relative flex min-w-0 items-start gap-4">
+                          <span
+                            aria-hidden="true"
+                            class="absolute -left-4 top-1.5 z-[1] size-2.5 -translate-x-1/2 rounded-full bg-gray-300"
+                          ></span>
+                          <time
+                            datetime="2025-03-21"
+                            class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
+                            >2025-03-21</time
+                          >
+                          <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
+                            Hearing Held — Taken Under Submission
+                          </span>
+                        </li>
+                      </ul>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-row items-stretch gap-4 pl-4">
-            <div class="flex min-w-0 flex-1 flex-col">
-              <div class="flex flex-col rounded-xl bg-white">
-                <div class="flex flex-col self-stretch rounded-lg border border-gray-200 p-4">
-                  <div class="flex flex-col gap-4">
-                    <span class="text-base font-semibold text-Mdblue-700">History</span>
-                    <ul class="m-0 flex list-none flex-col gap-2 border-l border-gray-300 pl-4">
-                      <li class="relative flex min-w-0 items-start gap-4 py-0.5">
-                        <span
-                          aria-hidden="true"
-                          class="absolute -left-4 top-1.5 z-[1] size-2.5 -translate-x-1/2 rounded-full bg-gray-300"
-                        ></span>
-                        <time
-                          datetime="2025-03-21"
-                          class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
-                          >2025-03-21</time
-                        >
-                        <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
-                          Tentative Ruling — MSJ Tentatively Denied
-                        </span>
-                      </li>
-                      <li class="relative flex min-w-0 items-start gap-4">
-                        <span
-                          aria-hidden="true"
-                          class="absolute -left-4 top-1.5 z-[1] size-2.5 -translate-x-1/2 rounded-full bg-gray-300"
-                        ></span>
-                        <time
-                          datetime="2025-03-21"
-                          class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
-                          >2025-03-21</time
-                        >
-                        <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
-                          Hearing Held — Taken Under Submission
-                        </span>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -1209,71 +1212,71 @@
     </div>
   </div>
 
-  <!-- Motions list (Figma 4389-19656 — Artemis uc-list-card row layout) -->
+  <!-- Motions list (Figma 4389-19516 — Cases 4389-19656) -->
   <div
     class="alert-configuration flex flex-col divide-y divide-gray-200 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xs"
   >
     <!-- Motion to Dismiss (#003) — expanded -->
     <div class="flex flex-col">
-      <div class="flex items-center justify-between gap-4 px-4 py-4">
+      <div class="flex items-center gap-4 px-4 py-4">
         <button
           type="button"
           (click)="toggleMotionPanel(0)"
-          class="ms-1 flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-Mdblue-700 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
+          class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
           [attr.aria-expanded]="isMotionPanelOpen(0)"
           aria-label="Show or hide motion details"
         >
           <span iconsize="24" class="material-symbols-outlined icon-24" aria-hidden="true">{{
-            isMotionPanelOpen(0) ? 'keyboard_arrow_down' : 'keyboard_arrow_right'
+            isMotionPanelOpen(0) ? 'keyboard_arrow_down' : 'chevron_right'
           }}</span>
         </button>
         <div
           aria-hidden="true"
-          class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50"
+          class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
         >
           <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
         </div>
-        <div class="flex min-w-0 flex-1 flex-col gap-1 py-1.5">
-          <span class="text-base font-semibold text-Mdblue-700">Motion to Dismiss (#003)</span>
+        <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+          <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Motion to Dismiss kktt (#003)</span>
           <div class="flex flex-row flex-wrap gap-x-4 gap-y-1">
-            <span class="text-sm font-bold text-Mdblue-700"
+            <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
               >Relief Type: <span class="font-normal">Dismiss</span></span
             >
-            <span class="text-sm font-bold text-Mdblue-700"
+            <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
               >Decision Date: <span class="font-normal">2026-01-27</span></span
             >
-            <span class="text-sm font-bold text-Mdblue-700"
+            <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
               >Movant: <span class="font-normal">ARISTIDES ROSARIO</span> –
               <span class="font-normal italic">Defendant</span></span
             >
           </div>
         </div>
-        <div class="flex shrink-0 flex-col items-end gap-1">
+        <div class="flex min-w-28 shrink-0 flex-col items-stretch justify-center gap-2">
           <span
-            class="inline-flex items-center justify-center rounded border border-secondary-200 bg-secondary-50 px-2 py-1.5 text-sm font-semibold text-Mdblue-700"
+            class="inline-flex min-h-8 w-fit self-end items-center justify-center rounded border border-secondary-200 bg-secondary-50 px-2 py-[5px] text-center text-sm font-semibold leading-[1.4] text-Mdblue-700"
           >
             Granted in Part
           </span>
-          <span class="text-sm font-normal text-gray-600">2026-01-27</span>
+          <span class="text-center text-sm font-normal leading-[1.4] text-gray-700">2026-01-27</span>
         </div>
       </div>
 
-      <div *ngIf="isMotionPanelOpen(0)" class="bg-gray-50 py-4 pr-4 pl-0">
-        <div class="flex flex-col gap-4 pl-4 lg:flex-row">
-          <!-- Moving Party & Filing (Figma 4389-19707) -->
-          <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-            <div class="flex h-full flex-col gap-4 rounded-lg border border-gray-200 p-4">
-              <h3 class="text-base font-semibold text-Mdblue-700">Moving Party &amp; Filing</h3>
-              <div class="flex flex-col gap-2">
+      <div *ngIf="isMotionPanelOpen(0)" class="px-4 pb-4">
+        <div class="bg-gray-50 rounded-lg py-4 pr-4 pl-0">
+          <div class="flex flex-col gap-4 pl-4 lg:flex-row lg:items-stretch">
+            <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
+            <div class="flex h-full flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4">
+              <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Moving Party &amp; Filing</h3>
+              <div class="flex flex-col gap-4 lg:flex-row lg:gap-24">
                 <div class="flex flex-col gap-1">
-                  <span class="text-sm font-semibold text-gray-600">Moving party</span>
-                  <span class="text-base font-semibold text-Mdblue-700">ARISTIDES ROSARIO</span>
-                  <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Moving party</span>
+                  <span class="text-sm font-semibold leading-[1.4] text-Mdblue-700">ARISTIDES ROSARIO</span>
+                  <span class="text-sm font-normal italic leading-[1.4] text-Mdblue-700">Defendant</span>
                 </div>
-                <div class="flex flex-col gap-2">
-                  <span class="text-sm font-semibold text-gray-600">Filed by</span>
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Filed by</span>
                   <span
-                    class="inline-flex h-8 w-fit items-center gap-1 rounded border border-yellow-200 bg-yellow-50 py-0.5 pl-1.5 pr-2 text-sm font-semibold text-Mdblue-700"
+                    class="inline-flex h-8 w-fit items-center gap-1 rounded border border-yellow-200 bg-yellow-50 py-0.5 pl-1.5 pr-2 text-sm font-semibold leading-[1.4] text-Mdblue-700"
                   >
                     <span class="material-symbols-outlined icon-16 text-Mdblue-700">domain</span>
                     Cullen and Dykman LLP
@@ -1283,59 +1286,61 @@
             </div>
           </div>
 
-          <!-- Key Dates and Events (Figma 4389-19731) -->
           <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-            <div class="flex flex-col gap-4 rounded-lg border border-gray-200 p-4">
-              <h3 class="text-base font-semibold text-Mdblue-700">Key Dates and Events</h3>
+            <div class="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4">
+              <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Key Dates and Events</h3>
               <div class="flex flex-row gap-2">
-                <div class="flex w-[194px] shrink-0 flex-col gap-2">
+                <div class="flex min-w-0 flex-1 flex-col gap-2">
                   <div class="flex flex-col gap-0.5 py-0.5">
-                    <span class="text-sm font-semibold text-gray-600">Motion Filed</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2025-04-15</span>
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Motion Filed</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2025-04-15</span>
                   </div>
                   <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-600">Submission Date</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2025-03-21</span>
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Submission Date</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2025-03-21</span>
                   </div>
                   <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-600">Decision Date</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2026-01-27</span>
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Decision Date</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2026-01-27</span>
                   </div>
                 </div>
-                <div class="flex flex-col gap-2">
+                <div class="flex min-w-0 flex-1 flex-col gap-2">
                   <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-600">Order Signed Date</span>
-                    <span class="text-base font-semibold text-gray-600">–</span>
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Order Signed Date</span>
+                    <span class="text-base font-semibold leading-[1.4] text-gray-600">–</span>
                   </div>
                   <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-600">Decision Filed</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2025-03-21</span>
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Decision Filed</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2025-03-21</span>
                   </div>
                   <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-600">Motion Return Date</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2025-10-14</span>
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Motion Return Date</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2025-10-14</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Outcome Details (Figma 4389-19765) -->
           <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-            <div class="flex h-full flex-col gap-4 rounded-lg border border-gray-200 p-4">
-              <h3 class="text-base font-semibold text-Mdblue-700">Outcome Details</h3>
+            <div class="flex h-full flex-col gap-4 rounded-lg border border-gray-200 bg-white p-4">
+              <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Outcome Details</h3>
               <div class="flex flex-col gap-2">
                 <div class="flex flex-col gap-0.5">
-                  <span class="text-sm font-semibold text-gray-600">Outcome</span>
-                  <span class="text-base font-semibold text-Mdblue-700">Granted to the Extent of the Order</span>
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Outcome</span>
+                  <span class="text-base font-semibold leading-[1.4] text-Mdblue-700"
+                    >Granted to the Extent of the Order</span
+                  >
+                </div>
+                <div class="flex flex-wrap items-center gap-1">
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Days to Ruling</span>
+                  <span class="text-sm font-normal leading-[1.4] text-Mdblue-700"
+                    ><span class="text-xl font-semibold">84</span> days</span
+                  >
                 </div>
                 <div class="flex flex-col gap-0.5">
-                  <span class="text-sm font-semibold text-gray-600">Days to Ruling</span>
-                  <span class="text-sm font-normal text-Mdblue-700"><span class="font-semibold">84</span> days</span>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <span class="text-sm font-semibold text-gray-600">Motion Type Group</span>
-                  <span class="text-base font-semibold text-Mdblue-700">Dispositive</span>
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Motion Type Group</span>
+                  <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Dispositive</span>
                 </div>
               </div>
             </div>
@@ -1343,93 +1348,96 @@
         </div>
       </div>
     </div>
+    </div>
 
     <!-- Motion to Strike (#002) — collapsed -->
-    <div class="flex items-center justify-between gap-4 px-4 py-4">
+    <div class="flex items-center gap-4 px-4 py-4">
       <button
         type="button"
         (click)="toggleMotionPanel(1)"
-        class="ms-1 flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-Mdblue-700 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
+        class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
         [attr.aria-expanded]="isMotionPanelOpen(1)"
         aria-label="Show or hide motion details"
       >
         <span iconsize="24" class="material-symbols-outlined icon-24" aria-hidden="true">{{
-          isMotionPanelOpen(1) ? 'keyboard_arrow_down' : 'keyboard_arrow_right'
+          isMotionPanelOpen(1) ? 'keyboard_arrow_down' : 'chevron_right'
         }}</span>
       </button>
       <div
         aria-hidden="true"
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50"
+        class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
       >
         <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
       </div>
-      <div class="flex min-w-0 flex-1 flex-col gap-1 py-1.5">
-        <span class="text-base font-semibold text-Mdblue-700">Motion to Strike (#002)</span>
+      <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+        <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Motion to Strike (#002)</span>
         <div class="flex flex-row flex-wrap gap-x-4 gap-y-1">
-          <span class="text-sm font-bold text-Mdblue-700"
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
             >Relief Type:
             <span class="font-normal">Vacate/Strike - Note of Issue/Jury Demand/From Trial Calendar</span></span
           >
-          <span class="text-sm font-bold text-Mdblue-700"
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
             >Filing Date: <span class="font-normal">2024-12-05</span></span
           >
-          <span class="text-sm font-bold text-Mdblue-700"
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
             >Movant: <span class="font-normal">ARISTIDES ROSARIO</span> –
             <span class="font-normal italic">Defendant</span></span
           >
         </div>
       </div>
-      <div class="flex shrink-0 flex-col items-end gap-1">
+      <div class="flex min-w-28 shrink-0 flex-col items-stretch justify-center gap-2">
         <span
-          class="inline-flex items-center justify-center rounded border border-gray-200 bg-gray-50 px-2 py-1.5 text-sm font-semibold text-Mdblue-700"
+          class="inline-flex min-h-8 w-fit self-end items-center justify-center rounded border border-gray-200 bg-gray-50 px-2 py-[5px] text-center text-sm font-semibold leading-[1.4] text-Mdblue-700"
         >
           Withdrawn
         </span>
-        <span class="text-sm font-normal text-gray-600">2026-01-27</span>
+        <span class="text-center text-sm font-normal leading-[1.4] text-gray-700">2026-01-27</span>
       </div>
     </div>
 
     <!-- Motion for Summary Judgment (#001) — collapsed -->
-    <div class="flex items-center justify-between gap-4 px-4 py-4">
+    <div class="flex items-center gap-4 px-4 py-4">
       <button
         type="button"
         (click)="toggleMotionPanel(2)"
-        class="ms-1 flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-Mdblue-700 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
+        class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
         [attr.aria-expanded]="isMotionPanelOpen(2)"
         aria-label="Show or hide motion details"
       >
         <span iconsize="24" class="material-symbols-outlined icon-24" aria-hidden="true">{{
-          isMotionPanelOpen(2) ? 'keyboard_arrow_down' : 'keyboard_arrow_right'
+          isMotionPanelOpen(2) ? 'keyboard_arrow_down' : 'chevron_right'
         }}</span>
       </button>
       <div
         aria-hidden="true"
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50"
+        class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
       >
         <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
       </div>
-      <div class="flex min-w-0 flex-1 flex-col gap-1 py-1.5">
-        <span class="text-base font-semibold text-Mdblue-700">Motion for Summary Judgment (#001)</span>
+      <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+        <span class="text-base font-semibold leading-[1.4] text-Mdblue-700"
+          >Motion for Summary Judgment (#001)</span
+        >
         <div class="flex flex-row flex-wrap gap-x-4 gap-y-1">
-          <span class="text-sm font-bold text-Mdblue-700"
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
             >Relief Type: <span class="font-normal">Judgment - Summary</span></span
           >
-          <span class="text-sm font-bold text-Mdblue-700"
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
             >Filing Date: <span class="font-normal">2022-08-19</span></span
           >
-          <span class="text-sm font-bold text-Mdblue-700"
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
             >Movant: <span class="font-normal">King, Josh Paul Jr.</span> –
             <span class="font-normal italic">Defendant</span></span
           >
         </div>
       </div>
-      <div class="flex shrink-0 flex-col items-end gap-1">
+      <div class="flex min-w-28 shrink-0 flex-col items-stretch justify-center gap-2">
         <span
-          class="inline-flex items-center justify-center rounded border border-secondary-200 bg-secondary-50 px-2 py-1.5 text-sm font-semibold text-Mdblue-700"
+          class="inline-flex min-h-8 w-fit self-end items-center justify-center rounded border border-secondary-200 bg-secondary-50 px-2 py-[5px] text-center text-sm font-semibold leading-[1.4] text-Mdblue-700"
         >
           Granted
         </span>
-        <span class="text-sm font-normal text-gray-600">2026-01-27</span>
+        <span class="text-center text-sm font-normal leading-[1.4] text-gray-700">2026-01-27</span>
       </div>
     </div>
   </div>
@@ -1460,7 +1468,7 @@
         </button>
         <div
           aria-hidden="true"
-          class="flex w-10 shrink-0 self-stretch items-center justify-center rounded border border-primary-200 bg-primary-50"
+          class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
         >
           <span class="material-symbols-outlined icon-20 text-Mdblue-700">gavel</span>
         </div>
@@ -1481,97 +1489,99 @@
         </div>
       </div>
 
-      <div *ngIf="isHearingPanelOpen(0)" class="bg-gray-50 py-4 pr-4 pl-0">
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col gap-4 pl-4 lg:flex-row lg:items-stretch">
-            <!-- Participants (Figma 4389-20779) -->
-            <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-              <div class="flex h-full flex-col rounded-lg border border-gray-300 p-4">
-                <div class="flex flex-col gap-4">
-                  <h3 class="text-base font-semibold text-Mdblue-700">Participants</h3>
+      <div *ngIf="isHearingPanelOpen(0)" class="px-4 pb-4">
+        <div class="bg-gray-50 rounded-lg py-4 pr-4 pl-0">
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 pl-4 lg:flex-row lg:items-stretch">
+              <!-- Participants (Figma 4389-20779) -->
+              <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
+                <div class="flex h-full flex-col rounded-lg border border-gray-300 p-4">
                   <div class="flex flex-col gap-4">
-                    <div class="flex flex-col gap-1">
-                      <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                      <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                      <span class="text-sm font-normal italic text-Mdblue-700">Plaintiff</span>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                      <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                      <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
+                    <h3 class="text-base font-semibold text-Mdblue-700">Participants</h3>
+                    <div class="flex flex-col gap-4">
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
+                        <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
+                        <span class="text-sm font-normal italic text-Mdblue-700">Plaintiff</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
+                        <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
+                        <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Court Information (Figma 4389-20816) -->
-            <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-              <div class="flex h-full flex-col rounded-lg border border-gray-300 p-4">
-                <div class="flex flex-col gap-4">
-                  <h3 class="text-base font-semibold text-Mdblue-700">Court Information</h3>
+              <!-- Court Information (Figma 4389-20816) -->
+              <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
+                <div class="flex h-full flex-col rounded-lg border border-gray-300 p-4">
                   <div class="flex flex-col gap-4">
-                    <div class="flex flex-col gap-1">
-                      <span class="text-sm font-semibold text-gray-500">Court</span>
-                      <span class="text-sm font-semibold text-Mdblue-700"
-                        >California - Los Angeles County Superior Courts</span
-                      >
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <span class="text-sm font-semibold text-gray-500">Dep</span>
-                      <span class="text-sm font-semibold text-Mdblue-700">517</span>
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <span class="text-sm font-semibold text-gray-500">Location</span>
-                      <span class="text-sm font-semibold text-Mdblue-700">
-                        Hayward Hall of Justice<br />
-                        24405 Amador St, Hayward, CA 94544
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- History (Figma 4389-20844) -->
-          <div class="pl-4">
-            <div class="flex min-w-0 flex-col rounded-xl bg-white">
-              <div class="rounded-lg border border-gray-300 p-4">
-                <div class="flex flex-col gap-4">
-                  <h3 class="text-base font-semibold text-Mdblue-700">History</h3>
-                  <div class="flex gap-4">
-                    <div class="relative h-14 w-[9px] shrink-0" aria-hidden="true">
-                      <div class="absolute left-1/2 top-0 h-14 w-px -translate-x-1/2 bg-[#C5C5C5]"></div>
-                      <span class="absolute left-0 top-2.5 size-[9px] rounded-full bg-[#C5C5C5]"></span>
-                      <span class="absolute left-0 top-10 size-[9px] rounded-full bg-[#C5C5C5]"></span>
-                    </div>
-                    <div class="flex min-w-0 flex-1 flex-col gap-2">
-                      <div class="flex items-center gap-4 py-0.5">
-                        <time
-                          datetime="2025-03-21"
-                          class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
-                          >2025-03-21</time
+                    <h3 class="text-base font-semibold text-Mdblue-700">Court Information</h3>
+                    <div class="flex flex-col gap-4">
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-gray-500">Court</span>
+                        <span class="text-sm font-semibold text-Mdblue-700"
+                          >California - Los Angeles County Superior Courts</span
                         >
-                        <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
-                          Tentative Ruling — MSJ Tentatively Denied
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-gray-500">Dep</span>
+                        <span class="text-sm font-semibold text-Mdblue-700">517</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-gray-500">Location</span>
+                        <span class="text-sm font-semibold text-Mdblue-700">
+                          Hayward Hall of Justice<br />
+                          24405 Amador St, Hayward, CA 94544
                         </span>
                       </div>
-                      <div class="flex items-center gap-4">
-                        <time
-                          datetime="2025-03-21"
-                          class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
-                          >2025-03-21</time
-                        >
-                        <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
-                          Hearing Held — Taken Under Submission
-                        </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- History (Figma 4389-20844) -->
+            <div class="pl-4">
+              <div class="flex min-w-0 flex-col rounded-xl bg-white">
+                <div class="rounded-lg border border-gray-300 p-4">
+                  <div class="flex flex-col gap-4">
+                    <h3 class="text-base font-semibold text-Mdblue-700">History</h3>
+                    <div class="flex gap-4">
+                      <div class="relative h-14 w-[9px] shrink-0" aria-hidden="true">
+                        <div class="absolute left-1/2 top-0 h-14 w-px -translate-x-1/2 bg-[#C5C5C5]"></div>
+                        <span class="absolute left-0 top-2.5 size-[9px] rounded-full bg-[#C5C5C5]"></span>
+                        <span class="absolute left-0 top-10 size-[9px] rounded-full bg-[#C5C5C5]"></span>
+                      </div>
+                      <div class="flex min-w-0 flex-1 flex-col gap-2">
+                        <div class="flex items-center gap-4 py-0.5">
+                          <time
+                            datetime="2025-03-21"
+                            class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
+                            >2025-03-21</time
+                          >
+                          <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
+                            Tentative Ruling — MSJ Tentatively Denied
+                          </span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                          <time
+                            datetime="2025-03-21"
+                            class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
+                            >2025-03-21</time
+                          >
+                          <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
+                            Hearing Held — Taken Under Submission
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1580,11 +1590,12 @@
             </div>
           </div>
         </div>
-      </div>
+     </div>
     </div>
   </div>
 </div>
 <!--hearings tab end-->
+
 
 <!--motion design 2 start-->
 <div class="flex flex-col gap-4 px-8 pb-12 pt-4">
@@ -1845,7 +1856,7 @@
         </button>
         <div
           aria-hidden="true"
-          class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50"
+          class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
         >
           <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
         </div>
@@ -1874,79 +1885,81 @@
         </div>
       </div>
 
-      <div *ngIf="isMotionDesign2PanelOpen(0)" class="bg-gray-50 py-4 pr-4 pl-0">
-        <div class="flex flex-col gap-4 pl-4 lg:flex-row">
-          <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-            <div class="flex h-full flex-col gap-4 rounded-lg border border-gray-300 p-4">
-              <h3 class="text-base font-semibold text-Mdblue-700">Moving Party &amp; Filing</h3>
-              <div class="flex flex-col gap-2">
-                <div class="flex flex-col gap-1">
-                  <span class="text-sm font-semibold text-gray-500">Moving party</span>
-                  <span class="text-base font-semibold text-Mdblue-700">ARISTIDES ROSARIO</span>
-                  <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
-                </div>
+      <div *ngIf="isMotionDesign2PanelOpen(0)" class="px-4 pb-4">
+        <div class="bg-gray-50 rounded-lg py-4 pr-4 pl-0">
+          <div class="flex flex-col gap-4 pl-4 lg:flex-row">
+            <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
+              <div class="flex h-full flex-col gap-4 rounded-lg border border-gray-300 p-4">
+                <h3 class="text-base font-semibold text-Mdblue-700">Moving Party &amp; Filing</h3>
                 <div class="flex flex-col gap-2">
-                  <span class="text-sm font-semibold text-gray-500">Filed by</span>
-                  <span
-                    class="inline-flex h-8 w-fit items-center gap-1 rounded border border-yellow-200 bg-yellow-50 py-0.5 pl-1.5 pr-2 text-sm font-semibold text-Mdblue-700"
-                  >
-                    <span class="material-symbols-outlined icon-16 text-Mdblue-700">domain</span>
-                    Cullen and Dykman LLP
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-            <div class="flex flex-col gap-4 rounded-lg border border-gray-300 p-4">
-              <h3 class="text-base font-semibold text-Mdblue-700">Key Dates and Events</h3>
-              <div class="flex flex-row gap-2">
-                <div class="flex min-w-0 flex-1 flex-col gap-2">
-                  <div class="flex flex-col gap-0.5 py-0.5">
-                    <span class="text-sm font-semibold text-gray-500">Motion Filed</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2025-04-15</span>
+                  <div class="flex flex-col gap-1">
+                    <span class="text-sm font-semibold text-gray-500">Moving party</span>
+                    <span class="text-base font-semibold text-Mdblue-700">ARISTIDES ROSARIO</span>
+                    <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
                   </div>
-                  <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-500">Submission Date</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2025-03-21</span>
-                  </div>
-                  <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-500">Decision Date</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2026-01-27</span>
-                  </div>
-                </div>
-                <div class="flex min-w-0 flex-1 flex-col gap-2">
-                  <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-500">Order Signed Date</span>
-                    <span class="text-base font-semibold text-gray-500">–</span>
-                  </div>
-                  <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-500">Decision Filed</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2025-03-21</span>
-                  </div>
-                  <div class="flex flex-col gap-0.5">
-                    <span class="text-sm font-semibold text-gray-500">Motion Return Date</span>
-                    <span class="text-base font-semibold text-Mdblue-700">2025-10-14</span>
+                  <div class="flex flex-col gap-2">
+                    <span class="text-sm font-semibold text-gray-500">Filed by</span>
+                    <span
+                      class="inline-flex h-8 w-fit items-center gap-1 rounded border border-yellow-200 bg-yellow-50 py-0.5 pl-1.5 pr-2 text-sm font-semibold text-Mdblue-700"
+                    >
+                      <span class="material-symbols-outlined icon-16 text-Mdblue-700">domain</span>
+                      Cullen and Dykman LLP
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-            <div class="flex h-full flex-col gap-4 rounded-lg border border-gray-300 p-4">
-              <h3 class="text-base font-semibold text-Mdblue-700">Outcome Details</h3>
-              <div class="flex flex-col gap-2">
-                <div class="flex flex-col gap-0.5">
-                  <span class="text-sm font-semibold text-gray-500">Outcome</span>
-                  <span class="text-base font-semibold text-Mdblue-700">Granted to the Extent of the Order</span>
+            <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
+              <div class="flex flex-col gap-4 rounded-lg border border-gray-300 p-4">
+                <h3 class="text-base font-semibold text-Mdblue-700">Key Dates and Events</h3>
+                <div class="flex flex-row gap-2">
+                  <div class="flex min-w-0 flex-1 flex-col gap-2">
+                    <div class="flex flex-col gap-0.5 py-0.5">
+                      <span class="text-sm font-semibold text-gray-500">Motion Filed</span>
+                      <span class="text-base font-semibold text-Mdblue-700">2025-04-15</span>
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                      <span class="text-sm font-semibold text-gray-500">Submission Date</span>
+                      <span class="text-base font-semibold text-Mdblue-700">2025-03-21</span>
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                      <span class="text-sm font-semibold text-gray-500">Decision Date</span>
+                      <span class="text-base font-semibold text-Mdblue-700">2026-01-27</span>
+                    </div>
+                  </div>
+                  <div class="flex min-w-0 flex-1 flex-col gap-2">
+                    <div class="flex flex-col gap-0.5">
+                      <span class="text-sm font-semibold text-gray-500">Order Signed Date</span>
+                      <span class="text-base font-semibold text-gray-500">–</span>
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                      <span class="text-sm font-semibold text-gray-500">Decision Filed</span>
+                      <span class="text-base font-semibold text-Mdblue-700">2025-03-21</span>
+                    </div>
+                    <div class="flex flex-col gap-0.5">
+                      <span class="text-sm font-semibold text-gray-500">Motion Return Date</span>
+                      <span class="text-base font-semibold text-Mdblue-700">2025-10-14</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="flex flex-col gap-0.5">
-                  <span class="text-sm font-semibold text-gray-500">Days to Ruling</span>
-                  <span class="text-sm font-normal text-Mdblue-700"><span class="font-semibold">84</span> days</span>
-                </div>
-                <div class="flex flex-col gap-0.5">
-                  <span class="text-sm font-semibold text-gray-500">Motion Type Group</span>
-                  <span class="text-base font-semibold text-Mdblue-700">Dispositive</span>
+              </div>
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
+              <div class="flex h-full flex-col gap-4 rounded-lg border border-gray-300 p-4">
+                <h3 class="text-base font-semibold text-Mdblue-700">Outcome Details</h3>
+                <div class="flex flex-col gap-2">
+                  <div class="flex flex-col gap-0.5">
+                    <span class="text-sm font-semibold text-gray-500">Outcome</span>
+                    <span class="text-base font-semibold text-Mdblue-700">Granted to the Extent of the Order</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <span class="text-sm font-semibold text-gray-500">Days to Ruling</span>
+                    <span class="text-sm font-normal text-Mdblue-700"><span class="font-semibold">84</span> days</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <span class="text-sm font-semibold text-gray-500">Motion Type Group</span>
+                    <span class="text-base font-semibold text-Mdblue-700">Dispositive</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1969,7 +1982,7 @@
       </button>
       <div
         aria-hidden="true"
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50"
+        class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
       >
         <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
       </div>
@@ -2013,7 +2026,7 @@
       </button>
       <div
         aria-hidden="true"
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50"
+        class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
       >
         <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
       </div>
