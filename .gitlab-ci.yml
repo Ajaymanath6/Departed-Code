@@ -1,11 +1,13 @@
 default:
+  # app_shared_runner / gitlab-org-medium job pods fail Kyverno (init-permissions runs as root).
+  # code_quality runner starts without those pod policy violations on this cluster.
   image: node:20-bookworm-slim
   tags:
-    - app_shared_runner
+    - code_quality
 
 variables:
   NPM_CONFIG_CACHE: "$CI_PROJECT_DIR/.npm"
-  # Do not set HOME to CI_PROJECT_DIR — git cannot lock .gitconfig there during checkout.
+  # Writable home for non-root job pods; avoids git .gitconfig lock errors during checkout.
   HOME: "/tmp"
 
 stages:
