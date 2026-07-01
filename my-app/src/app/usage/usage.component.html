@@ -1,0 +1,345 @@
+<main class="flex w-full flex-col gap-4 bg-white px-8 pb-8 pt-4">
+  <!-- Header, filters, chip -->
+  <div class="flex w-full flex-col gap-2">
+    <div class="flex w-full flex-col gap-4">
+      <div class="flex w-full flex-col items-center gap-2">
+        <div class="flex w-full flex-col items-stretch gap-3 py-2 text-center">
+          <h1 class="m-0 font-lora text-thirtytwo font-semibold text-Mdblue-700">Usage Reports</h1>
+          <p class="m-0 text-lg font-normal leading-normal text-Mdblue-700">
+            View and export detailed activity and charges across products.
+          </p>
+        </div>
+
+        <ul
+          role="tablist"
+          aria-label="Usage report type"
+          class="m-0 inline-flex list-none flex-wrap items-center gap-1.5 rounded-lg border border-gray-300 bg-gray-100 p-1">
+          <li>
+            <button
+              type="button"
+              role="tab"
+              [attr.aria-selected]="activeTab === 'activity'"
+              class="rounded px-3 py-[3px] text-base leading-normal"
+              [ngClass]="
+                activeTab === 'activity'
+                  ? 'bg-white font-semibold text-primary-600 shadow-md'
+                  : 'bg-transparent font-normal text-Mdblue-700'
+              "
+              (click)="setActiveTab('activity')">
+              Activity Report
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              role="tab"
+              [attr.aria-selected]="activeTab === 'document'"
+              class="rounded px-3 py-[3px] text-base leading-normal"
+              [ngClass]="
+                activeTab === 'document'
+                  ? 'bg-white font-semibold text-primary-600 shadow-md'
+                  : 'bg-transparent font-normal text-Mdblue-700'
+              "
+              (click)="setActiveTab('document')">
+              Document Download Report
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex w-full flex-wrap items-center justify-between gap-2.5">
+        <div class="flex flex-wrap items-center gap-2">
+          <button
+            *ngFor="let filter of filterDropdowns"
+            type="button"
+            class="inline-flex items-center justify-between rounded border border-gray-300 bg-white px-3 py-1 text-sm font-medium text-Mdblue-700 shadow-sm transition-colors hover:border-gray-600 hover:bg-gray-50 focus:outline-none">
+            <span class="flex items-center gap-2">
+              <span
+                *ngIf="filter.showProductIcon"
+                class="material-symbols-outlined icon-18 text-Mdblue-700"
+                aria-hidden="true">
+                grid_view
+              </span>
+              <span>{{ filter.label }}</span>
+            </span>
+            <span class="material-symbols-outlined icon-18 ms-1 text-Mdblue-700" aria-hidden="true">
+              keyboard_arrow_down
+            </span>
+          </button>
+        </div>
+
+        <button
+          type="button"
+          class="inline-flex shrink-0 items-center gap-1 rounded-md border-[1.5px] border-gray-300 bg-white py-2 pl-2 pr-2.5 text-base font-semibold leading-normal text-gray-900 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16 text-Mdblue-700" aria-hidden="true">ios_share</span>
+          Export CSV
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-1 flex flex-wrap items-center gap-2 text-Mdblue-700 sm:gap-4">
+      <div
+        class="max-w-full animate-fadeIn bg-primary-50 flex items-center gap-2 rounded-full border border-primary-600 px-2 py-1 text-sm font-medium text-Mdblue-700">
+        <span class="flex items-center gap-1 min-w-0 flex-1">
+          <span class="font-bold whitespace-nowrap">Report Date</span>
+          <span class="mx-1 h-4 w-px bg-Mdblue-700"></span>
+          <span class="font-medium truncate">{{ reportDateChipValue }}</span>
+        </span>
+        <span
+          class="flex flex-shrink-0 items-center justify-center p-0.5 text-primary-700/70"
+          aria-hidden="true">
+          <span class="material-symbols-outlined icon-18">close</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="activeTab === 'activity'" class="flex w-full flex-col gap-4">
+    <!-- Activity table (Figma 193:2641) -->
+    <section aria-label="Activity usage" class="w-full rounded-xl border border-gray-200 bg-gray-50 p-4">
+      <div class="flex flex-col gap-2">
+        <!-- Column headers on gray panel -->
+        <table class="w-full table-fixed border-collapse">
+          <thead>
+            <tr>
+              <th
+                scope="col"
+                class="px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700">
+                <span class="inline-flex items-center gap-1">
+                  Activity
+                  <button type="button" aria-label="Sort by Activity" class="inline-flex p-0 text-gray-700">
+                    <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+                  </button>
+                </span>
+              </th>
+              <th
+                scope="col"
+                class="px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700">
+                monthly Usage / &nbsp;&nbsp;Limit
+              </th>
+              <th
+                scope="col"
+                class="px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700">
+                Overage
+              </th>
+            </tr>
+          </thead>
+        </table>
+
+        <!-- Data rows in white card -->
+        <div class="overflow-hidden rounded-xl border border-gray-200 bg-white">
+          <table class="w-full table-fixed border-collapse">
+            <tbody>
+              <tr
+                *ngFor="let row of usageTableRows"
+                class="border-b border-gray-200 bg-white"
+                [class.border-b-0]="row.hideBorder">
+                <td
+                  *ngIf="row.kind === 'section'"
+                  colspan="3"
+                  class="h-14 px-6 py-2 text-left text-lg font-normal leading-normal text-gray-700">
+                  {{ row.title }}
+                </td>
+                <td
+                  *ngIf="row.kind === 'activity'"
+                  class="px-6 py-2 align-middle text-left text-base font-semibold leading-normal text-Mdblue-700">
+                  {{ row.activity?.name }}
+                </td>
+                <td *ngIf="row.kind === 'activity'" class="px-6 py-2 align-middle text-left">
+                  <div class="flex flex-col gap-0.5">
+                    <p class="m-0 text-base font-semibold leading-normal text-Mdblue-700">
+                      <span>{{ formatNumber(row.activity!.used) }}</span>
+                      <span class="font-normal text-gray-600">/{{ formatNumber(row.activity!.limit) }}</span>
+                    </p>
+                    <div class="relative h-4 w-64 max-w-full">
+                      <div
+                        class="absolute left-0 top-[5px] h-1.5 w-64 max-w-full overflow-hidden rounded-r-full bg-gray-300"
+                        role="progressbar"
+                        [attr.aria-valuenow]="row.activity!.used"
+                        [attr.aria-valuemin]="0"
+                        [attr.aria-valuemax]="row.activity!.limit"
+                        [attr.aria-label]="row.activity!.name + ' usage'">
+                        <div class="h-1.5 rounded-full bg-primary-600" [style.width.%]="row.activity!.barPercent"></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  *ngIf="row.kind === 'activity'"
+                  class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  {{ formatNumber(row.activity!.overage) }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bulk Limit -->
+    <section aria-label="Bulk Limit" class="flex w-full flex-col gap-4">
+      <h2 class="m-0 text-lg font-semibold leading-normal text-Mdblue-700">Bulk Limit</h2>
+      <div class="w-full rounded-xl border border-gray-200">
+        <div
+          class="flex h-[170px] items-center justify-center rounded-xl border border-gray-200 bg-gray-50 p-4 text-lg font-semibold leading-normal text-gray-700">
+          No Bulk Limits Data
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div *ngIf="activeTab === 'document'" class="flex w-full flex-col gap-4">
+    <!-- Document Download table (Figma 221:2238) -->
+    <section aria-label="Document Download Report" class="w-full rounded-xl border border-gray-200 bg-gray-50 p-4">
+      <div class="flex flex-col gap-2">
+        <div class="w-full overflow-x-auto">
+          <table class="w-full min-w-[71.375rem] table-fixed border-collapse">
+            <thead>
+              <tr>
+                <th
+                  scope="col"
+                  class="w-[11.4375rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+                  <span class="inline-flex items-center gap-1 whitespace-nowrap">
+                    Client
+                    <button type="button" aria-label="Sort by Client" class="inline-flex p-0 text-gray-700">
+                      <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+                    </button>
+                  </span>
+                </th>
+                <th
+                  scope="col"
+                  class="w-[29.5rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+                  document
+                </th>
+                <th
+                  scope="col"
+                  class="w-[25.3125rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+                  case
+                </th>
+                <th
+                  scope="col"
+                  class="w-[5.125rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+                  Price
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Minute Order  (Hearing on Motion to Seal Notice of Motion and...</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$1,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Case Management Statement</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$12,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Order re: Case Management Conference</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$13,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Proof of Service (Electronic Service)</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$12,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Memorandum of Points &amp; Authorities</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$54,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Reply in Support of Motion to Compel SROGs</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$12,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Declaration DECLARATION OF CHARLOTEE ACERO IN SUPPORT...</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$10,25</span>
+                </td>
+              </tr>
+              <tr class="border-b-0 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Ex Parte Proposed Order</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$9,25</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

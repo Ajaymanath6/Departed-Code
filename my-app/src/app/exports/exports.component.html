@@ -1,0 +1,456 @@
+<main class="flex w-full flex-col gap-6 bg-gray-50 px-8 pb-8 pt-4">
+  <div class="flex w-full items-center gap-6">
+    <button type="button" class="btn-focus inline-flex w-60 shrink-0 items-center justify-between rounded-md border border-gray-300 bg-white px-2.5 py-2 text-base font-normal text-gray-700 shadow-sm transition-colors hover:border-gray-600 hover:bg-gray-50 focus:outline-none">
+      <span>All Projects</span>
+      <span class="material-symbols-outlined icon-16 text-Mdblue-700" aria-hidden="true">expand_more</span>
+    </button>
+
+    <div class="flex min-w-0 flex-1 items-center">
+      <div class="flex w-full overflow-hidden rounded-[5px] border border-gray-300 bg-white">
+        <input type="search" class="min-w-0 flex-1 border-0 bg-white py-2 pl-4 pr-2 pb-2.5 text-base font-normal leading-normal text-Mdblue-700 placeholder:text-gray-700 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600" placeholder="Search exports..." />
+        <button type="button" class="btn-focus inline-flex w-[2.625rem] shrink-0 items-center justify-center rounded-r-lg border-0 bg-white py-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none" aria-label="Search exports">
+          <span class="material-symbols-outlined icon-20" aria-hidden="true">search</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full overflow-x-auto" aria-label="Exports list">
+    <table class="w-full min-w-[67.875rem] table-fixed border-separate border-spacing-y-2 text-left text-sm text-Mdblue-700">
+      <thead>
+        <tr>
+          <th scope="col" class="w-[4.125rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+            <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select all exports" />
+          </th>
+          <th scope="col" class="w-[21.25rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+            <span class="inline-flex items-center gap-1 whitespace-nowrap">
+            File Name
+            <button type="button" class="press flex items-center justify-center p-0 text-gray-700" aria-label="Sort by File Name">
+              <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+            </button>
+          </span>
+          </th>
+          <th scope="col" class="w-[13.875rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+            <span class="inline-flex items-center gap-1 whitespace-nowrap">
+            Requested By
+            <button type="button" class="press flex items-center justify-center p-0 text-gray-700" aria-label="Sort by Requested By">
+              <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+            </button>
+          </span>
+          </th>
+          <th scope="col" class="w-[10.75rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+            <span class="inline-flex items-center gap-1 whitespace-nowrap">
+            Requested On
+            <button type="button" class="press flex items-center justify-center p-0 text-gray-700" aria-label="Sort by Requested On">
+              <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+            </button>
+          </span>
+          </th>
+          <th scope="col" class="w-[8.25rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+            <span class="inline-flex items-center gap-1 whitespace-nowrap">
+            Export Type
+            <button type="button" class="press flex items-center justify-center p-0 text-gray-700" aria-label="Sort by Export Type">
+              <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+            </button>
+          </span>
+          </th>
+          <th scope="col" class="w-[5.5625rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+            <span class="inline-flex items-center gap-1 whitespace-nowrap">
+            File Size
+            <button type="button" class="press flex items-center justify-center p-0 text-gray-700" aria-label="Sort by File Size">
+              <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+            </button>
+          </span>
+          </th>
+          <th scope="col" class="w-[7.0625rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle"><span class="sr-only">Download</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-orange-50 text-orange-700">Content</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex rounded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+          <tr class="rounded-[10px] bg-white outline outline-1 outline-gray-200">
+            <td class="px-6 py-4 align-middle">
+              <input type="checkbox" class="w-[1.125rem] shrink-0 cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-600 focus:ring-secondary-600 focus:ring-0 focus:ring-offset-0" aria-label="Select File Name" />
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-semibold leading-normal text-Mdblue-700">File Name</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">John Doe</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="block truncate text-base font-normal leading-normal text-Mdblue-700">2024/06/19, 3:45 PM</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-left">
+              <span class="inline-flex roun
+              ded px-2 pb-[3px] pt-0.5 text-base font-bold leading-normal bg-purple-50 text-purple-600">Case Export</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <span class="text-sm font-normal leading-normal text-Mdblue-700">3.4 KB</span>
+            </td>
+            <td class="px-6 py-4 align-middle text-right">
+              <button type="button" class="btn-focus inline-flex items-center gap-1 rounded-md border border-transparent bg-secondary-600 py-2 pl-2 pr-2.5 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                Download
+              </button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="flex w-full flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center space-x-2 text-sm font-semibold text-Mdblue-600">
+      <span>Showing</span>
+      <span class="rounded-full bg-white px-2.5 py-0.5 text-sm font-semibold">1-10</span>
+      <span>of</span>
+      <span class="rounded-full bg-white px-2.5 py-0.5 text-sm font-semibold">124</span>
+      <span>results</span>
+    </div>
+
+    <nav class="inline-flex items-center space-x-1" aria-label="Exports pagination">
+      <button type="button" class="btn-focus group relative flex w-10 min-w-10 items-center justify-center overflow-hidden rounded-full p-2 text-primary-600 hover:bg-white focus:outline-none" aria-label="Previous page">
+        <span class="material-symbols-outlined p-2 text-gray-600 group-hover:text-primary-600 icon-18" aria-hidden="true">keyboard_arrow_left</span>
+      </button>
+      <button type="button" class="btn-focus pointer-events-none relative flex w-10 min-w-10 items-center justify-center overflow-hidden rounded-full bg-white p-2 text-base font-semibold text-primary-600" aria-current="page">1</button>
+      <button type="button" class="btn-focus relative flex w-10 min-w-10 items-center justify-center overflow-hidden rounded-full p-2 text-base font-semibold text-primary-600 hover:bg-white focus:outline-none">2</button>
+      <button type="button" class="btn-focus relative flex w-10 min-w-10 items-center justify-center overflow-hidden rounded-full p-2 text-base font-semibold text-primary-600 hover:bg-white focus:outline-none">3</button>
+      <button type="button" class="btn-focus relative flex w-10 min-w-10 items-center justify-center overflow-hidden rounded-full p-2 text-base font-semibold text-primary-600 hover:bg-white focus:outline-none">...</button>
+      <button type="button" class="btn-focus relative flex w-10 min-w-10 items-center justify-center overflow-hidden rounded-full p-2 text-base font-semibold text-primary-600 hover:bg-white focus:outline-none">100</button>
+      <button type="button" class="btn-focus group relative flex w-10 min-w-10 items-center justify-center overflow-hidden rounded-full p-2 text-primary-600 hover:bg-white focus:outline-none" aria-label="Next page">
+        <span class="material-symbols-outlined p-2 text-gray-600 group-hover:text-primary-600 icon-18" aria-hidden="true">keyboard_arrow_right</span>
+      </button>
+    </nav>
+  </div>
+</main>
+
+
+<!--export cases modal start-->
+<div
+  tabindex="-1"
+  aria-modal="true"
+  role="dialog"
+  aria-labelledby="export-cases-modal-title"
+  class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4 backdrop-blur-sm">
+  <div class="flex max-h-[95vh] w-full max-w-[684px] flex-col rounded-lg bg-white p-12 shadow-lg">
+    <!-- Modal Header start -->
+    <div class="border-b border-gray-200 pb-4 text-center">
+      <h2 id="export-cases-modal-title" class="text-2xl font-semibold text-Mdblue-700">
+        Export cases from your current search...
+      </h2>
+      <div class="mt-4 text-left">
+        <div class="flex w-full items-center gap-1.5 rounded-lg bg-gray-100 pl-3">
+          <div class="flex shrink-0 items-center gap-1.5 border-r border-gray-300 py-[7px] pr-2">
+            <span class="material-symbols-outlined icon-20 text-Mdblue-700" aria-hidden="true">auto_awesome</span>
+          </div>
+          <div class="flex min-w-0 flex-1 items-center py-[7px]">
+            <span class="truncate px-1 py-0.5 text-base font-bold leading-normal text-Mdblue-700">
+              Cases were case name is John
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Header end -->
+
+    <!-- Modal Middle Content (Scrollable) start -->
+    <div class="max-h-[60vh] grow overflow-y-auto p-2">
+      <div class="mb-4 space-y-6">
+        <div>
+          <label for="export-cases-file-name" class="block text-lg font-medium text-Mdblue-700">
+            Give your file a name
+          </label>
+          <input
+            id="export-cases-file-name"
+            type="text"
+            placeholder="File Name..."
+            class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3.5 text-base font-normal text-Mdblue-700 placeholder:text-gray-700 hover:border-secondary-600 hover:bg-gray-50 focus:border-secondary-600 focus:outline-none focus:ring-1 focus:ring-secondary-600" />
+        </div>
+
+        <div>
+          <p class="block text-lg font-medium text-Mdblue-700">Pick a format</p>
+          <p class="text-sm text-Mdblue-600">
+            Vestibulum id ligula porta felis euismod semper.
+          </p>
+          <div class="mt-4 flex w-full items-stretch gap-4">
+            <div class="relative flex min-w-0 flex-1 flex-col">
+              <input type="radio" id="export-format-case" name="export-format" class="peer sr-only" checked />
+              <label
+                for="export-format-case"
+                class="relative flex w-full flex-1 cursor-pointer flex-col items-start rounded-lg border border-gray-200 px-4 py-6 transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-600/40 peer-checked:border-secondary-600 peer-checked:ring-1 peer-checked:ring-secondary-600/25">
+                <div class="flex w-full min-w-0 flex-col items-start gap-0 pr-8">
+                  <p class="text-base font-semibold text-Mdblue-700">One row per case</p>
+                </div>
+              </label>
+              <span
+                class="material-symbols-outlined pointer-events-none absolute right-3 top-3 z-10 icon-20 text-secondary-700 opacity-0 peer-checked:opacity-100"
+                aria-hidden="true">check_circle</span>
+            </div>
+            <div class="relative flex min-w-0 flex-1 flex-col">
+              <input type="radio" id="export-format-party" name="export-format" class="peer sr-only" />
+              <label
+                for="export-format-party"
+                class="relative flex w-full flex-1 cursor-pointer flex-col items-start rounded-lg border border-gray-200 px-4 py-6 transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-600/40 peer-checked:border-secondary-600 peer-checked:ring-1 peer-checked:ring-secondary-600/25">
+                <div class="flex w-full min-w-0 flex-col items-start gap-0 pr-8">
+                  <p class="text-base font-semibold text-Mdblue-700">One row per party</p>
+                </div>
+              </label>
+              <span
+                class="material-symbols-outlined pointer-events-none absolute right-3 top-3 z-10 icon-20 text-secondary-700 opacity-0 peer-checked:opacity-100"
+                aria-hidden="true">check_circle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Middle Content (Scrollable) end -->
+
+    <!-- Modal Footer start -->
+    <div class="flex grow items-center justify-between border-t border-gray-200 pt-4">
+      <button
+        type="button"
+        class="btn-focus rounded-md border-0 bg-transparent px-2 py-2 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200">
+        Cancel
+      </button>
+      <button
+        type="button"
+        class="btn-focus flex items-center justify-center rounded border border-transparent bg-secondary-600 px-4 py-2 text-sm font-semibold text-white hover:bg-secondary-800 focus:outline-none">
+        Export it
+      </button>
+    </div>
+    <!-- Modal Footer end -->
+  </div>
+</div>
+<!--export cases modal end-->
