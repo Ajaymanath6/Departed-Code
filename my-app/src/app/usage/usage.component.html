@@ -1,0 +1,453 @@
+<main class="flex w-full flex-col gap-4 bg-white px-8 pb-8 pt-4">
+  <!-- Header, filters, chip -->
+  <div class="flex w-full flex-col gap-2">
+    <div class="flex w-full flex-col gap-4">
+      <div class="flex w-full flex-col items-center gap-2">
+        <div class="flex w-full flex-col items-stretch gap-3 py-2 text-center">
+          <h1 class="m-0 font-lora text-thirtytwo font-semibold text-Mdblue-700">Usage Reports</h1>
+          <p class="m-0 text-lg font-normal leading-normal text-Mdblue-700">
+            View and export detailed activity and charges across products.
+          </p>
+        </div>
+
+        <ul role="tablist" aria-label="Usage report type"
+          class="m-0 inline-flex list-none flex-wrap items-center gap-1.5 rounded-lg border border-gray-300 bg-gray-100 p-1">
+          <li>
+            <button type="button" role="tab" [attr.aria-selected]="activeTab === 'activity'"
+              class="rounded px-3 py-[3px] text-base leading-normal" [ngClass]="
+                activeTab === 'activity'
+                  ? 'bg-white font-semibold text-primary-600 shadow-md'
+                  : 'bg-transparent font-normal text-Mdblue-700'
+              " (click)="setActiveTab('activity')">
+              Activity Report
+            </button>
+          </li>
+          <li>
+            <button type="button" role="tab" [attr.aria-selected]="activeTab === 'document'"
+              class="rounded px-3 py-[3px] text-base leading-normal" [ngClass]="
+                activeTab === 'document'
+                  ? 'bg-white font-semibold text-primary-600 shadow-md'
+                  : 'bg-transparent font-normal text-Mdblue-700'
+              " (click)="setActiveTab('document')">
+              Document Download Report
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex w-full flex-wrap items-center justify-between gap-2.5">
+        <div class="flex flex-wrap items-center gap-2">
+          <button *ngFor="let filter of filterDropdowns" type="button"
+            class="inline-flex items-center justify-between rounded border border-gray-300 bg-white px-3 py-1 text-sm font-medium text-Mdblue-700 shadow-sm transition-colors hover:border-gray-600 hover:bg-gray-50 focus:outline-none">
+            <span class="flex items-center gap-2">
+              <span *ngIf="filter.showProductIcon" class="material-symbols-outlined icon-18 text-Mdblue-700"
+                aria-hidden="true">
+                grid_view
+              </span>
+              <span>{{ filter.label }}</span>
+            </span>
+            <span class="material-symbols-outlined icon-18 ms-1 text-Mdblue-700" aria-hidden="true">
+              keyboard_arrow_down
+            </span>
+          </button>
+        </div>
+
+        <button type="button"
+          class="inline-flex shrink-0 items-center gap-1 rounded-md border-[1.5px] border-gray-300 bg-white py-2 pl-2 pr-2.5 text-base font-semibold leading-normal text-gray-900 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16 text-Mdblue-700" aria-hidden="true">ios_share</span>
+          Export CSV
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-1 flex flex-wrap items-center gap-2 text-Mdblue-700 sm:gap-4">
+      <div
+        class="max-w-full animate-fadeIn bg-primary-50 flex items-center gap-2 rounded-full border border-primary-600 px-2 py-1 text-sm font-medium text-Mdblue-700">
+        <span class="flex items-center gap-1 min-w-0 flex-1">
+          <span class="font-bold whitespace-nowrap">Report Date</span>
+          <span class="mx-1 h-4 w-px bg-Mdblue-700"></span>
+          <span class="font-medium truncate">{{ reportDateChipValue }}</span>
+        </span>
+        <span class="flex flex-shrink-0 items-center justify-center p-0.5 text-primary-700/70" aria-hidden="true">
+          <span class="material-symbols-outlined icon-18">close</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="activeTab === 'activity'" class="flex w-full flex-col gap-4">
+    <!-- Activity usage report -->
+    <section aria-label="Activity usage" class="w-full rounded-xl border border-gray-200 bg-gray-50 p-4">
+      <div class="flex flex-col gap-2">
+        <!-- Column headers on gray panel -->
+        <table class="w-full table-fixed border-collapse">
+          <thead>
+            <tr>
+              <th scope="col"
+                class="px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700">
+                <span class="inline-flex items-center gap-1">
+                  Activity
+                  <button type="button" aria-label="Sort by Activity" class="inline-flex p-0 text-gray-700">
+                    <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+                  </button>
+                </span>
+              </th>
+              <th scope="col"
+                class="px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700">
+                monthly Usage / &nbsp;&nbsp;Limit
+              </th>
+              <th scope="col"
+                class="px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700">
+                Overage
+              </th>
+            </tr>
+          </thead>
+        </table>
+
+        <!-- Data rows in white card -->
+        <div class="overflow-hidden rounded-xl border border-gray-200 bg-white">
+          <table class="w-full table-fixed border-collapse">
+            <tbody>
+              <tr *ngFor="let row of usageTableRows" class="border-b border-gray-200 bg-white"
+                [class.border-b-0]="row.hideBorder">
+                <td *ngIf="row.kind === 'section'" colspan="3"
+                  class="h-14 px-6 py-2 text-left text-lg font-normal leading-normal text-gray-700">
+                  {{ row.title }}
+                </td>
+                <td *ngIf="row.kind === 'activity'"
+                  class="px-6 py-2 align-middle text-left text-base font-semibold leading-normal text-Mdblue-700">
+                  {{ row.activity?.name }}
+                </td>
+                <td *ngIf="row.kind === 'activity'" class="px-6 py-2 align-middle text-left">
+                  <div class="flex flex-col gap-0.5">
+                    <p class="m-0 text-base font-semibold leading-normal text-Mdblue-700">
+                      <span>{{ formatNumber(row.activity!.used) }}</span>
+                      <span class="font-normal text-gray-600">/{{ formatNumber(row.activity!.limit) }}</span>
+                    </p>
+                    <div class="relative h-4 w-64 max-w-full">
+                      <div
+                        class="absolute left-0 top-[5px] h-1.5 w-64 max-w-full overflow-hidden rounded-r-full bg-gray-300"
+                        role="progressbar" [attr.aria-valuenow]="row.activity!.used" [attr.aria-valuemin]="0"
+                        [attr.aria-valuemax]="row.activity!.limit" [attr.aria-label]="row.activity!.name + ' usage'">
+                        <div class="h-1.5 rounded-full bg-primary-600" [style.width.%]="row.activity!.barPercent"></div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td *ngIf="row.kind === 'activity'"
+                  class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  {{ formatNumber(row.activity!.overage) }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bulk Limit -->
+    <section aria-label="Bulk Limit" class="flex w-full flex-col gap-4">
+      <h2 class="m-0 text-lg font-semibold leading-normal text-Mdblue-700">Bulk Limit</h2>
+      <div class="w-full rounded-xl border border-gray-200">
+        <div
+          class="flex h-[170px] items-center justify-center rounded-xl border border-gray-200 bg-gray-50 p-4 text-lg font-semibold leading-normal text-gray-700">
+          No Bulk Limits Data
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div *ngIf="activeTab === 'document'" class="flex w-full flex-col gap-4">
+    <!-- Document download report -->
+    <section aria-label="Document Download Report" class="w-full rounded-xl border border-gray-200 bg-gray-50 p-4">
+      <div class="flex flex-col gap-2">
+        <div class="w-full overflow-x-auto">
+          <table class="w-full min-w-[71.37rem] table-fixed border-collapse">
+            <thead>
+              <tr>
+                <th scope="col"
+                  class="w-[11.43rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+                  <span class="inline-flex items-center gap-1 whitespace-nowrap">
+                    Client
+                    <button type="button" aria-label="Sort by Client" class="inline-flex p-0 text-gray-700">
+                      <span class="material-symbols-outlined icon-16" aria-hidden="true">unfold_more</span>
+                    </button>
+                  </span>
+                </th>
+                <th scope="col"
+                  class="w-[29.5rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+                  document
+                </th>
+                <th scope="col"
+                  class="w-[25.31rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+                  case
+                </th>
+                <th scope="col"
+                  class="w-[5.12rem] px-6 py-2 text-left text-sm font-semibold uppercase leading-none tracking-[0.04em] text-gray-700 align-middle">
+                  Price
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Minute Order (Hearing on Motion to Seal Notice of Motion and...</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et
+                    al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$1,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Case Management Statement</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et
+                    al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$12,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Order re: Case Management Conference</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et
+                    al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$13,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Proof of Service (Electronic Service)</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et
+                    al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$12,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Memorandum of Points &amp; Authorities</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et
+                    al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$54,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Reply in Support of Motion to Compel SROGs</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et
+                    al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$12,25</span>
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Declaration DECLARATION OF CHARLOTEE ACERO IN SUPPORT...</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et
+                    al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$10,25</span>
+                </td>
+              </tr>
+              <tr class="border-b-0 bg-white">
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">2026-05-01, 12:30PM</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-base font-normal leading-normal text-Mdblue-700">
+                  <span class="block truncate">Ex Parte Proposed Order</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-normal leading-normal">
+                  <span class="block truncate text-Mdblue-700">PETER ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et
+                    al</span>
+                </td>
+                <td class="px-6 py-2 align-middle text-left text-sm font-semibold leading-normal text-Mdblue-700">
+                  <span class="block truncate">$9,25</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!--workspace dropdown start-->
+workspace dropdown
+<div class="cust-drop z-10 flex w-[30rem] flex-col overflow-hidden rounded-lg bg-white font-sans ">
+  <div class="p-4">
+    <div class="flex h-[42px] w-full items-center gap-2.5 rounded-lg border border-gray-300 bg-white px-4 py-2.5">
+      <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <input type="text" placeholder="Search by workspace name or ID..."
+        class="font-sans flex-1 border-none bg-transparent text-sm font-normal leading-[140%] text-Mdblue-700 shadow-none outline-none placeholder:text-gray-500 focus:outline-none focus:ring-0">
+    </div>
+  </div>
+  <div class="h-60 overflow-y-auto">
+    <div class="sticky top-0 z-10 bg-gray-50 px-4 py-2">
+      <span class="text-[11px] font-semibold uppercase leading-[140%] tracking-wider text-gray-500">ALL
+        WORKSPACES</span>
+    </div>
+    <ul>
+      <li>
+        <button type="button"
+          class="font-sans flex w-full cursor-pointer items-start gap-3 border-none bg-gray-100 px-5 py-3 text-left transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-20 Mdblue-fill-600 shrink-0 leading-[140%]"
+            aria-label="folder_copy">folder_copy</span>
+          <div class="flex flex-col gap-0.5">
+            <span class="text-sm font-normal leading-[140%] text-Mdblue-700"></span>
+            <span class="text-xs leading-[140%]">
+              <span class="font-semibold text-Mdblue-700">All Workspaces</span>
+            </span>
+          </div>
+        </button>
+      </li>
+      <li>
+        <button type="button"
+          class="font-sans flex w-full cursor-pointer items-start gap-3 border-none bg-white px-5 py-3 text-left transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-20 Mdblue-fill-600 shrink-0 leading-[140%]"
+            aria-label="folder_copy">folder_copy</span>
+          <div class="flex flex-col gap-0.5">
+            <span class="text-sm font-normal leading-[140%] text-Mdblue-700">Sharwin Leston Mendonca</span>
+            <span class="text-xs leading-[140%]">
+              <span class="font-semibold text-Mdblue-700">xpf28333</span>
+            </span>
+          </div>
+        </button>
+      </li>
+      <li>
+        <button type="button"
+          class="font-sans flex w-full cursor-pointer items-start gap-3 border-none bg-white px-5 py-3 text-left transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-20 Mdblue-fill-600 shrink-0 leading-[140%]"
+            aria-label="folder_copy">folder_copy</span>
+          <div class="flex flex-col gap-0.5">
+            <span class="text-sm font-normal leading-[140%] text-Mdblue-700">Sujaya K S</span>
+            <span class="text-xs leading-[140%]">
+              <span class="font-semibold text-Mdblue-700">xpf41257</span>
+            </span>
+          </div>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--workspace dropdown end-->
+
+<!--product dropdown start-->
+<div class="cust-drop z-10 min-w-[180px] overflow-visible bg-white rounded-2xl shadow-lg block- hidden"
+  data-popper-placement="bottom"><button type="button"
+    class="w-full flex items-center gap-3 px-5 py-3 border-none transition-colors text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:hover:bg-white cursor-pointer rounded-t-2xl ng-star-inserted"><svg
+      viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5 text-Mdblue-700 inline-block align-middle ng-star-inserted">
+      <circle cx="5" cy="5" r="2" fill="#2F55D9"></circle>
+      <circle cx="12" cy="5" r="2" fill="#2F55D9"></circle>
+      <circle cx="19" cy="5" r="2" fill="#2F55D9"></circle>
+      <circle cx="5" cy="12" r="2" fill="#2F55D9"></circle>
+      <circle cx="12" cy="12" r="2" fill="#2F55D9"></circle>
+      <circle cx="19" cy="12" r="2" fill="#2F55D9"></circle>
+      <circle cx="5" cy="19" r="2" fill="#2F55D9"></circle>
+      <circle cx="12" cy="19" r="2" fill="#2F55D9"></circle>
+      <circle cx="19" cy="19" r="2" fill="#2F55D9"></circle>
+    </svg><!----><span
+      class="text-sm font-normal leading-[140%] text-Mdblue-700 font-['IBM_Plex_Sans']">All
+      Products</span></button><button type="button"
+    class="w-full flex items-center gap-3 px-5 py-3 border-none transition-colors text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:hover:bg-white cursor-pointer ng-star-inserted bg-gray-100"><!----><svg
+      viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0 ng-star-inserted">
+      <path
+        d="M29.1388 3.47343C30.1173 2.01967 29.1388 0 27.4561 0H2.07246C0.389825 0.0014183 -0.588677 2.02109 0.389825 3.47343L5.31594 10.7876H24.2099L29.136 3.47343H29.1388Z"
+        fill="#8AD082"></path>
+      <path
+        d="M27.4563 10.7876H24.2114L16.8971 21.6476C15.8514 23.2006 13.6774 23.2006 12.6317 21.6476L5.31747 10.7876H2.07259C0.389961 10.7876 -0.588541 12.8073 0.391361 14.2611L12.6331 32.4352C13.6788 33.9883 15.8528 33.9883 16.8985 32.4352L29.1403 14.2611C30.1188 12.8073 29.1403 10.7876 27.4577 10.7876H27.4563Z"
+        fill="#016323"></path>
+      <path
+        d="M16.8972 21.6476L24.2114 10.7876H5.31751L12.6318 21.6476C13.6775 23.2006 15.8515 23.2006 16.8972 21.6476Z"
+        fill="#2EA24C"></path>
+    </svg><span
+      class="text-sm font-normal leading-[140%] text-Mdblue-700 font-['IBM_Plex_Sans']">DART</span></button><!---->
+  <div tabindex="-1" class="relative ng-star-inserted"><button type="button"
+      class="w-full flex items-center gap-3 px-5 py-3 border-none transition-colors text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 cursor-pointer rounded-b-2xl"><svg
+        viewBox="0 0 37 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0">
+        <path
+          d="M15.4657 11.9965C17.0279 11.0432 19.5617 11.0432 21.1239 11.9965L35.4165 20.7148C36.9787 21.6681 36.9787 23.2122 35.4165 24.1655L21.1239 32.8838C19.5617 33.8371 17.0279 33.8371 15.4657 32.8838L1.17168 24.1655C-0.390561 23.2122 -0.390561 21.6681 1.17168 20.7148L15.4657 11.9965Z"
+          fill="#2346AF"></path>
+        <path
+          d="M15.4657 0.714979C17.0279 -0.238326 19.5617 -0.238326 21.1239 0.714979L35.4179 9.43331C36.9801 10.3866 36.9801 11.9307 35.4179 12.884L21.1239 21.6023C19.5617 22.5556 17.0279 22.5556 15.4657 21.6023L1.17168 12.884C-0.390561 11.9307 -0.390561 10.3866 1.17168 9.43331L15.4657 0.714979Z"
+          fill="#ACBEFF"></path>
+        <path
+          d="M15.4657 11.9965C17.0279 11.0432 19.5617 11.0432 21.1239 11.9965L28.9981 16.7994L21.1239 21.6023C19.5617 22.5556 17.0279 22.5556 15.4657 21.6023L7.59144 16.7994L15.4657 11.9965Z"
+          fill="#5878E6"></path>
+      </svg><span class="text-sm font-normal leading-[140%] text-Mdblue-700 font-['IBM_Plex_Sans']">DEEP</span><svg
+        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="w-4 h-4 text-Mdblue-700 ml-auto transition-transform duration-200">
+        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        </path>
+      </svg></button>
+    <div class="absolute top-0 z-20 flex items-start pl-2 left-[calc(100%-0.5rem)] hidden">
+      <div class="min-w-[180px] overflow-hidden rounded-2xl bg-white shadow-lg"><button type="button"
+          class="w-full flex items-center gap-3 px-5 py-3 border-none transition-colors text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-t-2xl"><svg
+            xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+            <path
+              d="m480-400-80-80 80-80 80 80-80 80Zm-85-235L295-735l185-185 185 185-100 100-85-85-85 85ZM225-295 40-480l185-185 100 100-85 85 85 85-100 100Zm510 0L635-395l85-85-85-85 100-100 185 185-185 185ZM480-40 295-225l100-100 85 85 85-85 100 100L480-40Z">
+            </path>
+          </svg><span
+            class="text-sm font-normal leading-[140%] text-Mdblue-700 font-['IBM_Plex_Sans']">API</span></button><button
+          type="button"
+          class="w-full flex items-center gap-3 px-5 py-3 border-none transition-colors text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-b-2xl"><svg
+            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-Mdblue-700">
+            <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"></rect>
+            <path d="M8 10h8M8 14h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          </svg><span
+            class="text-sm font-normal leading-[140%] text-Mdblue-700 font-['IBM_Plex_Sans']">WIDGET</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--product dropdown end-->

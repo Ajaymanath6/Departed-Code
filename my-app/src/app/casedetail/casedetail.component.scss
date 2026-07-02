@@ -11,3 +11,17 @@
   height: 9.25rem !important;
   flex-grow: 0 !important;
 }
+
+.judgment-award-donut {
+  width: 15rem;
+  height: 15rem;
+  min-width: 15rem;
+  flex-shrink: 0;
+}
+
+.judgment-award-donut > div,
+.judgment-award-donut canvas {
+  width: 15rem !important;
+  height: 15rem !important;
+  flex-grow: 0 !important;
+}

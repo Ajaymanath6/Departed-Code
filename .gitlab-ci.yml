@@ -2,11 +2,21 @@ default:
   image: node:20-bookworm-slim
   tags:
     - app_shared_runner
+  interruptible: true
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - stuck_or_timeout_failure
+      - scheduler_failure
 
 variables:
   NPM_CONFIG_CACHE: "$CI_PROJECT_DIR/.npm"
-  # Do not set HOME to CI_PROJECT_DIR — git cannot lock .gitconfig there during checkout.
+  # Writable home for non-root job pods; avoids git .gitconfig lock errors during checkout.
   HOME: "/tmp"
+  # Prevent parent NODE_PATH from leaking into npm/ng on shared runners.
+  NODE_PATH: ""
+  GIT_DEPTH: "1"
 
 stages:
   - build
@@ -23,11 +33,14 @@ cache:
 
 build_angular:
   stage: build
+  timeout: 25m
   script:
     - mkdir -p "$NPM_CONFIG_CACHE"
+    - unset NODE_PATH || true
+    - test -f my-app/custom-webpack.config.js || (echo "Missing my-app/custom-webpack.config.js (required by angular.json)" && exit 1)
     - cd my-app
     - npm ci
-    - npx @angular/cli@15.2.10 build --configuration production --base-href ./
+    - npm run build -- --configuration production --base-href ./
   artifacts:
     expire_in: 1 week
     paths:
@@ -38,6 +51,7 @@ build_angular:
 pages:
   stage: deploy
   needs: [build_angular]
+  timeout: 10m
   before_script: []
   script:
     - rm -rf public

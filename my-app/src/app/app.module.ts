@@ -40,6 +40,8 @@ import { EmailTempTestComponent } from './email-temp-test/email-temp-test.compon
 import { DocumentOrderComponent } from './document-order/document-order.component';
 import { MotionComponent } from './motion/motion.component';
 import { CasedetailComponent } from './casedetail/casedetail.component';
+import { UsageComponent } from './usage/usage.component';
+import { ExportsComponent } from './exports/exports.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,8 @@ import { CasedetailComponent } from './casedetail/casedetail.component';
     DocumentOrderComponent,
     MotionComponent,
     CasedetailComponent,
+    UsageComponent,
+    ExportsComponent,
   ],
   imports: [
     BrowserModule,
