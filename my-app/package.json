@@ -2,9 +2,11 @@
   "name": "my-app",
   "version": "0.0.0",
   "scripts": {
-    "ng": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js",
+    "ng": "env -u NODE_PATH node ./scripts/check-node-env.js && env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js",
     "doctor": "node ./scripts/check-node-env.js",
-    "start": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js serve --port 4202",
+    "prestart": "node ./scripts/check-node-env.js",
+    "start": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js serve --host 0.0.0.0 --port 4000 --disable-host-check",
+    "prebuild": "node ./scripts/check-node-env.js",
     "build": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js build",
     "watch": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js build --watch --configuration development",
     "test": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js test",
@@ -33,6 +35,7 @@
     "zone.js": "0.12.0"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^15.0.0",
     "@angular-devkit/build-angular": "15.2.10",
     "@angular/cli": "15.2.10",
     "@angular/compiler-cli": "15.2.10",

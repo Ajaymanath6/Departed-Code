@@ -1,6 +1,6 @@
 /**
  * Dev server proxy: /api-agent/* -> http://localhost:4302/*
- * Avoids CORS when the Angular app (e.g. localhost:4202) calls the A2UI agent.
+ * Avoids CORS when the Angular app (e.g. localhost:4000) calls the A2UI agent.
  * Restart ng serve after changes. Ensure the agent is running: curl http://localhost:4302/api/ui/user-settings
  */
 const PROXY_TARGET = 'http://localhost:4302';
