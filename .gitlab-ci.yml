@@ -1,9 +1,7 @@
 default:
-  # app_shared_runner / gitlab-org-medium job pods fail Kyverno (init-permissions runs as root).
-  # code_quality runner starts without those pod policy violations on this cluster.
   image: node:20-bookworm-slim
   tags:
-    - code_quality
+    - app_shared_runner
   interruptible: true
   retry:
     max: 2
