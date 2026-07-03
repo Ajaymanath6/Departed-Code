@@ -19,8 +19,8 @@ declare const echarts: {
   styleUrls: ['./casedetail.component.scss'],
 })
 export class CasedetailComponent implements AfterViewInit, OnDestroy {
-  /** Tracks which hearing accordion row is expanded. */
-  activeHearingPanel: number | null = 0;
+  /** Tracks which hearing accordion rows are expanded. */
+  private readonly openHearingPanels = new Set<number>([0, 1]);
 
   /** Tracks which motion accordion row is expanded. */
   activeMotionPanel: number | null = 0;
@@ -48,12 +48,15 @@ export class CasedetailComponent implements AfterViewInit, OnDestroy {
   };
 
   toggleHearingPanel(panelIndex: number): void {
-    this.activeHearingPanel =
-      this.activeHearingPanel === panelIndex ? null : panelIndex;
+    if (this.openHearingPanels.has(panelIndex)) {
+      this.openHearingPanels.delete(panelIndex);
+    } else {
+      this.openHearingPanels.add(panelIndex);
+    }
   }
 
   isHearingPanelOpen(panelIndex: number): boolean {
-    return this.activeHearingPanel === panelIndex;
+    return this.openHearingPanels.has(panelIndex);
   }
 
   toggleMotionPanel(panelIndex: number): void {
