@@ -853,171 +853,182 @@
 </div>
 <!--complaint tab end-->
 
-<!--hearings tab start-->
-
-
-<h4>Hearings(1)</h4>
+<!--hearings tab first start-->
+<h4 class="mt-6 ml-8">Hearings tab</h4>
 <div class="flex flex-col gap-4 px-8 pb-12 pt-4">
-  <div
-    class="rounded-xl border border-default shadow-xs overflow-hidden flex flex-col divide-y divide-gray-200 bg-white alert-configuration"
-  >
-    <div class="flex flex-col">
-      <div class="flex justify-between px-4 py-4">
-        <div class="flex justify-between gap-2">
-          <div class="flex items-center gap-2">
-            <button
-              type="button"
-              (click)="toggleHearingPanel(0)"
-              class="ms-1 flex items-center rounded border-0 bg-transparent p-0 text-Mdblue-700 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
-              [attr.aria-expanded]="isHearingPanelOpen(0)"
-              aria-label="Show or hide hearing details"
-            >
-              <span iconsize="18" class="material-symbols-outlined icon-18" aria-hidden="true">{{
-                isHearingPanelOpen(0) ? 'keyboard_arrow_down' : 'keyboard_arrow_right'
-              }}</span>
-            </button>
-          </div>
-          <div class="flex min-w-0 flex-1 gap-3 items-center">
-            <div
-              aria-hidden="true"
-              class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2 text-Mdblue-700"
-            >
-              <span class="material-symbols-outlined icon-20 text-Mdblue-700">gavel</span>
-            </div>
-            <div class="flex flex-1 flex-col gap-1">
-              <div class="flex items-center gap-1 text-primary-600">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="#"
-                  class="text-base font-semibold text-Mdblue-700 hover:text-primary-600 cursor-pointer"
+  <!-- Current hearing -->
+  <div class="flex flex-col gap-4 overflow-hidden rounded-xl border border-gray-300 bg-white px-4 pb-4">
+    <div class="flex items-center gap-4 pt-4 pb-0 pl-px pr-0">
+      <button
+        type="button"
+        (click)="toggleHearingPanel(0)"
+        class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
+        [attr.aria-expanded]="isHearingPanelOpen(0)"
+        aria-label="Show or hide hearing details"
+      >
+        <span class="material-symbols-outlined icon-24" aria-hidden="true">{{
+          isHearingPanelOpen(0) ? 'keyboard_arrow_down' : 'chevron_right'
+        }}</span>
+      </button>
+      <div
+        aria-hidden="true"
+        class="inline-flex shrink-0 self-stretch items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
+      >
+        <span class="material-symbols-outlined icon-24 text-Mdblue-700">gavel</span>
+      </div>
+      <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+        <span class="text-base font-semibold leading-[1.4] text-Mdblue-700"
+          >Hearing on Motion for Summary Judgment</span
+        >
+        <div class="flex flex-row flex-wrap items-center gap-x-4 gap-y-1">
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
+            >Hearing Date: <span class="font-normal">2027-03-21</span></span
+          >
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
+            >Judge:
+            <a href="#" class="font-semibold text-primary-600 hover:underline">Somnath Raj Chatterjee</a></span
+          >
+        </div>
+      </div>
+      <span
+        class="inline-flex shrink-0 items-center justify-center rounded-full bg-primary-50 px-2.5 py-0.5 text-sm font-semibold leading-[1.4] text-Mdblue-700"
+        >Current</span
+      >
+    </div>
+
+    <div *ngIf="isHearingPanelOpen(0)">
+      <div class="rounded-lg bg-gray-50 p-4">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-stretch">
+          <div class="flex min-w-0 flex-1 flex-col rounded-lg border border-gray-300 bg-white p-4">
+            <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Court Information</h3>
+            <div class="mt-2 flex flex-col gap-4">
+              <div class="flex flex-col gap-1">
+                <span class="text-sm font-semibold leading-[1.4] text-gray-500">Court Room</span>
+                <span class="text-sm font-semibold leading-[1.4] text-Mdblue-700">517</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="text-sm font-semibold leading-[1.4] text-gray-500">Location</span>
+                <span class="text-sm font-semibold leading-[1.4] text-Mdblue-700">Hayward Hall of Justice</span>
+                <span class="text-sm font-normal leading-[1.4] text-Mdblue-700"
+                  >24405 Amador St, Hayward, CA 94544</span
                 >
-                  Hearing on Motion for Summary Judgment
-                </a>
               </div>
-              <div class="flex flex-row items-center gap-4">
-                <div class="flex items-center gap-1">
-                  <span class="text-sm font-bold text-Mdblue-700">Type:</span>
-                  <span class="text-sm font-normal text-Mdblue-700">Regular Oral Argument</span>
-                </div>
-                <div class="flex items-center gap-1">
-                  <span class="text-sm font-bold text-Mdblue-700">Hearing Date:</span>
-                  <span class="text-sm font-normal text-Mdblue-700">2025-03-21</span>
-                </div>
-                <div class="flex items-center gap-1">
-                  <span class="text-sm font-bold text-Mdblue-700">Judge:</span>
-                  <a tabindex="0" class="text-sm font-bold text-primary-600 hover:underline cursor-pointer"
-                    >Somnath Raj Chatterjee</a
-                  >
-                </div>
-              </div>
+            </div>
+          </div>
+
+          <div class="flex min-w-0 flex-1 flex-col rounded-lg border border-gray-300 bg-white p-4">
+            <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Participants</h3>
+            <div class="mt-2 flex items-start gap-1">
+              <span class="material-symbols-outlined icon-20 shrink-0 text-gray-500" aria-hidden="true">info</span>
+              <p class="text-base font-normal leading-[1.4] text-gray-600">
+                Participants list is available after the hearing takes place.
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div *ngIf="isHearingPanelOpen(0)" class="px-4 pb-4">
-        <div class="border-t border-gray-200 rounded-lg bg-gray-50 py-4 pr-4 pl-0">
-          <div class="flex flex-col gap-4">
-            <div class="flex flex-row items-stretch gap-4 pl-4">
-              <div class="flex min-w-0 flex-1 flex-col">
-                <div class="flex flex-1 flex-col rounded-xl bg-white">
-                  <div class="flex flex-1 flex-col self-stretch rounded-lg border border-gray-200 p-4">
-                    <div class="flex flex-col gap-4">
-                      <span class="text-base font-semibold text-Mdblue-700">Participants</span>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex flex-col gap-1">
-                          <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                          <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                          <span class="text-sm font-normal italic text-Mdblue-700">Plaintiff</span>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                          <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                          <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  <!-- Past hearing -->
+  <div class="flex flex-col gap-4 overflow-hidden rounded-xl border border-gray-300 bg-white px-4 pb-4">
+    <div class="flex items-center gap-4 pt-4 pb-0 pl-px pr-0">
+      <button
+        type="button"
+        (click)="toggleHearingPanel(1)"
+        class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
+        [attr.aria-expanded]="isHearingPanelOpen(1)"
+        aria-label="Show or hide hearing details"
+      >
+        <span class="material-symbols-outlined icon-24" aria-hidden="true">{{
+          isHearingPanelOpen(1) ? 'keyboard_arrow_down' : 'chevron_right'
+        }}</span>
+      </button>
+      <div
+        aria-hidden="true"
+        class="inline-flex shrink-0 self-stretch items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
+      >
+        <span class="material-symbols-outlined icon-24 text-Mdblue-700">gavel</span>
+      </div>
+      <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+        <span class="text-base font-semibold leading-[1.4] text-Mdblue-700"
+          >Hearing on Motion for Summary Judgment</span
+        >
+        <div class="flex flex-row flex-wrap items-center gap-x-4 gap-y-1">
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
+            >Hearing Date: <span class="font-normal">2025-03-21</span></span
+          >
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700"
+            >Judge:
+            <a href="#" class="font-semibold text-primary-600 hover:underline">Somnath Raj Chatterjee</a></span
+          >
+        </div>
+      </div>
+      <span
+        class="inline-flex min-w-[4.375rem] shrink-0 items-center justify-center rounded-full bg-gray-100 px-2.5 py-0.5 text-sm font-semibold leading-[1.4] text-Mdblue-700"
+        >Past</span
+      >
+    </div>
+
+    <div *ngIf="isHearingPanelOpen(1)">
+      <div class="rounded-lg bg-gray-50 p-4">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-stretch">
+          <div class="flex min-w-0 flex-1 flex-col rounded-lg border border-gray-300 bg-white p-4">
+            <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Court Information</h3>
+            <div class="mt-2 flex flex-col gap-4">
+              <div class="flex flex-col gap-1">
+                <span class="text-sm font-semibold leading-[1.4] text-gray-500">Court</span>
+                <span class="text-sm font-semibold leading-[1.4] text-Mdblue-700"
+                  >California - Los Angeles County Superior Courts</span
+                >
               </div>
-
-              <div class="flex min-w-0 flex-1 flex-col">
-                <div class="flex flex-1 flex-col rounded-xl bg-white">
-                  <div class="flex flex-1 flex-col self-stretch rounded-lg border border-gray-200 p-4">
-                    <div class="flex flex-col gap-4">
-                      <span class="text-base font-semibold text-Mdblue-700">Court Information</span>
-                      <div class="flex flex-col gap-4">
-                        <div class="flex flex-col gap-1">
-                          <span class="text-sm font-semibold text-gray-500">Court</span>
-                          <span class="text-sm font-semibold text-Mdblue-700">
-                            California - Los Angeles County Superior Courts
-                          </span>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <span class="text-sm font-semibold text-gray-500">Dep</span>
-                          <span class="text-sm font-semibold text-Mdblue-700">517</span>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                          <span class="text-sm font-semibold text-gray-500">Location</span>
-                          <span class="text-sm font-semibold text-Mdblue-700">
-                            Hayward Hall of Justice<br />
-                            24405 Amador St, Hayward, CA 94544
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="flex flex-col gap-1">
+                <span class="text-sm font-semibold leading-[1.4] text-gray-500">Dep</span>
+                <span class="text-sm font-semibold leading-[1.4] text-Mdblue-700">517</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="text-sm font-semibold leading-[1.4] text-gray-500">Location</span>
+                <span class="text-sm font-semibold leading-[1.4] text-Mdblue-700">Hayward Hall of Justice</span>
+                <span class="text-sm font-normal leading-[1.4] text-Mdblue-700"
+                  >24405 Amador St, Hayward, CA 94544</span
+                >
               </div>
             </div>
+          </div>
 
-            <div class="flex flex-row items-stretch gap-4 pl-4">
-              <div class="flex min-w-0 flex-1 flex-col">
-                <div class="flex flex-col rounded-xl bg-white">
-                  <div class="flex flex-col self-stretch rounded-lg border border-gray-200 p-4">
-                    <div class="flex flex-col gap-4">
-                      <span class="text-base font-semibold text-Mdblue-700">History</span>
-                      <ul class="m-0 flex list-none flex-col gap-2 border-l border-gray-300 pl-4">
-                        <li class="relative flex min-w-0 items-start gap-4 py-0.5">
-                          <span
-                            aria-hidden="true"
-                            class="absolute -left-4 top-1.5 z-[1] size-2.5 -translate-x-1/2 rounded-full bg-gray-300"
-                          ></span>
-                          <time
-                            datetime="2025-03-21"
-                            class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
-                            >2025-03-21</time
-                          >
-                          <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
-                            Tentative Ruling — MSJ Tentatively Denied
-                          </span>
-                        </li>
-                        <li class="relative flex min-w-0 items-start gap-4">
-                          <span
-                            aria-hidden="true"
-                            class="absolute -left-4 top-1.5 z-[1] size-2.5 -translate-x-1/2 rounded-full bg-gray-300"
-                          ></span>
-                          <time
-                            datetime="2025-03-21"
-                            class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
-                            >2025-03-21</time
-                          >
-                          <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
-                            Hearing Held — Taken Under Submission
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+          <div class="flex min-w-0 flex-1 flex-col rounded-lg border border-gray-300 bg-white p-4">
+            <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">
+              Participants <span class="font-normal text-gray-600">(25)</span>
+            </h3>
+            <div class="mt-2 flex flex-col gap-4">
+              <div class="flex items-start justify-between gap-4">
+                <span class="min-w-0 text-base font-semibold leading-[1.4] text-Mdblue-700">ARISTIDES ROSARIO</span>
+                <span class="shrink-0 text-sm font-normal italic leading-[1.4] text-Mdblue-700">Defendant</span>
               </div>
+              <div class="flex items-start justify-between gap-4">
+                <span class="min-w-0 text-base font-semibold leading-[1.4] text-Mdblue-700">James Thomas</span>
+                <span class="shrink-0 text-sm font-normal italic leading-[1.4] text-Mdblue-700">Plaintiff</span>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <span class="min-w-0 text-base font-semibold leading-[1.4] text-Mdblue-700">Christine M. Miller</span>
+                <span class="shrink-0 text-sm font-normal leading-[1.4] text-Mdblue-700">Attorney</span>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <span class="min-w-0 text-base font-semibold leading-[1.4] text-Mdblue-700">Brandon T. Steven</span>
+                <span class="shrink-0 text-sm font-normal leading-[1.4] text-Mdblue-700">Attorney</span>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <span class="min-w-0 text-base font-semibold leading-[1.4] text-Mdblue-700">Tommy S. Loreen</span>
+                <span class="shrink-0 text-sm font-normal leading-[1.4] text-Mdblue-700">Party</span>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <span class="min-w-0 text-base font-semibold leading-[1.4] text-Mdblue-700">Samuel McDonalds</span>
+                <span class="shrink-0 text-sm font-normal leading-[1.4] text-Mdblue-700">Party</span>
+              </div>
+              <span
+                class="inline-flex w-fit items-center justify-center rounded-md bg-gray-100 px-2 py-1 text-[13px] font-semibold leading-[1.1] text-primary-600"
+                >+20</span
+              >
             </div>
           </div>
         </div>
@@ -1025,7 +1036,7 @@
     </div>
   </div>
 </div>
-<!--hearings tab end-->
+<!--hearings tab first end-->
 
 
 <!--motions tab start-->
@@ -1447,158 +1458,6 @@
   </div>
 </div>
 <!--motions tab end-->
-
-<!--hearings tab start-->
-<div class="flex flex-col gap-4 px-8 pb-12 pt-4">
-  <div
-    class="alert-configuration flex flex-col overflow-hidden rounded-xl border border-gray-300 bg-white shadow-xs"
-  >
-    <div class="flex flex-col gap-4" [class.pb-4]="isHearingPanelOpen(0)">
-      <div
-        class="flex items-center gap-4 px-4 pt-4"
-        [class.pb-0]="isHearingPanelOpen(0)"
-        [class.pb-4]="!isHearingPanelOpen(0)"
-      >
-        <button
-          type="button"
-          (click)="toggleHearingPanel(0)"
-          class="ms-1 flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300"
-          [attr.aria-expanded]="isHearingPanelOpen(0)"
-          aria-label="Show or hide hearing details"
-        >
-          <span iconsize="24" class="material-symbols-outlined icon-24" aria-hidden="true">{{
-            isHearingPanelOpen(0) ? 'keyboard_arrow_down' : 'keyboard_arrow_right'
-          }}</span>
-        </button>
-        <div
-          aria-hidden="true"
-          class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2"
-        >
-          <span class="material-symbols-outlined icon-20 text-Mdblue-700">gavel</span>
-        </div>
-        <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
-          <span class="text-base font-semibold text-Mdblue-700">Hearing on Motion for Summary Judgment</span>
-          <div class="flex flex-row flex-wrap gap-x-4 gap-y-1">
-            <span class="text-sm font-bold text-Mdblue-700"
-              >Type: <span class="font-normal">Regular Oral Argument</span></span
-            >
-            <span class="text-sm font-bold text-Mdblue-700"
-              >Hearing Date: <span class="font-normal">2025-03-21</span></span
-            >
-            <span class="text-sm font-bold text-Mdblue-700"
-              >Judge:
-              <a href="#" class="font-semibold text-primary-600 hover:underline">Somnath Raj Chatterjee</a></span
-            >
-          </div>
-        </div>
-      </div>
-
-      <div *ngIf="isHearingPanelOpen(0)" class="px-4 pb-4">
-        <div class="bg-gray-50 rounded-lg py-4 pr-4 pl-0">
-          <div class="flex flex-col gap-4">
-            <div class="flex flex-col gap-4 pl-4 lg:flex-row lg:items-stretch">
-              <!-- Participants -->
-              <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-                <div class="flex h-full flex-col rounded-lg border border-gray-300 p-4">
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-base font-semibold text-Mdblue-700">Participants</h3>
-                    <div class="flex flex-col gap-4">
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                        <span class="text-sm font-normal italic text-Mdblue-700">Defendant</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                        <span class="text-sm font-normal italic text-Mdblue-700">Plaintiff</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                        <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-Mdblue-700">Kia Motos America Inc.</span>
-                        <span class="text-sm font-normal italic text-Mdblue-700">Attorney</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Court Information -->
-              <div class="flex min-w-0 flex-1 flex-col rounded-xl bg-white">
-                <div class="flex h-full flex-col rounded-lg border border-gray-300 p-4">
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-base font-semibold text-Mdblue-700">Court Information</h3>
-                    <div class="flex flex-col gap-4">
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-gray-500">Court</span>
-                        <span class="text-sm font-semibold text-Mdblue-700"
-                          >California - Los Angeles County Superior Courts</span
-                        >
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-gray-500">Dep</span>
-                        <span class="text-sm font-semibold text-Mdblue-700">517</span>
-                      </div>
-                      <div class="flex flex-col gap-1">
-                        <span class="text-sm font-semibold text-gray-500">Location</span>
-                        <span class="text-sm font-semibold text-Mdblue-700">
-                          Hayward Hall of Justice<br />
-                          24405 Amador St, Hayward, CA 94544
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- History -->
-            <div class="pl-4">
-              <div class="flex min-w-0 flex-col rounded-xl bg-white">
-                <div class="rounded-lg border border-gray-300 p-4">
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-base font-semibold text-Mdblue-700">History</h3>
-                    <div class="flex gap-4">
-                      <div class="relative h-14 w-[9px] shrink-0" aria-hidden="true">
-                        <div class="absolute left-1/2 top-0 h-14 w-px -translate-x-1/2 bg-gray-300"></div>
-                        <span class="absolute left-0 top-2.5 size-[9px] rounded-full bg-gray-300"></span>
-                        <span class="absolute left-0 top-10 size-[9px] rounded-full bg-gray-300"></span>
-                      </div>
-                      <div class="flex min-w-0 flex-1 flex-col gap-2">
-                        <div class="flex items-center gap-4 py-0.5">
-                          <time
-                            datetime="2025-03-21"
-                            class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
-                            >2025-03-21</time
-                          >
-                          <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
-                            Tentative Ruling — MSJ Tentatively Denied
-                          </span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                          <time
-                            datetime="2025-03-21"
-                            class="shrink-0 text-sm font-semibold leading-[1.4] text-Mdblue-700"
-                            >2025-03-21</time
-                          >
-                          <span class="min-w-0 flex-1 text-base font-normal leading-[1.4] text-black">
-                            Hearing Held — Taken Under Submission
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-     </div>
-    </div>
-  </div>
-</div>
-<!--hearings tab end-->
 
 
 <!--motion design 2 start-->
