@@ -42,6 +42,7 @@ import { MotionComponent } from './motion/motion.component';
 import { CasedetailComponent } from './casedetail/casedetail.component';
 import { UsageComponent } from './usage/usage.component';
 import { ExportsComponent } from './exports/exports.component';
+import { Casedetail2Component } from './casedetail2/casedetail2.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { ExportsComponent } from './exports/exports.component';
     CasedetailComponent,
     UsageComponent,
     ExportsComponent,
+    Casedetail2Component,
   ],
   imports: [
     BrowserModule,
