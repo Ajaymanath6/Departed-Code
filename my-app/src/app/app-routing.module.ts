@@ -30,6 +30,7 @@ import { EmailTempTestComponent } from './email-temp-test/email-temp-test.compon
 import { DocumentOrderComponent } from './document-order/document-order.component';
 import { MotionComponent } from './motion/motion.component';
 import { CasedetailComponent } from './casedetail/casedetail.component';
+import { Casedetail2Component } from './casedetail2/casedetail2.component';
 import { UsageComponent } from './usage/usage.component';
 import { ExportsComponent } from './exports/exports.component';
 
@@ -154,6 +155,10 @@ const routes: Routes = [
     {
       path: 'casedetail',
       component: CasedetailComponent,
+    },
+    {
+      path: 'casedetail2',
+      component: Casedetail2Component,
     },
     {
       path: 'usage',
