@@ -1,3 +1,22 @@
+.case-summary-page,
+.case-motions-page {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.motion-summary-gauge {
+  width: 9.25rem;
+  height: 9.25rem;
+  min-width: 9.25rem;
+  flex-shrink: 0;
+}
+
+.motion-summary-gauge > div,
+.motion-summary-gauge canvas {
+  width: 9.25rem !important;
+  height: 9.25rem !important;
+  flex-grow: 0 !important;
+}
+
 .entity-attorney-page {
   @apply relative flex w-full max-w-[1440px] bg-white;
   font-family: 'IBM Plex Sans', sans-serif;

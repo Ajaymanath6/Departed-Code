@@ -328,185 +328,274 @@
   </button>
 </div>
 <!--cursor race end-->
-<!-- Main Community Platform UI start-->
-<div class="min-h-screen flex three-column-layout">
-    <!-- Side Menu -->
-    <div class="sidebar-gradient w-[300px] flex flex-col sidebar">
-        <!-- Side Bar with Logo and Navigation -->
-        <div class="sidebar-gradient h-full flex flex-col">
-            <!-- Browser Buttons -->
-            <div class="flex space-x-2 p-4">
-                <div class="w-3 h-3 rounded-full bg-[#ED695E]"></div>
-                <div class="w-3 h-3 rounded-full bg-[#F4BF4F]"></div>
-                <div class="w-3 h-3 rounded-full bg-[#61C554]"></div>
+
+<!--test start-->
+<!-- Case Page / Motions (Figma 4370:21530) -->
+<div class="case-motions-page flex flex-col gap-4 bg-gray-100 px-8 pb-12 pt-4">
+
+  <!-- Motion Summary -->
+  <section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+    <header class="border-b border-gray-200 px-6 py-3">
+      <h2 class="text-lg font-semibold text-Mdblue-700">
+        Motion Summary <span class="font-medium italic text-gray-600">(Total 5)</span>
+      </h2>
+    </header>
+    <div class="px-6 py-4">
+      <div class="flex w-full flex-wrap items-center justify-between gap-6">
+        <div class="flex shrink-0 flex-wrap items-center gap-6 px-0 py-0 sm:px-6">
+          <div class="flex shrink-0 flex-col items-center gap-4">
+            <span class="inline-flex w-[6.125rem] items-center justify-center rounded-full bg-gray-100 px-4 py-1 text-sm font-medium italic text-Mdblue-700">Plaintiff</span>
+            <div class="flex flex-col items-center gap-1">
+              <span class="text-sm font-semibold text-gray-600">Win Rate</span>
+              <span class="text-2xl font-semibold leading-tight text-Mdblue-700">100%</span>
             </div>
-
-            <!-- Logo -->
-            <div class="px-6 py-4 flex items-center">
-                <div class="w-10 h-10 bg-gradient-to-br from-[#70B4E5] to-[#C417E0] rounded-full flex items-center justify-center text-xl font-bold text-white avatar-border">D</div>
-                <span class="ml-2 text-white font-bold text-xl">Daccord</span>
-            </div>
-
-            <!-- Categories Header -->
-            <div class="px-6 py-4 border-b border-white/10">
-                <h2 class="text-white font-bold text-lg">Explore</h2>
-            </div>
-
-            <!-- Categories -->
-            <div class="px-4 py-2 space-y-2">
-                <div class="bg-black/50 p-2 rounded flex items-center space-x-2">
-                    <div class="w-8 h-8 rounded flex items-center justify-center text-white">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <span class="text-white">Home</span>
-                </div>
-
-                <div class="p-2 rounded flex items-center space-x-2 hover:bg-black/30 transition-colors">
-                    <div class="w-8 h-8 rounded flex items-center justify-center text-white/60">
-                        <i class="fas fa-music"></i>
-                    </div>
-                    <span class="text-white">Music</span>
-                </div>
-
-                <div class="p-2 rounded flex items-center space-x-2 hover:bg-black/30 transition-colors">
-                    <div class="w-8 h-8 rounded flex items-center justify-center text-white/60">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <span class="text-white">Gaming</span>
-                </div>
-
-                <div class="p-2 rounded flex items-center space-x-2 hover:bg-black/30 transition-colors">
-                    <div class="w-8 h-8 rounded flex items-center justify-center text-white/60">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <span class="text-white">Education</span>
-                </div>
-
-                <div class="p-2 rounded flex items-center space-x-2 hover:bg-black/30 transition-colors">
-                    <div class="w-8 h-8 rounded flex items-center justify-center text-white/60">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <span class="text-white">Science & Tech</span>
-                </div>
-
-                <div class="p-2 rounded flex items-center space-x-2 hover:bg-black/30 transition-colors">
-                    <div class="w-8 h-8 rounded flex items-center justify-center text-white/60">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <span class="text-white">Entertainment</span>
-                </div>
-
-                <div class="p-2 rounded flex items-center space-x-2 hover:bg-black/30 transition-colors">
-                    <div class="w-8 h-8 rounded flex items-center justify-center text-white/60">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <span class="text-white">Student Hubs</span>
-                </div>
-            </div>
-
-            <!-- User Profile Section -->
-            <div class="mt-auto p-4 border-t border-white/10">
-                <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-md bg-cover bg-center" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg')"></div>
-                    <span class="ml-2 text-white">sophiefortune</span>
-                </div>
-
-                <div class="flex justify-between mt-4">
-                    <div class="w-8 h-8 rounded border border-white/20 flex items-center justify-center text-white/60 hover:text-white transition-colors">
-                        <i class="fas fa-microphone"></i>
-                    </div>
-                    <div class="w-8 h-8 rounded border border-white/20 flex items-center justify-center text-white/60 hover:text-white transition-colors">
-                        <i class="fas fa-volume-mute"></i>
-                    </div>
-                    <div class="w-8 h-8 rounded border border-white/20 flex items-center justify-center text-white/60 hover:text-white transition-colors">
-                        <i class="fas fa-user-plus"></i>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div id="cursertest2-plaintiff-chart" class="motion-summary-gauge shrink-0" aria-hidden="true"></div>
+          <div class="flex w-[9.375rem] shrink-0 flex-col justify-center gap-4 self-stretch py-2">
+            <span class="flex w-full items-center justify-between rounded border border-secondary-200 bg-secondary-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"><span>Granted</span><span>1</span></span>
+            <span class="flex w-full items-center justify-between rounded border border-secondary-200 bg-secondary-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"><span>Granted in Part</span><span>1</span></span>
+          </div>
         </div>
+        <div class="hidden shrink-0 items-center self-stretch px-1 py-4 sm:flex" aria-hidden="true"><div class="h-20 w-px bg-gray-200"></div></div>
+        <div class="flex shrink-0 flex-wrap items-center gap-6 px-0 py-0 sm:px-6">
+          <div class="flex shrink-0 flex-col items-center gap-4">
+            <span class="inline-flex items-center justify-center rounded-full bg-gray-100 px-4 py-1 text-sm font-medium italic text-Mdblue-700">Defendant</span>
+            <div class="flex flex-col items-center gap-1">
+              <span class="text-sm font-semibold text-gray-600">Win Rate</span>
+              <span class="text-2xl font-semibold leading-tight text-Mdblue-700">33%</span>
+            </div>
+          </div>
+          <div id="cursertest2-defendant-chart" class="motion-summary-gauge shrink-0" aria-hidden="true"></div>
+          <div class="flex w-[9.375rem] shrink-0 flex-col justify-center gap-4 self-stretch py-2">
+            <span class="flex w-full items-center justify-between rounded border border-gray-200 bg-gray-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"><span>Withdrawn</span><span>1</span></span>
+            <span class="flex w-full items-center justify-between rounded border border-red-200 bg-red-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"><span>Denied</span><span>1</span></span>
+            <span class="flex w-full items-center justify-between rounded border border-secondary-200 bg-secondary-50 px-4 py-[5px] text-sm font-semibold text-Mdblue-700"><span>Granted in Part</span><span>1</span></span>
+          </div>
+        </div>
+        <div class="hidden shrink-0 items-center self-stretch px-1 py-4 lg:flex" aria-hidden="true"><div class="h-20 w-px bg-gray-200"></div></div>
+        <div class="flex w-full shrink-0 flex-col px-0 py-0 sm:w-[14.4375rem] sm:px-6">
+          <div class="flex w-full flex-col items-center gap-2 rounded-lg border border-gray-200 px-4 py-3">
+            <span class="text-sm font-semibold text-gray-600">Avg Days to Ruling</span>
+            <span class="text-2xl font-semibold leading-tight text-Mdblue-700">55d</span>
+            <div class="flex flex-col items-center gap-1">
+              <div class="flex items-center gap-1 text-xs font-semibold text-Mdblue-700">
+                <span>Filed</span>
+                <span class="material-symbols-outlined icon-16" aria-hidden="true">arrow_forward</span>
+                <span>Decision Date</span>
+              </div>
+              <span class="text-xs font-normal text-gray-600">(decided motions only)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motion Filters -->
+  <div class="flex flex-col gap-4">
+    <div class="relative flex h-[38px] w-full items-stretch rounded-lg border border-gray-300 bg-white text-sm text-Mdblue-700">
+      <div class="flex flex-row items-center self-stretch">
+        <button type="button" class="inline-flex h-full cursor-pointer items-center gap-1.5 rounded-l-lg border-0 bg-white px-3 text-center text-Mdblue-700 hover:bg-primary-50 focus:bg-primary-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">filter_list</span>
+          <span class="text-base font-normal text-Mdblue-700">Motion Filters</span>
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" class="size-2 text-Mdblue-600">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+          </svg>
+        </button>
+        <div class="h-8 border-r border-gray-300 p-1" aria-hidden="true"></div>
+      </div>
+      <div class="flex min-h-0 min-w-0 flex-1 items-center">
+        <span class="w-full px-3 text-base font-normal text-gray-600">Use filters below</span>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-5 text-Mdblue-700">
+      <button type="button" class="inline-flex items-center justify-between gap-2 rounded border border-gray-300 bg-transparent px-3 py-1 text-sm font-semibold text-Mdblue-700 shadow-sm hover:border-gray-600 focus:outline-none">
+        <span>Motion Type</span>
+        <span class="material-symbols-outlined icon-18" aria-hidden="true">keyboard_arrow_down</span>
+      </button>
+      <button type="button" class="inline-flex items-center justify-between gap-2 rounded border border-gray-300 bg-transparent px-3 py-1 text-sm font-semibold text-Mdblue-700 shadow-sm hover:border-gray-600 focus:outline-none">
+        <span>Outcome</span>
+        <span class="material-symbols-outlined icon-18" aria-hidden="true">keyboard_arrow_down</span>
+      </button>
+      <button type="button" class="inline-flex items-center justify-between gap-2 rounded border border-gray-300 bg-transparent px-3 py-1 text-sm font-semibold text-Mdblue-700 shadow-sm hover:border-gray-600 focus:outline-none">
+        <span>Moving Party</span>
+        <span class="material-symbols-outlined icon-18" aria-hidden="true">expand_more</span>
+      </button>
+      <button type="button" class="inline-flex items-center justify-between gap-2 rounded border border-gray-300 bg-transparent px-3 py-1 text-sm font-semibold text-Mdblue-700 shadow-sm hover:border-gray-600 focus:outline-none">
+        <span>Filing Date</span>
+        <span class="material-symbols-outlined icon-18" aria-hidden="true">keyboard_arrow_down</span>
+      </button>
+      <button type="button" class="inline-flex items-center justify-between gap-2 rounded border border-gray-300 bg-transparent px-3 py-1 text-sm font-semibold text-Mdblue-700 shadow-sm hover:border-gray-600 focus:outline-none">
+        <span>Decision Date</span>
+        <span class="material-symbols-outlined icon-18" aria-hidden="true">keyboard_arrow_down</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Motions list -->
+  <div class="flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xs">
+    <!-- Motion to Dismiss (#005) — expanded -->
+    <div class="flex flex-col border-b border-gray-200">
+      <div class="flex items-center gap-4 px-4 py-4">
+        <button type="button" (click)="toggleMotionPanel(0)" class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300" [attr.aria-expanded]="isMotionPanelOpen(0)" aria-label="Show or hide motion details">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">{{ isMotionPanelOpen(0) ? 'keyboard_arrow_down' : 'chevron_right' }}</span>
+        </button>
+        <div aria-hidden="true" class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2">
+          <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
+        </div>
+        <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+          <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Motion to Dismiss (#005)</span>
+          <div class="flex flex-row flex-wrap gap-x-4 gap-y-1">
+            <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Relief Type: <span class="font-normal">Dismiss</span></span>
+            <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Decision Date: <span class="font-normal">2026-01-27</span></span>
+            <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Movant: <span class="font-normal">ARISTIDES ROSARIO</span> – <span class="font-normal italic">Defendant</span></span>
+          </div>
+        </div>
+        <div class="flex min-w-28 shrink-0 flex-col items-stretch justify-center gap-2">
+          <span class="inline-flex min-h-8 w-full items-center justify-center rounded border border-secondary-200 bg-secondary-50 px-2 py-[5px] text-center text-sm font-semibold leading-[1.4] text-Mdblue-700">Granted in Part</span>
+          <span class="text-center text-sm font-normal leading-[1.4] text-gray-700">2026-01-27</span>
+        </div>
+      </div>
+      <div *ngIf="isMotionPanelOpen(0)" class="bg-gray-50 px-4 pb-4">
+        <div class="flex flex-col gap-4 rounded-lg py-4 pl-0 pr-4">
+          <div class="flex flex-col gap-4 pl-4 lg:flex-row lg:items-stretch">
+            <div class="flex min-w-0 flex-1 flex-col rounded-lg border border-gray-200 bg-white p-4">
+              <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Moving Party &amp; Filing</h3>
+              <div class="mt-2 flex flex-col gap-4 lg:flex-row lg:gap-24">
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Moving party</span>
+                  <span class="text-sm font-semibold leading-[1.4] text-Mdblue-700">ARISTIDES ROSARIO</span>
+                  <span class="text-sm font-normal italic leading-[1.4] text-Mdblue-700">Defendant</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Filed by</span>
+                  <span class="inline-flex h-8 w-fit items-center gap-1 rounded border border-yellow-200 bg-yellow-50 py-0.5 pl-1.5 pr-2 text-sm font-semibold leading-[1.4] text-Mdblue-700">
+                    <span class="material-symbols-outlined icon-16 text-Mdblue-700">domain</span>
+                    Cullen and Dykman LLP
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col rounded-lg border border-gray-200 bg-white p-4">
+              <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Key Dates and Events</h3>
+              <div class="mt-2 flex flex-row gap-2">
+                <div class="flex min-w-0 flex-1 flex-col gap-2">
+                  <div class="flex flex-col gap-0.5 py-0.5">
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Motion Filed</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2025-04-15</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Submission Date</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2025-03-21</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Decision Date</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2026-01-27</span>
+                  </div>
+                </div>
+                <div class="flex min-w-0 flex-1 flex-col gap-2">
+                  <div class="flex flex-col gap-0.5">
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Order Signed Date</span>
+                    <span class="text-base font-semibold leading-[1.4] text-gray-600">–</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Decision Filed</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2025-03-21</span>
+                  </div>
+                  <div class="flex flex-col gap-0.5">
+                    <span class="text-sm font-semibold leading-[1.4] text-gray-600">Motion Return Date</span>
+                    <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">2025-10-14</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col rounded-lg border border-gray-200 bg-white p-4">
+              <h3 class="text-base font-semibold leading-[1.4] text-Mdblue-700">Outcome Details</h3>
+              <div class="mt-2 flex flex-col gap-2">
+                <div class="flex flex-col gap-0.5">
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Outcome</span>
+                  <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Granted to the Extent of the Order</span>
+                </div>
+                <div class="flex flex-wrap items-center gap-1">
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Days to Ruling</span>
+                  <span class="text-sm font-normal leading-[1.4] text-Mdblue-700"><span class="text-xl font-semibold">84</span> days</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <span class="text-sm font-semibold leading-[1.4] text-gray-600">Motion Type Group</span>
+                  <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Dispositive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Mobile Navigation - Hidden by default -->
-    <div class="mobile-nav fixed bottom-0 left-0 right-0 bg-primary border-t border-white/10 z-50 hidden">
-        <div class="flex justify-around py-3">
-            <a href="#" class="text-white/60 hover:text-white"><i class="fas fa-home"></i></a>
-            <a href="#" class="text-white/60 hover:text-white"><i class="fas fa-search"></i></a>
-            <a href="#" class="text-white/60 hover:text-white"><i class="fas fa-users"></i></a>
-            <a href="#" class="text-white/60 hover:text-white"><i class="fas fa-bell"></i></a>
-            <a href="#" class="text-white/60 hover:text-white"><i class="fas fa-user"></i></a>
+    <!-- Motion to Strike (#004) — collapsed -->
+    <div class="flex items-center gap-4 border-b border-gray-200 px-4 py-4">
+      <button type="button" (click)="toggleMotionPanel(1)" class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300" [attr.aria-expanded]="isMotionPanelOpen(1)" aria-label="Show or hide motion details">
+        <span class="material-symbols-outlined icon-24" aria-hidden="true">{{ isMotionPanelOpen(1) ? 'keyboard_arrow_down' : 'chevron_right' }}</span>
+      </button>
+      <div aria-hidden="true" class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2">
+        <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
+      </div>
+      <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+        <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Motion to Strike (#004)</span>
+        <div class="flex flex-row flex-wrap gap-x-4 gap-y-1">
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Relief Type: <span class="font-normal">Vacate/Strike - Note of Issue/Jury Demand/From Trial Calendar</span></span>
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Filing Date: <span class="font-normal">2024-12-05</span></span>
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Movant: <span class="font-normal">ARISTIDES ROSARIO</span> – <span class="font-normal italic">Defendant</span></span>
         </div>
+      </div>
+      <div class="flex min-w-28 shrink-0 flex-col items-stretch justify-center gap-2">
+        <span class="inline-flex min-h-8 w-full items-center justify-center rounded border border-gray-200 bg-gray-50 px-2 py-[5px] text-center text-sm font-semibold leading-[1.4] text-Mdblue-700">Withdrawn</span>
+        <span class="text-center text-sm font-normal leading-[1.4] text-gray-700">2026-01-27</span>
+      </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="flex-1 flex">
-        <!-- Central Content Area -->
-        <div class="flex-1 bg-primary overflow-y-auto">
-            <!-- Search Bar -->
-            <div class="p-4 sticky top-0 bg-primary z-10">
-                <div class="flex items-center bg-[#2E335A] border border-white/20 rounded p-2">
-                    <i class="fas fa-search text-white/60 mx-2"></i>
-                    <input type="text" placeholder="Explore" class="bg-transparent text-white outline-none w-full">
-                </div>
-            </div>
-
-            <!-- Main Content Container -->
-            <div class="p-6 space-y-8">
-                <!-- Banner -->
-                <div class="relative rounded-2xl overflow-hidden h-48 animated-bg">
-                    <img src="https://images.unsplash.com/photo-1647351408653-d582b364bf2f" class="w-full h-full object-cover" alt="Banner">
-                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <h1 class="text-white text-3xl font-bold text-center">Find Your Community<br>on Daccord</h1>
-                    </div>
-                </div>
-
-                <!-- Featured Community Section -->
-                <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-white text-xl font-bold">Featured Community</h2>
-                        <a href="#" class="text-text-light hover:text-white gradient-btn px-4 py-1 rounded-full">See all</a>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Featured Card 1 -->
-                        <div class="bg-primary rounded-2xl gradient-border card-shadow overflow-hidden community-card">
-                            <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1593508512255-86ab42a8e620')"></div>
-                            <div class="p-4">
-                                <h3 class="text-white text-lg font-bold">Virtual Reality</h3>
-                                <p class="text-text-light text-sm mt-2">A community for VR and novices alike, regular and friendly chat.</p>
-
-                                <div class="flex justify-between mt-4">
-                                    <div class="flex items-center text-text-muted text-xs status-indicator">
-                                        <span>5,678 Online</span>
-                                    </div>
-                                    <div class="flex items-center text-text-muted text-xs">
-                                        <i class="fas fa-users text-xs mr-1"></i>
-                                        <span>345,678 Members</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Featured Card 2 -->
-                        <div class="bg-primary rounded-2xl gradient-border card-shadow overflow-hidden community-card">
-                            <div class="h-36 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1539140953823-8de95668cb0e')"></div>
-                            <div class="p-4">
-                                <h3 class="text-white text-lg font-bold">Game Play</h3>
-                                <p class="text-text-light text-sm mt-2">Always a new challenge. Great place to make new friends.</p>
-
-                                <div class="flex justify-between mt-4">
-                                    <div class="flex items-center text-text-muted text-xs status-indicator">
-                                        <span>28,628 Online</span>
-                                    </div>
-                                    <div class="flex items-center text-text-muted text-xs">
-                                        <i class="fas fa-users text-xs mr-1"></i>
-                                        <span>527,955 Members</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Motion to Strike (#003) — collapsed -->
+    <div class="flex items-center gap-4 border-b border-gray-200 px-4 py-4">
+      <button type="button" (click)="toggleMotionPanel(2)" class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300" [attr.aria-expanded]="isMotionPanelOpen(2)" aria-label="Show or hide motion details">
+        <span class="material-symbols-outlined icon-24" aria-hidden="true">{{ isMotionPanelOpen(2) ? 'keyboard_arrow_down' : 'chevron_right' }}</span>
+      </button>
+      <div aria-hidden="true" class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2">
+        <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
+      </div>
+      <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+        <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Motion to Strike (#003)</span>
+        <div class="flex flex-row flex-wrap gap-x-4 gap-y-1">
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Relief Type: <span class="font-normal">Vacate/Strike - Note of Issue/Jury Demand/From Trial Calendar</span></span>
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Filing Date: <span class="font-normal">2024-12-05</span></span>
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Movant: <span class="font-normal">ARISTIDES ROSARIO</span> – <span class="font-normal italic">Defendant</span></span>
         </div>
+      </div>
+      <div class="flex min-w-28 shrink-0 flex-col items-stretch justify-center gap-2">
+        <span class="inline-flex min-h-8 w-full items-center justify-center rounded border border-red-200 bg-red-50 px-2 py-[5px] text-center text-sm font-semibold leading-[1.4] text-Mdblue-700">Denied</span>
+        <span class="text-center text-sm font-normal leading-[1.4] text-gray-700">2026-01-27</span>
+      </div>
     </div>
+
+    <!-- Motion for Summary Judgment (#002) — collapsed -->
+    <div class="flex items-center gap-4 px-4 py-4">
+      <button type="button" (click)="toggleMotionPanel(3)" class="flex shrink-0 items-center rounded border-0 bg-transparent p-0 text-gray-500 hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-gray-300" [attr.aria-expanded]="isMotionPanelOpen(3)" aria-label="Show or hide motion details">
+        <span class="material-symbols-outlined icon-24" aria-hidden="true">{{ isMotionPanelOpen(3) ? 'keyboard_arrow_down' : 'chevron_right' }}</span>
+      </button>
+      <div aria-hidden="true" class="inline-flex w-10 shrink-0 items-center justify-center rounded border border-primary-200 bg-primary-50 p-2">
+        <span class="material-symbols-outlined icon-20 text-Mdblue-700">description</span>
+      </div>
+      <div class="flex min-w-0 flex-1 flex-col justify-center gap-1 py-1.5">
+        <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Motion for Summary Judgment (#002)</span>
+        <div class="flex flex-row flex-wrap gap-x-4 gap-y-1">
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Relief Type: <span class="font-normal">Judgment - Summary</span></span>
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Filing Date: <span class="font-normal">2022-08-19</span></span>
+          <span class="text-sm font-bold leading-[1.4] text-Mdblue-700">Movant: <span class="font-normal">King, Josh Paul Jr.</span> – <span class="font-normal italic">Defendant</span></span>
+        </div>
+      </div>
+      <div class="flex min-w-28 shrink-0 flex-col items-stretch justify-center gap-2">
+        <span class="inline-flex min-h-8 w-full items-center justify-center rounded border border-secondary-200 bg-secondary-50 px-2 py-[5px] text-center text-sm font-semibold leading-[1.4] text-Mdblue-700">Granted</span>
+        <span class="text-center text-sm font-normal leading-[1.4] text-gray-700">2026-01-27</span>
+      </div>
+    </div>
+  </div>
 </div>
+<!--test end-->
