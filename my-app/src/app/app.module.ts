@@ -43,6 +43,7 @@ import { CasedetailComponent } from './casedetail/casedetail.component';
 import { UsageComponent } from './usage/usage.component';
 import { ExportsComponent } from './exports/exports.component';
 import { Casedetail2Component } from './casedetail2/casedetail2.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { Casedetail2Component } from './casedetail2/casedetail2.component';
     UsageComponent,
     ExportsComponent,
     Casedetail2Component,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

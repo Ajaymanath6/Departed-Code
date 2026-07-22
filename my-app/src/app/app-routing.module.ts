@@ -33,6 +33,7 @@ import { CasedetailComponent } from './casedetail/casedetail.component';
 import { Casedetail2Component } from './casedetail2/casedetail2.component';
 import { UsageComponent } from './usage/usage.component';
 import { ExportsComponent } from './exports/exports.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const routes: Routes = [
   {
@@ -123,6 +124,10 @@ const routes: Routes = [
   {
     path: 'newtheme',
     component: NewthemeComponent,
+  },
+  {
+    path: 'sidebar',
+    component: SidebarComponent,
   },
   {
     path: 'tablevarsh',

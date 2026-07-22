@@ -51,7 +51,7 @@
             </td>
             <td class="w-20 px-4 py-4 font-medium text-Mdblue-700 align-middle">
               <div class="flex min-w-12 justify-end">
-                <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+                <span class="material-symbols-outlined icon-20 text-primary-600" aria-hidden="true">description</span>
               </div>
             </td>
           </tr>
@@ -83,7 +83,7 @@
             </td>
             <td class="w-20 px-4 py-4 font-medium text-Mdblue-700 align-middle">
               <div class="flex min-w-12 justify-end">
-                <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+                <span class="material-symbols-outlined icon-20 text-primary-600" aria-hidden="true">description</span>
               </div>
             </td>
           </tr>
@@ -121,7 +121,7 @@
             </td>
             <td class="w-20 px-4 py-4 font-medium text-Mdblue-700 align-middle">
               <div class="flex min-w-12 justify-end">
-                <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+                <span class="material-symbols-outlined icon-20 text-primary-600" aria-hidden="true">description</span>
               </div>
             </td>
           </tr>
@@ -220,7 +220,7 @@
               <div class="flex min-w-12 justify-end">
                 <button
                   type="button"
-                  class="inline-flex items-center justify-center gap-1 rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
+                  class="inline-flex w-[9.1875rem] items-center justify-center gap-1 whitespace-nowrap rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
                 >
                   <span class="material-symbols-outlined icon-16">receipt_long</span>
                   <span>$1.00</span>
@@ -481,7 +481,7 @@
               <div class="flex min-w-12 justify-end">
                 <button
                   type="button"
-                  class="inline-flex items-center justify-center gap-1 rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
+                  class="inline-flex w-[9.1875rem] items-center justify-center gap-1 whitespace-nowrap rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
                 >
                   <span class="material-symbols-outlined icon-16">receipt_long</span>
                   <span>$1.00</span>
@@ -768,7 +768,7 @@
           </div>
           <div class="w-20 shrink-0 self-center" role="cell">
             <div class="flex min-w-12 justify-end">
-              <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+              <span class="material-symbols-outlined icon-20 text-primary-600" aria-hidden="true">description</span>
             </div>
           </div>
         </div>
@@ -802,7 +802,7 @@
           </div>
           <div class="w-20 shrink-0 self-center" role="cell">
             <div class="flex min-w-12 justify-end">
-              <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+              <span class="material-symbols-outlined icon-20 text-primary-600" aria-hidden="true">description</span>
             </div>
           </div>
         </div>
@@ -841,7 +841,7 @@
           </div>
           <div class="w-20 shrink-0 self-center" role="cell">
             <div class="flex min-w-12 justify-end">
-              <span class="material-symbols-outlined icon-20 Mdblue-fill-600" aria-hidden="true">description</span>
+              <span class="material-symbols-outlined icon-20 text-primary-600" aria-hidden="true">description</span>
             </div>
           </div>
         </div>
@@ -936,7 +936,7 @@
             <div class="flex min-w-12 justify-end">
               <button
                 type="button"
-                class="inline-flex items-center justify-center gap-1 rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
+                class="inline-flex w-[9.1875rem] items-center justify-center gap-1 whitespace-nowrap rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
               >
                 <span class="material-symbols-outlined icon-16">receipt_long</span>
                 <span>$1.00</span>
@@ -1123,4 +1123,187 @@
 </section>
 <!--recent document end-->
 <!--div str end-->
+
+
+<!--using colspan and row span start-->
+<!--
+  Figma = 1 document card, HTML needs 2 <tr> (content + badges):
+  | checkbox (rowspan=2) | date (rowspan=2) | Name | Description | Buy/download |
+  |          ^           |        ^         | badges (colspan=2) | (empty td)   |
+-->
+<h2 class="ml-4 mt-6 text-2xl font-semibold text-Mdblue-700">using colspan and row span</h2>
+<section class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+  <header class="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-6 py-3">
+    <h2 class="text-lg font-semibold text-Mdblue-700">Recent Documents</h2>
+    <button type="button" class="shrink-0 text-base font-semibold text-primary-600 hover:text-primary-700 focus:outline-none">
+      See More
+    </button>
+  </header>
+  <div class="px-6 pb-6 pt-5">
+    <div class="overflow-hidden rounded-xl border border-gray-200 bg-gray-100 p-4">
+      <table
+        class="w-full table-fixed border-separate border-spacing-y-0 text-left text-sm text-Mdblue-600 rtl:text-right"
+        aria-label="Recent documents"
+      >
+        <thead class="text-sm font-semibold text-gray-700">
+          <tr>
+            <th scope="col" class="w-12 px-4 py-3"><span class="sr-only">Select</span></th>
+            <th scope="col" class="w-[6.75rem] px-4 py-3">
+              <div class="flex items-center gap-1 uppercase text-Mdblue-600">
+                <span>Date</span>
+                <span class="material-symbols-outlined icon-16 font-semibold" aria-hidden="true">unfold_more</span>
+              </div>
+            </th>
+            <th scope="col" class="w-[34%] px-4 py-3 uppercase text-Mdblue-600">Name</th>
+            <th scope="col" class="w-[36%] px-4 py-3 uppercase text-Mdblue-600">Description</th>
+            <th scope="col" class="w-[9.5rem] whitespace-nowrap px-4 py-3 text-right uppercase text-Mdblue-600">Buy or download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Doc 1 -->
+          <tr class="rounded-t-md bg-white outline outline-x outline-t outline-1 outline-gray-200">
+            <td rowspan="2" class="w-12 px-4 pt-4 align-top">
+              <input
+                type="checkbox"
+                class="h-[1.125rem] w-[1.125rem] cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+                aria-label="Select document filed 2024-06-19"
+              />
+            </td>
+            <td rowspan="2" class="w-[6.75rem] whitespace-nowrap px-4 pt-4 align-top">
+              <time class="text-sm font-normal text-Mdblue-700">2024-06-19</time>
+            </td>
+            <td class="w-[34%] min-w-0 px-4 pb-2 pt-4 align-top">
+              <a class="block text-base font-semibold leading-[1.4] text-primary-600 hover:underline" href="#">
+                STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                Extend Time to Respond &amp; Adjourn Motion
+              </a>
+            </td>
+            <td class="w-[36%] min-w-0 px-4 pb-2 pt-4 align-top">
+              <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+              </p>
+            </td>
+            <td class="w-[9.5rem] px-4 pb-2 pt-4 align-top">
+              <div class="flex min-w-12 justify-end">
+                <button
+                  type="button"
+                  class="inline-flex w-[9.1875rem] items-center justify-center gap-1 whitespace-nowrap rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
+                >
+                  <span class="material-symbols-outlined icon-16" aria-hidden="true">receipt_long</span>
+                  <span>$1.00</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="rounded-b-md bg-white outline outline-x outline-b outline-1 outline-gray-200">
+            <td colspan="2" class="min-w-0 px-4 pb-4 pt-0 align-top">
+              <div class="flex flex-wrap items-center gap-2 border-t border-gray-200 pt-2">
+                <span class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700">Motion for Summary Judgment</span>
+                <span class="shrink-0 rounded border border-secondary-200 bg-secondary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700">Granted</span>
+                <span class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700">Stipulation</span>
+              </div>
+            </td>
+            <td class="w-[9.5rem] bg-white"></td>
+          </tr>
+          <tr aria-hidden="true"><td colspan="5" class="h-2 border-0 bg-transparent p-0"></td></tr>
+
+          <!-- Doc 2 -->
+          <tr class="rounded-t-md bg-white outline outline-x outline-t outline-1 outline-gray-200">
+            <td rowspan="2" class="w-12 px-4 pt-4 align-top">
+              <input
+                type="checkbox"
+                class="h-[1.125rem] w-[1.125rem] cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+                aria-label="Select document filed 2024-06-19"
+              />
+            </td>
+            <td rowspan="2" class="w-[6.75rem] whitespace-nowrap px-4 pt-4 align-top">
+              <time class="text-sm font-normal text-Mdblue-700">2024-06-19</time>
+            </td>
+            <td class="w-[34%] min-w-0 px-4 pb-2 pt-4 align-top">
+              <a class="block text-base font-semibold leading-[1.4] text-primary-600 hover:underline" href="#">
+                STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                Extend Time to Respond &amp; Adjourn Motion
+              </a>
+            </td>
+            <td class="w-[36%] min-w-0 px-4 pb-2 pt-4 align-top">
+              <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+              </p>
+            </td>
+            <td class="w-[9.5rem] px-4 pb-2 pt-4 align-top">
+              <div class="flex min-w-12 justify-end">
+                <button
+                  type="button"
+                  class="inline-flex w-[9.1875rem] items-center justify-center gap-1 whitespace-nowrap rounded-md bg-secondary-600 px-6 py-2 text-base font-semibold text-white hover:bg-secondary-500 focus:outline-none focus:ring-4 focus:ring-primary-300"
+                >
+                  <span class="material-symbols-outlined icon-16" aria-hidden="true">receipt_long</span>
+                  <span>$1.00</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="rounded-b-md bg-white outline outline-x outline-b outline-1 outline-gray-200">
+            <td colspan="2" class="min-w-0 px-4 pb-4 pt-0 align-top">
+              <div class="flex flex-wrap items-center gap-2 border-t border-gray-200 pt-2">
+                <span class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700">Motion for Summary Judgment</span>
+                <span class="shrink-0 rounded border border-secondary-200 bg-secondary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700">Granted</span>
+                <span class="shrink-0 rounded border border-yellow-200 bg-yellow-50 px-2 py-0.5 text-sm font-semibold text-Mdblue-700">Stipulation</span>
+              </div>
+            </td>
+            <td class="w-[9.5rem] bg-white"></td>
+          </tr>
+          <tr aria-hidden="true"><td colspan="5" class="h-2 border-0 bg-transparent p-0"></td></tr>
+
+          <!-- Doc 3 -->
+          <tr class="rounded-t-md bg-white outline outline-x outline-t outline-1 outline-gray-200">
+            <td rowspan="2" class="w-12 px-4 pt-4 align-top">
+              <input
+                type="checkbox"
+                class="h-[1.125rem] w-[1.125rem] cursor-pointer rounded border-[1.5px] border-gray-400 text-secondary-700 focus:ring-0 focus:ring-offset-0"
+                aria-label="Select document filed 2024-06-19"
+              />
+            </td>
+            <td rowspan="2" class="w-[6.75rem] whitespace-nowrap px-4 pt-4 align-top">
+              <time class="text-sm font-normal text-Mdblue-700">2024-06-19</time>
+            </td>
+            <td class="w-[34%] min-w-0 px-4 pb-2 pt-4 align-top">
+              <a class="block text-base font-semibold leading-[1.4] text-primary-600 hover:underline" href="#">
+                STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                Extend Time to Respond &amp; Adjourn Motion
+              </a>
+            </td>
+            <td class="w-[36%] min-w-0 px-4 pb-2 pt-4 align-top">
+              <p class="text-sm font-normal leading-[1.4] text-Mdblue-700">
+                STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to
+                Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026;
+              </p>
+            </td>
+            <td class="w-[9.5rem] px-4 pb-2 pt-4 align-top">
+              <div class="flex min-w-12 justify-end">
+                <button
+                  type="button"
+                  class="inline-flex items-center justify-center rounded-md bg-gray-100 px-6 py-2 text-base font-semibold text-gray-600 focus:outline-none"
+                >
+                  Unavailable
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="rounded-b-md bg-white outline outline-x outline-b outline-1 outline-gray-200">
+            <td colspan="2" class="min-w-0 px-4 pb-4 pt-0 align-top">
+              <div class="flex flex-wrap items-center gap-2 border-t border-gray-200 pt-2">
+                <span class="shrink-0 rounded border border-primary-200 bg-primary-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700">Motion for Summary Judgment</span>
+                <span class="shrink-0 rounded border border-red-200 bg-red-50 px-4 py-0.5 text-sm font-semibold text-Mdblue-700">Denied</span>
+              </div>
+            </td>
+            <td class="w-[9.5rem] bg-white"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<!--using colspan and row span end-->
 

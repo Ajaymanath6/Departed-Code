@@ -1,0 +1,448 @@
+<!--navigation start-->
+<div class="flex h-screen flex-row items-stretch">
+  <div
+    #sidebarPanel
+    [ngClass]="{'w-[5rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}"
+    class="flex h-screen min-h-0 flex-col border-r-2 bg-Mdblue-700 duration-300 ease-in-out transition-all overflow-hidden shrink-0">
+    <div class="min-h-0 flex-1 overflow-y-auto bg-Mdblue-700 py-4 gap-4 flex flex-col">
+      <!-- Logo -->
+      <ul class="mt-4 space-y-2 px-2">
+        <li>
+          <a href="#"
+            class="flex w-full cursor-pointer items-center gap-x-2 justify-center rounded-md text-white">
+            <div class="flex items-center space-x-3 py-1 align-middle">
+              <img
+                alt="UniCourt Logo"
+                [src]="sidebarCollapsed ? 'assets/svg/uniCourtLogo.svg' : 'assets/svg/logo-main.svg'"
+                [ngClass]="!sidebarCollapsed ? 'w-[120px] h-[54px]' : 'min-w-[46px] min-h-[46px] w-[46px] h-[46px]'" />
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Top nav: Home / Workspaces / More -->
+      <ul class="space-y-2 px-2 font-semibold !font-sans">
+        <li>
+          <a href="#"
+            (click)="setActiveNav('home'); $event.preventDefault()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 hover:bg-secondary-700': isNavActive('home')
+            }"
+            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">home</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              Home
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            (click)="setActiveNav('workspaces'); $event.preventDefault()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 hover:bg-secondary-700': isNavActive('workspaces')
+            }"
+            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">inventory_2</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              Workspaces
+            </div>
+          </a>
+        </li>
+        <li>
+          <button type="button"
+            #moreTrigger
+            (click)="toggleMoreMenu(); $event.preventDefault(); $event.stopPropagation()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 border-transparent hover:bg-secondary-700': isMoreChildActive(),
+              'bg-gray-900 border-primary-600 hover:bg-gray-900': !isMoreChildActive() && moreMenuOpen,
+              'bg-transparent border-gray-600 hover:bg-gray-900 hover:border-primary-600': !isMoreChildActive() && !moreMenuOpen
+            }"
+            class="flex w-full cursor-pointer items-center rounded-lg border py-1 text-left !text-white focus:outline-none">
+            <span *ngIf="sidebarCollapsed; else moreIconDefault"
+              class="relative flex items-center py-2">
+              <span
+                class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
+                aria-hidden="true">grid_view</span>
+              <span class="absolute -top-[4px] -right-1 h-2 w-2 rounded-full bg-red-600 animate-bounce"></span>
+            </span>
+            <ng-template #moreIconDefault>
+              <span
+                class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+                aria-hidden="true">grid_view</span>
+            </ng-template>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              More
+            </div>
+            <span *ngIf="!sidebarCollapsed"
+              class="inline-flex items-center justify-center text-white text-[10px] font-semibold bg-red-600 rounded-full min-w-5 h-5 px-1 animate-bounce transition-all duration-300 ease-in-out shrink-0">
+              9+
+            </span>
+            <span *ngIf="!sidebarCollapsed"
+              class="material-symbols-outlined icon-20 text-white shrink-0 ms-auto"
+              aria-hidden="true">chevron_right</span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Divider + Active workspace -->
+      <div class="px-2">
+        <div class="h-px w-full bg-gray-800"></div>
+      </div>
+      <div *ngIf="!sidebarCollapsed" class="px-4 text-sm font-semibold leading-[1.4] text-gray-400">
+        ACTIVE WORKSPACE
+      </div>
+
+      <ul class="space-y-2 px-2 font-semibold !font-sans">
+        <li>
+          <button type="button"
+            (click)="toggleProjectDropdown(); $event.preventDefault(); $event.stopPropagation()"
+            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
+            class="flex w-full cursor-pointer items-center rounded-md border border-gray-600 bg-transparent py-1 text-left !text-white hover:bg-gray-900 hover:border-primary-600 focus:outline-none">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">inventory_2</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-ellipsis text-base font-normal leading-[1.4] text-white">
+              Andy Judson
+            </div>
+            <span *ngIf="!sidebarCollapsed"
+              class="material-symbols-outlined icon-20 text-white shrink-0 ms-auto"
+              aria-hidden="true">chevron_right</span>
+          </button>
+        </li>
+        <li>
+          <a href="#"
+            (click)="setActiveNav('search'); $event.preventDefault()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 hover:bg-secondary-700': isNavActive('search')
+            }"
+            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">search</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              Search
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            (click)="setActiveNav('alerts'); $event.preventDefault()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 hover:bg-secondary-700': isNavActive('alerts')
+            }"
+            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">alarm</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              Alerts
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            (click)="setActiveNav('tracking'); $event.preventDefault()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 hover:bg-secondary-700': isNavActive('tracking')
+            }"
+            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">schedule</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              Tracking
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            (click)="setActiveNav('pins'); $event.preventDefault()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 hover:bg-secondary-700': isNavActive('pins')
+            }"
+            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">keep</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              Pins
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            (click)="setActiveNav('analytics'); $event.preventDefault()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 hover:bg-secondary-700': isNavActive('analytics')
+            }"
+            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">insert_chart</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              Analytics
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            (click)="setActiveNav('manage'); $event.preventDefault()"
+            [ngClass]="{
+              'justify-center px-2': sidebarCollapsed,
+              'px-4': !sidebarCollapsed,
+              'bg-secondary-700 hover:bg-secondary-700': isNavActive('manage')
+            }"
+            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            <span
+              [ngClass]="{'pr-0': sidebarCollapsed}"
+              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">mode_edit</span>
+            <div
+              [ngClass]="{
+                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
+                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
+              }"
+              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+              Manage
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      [ngClass]="{'justify-center': sidebarCollapsed, 'justify-end': !sidebarCollapsed}"
+      class="relative shrink-0 mb-2 flex w-full min-w-0 py-2 pt-0">
+      <button type="button" (click)="toggleSidebar()"
+        [ngClass]="sidebarCollapsed ? 'px-1 py-1' : 'px-4 py-1'"
+        class="z-[2] cursor-pointer items-center rounded-md bg-Mdblue-700 text-gray-300">
+        <span
+          [ngClass]="{'ml-2': sidebarCollapsed}"
+          class="material-symbols-outlined icon-20 text-white shrink-0 py-1 px-1 border rounded-md border-white font-semibold">{{
+          sidebarCollapsed ? 'chevron_right' : 'chevron_left' }}</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- More menu: fixed flyout aligned to the More row -->
+  <div *ngIf="moreMenuOpen" #moreMenuPanel [@tooltip]
+    class="fixed z-[60] -translate-y-1/2 flex flex-col rounded-lg bg-gray-900 py-4 shadow-md"
+    [ngClass]="sidebarCollapsed ? 'left-[5.75rem]' : 'left-[14.625rem]'"
+    [style.top.px]="moreMenuTop"
+    data-popper-placement="right"
+    (click)="$event.stopPropagation()">
+    <ul class="flex flex-col gap-1 px-4">
+      <li>
+        <a href="#"
+          (click)="selectMoreItem('all-pins'); $event.preventDefault()"
+          [ngClass]="{
+            'bg-secondary-600 hover:bg-secondary-600': isNavActive('all-pins'),
+            'hover:bg-gray-700': !isNavActive('all-pins')
+          }"
+          class="flex w-full min-w-[177px] cursor-pointer items-center gap-1.5 rounded-md px-4 py-2.5 text-base font-semibold leading-[1.4] !text-white">
+          <span
+            class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
+            aria-hidden="true">keep</span>
+          <span class="whitespace-nowrap text-white">All Pins</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          (click)="selectMoreItem('all-tracking'); $event.preventDefault()"
+          [ngClass]="{
+            'bg-secondary-600 hover:bg-secondary-600': isNavActive('all-tracking'),
+            'hover:bg-gray-700': !isNavActive('all-tracking')
+          }"
+          class="flex w-full min-w-[177px] cursor-pointer items-center gap-1.5 rounded-md px-4 py-2.5 text-base font-semibold leading-[1.4] !text-white">
+          <span
+            class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
+            aria-hidden="true">schedule</span>
+          <span class="whitespace-nowrap text-white">All Tracking</span>
+          <span
+            class="inline-flex items-center justify-center text-white text-[10px] font-semibold bg-red-600 rounded-full min-w-5 h-5 px-1 animate-bounce transition-all duration-300 ease-in-out shrink-0">
+            5
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          (click)="selectMoreItem('all-alerts'); $event.preventDefault()"
+          [ngClass]="{
+            'bg-secondary-600 hover:bg-secondary-600': isNavActive('all-alerts'),
+            'hover:bg-gray-700': !isNavActive('all-alerts')
+          }"
+          class="flex w-full min-w-[177px] cursor-pointer items-center gap-1.5 rounded-md px-4 py-2.5 text-base font-semibold leading-[1.4] !text-white">
+          <span
+            class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
+            aria-hidden="true">alarm</span>
+          <span class="whitespace-nowrap text-white">All Alerts</span>
+          <span
+            class="inline-flex items-center justify-center text-white text-[10px] font-semibold bg-red-600 rounded-full min-w-5 h-5 px-1 animate-bounce transition-all duration-300 ease-in-out shrink-0">
+            4
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- More menu flyout end -->
+
+  <!--project drawer start (layout only — Artemis uc-drawer-project-selection) -->
+  <div *ngIf="projectDropdownOpen"
+    role="presentation"
+    class="fixed inset-0 z-[50] bg-gray-900/50 transition-opacity"
+    (click)="closeProjectDropdown()"
+    aria-hidden="true"></div>
+  <div *ngIf="projectDropdownOpen" [@tooltip]
+    class="fixed top-0 z-[60] flex h-screen w-full max-w-[26rem] flex-col overflow-hidden bg-white shadow-xl transition-transform duration-300 ease-in-out"
+    [style.left.px]="projectDrawerLeftPx()"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="drawer-project-selection-title"
+    (click)="$event.stopPropagation()">
+    <div class="flex shrink-0 items-center justify-between border-b border-gray-200 px-4 pt-4 pb-3">
+      <h2 id="drawer-project-selection-title"
+        class="text-sm font-semibold leading-[1.4] text-Mdblue-700">
+        Select a Workspace
+      </h2>
+      <button type="button"
+        (click)="closeProjectDropdown()"
+        class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-gray-400 hover:bg-gray-200 hover:text-gray-900"
+        aria-label="Close Select a Workspace">
+        <span class="material-symbols-outlined icon-20">close</span>
+      </button>
+    </div>
+    <div class="shrink-0 border-b border-gray-200 p-3">
+      <label class="sr-only" for="nav-workspace-search">Search</label>
+      <div class="relative">
+        <input id="nav-workspace-search" type="text"
+          class="block w-full border border-gray-300 rounded-lg py-2.5 pe-10 text-sm text-Mdblue-700 placeholder:text-Mdblue-600 focus:border-secondary-600 focus:ring-1 focus:ring-secondary-600 focus:outline-none disabled:bg-gray-100"
+          placeholder="Search projects...">
+        <span
+          class="material-symbols-outlined icon-20 text-gray-400 pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">search</span>
+      </div>
+    </div>
+    <div class="min-h-0 flex-1 overflow-y-auto">
+      <div class="px-4 py-2 text-center text-sm font-semibold leading-[1.4] text-gray-600">Pinned</div>
+      <ul class="pb-2 text-sm text-Mdblue-600">
+        <li class="flex items-center justify-between px-4 py-1 hover:bg-gray-100 cursor-pointer">
+          <button type="button" class="flex flex-1 items-center text-left text-Mdblue-700">
+            <span class="text-sm font-semibold leading-[1.4]">My Project</span>
+          </button>
+          <div class="flex items-center gap-2 relative">
+            <span class="material-symbols-outlined icon-20 Mdblue-fill-600">keep</span>
+            <button type="button"
+              class="flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none">
+              <span class="material-symbols-outlined icon-20">more_horiz</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div class="px-4 py-2 text-center text-sm font-semibold leading-[1.4] text-gray-600">Recent Workspaces</div>
+      <ul class="pb-2 text-sm text-Mdblue-600">
+        <li class="flex items-center justify-between px-4 py-1 hover:bg-gray-100 cursor-pointer">
+          <button type="button" class="flex flex-1 items-center text-left text-Mdblue-700">
+            <span class="text-sm font-semibold leading-[1.4]">Project Name</span>
+          </button>
+          <div class="flex items-center gap-2 relative">
+            <button type="button"
+              class="flex rounded-lg p-1 text-sm font-medium text-gray-600 hover:bg-gray-100 focus:outline-none">
+              <span class="material-symbols-outlined icon-20">more_horiz</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="shrink-0 min-w-0 border-t border-gray-200 px-4 py-3">
+      <div class="mb-2 text-center text-sm font-semibold leading-[1.4] text-gray-600">Or</div>
+      <div class="flex min-w-0 w-full gap-2">
+        <div class="min-w-0 flex-1">
+          <button type="button"
+            class="flex w-full items-center justify-center whitespace-nowrap rounded border border-gray-300 bg-white px-3 py-2.5 text-sm font-semibold text-primary-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100">
+            View All Workspaces
+          </button>
+        </div>
+        <div class="min-w-0 flex-1">
+          <button type="button"
+            class="flex w-full items-center justify-center whitespace-nowrap rounded border border-secondary-600 bg-white px-3 py-2.5 text-sm font-semibold text-secondary-600 hover:bg-secondary-50 hover:border-secondary-700 focus:outline-none focus:ring-4 focus:ring-secondary-100">
+            New Workspace
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--project drawer end-->
+</div>
+<!--navigation end-->
