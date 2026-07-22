@@ -68,6 +68,8 @@ export class NewthemeComponent implements AfterViewInit {
   sidebarCollapsed = false;
   // Project dropdown (Select a Project) visibility
   projectDropdownOpen = false;
+  // More menu flyout (All Pins / All Tracking / All Alerts)
+  moreMenuOpen = false;
   // States Barred accordion – "More Details" expanded for first row
   statesBarredMoreDetailsOpen = false;
 
@@ -109,10 +111,24 @@ export class NewthemeComponent implements AfterViewInit {
 
   toggleProjectDropdown(): void {
     this.projectDropdownOpen = !this.projectDropdownOpen;
+    if (this.projectDropdownOpen) {
+      this.moreMenuOpen = false;
+    }
   }
 
   closeProjectDropdown(): void {
     this.projectDropdownOpen = false;
+  }
+
+  toggleMoreMenu(): void {
+    this.moreMenuOpen = !this.moreMenuOpen;
+    if (this.moreMenuOpen) {
+      this.projectDropdownOpen = false;
+    }
+  }
+
+  closeMoreMenu(): void {
+    this.moreMenuOpen = false;
   }
 
   toggleStatesBarredMoreDetails(): void {
