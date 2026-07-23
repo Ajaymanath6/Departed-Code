@@ -1,46 +1,47 @@
-<!--navigation start-->
+<!-- navigation -->
 <div class="flex h-screen flex-row items-stretch">
   <div
     #sidebarPanel
-    [ngClass]="{'w-[5rem]': sidebarCollapsed, 'w-[15rem]': !sidebarCollapsed}"
+    [ngClass]="{'w-[5rem]': sidebarCollapsed, 'w-[15.75rem]': !sidebarCollapsed}"
     class="flex h-screen min-h-0 flex-col border-r-2 bg-Mdblue-700 duration-300 ease-in-out transition-all overflow-hidden shrink-0">
-    <div class="min-h-0 flex-1 overflow-y-auto bg-Mdblue-700 py-4 gap-4 flex flex-col">
+    <div
+      class="min-h-0 flex-1 overflow-y-auto bg-Mdblue-700 pt-5 pb-4 flex flex-col"
+      [ngClass]="sidebarCollapsed ? 'px-2' : 'px-6'">
       <!-- Logo -->
-      <ul class="mt-4 space-y-2 px-2">
+      <ul>
         <li>
           <a href="#"
-            class="flex w-full cursor-pointer items-center gap-x-2 justify-center rounded-md text-white">
+            [ngClass]="sidebarCollapsed ? 'justify-center' : 'justify-start'"
+            class="flex w-full cursor-pointer items-center gap-x-2 rounded-md text-white">
             <div class="flex items-center space-x-3 py-1 align-middle">
               <img
                 alt="UniCourt Logo"
                 [src]="sidebarCollapsed ? 'assets/svg/uniCourtLogo.svg' : 'assets/svg/logo-main.svg'"
-                [ngClass]="!sidebarCollapsed ? 'w-[120px] h-[54px]' : 'min-w-[46px] min-h-[46px] w-[46px] h-[46px]'" />
+                [ngClass]="!sidebarCollapsed ? 'w-[7.5rem] h-12' : 'min-w-[46px] min-h-[46px] w-[46px] h-[46px]'" />
             </div>
           </a>
         </li>
       </ul>
 
-      <!-- Top nav: Home / Workspaces / More -->
-      <ul class="space-y-2 px-2 font-semibold !font-sans">
+      <!-- Primary nav -->
+      <ul
+        class="mt-6 space-y-4 font-semibold !font-sans"
+        [ngClass]="sidebarCollapsed ? 'flex flex-col items-center' : ''">
         <li>
           <a href="#"
             (click)="setActiveNav('home'); $event.preventDefault()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 hover:bg-secondary-700': isNavActive('home')
             }"
-            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            class="flex cursor-pointer items-center rounded-md !text-white hover:bg-gray-900">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">home</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               Home
             </div>
           </a>
@@ -49,21 +50,17 @@
           <a href="#"
             (click)="setActiveNav('workspaces'); $event.preventDefault()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 hover:bg-secondary-700': isNavActive('workspaces')
             }"
-            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            class="flex cursor-pointer items-center rounded-md !text-white hover:bg-gray-900">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">inventory_2</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               Workspaces
             </div>
           </a>
@@ -73,31 +70,24 @@
             #moreTrigger
             (click)="toggleMoreMenu(); $event.preventDefault(); $event.stopPropagation()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 border-transparent hover:bg-secondary-700': isMoreChildActive(),
               'bg-gray-900 border-primary-600 hover:bg-gray-900': !isMoreChildActive() && moreMenuOpen,
-              'bg-transparent border-gray-600 hover:bg-gray-900 hover:border-primary-600': !isMoreChildActive() && !moreMenuOpen
+              'bg-transparent hover:bg-gray-900': !isMoreChildActive() && !moreMenuOpen,
+              'border-gray-600 hover:border-primary-600': !sidebarCollapsed && !isMoreChildActive() && !moreMenuOpen,
+              'border-transparent': sidebarCollapsed && !isMoreChildActive() && !moreMenuOpen
             }"
-            class="flex w-full cursor-pointer items-center rounded-lg border py-1 text-left !text-white focus:outline-none">
-            <span *ngIf="sidebarCollapsed; else moreIconDefault"
-              class="relative flex items-center py-2">
-              <span
-                class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
-                aria-hidden="true">grid_view</span>
-              <span class="absolute -top-[4px] -right-1 h-2 w-2 rounded-full bg-red-600 animate-bounce"></span>
-            </span>
-            <ng-template #moreIconDefault>
-              <span
-                class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
-                aria-hidden="true">grid_view</span>
-            </ng-template>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            class="relative flex cursor-pointer items-center overflow-visible rounded-md border text-left !text-white focus:outline-none">
+            <span
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
+              aria-hidden="true">grid_view</span>
+            <span *ngIf="sidebarCollapsed"
+              class="pointer-events-none absolute top-1 right-1.5 z-[1] h-2 w-2 shrink-0 rounded-full bg-red-600 animate-bounce"
+              aria-hidden="true"></span>
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               More
             </div>
             <span *ngIf="!sidebarCollapsed"
@@ -111,30 +101,33 @@
         </li>
       </ul>
 
-      <!-- Divider + Active workspace -->
-      <div class="px-2">
-        <div class="h-px w-full bg-gray-800"></div>
-      </div>
-      <div *ngIf="!sidebarCollapsed" class="px-4 text-sm font-semibold leading-[1.4] text-gray-400">
-        ACTIVE WORKSPACE
+      <!-- Workspace section -->
+      <div class="mt-4 flex flex-col gap-1">
+        <div class="py-4">
+          <div class="h-px w-full bg-gray-800"></div>
+        </div>
+        <div *ngIf="!sidebarCollapsed" class="px-4 text-sm font-semibold leading-[1.4] text-gray-400">
+          ACTIVE WORKSPACE
+        </div>
       </div>
 
-      <ul class="space-y-2 px-2 font-semibold !font-sans">
+      <ul
+        class="mt-4 space-y-4 font-semibold !font-sans"
+        [ngClass]="sidebarCollapsed ? 'flex flex-col items-center' : ''">
         <li>
           <button type="button"
             (click)="toggleProjectDropdown(); $event.preventDefault(); $event.stopPropagation()"
-            [ngClass]="{'justify-center px-2': sidebarCollapsed, 'px-4': !sidebarCollapsed}"
-            class="flex w-full cursor-pointer items-center rounded-md border border-gray-600 bg-transparent py-1 text-left !text-white hover:bg-gray-900 hover:border-primary-600 focus:outline-none">
+            [ngClass]="{
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed
+            }"
+            class="flex cursor-pointer items-center rounded-md border border-gray-600 bg-transparent text-left !text-white hover:bg-gray-900 hover:border-primary-600 focus:outline-none">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">inventory_2</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-ellipsis text-base font-normal leading-[1.4] text-white">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-ellipsis text-base font-normal leading-[1.4] text-white whitespace-nowrap">
               Andy Judson
             </div>
             <span *ngIf="!sidebarCollapsed"
@@ -146,21 +139,17 @@
           <a href="#"
             (click)="setActiveNav('search'); $event.preventDefault()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 hover:bg-secondary-700': isNavActive('search')
             }"
-            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            class="flex cursor-pointer items-center rounded-md !text-white hover:bg-gray-900">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">search</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               Search
             </div>
           </a>
@@ -169,21 +158,17 @@
           <a href="#"
             (click)="setActiveNav('alerts'); $event.preventDefault()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 hover:bg-secondary-700': isNavActive('alerts')
             }"
-            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            class="flex cursor-pointer items-center rounded-md !text-white hover:bg-gray-900">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">alarm</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               Alerts
             </div>
           </a>
@@ -192,21 +177,17 @@
           <a href="#"
             (click)="setActiveNav('tracking'); $event.preventDefault()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 hover:bg-secondary-700': isNavActive('tracking')
             }"
-            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            class="flex cursor-pointer items-center rounded-md !text-white hover:bg-gray-900">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">schedule</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               Tracking
             </div>
           </a>
@@ -215,21 +196,17 @@
           <a href="#"
             (click)="setActiveNav('pins'); $event.preventDefault()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 hover:bg-secondary-700': isNavActive('pins')
             }"
-            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            class="flex cursor-pointer items-center rounded-md !text-white hover:bg-gray-900">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">keep</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               Pins
             </div>
           </a>
@@ -238,21 +215,17 @@
           <a href="#"
             (click)="setActiveNav('analytics'); $event.preventDefault()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 hover:bg-secondary-700': isNavActive('analytics')
             }"
-            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            class="flex cursor-pointer items-center rounded-md !text-white hover:bg-gray-900">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">insert_chart</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               Analytics
             </div>
           </a>
@@ -261,21 +234,17 @@
           <a href="#"
             (click)="setActiveNav('manage'); $event.preventDefault()"
             [ngClass]="{
-              'justify-center px-2': sidebarCollapsed,
-              'px-4': !sidebarCollapsed,
+              'h-[42px] w-11 justify-center px-0 py-0': sidebarCollapsed,
+              'w-full px-4 py-1': !sidebarCollapsed,
               'bg-secondary-700 hover:bg-secondary-700': isNavActive('manage')
             }"
-            class="flex w-full cursor-pointer items-center rounded-md py-1 !text-white hover:bg-gray-900">
+            class="flex cursor-pointer items-center rounded-md !text-white hover:bg-gray-900">
             <span
-              [ngClass]="{'pr-0': sidebarCollapsed}"
-              class="flex items-center py-2 material-symbols-outlined icon-20 text-white shrink-0"
+              [ngClass]="sidebarCollapsed ? '' : 'py-2'"
+              class="flex items-center material-symbols-outlined icon-20 text-white shrink-0"
               aria-hidden="true">mode_edit</span>
-            <div
-              [ngClass]="{
-                'opacity-100 max-w-[150px] px-2': !sidebarCollapsed,
-                'opacity-0 max-w-0 w-0 px-0': sidebarCollapsed
-              }"
-              class="sidenav-text break-words whitespace-nowrap transition-all duration-300 ease-in-out overflow-hidden text-base font-semibold leading-[1.4] text-gray-100">
+            <div *ngIf="!sidebarCollapsed"
+              class="sidenav-text max-w-[150px] overflow-hidden break-words px-2 text-base font-semibold leading-[1.4] text-gray-100 whitespace-nowrap">
               Manage
             </div>
           </a>
@@ -283,9 +252,10 @@
       </ul>
     </div>
 
+    <!-- Collapse control -->
     <div
-      [ngClass]="{'justify-center': sidebarCollapsed, 'justify-end': !sidebarCollapsed}"
-      class="relative shrink-0 mb-2 flex w-full min-w-0 py-2 pt-0">
+      [ngClass]="{'justify-center px-2': sidebarCollapsed, 'justify-end px-6': !sidebarCollapsed}"
+      class="relative shrink-0 flex w-full min-w-0 py-[1.875rem]">
       <button type="button" (click)="toggleSidebar()"
         [ngClass]="sidebarCollapsed ? 'px-1 py-1' : 'px-4 py-1'"
         class="z-[2] cursor-pointer items-center rounded-md bg-Mdblue-700 text-gray-300">
@@ -297,7 +267,7 @@
     </div>
   </div>
 
-  <!-- More menu: fixed flyout aligned to the More row -->
+  <!-- More submenu -->
   <div *ngIf="moreMenuOpen" #moreMenuPanel [@tooltip]
     class="fixed z-[60] -translate-y-1/2 flex flex-col rounded-lg bg-gray-900 py-4 shadow-md"
     [ngClass]="sidebarCollapsed ? 'left-[5.75rem]' : 'left-[14.625rem]'"
@@ -357,9 +327,9 @@
       </li>
     </ul>
   </div>
-  <!-- More menu flyout end -->
+  <!-- /More submenu -->
 
-  <!--project drawer start (layout only — Artemis uc-drawer-project-selection) -->
+  <!-- Workspace picker drawer -->
   <div *ngIf="projectDropdownOpen"
     role="presentation"
     class="fixed inset-0 z-[50] bg-gray-900/50 transition-opacity"
@@ -443,6 +413,6 @@
       </div>
     </div>
   </div>
-  <!--project drawer end-->
+  <!-- /Workspace picker drawer -->
 </div>
-<!--navigation end-->
+<!-- /navigation -->
