@@ -42,7 +42,7 @@ export class SidebarComponent {
   sidebarCollapsed = false;
   projectDropdownOpen = false;
   moreMenuOpen = false;
-  /** Selected nav key — mirrors Artemis routerLinkActive / isActive */
+  /** Currently selected sidebar nav item */
   activeNav = 'home';
   moreMenuTop = 0;
 
@@ -69,7 +69,7 @@ export class SidebarComponent {
     return this.activeNav === key;
   }
 
-  /** Parent More is green only when a submenu page is selected */
+  /** True when a More submenu item is the active page */
   isMoreChildActive(): boolean {
     return this.moreNavKeys.includes(this.activeNav);
   }
@@ -88,13 +88,13 @@ export class SidebarComponent {
     }
   }
 
-  /** Artemis inline drawer: sit flush against measured sidebar right edge */
+  /** Left offset so the workspace drawer sits against the sidebar edge */
   projectDrawerLeftPx(): number {
     const el = this.sidebarPanel?.nativeElement;
     if (el) {
       return Math.round(el.getBoundingClientRect().right);
     }
-    return this.sidebarCollapsed ? 80 : 240;
+    return this.sidebarCollapsed ? 80 : 252;
   }
 
   closeProjectDropdown(): void {
@@ -105,7 +105,6 @@ export class SidebarComponent {
     this.moreMenuOpen = !this.moreMenuOpen;
     if (this.moreMenuOpen) {
       this.projectDropdownOpen = false;
-      // Remeasure after open so ViewChild + layout are current
       requestAnimationFrame(() => this.positionMoreMenu());
     }
   }
@@ -116,7 +115,6 @@ export class SidebarComponent {
       return;
     }
     const triggerRect = triggerEl.getBoundingClientRect();
-    // Align menu vertically to the More trigger; left is set in the template via rem
     this.moreMenuTop = Math.round(triggerRect.top + triggerRect.height / 2);
   }
 
