@@ -391,6 +391,10 @@
     </div>
   </section>
 
+<!--document bulk order start-->
+<div class="testing"></div>
+<!--document bulk order end-->
+
   <!-- Motion Filters -->
   <div class="flex flex-col gap-4">
     <div class="relative flex h-[38px] w-full items-stretch rounded-lg border border-gray-300 bg-white text-sm text-Mdblue-700">
@@ -599,6 +603,288 @@
   </div>
 </div>
 <!--test end-->
+
+<!-- dum start -->
+<!-- All Orders — Figma 5502:10285 -->
+<div class="flex flex-col gap-4 bg-gray-100 px-8 pb-20 pt-6">
+
+  <!-- Title -->
+  <div class="flex flex-col gap-1.5">
+    <h1 class="font-lora text-[2rem] font-semibold leading-[1.2] text-Mdblue-700">All Orders</h1>
+    <p class="text-base font-normal leading-[1.4] text-Mdblue-700">All document orders from all Workspaces. You can bulk-download them below.</p>
+  </div>
+
+  <!-- Filters + actions -->
+  <div class="flex flex-wrap items-center justify-between gap-3">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="text-lg font-semibold text-Mdblue-700">Filters</span>
+      <button type="button"
+        class="inline-flex items-center gap-0.5 rounded border border-gray-300 py-[5px] pl-3 pr-1 text-base font-medium text-Mdblue-700 hover:bg-white focus:outline-none">
+        <span>Order Status</span>
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">expand_more</span>
+      </button>
+      <button type="button"
+        class="inline-flex items-center gap-0.5 rounded border border-gray-300 py-[5px] pl-3 pr-1 text-base font-medium text-Mdblue-700 hover:bg-white focus:outline-none">
+        <span>Date</span>
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">expand_more</span>
+      </button>
+      <button type="button"
+        class="inline-flex items-center gap-0.5 rounded border border-gray-300 py-[5px] pl-3 pr-1 text-base font-medium text-Mdblue-700 hover:bg-white focus:outline-none">
+        <span>User</span>
+        <span class="material-symbols-outlined icon-20" aria-hidden="true">expand_more</span>
+      </button>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+      <button type="button"
+        class="inline-flex items-center gap-1 rounded-md border-[1.5px] border-gray-300 bg-white px-2.5 py-2 text-base font-semibold text-gray-600 hover:bg-gray-50 focus:outline-none">
+        <span class="material-symbols-outlined icon-16" aria-hidden="true">ios_share</span>
+        <span>Export</span>
+      </button>
+      <button type="button" disabled
+        class="inline-flex items-center gap-1 rounded-md bg-secondary-700 px-2.5 py-2 text-base font-semibold text-white opacity-50 focus:outline-none">
+        <span class="material-symbols-outlined icon-16" aria-hidden="true">folder_zip</span>
+        <span>Download Selected</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Orders list -->
+  <div class="overflow-hidden rounded-xl border border-gray-300">
+      <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-4 rounded-t-xl border-b border-gray-300">
+        <span class="inline-flex h-[18px] w-[18px] shrink-0 rounded border-[1.5px] border-gray-300 bg-gray-100" aria-hidden="true"></span>
+        <button type="button" aria-label="Expand" class="inline-flex text-Mdblue-700 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">chevron_right</span>
+        </button>
+        <span class="inline-flex size-10 items-center justify-center rounded-lg border border-gray-300 bg-gray-100 text-Mdblue-700" aria-hidden="true">
+          <span class="material-symbols-outlined icon-24">receipt_long</span>
+        </span>
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <a href="#" class="truncate text-base font-semibold leading-[1.4] text-primary-700 hover:underline">Davis Estate v. Maryland Hospital Group</a>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-Mdblue-700">
+            <span>Workspace: <a href="#" class="text-primary-700 underline">My Workspace</a></span>
+            <span>Date: <span class="font-normal">2026-03-25</span></span>
+            <span>Order: <span class="font-normal">102021</span></span>
+            <span>User: <span class="font-normal">John Smith</span></span>
+          </div>
+        </div>
+        <div class="relative flex shrink-0 items-center gap-3">
+          <span class="inline-flex h-8 items-center gap-1 rounded-md border border-gray-300 bg-gray-100 px-2.5 text-xs font-normal text-black">
+            <span class="material-symbols-outlined icon-16" aria-hidden="true">downloading</span>
+            <span>In Manual Processing</span>
+          </span>
+          <button type="button" aria-label="Download" disabled
+          class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none opacity-50">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+        </button>
+          <div class="absolute right-0 top-full z-10 mt-2 w-max max-w-[16rem] rounded-[10px] bg-white p-2.5 text-base font-normal leading-[1.4] text-black shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+            The order is being processed manually.<br />This process may take up to 3 days.
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-4 border-b border-gray-300">
+        <span class="inline-flex h-[18px] w-[18px] shrink-0 rounded border-[1.5px] border-gray-400 bg-white" aria-hidden="true"></span>
+        <button type="button" aria-label="Expand" class="inline-flex text-Mdblue-700 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">chevron_right</span>
+        </button>
+        <span class="inline-flex size-10 items-center justify-center rounded-lg border border-gray-300 bg-gray-100 text-Mdblue-700" aria-hidden="true">
+          <span class="material-symbols-outlined icon-24">receipt_long</span>
+        </span>
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <a href="#" class="truncate text-base font-semibold leading-[1.4] text-primary-700 hover:underline">Davis Estate v. Maryland Hospital Group</a>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-Mdblue-700">
+            <span>Workspace: <a href="#" class="text-primary-700 underline">My Workspace</a></span>
+            <span>Date: <span class="font-normal">2026-03-25</span></span>
+            <span>Order: <span class="font-normal">102021</span></span>
+            <span>User: <span class="font-normal">John Smith</span></span>
+          </div>
+        </div>
+        <div class="relative flex shrink-0 items-center gap-3">
+          <span class="inline-flex h-8 min-w-[4.1875rem] items-center justify-center gap-1 rounded-md border border-[#C1CEFF] bg-[#EAEFFF] px-2.5 text-base font-semibold text-Mdblue-700">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">description</span>
+          <span>2</span>
+        </span>
+          <button type="button" aria-label="Download"
+          class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+        </button>
+          <div class="absolute right-0 top-full z-10 mt-2 w-max max-w-[14rem] rounded-[10px] bg-white p-2.5 text-base font-normal leading-[1.4] text-black shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+            Download all documents<br />in this order.
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-4 border-b border-gray-300">
+        <span class="inline-flex h-[18px] w-[18px] shrink-0 rounded border-[1.5px] border-gray-400 bg-white" aria-hidden="true"></span>
+        <button type="button" aria-label="Expand" class="inline-flex text-Mdblue-700 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">chevron_right</span>
+        </button>
+        <span class="inline-flex size-10 items-center justify-center rounded-lg border border-gray-300 bg-gray-100 text-Mdblue-700" aria-hidden="true">
+          <span class="material-symbols-outlined icon-24">receipt_long</span>
+        </span>
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <a href="#" class="truncate text-base font-semibold leading-[1.4] text-primary-700 hover:underline">Davis Estate v. Maryland Hospital Group</a>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-Mdblue-700">
+            <span>Workspace: <a href="#" class="text-primary-700 underline">My Workspace</a></span>
+            <span>Date: <span class="font-normal">2026-03-25</span></span>
+            <span>Order: <span class="font-normal">102021</span></span>
+            <span>User: <span class="font-normal">John Smith</span></span>
+          </div>
+        </div>
+        <div class="flex shrink-0 items-center gap-3">
+          <span class="inline-flex h-8 min-w-[4.1875rem] items-center justify-center gap-1 rounded-md border border-[#C1CEFF] bg-[#EAEFFF] px-2.5 text-base font-semibold text-Mdblue-700">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">description</span>
+          <span>10</span>
+        </span>
+          <button type="button" aria-label="Download"
+          class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-gray-100 p-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+        </button>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-4 border-b border-gray-300">
+        <span class="inline-flex h-[18px] w-[18px] shrink-0 rounded border-[1.5px] border-gray-400 bg-white" aria-hidden="true"></span>
+        <button type="button" aria-label="Expand" class="inline-flex text-Mdblue-700 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">chevron_right</span>
+        </button>
+        <span class="inline-flex size-10 items-center justify-center rounded-lg border border-gray-300 bg-gray-100 text-Mdblue-700" aria-hidden="true">
+          <span class="material-symbols-outlined icon-24">receipt_long</span>
+        </span>
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <a href="#" class="truncate text-base font-semibold leading-[1.4] text-primary-700 hover:underline">Davis Estate v. Maryland Hospital Group</a>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-Mdblue-700">
+            <span>Workspace: <a href="#" class="text-primary-700 underline">My Workspace</a></span>
+            <span>Date: <span class="font-normal">2026-03-25</span></span>
+            <span>Order: <span class="font-normal">102021</span></span>
+            <span>User: <span class="font-normal">John Smith</span></span>
+          </div>
+        </div>
+        <div class="flex shrink-0 items-center gap-3">
+          <span class="inline-flex h-8 min-w-[4.1875rem] items-center justify-center gap-1 rounded-md border border-[#C1CEFF] bg-[#EAEFFF] px-2.5 text-base font-semibold text-Mdblue-700">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">description</span>
+          <span>10</span>
+        </span>
+          <button type="button" aria-label="Download"
+          class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+        </button>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-4 border-b border-gray-300">
+        <span class="inline-flex h-[18px] w-[18px] shrink-0 rounded border-[1.5px] border-gray-400 bg-white" aria-hidden="true"></span>
+        <button type="button" aria-label="Expand" class="inline-flex text-Mdblue-700 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">chevron_right</span>
+        </button>
+        <span class="inline-flex size-10 items-center justify-center rounded-lg border border-gray-300 bg-gray-100 text-Mdblue-700" aria-hidden="true">
+          <span class="material-symbols-outlined icon-24">receipt_long</span>
+        </span>
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <a href="#" class="truncate text-base font-semibold leading-[1.4] text-primary-700 hover:underline">Davis Estate v. Maryland Hospital Group</a>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-Mdblue-700">
+            <span>Workspace: <a href="#" class="text-primary-700 underline">My Workspace</a></span>
+            <span>Date: <span class="font-normal">2026-03-25</span></span>
+            <span>Order: <span class="font-normal">102021</span></span>
+            <span>User: <span class="font-normal">John Smith</span></span>
+          </div>
+        </div>
+        <div class="flex shrink-0 items-center gap-3">
+          <span class="inline-flex h-8 min-w-[4.1875rem] items-center justify-center gap-1 rounded-md border border-[#C1CEFF] bg-[#EAEFFF] px-2.5 text-base font-semibold text-Mdblue-700">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">description</span>
+          <span>10</span>
+        </span>
+          <button type="button" aria-label="Download"
+          class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+        </button>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-4 border-b border-gray-300">
+        <span class="inline-flex h-[18px] w-[18px] shrink-0 rounded border-[1.5px] border-gray-400 bg-white" aria-hidden="true"></span>
+        <button type="button" aria-label="Expand" class="inline-flex text-Mdblue-700 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">chevron_right</span>
+        </button>
+        <span class="inline-flex size-10 items-center justify-center rounded-lg border border-gray-300 bg-gray-100 text-Mdblue-700" aria-hidden="true">
+          <span class="material-symbols-outlined icon-24">receipt_long</span>
+        </span>
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <a href="#" class="truncate text-base font-semibold leading-[1.4] text-primary-700 hover:underline">Davis Estate v. Maryland Hospital Group</a>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-Mdblue-700">
+            <span>Workspace: <a href="#" class="text-primary-700 underline">My Workspace</a></span>
+            <span>Date: <span class="font-normal">2026-03-25</span></span>
+            <span>Order: <span class="font-normal">102021</span></span>
+            <span>User: <span class="font-normal">John Smith</span></span>
+          </div>
+        </div>
+        <div class="flex shrink-0 items-center gap-3">
+          <span class="inline-flex h-8 min-w-[4.1875rem] items-center justify-center gap-1 rounded-md border border-[#C1CEFF] bg-[#EAEFFF] px-2.5 text-base font-semibold text-Mdblue-700">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">description</span>
+          <span>10</span>
+        </span>
+          <button type="button" aria-label="Download"
+          class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+        </button>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-4 border-b border-gray-300">
+        <span class="inline-flex h-[18px] w-[18px] shrink-0 rounded border-[1.5px] border-gray-400 bg-white" aria-hidden="true"></span>
+        <button type="button" aria-label="Expand" class="inline-flex text-Mdblue-700 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">chevron_right</span>
+        </button>
+        <span class="inline-flex size-10 items-center justify-center rounded-lg border border-gray-300 bg-gray-100 text-Mdblue-700" aria-hidden="true">
+          <span class="material-symbols-outlined icon-24">receipt_long</span>
+        </span>
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <a href="#" class="truncate text-base font-semibold leading-[1.4] text-primary-700 hover:underline">Davis Estate v. Maryland Hospital Group</a>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-Mdblue-700">
+            <span>Workspace: <a href="#" class="text-primary-700 underline">My Workspace</a></span>
+            <span>Date: <span class="font-normal">2026-03-25</span></span>
+            <span>Order: <span class="font-normal">102021</span></span>
+            <span>User: <span class="font-normal">John Smith</span></span>
+          </div>
+        </div>
+        <div class="flex shrink-0 items-center gap-3">
+          <span class="inline-flex h-8 w-[4.1875rem] items-center justify-center rounded-md border border-[#FBACAD] bg-[#FEE3E4] px-2" aria-label="Order error">
+            <span class="material-symbols-outlined icon-16 text-Mdblue-700" aria-hidden="true">error_outline</span>
+          </span>
+          <button type="button" aria-label="Download"
+          class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+        </button>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 bg-white px-4 py-4rounded-b-xl">
+        <span class="inline-flex h-[18px] w-[18px] shrink-0 rounded border-[1.5px] border-gray-400 bg-white" aria-hidden="true"></span>
+        <button type="button" aria-label="Expand" class="inline-flex text-Mdblue-700 focus:outline-none">
+          <span class="material-symbols-outlined icon-24" aria-hidden="true">chevron_right</span>
+        </button>
+        <span class="inline-flex size-10 items-center justify-center rounded-lg border border-gray-300 bg-gray-100 text-Mdblue-700" aria-hidden="true">
+          <span class="material-symbols-outlined icon-24">receipt_long</span>
+        </span>
+        <div class="flex min-w-0 flex-1 flex-col gap-1">
+          <a href="#" class="truncate text-base font-semibold leading-[1.4] text-primary-700 hover:underline">Davis Estate v. Maryland Hospital Group</a>
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-Mdblue-700">
+            <span>Workspace: <a href="#" class="text-primary-700 underline">My Workspace</a></span>
+            <span>Date: <span class="font-normal">2026-03-25</span></span>
+            <span>Order: <span class="font-normal">102021</span></span>
+            <span>User: <span class="font-normal">John Smith</span></span>
+          </div>
+        </div>
+        <div class="flex shrink-0 items-center gap-3">
+          <span class="inline-flex h-8 min-w-[4.1875rem] items-center justify-center gap-1 rounded-md border border-[#C1CEFF] bg-[#EAEFFF] px-2.5 text-base font-semibold text-Mdblue-700">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">description</span>
+          <span>10</span>
+        </span>
+          <button type="button" aria-label="Download"
+          class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+          <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+        </button>
+        </div>
+      </div>
+  </div>
+</div>
+<!--dum end -->
+
+
+
 
 
 <!-- New Judgment Found alert email template (new design 29/07/2026) start -->
@@ -1628,3 +1914,4 @@
   </tr>
 </table>
 <!-- Daily Alert Summary email template (new design 29/07/2026) end -->
+
