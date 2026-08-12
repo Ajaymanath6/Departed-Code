@@ -94,7 +94,389 @@
 
   </div>
 
-  <!--full table str content opens inside row start-->
+
+  <h3>copy</h3>
+  <!--(copy)full table str content opens inside row start-->
+  <div class="overflow-hidden rounded-xl border border-gray-300 bg-gray-50 mt-4 table-div-mix">
+    <div class="overflow-x-auto p-4">
+      <table
+        class="doc-order-outer-table w-full table-fixed border-separate border-spacing-y-2 text-left text-sm text-Mdblue-600 rtl:text-right">
+        <thead class="text-sm font-semibold text-Mdblue-600">
+          <tr class="border-b border-gray-200 bg-white-">
+            <th scope="col" class="w-[5rem] p-4">
+              <div class="flex items-center"><input type="checkbox"
+                  class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0"><label
+                  for="checkbox-mix-table-all" class="sr-only">checkbox</label>
+              </div>
+            </th>
+            <th scope="col" class="w-2/5 px-4 py-3">
+              <div class="flex items-center uppercase tracking-wide text-gray-700">
+                <span>Order</span>
+              </div>
+            </th>
+            <th scope="col" class="px-4 py-3 uppercase tracking-wide whitespace-nowrap text-gray-600">
+              <div class="flex items-center gap-1">
+                <span>Date</span>
+                <button type="button" aria-label="Sort by date" class="press flex items-center text-center">
+                  <span class="material-symbols-outlined icon-16 font-semibold">unfold_more</span>
+                </button>
+              </div>
+            </th>
+            <th scope="col" class="px-4 py-3 uppercase tracking-wide text-gray-700">
+              <div class="flex items-center gap-1">
+                <span>Status</span>
+                <button type="button" aria-label="Sort by status" class="press flex items-center text-center">
+                  <span class="material-symbols-outlined icon-16 font-semibold">unfold_more</span>
+                </button>
+              </div>
+            </th>
+            <th scope="col" class="px-4 py-3 text-center uppercase tracking-wide text-gray-700">Docs</th>
+            <th scope="col" class="px-4 py-3 uppercase tracking-wide whitespace-nowrap text-gray-600">
+              <div class="flex items-center justify-center gap-1">
+                <span>Price</span>
+                <button type="button" aria-label="Sort by price" class="press flex items-center text-center">
+                  <span class="material-symbols-outlined icon-16 font-semibold">unfold_more</span>
+                </button>
+              </div>
+            </th>
+            <th scope="col" class="px-4 py-3 text-center align-middle uppercase tracking-wide text-gray-700">Action</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <!-- Row: In Progress -->
+          <tr class="bg-white rounded-md [&>td]:border-y [&>td]:border-gray-300">
+            <td class="w-4 p-4 border-l border-gray-300 rounded-l-md">
+              <div class="flex items-center gap-2">
+                <div class="flex items-center">
+                  <input id="checkbox-mix-table-0" type="checkbox"
+                    class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0">
+                  <label for="checkbox-mix-table-0" class="sr-only">checkbox</label>
+                </div>
+                <img src="assets/svg/dartcollapse.svg" alt="" width="16" height="18"
+                  class="h-[18px] w-4 shrink-0 object-contain" aria-hidden="true">
+              </div>
+            </td>
+            <td class="px-4 py-4 min-w-0">
+              <div class="flex items-center gap-4">
+                <button type="button"
+                  class="flex h-10 w-10 items-center justify-center rounded border border-gray-300 bg-gray-50 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:outline-none">
+                  <span class="material-symbols-outlined icon-24 text-Mdblue-700">receipt_long</span>
+                </button>
+                <div class="flex min-w-0 flex-1 flex-col gap-1">
+                  <div class="flex items-center gap-1">
+                    <a target="_blank" rel="noopener noreferrer" href="#"
+                      class="text-base font-semibold text-primary-600 hover:underline cursor-pointer line-clamp-1">
+                      Davis Estate v. Maryland Hospital Group
+                    </a>
+                  </div>
+                  <div class="flex flex-row flex-wrap items-center gap-4">
+                    <div class="flex items-center gap-1">
+                      <span class="text-sm font-semibold text-Mdblue-700">Workspace:</span>
+                      <a tabindex="0" class="text-sm font-normal text-Mdblue-700 hover:underline cursor-pointer">My Workspace</a>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <span class="text-sm font-semibold text-Mdblue-700">Order:</span>
+                      <span class="text-sm font-normal text-Mdblue-700">1234A1</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <span class="text-sm font-semibold text-Mdblue-700">Client/Matter:</span>
+                      <span class="text-sm font-normal text-Mdblue-700">MN34A1.001</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="px-4 py-4 whitespace-nowrap text-sm text-Mdblue-700">
+              <div class="flex flex-col leading-[1.4] text-Mdblue-700">
+                <span class="text-base font-normal">2026-08-10</span>
+                <span class="text-sm font-semibold">12:01</span>
+              </div>
+            </td>
+            <td class="px-4 py-4">
+              <div class="flex w-full min-w-[7rem] max-w-[10rem] flex-col items-center gap-1.5">
+                <div class="relative h-2 w-full overflow-hidden rounded-full bg-gray-200" role="progressbar"
+                  aria-busy="true" aria-valuetext="In progress" aria-label="Order progress">
+                  <div class="doc-order-progress-bar doc-order-progress-bar--primary"></div>
+                  <div class="doc-order-progress-bar doc-order-progress-bar--secondary"></div>
+                </div>
+                <span class="w-full text-center text-sm font-semibold text-gray-600">In Progress</span>
+              </div>
+            </td>
+            <td class="px-4 py-4 align-middle text-center">
+              <span class="text-base font-normal text-Mdblue-700">-</span>
+            </td>
+            <td class="px-4 py-4 whitespace-nowrap text-center text-base font-normal text-Mdblue-700">
+              <span>-</span>
+            </td>
+            <td class="px-4 py-4 text-center align-middle border-r border-gray-300 rounded-r-md">
+              <div class="flex justify-center">
+                <button type="button" disabled aria-label="Sync in progress"
+                  class="inline-flex cursor-not-allowed items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-primary-600 opacity-50">
+                  <span class="material-symbols-outlined icon-16" aria-hidden="true">sync</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Row: Ready to Download + failed docs accordion (same tr/colspan pattern as before) -->
+          <tr class="bg-transparent">
+            <td colspan="7" class="border-0 bg-transparent p-0 align-top">
+              <div class="overflow-hidden rounded-[10px] border border-gray-300 bg-white">
+                <table class="w-full table-fixed text-left text-sm text-Mdblue-600" role="presentation">
+                  <tbody>
+                    <tr>
+                      <td class="w-[5rem] p-4">
+                        <div class="flex items-center gap-2">
+                          <div class="flex items-center">
+                            <input id="checkbox-mix-table-1" type="checkbox" checked
+                              class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0">
+                            <label for="checkbox-mix-table-1" class="sr-only">checkbox</label>
+                          </div>
+                          <img src="assets/svg/dartcollapse.svg" alt="" width="16" height="18"
+                            class="h-[18px] w-4 shrink-0 object-contain" aria-hidden="true">
+                        </div>
+                      </td>
+                      <td class="w-2/5 px-4 py-4 min-w-0">
+                        <div class="flex items-center gap-4">
+                          <button type="button"
+                            class="flex h-10 w-10 items-center justify-center rounded border border-gray-300 bg-gray-50 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:outline-none">
+                            <span class="material-symbols-outlined icon-24 text-Mdblue-700">receipt_long</span>
+                          </button>
+                          <div class="flex min-w-0 flex-1 flex-col gap-1">
+                            <div class="flex items-center gap-1">
+                              <a target="_blank" rel="noopener noreferrer" href="#"
+                                class="text-base font-semibold text-primary-600 hover:underline cursor-pointer line-clamp-1">
+                                Davis Estate v. Maryland Hospital Group
+                              </a>
+                            </div>
+                            <div class="flex flex-row flex-wrap items-center gap-4">
+                              <div class="flex items-center gap-1">
+                                <span class="text-sm font-semibold text-Mdblue-700">Workspace:</span>
+                                <a tabindex="0" class="text-sm font-normal text-Mdblue-700 hover:underline cursor-pointer">My Workspace</a>
+                              </div>
+                              <div class="flex items-center gap-1">
+                                <span class="text-sm font-semibold text-Mdblue-700">Order:</span>
+                                <span class="text-sm font-normal text-Mdblue-700">1234A1</span>
+                              </div>
+                              <div class="flex items-center gap-1">
+                                <span class="text-sm font-semibold text-Mdblue-700">Client/Matter:</span>
+                                <span class="text-sm font-normal text-Mdblue-700">MN34A1.001</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-4 py-4 whitespace-nowrap text-sm text-Mdblue-700">
+                        <div class="flex flex-col leading-[1.4] text-Mdblue-700">
+                          <span class="text-base font-normal">2026-02-15</span>
+                          <span class="text-sm font-semibold">12:01</span>
+                        </div>
+                      </td>
+                      <td class="px-4 py-4">
+                        <span class="text-base font-semibold text-primary-600">Ready to Download</span>
+                      </td>
+                      <td class="px-4 py-4 align-middle text-center">
+                        <div class="flex flex-col items-center gap-1">
+                          <span class="text-base font-normal text-Mdblue-700">814</span>
+                          <span class="text-[13px] font-semibold leading-[1.1] text-red-600">1 Failed</span>
+                        </div>
+                      </td>
+                      <td class="px-4 py-4 whitespace-nowrap text-center text-base font-normal text-Mdblue-700">
+                        <span>$967.23</span>
+                      </td>
+                      <td class="px-4 py-4 text-center align-middle">
+                        <div class="flex justify-center">
+                          <button type="button" aria-label="Download order"
+                            class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-primary-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-200">
+                            <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="px-8 pb-3">
+                  <button type="button" (click)="toggleDocumentOrderDetails()"
+                    class="inline-flex items-center gap-1 rounded-md bg-white px-2.5 py-1 text-sm font-bold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-300 cust-click"
+                    [attr.aria-expanded]="showDocumentOrderDetails"
+                    aria-label="Show or hide failed documents">
+                    <span>Show Failed Documents</span>
+                    <span class="material-symbols-outlined icon-20" aria-hidden="true">{{
+                      showDocumentOrderDetails ? 'expand_less' : 'expand_more' }}</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Figma: Failed docs https://www.figma.com/design/VUG0Pc9UA91jZIImtzYc8H/Document-Orders?node-id=6550-1647 -->
+              <div *ngIf="showDocumentOrderDetails"
+                class="mt-2 overflow-hidden rounded-[10px] border border-gray-300 bg-gray-50 p-4">
+                <table
+                  class="w-full table-fixed border-separate border-spacing-y-2 text-left text-sm text-Mdblue-700">
+                  <thead class="text-sm font-semibold uppercase tracking-[0.04em] text-gray-700">
+                    <tr>
+                      <th scope="col" class="w-[38%] px-6 py-2">
+                        <div class="flex items-center gap-1">
+                          <span>Name</span>
+                          <button type="button" aria-label="Sort by name"
+                            class="press inline-flex items-center text-Mdblue-700">
+                            <span class="material-symbols-outlined icon-16 font-semibold" aria-hidden="true">unfold_more</span>
+                          </button>
+                        </div>
+                      </th>
+                      <th scope="col" class="w-[48%] px-6 py-2">Description</th>
+                      <th scope="col" class="w-[14%] px-6 py-2 text-center">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Failed document card #6550:1658 — table str -->
+                    <tr class="bg-transparent">
+                      <td colspan="3" class="border-0 bg-transparent p-0 align-top">
+                        <div class="overflow-hidden rounded-[10px] border border-gray-300 bg-white">
+                          <table class="w-full table-fixed text-left text-sm text-Mdblue-700" role="presentation">
+                            <tbody>
+                              <tr class="min-h-[70px]">
+                                <td class="w-[38%] px-6 py-4 align-top text-base font-normal leading-[1.4] text-Mdblue-700">
+                                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond &amp; Adjourn Motion Date
+                                </td>
+                                <td class="w-[48%] px-6 py-4 align-top text-sm font-normal leading-[1.4] text-Mdblue-700">
+                                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026; Received: 02/17/2026
+                                </td>
+                                <td class="w-[14%] px-6 py-4 align-middle text-center">
+                                  <div class="flex flex-col items-center justify-center gap-1">
+                                    <span class="text-base font-normal leading-[1.4] text-red-600">Failed</span>
+                                    <span class="text-[13px] font-semibold leading-[1.1] text-gray-600">Not Available</span>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" class="border-t border-gray-300 px-6 py-2">
+                                  <div class="flex items-center gap-2">
+                                    <span class="inline-flex h-6 items-center justify-center rounded border border-gray-300 bg-gray-50 px-4 text-sm font-semibold text-Mdblue-700">Tag 1</span>
+                                    <span class="inline-flex h-6 items-center justify-center rounded border border-gray-300 bg-gray-50 px-4 text-sm font-semibold text-Mdblue-700">Tag 2</span>
+                                    <span class="inline-flex h-6 items-center justify-center rounded border border-gray-300 bg-gray-50 px-4 text-sm font-semibold text-Mdblue-700">Tag 3</span>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Failed document card -->
+                    <tr class="bg-transparent">
+                      <td colspan="3" class="border-0 bg-transparent p-0 align-top">
+                        <div class="overflow-hidden rounded-[10px] border border-gray-300 bg-white">
+                          <table class="w-full table-fixed text-left text-sm text-Mdblue-700" role="presentation">
+                            <tbody>
+                              <tr class="min-h-[70px]">
+                                <td class="w-[38%] px-6 py-4 align-top text-base font-normal leading-[1.4] text-Mdblue-700">
+                                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond &amp; Adjourn Motion Date
+                                </td>
+                                <td class="w-[48%] px-6 py-4 align-top text-sm font-normal leading-[1.4] text-Mdblue-700">
+                                  STIPULATION - ADJOURNMENT OF MOTION -IN SUBMISSIONS PART -RM 130 (Motion #023) AMENDED Stipulation to Extend Time to Respond &amp; Adjourn Motion Date; Filed By: SHUKLA, KUSH; Filed: 02/17/2026; Received: 02/17/2026
+                                </td>
+                                <td class="w-[14%] px-6 py-4 align-middle text-center">
+                                  <div class="flex flex-col items-center justify-center gap-1">
+                                    <span class="text-base font-normal leading-[1.4] text-red-600">Failed</span>
+                                    <span class="text-[13px] font-semibold leading-[1.1] text-gray-600">Not Available</span>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" class="border-t border-gray-300 px-6 py-2">
+                                  <div class="flex items-center gap-2">
+                                    <span class="inline-flex h-6 items-center justify-center rounded border border-gray-300 bg-gray-50 px-4 text-sm font-semibold text-Mdblue-700">Tag 1</span>
+                                    <span class="inline-flex h-6 items-center justify-center rounded border border-gray-300 bg-gray-50 px-4 text-sm font-semibold text-Mdblue-700">Tag 2</span>
+                                    <span class="inline-flex h-6 items-center justify-center rounded border border-gray-300 bg-gray-50 px-4 text-sm font-semibold text-Mdblue-700">Tag 3</span>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Row: Downloaded -->
+          <tr class="bg-white rounded-md [&>td]:border-y [&>td]:border-gray-300">
+            <td class="w-4 p-4 border-l border-gray-300 rounded-l-md">
+              <div class="flex items-center gap-2">
+                <div class="flex items-center">
+                  <input id="checkbox-mix-table-2" type="checkbox" checked
+                    class="h-4 w-4 cursor-pointer rounded border border-gray-600 text-secondary-700 focus:ring-0 focus:ring-offset-0">
+                  <label for="checkbox-mix-table-2" class="sr-only">checkbox</label>
+                </div>
+                <img src="assets/svg/dartcollapse.svg" alt="" width="16" height="18"
+                  class="h-[18px] w-4 shrink-0 object-contain" aria-hidden="true">
+              </div>
+            </td>
+            <td class="px-4 py-4 min-w-0">
+              <div class="flex items-center gap-4">
+                <button type="button"
+                  class="flex h-10 w-10 items-center justify-center rounded border border-gray-300 bg-gray-50 text-sm font-medium text-Mdblue-700 hover:border-gray-600 hover:bg-gray-100 focus:outline-none">
+                  <span class="material-symbols-outlined icon-24 text-Mdblue-700">receipt_long</span>
+                </button>
+                <div class="flex min-w-0 flex-1 flex-col gap-1">
+                  <div class="flex items-center gap-1">
+                    <a target="_blank" rel="noopener noreferrer" href="#"
+                      class="text-base font-semibold text-primary-600 hover:underline cursor-pointer line-clamp-1">
+                      Davis Estate v. Maryland Hospital Group
+                    </a>
+                  </div>
+                  <div class="flex flex-row flex-wrap items-center gap-4">
+                    <div class="flex items-center gap-1">
+                      <span class="text-sm font-semibold text-Mdblue-700">Workspace:</span>
+                      <a tabindex="0" class="text-sm font-normal text-Mdblue-700 hover:underline cursor-pointer">My Workspace</a>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <span class="text-sm font-semibold text-Mdblue-700">Order:</span>
+                      <span class="text-sm font-normal text-Mdblue-700">1234A1</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <span class="text-sm font-semibold text-Mdblue-700">Client/Matter:</span>
+                      <span class="text-sm font-normal text-Mdblue-700">MN34A1.001</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="px-4 py-4 whitespace-nowrap text-sm text-Mdblue-700">
+              <div class="flex flex-col leading-[1.4] text-Mdblue-700">
+                <span class="text-base font-normal">2026-02-15</span>
+                <span class="text-sm font-semibold">12:01</span>
+              </div>
+            </td>
+            <td class="px-4 py-4">
+              <span class="text-base font-normal text-primary-600">Downloaded</span>
+            </td>
+            <td class="px-4 py-4 align-middle text-center">
+              <span class="text-base font-normal text-Mdblue-700">413</span>
+            </td>
+            <td class="px-4 py-4 whitespace-nowrap text-center text-base font-normal text-Mdblue-700">
+              <span>$795.11</span>
+            </td>
+            <td class="px-4 py-4 text-center align-middle border-r border-gray-300 rounded-r-md">
+              <div class="flex justify-center">
+                <button type="button" aria-label="Download order"
+                  class="inline-flex items-center justify-center rounded-md border-[1.5px] border-gray-300 bg-white p-2 text-primary-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-200">
+                  <span class="material-symbols-outlined icon-16" aria-hidden="true">file_download</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--(copy)full table str content opens inside row end-->
+
+
+  <h3 class="mt-8">original</h3>
+  <!--(original) full table str content opens inside row start-->
   <div class="overflow-hidden rounded-xl border border-gray-300 bg-gray-50 mt-4 table-div-mix">
     <div class="overflow-x-auto p-4">
       <table
@@ -437,7 +819,8 @@
       </table>
     </div>
   </div>
-  <!--full table str content opens inside row end-->
+  <!--(original) full table str content opens inside row end-->
+
 
   <!--full table str adjecent row opens when start-->
   <!--dont use this code-->
