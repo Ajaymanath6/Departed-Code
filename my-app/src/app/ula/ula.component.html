@@ -1,7 +1,5 @@
 <!--ula Home Page/ ULA Search/Expanded start-->
-
 <div class="mx-auto my-8 flex h-screen w-full max-w-7xl flex-col overflow-hidden rounded-xl border border-gray-300 bg-white">
-
   <!-- Header -->
   <div class="flex shrink-0 items-center justify-between gap-4 border-b border-gray-300 bg-white px-6 py-3 rounded-t-xl">
     <div class="flex items-end gap-4">
@@ -21,7 +19,6 @@
       </button>
     </div>
   </div>
-
   <!-- Body: history + chat -->
   <div class="flex min-h-0 flex-1 overflow-hidden rounded-b-xl bg-white">
 
@@ -48,7 +45,7 @@
           <p class="w-full text-center text-sm font-normal leading-[1.4] text-gray-600">Today</p>
           <div class="flex flex-col gap-1 rounded-md">
             <button type="button"
-              class="flex w-full items-center justify-center rounded-md bg-gray-100 px-2 py-2 text-center text-sm font-bold leading-[1.4] text-Mdblue-700 hover:bg-gray-200 focus:outline-none">
+              class="w-full rounded-md bg-gray-100 px-2 py-2 text-left text-sm font-bold leading-[1.4] text-Mdblue-700 hover:bg-gray-200 focus:outline-none">
               New Chat
             </button>
           </div>
@@ -76,14 +73,14 @@
 
       <!-- Composer -->
       <div class="shrink-0 border-t border-gray-300 bg-white pb-4">
-        <div class="mx-auto flex w-full max-w-[53.75rem] flex-col items-center gap-2 px-4 pt-4">
+        <div class="mx-auto flex w-full max-w-[53.75rem] flex-col gap-2 px-4 pt-4">
           <div class="flex w-full items-center gap-4 rounded-xl border-[1.5px] border-gray-300 bg-white p-4 hover:border-purple-600 hover:bg-gray-50 focus-within:border-purple-600 focus-within:bg-white focus-within:ring-1 focus-within:ring-purple-600">
             <input type="text"
               class="min-w-0 flex-1 border-0 bg-transparent p-0 text-sm font-normal leading-[1.4] text-Mdblue-700 placeholder:text-gray-700 focus:outline-none focus:ring-0"
               placeholder="Write a message"
               aria-label="Write a message" />
           </div>
-          <p class="px-2 text-center text-[13px] font-normal leading-[1.1] text-gray-600">
+          <p class="px-2 text-left text-[13px] font-normal leading-[1.1] text-gray-600">
             ULA is AI and can make mistakes. Verify responses before filing.
           </p>
         </div>
@@ -92,6 +89,7 @@
   </div>
 </div>
 <!--ula Home Page/ ULA Search/Expanded end-->
+
 
 <!--How can I help you today? start-->
 <div class="mx-auto my-8 flex h-screen w-full max-w-7xl flex-col overflow-hidden rounded-xl border border-gray-300 bg-white">
@@ -190,7 +188,7 @@
 
     <!-- Composer -->
     <div class="shrink-0 border-t border-gray-300 bg-white pb-4">
-      <div class="mx-auto flex w-full max-w-[53.75rem] flex-col items-center gap-2 px-4 pt-4">
+      <div class="mx-auto flex w-full max-w-[53.75rem] flex-col gap-2 px-4 pt-4">
         <div class="w-full rounded-xl bg-gradient-to-t from-purple-100 from-[14%] to-purple-400 p-[1.5px] hover:from-purple-200 hover:to-purple-500 focus-within:from-purple-200 focus-within:to-purple-600 focus-within:ring-1 focus-within:ring-purple-600">
           <div class="flex w-full items-center gap-4 rounded-[10.5px] bg-white p-4 hover:bg-gray-50 focus-within:bg-white">
             <input type="text"
@@ -199,9 +197,6 @@
               aria-label="Ask ULA anything about your legal matters" />
           </div>
         </div>
-        <p class="px-2 text-center text-[13px] font-normal leading-[1.1] text-gray-600">
-          ULA is AI and can make mistakes. Verify responses before filing.
-        </p>
       </div>
     </div>
   </div>
@@ -210,7 +205,6 @@
 
 
 <!--recent chats start-->
-
 <div class="mx-auto my-8 flex h-screen w-full max-w-7xl flex-col overflow-hidden rounded-xl border border-gray-300 bg-white">
 
   <!-- Header -->
@@ -259,7 +253,7 @@
           <p class="w-full text-center text-sm font-normal leading-[1.4] text-gray-600">Today</p>
           <div class="flex flex-col gap-1 rounded-md">
             <button type="button"
-              class="flex w-full items-center justify-center rounded-md bg-gray-100 px-2 py-2 text-center text-sm font-bold leading-[1.4] text-Mdblue-700 hover:bg-gray-200 focus:outline-none">
+              class="w-full rounded-md bg-gray-100 px-2 py-2 text-left text-sm font-bold leading-[1.4] text-Mdblue-700 hover:bg-gray-200 focus:outline-none">
               New Chat
             </button>
           </div>
@@ -277,14 +271,14 @@
           </div>
         </div>
 
-        <!-- ULA reply + case lookup -->
-        <div class="flex flex-col gap-4 pe-0 sm:pe-8">
+          <!-- ULA reply + case lookup -->
+        <div class="flex flex-col gap-4 pe-0 sm:px-8">
           <p class="text-left text-base font-normal leading-[1.4] text-Mdblue-700">
             To pull the right case overview, tell me what you have on the case.<br />
             Pick one — or paste anything you know:
           </p>
 
-          <div class="flex max-w-[26.8125rem] flex-col gap-2 ps-8">
+          <div class="flex max-w-[26.8125rem] flex-col gap-2">
             <div class="flex flex-col gap-1">
               <label for="ula-case-number-link"
                 class="text-left text-sm font-semibold leading-[1.4] text-Mdblue-700">
@@ -296,7 +290,7 @@
                 aria-label="Case Number or Case Link" />
             </div>
 
-            <div>
+            <div class="text-left">
               <button type="button"
                 class="inline-flex items-center justify-center rounded-md bg-purple-600 px-2.5 py-2 text-base font-semibold leading-[1.4] text-white hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500">
                 Continue
@@ -308,14 +302,14 @@
 
       <!-- Composer -->
       <div class="shrink-0 border-t border-gray-300 bg-white pb-4">
-        <div class="mx-auto flex w-full max-w-[53.75rem] flex-col items-center gap-2 px-4 pt-4">
+        <div class="mx-auto flex w-full max-w-[53.75rem] flex-col gap-2 px-4 pt-4">
           <div class="flex w-full items-center gap-4 rounded-xl border-[1.5px] border-gray-300 bg-white p-4 hover:border-purple-600 hover:bg-gray-50 focus-within:border-purple-600 focus-within:bg-white focus-within:ring-1 focus-within:ring-purple-600">
             <input type="text"
               class="min-w-0 flex-1 border-0 bg-transparent p-0 text-sm font-normal leading-[1.4] text-Mdblue-700 placeholder:text-gray-700 focus:outline-none focus:ring-0"
               placeholder="Write a message"
               aria-label="Write a message" />
           </div>
-          <p class="px-2 text-center text-[13px] font-normal leading-[1.1] text-gray-600">
+          <p class="px-2 text-left text-[13px] font-normal leading-[1.1] text-gray-600">
             ULA is AI and can make mistakes. Verify responses before filing.
           </p>
         </div>
@@ -325,8 +319,8 @@
 </div>
 <!--recent chats end-->
 
-<!--result in table start-->
 
+<!--result in table start-->
 <div class="mx-auto my-8 flex h-screen w-full max-w-7xl flex-col overflow-hidden rounded-xl border border-gray-300 bg-white">
 
   <!-- Header -->
@@ -375,7 +369,7 @@
           <p class="w-full text-center text-sm font-normal leading-[1.4] text-gray-600">Today</p>
           <div class="flex flex-col gap-1 rounded-md">
             <button type="button"
-              class="flex w-full items-center justify-center rounded-md bg-gray-100 px-2 py-2 text-center text-sm font-bold leading-[1.4] text-Mdblue-700 hover:bg-gray-200 focus:outline-none">
+              class="w-full rounded-md bg-gray-100 px-2 py-2 text-left text-sm font-bold leading-[1.4] text-Mdblue-700 hover:bg-gray-200 focus:outline-none">
               New Chat
             </button>
           </div>
@@ -444,12 +438,16 @@
             Latest Personal Injury Cases with a Verdict — Montgomery County, Maryland
           </h2>
 
-          <p class="text-left text-base font-normal leading-[1.4] text-Mdblue-700">
-            <span class="text-sm font-bold text-gray-600">Court:</span>
-            <span class="text-base font-normal text-Mdblue-700">6th Judicial Circuit — Montgomery County Circuit Courthouse</span><br />
-            <span class="text-sm font-bold text-gray-600">Total Matching Cases:</span>
-            <span class="text-base font-normal text-Mdblue-700">192</span>
-          </p>
+          <div class="text-left leading-[1.4] text-Mdblue-700">
+            <p class="text-left">
+              <span class="text-sm font-bold text-gray-600">Court:</span>
+              <span class="text-base font-semibold text-Mdblue-700">6th Judicial Circuit — Montgomery County Circuit Courthouse</span>
+            </p>
+            <p class="text-left">
+              <span class="text-sm font-bold text-gray-600">Total Matching Cases:</span>
+              <span class="text-base font-semibold text-Mdblue-700">192</span>
+            </p>
+          </div>
 
           <!-- Results table -->
           <div class="overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
@@ -458,7 +456,7 @@
                 class="w-full min-w-[52rem] table-fixed border-separate border-spacing-y-2 text-left text-[13px] text-Mdblue-700">
                 <thead>
                   <tr>
-                    <th scope="col" class="w-[18.5rem] px-6 py-2">
+                    <th scope="col" class="w-[18.5rem] px-6 py-2 text-left">
                       <div class="flex items-center gap-1 text-[13px] font-semibold uppercase leading-[1.1] tracking-wide text-gray-700">
                         <span>Case Name</span>
                         <button type="button" aria-label="Sort by case name"
@@ -489,49 +487,49 @@
                 </thead>
                 <tbody>
                   <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
-                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 font-semibold leading-[1.1] text-Mdblue-700">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
                       Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
                     </td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
                   </tr>
                   <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
-                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 font-semibold leading-[1.1] text-Mdblue-700">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
                       Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
                     </td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
                   </tr>
                   <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
-                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 font-semibold leading-[1.1] text-Mdblue-700">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
                       Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
                     </td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 font-normal leading-[1.1] text-Mdblue-700">Negligence</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Negligence</td>
                   </tr>
                   <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
-                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 font-semibold leading-[1.1] text-Mdblue-700">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
                       Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
                     </td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
                   </tr>
                   <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
-                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 font-semibold leading-[1.1] text-Mdblue-700">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
                       Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
                     </td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="px-0 py-4 font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
-                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
                   </tr>
                 </tbody>
               </table>
@@ -542,14 +540,14 @@
 
       <!-- Composer -->
       <div class="shrink-0 border-t border-gray-300 bg-white pb-4">
-        <div class="mx-auto flex w-full max-w-[53.75rem] flex-col items-center gap-2 px-4 pt-4">
+        <div class="mx-auto flex w-full max-w-[53.75rem] flex-col gap-2 px-4 pt-4">
           <div class="flex w-full items-center gap-4 rounded-xl border-[1.5px] border-gray-300 bg-white p-4 hover:border-purple-600 hover:bg-gray-50 focus-within:border-purple-600 focus-within:bg-white focus-within:ring-1 focus-within:ring-purple-600">
             <input type="text"
               class="min-w-0 flex-1 border-0 bg-transparent p-0 text-sm font-normal leading-[1.4] text-Mdblue-700 placeholder:text-gray-700 focus:outline-none focus:ring-0"
               placeholder="Write a message"
               aria-label="Write a message" />
           </div>
-          <p class="px-2 text-center text-[13px] font-normal leading-[1.1] text-gray-600">
+          <p class="px-2 text-left text-[13px] font-normal leading-[1.1] text-gray-600">
             ULA is AI and can make mistakes. Verify responses before filing.
           </p>
         </div>
