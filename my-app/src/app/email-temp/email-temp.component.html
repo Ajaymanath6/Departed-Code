@@ -98,7 +98,7 @@
   style="margin: 0; padding: 0; width: 100%; background-color: #EFEFEF; font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;">
 
 
-<!--Tracking Summary copy start(msq fix drk mode)-->
+<!--Tracking Summary start(msq fix drk mode)-->
 <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
 style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background-color: #F5F5F5; font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;">
 <tr>
@@ -380,9 +380,10 @@ style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background
   </td>
 </tr>
 </table>
-<!--Tracking Summary copy end(msq fix drk mode)-->
+<!--Tracking Summary end(msq fix drk mode)-->
 
-<!--Tracking Summary start(msq fix drk mode)-->
+
+<!--tracking updated summary start-->
 <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
 style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background-color: #F5F5F5; font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;">
 <tr>
@@ -411,48 +412,48 @@ style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background
         </td>
       </tr>
 
-      <!-- Main email body -->
+      <!-- Main email body — common-email-layout card radius -->
       <tr>
-        <td style="padding: 0; box-shadow: 0 0 7px 0 rgba(115, 115, 115, 0.3); border-radius: 12px;">
+        <td style="padding: 0; box-shadow: 0 0 7px 0 rgba(115, 115, 115, 0.3); border-radius: 20px;">
           <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
-            style="width: 100%; background-color: #ffffff; border-radius: 12px; overflow: hidden; border-collapse: separate !important; border-spacing: 0;">
+            style="width: 100%; background-color: #ffffff; border-radius: 20px; overflow: hidden; border-collapse: separate !important; border-spacing: 0;">
 
-            <!-- Title and workspace — ART-3340: shared default solid #ffffff (matches common-email-layout) -->
+            <!-- Header — ART-3340 solid #ffffff (no gradient) -->
             <tr>
               <td align="center"
-                style="background-color: #ffffff; border-radius: 12px 12px 0 0; padding: 32px 24px;">
+                style="background-color: #ffffff; border-radius: 20px 20px 0 0; padding: 24px 40px 16px 40px; vertical-align: top;">
                 <a href="https://dart.unicourt.com" target="_blank" rel="noopener">
                   <img src="https://cdn.unicourt.com/common_resources/images/dart-logo.png" alt="DART" width="105"
                     height="34" border="0" style="display: block; margin: 0 auto; border: 0;" />
                 </a>
                 <h1
-                  style="margin: 16px 0 8px; padding: 0; font-size: 24px; font-weight: 600; line-height: 1.2; color: #000000; text-align: center;">
-                  Tracking Summary</h1>
-                <p style="margin: 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: center;">
-                  Default Workspace</p>
+                  style="margin: 12px 0 0; padding: 0; font-size: 26px; font-weight: 700; line-height: 1.2; color: #001A31; text-align: center;">
+                  Tracking Update Summary</h1>
+                <p style="margin: 6px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: center;">
+                  All Workspaces</p>
               </td>
             </tr>
 
-            <!-- Greeting -->
             <tr>
-              <td style="padding: 4px 24px 0;">
-                <p style="margin: 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31;">
+              <td style="padding: 0 40px 24px 40px; text-align: left;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" align="left"
+                  style="width: 100%; margin: 0 0 16px;">
+                  <tr>
+                    <td style="border-top: 1px solid #e5e7eb; font-size: 0; line-height: 0; mso-line-height-rule: exactly;">&nbsp;</td>
+                  </tr>
+                </table>
+
+                <p style="margin: 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
                   Hi John,
                 </p>
-                <p style="margin: 16px 0 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31;">
-                  Below is the scheduled update for the cases you&apos;re tracking in DART for
-                  <strong style="font-weight: 600;">Default Workspace</strong>
-                  every day in <strong style="font-weight: 600;">EDT</strong>. These updates were processed on
-                  <strong style="font-weight: 600;">15 July 2026 00:00.</strong>
+                <p style="margin: 16px 0 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                  Below is the daily update summary for the cases you&apos;re tracking in DART for
+                  All Workspaces for <strong style="font-weight: 600;">Aug 3, 2026</strong>.
                 </p>
-              </td>
-            </tr>
 
-            <!-- Stats row -->
-            <tr>
-              <td style="padding: 24px 24px 0;">
+                <!-- Stats row — Total Tracks | New Updates -->
                 <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
-                  style="width: 100%; border-collapse: separate !important; border-spacing: 0;">
+                  style="width: 100%; margin: 24px 0 0; border-collapse: separate !important; border-spacing: 0;">
                   <tr>
                     <td align="center" valign="top" style="padding: 8px 8px; vertical-align: top;">
                       <p style="margin: 0 0 4px; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166; text-align: center; white-space: nowrap;">
@@ -461,27 +462,7 @@ style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background
                             style="display: block; margin: 0 auto;" />
                         </span><span style="vertical-align: middle;">Total Tracks</span>
                       </p>
-                      <p style="margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; color: #000000; text-align: center;">5</p>
-                    </td>
-                    <td width="1" style="width: 1px; padding: 8px 0; background-color: #DDDDDD; font-size: 0; line-height: 0;">&nbsp;</td>
-                    <td align="center" valign="top" style="padding: 8px 8px; vertical-align: top;">
-                      <p style="margin: 0 0 4px; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166; text-align: center; white-space: nowrap;">
-                        <span style="display: inline-block; width: 16px; margin-right: 4px; vertical-align: middle; line-height: 0;">
-                          <img src="assets/email-temp-icons/checkmark.png" alt="" width="16" height="16" border="0"
-                            style="display: block; margin: 0 auto;" />
-                        </span><span style="vertical-align: middle;">Successful</span>
-                      </p>
-                      <p style="margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: center;">4</p>
-                    </td>
-                    <td width="1" style="width: 1px; padding: 8px 0; background-color: #DDDDDD; font-size: 0; line-height: 0;">&nbsp;</td>
-                    <td align="center" valign="top" style="padding: 8px 8px; vertical-align: top;">
-                      <p style="margin: 0 0 4px; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166; text-align: center; white-space: nowrap;">
-                        <span style="display: inline-block; width: 16px; margin-right: 4px; vertical-align: middle; line-height: 0;">
-                          <img src="assets/email-temp-icons/error.png" alt="" width="16" height="16" border="0"
-                            style="display: block; margin: 0 auto;" />
-                        </span><span style="vertical-align: middle;">Failed</span>
-                      </p>
-                      <p style="margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: center;">1</p>
+                      <p style="margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; color: #000000; text-align: center;">1200</p>
                     </td>
                     <td width="1" style="width: 1px; padding: 8px 0; background-color: #DDDDDD; font-size: 0; line-height: 0;">&nbsp;</td>
                     <td align="center" valign="top" style="padding: 8px 8px; vertical-align: top;">
@@ -491,154 +472,193 @@ style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background
                             style="display: block; margin: 0 auto;" />
                         </span><span style="vertical-align: middle;">New Updates</span>
                       </p>
-                      <p style="margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: center;">1</p>
+                      <p style="margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: center;">859</p>
                     </td>
                   </tr>
                 </table>
-              </td>
-            </tr>
 
-            <!-- Cases with updates — Figma node 1226:14272 -->
-            <tr>
-              <td style="padding: 16px 25px 0;">
-                <table width="600" border="0" cellpadding="0" cellspacing="0" role="presentation"
-                  style="width: 100%; max-width: 600px; border: 1px solid #DDDDDD; border-radius: 12px 12px 8px 8px; background-color: #ffffff; border-collapse: separate !important; border-spacing: 0; overflow: hidden;">
+                <!-- View in DART — Figma 1243:11081, after stats -->
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 24px 0 0;">
+                  <tr>
+                    <td align="center">
+                      <a href="#" target="_blank"
+                        style="display: inline-block; padding: 9px 14px; font-size: 16px; font-weight: 600; line-height: 1.4; color: #ffffff; text-decoration: none; border-radius: 6px; background-color: #028831;">View
+                        in DART</a>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Cases with updates -->
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                  style="width: 100%; margin: 16px 0 0; border: 1px solid #DDDDDD; border-radius: 12px 12px 8px 8px; background-color: #ffffff; border-collapse: separate !important; border-spacing: 0; overflow: hidden;">
                   <tr>
                     <td style="padding: 16px;">
                       <p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; line-height: 1.1; color: #737373;">
-                        CASES WITH UPDATES (+10)</p>
+                        CASES WITH UPDATES (859)</p>
                       <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
                         style="width: 100%; border-collapse: separate !important; border-spacing: 0;">
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #ffffff;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">PETER
-                              ARNOLD et al - v. - 4-6 BLEECKER STREET LLC et al</a>
+                          <td style="padding: 4px 8px; background-color: #F5F5F5; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">1.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Harold
+                                E. Morris v. Harley-Davidson Motor Company Group, LLC</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has docket updates
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #F5F5F5;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Anastasha
-                              Coachman v. DAVID ASKIN et al</a>
+                          <td style="padding: 4px 8px; background-color: #ffffff; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">2.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Flores
+                                Hernandez v. Warden, California City Correctional Center</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has case parameters update
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #ffffff;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Harold
-                              E. Morris v. Harley-Davidson Motor Company Group, LLC</a>
+                          <td style="padding: 4px 8px; background-color: #F5F5F5; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">3.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Harold
+                                E. Morris v. Harley-Davidson Motor Company Group, LLC</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has docket updates
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #F5F5F5;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Flores
-                              Hernandez v. Warden, California City Correctional Center</a>
+                          <td style="padding: 4px 8px; background-color: #ffffff; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">4.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Flores
+                                Hernandez v. Warden, California City Correctional Center</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has case parameters update
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #ffffff;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Anastasha
-                              Coachman v. DAVID ASKIN et al</a>
+                          <td style="padding: 4px 8px; background-color: #F5F5F5; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">5.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Harold
+                                E. Morris v. Harley-Davidson Motor Company Group, LLC</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has docket updates
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #F5F5F5;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Flores
-                              Hernandez v. Warden, California City Correctional Center</a>
+                          <td style="padding: 4px 8px; background-color: #ffffff; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">6.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Flores
+                                Hernandez v. Warden, California City Correctional Center</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has case parameters update
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #ffffff;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Harold
-                              E. Morris v. Harley-Davidson Motor Company Group, LLC</a>
+                          <td style="padding: 4px 8px; background-color: #F5F5F5; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">7.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Harold
+                                E. Morris v. Harley-Davidson Motor Company Group, LLC</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has docket updates
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #F5F5F5;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Flores
-                              Hernandez v. Warden, California City Correctional Center</a>
+                          <td style="padding: 4px 8px; background-color: #ffffff; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">8.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Flores
+                                Hernandez v. Warden, California City Correctional Center</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has case parameters update
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #ffffff;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Anastasha
-                              Coachman v. DAVID ASKIN et al</a>
+                          <td style="padding: 4px 8px; background-color: #F5F5F5; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">9.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Harold
+                                E. Morris v. Harley-Davidson Motor Company Group, LLC</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has case parameters update
+                            </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td style="padding: 4px 8px; background-color: #F5F5F5;">
-                            <a href="#"
-                              style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Harold
-                              E. Morris v. Harley-Davidson Motor Company Group, LLC</a>
+                          <td style="padding: 4px 8px; background-color: #ffffff; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: #5C6166;">
+                              <span style="vertical-align: top;">10.&nbsp;</span><a href="#"
+                                style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Flores
+                                Hernandez v. Warden, California City Correctional Center</a>
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31;">
+                              2026-08-03 12:05&nbsp;&nbsp;has case parameters update
+                            </p>
                           </td>
                         </tr>
                       </table>
                     </td>
                   </tr>
                 </table>
-              </td>
-            </tr>
 
-            <!-- Cases failed to track — Figma node 1226:14682 -->
-            <tr>
-              <td style="padding: 16px 25px 0;">
-                <table width="600" border="0" cellpadding="0" cellspacing="0" role="presentation"
-                  style="width: 100%; max-width: 600px; border: 1px solid #DDDDDD; border-radius: 12px 12px 8px 8px; background-color: #ffffff; border-collapse: separate !important; border-spacing: 0; overflow: hidden;">
+                <!-- Primary CTA -->
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 24px 0 0;">
                   <tr>
-                    <td style="padding: 16px;">
-                      <p style="margin: 0 0 16px; font-size: 13px; font-weight: 600; line-height: 1.1; color: #737373;">
-                        CASES FAILED TO TRACK</p>
-                      <p style="margin: 0;">
-                        <a href="#"
-                          style="font-size: 14px; font-weight: 600; line-height: 1.4; color: #2F55D9; text-decoration: none;">Hillsborough
-                          Title, Inc. v. Samora Construction LLC et al</a>
-                      </p>
+                    <td align="center">
+                      <a href="#" target="_blank"
+                        style="display: inline-block; padding: 9px 14px; font-size: 16px; font-weight: 600; line-height: 1.4; color: #ffffff; text-decoration: none; border-radius: 6px; background-color: #028831;">View
+                        in DART</a>
                     </td>
                   </tr>
                 </table>
-              </td>
-            </tr>
-
-            <!-- Primary CTA -->
-            <tr>
-              <td align="center" style="padding: 24px 24px 32px;">
-                <a href="#" target="_blank"
-                  style="display: inline-block; padding: 9px 14px; font-size: 16px; font-weight: 600; line-height: 1.4; color: #ffffff; text-decoration: none; border-radius: 6px; background-color: #028831;">View
-                  in DART</a>
               </td>
             </tr>
           </table>
@@ -665,7 +685,7 @@ style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background
   </td>
 </tr>
 </table>
-<!--Tracking Summary end(msq fix drk mode)-->
+<!--tracking updated summary end-->
 
 
  <!-- New Judgment Found alert email template (new design 29/07/2026) start -->
@@ -3246,6 +3266,204 @@ style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background
 <!--creation of new user eamil end-->
 
 
+<!--deep new announcement email start-->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; background-color: #F5F5F5; font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;">
+<tr>
+  <td align="center" style="padding: 32px 16px;">
+    <table width="650" border="0" cellpadding="0" cellspacing="0" role="presentation"
+      style="width: 100%; max-width: 650px; margin: 0 auto;">
+
+      <!-- Brand header with sign-in -->
+      <tr>
+        <td style="padding: 0 0 32px;">
+          <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+              <td align="left" style="vertical-align: middle;">
+                <a href="https://dart.unicourt.com" target="_blank" rel="noopener">
+                  <img src="https://cdn.unicourt.com/common_resources/images/logo.png" alt="UniCourt Logo" width="125"
+                    height="50" border="0" style="display: block; border: 0;" />
+                </a>
+              </td>
+              <td align="right" style="vertical-align: middle;">
+                <a href="#"
+                  style="font-size: 16px; line-height: 1.4; color: #001A31; text-decoration: none; font-weight: 600;">Sign
+                  In</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Main email body — common-email-layout card radius -->
+      <tr>
+        <td style="padding: 0; box-shadow: 0 0 7px 0 rgba(115, 115, 115, 0.3); border-radius: 12px;">
+          <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+            style="width: 100%; background-color: #ffffff; border-radius: 12px; overflow: hidden; border-collapse: separate !important; border-spacing: 0;">
+
+            <!-- Header — solid #ffffff (no gradient); Figma 520:298 32px / 203px -->
+            <tr>
+              <td align="center" bgcolor="#ffffff" height="203" valign="middle"
+                style="background-color: #ffffff; border-radius: 12px 12px 0 0; padding: 32px 0; height: 203px; vertical-align: middle;">
+                <a href="https://dart.unicourt.com" target="_blank" rel="noopener">
+                  <img src="assets/email-temp-icons/deep-logo-announcement.svg" alt="DEEP" width="112"
+                    height="34" border="0" style="display: block; margin: 0 auto; border: 0;" />
+                </a>
+                <h1
+                  style="margin: 16px 0 0; padding: 0; font-size: 26px; font-weight: 600; line-height: 1.2; color: #001A31; text-align: center;">
+                  New Announcement</h1>
+                <p style="margin: 8px 0 0; padding: 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: center;">
+                  Aug 6, 2026</p>
+              </td>
+            </tr>
+
+            <!-- Content — Figma 520:339 padding 0 24px, gap 16px -->
+            <tr>
+              <td style="padding: 0 24px; text-align: left;">
+
+                <!-- Greeting — Figma 520:340 blank line after Dear John -->
+                <p style="margin: 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                  Dear John,
+                </p>
+                <p style="margin: 32px 0 0; font-size: 16px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: left;">
+                  Introducing an exciting new upgrade: DEEP v3
+                </p>
+                <p style="margin: 32px 0 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                  A major upgrade to the DEEP API platform is now ready for your account!
+                </p>
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                  style="width: 100%; margin: 16px 0 0;">
+                  <tr>
+                    <td align="center">
+                      <img src="assets/email-temp-icons/deep-v3-welcome.png" alt="DEEP v3" width="599" border="0"
+                        style="display: block; width: 100%; max-width: 599px; height: auto; margin: 0 auto; border: 0; outline: none; border-radius: 8px;" />
+                    </td>
+                  </tr>
+                </table>
+
+                <p style="margin: 16px 0 0; font-size: 18px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: left;">
+                  New API capabilities
+                </p>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                  style="width: 100%; margin: 16px 0 0;">
+                  <tr>
+                    <td style="padding: 0 0 8px; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">Case Track</strong> — scheduled case updates, up to hourly
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0 0 8px; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">Case Import</strong> — bring cases in from court sources
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0 0 8px; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">Document Text Search</strong> — full-text search across hundreds of millions of documents
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0 0 8px; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">Case Match &amp; Normalized Entity Match</strong> — fuzzy-match your internal records
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0 0 8px; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">Case History</strong> — a full change log across parties, counsel, and dockets
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">Court Service Status Notifications</strong> — know when court services go down or come back
+                    </td>
+                  </tr>
+                </table>
+
+                <p style="margin: 16px 0 0; font-size: 18px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: left;">
+                  Account usage management
+                </p>
+                <p style="margin: 16px 0 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                  View and manage your account&apos;s usage across DEEP and DART in one place. Workspaces are now shared between the two, so activity and usage stay consistent no matter which platform your team is working from.
+                </p>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                  style="width: 100%; margin: 16px 0 0;">
+                  <tr>
+                    <td style="padding: 0 0 8px; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">New usage API</strong> — view usage by account or by workspace
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">Flexible token management</strong> — including workspace-scoped tokens to control access the way your team is organized
+                    </td>
+                  </tr>
+                </table>
+
+                <p style="margin: 16px 0 0; font-size: 18px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: left;">
+                  New entity normalization system
+                </p>
+                <p style="margin: 16px 0 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                  Extra-refined attorney &amp; law firm profiles, with fewer duplicates/fragments and even clearer connections between attorneys, firms, and the cases they&apos;re on.
+                </p>
+                <p style="margin: 8px 0 0; font-size: 16px; font-weight: 600; line-height: 1.4; text-align: left;">
+                  <a href="#" style="color: #2F55D9; text-decoration: none; font-weight: 600;">Full Release Notes</a>
+                </p>
+
+                <p style="margin: 16px 0 0; font-size: 18px; font-weight: 600; line-height: 1.4; color: #001A31; text-align: left;">
+                  What this means for you
+                </p>
+                <p style="margin: 16px 0 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                  Your DART access will not change, as this upgrade is specific to your API workflow and will enable you to move to DEEP v3.
+                </p>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                  style="width: 100%; margin: 16px 0 0;">
+                  <tr>
+                    <td style="padding: 0 0 8px; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">What&apos;s involved</strong> — pointing your integration to the new endpoints, including workspace support. Some schema changes may apply depending on which objects you use. Your previous API version will keep running in parallel, so your team can migrate whenever it makes sense for you, though upgrading earlier will allow you to take advantage of the new features and benefits as soon as possible.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                      - <strong style="font-weight: 600;">Support along the way</strong> — our team is ready to help you plan and test your transition, whether that&apos;s your app, your API integration, or both.
+                    </td>
+                  </tr>
+                </table>
+                <p style="margin: 16px 0 0; font-size: 16px; font-weight: 400; line-height: 1.4; color: #001A31; text-align: left;">
+                  Contact us with any questions
+                </p>
+              </td>
+            </tr>
+
+            <!-- CTA — Figma 520:399 gap 24px, Email padding-bottom 32px -->
+            <tr>
+              <td align="center" style="padding: 24px 24px 32px 24px;">
+                <a href="#" target="_blank"
+                  style="display: inline-block; padding: 9px 14px; font-size: 16px; font-weight: 600; line-height: 1.4; color: #ffffff; text-decoration: none; border-radius: 6px; background-color: #028831;">Contact
+                  Support</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Unsubscribe and copyright -->
+      <tr>
+        <td align="center" style="padding: 28px 25px 0; max-width: 600px;">
+          <p style="margin: 0; font-size: 12px; line-height: 1.5; color: #5C6166; text-align: center;">
+            &copy; 2026 UniCourt Inc. All rights reserved
+          </p>
+          <img src="https://cdn.unicourt.com/common_resources/images/unicourt-court-logo.png" alt="UniCourt"
+            width="50" height="50" border="0" style="display: block; margin: 20px auto 0; border: 0;" />
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<!--deep new announcement email end-->
+
+
+
 
 <!--existing user invitation eamil start-->
   <!-- Existing user workspace invitation email -->
@@ -3374,6 +3592,7 @@ style="width: 100%; max-width: 650px; margin: 0 auto;">
   </tbody>
 </table>
 <!--ellipse text using inline css(white-space:nowrap,overflow:hidden;text-overflow:ellipsis) end-->
+
 
 <!--using server side truncation (keeping white-space:nowrap,overflow:hidden;text-overflow:ellipsis) start-->
 <table width="650" border="0" cellpadding="0" cellspacing="0" role="presentation"
