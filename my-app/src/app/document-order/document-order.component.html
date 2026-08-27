@@ -48,7 +48,7 @@
 
   </section>
 
-  <div class="mb-4 flex flex-col gap-2 text-Mdblue-700">
+  <div class="mb-4 flex flex-col gap-2 text-Mdblue-700 mt-2">
     <div class="flex items-center justify-between gap-4">
       <div class="flex items-center gap-5">
         <span class="text-lg font-semibold text-Mdblue-700">Filters</span>
@@ -121,8 +121,7 @@
     </div>
   </div>
 
-
-  <h3>copy</h3>
+  <h3>latest</h3>
   <!--(copy)full table str content opens inside row start-->
   <div class="overflow-hidden rounded-xl border border-gray-300 bg-gray-50 mt-4 table-div-mix">
     <div class="overflow-x-auto p-4">
@@ -302,7 +301,7 @@
 
                 <div class="px-8 pb-3">
                   <button type="button" (click)="toggleDocumentOrderDetails()"
-                    class="inline-flex items-center gap-1 rounded-md bg-white py-1 pl-0 pr-2 text-sm font-bold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-300 cust-click"
+                    class="inline-flex items-center gap-1 rounded-md bg-white py-1 pl-2 pr-2 text-sm font-bold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-300 cust-click"
                     [attr.aria-expanded]="showDocumentOrderDetails"
                     aria-label="Show or hide failed documents">
                     <span>{{ showDocumentOrderDetails ? 'Hide Failed Documents' : 'Show Failed Documents' }}</span>
@@ -467,9 +466,8 @@
 
 
 
-
-  <h3 class="mt-8">original</h3>
   <!--(original) full table str content opens inside row start-->
+  <h3 class="mt-8">original old</h3>
   <div class="overflow-hidden rounded-xl border border-gray-300 bg-gray-50 mt-4 table-div-mix">
     <div class="overflow-x-auto p-4">
       <table
@@ -1143,6 +1141,7 @@
     </div>
   </div>
   <!--full table str adjecent row opens when end-->
+
 
   <!--tooltip start-->
   <div
