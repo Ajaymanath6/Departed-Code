@@ -35,6 +35,15 @@ import { UsageComponent } from './usage/usage.component';
 import { ExportsComponent } from './exports/exports.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ULAComponent } from './ula/ula.component';
+import { ChatgptProjectComponent } from './chatgpt-project/chatgpt-project.component';
+import { ChatgptTemplateComponent } from './chatgpt-template/chatgpt-template.component';
+import { AIUiPremiumComponent } from './ai-ui-premium/ai-ui-premium.component';
+import { ULAHelpComponent } from './ula-help/ula-help.component';
+import { ULARecentComponent } from './ula-recent/ula-recent.component';
+import { ULAResultsComponent } from './ula-results/ula-results.component';
+import { EchartsPageComponent } from './echarts-page/echarts-page.component';
+import { EchartsMapPageComponent } from './echarts-map-page/echarts-map-page.component';
+import { GaugeMulticolorPageComponent } from './gauge-multicolor-page/gauge-multicolor-page.component';
 
 const routes: Routes = [
   {
@@ -77,6 +86,14 @@ const routes: Routes = [
   {
     path: 'chatgpt',
     component: ChatgptComponent,
+  },
+  {
+    path: 'chatgpt-project',
+    component: ChatgptProjectComponent,
+  },
+  {
+    path: 'chatgpt-template',
+    component: ChatgptTemplateComponent,
   },
   {
     path: 'mobileUI',
@@ -139,6 +156,10 @@ const routes: Routes = [
     component: AIUiComponent,
   },
   {
+    path: 'aiui-premium',
+    component: AIUiPremiumComponent,
+  },
+  {
     path: 'analytics',
     component: AnalyticsComponent,
   },
@@ -177,6 +198,30 @@ const routes: Routes = [
     {
       path: 'ula',
       component: ULAComponent,
+    },
+    {
+      path: 'ula-help',
+      component: ULAHelpComponent,
+    },
+    {
+      path: 'ula-recent',
+      component: ULARecentComponent,
+    },
+    {
+      path: 'ula-results',
+      component: ULAResultsComponent,
+    },
+    {
+      path: 'echarts',
+      component: EchartsPageComponent,
+    },
+    {
+      path: 'echarts-map',
+      component: EchartsMapPageComponent,
+    },
+    {
+      path: 'gauge-multicolor',
+      component: GaugeMulticolorPageComponent,
     },
 ];
 

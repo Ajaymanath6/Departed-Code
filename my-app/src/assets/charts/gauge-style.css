@@ -1,0 +1,120 @@
+.wh {
+    height: 400px;
+    width: 100%;
+    /* width: 400px !important;
+    height:400px;  */
+}
+.wh-gauge-card {
+    height: 64px;
+    width: 64px;
+    min-width: 64px;
+    flex-shrink: 0;
+}
+.gauge-card-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.gauge-ring-chart {
+    width: 148px;
+    height: 148px;
+    min-width: 148px;
+    flex-shrink: 0;
+}
+.gauge-ring-chart > div,
+.gauge-ring-chart canvas {
+    width: 148px !important;
+    height: 148px !important;
+    flex-grow: 0 !important;
+}
+.echarts-tooltip {
+    white-space: pre-wrap !important;
+    max-width: 200px;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.wh > div {
+    /* width:100% !important; */
+    /* width: auto!important */
+    /* display: flex !important;
+    align-items: stretch !important;
+    flex-grow : 1 !important; */
+    /* border: 2px solid black !important; */
+    flex-grow: 2;
+}
+.wh > div > canvas {
+    /* width:100% !important;  */
+    /* width: auto!important; */
+    /*display: flex !important;
+    align-items: stretch !important;
+    flex-grow : 1 !important;
+    border: 2px solid red !important;
+     */
+    flex-grow: 2;
+}
+
+.d-none {
+    display: none;
+}
+.d-flex {
+    display: flex;
+}
+.m-h{
+  min-height: 20rem;
+  width: 100%;
+  max-height: 50rem;
+}
+.cust-sticky{
+    position: sticky;
+    top: 0;
+    background: rgb(187, 186, 156);
+    z-index: 20;
+}
+
+/* Multi Color Gauge — scoped styles only */
+.multi-color-gauge {
+    margin-bottom: 24px;
+}
+
+.multi-color-gauge__title {
+    margin: 0 0 12px;
+    text-align: center;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #001a31;
+}
+
+.multi-color-gauge__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.multi-color-gauge__chart-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.multi-color-gauge__chart {
+    width: 148px;
+    height: 148px;
+    min-width: 148px;
+    flex-shrink: 0;
+}
+
+.multi-color-gauge__chart > div,
+.multi-color-gauge__chart canvas {
+    width: 148px !important;
+    height: 148px !important;
+    flex-grow: 0 !important;
+}
+
+.multi-color-gauge__row {
+    justify-content: center;
+}
+
+.multi-color-gauge__chart-slot {
+    max-width: 400px;
+}

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,6 @@ import { SearchComponent } from './search/search.component';
 import { SettingsComponent } from './settings/settings.component';
 import { TestComponent } from './test/test.component';
 import { SemanticsearchComponent } from './semanticsearch/semanticsearch.component';
-import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from './searchbar/searchbar.component';
 import { ChipComponent } from './chip/chip.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -45,10 +45,21 @@ import { ExportsComponent } from './exports/exports.component';
 import { Casedetail2Component } from './casedetail2/casedetail2.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ULAComponent } from './ula/ula.component';
+import { PageNavComponent } from './page-nav/page-nav.component';
+import { ChatgptProjectComponent } from './chatgpt-project/chatgpt-project.component';
+import { ChatgptTemplateComponent } from './chatgpt-template/chatgpt-template.component';
+import { AIUiPremiumComponent } from './ai-ui-premium/ai-ui-premium.component';
+import { ULAHelpComponent } from './ula-help/ula-help.component';
+import { ULARecentComponent } from './ula-recent/ula-recent.component';
+import { ULAResultsComponent } from './ula-results/ula-results.component';
+import { EchartsPageComponent } from './echarts-page/echarts-page.component';
+import { EchartsMapPageComponent } from './echarts-map-page/echarts-map-page.component';
+import { GaugeMulticolorPageComponent } from './gauge-multicolor-page/gauge-multicolor-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PageNavComponent,
     NavigationBarComponent,
     LoginComponent,
     PlanComponent,
@@ -59,6 +70,8 @@ import { ULAComponent } from './ula/ula.component';
     SearchBarComponent,
     ChipComponent,
     ChatgptComponent,
+    ChatgptProjectComponent,
+    ChatgptTemplateComponent,
     ChildCompComponent,
     MobileUIComponent,
     Test2Component,
@@ -74,6 +87,7 @@ import { ULAComponent } from './ula/ula.component';
     EmailTempComponent,
     VarshiTableComponent,
     AIUiComponent,
+    AIUiPremiumComponent,
     AnalyticsComponent,
     HelpcenterComponent,
     AlertComponent,
@@ -86,12 +100,18 @@ import { ULAComponent } from './ula/ula.component';
     Casedetail2Component,
     SidebarComponent,
     ULAComponent,
+    ULAHelpComponent,
+    ULARecentComponent,
+    ULAResultsComponent,
+    EchartsPageComponent,
+    EchartsMapPageComponent,
+    GaugeMulticolorPageComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
+    RouterModule,
     AppRoutingModule,
-    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

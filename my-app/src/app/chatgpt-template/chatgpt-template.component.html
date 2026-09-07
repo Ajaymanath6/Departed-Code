@@ -1,0 +1,577 @@
+<!--project template start-->
+<div class="min-h-screen bg-gray-50 py-8" role="main" aria-labelledby="main-heading">
+  <!-- Skip Links for Accessibility -->
+  <div class="sr-only">
+    <a href="#main-content"
+      class="skip-link focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+      Skip to main content
+    </a>
+    <a href="#template-selection"
+      class="skip-link focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50">
+      Skip to templates
+    </a>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4" id="main-content">
+    <!-- Template Selection Header -->
+    <header class="text-center mb-8">
+      <h1 id="main-heading" class="text-3xl font-bold text-gray-900 mb-2">Choose Project Template</h1>
+      <p class="text-lg text-gray-600">Select a template that best fits your project needs</p>
+    </header>
+
+    <!-- Template Selection Cards -->
+    <section id="template-selection" aria-labelledby="template-selection-heading"
+      class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <h2 id="template-selection-heading" class="sr-only">Available Project Templates</h2>
+      <!-- Basic Project Template -->
+      <article class="bg-white rounded-lg border-2 cursor-pointer transition-all duration-200 p-6"
+        [class.border-blue-500]="selectedTemplate === 'basic'" [class.bg-blue-50]="selectedTemplate === 'basic'"
+        [class.border-gray-200]="selectedTemplate !== 'basic'" (click)="selectTemplate('basic')"
+        (keydown.enter)="selectTemplate('basic')" (keydown.space)="selectTemplate('basic')" tabindex="0" role="button"
+        [attr.aria-pressed]="selectedTemplate === 'basic'" aria-labelledby="basic-template-title"
+        aria-describedby="basic-template-desc">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+            </svg>
+          </div>
+          <h3 id="basic-template-title" class="text-xl font-semibold text-gray-900 mb-2">Basic Project</h3>
+          <p id="basic-template-desc" class="text-gray-600 text-sm mb-4">Simple project setup with essential information
+          </p>
+          <div class="text-xs text-gray-500" aria-label="Template features">
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded mr-1">Quick Setup</span>
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded">Essential Fields</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Research Project Template -->
+      <article class="bg-white rounded-lg border-2 cursor-pointer transition-all duration-200 p-6"
+        [class.border-green-500]="selectedTemplate === 'research'" [class.bg-green-50]="selectedTemplate === 'research'"
+        [class.border-gray-200]="selectedTemplate !== 'research'" (click)="selectTemplate('research')"
+        (keydown.enter)="selectTemplate('research')" (keydown.space)="selectTemplate('research')" tabindex="0"
+        role="button" [attr.aria-pressed]="selectedTemplate === 'research'" aria-labelledby="research-template-title"
+        aria-describedby="research-template-desc">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true">
+            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+            </svg>
+          </div>
+          <h3 id="research-template-title" class="text-xl font-semibold text-gray-900 mb-2">Research Project</h3>
+          <p id="research-template-desc" class="text-gray-600 text-sm mb-4">Comprehensive setup for research and
+            analysis projects</p>
+          <div class="text-xs text-gray-500" aria-label="Template features">
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded mr-1">Research Focus</span>
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded">Detailed Setup</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg border-2 cursor-pointer transition-all duration-200 p-6"
+        [class.border-orange-500]="selectedTemplate === 'custom'" [class.bg-orange-50]="selectedTemplate === 'custom'"
+        [class.border-gray-200]="selectedTemplate !== 'custom'" (click)="selectTemplate('custom')"
+        (keydown.enter)="selectTemplate('custom')" (keydown.space)="selectTemplate('custom')" tabindex="0" role="button"
+        [attr.aria-pressed]="selectedTemplate === 'custom'" aria-labelledby="custom-template-title"
+        aria-describedby="custom-template-desc">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            aria-hidden="true">
+            <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+            </svg>
+          </div>
+          <h3 id="custom-template-title" class="text-xl font-semibold text-gray-900 mb-2">Add Project</h3>
+          <p id="custom-template-desc" class="text-gray-600 text-sm mb-4">Create your own custom project template</p>
+          <div class="text-xs text-gray-500" aria-label="Template features">
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded mr-1">Custom Fields</span>
+            <span class="inline-block bg-gray-100 px-2 py-1 rounded">Dynamic Form</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Basic Project Form -->
+    <section *ngIf="selectedTemplate === 'basic'" class="bg-white rounded-lg shadow-lg border border-gray-200 p-8"
+      aria-labelledby="basic-form-heading">
+      <header class="text-center mb-8">
+        <h2 id="basic-form-heading" class="text-2xl font-bold text-gray-900 mb-2">New Project</h2>
+        <p class="text-gray-600">Basic project information</p>
+      </header>
+
+      <form class="space-y-6" role="form" aria-labelledby="basic-form-heading" novalidate>
+        <fieldset class="space-y-6">
+          <legend class="sr-only">Project Details</legend>
+
+          <div>
+            <label for="basic-project-name" class="block text-sm font-medium text-gray-900 mb-2">
+              Project Name <span class="text-red-500" aria-label="required">(Required)</span>
+            </label>
+            <input type="text" id="basic-project-name" name="basic-project-name" placeholder="Project Name..." required
+              aria-required="true" aria-describedby="basic-project-name-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <div id="basic-project-name-help" class="sr-only">Enter a descriptive name for your project</div>
+          </div>
+
+          <div>
+            <label for="basic-project-id" class="block text-sm font-medium text-gray-900 mb-2">Project ID</label>
+            <input type="text" id="basic-project-id" name="basic-project-id" value="mCXpCE" readonly
+              aria-describedby="basic-project-id-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50">
+            <p id="basic-project-id-help" class="text-sm text-gray-500 mt-1">Minimum of 3 characters and 10 max. Once
+              the project is created you will no longer be able to change this ID</p>
+          </div>
+
+          <div>
+            <label for="basic-description" class="block text-sm font-medium text-gray-900 mb-2">Description</label>
+            <textarea id="basic-description" name="basic-description" rows="4" placeholder="Description..."
+              aria-describedby="basic-description-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            <div id="basic-description-help" class="sr-only">Provide a detailed description of your project</div>
+          </div>
+
+          <div>
+            <label for="basic-client" class="block text-sm font-medium text-gray-900 mb-2">Client</label>
+            <input type="text" id="basic-client" name="basic-client" placeholder="Client..."
+              aria-describedby="basic-client-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <div id="basic-client-help" class="sr-only">Enter the client name for this project</div>
+          </div>
+
+          <div>
+            <label for="basic-matter" class="block text-sm font-medium text-gray-900 mb-2">Matter</label>
+            <input type="text" id="basic-matter" name="basic-matter" placeholder="Matter..."
+              aria-describedby="basic-matter-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <div id="basic-matter-help" class="sr-only">Enter the matter or subject for this project</div>
+          </div>
+        </fieldset>
+
+        <div class="flex gap-4 pt-6" role="group" aria-label="Form actions">
+          <button type="button" aria-describedby="reset-basic-help"
+            class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-medium">
+            Reset Form
+          </button>
+          <div id="reset-basic-help" class="sr-only">Clear all form fields and start over</div>
+
+          <button type="submit" (click)="showMemberSelectionPage()" aria-describedby="create-basic-help"
+            class="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-medium flex items-center justify-center">
+            Create and add members
+            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+          </button>
+          <div id="create-basic-help" class="sr-only">Create the project and proceed to add team members</div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Research Project Form -->
+    <section *ngIf="selectedTemplate === 'research'" class="bg-white rounded-lg shadow-lg border border-gray-200 p-8"
+      aria-labelledby="research-form-heading">
+      <header class="text-center mb-8">
+        <h2 id="research-form-heading" class="text-2xl font-bold text-gray-900 mb-2">New Research Project</h2>
+        <p class="text-gray-600">Comprehensive setup for research and analysis projects</p>
+      </header>
+
+      <form class="space-y-6" role="form" aria-labelledby="research-form-heading" novalidate>
+        <fieldset class="space-y-6">
+          <legend class="sr-only">Research Project Details</legend>
+
+          <div>
+            <label for="research-project-name" class="block text-sm font-medium text-gray-900 mb-2">
+              Project Name <span class="text-red-500" aria-label="required">(Required)</span>
+            </label>
+            <input type="text" id="research-project-name" name="research-project-name"
+              placeholder="Research Project Name..." required aria-required="true"
+              aria-describedby="research-project-name-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            <div id="research-project-name-help" class="sr-only">Enter a descriptive name for your research project
+            </div>
+          </div>
+
+          <div>
+            <label for="research-type" class="block text-sm font-medium text-gray-900 mb-2">Research Type</label>
+            <select id="research-type" name="research-type" aria-describedby="research-type-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              <option value="">Select Research Type</option>
+              <option value="quantitative">Quantitative Research</option>
+              <option value="qualitative">Qualitative Research</option>
+              <option value="mixed">Mixed Methods</option>
+              <option value="experimental">Experimental</option>
+              <option value="observational">Observational</option>
+            </select>
+            <div id="research-type-help" class="sr-only">Select the type of research methodology for your project</div>
+          </div>
+
+          <div>
+            <label for="research-description" class="block text-sm font-medium text-gray-900 mb-2">Project
+              Description</label>
+            <textarea id="research-description" name="research-description" rows="4"
+              placeholder="Describe your research objectives, methodology, and expected outcomes..."
+              aria-describedby="research-description-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+            <div id="research-description-help" class="sr-only">Provide a detailed description of your research project
+            </div>
+          </div>
+
+          <div>
+            <label for="research-duration" class="block text-sm font-medium text-gray-900 mb-2">Duration
+              (months)</label>
+            <input type="number" id="research-duration" name="research-duration" placeholder="12" min="1" max="120"
+              aria-describedby="research-duration-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            <div id="research-duration-help" class="sr-only">Enter the expected duration of the research project in
+              months</div>
+          </div>
+
+          <div>
+            <label for="research-budget" class="block text-sm font-medium text-gray-900 mb-2">Budget Range</label>
+            <select id="research-budget" name="research-budget" aria-describedby="research-budget-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              <option value="">Select Budget Range</option>
+              <option value="under-10k">Under $10,000</option>
+              <option value="10k-50k">$10,000 - $50,000</option>
+              <option value="50k-100k">$50,000 - $100,000</option>
+              <option value="100k-500k">$100,000 - $500,000</option>
+              <option value="over-500k">Over $500,000</option>
+            </select>
+            <div id="research-budget-help" class="sr-only">Select the budget range for your research project</div>
+          </div>
+
+          <div>
+            <label for="research-lead" class="block text-sm font-medium text-gray-900 mb-2">Research Lead</label>
+            <input type="text" id="research-lead" name="research-lead" placeholder="Principal Investigator..."
+              aria-describedby="research-lead-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            <div id="research-lead-help" class="sr-only">Enter the name of the principal investigator or research lead
+            </div>
+          </div>
+
+          <div>
+            <label for="research-keywords" class="block text-sm font-medium text-gray-900 mb-2">Keywords</label>
+            <input type="text" id="research-keywords" name="research-keywords"
+              placeholder="machine learning, data analysis, statistics..." aria-describedby="research-keywords-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            <p id="research-keywords-help" class="text-sm text-gray-500 mt-1">Enter relevant keywords separated by
+              commas to help categorize your research</p>
+          </div>
+        </fieldset>
+
+        <div class="flex gap-4 pt-6" role="group" aria-label="Form actions">
+          <button type="button" aria-describedby="reset-research-help"
+            class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 font-medium">
+            Reset Form
+          </button>
+          <div id="reset-research-help" class="sr-only">Clear all form fields and start over</div>
+
+          <button type="submit" (click)="showMemberSelectionPage()" aria-describedby="create-research-help"
+            class="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 font-medium flex items-center justify-center">
+            Create and add members
+            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+          </button>
+          <div id="create-research-help" class="sr-only">Create the research project and proceed to add team members
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Custom Project Form Builder -->
+    <section *ngIf="selectedTemplate === 'custom'" class="bg-white rounded-lg shadow-lg border border-gray-200 p-8"
+      aria-labelledby="custom-form-heading">
+      <header class="text-center mb-8">
+        <h2 id="custom-form-heading" class="text-2xl font-bold text-gray-900 mb-2">Create Custom Project Template</h2>
+        <p class="text-gray-600">Build your own project template with custom fields</p>
+      </header>
+
+      <form class="space-y-6" role="form" aria-labelledby="custom-form-heading" novalidate>
+        <fieldset>
+          <legend class="sr-only">Template Information</legend>
+
+          <!-- Template Name -->
+          <div class="mb-6">
+            <label for="template-name" class="block text-sm font-medium text-gray-900 mb-2">
+              Template Name <span class="text-red-500" aria-label="required">(Required)</span>
+            </label>
+            <input type="text" id="template-name" name="template-name" [(ngModel)]="customTemplate.name"
+              placeholder="Enter template name..." required aria-required="true" aria-describedby="template-name-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+            <div id="template-name-help" class="sr-only">Enter a name for your custom template</div>
+          </div>
+
+          <!-- Template Description -->
+          <div class="mb-6">
+            <label for="template-description" class="block text-sm font-medium text-gray-900 mb-2">Template
+              Description</label>
+            <textarea id="template-description" name="template-description" [(ngModel)]="customTemplate.description"
+              rows="3" placeholder="Describe what this template is for..." aria-describedby="template-description-help"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"></textarea>
+            <div id="template-description-help" class="sr-only">Describe the purpose and use case for this template
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Dynamic Fields Section -->
+        <fieldset class="mb-8">
+          <legend class="sr-only">Custom Form Fields</legend>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-gray-900">Form Fields</h3>
+            <button type="button" (click)="addCustomField()" aria-describedby="add-field-help"
+              class="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 font-medium flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+              </svg>
+              Add Field
+            </button>
+            <div id="add-field-help" class="sr-only">Add a new custom field to your template</div>
+          </div>
+
+          <!-- ARIA Live Region for field updates -->
+          <div aria-live="polite" aria-atomic="true" class="sr-only" id="field-status">
+            {{ customTemplate.fields.length }} custom field{{ customTemplate.fields.length !== 1 ? 's' : '' }} added
+          </div>
+
+          <!-- Custom Fields List -->
+          <div class="space-y-4" role="group" aria-labelledby="custom-fields-heading">
+            <h4 id="custom-fields-heading" class="sr-only">Custom Field Configuration</h4>
+
+            <div *ngFor="let field of customTemplate.fields; let i = index"
+              class="bg-gray-50 border border-gray-200 rounded-lg p-4" [attr.aria-labelledby]="'field-' + i + '-label'">
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+                <!-- Field Label -->
+                <div>
+                  <label [for]="'field-label-' + i" class="block text-sm font-medium text-gray-700 mb-1">Field
+                    Label</label>
+                  <input type="text" [id]="'field-label-' + i" [(ngModel)]="field.label" [name]="'field-label-' + i"
+                    placeholder="Field name..." [attr.aria-describedby]="'field-label-help-' + i"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                  <div [id]="'field-label-help-' + i" class="sr-only">Enter the label for field {{ i + 1 }}</div>
+                </div>
+
+                <!-- Field Type -->
+                <div>
+                  <label [for]="'field-type-' + i" class="block text-sm font-medium text-gray-700 mb-1">Field
+                    Type</label>
+                  <select [id]="'field-type-' + i" [(ngModel)]="field.type" [name]="'field-type-' + i"
+                    [attr.aria-describedby]="'field-type-help-' + i"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                    <option value="text">Text Input</option>
+                    <option value="textarea">Text Area</option>
+                    <option value="select">Dropdown</option>
+                    <option value="date">Date</option>
+                    <option value="number">Number</option>
+                    <option value="email">Email</option>
+                  </select>
+                  <div [id]="'field-type-help-' + i" class="sr-only">Select the input type for field {{ i + 1 }}</div>
+                </div>
+
+                <!-- Required Toggle -->
+                <div>
+                  <label [for]="'field-required-' + i"
+                    class="block text-sm font-medium text-gray-700 mb-1">Required</label>
+                  <div class="flex items-center">
+                    <input type="checkbox" [id]="'field-required-' + i" [(ngModel)]="field.required"
+                      [name]="'field-required-' + i" [attr.aria-describedby]="'field-required-help-' + i"
+                      class="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500">
+                    <span class="ml-2 text-sm text-gray-600">Required field</span>
+                  </div>
+                  <div [id]="'field-required-help-' + i" class="sr-only">Mark field {{ i + 1 }} as required</div>
+                </div>
+
+                <!-- Remove Button -->
+                <div>
+                  <button type="button" (click)="removeCustomField(i)" [attr.aria-label]="'Remove field ' + (i + 1)"
+                    [attr.aria-describedby]="'remove-field-help-' + i"
+                    class="w-full px-3 py-2 bg-red-100 text-red-700 rounded-md hover:bg-red-200 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 font-medium">
+                    Remove
+                  </button>
+                  <div [id]="'remove-field-help-' + i" class="sr-only">Remove field {{ i + 1 }} from the template</div>
+                </div>
+              </div>
+
+              <!-- Placeholder -->
+              <div class="mt-3">
+                <label [for]="'field-placeholder-' + i" class="block text-sm font-medium text-gray-700 mb-1">Placeholder
+                  Text</label>
+                <input type="text" [id]="'field-placeholder-' + i" [(ngModel)]="field.placeholder"
+                  [name]="'field-placeholder-' + i" placeholder="Enter placeholder text..."
+                  [attr.aria-describedby]="'field-placeholder-help-' + i"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                <div [id]="'field-placeholder-help-' + i" class="sr-only">Enter placeholder text for field {{ i + 1 }}
+                </div>
+              </div>
+
+              <!-- Options for Select Fields -->
+              <div *ngIf="field.type === 'select'" class="mt-3">
+                <label [for]="'field-options-' + i" class="block text-sm font-medium text-gray-700 mb-1">Options
+                  (comma-separated)</label>
+                <input type="text" [id]="'field-options-' + i" [(ngModel)]="field.options" [name]="'field-options-' + i"
+                  placeholder="Option 1, Option 2, Option 3..." [attr.aria-describedby]="'field-options-help-' + i"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                <div [id]="'field-options-help-' + i" class="sr-only">Enter comma-separated options for dropdown field
+                  {{ i + 1 }}</div>
+              </div>
+            </div>
+
+            <!-- Empty State -->
+            <div *ngIf="customTemplate.fields.length === 0" class="text-center py-8 text-gray-500" role="status"
+              aria-live="polite">
+              <svg class="w-12 h-12 mx-auto mb-4 text-gray-300" fill="currentColor" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+              </svg>
+              <p class="mb-4">No fields added yet.</p>
+              <button (click)="addCustomField()" aria-describedby="empty-state-help"
+                class="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 font-medium transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                </svg>
+                Add Field to start building your form
+              </button>
+              <div id="empty-state-help" class="sr-only">Add your first custom field to begin building the template
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Preview Section -->
+        <section *ngIf="customTemplate.fields.length > 0" class="mb-8" aria-labelledby="preview-heading">
+          <h3 id="preview-heading" class="text-lg font-semibold text-gray-900 mb-4">Form Preview</h3>
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-6" role="region" aria-label="Template preview">
+            <div class="space-y-4">
+              <div *ngFor="let field of customTemplate.fields; let i = index"
+                class="grid grid-cols-1 md:grid-cols-2 gap-4" [class.md:col-span-2]="field.type === 'textarea'">
+                <div [class.md:col-span-2]="field.type === 'textarea'">
+                  <label [for]="'preview-field-' + i" class="block text-sm font-medium text-gray-900 mb-2">
+                    {{ field.label }}
+                    <span *ngIf="field.required" class="text-red-500" aria-label="required">(Required)</span>
+                  </label>
+
+                  <!-- Text Input -->
+                  <input *ngIf="field.type === 'text' || field.type === 'email' || field.type === 'number'"
+                    [type]="field.type" [placeholder]="field.placeholder" [id]="'preview-field-' + i"
+                    [name]="'preview-field-' + i" [required]="field.required" [attr.aria-required]="field.required"
+                    [attr.aria-describedby]="'preview-field-help-' + i"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    readonly>
+                  <div *ngIf="field.type === 'text' || field.type === 'email' || field.type === 'number'"
+                    [id]="'preview-field-help-' + i" class="sr-only">
+                    Preview of {{ field.type }} input field for {{ field.label }}
+                  </div>
+
+                  <!-- Textarea -->
+                  <textarea *ngIf="field.type === 'textarea'" [placeholder]="field.placeholder" rows="3"
+                    [id]="'preview-field-' + i" [name]="'preview-field-' + i" [required]="field.required"
+                    [attr.aria-required]="field.required" [attr.aria-describedby]="'preview-field-help-' + i"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    readonly></textarea>
+                  <div *ngIf="field.type === 'textarea'" [id]="'preview-field-help-' + i" class="sr-only">
+                    Preview of textarea field for {{ field.label }}
+                  </div>
+
+                  <!-- Select -->
+                  <select *ngIf="field.type === 'select'" [id]="'preview-field-' + i" [name]="'preview-field-' + i"
+                    [required]="field.required" [attr.aria-required]="field.required"
+                    [attr.aria-describedby]="'preview-field-help-' + i"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    disabled>
+                    <option value="">{{ field.placeholder || 'Select an option' }}</option>
+                    <option *ngFor="let option of getSelectOptions(field.options)" [value]="option">{{ option }}
+                    </option>
+                  </select>
+                  <div *ngIf="field.type === 'select'" [id]="'preview-field-help-' + i" class="sr-only">
+                    Preview of dropdown field for {{ field.label }}
+                  </div>
+
+                  <!-- Date -->
+                  <input *ngIf="field.type === 'date'" type="date" [id]="'preview-field-' + i"
+                    [name]="'preview-field-' + i" [required]="field.required" [attr.aria-required]="field.required"
+                    [attr.aria-describedby]="'preview-field-help-' + i"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    readonly>
+                  <div *ngIf="field.type === 'date'" [id]="'preview-field-help-' + i" class="sr-only">
+                    Preview of date input field for {{ field.label }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-4 pt-6" role="group" aria-label="Template actions">
+          <button type="button" (click)="resetCustomTemplate()" aria-describedby="reset-template-help"
+            class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 font-medium">
+            Reset Template
+          </button>
+          <div id="reset-template-help" class="sr-only">Clear all template fields and start over</div>
+
+          <button type="submit" (click)="showMemberSelectionPage()" aria-describedby="create-template-help"
+            class="flex-1 px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 font-medium flex items-center justify-center">
+            Create Template and add members
+            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+          </button>
+          <div id="create-template-help" class="sr-only">Create the custom template and proceed to add team members
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- Member Selection Page -->
+    <section *ngIf="showMemberSelection" class="bg-white rounded-lg shadow-lg border border-gray-200 p-8"
+      aria-labelledby="member-selection-heading">
+      <header class="text-center mb-8">
+        <h2 id="member-selection-heading" class="text-2xl font-bold text-gray-900 mb-2">Add Project Members</h2>
+        <p class="text-gray-600">Select team members and assign their roles for this project</p>
+      </header>
+
+      <!-- Search Bar -->
+      <div class="mb-6">
+        <label for="member-search" class="sr-only">Search team members</label>
+        <div class="relative">
+          <input type="text" id="member-search" name="member-search" [(ngModel)]="searchTerm"
+            placeholder="Search people by name, email, or role..." aria-describedby="search-instructions"
+            class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" aria-hidden="true">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+          </div>
+        </div>
+        <div id="search-instructions" class="sr-only">Type to filter team members by name, email, or role</div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Available Users List -->
+        <section aria-labelledby="available-members-heading">
+          <div class="flex items-center justify-between mb-4">
+            <h3 id="available-members-heading" class="text-lg font-semibold text-gray-900">Available Team Members</h3>
+            <span class="text-sm text-gray-500" aria-live="polite">
+              {{ filteredUsers.length }} member{{ filteredUsers.length !== 1 ? 's' : '' }} available
+            </span>
+          </div>
+
+
+          <!--project template start-->
+          <div>
+
+          </div>
+          <!--project template end-->
+
+
+          <!--rotate secrete start-->
+          <div>
+
+          </div>
+          <!--rotate secrete end-->

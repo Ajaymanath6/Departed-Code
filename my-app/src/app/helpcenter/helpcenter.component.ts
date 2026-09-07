@@ -1,14 +1,27 @@
 import { Component, Inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
+export type HelpCenterTab =
+  | 'announcements'
+  | 'home-page'
+  | 'navigation'
+  | 'search'
+  | 'casepage'
+  | 'entity-pages'
+  | 'tracking-page'
+  | 'pins-page'
+  | 'analytics-page'
+  | 'workspace-page'
+  | 'account-page';
+
 @Component({
   selector: 'app-helpcenter',
   templateUrl: './helpcenter.component.html',
-  styleUrls: ['./helpcenter.component.scss']
 })
 export class HelpcenterComponent implements OnInit, OnDestroy {
   /** Opens Help Center when the host route/view loads */
   helpCenterOpen = true;
+  activeTab: HelpCenterTab = 'announcements';
 
   constructor(
     private readonly renderer: Renderer2,
@@ -33,6 +46,15 @@ export class HelpcenterComponent implements OnInit, OnDestroy {
   closeHelpCenter(): void {
     this.helpCenterOpen = false;
     this.setBodyScrollLocked(false);
+  }
+
+  selectTab(tab: HelpCenterTab, event?: Event): void {
+    event?.preventDefault();
+    this.activeTab = tab;
+  }
+
+  isActive(tab: HelpCenterTab): boolean {
+    return this.activeTab === tab;
   }
 
   private setBodyScrollLocked(locked: boolean): void {

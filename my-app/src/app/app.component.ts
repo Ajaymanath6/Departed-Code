@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
-import { AgentConnectionService } from './core/services/agent-connection.service';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +9,7 @@ import { AgentConnectionService } from './core/services/agent-connection.service
 export class AppComponent implements OnInit {
   title = 'my-app';
 
-  constructor(public agentConnection: AgentConnectionService) {}
-
   ngOnInit(): void {
     initFlowbite();
-    this.agentConnection.checkConnection();
   }
 }

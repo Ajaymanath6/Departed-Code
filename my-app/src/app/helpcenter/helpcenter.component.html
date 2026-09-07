@@ -4,7 +4,7 @@
     class="material-symbols-outlined icon-24 gray-fill-600">info</span></button>
 
 <!--help-center-start-->
-<div *ngIf="helpCenterOpen" class="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/40 p-4"
+<div *ngIf="helpCenterOpen" class="fixed inset-0 z-[110] flex items-center justify-center overflow-y-auto bg-black/40 p-4"
   role="presentation" (click)="closeHelpCenter()">
   <div tabindex="-1"
     class="relative flex w-full max-w-[99rem] max-h-[min(98vh,60rem)] min-h-0 flex-col overflow-hidden rounded-lg bg-white- bg-gray-100 p-4 shadow-lg outline-none"
@@ -25,90 +25,164 @@
           <div
             class="w-full max-w-[19%] shrink-0 self-stretch overflow-y-auto pr-[1%] text-base font-semibold text-Mdblue-600">
             <ul class="space-y-1 border-l border-gray-300">
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700 !text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/my-profile">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]"
-                    class="absolute h-full left-[-2px] !border-primary-600 border-l-4 w-[3px]"></div><span
-                    routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2 icon-fill">
-                    campaign
-                  </span> Announcements
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> cottage
-                  </span> Home Page
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> apps
-                  </span>Navigation
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> search
-                  </span>Search
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> source
-                  </span>Case Page
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> notifications
-                  </span>Entity Pages
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> watch_later
-                  </span>Tracking
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> keep
-                  </span>Pins
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> insert_chart
-                  </span>Analytics
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2"> folder
-                  </span>Workspaces
-                </a></li>
-              <li class="relative "><a
-                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
-                  href="/PXsgD/v2/user-settings/notifications">
-                  <div routerlinkactive="!border-primary-600 border-l-4 w-[3px]" class="absolute h-full left-[-2px]">
-                  </div><span routerlinkactive="icon-fill" class="material-symbols-outlined icon-20 mr-2">
-                    account_circle
-                  </span>Account Management
-                </a></li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('announcements')"
+                  (click)="selectTab('announcements')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('announcements')"
+                    [class.border-l-4]="isActive('announcements')"
+                    [class.w-[3px]]="isActive('announcements')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('announcements')">campaign</span>
+                  Announcements
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('home-page')"
+                  (click)="selectTab('home-page')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('home-page')"
+                    [class.border-l-4]="isActive('home-page')"
+                    [class.w-[3px]]="isActive('home-page')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('home-page')">cottage</span>
+                  Home Page
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('navigation')"
+                  (click)="selectTab('navigation')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('navigation')"
+                    [class.border-l-4]="isActive('navigation')"
+                    [class.w-[3px]]="isActive('navigation')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('navigation')">apps</span>
+                  Navigation
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('search')"
+                  (click)="selectTab('search')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('search')"
+                    [class.border-l-4]="isActive('search')"
+                    [class.w-[3px]]="isActive('search')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('search')">search</span>
+                  Search
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('casepage')"
+                  (click)="selectTab('casepage')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('casepage')"
+                    [class.border-l-4]="isActive('casepage')"
+                    [class.w-[3px]]="isActive('casepage')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('casepage')">source</span>
+                  Case Page
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('entity-pages')"
+                  (click)="selectTab('entity-pages')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('entity-pages')"
+                    [class.border-l-4]="isActive('entity-pages')"
+                    [class.w-[3px]]="isActive('entity-pages')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('entity-pages')">notifications</span>
+                  Entity Pages
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('tracking-page')"
+                  (click)="selectTab('tracking-page')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('tracking-page')"
+                    [class.border-l-4]="isActive('tracking-page')"
+                    [class.w-[3px]]="isActive('tracking-page')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('tracking-page')">watch_later</span>
+                  Tracking
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('pins-page')"
+                  (click)="selectTab('pins-page')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('pins-page')"
+                    [class.border-l-4]="isActive('pins-page')"
+                    [class.w-[3px]]="isActive('pins-page')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('pins-page')">keep</span>
+                  Pins
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('analytics-page')"
+                  (click)="selectTab('analytics-page')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('analytics-page')"
+                    [class.border-l-4]="isActive('analytics-page')"
+                    [class.w-[3px]]="isActive('analytics-page')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('analytics-page')">insert_chart</span>
+                  Analytics
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('workspace-page')"
+                  (click)="selectTab('workspace-page')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('workspace-page')"
+                    [class.border-l-4]="isActive('workspace-page')"
+                    [class.w-[3px]]="isActive('workspace-page')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('workspace-page')">folder</span>
+                  Workspaces
+                </button>
+              </li>
+              <li class="relative">
+                <button type="button"
+                  class="inline-flex w-full cursor-pointer items-center rounded-md px-4 py-3 text-left text-gray-600 hover:bg-gray-200 hover:!text-Mdblue-700"
+                  [class.!text-Mdblue-700]="isActive('account-page')"
+                  (click)="selectTab('account-page')">
+                  <div class="absolute h-full left-[-2px]"
+                    [class.!border-primary-600]="isActive('account-page')"
+                    [class.border-l-4]="isActive('account-page')"
+                    [class.w-[3px]]="isActive('account-page')"></div>
+                  <span class="material-symbols-outlined icon-20 mr-2"
+                    [class.icon-fill]="isActive('account-page')">account_circle</span>
+                  Account Management
+                </button>
+              </li>
             </ul>
           </div>
           <div class="rightcontent min-h-0 min-w-0 flex-1 overflow-y-auto py-3 px-4 testing">
-            <div class="announcements d-none">
+            <div class="announcements" [class.d-none]="!isActive('announcements')">
               <h2 class="text-xl font-bold text-Mdblue-700 mb-4">Announcements</h2>
               <div class="grid grid-cols-2 gap-2 border border-secondary-600 rounded-lg ">
                 <div class="p-4">
@@ -173,7 +247,7 @@
                 </div>
               </div>
             </div>
-            <div class="home-page min-w-0 space-y-8 text-left d-none">
+            <div class="home-page min-w-0 space-y-8 text-left" [class.d-none]="!isActive('home-page')">
               <!-- Intro -->
               <section>
                 <h2 class="mb-3 text-2xl font-bold text-Mdblue-700">Home Page</h2>
@@ -261,7 +335,7 @@
                 </div>
               </section>
             </div>
-            <div class="navigation min-w-0 space-y-8 text-left d-none">
+            <div class="navigation min-w-0 space-y-8 text-left" [class.d-none]="!isActive('navigation')">
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Navigation</h2>
 
@@ -456,7 +530,7 @@
 
               </section>
             </div>
-            <div class="search min-w-0 space-y-8 text-left text-Mdblue-700 d-none">
+            <div class="search min-w-0 space-y-8 text-left text-Mdblue-700" [class.d-none]="!isActive('search')">
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Search</h2>
                 <p class="text-base leading-relaxed">
@@ -676,7 +750,7 @@
                 </div>
               </section>
             </div>
-            <div class="casepage min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
+            <div class="casepage min-w-0 space-y-10 text-left text-Mdblue-700" [class.d-none]="!isActive('casepage')">
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Case Page</h2>
                 <p class="text-base leading-relaxed">
@@ -910,7 +984,7 @@
                 </div>
               </section>
             </div>
-            <div class="entity-pages min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
+            <div class="entity-pages min-w-0 space-y-10 text-left text-Mdblue-700" [class.d-none]="!isActive('entity-pages')">
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Entity Pages</h2>
                 <p class="text-base leading-relaxed">
@@ -1244,7 +1318,7 @@
                 </div>
               </div>
             </div>
-            <div class="tracking-page min-w-0 space-y-10  text-left text-Mdblue-700 d-none">
+            <div class="tracking-page min-w-0 space-y-10  text-left text-Mdblue-700" [class.d-none]="!isActive('tracking-page')">
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Tracking</h2>
                 <p class="text-base leading-relaxed">
@@ -1346,7 +1420,7 @@
                   disable email notifications in their User Settings.</p>
               </ul>
             </div>
-            <div class="pins-page min-w-0 space-y-10  text-left text-Mdblue-700 d-none">
+            <div class="pins-page min-w-0 space-y-10  text-left text-Mdblue-700" [class.d-none]="!isActive('pins-page')">
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Pins</h2>
                 <p class="text-base leading-relaxed">
@@ -1420,7 +1494,7 @@
 
 
             </div>
-            <div class="analytics-page min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
+            <div class="analytics-page min-w-0 space-y-10 text-left text-Mdblue-700" [class.d-none]="!isActive('analytics-page')">
 
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Analytics</h2>
@@ -1475,7 +1549,7 @@
 
               </ul>
             </div>
-            <div class="workspace-page min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
+            <div class="workspace-page min-w-0 space-y-10 text-left text-Mdblue-700" [class.d-none]="!isActive('workspace-page')">
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Workspaces</h2>
                 <p class="text-base leading-relaxed"> Workspaces are tied to all of your activity in DART, including
@@ -1569,7 +1643,7 @@
                   at any time, restoring access along with all previous tracking and workspace activity.</p>
               </div>
             </div>
-            <div class="account-page min-w-0 space-y-10 text-left text-Mdblue-700 d-none">
+            <div class="account-page min-w-0 space-y-10 text-left text-Mdblue-700" [class.d-none]="!isActive('account-page')">
               <header class="space-y-3">
                 <h2 class="text-2xl font-bold text-Mdblue-700">Account Management</h2>
                 <p class="text-base leading-relaxed"> The Account Management menu gives you access to your profile,

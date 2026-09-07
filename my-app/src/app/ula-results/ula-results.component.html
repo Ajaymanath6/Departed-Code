@@ -1,0 +1,236 @@
+<!--result in table start-->
+<div class="mx-auto my-8 flex h-screen w-full max-w-7xl flex-col overflow-hidden rounded-xl border border-gray-300 bg-white">
+
+  <!-- Header -->
+  <div class="flex shrink-0 items-center justify-between gap-4 border-b border-gray-300 bg-white px-6 py-3 rounded-t-xl">
+    <div class="flex items-end gap-4">
+      <button type="button" aria-label="Toggle chat history"
+        class="inline-flex items-center justify-center rounded-md p-0.5 text-Mdblue-700 hover:bg-gray-100 focus:outline-none">
+        <img src="assets/ula/ula-grid-layout-side.svg" alt="" class="h-6 w-6" width="24" height="24" />
+      </button>
+      <div class="flex flex-col gap-0.5">
+        <h1 class="text-lg font-semibold leading-[1.4] text-Mdblue-700">New Chat</h1>
+      </div>
+    </div>
+    <div class="flex items-center justify-end gap-4">
+      <button type="button"
+        class="inline-flex items-center justify-center gap-1 rounded-md border-[1.5px] border-gray-400 bg-white px-2.5 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none">
+        <span class="material-symbols-outlined icon-18" aria-hidden="true">add</span>
+        <span>New Chat</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Body: history + chat -->
+  <div class="flex min-h-0 flex-1 overflow-hidden rounded-b-xl bg-white">
+
+    <!-- Recent chats (left) -->
+    <aside class="flex w-full max-w-[20rem] shrink-0 flex-col gap-4 overflow-y-auto border-r border-gray-300 bg-white p-4">
+      <div class="flex flex-col gap-1">
+        <p class="text-base font-semibold leading-[1.4] text-Mdblue-700">Recent Chats</p>
+        <p class="text-sm font-normal leading-[1.4] text-gray-600">Recent chats for this Workspace</p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center rounded-md border border-gray-300 bg-white px-2.5 py-2 hover:border-purple-600 hover:bg-gray-50 focus-within:border-purple-600 focus-within:bg-white focus-within:ring-1 focus-within:ring-purple-600">
+          <input type="search"
+            class="min-w-0 flex-1 border-0 bg-transparent p-0 text-base font-normal text-Mdblue-700 placeholder:text-gray-700 focus:outline-none focus:ring-0"
+            placeholder="Search Chats"
+            aria-label="Search Chats" />
+          <button type="button" aria-label="Search chats"
+            class="inline-flex items-center justify-center rounded text-Mdblue-700 hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <span class="material-symbols-outlined icon-20" aria-hidden="true">search</span>
+          </button>
+        </div>
+
+        <div class="flex flex-col gap-2 pt-2">
+          <p class="w-full text-center text-sm font-normal leading-[1.4] text-gray-600">Today</p>
+          <div class="flex flex-col gap-1 rounded-md">
+            <button type="button"
+              class="w-full rounded-md bg-gray-100 px-2 py-2 text-left text-sm font-bold leading-[1.4] text-Mdblue-700 hover:bg-gray-200 focus:outline-none">
+              New Chat
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 pt-2">
+          <p class="w-full text-center text-sm font-normal leading-[1.4] text-gray-600">Older</p>
+          <div class="flex flex-col gap-1">
+            <button type="button"
+              class="w-full rounded px-2 py-2 text-left text-sm font-normal leading-[1.4] text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+              Judge Peter Sweeney Background Resear...
+            </button>
+            <button type="button"
+              class="w-full rounded px-2 py-2 text-left text-sm font-normal leading-[1.4] text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+              Judge Peter Sweeney Background Resear...
+            </button>
+            <button type="button"
+              class="w-full rounded px-2 py-2 text-left text-sm font-normal leading-[1.4] text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+              Judge Peter Sweeney Background Resear...
+            </button>
+            <button type="button"
+              class="w-full rounded px-2 py-2 text-left text-sm font-normal leading-[1.4] text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+              Judge Peter Sweeney Background Resear...
+            </button>
+            <button type="button"
+              class="w-full rounded px-2 py-2 text-left text-sm font-normal leading-[1.4] text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+              Judge Peter Sweeney Background Resear...
+            </button>
+            <button type="button"
+              class="w-full rounded px-2 py-2 text-left text-sm font-normal leading-[1.4] text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+              Judge Peter Sweeney Background Resear...
+            </button>
+            <button type="button"
+              class="w-full rounded px-2 py-2 text-left text-sm font-normal leading-[1.4] text-Mdblue-700 hover:bg-gray-50 focus:outline-none">
+              Judge Peter Sweeney Background Resear...
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main chat -->
+    <section class="flex min-w-0 flex-1 flex-col bg-white">
+      <div class="min-h-0 flex-1 overflow-y-auto px-8 pb-4 pt-6 sm:px-16">
+        <!-- User message bubble -->
+        <div class="mb-4 flex justify-end pe-0 sm:pe-8">
+          <div class="rounded-tl-xl rounded-tr-xl rounded-bl-xl bg-purple-50 px-4 py-4">
+            <p class="text-left text-base font-normal leading-[1.4] text-Mdblue-700">
+              latest personal injury cases with verdict in Montgomery county Maryland
+            </p>
+          </div>
+        </div>
+
+        <!-- ULA results -->
+        <div class="flex flex-col gap-4 pe-0 sm:pe-8">
+          <p class="text-left text-base font-normal leading-[1.4] text-Mdblue-700">
+            I now have real results. The search returned 192 personal injury and torts cases in Montgomery County, Maryland with &quot;verdict&quot; in the docket entries, sorted by most recently filed. Here is a summary of the
+            <span class="font-semibold">most recently filed personal injury cases with a verdict</span>
+            at the
+            <span class="font-semibold">Montgomery County Circuit Courthouse, Maryland:</span>
+          </p>
+
+          <div class="border-t border-gray-200" aria-hidden="true"></div>
+
+          <h2 class="text-left text-lg font-semibold leading-[1.4] text-Mdblue-700">
+            Latest Personal Injury Cases with a Verdict — Montgomery County, Maryland
+          </h2>
+
+          <div class="text-left leading-[1.4] text-Mdblue-700">
+            <p class="text-left">
+              <span class="text-sm font-bold text-gray-600">Court:</span>
+              <span class="text-base font-semibold text-Mdblue-700">6th Judicial Circuit — Montgomery County Circuit Courthouse</span>
+            </p>
+            <p class="text-left">
+              <span class="text-sm font-bold text-gray-600">Total Matching Cases:</span>
+              <span class="text-base font-semibold text-Mdblue-700">192</span>
+            </p>
+          </div>
+
+          <!-- Results table -->
+          <div class="overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+            <div class="overflow-x-auto p-4">
+              <table
+                class="w-full min-w-[52rem] table-fixed border-separate border-spacing-y-2 text-left text-[13px] text-Mdblue-700">
+                <thead>
+                  <tr>
+                    <th scope="col" class="w-[18.5rem] px-6 py-2 text-left">
+                      <div class="flex items-center gap-1 text-[13px] font-semibold uppercase leading-[1.1] tracking-wide text-gray-700">
+                        <span>Case Name</span>
+                        <button type="button" aria-label="Sort by case name"
+                          class="inline-flex items-center text-gray-700 hover:opacity-80 focus:outline-none">
+                          <span class="material-symbols-outlined icon-16 font-semibold" aria-hidden="true">unfold_more</span>
+                        </button>
+                      </div>
+                    </th>
+                    <th scope="col" class="w-[8.5rem] px-0 py-2 text-left">
+                      <div class="flex items-center gap-1 text-[13px] font-semibold uppercase leading-[1.1] tracking-wide text-gray-700">
+                        <span>Case Number</span>
+                        <button type="button" aria-label="Sort by case number"
+                          class="inline-flex items-center text-gray-700 hover:opacity-80 focus:outline-none">
+                          <span class="material-symbols-outlined icon-16 font-semibold" aria-hidden="true">unfold_more</span>
+                        </button>
+                      </div>
+                    </th>
+                    <th scope="col" class="w-[6rem] px-0 py-2 text-left">
+                      <span class="text-[13px] font-semibold uppercase leading-[1.1] tracking-wide text-gray-700">Case Filed</span>
+                    </th>
+                    <th scope="col" class="w-[7rem] px-0 py-2 text-left">
+                      <span class="text-[13px] font-semibold uppercase leading-[1.1] tracking-wide text-gray-700">Last Update</span>
+                    </th>
+                    <th scope="col" class="px-0 py-2 text-left">
+                      <span class="text-[13px] font-semibold uppercase leading-[1.1] tracking-wide text-gray-700">Case Type</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
+                      Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
+                    </td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
+                  </tr>
+                  <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
+                      Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
+                    </td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
+                  </tr>
+                  <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
+                      Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
+                    </td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Negligence</td>
+                  </tr>
+                  <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
+                      Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
+                    </td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
+                  </tr>
+                  <tr class="bg-white [&>td]:border-y [&>td]:border-gray-200">
+                    <td class="rounded-l-[10px] border-l border-gray-200 px-6 py-4 text-left font-semibold leading-[1.1] text-Mdblue-700">
+                      Luz Mireya Pelaez Lopez vs. Israel Cruz Escobar
+                    </td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">C-15-CV-24-004995</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="px-0 py-4 text-left font-normal leading-[1.1] text-Mdblue-700">2024-06-19</td>
+                    <td class="rounded-r-[10px] border-r border-gray-200 px-0 py-4 pe-6 text-left font-normal leading-[1.1] text-Mdblue-700">Motor Vehicle</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Composer -->
+      <div class="shrink-0 border-t border-gray-300 bg-white pb-4">
+        <div class="mx-auto flex w-full max-w-[53.75rem] flex-col gap-2 px-4 pt-4">
+          <div class="flex w-full items-center gap-4 rounded-xl border-[1.5px] border-gray-300 bg-white p-4 hover:border-purple-600 hover:bg-gray-50 focus-within:border-purple-600 focus-within:bg-white focus-within:ring-1 focus-within:ring-purple-600">
+            <input type="text"
+              class="min-w-0 flex-1 border-0 bg-transparent p-0 text-sm font-normal leading-[1.4] text-Mdblue-700 placeholder:text-gray-700 focus:outline-none focus:ring-0"
+              placeholder="Write a message"
+              aria-label="Write a message" />
+          </div>
+          <p class="px-2 text-left text-[13px] font-normal leading-[1.1] text-gray-600">
+            ULA is AI and can make mistakes. Verify responses before filing.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<!--result in table end-->

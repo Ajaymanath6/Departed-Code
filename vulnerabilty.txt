@@ -1,0 +1,28 @@
+Vulnerability / secrets scan — flowbite-learning
+==============================================
+Date: 2026-09-07
+
+Findings
+--------
+- No live API keys, tokens, .env files, or private keys found in the repo.
+- UniCourt GitLab remote (gitlab.unicourt.net) was removed from this clone.
+- Removed infra (not UI):
+  - .gitlab-ci.yml
+  - install_cursor.sh and tracked ~/Downloads install scripts
+  - my-app/proxy.conf.js (agent proxy to localhost:4302)
+  - agent-config.service.ts / agent-connection.service.ts
+  - agentBaseUrl / Orbin comments from environments
+  - AgentConnection wiring from app.component
+  - HttpClientModule (was only used for agent ping)
+  - .cursor/rules/artemis-ui.mdc
+
+Intentionally kept
+------------------
+- UniCourt product UI mockups (logos, copy, mock @unicourt.com emails,
+  cdn*.unicourt.com / dart.unicourt.com design asset URLs in HTML).
+  These are design references only, not auth or GitLab integration.
+
+Action for GitHub push
+----------------------
+- Add your new GitHub remote when ready (git remote add origin <url>).
+- Do not reintroduce UniCourt GitLab remotes, CI, or agent proxies.

@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.secret-*
+*.pem
+*.key
+node_modules/
+.angular/cache/
+dist/
+.DS_Store
+**/node_modules/
+my-app/dist/
+my-app/.angular/

@@ -1,0 +1,438 @@
+<!--demo cursor figma UI start-->
+<div class="min-h-screen bg-gray-100">
+  <!-- Header -->
+  <header class="bg-Mdblue-700 text-white h-16 flex">
+    <!-- Left side: Logo Container (fixed width to match sidebar) -->
+    <div class="w-64 bg-white bg-opacity-10 border-r border-white border-opacity-20 h-16 flex items-center px-6">
+      <div class="text-primary-500 font-bold text-xl">UniCourt</div>
+    </div>
+
+    <!-- Main header content area (matches main content layout) -->
+    <div class="flex-1 flex items-center justify-between px-10">
+      <!-- Left: Apps Button + Project Details -->
+      <div class="flex items-center space-x-6">
+        <!-- Apps/Home Button -->
+        <button class="p-2 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors">
+          <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+          </svg>
+        </button>
+
+        <!-- Project Details -->
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-2">
+            <h1 class="text-xl font-semibold text-white">Google V Apple</h1>
+            <button class="p-1 rounded hover:bg-white hover:bg-opacity-10">
+              <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center space-x-2 text-sm text-gray-300">
+            <span class="text-primary-400">4364563</span>
+            <span>•</span>
+            <span class="text-primary-400">Google</span>
+            <span>•</span>
+            <span class="text-primary-400">Content</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: User Tools -->
+      <div class="flex items-center space-x-4">
+        <!-- Notifications -->
+        <button class="relative p-2 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors">
+          <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
+          </svg>
+          <div class="absolute -top-1 -right-1 w-3 h-3 bg-red-600 rounded-full"></div>
+        </button>
+
+        <!-- User Avatar -->
+        <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center text-white font-semibold">
+          AA
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-100 border-r border-gray-300 min-h-screen relative">
+      <!-- Back Button (positioned absolutely in top right) -->
+      <button
+        class="absolute top-5 right-6 p-2 rounded-lg bg-white bg-opacity-70 hover:bg-opacity-100 transition-colors">
+        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Navigation Container -->
+      <div class="pt-20 px-6">
+        <!-- Project Tabs -->
+        <nav class="space-y-4">
+          <!-- Search Tab -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+            <span class="font-semibold">Search</span>
+          </a>
+
+          <!-- Tracking Tab with Counter -->
+          <a href="#"
+            class="flex items-center justify-between px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <div class="flex items-center space-x-2">
+              <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+              </svg>
+              <span class="font-semibold">Tracking</span>
+            </div>
+            <span
+              class="bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full min-w-[16px] h-4 flex items-center justify-center">1</span>
+          </a>
+
+          <!-- Bookmarks Tab -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+            </svg>
+            <span class="font-semibold">Bookmarks</span>
+          </a>
+
+          <!-- Groups Tab -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 12.75c1.63 0 3.07.39 4.24.9c1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73C8.93 13.14 10.37 12.75 12 12.75zM4 13c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2S2.9 13 4 13zM5.13 14.1C4.76 14.04 4.39 14 4 14c-0.99 0-1.93.21-2.78.58C0.48 14.9 0 15.62 0 16.43V18h4.5v-1.61C4.5 15.56 4.73 14.78 5.13 14.1zM20 13c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2S18.9 13 20 13zM24 16.43c0-0.81-0.48-1.53-1.22-1.85C21.93 14.21 20.99 14 20 14c-0.39 0-0.76 0.04-1.13 0.1C19.27 14.78 19.5 15.56 19.5 16.39V18H24V16.43zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3S10.34 6 12 6zM4 6c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3S2.34 6 4 6zM20 6c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3S18.34 6 20 6z" />
+            </svg>
+            <span class="font-semibold">Groups</span>
+          </a>
+
+          <!-- Usage Tab -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-md text-Mdblue-600 hover:bg-white hover:shadow-sm transition-all no-underline">
+            <svg class="w-5 h-5 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" />
+            </svg>
+            <span class="font-semibold">Usage</span>
+          </a>
+
+          <!-- Manage Project Tab (Active) -->
+          <a href="#"
+            class="flex items-center space-x-2 px-5 py-2.5 rounded-t-md bg-white text-primary-600 border-b-2 border-primary-600 shadow-sm no-underline">
+            <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+            </svg>
+            <span class="font-semibold">Manage Project</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 bg-gray-100 min-h-screen">
+      <!-- Page Header -->
+      <div class="text-center py-10">
+        <h1 class="text-3xl font-semibold text-Mdblue-700 mb-2">Manage Project</h1>
+        <p class="text-lg text-Mdblue-600">Nulla vitae elit libero, a pharetra augue.</p>
+      </div>
+
+      <!-- Content Card -->
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg border border-gray-300 overflow-hidden">
+          <!-- Main Content Layout with Left Tabs -->
+          <div class="flex">
+            <!-- Left Side Navigation Tabs -->
+            <div class="w-40 flex-shrink-0">
+              <nav class="p-4 space-y-2">
+                <!-- General Tab -->
+                <a href="#"
+                  class="transition flex items-center space-x-2 px-3 py-2.5 rounded-lg text-Mdblue-600 hover:bg-gray-100 transition-colors no-underline">
+                  <svg class="w-4 h-4 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                  </svg>
+                  <span class="font-semibold text-sm">General</span>
+                </a>
+
+                <!-- Members Tab (Active) -->
+                <a href="#"
+                  class="flex items-center space-x-2 px-3 py-2.5 rounded-lg bg-primary-50 text-primary-600 border-l-4 border-primary-600 no-underline">
+                  <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
+                  </svg>
+                  <span class="font-semibold text-sm">Members</span>
+                </a>
+              </nav>
+            </div>
+
+            <!-- Right Side Content Area -->
+            <div class="flex-1 min-w-0 bg-gray-50">
+              <!-- Page Header -->
+              <div class="text-center py-10 bg-gray-50">
+                <h1 class="text-3xl font-semibold text-Mdblue-700 mb-2">Manage Project</h1>
+                <p class="text-lg text-Mdblue-600">Nulla vitae elit libero, a pharetra augue.</p>
+              </div>
+
+              <!-- Content Container -->
+              <div class="px-10 pb-10">
+                <!-- White Content Card -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                  <!-- Members Management Content -->
+                  <div class="p-12">
+                    <!-- Add Members Section -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-8 mb-8">
+                      <div class="flex justify-between items-start mb-6">
+                        <div class="flex-1">
+                          <label class="block text-xl font-medium text-Mdblue-700 mb-2">Members</label>
+                          <p class="text-Mdblue-600">Add people to the project</p>
+                        </div>
+                        <button
+                          class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded text-sm font-medium text-primary-600 hover:bg-gray-50 transition-colors flex-shrink-0">
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                          </svg>
+                          <span>Add People...</span>
+                        </button>
+                      </div>
+
+                      <!-- Search Bar -->
+                      <div class="mb-8">
+                        <div class="flex rounded-lg border border-gray-300 overflow-hidden bg-white">
+                          <input type="text" placeholder="Search people by name..."
+                            class="flex-1 px-4 py-3 text-Mdblue-700 placeholder-Mdblue-500 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                          <button
+                            class="px-4 py-3 bg-gray-50 border-l border-gray-300 hover:bg-gray-100 transition-colors">
+                            <svg class="w-5 h-5 text-Mdblue-500" fill="currentColor" viewBox="0 0 24 24">
+                              <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- Members Table -->
+                      <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <!-- Table Header -->
+                        <div class="bg-white border-b border-gray-200 px-6 py-6">
+                          <div class="grid grid-cols-12 gap-4 text-sm font-semibold text-Mdblue-700">
+                            <div class="col-span-4">Name</div>
+                            <div class="col-span-4">Email</div>
+                            <div class="col-span-3">Role</div>
+                            <div class="col-span-1">Actions</div>
+                          </div>
+                        </div>
+
+                        <!-- Table Body -->
+                        <div class="divide-y divide-gray-200">
+                          <!-- Member Row 1 -->
+                          <div class="px-6 py-4 bg-white">
+                            <div class="grid grid-cols-12 gap-4 items-center">
+                              <div class="col-span-4 flex items-center space-x-3">
+                                <div
+                                  class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                  AA
+                                </div>
+                                <div class="min-w-0">
+                                  <div class="font-medium text-Mdblue-700 truncate">Essie Howard</div>
+                                </div>
+                              </div>
+                              <div class="col-span-4 text-primary-600 truncate">e.howard&#64;domain.com</div>
+                              <div class="col-span-3">
+                                <select
+                                  class="w-full px-3 py-2 border border-gray-300 rounded text-sm bg-white text-Mdblue-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                  <option>Member</option>
+                                  <option>Admin</option>
+                                  <option>Viewer</option>
+                                </select>
+                              </div>
+                              <div class="col-span-1">
+                                <button
+                                  class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors">
+                                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Member Row 2 -->
+                          <div class="px-6 py-4 bg-white">
+                            <div class="grid grid-cols-12 gap-4 items-center">
+                              <div class="col-span-4 flex items-center space-x-3">
+                                <div
+                                  class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                  AA
+                                </div>
+                                <div class="min-w-0">
+                                  <div class="font-medium text-Mdblue-700 truncate">Essie Howard</div>
+                                </div>
+                              </div>
+                              <div class="col-span-4 text-primary-600 truncate">e.howard&#64;domain.com</div>
+                              <div class="col-span-3">
+                                <select
+                                  class="w-full px-3 py-2 border border-gray-300 rounded text-sm bg-white text-Mdblue-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                  <option>Member</option>
+                                  <option>Admin</option>
+                                  <option>Viewer</option>
+                                </select>
+                              </div>
+                              <div class="col-span-1">
+                                <button
+                                  class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors">
+                                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Member Row 3 -->
+                          <div class="px-6 py-4 bg-white">
+                            <div class="grid grid-cols-12 gap-4 items-center">
+                              <div class="col-span-4 flex items-center space-x-3">
+                                <div
+                                  class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                  AA
+                                </div>
+                                <div class="min-w-0">
+                                  <div class="font-medium text-Mdblue-700 truncate">Essie Howard</div>
+                                </div>
+                              </div>
+                              <div class="col-span-4 text-primary-600 truncate">e.howard&#64;domain.com</div>
+                              <div class="col-span-3">
+                                <select
+                                  class="w-full px-3 py-2 border border-gray-300 rounded text-sm bg-white text-Mdblue-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                  <option>Member</option>
+                                  <option>Admin</option>
+                                  <option>Viewer</option>
+                                </select>
+                              </div>
+                              <div class="col-span-1">
+                                <button
+                                  class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors">
+                                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Member Row 4 -->
+                          <div class="px-6 py-4 bg-white">
+                            <div class="grid grid-cols-12 gap-4 items-center">
+                              <div class="col-span-4 flex items-center space-x-3">
+                                <div
+                                  class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                  AA
+                                </div>
+                                <div class="min-w-0">
+                                  <div class="font-medium text-Mdblue-700 truncate">Essie Howard</div>
+                                </div>
+                              </div>
+                              <div class="col-span-4 text-primary-600 truncate">e.howard&#64;domain.com</div>
+                              <div class="col-span-3">
+                                <select
+                                  class="w-full px-3 py-2 border border-gray-300 rounded text-sm bg-white text-Mdblue-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                                  <option>Member</option>
+                                  <option>Admin</option>
+                                  <option>Viewer</option>
+                                </select>
+                              </div>
+                              <div class="col-span-1">
+                                <button
+                                  class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors">
+                                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Results Counter and Pagination -->
+                      <div class="flex justify-between items-center mt-6">
+                        <!-- Results Counter -->
+                        <div class="flex items-center space-x-2 text-sm text-Mdblue-600">
+                          <span class="font-semibold">Showing</span>
+                          <span
+                            class="px-2 py-1 bg-gray-200 text-Mdblue-700 rounded-full font-semibold text-sm">1-7</span>
+                          <span class="font-semibold">of</span>
+                          <span
+                            class="px-2 py-1 bg-gray-200 text-Mdblue-700 rounded-full font-semibold text-sm">34</span>
+                          <span class="font-semibold">results</span>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="flex items-center bg-white rounded border border-gray-200 p-1">
+                          <button class="p-2 rounded hover:bg-gray-100 transition-colors">
+                            <svg class="w-4 h-4 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                            </svg>
+                          </button>
+                          <button
+                            class="px-3 py-1 bg-gray-200 text-primary-600 font-semibold rounded-full text-sm min-w-[32px] h-7 flex items-center justify-center">1</button>
+                          <button
+                            class="px-3 py-1 text-primary-600 font-semibold rounded-full text-sm hover:bg-gray-100 transition-colors min-w-[32px] h-7 flex items-center justify-center">2</button>
+                          <button
+                            class="px-3 py-1 text-primary-600 font-semibold rounded-full text-sm hover:bg-gray-100 transition-colors min-w-[32px] h-7 flex items-center justify-center">3</button>
+                          <button
+                            class="px-3 py-1 text-primary-600 font-semibold rounded-full text-sm hover:bg-gray-100 transition-colors min-w-[32px] h-7 flex items-center justify-center">...</button>
+                          <button
+                            class="px-3 py-1 text-primary-600 font-semibold rounded-full text-sm hover:bg-gray-100 transition-colors min-w-[32px] h-7 flex items-center justify-center">100</button>
+                          <button class="p-2 rounded hover:bg-gray-100 transition-colors">
+                            <svg class="w-4 h-4 text-Mdblue-600" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Save Button -->
+                    <div class="flex justify-end">
+                      <button
+                        class="px-6 py-3 bg-primary-600 text-white font-medium rounded opacity-40 cursor-not-allowed">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources Button (Floating) -->
+      <button
+        class="fixed bottom-8 right-8 flex items-center space-x-2 px-4 py-2 border border-gray-400 rounded text-sm font-medium text-primary-600 bg-white hover:bg-gray-100 shadow-lg transition-all">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+        </svg>
+        <span>Resources</span>
+      </button>
+    </main>
+  </div>
+</div>
+<!--demo cursor figma UI end-->

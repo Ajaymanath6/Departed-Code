@@ -1,0 +1,111 @@
+<!--How can I help you today? start-->
+<div class="mx-auto my-8 flex h-screen w-full max-w-7xl flex-col overflow-hidden rounded-xl border border-gray-300 bg-white">
+
+  <!-- Header -->
+  <div class="flex shrink-0 items-center justify-between gap-4 border-b border-gray-300 bg-white px-6 py-3 rounded-t-xl">
+    <div class="flex items-end gap-4">
+      <button type="button" aria-label="Toggle chat history"
+        class="inline-flex items-center justify-center rounded-md p-0.5 text-Mdblue-700 hover:bg-gray-100 focus:outline-none">
+        <img src="assets/ula/ula-grid-layout-side.svg" alt="" class="h-6 w-6" width="24" height="24" />
+      </button>
+      <div class="flex flex-col gap-0.5">
+        <h1 class="text-lg font-semibold leading-[1.4] text-Mdblue-700">New Chat</h1>
+      </div>
+    </div>
+    <div class="flex items-center justify-end gap-4">
+      <button type="button"
+        class="inline-flex items-center justify-center gap-1 rounded-md border-[1.5px] border-gray-400 bg-white px-2.5 py-2 text-base font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none">
+        <span class="material-symbols-outlined icon-18" aria-hidden="true">add</span>
+        <span>New Chat</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Body: empty / help state (history collapsed) -->
+  <div class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-b-xl bg-white">
+
+    <div class="min-h-0 flex-1 overflow-y-auto px-4 pb-4 pt-8 sm:px-8">
+      <div class="mx-auto flex w-full max-w-[53.75rem] flex-col items-center gap-6 py-6">
+        <div class="flex max-w-[28rem] flex-col items-center gap-2 text-center">
+          <h2 class="text-center text-2xl font-semibold leading-[1.2] text-Mdblue-700">How can I help you today?</h2>
+          <p class="text-center text-base font-normal leading-[1.4] text-gray-600">
+            Below are some examples of research ULA can help with
+          </p>
+        </div>
+
+        <div class="flex w-full flex-col gap-4">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <button type="button"
+              class="flex h-full flex-col gap-2.5 rounded-lg border border-gray-200 bg-white px-4 py-6 text-left hover:border-purple-600 hover:bg-gray-50 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center rounded bg-gray-100 p-2" aria-hidden="true">
+                  <img src="assets/ula/case-docket.svg" alt="" class="h-6 w-6" width="24" height="24" />
+                </span>
+                <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Case Summaries</span>
+              </div>
+              <p class="text-sm font-normal leading-[1.4] text-gray-700">
+                Get up to speed on a case with a clear summary of what happened, where it stands today, and the key litigation events that matter most.
+              </p>
+            </button>
+
+            <button type="button"
+              class="flex h-full flex-col gap-2.5 rounded-lg border border-gray-200 bg-white px-4 py-6 text-left hover:border-purple-600 hover:bg-gray-50 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center rounded bg-gray-100 p-2" aria-hidden="true">
+                  <img src="assets/ula/judge.svg" alt="" class="h-6 w-6" width="24" height="24" />
+                </span>
+                <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Judge Insights</span>
+              </div>
+              <p class="text-sm font-normal leading-[1.4] text-gray-700">
+                Know what to expect before filing a motion by exploring how a judge has ruled on similar motions and the broader trends in their motion practice.
+              </p>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <button type="button"
+              class="flex h-full flex-col gap-2.5 rounded-lg border border-gray-200 bg-white px-4 py-6 text-left hover:border-purple-600 hover:bg-gray-50 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center rounded bg-gray-100 p-2" aria-hidden="true">
+                  <img src="assets/ula/attorney.svg" alt="" class="h-6 w-6" width="24" height="24" />
+                </span>
+                <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Attorney Research</span>
+              </div>
+              <p class="text-sm font-normal leading-[1.4] text-gray-700">
+                Research attorneys with confidence—whether you're evaluating opposing counsel, identifying experience in a particular area, or understanding their litigation practice.
+              </p>
+            </button>
+
+            <button type="button"
+              class="flex h-full flex-col gap-2.5 rounded-lg border border-gray-200 bg-white px-4 py-6 text-left hover:border-purple-600 hover:bg-gray-50 focus:border-purple-600 focus:outline-none focus:ring-1 focus:ring-purple-600">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center justify-center rounded bg-gray-100 p-2" aria-hidden="true">
+                  <img src="assets/ula/law-firms.svg" alt="" class="h-6 w-6" width="24" height="24" />
+                </span>
+                <span class="text-base font-semibold leading-[1.4] text-Mdblue-700">Law Firm Analytics</span>
+              </div>
+              <p class="text-sm font-normal leading-[1.4] text-gray-700">
+                Understand how a law firm litigates with insights drawn from its motion practice and litigation history. Explore filing patterns, areas of experience, litigation trends.
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Composer -->
+    <div class="shrink-0 border-t border-gray-300 bg-white pb-4">
+      <div class="mx-auto flex w-full max-w-[53.75rem] flex-col gap-2 px-4 pt-4">
+        <div class="w-full rounded-xl bg-gradient-to-t from-purple-100 from-[14%] to-purple-400 p-[1.5px] hover:from-purple-200 hover:to-purple-500 focus-within:from-purple-200 focus-within:to-purple-600 focus-within:ring-1 focus-within:ring-purple-600">
+          <div class="flex w-full items-center gap-4 rounded-[10.5px] bg-white p-4 hover:bg-gray-50 focus-within:bg-white">
+            <input type="text"
+              class="min-w-0 flex-1 border-0 bg-transparent p-0 text-sm font-normal leading-[1.4] text-Mdblue-700 placeholder:text-gray-700 focus:outline-none focus:ring-0"
+              placeholder="Ask ULA anything about your legal matters"
+              aria-label="Ask ULA anything about your legal matters" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--How can I help you today? end-->

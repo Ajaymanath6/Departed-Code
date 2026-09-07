@@ -32,6 +32,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/Departed-Code/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -41,13 +42,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2.5mb",
-                  "maximumError": "2.75mb"
+                  "maximumWarning": "10mb",
+                  "maximumError": "15mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "20kb"
+                  "maximumWarning": "100kb",
+                  "maximumError": "200kb"
                 }
               ],
               "outputHashing": "all"
@@ -68,8 +69,7 @@
           "options": {
             "host": "0.0.0.0",
             "port": 4000,
-            "disableHostCheck": true,
-            "proxyConfig": "proxy.conf.js"
+            "disableHostCheck": true
           },
           "configurations": {
             "production": {

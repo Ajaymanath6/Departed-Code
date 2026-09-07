@@ -1,18 +1,6 @@
-<app-navigation-bar></app-navigation-bar>
+<app-page-nav></app-page-nav>
 
-<!-- A2UI Agent connection status: show when configured but connection failed -->
-<div
-  *ngIf="(agentConnection.status | async) === 'failed'"
-  class="flex items-center justify-between gap-4 px-4 py-2 bg-amber-100 text-amber-900 border-b border-amber-300 d-none"
->
-  <span class="text-sm font-medium">{{ agentConnection.failedMessage }}</span>
-  <button
-    type="button"
-    class="shrink-0 rounded px-3 py-1.5 text-sm font-medium bg-amber-200 hover:bg-amber-300"
-    (click)="agentConnection.retry()"
-  >
-    Retry
-  </button>
+<div class="pl-[11rem]">
+  <app-navigation-bar></app-navigation-bar>
+  <router-outlet></router-outlet>
 </div>
-
-<router-outlet></router-outlet>

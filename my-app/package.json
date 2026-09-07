@@ -8,6 +8,7 @@
     "start": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js serve --host 0.0.0.0 --port 4000 --disable-host-check",
     "prebuild": "node ./scripts/check-node-env.js",
     "build": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js build",
+    "build:pages": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js build --configuration production && cp dist/my-app/index.html dist/my-app/404.html",
     "watch": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js build --watch --configuration development",
     "test": "env -u NODE_PATH node ./node_modules/@angular/cli/bin/ng.js test",
     "clean": "rm -rf node_modules .angular dist && npm ci",

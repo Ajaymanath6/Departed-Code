@@ -1,0 +1,429 @@
+<!-- Premium Legal Case Tracker -->
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  <!-- Animated Background -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -inset-10 opacity-50">
+      <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+      <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+    </div>
+  </div>
+
+  <div class="relative z-10 p-8">
+    <!-- Premium Header -->
+    <div class="glass-card mb-8 p-8 rounded-3xl">
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              Capital One N.A. v. Ellis, John David
+            </h1>
+            <p class="text-gray-300 flex items-center gap-2 mt-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Last updated: Oct 16, 2025 • Active tracking
+            </p>
+          </div>
+        </div>
+
+        <!-- Premium Action Buttons -->
+        <div class="flex gap-3">
+          <button (click)="onRefresh()" class="premium-btn premium-btn-primary">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            <span>Refresh Data</span>
+          </button>
+          <button (click)="onSetTracker()" class="premium-btn premium-btn-secondary">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12h0z"></path>
+            </svg>
+            <span>Set Tracker</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Overview -->
+      <div class="grid grid-cols-4 gap-4">
+        <div class="stats-card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">{{ getAddedCount() }}</p>
+              <p class="text-emerald-300 text-sm">Added</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">{{ getChangedCount() }}</p>
+              <p class="text-amber-300 text-sm">Changed</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">{{ getRemovedCount() }}</p>
+              <p class="text-red-300 text-sm">Removed</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">{{ getAllCount() }}</p>
+              <p class="text-blue-300 text-sm">Total</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Filter Pills -->
+    <div class="glass-card mb-8 p-6 rounded-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-semibold text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+          </svg>
+          Filter Updates
+        </h2>
+        <div class="text-sm text-gray-300">
+          Showing {{ filteredItems.length }} of {{ getAllCount() }} items
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <!-- Added Filter -->
+        <div class="group relative">
+          <button (click)="onFilterAdded()" [class]="getFilterButtonClass('added')" class="filter-pill">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+              <span class="font-medium">Added</span>
+              <span class="filter-badge">{{ getAddedCount() }}</span>
+            </div>
+          </button>
+          <div class="filter-tooltip">
+            Recently Added Items
+          </div>
+        </div>
+
+        <!-- Changed Filter -->
+        <div class="group relative">
+          <button (click)="onFilterChanged()" [class]="getFilterButtonClass('changed')" class="filter-pill">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-amber-400 rounded-full animate-bounce"></div>
+              <span class="font-medium">Changed</span>
+              <span class="filter-badge">{{ getChangedCount() }}</span>
+            </div>
+          </button>
+          <div class="filter-tooltip">
+            Recently Modified Items
+          </div>
+        </div>
+
+        <!-- Removed Filter -->
+        <div class="group relative">
+          <button (click)="onFilterRemoved()" [class]="getFilterButtonClass('removed')" class="filter-pill">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+              <span class="font-medium">Removed</span>
+              <span class="filter-badge">{{ getRemovedCount() }}</span>
+            </div>
+          </button>
+          <div class="filter-tooltip">
+            Recently Removed Items
+          </div>
+        </div>
+
+        <!-- All Items Filter -->
+        <div class="group relative">
+          <button (click)="onFilterAll()" [class]="getFilterButtonClass('all')" class="filter-pill">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span class="font-medium">All Items</span>
+              <span class="filter-badge">{{ getAllCount() }}</span>
+            </div>
+          </button>
+          <div class="filter-tooltip">
+            Show All Items
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Content Cards -->
+    <div class="space-y-6">
+      <!-- Dynamic Items -->
+      <div *ngFor="let item of filteredItems"
+           class="premium-card group"
+           [class.opacity-75]="item.type === 'removed'"
+           [class.border-l-emerald-400]="item.type === 'added'"
+           [class.border-l-amber-400]="item.type === 'changed'"
+           [class.border-l-red-400]="item.type === 'removed'">
+
+        <div class="flex items-start gap-6 p-6">
+          <!-- Enhanced Status Indicator -->
+          <div class="flex-shrink-0">
+            <div [class]="getStatusIconClass(item.type)" class="shadow-lg">
+              <!-- Added Icon -->
+              <svg *ngIf="item.type === 'added'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+              </svg>
+              <!-- Removed Icon -->
+              <svg *ngIf="item.type === 'removed'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+              </svg>
+              <!-- Changed Icon -->
+              <svg *ngIf="item.type === 'changed'" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Enhanced Content -->
+          <div class="flex-1 min-w-0">
+            <!-- Header with badges -->
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-3 flex-wrap">
+                <span [class]="getStatusBadgeClass(item.type)" class="premium-badge">
+                  <div [class]="getStatusDotClass(item.type)"></div>
+                  {{ item.type | titlecase }}
+                </span>
+                <span [class]="getCategoryBadgeClass(item.category)" class="premium-badge">
+                  <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="getCategoryIcon(item.category)"></path>
+                  </svg>
+                  {{ item.category | titlecase }}
+                </span>
+              </div>
+              <span class="text-sm text-gray-400 font-medium">{{ item.date }}</span>
+            </div>
+
+            <!-- Title -->
+            <h3 (click)="onViewDetails(item.id)"
+                class="text-xl font-bold text-white mb-3 cursor-pointer hover:text-blue-400 transition-colors group-hover:text-blue-300"
+                [class.line-through]="item.type === 'removed'">
+              {{ item.title }}
+            </h3>
+
+            <!-- Case Name -->
+            <p class="text-gray-300 text-sm mb-3 font-medium"
+               [class.line-through]="item.type === 'removed'">
+              {{ item.caseName }}
+            </p>
+
+            <!-- Highlight Text -->
+            <div *ngIf="item.highlightText" class="mb-4">
+              <div class="highlight-box">
+                <div class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <p class="text-amber-100 text-sm font-medium leading-relaxed"
+                     [class.line-through]="item.type === 'removed'">
+                    {{ item.highlightText }}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Regular Description for Added/Removed -->
+            <p *ngIf="item.type !== 'changed'"
+               class="text-gray-300 text-sm leading-relaxed"
+               [class.line-through]="item.type === 'removed'">
+              {{ item.description }}
+            </p>
+
+            <!-- Enhanced Before/After Comparison for Changed -->
+            <div *ngIf="item.type === 'changed'" class="space-y-3">
+              <p class="text-gray-300 text-sm leading-relaxed mb-4">{{ item.description }}</p>
+
+              <div class="change-comparison">
+                <div class="change-item change-from">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-4 h-4 text-red-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                    </svg>
+                    <div class="flex-1">
+                      <span class="text-red-300 font-semibold text-xs uppercase tracking-wide">From:</span>
+                      <p class="text-gray-400 line-through text-sm mt-1 break-all">{{ item.oldValue }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="change-item change-to">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                    <div class="flex-1">
+                      <span class="text-emerald-300 font-semibold text-xs uppercase tracking-wide">To:</span>
+                      <p class="text-white font-medium text-sm mt-1 break-all">{{ item.newValue }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Action Menu -->
+          <div class="flex-shrink-0">
+            <button (click)="onCardMenuClick(item.id, item.type)"
+                    class="action-menu-btn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div *ngIf="filteredItems.length === 0" class="glass-card p-12 rounded-2xl text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+          <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-3">No Updates Found</h3>
+        <p class="text-gray-300 max-w-md mx-auto">No case updates match your current filter selection. Try selecting a different filter or check back later for new updates.</p>
+      </div>
+    </div>
+
+    <!-- Premium Parties Section -->
+    <div class="glass-card mb-8 rounded-2xl overflow-hidden">
+      <div class="px-8 py-6 border-b border-white/10">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-white flex items-center gap-3">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            Case Parties
+          </h2>
+          <span class="text-sm text-gray-400 font-mono">Active</span>
+        </div>
+      </div>
+      <div class="p-8">
+        <div class="party-card">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-lg">Capital One N.A.</p>
+              <p class="text-blue-300 text-sm">Successor by Merger to Discover • Plaintiff</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Documents Section -->
+    <div class="glass-card mb-8 rounded-2xl overflow-hidden">
+      <div class="px-8 py-6 border-b border-white/10">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-white flex items-center gap-3">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Case Documents
+          </h2>
+          <span class="text-sm text-gray-400 font-mono">2 files</span>
+        </div>
+      </div>
+      <div class="p-8 space-y-4">
+        <div class="document-card document-primary">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-white font-semibold">Summons on Complaint by Certified Mail</p>
+              <p class="text-blue-300 text-sm">Issued • Sep 22, 2025 at 10:37 AM</p>
+            </div>
+            <div class="document-status document-status-sent">
+              <span>Sent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="document-card document-secondary">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-white font-semibold">Electronic Certified Mail Coversheet</p>
+              <p class="text-emerald-300 text-sm">IMPS Barcode • Electronic delivery</p>
+            </div>
+            <div class="document-status document-status-processed">
+              <span>Processed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Pagination -->
+    <div class="glass-card p-6 rounded-2xl">
+      <div class="flex items-center justify-between">
+        <div class="text-sm text-gray-300">
+          Showing <span class="font-semibold text-white">{{ filteredItems.length > 0 ? '1-' + filteredItems.length : '0' }}</span> of <span class="font-semibold text-white">{{ filteredItems.length }}</span> updates
+        </div>
+        <div class="flex items-center gap-2">
+          <button (click)="onPreviousPage()" class="pagination-btn">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Previous
+          </button>
+          <button (click)="onPageClick(1)" class="pagination-btn pagination-btn-active">
+            1
+          </button>
+          <button (click)="onPageClick(2)" class="pagination-btn">
+            2
+          </button>
+          <button (click)="onNextPage()" class="pagination-btn">
+            Next
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
